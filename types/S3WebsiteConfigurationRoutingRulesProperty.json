@@ -1,0 +1,18 @@
+{
+  "name": "S3WebsiteConfigurationRoutingRulesProperty",
+  "description": "The RoutingRules property is an embedded property of the Amazon S3 Website Configuration Property property. This property describes the redirect behavior and when a redirect is applied.",
+  "properties": [
+    {
+      "name": "RedirectRule",
+      "desc": "Redirect requests to another host, to another page, or with another protocol.",
+      "required": true,
+      "type": "Amazon S3 Website Configuration Routing Rules Redirect Rule Property"
+    },
+    {
+      "name": "RoutingRuleCondition",
+      "desc": "Rules that define when a redirect is applied.",
+      "required": false,
+      "type": "Amazon S3 Website Configuration Routing Rules Routing Rule Condition Property"
+    }
+  ]
+}

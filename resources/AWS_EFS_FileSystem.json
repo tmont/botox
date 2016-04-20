@@ -1,0 +1,17 @@
+{
+  "fullName": "AWS::EFS::FileSystem",
+  "namespace": "AWS",
+  "category": "EFS",
+  "name": "FileSystem",
+  "shortDesc": "The AWS::EFS::FileSystem resource creates a new, empty file system in Amazon Elastic File System (Amazon EFS). You must create a mount target (AWS::EFS::MountTarget) to mount your Amazon EFS file system on an Amazon Elastic Compute Cloud (Amazon EC2) instance. For more information, see the CreateFileSystem API in the Amazon Elastic File System User Guide.",
+  "properties": [
+    {
+      "name": "FileSystemTags",
+      "desc": "Tags to associate with the file system.",
+      "required": false,
+      "type": "Amazon Elastic File System FileSystem FileSystemTags",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::WAF::ByteMatchSet",
+  "namespace": "AWS",
+  "category": "WAF",
+  "name": "ByteMatchSet",
+  "shortDesc": "The AWS::WAF::ByteMatchSet resource creates an AWS WAF ByteMatchSet that identifies a part of a web request that you want to inspect. For more information, see CreateByteMatchSet in the AWS WAF API Reference.",
+  "properties": [
+    {
+      "name": "ByteMatchTuples",
+      "desc": "Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests.",
+      "required": false,
+      "type": "List of AWS WAF ByteMatchSet ByteMatchTuples",
+      "update": "No interruption"
+    },
+    {
+      "name": "Name",
+      "desc": "A friendly name or description of the ByteMatchSet.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

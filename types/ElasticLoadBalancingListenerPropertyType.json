@@ -1,0 +1,42 @@
+{
+  "name": "ElasticLoadBalancingListenerPropertyType",
+  "description": "The Listener property is an embedded property of the AWS::ElasticLoadBalancing::LoadBalancer type.",
+  "properties": [
+    {
+      "name": "InstancePort",
+      "desc": "Specifies the TCP port on which the instance server is listening. This property cannot be modified for the life of the load balancer.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "InstanceProtocol",
+      "desc": "Specifies the protocol to use for routing traffic to back-end instances—HTTP, HTTPS, TCP, or SSL. This property cannot be modified for the life of the load balancer.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "LoadBalancerPort",
+      "desc": "Specifies the external load balancer port number. This property cannot be modified for the life of the load balancer.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "PolicyNames",
+      "desc": "A list of ElasticLoadBalancing policy names to associate with the listener.",
+      "required": false,
+      "type": "List of strings"
+    },
+    {
+      "name": "Protocol",
+      "desc": "Specifies the load balancer transport protocol to use for routing — HTTP, HTTPS, TCP or SSL. This property cannot be modified for the life of the load balancer.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "SSLCertificateId",
+      "desc": "The ARN of the SSL certificate to use. For more information about SSL certificates, see Managing Server Certificates in the AWS Identity and Access Management documentation.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "fullName": "AWS::Elasticsearch::Domain",
+  "namespace": "AWS",
+  "category": "Elasticsearch",
+  "name": "Domain",
+  "shortDesc": "The AWS::Elasticsearch::Domain resource creates an Amazon Elasticsearch Service (Amazon ES) domain that encapsulates the Amazon ES engine instances. For more information, see CreateElasticsearchDomain in the Amazon Elasticsearch Service Developer Guide.",
+  "properties": [
+    {
+      "name": "AccessPolicies",
+      "desc": "An AWS Identity and Access Management (IAM) policy document that specifies who can access the Amazon ES domain and their permissions. For more information, see Configuring Access Policies in the Amazon Elasticsearch Service Developer Guide.",
+      "required": false,
+      "type": "JSON object",
+      "update": "No interruption"
+    },
+    {
+      "name": "AdvancedOptions",
+      "desc": "Additional options to specify for the Amazon ES domain. For more information, see Configuring Advanced Options in the Amazon Elasticsearch Service Developer Guide.",
+      "required": false,
+      "type": "A JSON object consisting of a string key-value pair, such as:",
+      "update": "Replacement"
+    },
+    {
+      "name": "DomainName",
+      "desc": "A name for the Amazon ES domain. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the domain name. For more information, see Name Type.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "EBSOptions",
+      "desc": "The configurations of Amazon Elastic Block Store (Amazon EBS) volumes that are attached to data nodes in the Amazon ES domain. For more information, see Configuring EBS-based Storage in the Amazon Elasticsearch Service Developer Guide.",
+      "required": false,
+      "type": "Amazon Elasticsearch Service Domain EBSOptions",
+      "update": "No interruption"
+    },
+    {
+      "name": "ElasticsearchClusterConfig",
+      "desc": "The cluster configuration for the Amazon ES domain. You can specify options such as the instance type and the number of instances. For more information, see Configuring Amazon ES Domains in the Amazon Elasticsearch Service Developer Guide.",
+      "required": false,
+      "type": "Amazon Elasticsearch Service Domain ElasticsearchClusterConfig",
+      "update": "No interruption"
+    },
+    {
+      "name": "SnapshotOptions",
+      "desc": "The automated snapshot configuration for the Amazon ES domain indices.",
+      "required": false,
+      "type": "Amazon Elasticsearch Service Domain SnapshotOptions",
+      "update": "No interruption"
+    },
+    {
+      "name": "Tags",
+      "desc": "An arbitrary set of tags (key–value pairs) to associate with the Amazon ES domain.",
+      "required": false,
+      "type": "AWS CloudFormation Resource Tags",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

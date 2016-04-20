@@ -1,0 +1,63 @@
+{
+  "fullName": "AWS::Events::Rule",
+  "namespace": "AWS",
+  "category": "Events",
+  "name": "Rule",
+  "shortDesc": "The AWS::Events::Rule resource creates a rule that matches incoming Amazon CloudWatch Events (CloudWatch Events) events and routes them to one or more targets for processing. For more information, see Using CloudWatch Events in the Amazon CloudWatch Developer Guide.",
+  "properties": [
+    {
+      "name": "Description",
+      "desc": "A description of the rule's purpose.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "EventPattern",
+      "desc": "Describes which events CloudWatch Events routes to the specified target. These routed events are matched events. For more information, see Events and Event Patterns in the Amazon CloudWatch Developer Guide.",
+      "required": false,
+      "type": "JSON object",
+      "update": "No interruption"
+    },
+    {
+      "name": "Name",
+      "desc": "A name for the rule. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the rule name. For more information, see Name Type.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "RoleArn",
+      "desc": "The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants CloudWatch Events permission to make calls to target services, such as AWS Lambda (Lambda) or Amazon Kinesis streams.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "ScheduleExpression",
+      "desc": "The schedule or rate (frequency) that determines when CloudWatch Events runs the rule. For more information, see Schedule Expression Syntax for Rules in the Amazon CloudWatch Developer Guide.",
+      "required": false,
+      "update": "No interruption"
+    },
+    {
+      "name": "State",
+      "desc": "Indicates whether the rule is enabled. For valid values, see the State parameter for the PutRule action in the Amazon CloudWatch Events API Reference.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Targets",
+      "desc": "The resources, such as Lambda functions or Amazon Kinesis streams, that CloudWatch Events routes events to and invokes when the rule is triggered.",
+      "required": false,
+      "type": "List of Amazon CloudWatch Events Rule Target",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Arn",
+      "desc": "The event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-1:123456789012:rule/example."
+    }
+  ]
+}

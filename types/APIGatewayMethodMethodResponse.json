@@ -1,0 +1,24 @@
+{
+  "name": "APIGatewayMethodMethodResponse",
+  "description": "MethodResponse is a property of the AWS::ApiGateway::Method resource that defines the responses that can be sent to the client who calls an Amazon API Gateway (API Gateway) method.",
+  "properties": [
+    {
+      "name": "ResponseModels",
+      "desc": "The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.",
+      "required": false,
+      "type": "List of key-value pairs"
+    },
+    {
+      "name": "ResponseParameters",
+      "desc": "Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value. Specify the destination using the following pattern: method.response.header.name, where the name is a valid, unique header name. The Boolean specifies whether a parameter is required.",
+      "required": false,
+      "type": "List of key-value pairs"
+    },
+    {
+      "name": "StatusCode",
+      "desc": "The method response's status code, which you map to an IntegrationResponse.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

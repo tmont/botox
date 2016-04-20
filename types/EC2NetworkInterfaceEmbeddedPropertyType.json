@@ -1,0 +1,66 @@
+{
+  "name": "EC2NetworkInterfaceEmbeddedPropertyType",
+  "description": "The EC2 Network Interface type is an embedded property of the AWS::EC2::Instance type. It specifies a network interface that is to be attached.",
+  "properties": [
+    {
+      "name": "AssociatePublicIpAddress",
+      "desc": "Indicates whether the network interface receives a public IP address. You can associate a public IP address with a network interface only if it has a device index of eth0 and if it is a new network interface (not an existing one). In other words, if you specify true, don't specify a network interface ID. For more information, see Amazon EC2 Instance IP Addressing.",
+      "required": false,
+      "type": "Boolean."
+    },
+    {
+      "name": "DeleteOnTermination",
+      "desc": "Whether to delete the network interface when the instance terminates.",
+      "required": false,
+      "type": "Boolean."
+    },
+    {
+      "name": "Description",
+      "desc": "The description of this network interface.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "DeviceIndex",
+      "desc": "The network interface's position in the attachment order.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "GroupSet",
+      "desc": "A list of security group IDs associated with this network interface.",
+      "required": false,
+      "type": "List of strings."
+    },
+    {
+      "name": "NetworkInterfaceId",
+      "desc": "An existing network interface ID.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "PrivateIpAddress",
+      "desc": "Assigns a single private IP address to the network interface, which is used as the primary private IP address. If you want to specify multiple private IP address, use the PrivateIpAddresses property.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "PrivateIpAddresses",
+      "desc": "Assigns a list of private IP addresses to the network interface. You can specify a primary private IP address by setting the value of the Primary property to true in the PrivateIpAddressSpecification property. If you want Amazon EC2 to automatically assign private IP addresses, use the SecondaryPrivateIpCount property and do not specify this property.",
+      "required": false,
+      "type": "list of PrivateIpAddressSpecification"
+    },
+    {
+      "name": "SecondaryPrivateIpAddressCount",
+      "desc": "The number of secondary private IP addresses that Amazon EC2 auto assigns to the network interface. Amazon EC2 uses the value of the PrivateIpAddress property as the primary private IP address. If you don't specify that property, Amazon EC2 auto assigns both the primary and secondary private IP addresses.",
+      "required": false,
+      "type": "Integer."
+    },
+    {
+      "name": "SubnetId",
+      "desc": "The ID of the subnet to associate with the network interface.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

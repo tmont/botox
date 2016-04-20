@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::WAF::SizeConstraintSet",
+  "namespace": "AWS",
+  "category": "WAF",
+  "name": "SizeConstraintSet",
+  "shortDesc": "The AWS::WAF::SizeConstraintSet resource specifies a size constraint that AWS WAF uses to check the size of a web request and which parts of the request to check. For more information, see CreateSizeConstraintSet in the AWS WAF API Reference.",
+  "properties": [
+    {
+      "name": "Name",
+      "desc": "A friendly name or description for the SizeConstraintSet.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "SizeConstraints",
+      "desc": "The size constraint and the part of the web request to check.",
+      "required": true,
+      "type": "List of AWS WAF SizeConstraintSet SizeConstraint",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

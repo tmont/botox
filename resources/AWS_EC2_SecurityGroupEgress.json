@@ -1,0 +1,52 @@
+{
+  "fullName": "AWS::EC2::SecurityGroupEgress",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "SecurityGroupEgress",
+  "shortDesc": "The AWS::EC2::SecurityGroupEgress resource adds an egress rule to an Amazon VPC security group.",
+  "properties": [
+    {
+      "name": "CidrIp",
+      "desc": "CIDR range.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "DestinationSecurityGroupId",
+      "desc": "Specifies the group ID of the destination Amazon VPC security group.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "FromPort",
+      "desc": "Start of port range for the TCP and UDP protocols, or an ICMP type number. If you specify icmp for the IpProtocol property, you can specify -1 as a wildcard (i.e., any ICMP type number).",
+      "required": true,
+      "type": "Integer",
+      "update": "Replacement"
+    },
+    {
+      "name": "GroupId",
+      "desc": "ID of the Amazon VPC security group to modify. This value can be a reference to an AWS::EC2::SecurityGroup resource that has a valid VpcId property or the ID of an existing Amazon VPC security group.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "IpProtocol",
+      "desc": "IP protocol name or number. For valid values, see the IpProtocol parameter in AuthorizeSecurityGroupIngress",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "ToPort",
+      "desc": "End of port range for the TCP and UDP protocols, or an ICMP code. If you specify icmp for the IpProtocol property, you can specify -1 as a wildcard (i.e., any ICMP code).",
+      "required": true,
+      "type": "Integer",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

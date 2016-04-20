@@ -1,0 +1,17 @@
+{
+  "fullName": "AWS::SSM::Document",
+  "namespace": "AWS",
+  "category": "SSM",
+  "name": "Document",
+  "shortDesc": "The AWS::SSM::Document resource creates an Amazon EC2 Simple Systems Manager (SSM) document that describes an instance configuration, which you can use to set up and run commands on your instances.",
+  "properties": [
+    {
+      "name": "Content",
+      "desc": "A JSON object that describes an instance configuration. For more information, see SSM Documents in the Amazon EC2 Simple Systems Manager API Reference.",
+      "required": true,
+      "type": "JSON object",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

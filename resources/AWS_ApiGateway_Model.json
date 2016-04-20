@@ -1,0 +1,45 @@
+{
+  "fullName": "AWS::ApiGateway::Model",
+  "namespace": "AWS",
+  "category": "ApiGateway",
+  "name": "Model",
+  "shortDesc": "The AWS::ApiGateway::Model resource defines the structure of a request or response payload for an Amazon API Gateway (API Gateway) method.",
+  "properties": [
+    {
+      "name": "ContentType",
+      "desc": "The content type for the model.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Description",
+      "desc": "A description that identifies this model.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Name",
+      "desc": "A name for the mode. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name. For more information, see Name Type.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "RestApiId",
+      "desc": "The ID of a REST API with which to associate this model.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Schema",
+      "desc": "The schema to use to transform data to one or more output formats.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

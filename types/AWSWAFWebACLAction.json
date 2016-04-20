@@ -1,0 +1,12 @@
+{
+  "name": "AWSWAFWebACLAction",
+  "description": "Action is a property of the AWS::WAF::WebACL resource and the AWS WAF WebACL Rules property that specifies the action AWS WAF takes when a web request matches or doesn't match all rule conditions.",
+  "properties": [
+    {
+      "name": "Type",
+      "desc": "For actions that are associated with a rule, the action that AWS WAF takes when a web request matches all conditions in a rule.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

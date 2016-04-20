@@ -1,0 +1,31 @@
+{
+  "fullName": "AWS::EC2::VPCPeeringConnection",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "VPCPeeringConnection",
+  "shortDesc": "A VPC peering connection enables a network connection between two virtual private clouds (VPCs) so that you can route traffic between them by means of a private IP addresses. For more information about VPC peering and its limitation, see VPC Peering Overview in the Amazon VPC Peering Guide.",
+  "properties": [
+    {
+      "name": "PeerVpcId",
+      "desc": "The ID of the VPC with which you are creating the peering connection.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Tags",
+      "desc": "An arbitrary set of tags (key–value pairs) for this resource.",
+      "required": false,
+      "type": "AWS CloudFormation Resource Tags",
+      "update": "No interruption."
+    },
+    {
+      "name": "VpcId",
+      "desc": "The ID of the VPC that is requesting a peering connection.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

@@ -1,0 +1,122 @@
+{
+  "fullName": "AWS::OpsWorks::Layer",
+  "namespace": "AWS",
+  "category": "OpsWorks",
+  "name": "Layer",
+  "shortDesc": "Creates an AWS OpsWorks layer. A layer defines, for example, which packages and applications are installed and how they are configured.",
+  "properties": [
+    {
+      "name": "Attributes",
+      "desc": "One or more user-defined key-value pairs to be added to the stack attributes bag.",
+      "required": false,
+      "type": "A list of key-value pairs",
+      "update": "No interruption"
+    },
+    {
+      "name": "AutoAssignElasticIps",
+      "desc": "Whether to automatically assign an Elastic IP address to Amazon EC2 instances in this layer.",
+      "required": true,
+      "type": "Boolean",
+      "update": "No interruption"
+    },
+    {
+      "name": "AutoAssignPublicIps",
+      "desc": "For AWS OpsWorks stacks that are running in a VPC, whether to automatically assign a public IP address to Amazon EC2 instances in this layer.",
+      "required": true,
+      "type": "Boolean",
+      "update": "No interruption"
+    },
+    {
+      "name": "CustomInstanceProfileArn",
+      "desc": "The Amazon Resource Name (ARN) of an IAM instance profile that is to be used for the Amazon EC2 instances in this layer.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "CustomRecipes",
+      "desc": "Custom event recipes for this layer.",
+      "required": false,
+      "type": "AWS OpsWorks Recipes Type",
+      "update": "No interruption"
+    },
+    {
+      "name": "CustomSecurityGroupIds",
+      "desc": "Custom security group IDs for this layer.",
+      "required": false,
+      "type": "List of strings",
+      "update": "No interruption"
+    },
+    {
+      "name": "EnableAutoHealing",
+      "desc": "Whether to automatically heal Amazon EC2 instances that have become disconnected or timed out.",
+      "required": true,
+      "type": "Boolean",
+      "update": "No interruption"
+    },
+    {
+      "name": "InstallUpdatesOnBoot",
+      "desc": "Whether to install operating system and package updates when the instance boots.",
+      "required": false,
+      "type": "Boolean",
+      "update": "No interruption"
+    },
+    {
+      "name": "LifecycleEventConfiguration",
+      "desc": "The lifecycle events for the AWS OpsWorks layer.",
+      "required": false,
+      "type": "AWS OpsWorks Layer LifeCycleConfiguration",
+      "update": "No interruption"
+    },
+    {
+      "name": "LoadBasedAutoScaling",
+      "desc": "The load-based scaling configuration for the AWS OpsWorks layer.",
+      "required": false,
+      "type": "AWS OpsWorks LoadBasedAutoScaling Type",
+      "update": "No interruption"
+    },
+    {
+      "name": "Name",
+      "desc": "The AWS OpsWorks layer name.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Packages",
+      "desc": "The packages for this layer.",
+      "required": false,
+      "type": "List of strings",
+      "update": "No interruption"
+    },
+    {
+      "name": "Shortname",
+      "desc": "The layer short name, which is used internally by AWS OpsWorks and by Chef recipes. The short name is also used as the name for the directory where your app files are installed.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "StackId",
+      "desc": "The ID of the AWS OpsWorks stack that this layer will be associated with.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Type",
+      "desc": "The layer type. A stack cannot have more than one layer of the same type, except for the custom type. You can have any number of custom types. For more information, see CreateLayer in the AWS OpsWorks API Reference.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "VolumeConfigurations",
+      "desc": "Describes the Amazon EBS volumes for this layer.",
+      "required": false,
+      "type": "A list of AWS OpsWorks VolumeConfiguration Type",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

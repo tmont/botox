@@ -1,0 +1,29 @@
+{
+  "fullName": "AWS::IAM::InstanceProfile",
+  "namespace": "AWS",
+  "category": "IAM",
+  "name": "InstanceProfile",
+  "shortDesc": "Creates an AWS Identity and Access Management (IAM) Instance Profile that can be used with IAM Roles for EC2 Instances.",
+  "properties": [
+    {
+      "name": "Path",
+      "desc": "The path associated with this IAM instance profile. For information about IAM paths, see Friendly Names and Paths in the AWS Identity and Access Management User Guide.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Roles",
+      "desc": "The roles associated with this IAM instance profile.",
+      "required": true,
+      "type": "List of references to AWS::IAM::Roles. Currently, a maximum of one role can be assigned to an instance profile.",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Arn",
+      "desc": "Returns the Amazon Resource Name (ARN) for the instance profile. For example:{\"Fn::GetAtt\" : [\"MyProfile\", \"Arn\"] }This will return a value such as “arn:aws:iam::1234567890:instance-profile/MyProfile-ASDNSDLKJ”."
+    }
+  ]
+}

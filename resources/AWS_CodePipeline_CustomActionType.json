@@ -1,0 +1,59 @@
+{
+  "fullName": "AWS::CodePipeline::CustomActionType",
+  "namespace": "AWS",
+  "category": "CodePipeline",
+  "name": "CustomActionType",
+  "shortDesc": "The AWS::CodePipeline::CustomActionType resource creates a custom action for activities that aren't included in the AWS CodePipeline default actions, such as running an internally developed build process or a test suite. You can use these custom actions in the stage of a pipeline. For more information, see Create and Add a Custom Action in AWS CodePipeline in the AWS CodePipeline User Guide.",
+  "properties": [
+    {
+      "name": "Category",
+      "desc": "The category of the custom action, such as a source action or a build action. For valid values, see CreateCustomActionType in the AWS CodePipeline API Reference.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "ConfigurationProperties",
+      "desc": "The configuration properties for the custom action.",
+      "required": false,
+      "type": "List of AWS CodePipeline CustomActionType ConfigurationProperties",
+      "update": "Replacement"
+    },
+    {
+      "name": "InputArtifactDetails",
+      "desc": "The input artifact details for this custom action.",
+      "required": true,
+      "type": "AWS CodePipeline CustomActionType ArtifactDetails",
+      "update": "Replacement"
+    },
+    {
+      "name": "OutputArtifactDetails",
+      "desc": "The output artifact details for this custom action.",
+      "required": true,
+      "type": "AWS CodePipeline CustomActionType ArtifactDetails",
+      "update": "Replacement"
+    },
+    {
+      "name": "Provider",
+      "desc": "The name of the service provider that AWS CodePipeline uses for this custom action.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Settings",
+      "desc": "URLs that provide users information about this custom action.",
+      "required": false,
+      "type": "AWS CodePipeline CustomActionType Settings",
+      "update": "Replacement"
+    },
+    {
+      "name": "Version",
+      "desc": "The version number of this custom action.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

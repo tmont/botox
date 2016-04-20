@@ -1,0 +1,12 @@
+{
+  "name": "S3CorsConfiguration",
+  "description": "Describes the cross-origin access configuration for objects in an AWS::S3::Bucket resource.",
+  "properties": [
+    {
+      "name": "CorsRules",
+      "desc": "A set of origins and methods that you allow.",
+      "required": true,
+      "type": "Amazon S3 Cors Configuration Rule"
+    }
+  ]
+}

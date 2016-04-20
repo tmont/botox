@@ -1,0 +1,80 @@
+{
+  "fullName": "AWS::ApiGateway::Method",
+  "namespace": "AWS",
+  "category": "ApiGateway",
+  "name": "Method",
+  "shortDesc": "The AWS::ApiGateway::Method resource creates Amazon API Gateway (API Gateway) methods that define the parameters and body that clients must send in their requests.",
+  "properties": [
+    {
+      "name": "ApiKeyRequired",
+      "desc": "Indicates whether the method requires clients to submit a valid API key.",
+      "required": false,
+      "type": "Boolean",
+      "update": "No interruption"
+    },
+    {
+      "name": "AuthorizationType",
+      "desc": "The method's authorization type.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "AuthorizerId",
+      "desc": "The identifier of the authorizer to use on this method. If you specify this property, specify CUSTOM for the AuthorizationType property.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "HttpMethod",
+      "desc": "The HTTP method that clients will use to call this method.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Integration",
+      "desc": "The back-end system that the method calls when it receives a request.",
+      "required": false,
+      "type": "Amazon API Gateway Method Integration",
+      "update": "No interruption"
+    },
+    {
+      "name": "MethodResponses",
+      "desc": "The responses that can be sent to the client who calls the method.",
+      "required": false,
+      "type": "List of Amazon API Gateway Method MethodResponse",
+      "update": "No interruption"
+    },
+    {
+      "name": "RequestModels",
+      "desc": "The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.",
+      "required": false,
+      "type": "List of key-value pairs",
+      "update": "No interruption"
+    },
+    {
+      "name": "RequestParameters",
+      "desc": "Request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean maps), with a source as the key and a Boolean as the value. The Boolean specifies whether a parameter is required. A source must match the following format method.request.location.name, where the location is a query string, path, or header, and name is a valid, unique parameter name.",
+      "required": false,
+      "type": "List of key-value pairs",
+      "update": "No interruption"
+    },
+    {
+      "name": "ResourceId",
+      "desc": "The ID of an API Gateway resource.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "RestApiId",
+      "desc": "The ID of the RestApi resource in which API Gateway creates the method.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

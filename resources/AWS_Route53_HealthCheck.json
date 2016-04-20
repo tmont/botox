@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::Route53::HealthCheck",
+  "namespace": "AWS",
+  "category": "Route53",
+  "name": "HealthCheck",
+  "shortDesc": "You can use the AWS::Route53::HealthCheck resource to check the health of your resources before Amazon Route 53 responds to a DNS query. For more information, see How Health Checks Work in Simple Amazon Route 53 Configurations in the Amazon Route 53 Developer Guide.",
+  "properties": [
+    {
+      "name": "HealthCheckConfig",
+      "desc": "An Amazon Route 53 health check.",
+      "required": true,
+      "type": "Amazon Route 53 HealthCheckConfig",
+      "update": "No interruption"
+    },
+    {
+      "name": "HealthCheckTags",
+      "desc": "An arbitrary set of tags (key–value pairs) for this health check.",
+      "required": false,
+      "type": "List of Amazon Route 53 HealthCheckTags",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

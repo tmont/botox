@@ -1,0 +1,42 @@
+{
+  "name": "S3CorsConfigurationRule",
+  "description": "Describes cross-origin access rules for the Amazon S3 Cors Configuration property.",
+  "properties": [
+    {
+      "name": "AllowedHeaders",
+      "desc": "Headers that are specified in the Access-Control-Request-Headers header. These headers are allowed in a preflight OPTIONS request. In response to any preflight OPTIONS request, Amazon S3 returns any requested headers that are allowed.",
+      "required": false,
+      "type": "List of strings"
+    },
+    {
+      "name": "AllowedMethods",
+      "desc": "An HTTP method that you allow the origin to execute. The valid values are GET, PUT, HEAD, POST, and DELETE.",
+      "required": true,
+      "type": "List of strings"
+    },
+    {
+      "name": "AllowedOrigins",
+      "desc": "An origin that you allow to send cross-domain requests.",
+      "required": true,
+      "type": "List of strings"
+    },
+    {
+      "name": "ExposedHeaders",
+      "desc": "One or more headers in the response that are accessible to client applications (for example, from a JavaScript XMLHttpRequest object).",
+      "required": false,
+      "type": "List of strings"
+    },
+    {
+      "name": "Id",
+      "desc": "A unique identifier for this rule. The value cannot be more than 255 characters.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "MaxAge",
+      "desc": "The time in seconds that your browser is to cache the preflight response for the specified resource.",
+      "required": false,
+      "type": "Integer"
+    }
+  ]
+}

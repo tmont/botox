@@ -1,0 +1,24 @@
+{
+  "name": "AWSOpsWorksLoadBasedAutoScalingType",
+  "description": "Describes the load-based automatic scaling configuration for an AWS::OpsWorks::Layer resource type. For more information, see SetLoadBasedAutoScaling in the AWS OpsWorks API Reference.",
+  "properties": [
+    {
+      "name": "DownScaling",
+      "desc": "The threshold below which the instances are scaled down (stopped). If the load falls below this threshold for a specified amount of time, AWS OpsWorks stops a specified number of instances.",
+      "required": false,
+      "type": "AWS OpsWorks AutoScalingThresholds Type"
+    },
+    {
+      "name": "Enable",
+      "desc": "Whether to enable automatic load-based scaling for the layer.",
+      "required": false,
+      "type": "Boolean"
+    },
+    {
+      "name": "UpScaling",
+      "desc": "The threshold above which the instances are scaled up (added). If the load exceeds this thresholds for a specified amount of time, AWS OpsWorks starts a specified number of instances.",
+      "required": false,
+      "type": "AWS OpsWorks AutoScalingThresholds Type"
+    }
+  ]
+}

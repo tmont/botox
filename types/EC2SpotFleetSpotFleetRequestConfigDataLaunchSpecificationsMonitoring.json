@@ -1,0 +1,12 @@
+{
+  "name": "EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring",
+  "description": "Monitoring is a property of the Amazon Elastic Compute Cloud SpotFleet SpotFleetRequestConfigData LaunchSpecifications property that enables instance monitoring.",
+  "properties": [
+    {
+      "name": "Enabled",
+      "desc": "Indicates whether monitoring is enabled for the instances.",
+      "required": false,
+      "type": "Boolean"
+    }
+  ]
+}

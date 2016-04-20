@@ -1,0 +1,24 @@
+{
+  "name": "SimpleStorageServiceNotificationConfigurationLambdaConfigurations",
+  "description": "LambdaConfigurations is a property of the Amazon S3 NotificationConfiguration property that describes the AWS Lambda (Lambda) functions to invoke and the events for which to invoke them.",
+  "properties": [
+    {
+      "name": "Event",
+      "desc": "The S3 bucket event for which to invoke the Lambda function. For more information, see Supported Event Types in the Amazon Simple Storage Service Developer Guide.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Filter",
+      "desc": "The filtering rules that determine which objects invoke the Lambda function. For example, you can create a filter so that only image files with a .jpg extension invoke the function when they are added to the S3 bucket.",
+      "required": false,
+      "type": "Amazon S3 NotificationConfiguration Config Filter"
+    },
+    {
+      "name": "Function",
+      "desc": "The Amazon Resource Name (ARN) of the Lambda function that Amazon S3 invokes when the specified event type occurs.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

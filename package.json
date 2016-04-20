@@ -1,0 +1,9 @@
+{
+	"name": "botox",
+	"version": "0.0.0",
+	"description": "AWS CloudFormation template generating library",
+	"devDependencies": {
+		"async": "1.5.2",
+		"cheerio": "0.20.0"
+	}
+}

@@ -1,0 +1,31 @@
+{
+  "fullName": "AWS::ElastiCache::ParameterGroup",
+  "namespace": "AWS",
+  "category": "ElastiCache",
+  "name": "ParameterGroup",
+  "shortDesc": "The AWS::ElastiCache::ParameterGroup type creates a new cache parameter group. Cache parameter groups control the parameters for a cache cluster.",
+  "properties": [
+    {
+      "name": "CacheParameterGroupFamily",
+      "desc": "The name of the cache parameter group family that the cache parameter group can be used with.",
+      "required": true,
+      "type": "String",
+      "update": "Updates are not supported."
+    },
+    {
+      "name": "Description",
+      "desc": "The description for the Cache Parameter Group.",
+      "required": true,
+      "type": "String",
+      "update": "Updates are not supported."
+    },
+    {
+      "name": "Properties",
+      "desc": "A comma-delimited list of parameter name/value pairs. For more information, go to ModifyCacheParameterGroup in the Amazon ElastiCache API Reference Guide.",
+      "required": true,
+      "type": "JSON object",
+      "update": "Updates are not supported."
+    }
+  ],
+  "attributes": []
+}

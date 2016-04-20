@@ -1,0 +1,50 @@
+{
+  "fullName": "AWS::IAM::User",
+  "namespace": "AWS",
+  "category": "IAM",
+  "name": "User",
+  "shortDesc": "The AWS::IAM::User type creates a user.",
+  "properties": [
+    {
+      "name": "Groups",
+      "desc": "A name of a group to which you want to add the user.",
+      "required": false,
+      "type": "List of strings",
+      "update": "No interruption"
+    },
+    {
+      "name": "LoginProfile",
+      "desc": "Creates a login profile so that the user can access the AWS Management Console.",
+      "required": false,
+      "type": "IAM User LoginProfile",
+      "update": "No interruption"
+    },
+    {
+      "name": "ManagedPolicyArns",
+      "desc": "One or more managed policy ARNs to attach to this user.",
+      "required": false,
+      "type": "List of strings",
+      "update": "No interruption"
+    },
+    {
+      "name": "Path",
+      "desc": "The path for the user name. For more information about paths, see Identifiers for IAM Entities in Using AWS Identity and Access Management.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Policies",
+      "desc": "The policies to associate with this user. For information about policies, see Overview of Policies in [Using IAM].",
+      "required": false,
+      "type": "List of IAM Policies",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Arn",
+      "desc": "Returns the Amazon Resource Name (ARN) for the specified AWS::IAM::User resource. For example: arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D."
+    }
+  ]
+}

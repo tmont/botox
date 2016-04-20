@@ -1,0 +1,12 @@
+{
+  "name": "S3NotificationConfigurationConfigFilterS3Key",
+  "description": "S3Key is a property of the Amazon S3 NotificationConfiguration Config Filter property that specifies the key names of Amazon Simple Storage Service (Amazon S3) objects for which to send notifications.",
+  "properties": [
+    {
+      "name": "Rules",
+      "desc": "The object key name to filter on and whether to filter on the suffix or prefix of the key name.",
+      "required": true,
+      "type": "List of Amazon S3 NotificationConfiguration Config Filter S3Key Rules"
+    }
+  ]
+}

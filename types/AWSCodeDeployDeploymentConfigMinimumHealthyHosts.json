@@ -1,0 +1,18 @@
+{
+  "name": "AWSCodeDeployDeploymentConfigMinimumHealthyHosts",
+  "description": "MinimumHealthyHosts is a property of the AWS::CodeDeploy::DeploymentConfig resource that defines how many instances must be healthy during an AWS CodeDeploy deployment.",
+  "properties": [
+    {
+      "name": "Type",
+      "desc": "The type of count to use, such as an absolute value or a percentage of the total number of instances in the deployment. For valid values, see MinimumHealthyHosts in the AWS CodeDeploy API Reference.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "Value",
+      "desc": "The minimum number of healthy instances.",
+      "required": false,
+      "type": "Integer"
+    }
+  ]
+}

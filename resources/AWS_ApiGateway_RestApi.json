@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::ApiGateway::RestApi",
+  "namespace": "AWS",
+  "category": "ApiGateway",
+  "name": "RestApi",
+  "shortDesc": "The AWS::ApiGateway::RestApi resource contains a collection of Amazon API Gateway (API Gateway) resources and methods that can be invoked through HTTPS endpoints.",
+  "properties": [
+    {
+      "name": "Body",
+      "desc": "A Swagger specification that defines a set of RESTful APIs in JSON or YAML format.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "BodyS3Location",
+      "desc": "The Amazon Simple Storage Service (Amazon S3) location that points to a Swagger file, which defines a set of RESTful APIs in JSON or YAML format.",
+      "required": false,
+      "type": "Amazon API Gateway RestApi S3Location",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

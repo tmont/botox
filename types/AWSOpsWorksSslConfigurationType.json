@@ -1,0 +1,24 @@
+{
+  "name": "AWSOpsWorksSslConfigurationType",
+  "description": "Describes an SSL configuration for the AWS::OpsWorks::App resource type.",
+  "properties": [
+    {
+      "name": "Certificate",
+      "desc": "The contents of the certificate's domain.crt file.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Chain",
+      "desc": "An intermediate certificate authority key or client authentication.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "PrivateKey",
+      "desc": "The private key; the contents of the certificate's domain.kex file.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::Redshift::ClusterSubnetGroup",
+  "namespace": "AWS",
+  "category": "Redshift",
+  "name": "ClusterSubnetGroup",
+  "shortDesc": "Creates an Amazon Redshift subnet group. You must provide a list of one or more subnets in your existing Amazon VPC when creating an Amazon Redshift subnet group.",
+  "properties": [
+    {
+      "name": "Description",
+      "desc": "A description of the subnet group.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "SubnetIds",
+      "desc": "A list of VPC subnet IDs. You can modify a maximum of 20 subnets.",
+      "required": true,
+      "type": "List of strings",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

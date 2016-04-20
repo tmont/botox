@@ -1,0 +1,18 @@
+{
+  "name": "AutoScalingMetricsCollection",
+  "description": "The MetricsCollection is a property of the AWS::AutoScaling::AutoScalingGroup resource that describes the group metrics that an Auto Scaling group sends to CloudWatch. These metrics describe the group rather than any of its instances. For more information, see EnableMetricsCollection in the Auto Scaling API Reference.",
+  "properties": [
+    {
+      "name": "Granularity",
+      "desc": "The frequency at which Auto Scaling sends aggregated data to CloudWatch. For example, you can specify 1Minute to send aggregated data to CloudWatch every minute.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Metrics",
+      "desc": "The list of metrics to collect. If you don't specify any metrics, all metrics are enabled.",
+      "required": false,
+      "type": "List of strings"
+    }
+  ]
+}

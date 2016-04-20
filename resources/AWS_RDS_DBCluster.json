@@ -1,0 +1,129 @@
+{
+  "fullName": "AWS::RDS::DBCluster",
+  "namespace": "AWS",
+  "category": "RDS",
+  "name": "DBCluster",
+  "shortDesc": "The AWS::RDS::DBCluster resource creates a cluster, such as an Aurora for Amazon RDS (Amazon Aurora) DB cluster. Amazon Aurora is a fully managed, MySQL-compatible, relational database engine. For more information, see Aurora on Amazon RDS in the Amazon Relational Database Service User Guide.",
+  "properties": [
+    {
+      "name": "AvailabilityZones",
+      "desc": "A list of Availability Zones (AZs) in which DB instances in the cluster can be created.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "BackupRetentionPeriod",
+      "desc": "The number of days for which automatic backups are retained. For more information, see CreateDBCluster in the Amazon Relational Database Service API Reference.",
+      "required": false,
+      "type": "Integer",
+      "update": "No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference."
+    },
+    {
+      "name": "DatabaseName",
+      "desc": "The name of your database. You can specify a name of up to eight alpha-numeric characters. If you do not provide a name, Amazon Relational Database Service (Amazon RDS) won't create a database in this DB cluster.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "DBClusterParameterGroupName",
+      "desc": "The name of the DB cluster parameter group to associate with this DB cluster. For the default value, see the DBClusterParameterGroupName parameter of the CreateDBCluster action in the Amazon Relational Database Service API Reference.",
+      "required": false,
+      "type": "String",
+      "update": "Some interruptions"
+    },
+    {
+      "name": "DBSubnetGroupName",
+      "desc": "A DB subnet group that you want to associate with this DB cluster.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Engine",
+      "desc": "The name of the database engine that you want to use for this DB cluster.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "EngineVersion",
+      "desc": "The version number of the database engine that you want to use.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "KmsKeyId",
+      "desc": "The Amazon Resource Name (ARN) of the AWS Key Management Service master key that is used to encrypt the database instances in the DB cluster, such as arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef. If you enable the StorageEncrypted property but don't specify this property, the default master key is used. If you specify this property, you must set the StorageEncrypted property to true.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement."
+    },
+    {
+      "name": "MasterUsername",
+      "desc": "The master user name for the DB instance.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement."
+    },
+    {
+      "name": "MasterUserPassword",
+      "desc": "The password for the master database user.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Port",
+      "desc": "The port number on which the DB instances in the cluster can accept connections.",
+      "required": false,
+      "type": "Integer",
+      "update": "No interruption"
+    },
+    {
+      "name": "PreferredBackupWindow",
+      "desc": "if automated backups are enabled (see the BackupRetentionPeriod property), the daily time range in UTC during which you want to create automated backups.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "PreferredMaintenanceWindow",
+      "desc": "The weekly time range (in UTC) during which system maintenance can occur.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference."
+    },
+    {
+      "name": "SnapshotIdentifier",
+      "desc": "The identifier for the DB cluster snapshot from which you want to restore.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "StorageEncrypted",
+      "desc": "Indicates whether the DB instances in the cluster are encrypted.",
+      "required": false,
+      "type": "Boolean",
+      "update": "Replacement."
+    },
+    {
+      "name": "Tags",
+      "desc": "The tags that you want to attach to this DB cluster.",
+      "required": false,
+      "type": "A list of resource tags",
+      "update": "Updates are not supported."
+    },
+    {
+      "name": "VpcSecurityGroupIds",
+      "desc": "A list of VPC security groups to associate with this DB cluster.",
+      "required": false,
+      "type": "List of strings",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

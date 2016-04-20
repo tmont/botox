@@ -1,0 +1,66 @@
+{
+  "fullName": "AWS::EC2::NetworkAclEntry",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "NetworkAclEntry",
+  "shortDesc": "Creates an entry (i.e., rule) in a network ACL with a rule number you specify. Each network ACL has a set of numbered ingress rules and a separate set of numbered egress rules.",
+  "properties": [
+    {
+      "name": "CidrBlock",
+      "desc": "The CIDR range to allow or deny, in CIDR notation (e.g., 172.16.0.0/24).",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Egress",
+      "desc": "Whether this rule applies to egress traffic from the subnet (true) or ingress traffic to the subnet (false). By default, AWS CloudFormation specifies false.",
+      "required": false,
+      "type": "Boolean",
+      "update": "Replacement."
+    },
+    {
+      "name": "Icmp",
+      "desc": "The Internet Control Message Protocol (ICMP) code and type.",
+      "required": false,
+      "type": "EC2 ICMP Property Type",
+      "update": "No interruption"
+    },
+    {
+      "name": "NetworkAclId",
+      "desc": "ID of the ACL where the entry will be created.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement."
+    },
+    {
+      "name": "PortRange",
+      "desc": "The range of port numbers for the UDP/TCP protocol.",
+      "required": false,
+      "type": "EC2 PortRange Property Type",
+      "update": "No interruption"
+    },
+    {
+      "name": "Protocol",
+      "desc": "The IP protocol that the rule applies to. You must specify -1 or a protocol number (go to Protocol Numbers at iana.org). You can specify -1 for all protocols.",
+      "required": true,
+      "type": "Number",
+      "update": "No interruption"
+    },
+    {
+      "name": "RuleAction",
+      "desc": "Whether to allow or deny traffic that matches the rule; valid values are \"allow\" or \"deny\".",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "RuleNumber",
+      "desc": "Rule number to assign to the entry (e.g., 100). This must be a positive integer from 1 to 32766.",
+      "required": true,
+      "type": "Number",
+      "update": "Replacement."
+    }
+  ],
+  "attributes": []
+}

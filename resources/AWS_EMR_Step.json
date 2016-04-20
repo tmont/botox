@@ -1,0 +1,38 @@
+{
+  "fullName": "AWS::EMR::Step",
+  "namespace": "AWS",
+  "category": "EMR",
+  "name": "Step",
+  "shortDesc": "The AWS::EMR::Step resource creates a unit of work (a job flow step) that you submit to an Amazon Elastic MapReduce (Amazon EMR) cluster. The job flow step contains instructions for processing data on the cluster.",
+  "properties": [
+    {
+      "name": "ActionOnFailure",
+      "desc": "The action to take if the job flow step fails. Currently, AWS CloudFormation supports CONTINUE and CONTINUE_AND_WAIT. For more information, see Managing Cluster Termination in the Amazon Elastic MapReduce Management Guide.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "HadoopJarStep",
+      "desc": "The JAR file that includes the main function that Amazon EMR executes.",
+      "required": true,
+      "type": "Amazon Elastic MapReduce Step HadoopJarStepConfig",
+      "update": "Replacement"
+    },
+    {
+      "name": "JobFlowId",
+      "desc": "The ID of a cluster in which you want to run this job flow step.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Name",
+      "desc": "A name for the job flow step.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

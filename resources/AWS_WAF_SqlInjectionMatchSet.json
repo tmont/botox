@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::WAF::SqlInjectionMatchSet",
+  "namespace": "AWS",
+  "category": "WAF",
+  "name": "SqlInjectionMatchSet",
+  "shortDesc": "The AWS::WAF::SqlInjectionMatchSet resource creates an AWS WAF SqlInjectionMatchSet, which you use to allow, block, or count requests that contain malicious SQL code in a specific part of web requests. For more information, see CreateSqlInjectionMatchSet in the AWS WAF API Reference.",
+  "properties": [
+    {
+      "name": "Name",
+      "desc": "A friendly name or description of the SqlInjectionMatchSet.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "SqlInjectionMatchTuples",
+      "desc": "The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.",
+      "required": false,
+      "type": "List of AWS WAF SqlInjectionMatchSet SqlInjectionMatchTuples",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

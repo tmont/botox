@@ -1,0 +1,38 @@
+{
+  "fullName": "AWS::Logs::Destination",
+  "namespace": "AWS",
+  "category": "Logs",
+  "name": "Destination",
+  "shortDesc": "The AWS::Logs::Destination resource creates an Amazon CloudWatch Logs (CloudWatch Logs) destination, which enables you to specify a physical resource (such as an Amazon Kinesis stream) that subscribes to CloudWatch Logs log events from another AWS account. For more information, see Cross-Account Log Data Sharing with Subscriptions in the Amazon CloudWatch Developer Guide.",
+  "properties": [
+    {
+      "name": "DestinationName",
+      "desc": "The name of the CloudWatch Logs destination.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "DestinationPolicy",
+      "desc": "An AWS Identity and Access Management (IAM) policy that specifies who can write to your destination.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "RoleArn",
+      "desc": "The Amazon Resource Name (ARN) of an IAM role that permits CloudWatch Logs to send data to the specified AWS resource (TargetArn).",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "TargetArn",
+      "desc": "The ARN of the AWS resource that receives log events. Currently, you can specify only an Amazon Kinesis stream.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

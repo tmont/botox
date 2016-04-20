@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::ElasticBeanstalk::Application",
+  "namespace": "AWS",
+  "category": "ElasticBeanstalk",
+  "name": "Application",
+  "shortDesc": "Creates an Elastic Beanstalk application.",
+  "properties": [
+    {
+      "name": "ApplicationName",
+      "desc": "A name for the Elastic Beanstalk application. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the application name. For more information, see Name Type.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Description",
+      "desc": "An optional description of this application.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

@@ -1,0 +1,78 @@
+{
+  "name": "ElasticMapReduceClusterJobFlowInstancesConfig",
+  "description": "JobFlowInstancesConfig is a property of the AWS::EMR::Cluster resource that configures the EC2 instances (nodes) that will run jobs in an Amazon Elastic MapReduce (Amazon EMR) cluster.",
+  "properties": [
+    {
+      "name": "AdditionalMasterSecurityGroups",
+      "desc": "A list of additional EC2 security group IDs to assign to the master instance (master node) in your Amazon EMR cluster. Use this property to supplement the rules specified by the Amazon EMR managed master security group.",
+      "required": false,
+      "type": "List of strings"
+    },
+    {
+      "name": "AdditionalSlaveSecurityGroups",
+      "desc": "A list of additional EC2 security group IDs to assign to the slave instances (slave nodes) in your Amazon EMR cluster. Use this property to supplement the rules specified by the Amazon EMR managed slave security group.",
+      "required": false,
+      "type": "List of strings"
+    },
+    {
+      "name": "CoreInstanceGroup",
+      "desc": "The settings for the core instances in your Amazon EMR cluster.",
+      "required": true,
+      "type": "Amazon Elastic MapReduce Cluster JobFlowInstancesConfig InstanceGroupConfig"
+    },
+    {
+      "name": "Ec2KeyName",
+      "desc": "The name of an Amazon Elastic Compute Cloud (Amazon EC2) key pair, which you can use to access the instances in your Amazon EMR cluster.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "Ec2SubnetId",
+      "desc": "The ID of an Amazon Virtual Private Cloud (Amazon VPC) virtual private cloud (VPC) where you want to launch your instances.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "EmrManagedMasterSecurityGroup",
+      "desc": "The ID of an EC2 security group (managed by Amazon EMR) that is assigned to the master instance (master node) in your Amazon EMR cluster.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "EmrManagedSlaveSecurityGroup",
+      "desc": "The ID of an EC2 security group (managed by Amazon EMR) that is assigned to the slave instances (slave nodes) in your Amazon EMR cluster.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "HadoopVersion",
+      "desc": "The Hadoop version for the job flow. For valid values, see the HadoopVersion parameter in the Amazon Elastic MapReduce API Reference.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "MasterInstanceGroup",
+      "desc": "The settings for the master instance (master node).",
+      "required": true,
+      "type": "Amazon Elastic MapReduce Cluster JobFlowInstancesConfig InstanceGroupConfig"
+    },
+    {
+      "name": "Placement",
+      "desc": "The Availability Zone (AZ) in which the job flow runs.",
+      "required": false,
+      "type": "Amazon Elastic MapReduce Cluster JobFlowInstancesConfig PlacementType"
+    },
+    {
+      "name": "ServiceAccessSecurityGroup",
+      "desc": "The ID of an EC2 security group (managed by Amazon EMR) that services use to access clusters in private subnets.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "TerminationProtected",
+      "desc": "Indicates whether to prevent the EC2 instances from being terminated by an API call or user intervention. If you want to delete a stack with protected instances, update this value to false before you delete the stack. By default, AWS CloudFormation sets this property to false.",
+      "required": false,
+      "type": "Boolean"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "ElasticMapReduceClusterApplication",
+  "description": "Application is a property of the AWS::EMR::Cluster resource that adds an Amazon Elastic MapReduce (Amazon EMR) application bundle or third-party software to an Amazon EMR cluster.",
+  "properties": [
+    {
+      "name": "AdditionalInfo",
+      "desc": "Metadata about third-party applications that third-party vendors use for testing purposes.",
+      "required": false,
+      "type": "String-to-string map"
+    },
+    {
+      "name": "Args",
+      "desc": "Arguments that Amazon EMR passes to the application.",
+      "required": false,
+      "type": "List of strings"
+    },
+    {
+      "name": "Name",
+      "desc": "The name of the application to add to your cluster, such as Hadoop or Hive. For valid values, see the Applications parameter in the Amazon Elastic MapReduce API Reference.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "Version",
+      "desc": "The version of the application.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

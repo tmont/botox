@@ -1,0 +1,30 @@
+{
+  "name": "AWSConfigConfigRuleScope",
+  "description": "Scope is a property of the AWS::Config::ConfigRule resource that specifies which AWS resources will trigger AWS Config to run an evaluation when their configurations change. The scope can include one or more resource types, a tag key and value, or one resource type and one resource ID. You cannot specify a tag-key value and a resource ID or type.",
+  "properties": [
+    {
+      "name": "ComplianceResourceId",
+      "desc": "The ID of an AWS resource that you want AWS Config to evaluate against a rule. If you specify an ID, you must also specify a resource type for the ComplianceResourceTypes property.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "ComplianceResourceTypes",
+      "desc": "The types of AWS resources that you want AWS Config to evaluate against the rule. If you specify the ComplianceResourceId property, specify only one resource type.",
+      "required": false,
+      "type": "List of strings"
+    },
+    {
+      "name": "TagKey",
+      "desc": "The tag key that is applied to the AWS resources that you want AWS Config to evaluate against the rule.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "TagValue",
+      "desc": "The tag value that is applied to the AWS resources that you want AWS Config to evaluate against the rule.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

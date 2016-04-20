@@ -1,0 +1,24 @@
+{
+  "name": "AWSCodeDeployDeploymentGroupEc2TagFilters",
+  "description": "Ec2TagFilters is a property of the AWS::CodeDeploy::DeploymentGroup resource that specifies which EC2 instances to associate with the deployment group.",
+  "properties": [
+    {
+      "name": "Key",
+      "desc": "Filter instances with this key.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "Type",
+      "desc": "The filter type. For example, you can filter instances by the key, tag value, or both. For valid values, see EC2TagFilter in the AWS CodeDeploy API Reference.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "Value",
+      "desc": "Filter instances with this tag value.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

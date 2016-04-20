@@ -1,0 +1,24 @@
+{
+  "name": "ElasticBeanstalkOptionSettingsPropertyType",
+  "description": "OptionSettings is an embedded property of the AWS::ElasticBeanstalk::Environment and AWS::ElasticBeanstalk::ConfigurationTemplate resources. You use the OptionSettings property to specify an array of options for the Elastic Beanstalk environment.",
+  "properties": [
+    {
+      "name": "Namespace",
+      "desc": "A unique namespace identifying the option's associated AWS resource. For a list of namespaces that you can use, see Configuration Options in the AWS Elastic Beanstalk Developer Guide.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "OptionName",
+      "desc": "The name of the configuration option. For a list of options that you can use, see Configuration Options in the AWS Elastic Beanstalk Developer Guide.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Value",
+      "desc": "The value of the setting.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

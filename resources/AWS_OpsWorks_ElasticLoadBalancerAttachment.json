@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::OpsWorks::ElasticLoadBalancerAttachment",
+  "namespace": "AWS",
+  "category": "OpsWorks",
+  "name": "ElasticLoadBalancerAttachment",
+  "shortDesc": "Attaches an Elastic Load Balancing load balancer to an AWS OpsWorks layer that you specify.",
+  "properties": [
+    {
+      "name": "ElasticLoadBalancerName",
+      "desc": "Elastic Load Balancing load balancer name.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "LayerId",
+      "desc": "The AWS OpsWorks layer ID that the Elastic Load Balancing load balancer will be attached to.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

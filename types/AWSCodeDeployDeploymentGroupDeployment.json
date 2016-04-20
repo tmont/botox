@@ -1,0 +1,24 @@
+{
+  "name": "AWSCodeDeployDeploymentGroupDeployment",
+  "description": "Deployment is a property of the AWS::CodeDeploy::DeploymentGroup resource that specifies the AWS CodeDeploy application revision that will be deployed to the deployment group.",
+  "properties": [
+    {
+      "name": "Description",
+      "desc": "A description about this deployment.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "IgnoreApplicationStopFailures",
+      "desc": "Whether to continue the deployment if the ApplicationStop deployment lifecycle event fails. If you want AWS CodeDeploy to continue the deployment lifecycle even if the ApplicationStop event fails on an instance, specify true. The deployment continues to the BeforeInstall deployment lifecycle event. If you want AWS CodeDeploy to stop deployment on the instance if the ApplicationStop event fails, specify false or do not specify a value.",
+      "required": false,
+      "type": "Boolean"
+    },
+    {
+      "name": "Revision",
+      "desc": "The location of the application revision to deploy.",
+      "required": true,
+      "type": "AWS CodeDeploy DeploymentGroup Deployment Revision"
+    }
+  ]
+}

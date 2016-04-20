@@ -1,0 +1,45 @@
+{
+  "fullName": "AWS::Config::DeliveryChannel",
+  "namespace": "AWS",
+  "category": "Config",
+  "name": "DeliveryChannel",
+  "shortDesc": "The AWS::Config::DeliveryChannel resource describes where AWS Config stores configuration changes to an AWS resource.",
+  "properties": [
+    {
+      "name": "ConfigSnapshotDeliveryProperties",
+      "desc": "Provides options for how AWS Config delivers configuration snapshots to the S3 bucket in your delivery channel.",
+      "required": false,
+      "type": "AWS Config DeliveryChannel ConfigSnapshotDeliveryProperties",
+      "update": "No interruption"
+    },
+    {
+      "name": "Name",
+      "desc": "A name for the delivery channel. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the delivery channel name. For more information, see Name Type.",
+      "required": false,
+      "type": "String",
+      "update": "Updates are not supported.. To change the name, you must run two separate updates. Delete this resource in the first update and then recreate it with a new name in the second update."
+    },
+    {
+      "name": "S3BucketName",
+      "desc": "The name of an S3 bucket where you want to store configuration history for the delivery channel.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "S3KeyPrefix",
+      "desc": "A key prefix (folder) for the specified S3 bucket.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "SnsTopicARN",
+      "desc": "The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (Amazon SNS) topic that AWS Config delivers notifications to.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

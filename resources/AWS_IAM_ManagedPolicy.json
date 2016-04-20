@@ -1,0 +1,52 @@
+{
+  "fullName": "AWS::IAM::ManagedPolicy",
+  "namespace": "AWS",
+  "category": "IAM",
+  "name": "ManagedPolicy",
+  "shortDesc": "AWS::IAM::ManagedPolicy creates an AWS Identity and Access Management (IAM) managed policy for your AWS account that you can use to apply permissions to IAM users, groups, and roles. For more information about managed policies, see Managed Policies and Inline Policies in the IAM User Guide guide.",
+  "properties": [
+    {
+      "name": "Description",
+      "desc": "A description of the policy. For example, you can describe the permissions that are defined in the policy.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Groups",
+      "desc": "The names of groups to attach to this policy.",
+      "required": false,
+      "type": "List of strings",
+      "update": "No interruption"
+    },
+    {
+      "name": "Path",
+      "desc": "The path for the policy. By default, the path is /. For more information, see IAM Identifiers in the IAM User Guide guide.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "PolicyDocument",
+      "desc": "Policies that define the permissions for this managed policy. For more information about policy syntax, see IAM Policy Elements Reference in IAM User Guide.",
+      "required": true,
+      "type": "JSON object",
+      "update": "No interruption"
+    },
+    {
+      "name": "Roles",
+      "desc": "The names of roles to attach to this policy.",
+      "required": false,
+      "type": "List of strings",
+      "update": "No interruption"
+    },
+    {
+      "name": "Users",
+      "desc": "The names of users to attach to this policy.",
+      "required": false,
+      "type": "List of strings",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

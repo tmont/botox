@@ -1,0 +1,18 @@
+{
+  "name": "AWSDataPipelinePipelineParameterValues",
+  "description": "ParameterValues is a property of the AWS::DataPipeline::Pipeline resource that sets values for parameters that are used in a pipeline definition.",
+  "properties": [
+    {
+      "name": "Id",
+      "desc": "The ID of a parameter object.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "StringValue",
+      "desc": "A value to associate with the parameter object.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

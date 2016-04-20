@@ -1,0 +1,48 @@
+{
+  "name": "AWSOpsWorksTimeBasedAutoScalingType",
+  "description": "Describes the automatic time-based scaling configuration for an AWS::OpsWorks::Instance resource type. For more information, see SetTimeBasedAutoScaling in the AWS OpsWorks API Reference.",
+  "properties": [
+    {
+      "name": "Friday",
+      "desc": "The schedule for Friday.",
+      "required": false,
+      "type": "String to string map"
+    },
+    {
+      "name": "Monday",
+      "desc": "The schedule for Monday.",
+      "required": false,
+      "type": "String to string map"
+    },
+    {
+      "name": "Saturday",
+      "desc": "The schedule for Saturday.",
+      "required": false,
+      "type": "String to string map"
+    },
+    {
+      "name": "Sunday",
+      "desc": "The schedule for Sunday.",
+      "required": false,
+      "type": "String to string map"
+    },
+    {
+      "name": "Thursday",
+      "desc": "The schedule for Thursday.",
+      "required": false,
+      "type": "String to string map"
+    },
+    {
+      "name": "Tuesday",
+      "desc": "The schedule for Tuesday.",
+      "required": false,
+      "type": "String to string map"
+    },
+    {
+      "name": "Wednesday",
+      "desc": "The schedule for Wednesday.",
+      "required": false,
+      "type": "String to string map"
+    }
+  ]
+}

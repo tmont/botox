@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::ECS::TaskDefinition",
+  "namespace": "AWS",
+  "category": "ECS",
+  "name": "TaskDefinition",
+  "shortDesc": "The AWS::ECS::TaskDefinition resource describes the container and volume definitions of an Amazon EC2 Container Service (Amazon ECS) task. You can specify which Docker images to use, the required resources, and other configurations related to launching the task definition through an Amazon ECS service or task.",
+  "properties": [
+    {
+      "name": "ContainerDefinitions",
+      "desc": "A list of container definitions in JSON format that describe the containers that make up your task.",
+      "required": true,
+      "type": "List of Amazon EC2 Container Service TaskDefinition ContainerDefinitions",
+      "update": "Replacement"
+    },
+    {
+      "name": "Volumes",
+      "desc": "A list of volume definitions in JSON format for volumes that you can use in your container definitions.",
+      "required": true,
+      "type": "List of Amazon EC2 Container Service TaskDefinition Volumes",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

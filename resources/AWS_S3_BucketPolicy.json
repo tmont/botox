@@ -1,0 +1,23 @@
+{
+  "fullName": "AWS::S3::BucketPolicy",
+  "namespace": "AWS",
+  "category": "S3",
+  "name": "BucketPolicy",
+  "shortDesc": "The AWS::S3::BucketPolicy type applies an Amazon S3 bucket policy to an Amazon S3 bucket.",
+  "properties": [
+    {
+      "name": "Bucket",
+      "desc": "The Amazon S3 bucket that the policy applies to.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "PolicyDocument",
+      "desc": "A policy document containing permissions to add to the specified bucket. For more information, see Access Policy Language Overview in the Amazon Simple Storage Service Developer Guide.",
+      "required": true,
+      "type": "JSON object",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

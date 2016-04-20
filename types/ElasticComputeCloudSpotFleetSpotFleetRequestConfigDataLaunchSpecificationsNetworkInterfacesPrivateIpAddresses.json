@@ -1,0 +1,18 @@
+{
+  "name": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses",
+  "description": "PrivateIpAddresses is a property of the Amazon Elastic Compute Cloud SpotFleet SpotFleetRequestConfigData LaunchSpecifications NetworkInterfaces property that specifies the private IP address that you want to assign to the network interface.",
+  "properties": [
+    {
+      "name": "Primary",
+      "desc": "Indicates whether the private IP address is the primary private IP address. You can designate only one IP address as primary.",
+      "required": false,
+      "type": "Boolean"
+    },
+    {
+      "name": "PrivateIpAddress",
+      "desc": "The private IP address.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

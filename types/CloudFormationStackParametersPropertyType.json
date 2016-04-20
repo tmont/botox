@@ -1,0 +1,5 @@
+{
+  "name": "CloudFormationStackParametersPropertyType",
+  "description": "The Parameters type is an embedded property of the AWS::CloudFormation::Stack type.",
+  "properties": []
+}

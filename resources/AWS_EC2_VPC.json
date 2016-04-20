@@ -1,0 +1,58 @@
+{
+  "fullName": "AWS::EC2::VPC",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "VPC",
+  "shortDesc": "Creates a Virtual Private Cloud (VPC) with the CIDR block that you specify.",
+  "properties": [
+    {
+      "name": "CidrBlock",
+      "desc": "The CIDR block you want the VPC to cover. For example: \"10.0.0.0/16\".",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "EnableDnsSupport",
+      "desc": "Specifies whether DNS resolution is supported for the VPC. If this attribute is true, the Amazon DNS server resolves DNS hostnames for your instances to their corresponding IP addresses; otherwise, it does not. By default the value is set to true.",
+      "required": false,
+      "type": "Boolean",
+      "update": "No interruption"
+    },
+    {
+      "name": "EnableDnsHostnames",
+      "desc": "Specifies whether the instances launched in the VPC get DNS hostnames. If this attribute is true, instances in the VPC get DNS hostnames; otherwise, they do not. You can only set EnableDnsHostnames to true if you also set the EnableDnsSupport attribute to true. By default, the value is set to false.",
+      "required": false,
+      "type": "Boolean",
+      "update": "No interruption"
+    },
+    {
+      "name": "InstanceTenancy",
+      "desc": "The allowed tenancy of instances launched into the VPC.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Tags",
+      "desc": "An arbitrary set of tags (key–value pairs) for this VPC.",
+      "required": false,
+      "type": "AWS CloudFormation Resource Tags",
+      "update": "No interruption."
+    }
+  ],
+  "attributes": [
+    {
+      "name": "CidrBlock",
+      "desc": "The set of IP addresses for the VPC. For example, 10.0.0.0/16."
+    },
+    {
+      "name": "DefaultNetworkAcl",
+      "desc": "The default network ACL ID that is associated with the VPC. For example, acl-814dafe3."
+    },
+    {
+      "name": "DefaultSecurityGroup",
+      "desc": "The default security group ID that is associated with the VPC. For example, sg-b178e0d3."
+    }
+  ]
+}

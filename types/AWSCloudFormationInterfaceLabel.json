@@ -1,0 +1,12 @@
+{
+  "name": "AWSCloudFormationInterfaceLabel",
+  "description": "Label is a property of the ParameterGroup and ParameterLabel properties that defines name for a parameter group or parameter.",
+  "properties": [
+    {
+      "name": "default",
+      "desc": "The default label that the AWS CloudFormation console uses to name a parameter group or parameter.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "fullName": "AWS::Lambda::Function",
+  "namespace": "AWS",
+  "category": "Lambda",
+  "name": "Function",
+  "shortDesc": "The AWS::Lambda::Function resource creates an AWS Lambda (Lambda) function that can run code in response to events. For more information, see CreateFunction in the AWS Lambda Developer Guide.",
+  "properties": [
+    {
+      "name": "Code",
+      "desc": "The source code of your Lambda function. You can point to a file in an Amazon Simple Storage Service (Amazon S3) bucket or specify your source code as inline text.",
+      "required": true,
+      "type": "AWS Lambda Function Code",
+      "update": "No interruption"
+    },
+    {
+      "name": "Description",
+      "desc": "A description of the function.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "FunctionName",
+      "desc": "A name for the function. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the function's name. For more information, see Name Type.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Handler",
+      "desc": "The name of the function (within your source code) that Lambda calls to start running your code. For more information, see the Handler property in the AWS Lambda Developer Guide.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "MemorySize",
+      "desc": "The amount of memory, in MB, that is allocated to your Lambda function. Lambda uses this value to proportionally allocate the amount of CPU power. For more information, see Resource Model in the AWS Lambda Developer Guide.",
+      "required": false,
+      "type": "Integer",
+      "update": "No interruption"
+    },
+    {
+      "name": "Role",
+      "desc": "The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) execution role that Lambda assumes when it runs your code to access AWS services.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Runtime",
+      "desc": "The runtime environment for the Lambda function that you are uploading. For valid values, see the Runtime property in the AWS Lambda Developer Guide.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Timeout",
+      "desc": "The function execution time (in seconds) after which Lambda terminates the function. Because the execution time affects cost, set this value based on the function's expected execution time. By default, Timeout is set to 3 seconds.",
+      "required": false,
+      "type": "Integer",
+      "update": "No interruption"
+    },
+    {
+      "name": "VpcConfig",
+      "desc": "If the Lambda function requires access to resources in a VPC, specify a VPC configuration that Lambda uses to set up an elastic network interface (ENI). The ENI enables your function to connect to other resources in your VPC, but it doesn't provide public Internet access. If your function requires Internet access (for example, to access AWS services that don't have VPC endpoints), configure a Network Address Translation (NAT) instance inside your VPC or use an Amazon Virtual Private Cloud (Amazon VPC) NAT gateway. For more information, see NAT Gateways in the Amazon VPC User Guide.",
+      "required": false,
+      "type": "AWS Lambda Function VPCConfig",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Arn",
+      "desc": "The ARN of the Lambda function, such as arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD."
+    }
+  ]
+}

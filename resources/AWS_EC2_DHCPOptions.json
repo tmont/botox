@@ -1,0 +1,52 @@
+{
+  "fullName": "AWS::EC2::DHCPOptions",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "DHCPOptions",
+  "shortDesc": "Creates a set of DHCP options for your VPC.",
+  "properties": [
+    {
+      "name": "DomainName",
+      "desc": "A domain name of your choice.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "DomainNameServers",
+      "desc": "The IP (IPv4) address of a domain name server. You can specify up to four addresses.",
+      "required": false,
+      "type": "List of strings",
+      "update": "Replacement"
+    },
+    {
+      "name": "NetbiosNameServers",
+      "desc": "The IP address (IPv4) of a NetBIOS name server. You can specify up to four addresses.",
+      "required": false,
+      "type": "List of strings",
+      "update": "Replacement"
+    },
+    {
+      "name": "NetbiosNodeType",
+      "desc": "An integer value indicating the NetBIOS node type:",
+      "required": false,
+      "type": "List of numbers",
+      "update": "Replacement"
+    },
+    {
+      "name": "NtpServers",
+      "desc": "The IP address (IPv4) of a Network Time Protocol (NTP) server. You can specify up to four addresses.",
+      "required": false,
+      "type": "List of strings",
+      "update": "Replacement"
+    },
+    {
+      "name": "Tags",
+      "desc": "An arbitrary set of tags (key–value pairs) for this resource.",
+      "required": false,
+      "type": "AWS CloudFormation Resource Tags",
+      "update": "No interruption."
+    }
+  ],
+  "attributes": []
+}

@@ -1,0 +1,38 @@
+{
+  "fullName": "AWS::WAF::WebACL",
+  "namespace": "AWS",
+  "category": "WAF",
+  "name": "WebACL",
+  "shortDesc": "The AWS::WAF::WebACL resource creates an AWS WAF web access control group (ACL) containing the rules that identify the Amazon CloudFront (CloudFront) web requests that you want to allow, block, or count. For more information, see CreateWebACL in the AWS WAF API Reference.",
+  "properties": [
+    {
+      "name": "DefaultAction",
+      "desc": "The action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.",
+      "required": true,
+      "type": "AWS WAF WebACL Action",
+      "update": "No interruption"
+    },
+    {
+      "name": "MetricName",
+      "desc": "A friendly name or description for the Amazon CloudWatch metric of this web ACL.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Name",
+      "desc": "A friendly name or description of the web ACL.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Rules",
+      "desc": "The rules to associate with the web ACL and the settings for each rule.",
+      "required": false,
+      "type": "List of AWS WAF WebACL Rules",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

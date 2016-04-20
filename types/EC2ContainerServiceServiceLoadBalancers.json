@@ -1,0 +1,24 @@
+{
+  "name": "EC2ContainerServiceServiceLoadBalancers",
+  "description": "LoadBalancers is a property of the AWS::ECS::Service resource that specifies the load balancer to associate with an Amazon EC2 Container Service (Amazon ECS) service.",
+  "properties": [
+    {
+      "name": "ContainerName",
+      "desc": "The name of a container to use with the load balancer.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "ContainerPort",
+      "desc": "The port number on the container to direct load balancer traffic to. Your container instances must allow ingress traffic on this port.",
+      "required": true,
+      "type": "Integer"
+    },
+    {
+      "name": "LoadBalancerName",
+      "desc": "The name of the load balancer to associated with the Amazon ECS service.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}
