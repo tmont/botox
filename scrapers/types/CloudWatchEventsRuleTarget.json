@@ -1,0 +1,30 @@
+{
+  "name": "CloudWatchEventsRuleTarget",
+  "description": "Target is a property of the AWS::Events::Rule resource that specifies the targets that CloudWatch Events invokes when a rule is triggered, such as AWS Lambda (Lambda) functions or Amazon Kinesis streams.",
+  "properties": [
+    {
+      "name": "Arn",
+      "description": "The Amazon Resource Name (ARN) of the target.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Id",
+      "description": "A unique identifier for the target.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Input",
+      "description": "A JSON-formatted text string that is passed to the target. This value overrides the matched event.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "InputPath",
+      "description": "When you don't want to pass the entire matched event, the JSONPath that describes which part of the event to pass to the target.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

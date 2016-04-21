@@ -1,0 +1,12 @@
+{
+  "name": "GameLiftBuildStorageLocation",
+  "description": "StorageLocation is a property of the AWS::GameLift::Build resource that specifies the location of an Amazon GameLift (GameLift) build package files, such as the game server binaries. For more information, see Uploading a Build to Amazon GameLift in the Amazon GameLift Developer Guide.",
+  "properties": [
+    {
+      "name": "Bucket",
+      "description": "The S3 bucket where the GameLift build package files are stored.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

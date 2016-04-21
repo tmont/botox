@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::EC2::RouteTable",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "RouteTable",
+  "description": "Creates a new route table within a VPC. After you create a new route table, you can add routes and associate the table with a subnet.",
+  "properties": [
+    {
+      "name": "VpcId",
+      "description": "The ID of the VPC where the route table will be created.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Tags",
+      "description": "An arbitrary set of tags (key–value pairs) for this route table.",
+      "required": false,
+      "type": "AWSCloudFormationResourceTagsType[]",
+      "update": "No interruption."
+    }
+  ],
+  "attributes": []
+}

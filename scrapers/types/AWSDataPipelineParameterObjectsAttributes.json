@@ -1,0 +1,18 @@
+{
+  "name": "AWSDataPipelineParameterObjectsAttributes",
+  "description": "Attribute is a property of the AWS Data Pipeline Pipeline ParameterObjects property that defines the attributes of a parameter object as key-value pairs.",
+  "properties": [
+    {
+      "name": "Key",
+      "description": "Specifies the name of a parameter attribute. To view parameter attributes, see Creating a Pipeline Using Parameterized Templates in the AWS Data Pipeline Developer Guide.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "StringValue",
+      "description": "A parameter attribute value.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "APIGatewayRestApiS3Location",
+  "description": "S3Location is a property of the AWS::ApiGateway::RestApi resource that specifies the Amazon Simple Storage Service (Amazon S3) location of a Swagger file that defines a set of RESTful APIs in JSON or YAML for an Amazon API Gateway (API Gateway) RestApi.",
+  "properties": [
+    {
+      "name": "Bucket",
+      "description": "The name of the S3 bucket where the Swagger file is stored.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "ETag",
+      "description": "The Amazon S3 ETag (a file checksum) of the Swagger file. If you don't specify a value, API Gateway skips ETag validation of your Swagger file.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "Key",
+      "description": "The file name of the application revision (Amazon S3 object name).",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "Version",
+      "description": "For versioning-enabled buckets, a specific version of the Swagger file.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "AWSDirectoryServiceMicrosoftADVpcSettings",
+  "description": "VpcSettings is a property of the AWS::DirectoryService::MicrosoftAD resource that specifies the VPC settings for a Microsoft directory server.",
+  "properties": [
+    {
+      "name": "SubnetIds",
+      "description": "A list of two subnet IDs for the directory servers. Each subnet must be in different Availability Zones (AZs). AWS Directory Service creates a directory server and a DNS server in each subnet.",
+      "required": true,
+      "type": "string[]"
+    },
+    {
+      "name": "VpcId",
+      "description": "The VPC ID in which to create the Microsoft Active Directory server.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

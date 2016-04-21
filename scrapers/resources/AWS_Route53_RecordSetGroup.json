@@ -1,0 +1,38 @@
+{
+  "fullName": "AWS::Route53::RecordSetGroup",
+  "namespace": "AWS",
+  "category": "Route53",
+  "name": "RecordSetGroup",
+  "description": "The AWS::Route53::RecordSetGroup resource creates record sets for a hosted zone. For more information about constraints and values for each property, see POST CreateHostedZone for hosted zones and POST ChangeResourceRecordSet for resource record sets.",
+  "properties": [
+    {
+      "name": "Comment",
+      "description": "Any comments you want to include about the hosted zone.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "HostedZoneId",
+      "description": "The ID of the hosted zone.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "HostedZoneName",
+      "description": "The name of the domain for the hosted zone where you want to add the record set.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "RecordSets",
+      "description": "List of resource record sets to add.",
+      "required": true,
+      "type": "ListofAWSRoute53RecordSetobjectsasshowninthefollowingexample",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

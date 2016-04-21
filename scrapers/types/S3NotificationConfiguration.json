@@ -1,0 +1,24 @@
+{
+  "name": "S3NotificationConfiguration",
+  "description": "Describes the notification configuration for an AWS::S3::Bucket resource.",
+  "properties": [
+    {
+      "name": "LambdaConfigurations",
+      "description": "The AWS Lambda functions to invoke and the events for which to invoke the functions.",
+      "required": false,
+      "type": "SimpleStorageServiceNotificationConfigurationLambdaConfigurations"
+    },
+    {
+      "name": "QueueConfigurations",
+      "description": "The Amazon Simple Queue Service queues to publish messages to and the events for which to publish messages.",
+      "required": false,
+      "type": "SimpleStorageServiceNotificationConfigurationQueueConfigurations"
+    },
+    {
+      "name": "TopicConfigurations",
+      "description": "The topic to which notifications are sent and the events for which notification are generated.",
+      "required": false,
+      "type": "S3NotificationConfigurationTopicConfigurations"
+    }
+  ]
+}

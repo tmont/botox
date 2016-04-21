@@ -1,0 +1,12 @@
+{
+  "name": "ElasticMapReduceClusterJobFlowInstancesConfigPlacementType",
+  "description": "PlacementType is a property of the Amazon Elastic MapReduce Cluster JobFlowInstancesConfig property that specifies the Availability Zone (AZ) in which the job flow runs.",
+  "properties": [
+    {
+      "name": "AvailabilityZone",
+      "description": "The Amazon Elastic Compute Cloud (Amazon EC2) AZ for the job flow. For more information, see http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html in the Amazon EC2 User Guide for Linux Instances.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

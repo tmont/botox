@@ -1,0 +1,30 @@
+{
+  "name": "AWSLambdaFunctionCode",
+  "description": "Code is a property of the AWS::Lambda::Function resource that enables to you specify the source code of an AWS Lambda (Lambda) function. You can point to a file in an Amazon Simple Storage Service (Amazon S3) bucket or specify your source code as inline text (for nodejs runtime environments only).",
+  "properties": [
+    {
+      "name": "S3Bucket",
+      "description": "The name of the S3 bucket that contains the source code of your Lambda function. The S3 bucket must be in the same region in which the stack is created.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "S3Key",
+      "description": "The location and name of your source code .zip file. If you specify this property, you must also specify the S3Bucket property.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "S3ObjectVersion",
+      "description": "If you have S3 versioning enabled, the version ID of your source code .zip file. You can specify this property only if you specify a bucket location.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "ZipFile",
+      "description": "For nodejs runtime environments, the source code of your Lambda function. You cannot use this property with other runtime environments.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

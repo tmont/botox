@@ -1,0 +1,34 @@
+{
+  "name": "RDSSecurityGroupRule",
+  "description": "The Amazon RDS security group rule is an embedded property of the AWS::RDS::DBSecurityGroup type.",
+  "properties": [
+    {
+      "name": "CIDRIP",
+      "description": "The IP range to authorize.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "EC2SecurityGroupId",
+      "description": "Id of the VPC or EC2 Security Group to authorize.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "EC2SecurityGroupName",
+      "description": "Name of the EC2 Security Group to authorize.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "EC2SecurityGroupOwnerId",
+      "description": "AWS Account Number of the owner of the EC2 Security Group specified in the EC2SecurityGroupName parameter. The AWS Access Key ID is not an acceptable value.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ]
+}

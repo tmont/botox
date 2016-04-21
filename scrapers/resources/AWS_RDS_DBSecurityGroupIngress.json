@@ -1,0 +1,45 @@
+{
+  "fullName": "AWS::RDS::DBSecurityGroupIngress",
+  "namespace": "AWS",
+  "category": "RDS",
+  "name": "DBSecurityGroupIngress",
+  "description": "The AWS::RDS::DBSecurityGroupIngress type enables ingress to a DBSecurityGroup using one of two forms of authorization. First, EC2 or VPC security groups can be added to the DBSecurityGroup if the application using the database is running on EC2 or VPC instances. Second, IP ranges are available if the application accessing your database is running on the Internet. For more information about DB security groups, see Working with DB security groups",
+  "properties": [
+    {
+      "name": "CIDRIP",
+      "description": "The IP range to authorize.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "DBSecurityGroupName",
+      "description": "The name (ARN) of the AWS::RDS::DBSecurityGroup to which this ingress will be added.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "EC2SecurityGroupId",
+      "description": "The ID of the VPC or EC2 security group to authorize.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "EC2SecurityGroupName",
+      "description": "The name of the EC2 security group to authorize.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "EC2SecurityGroupOwnerId",
+      "description": "The AWS Account Number of the owner of the EC2 security group specified in the EC2SecurityGroupName parameter. The AWS Access Key ID is not an acceptable value.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

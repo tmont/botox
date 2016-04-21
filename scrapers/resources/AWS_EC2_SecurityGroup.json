@@ -1,0 +1,50 @@
+{
+  "fullName": "AWS::EC2::SecurityGroup",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "SecurityGroup",
+  "description": "Creates an Amazon EC2 security group. To create a VPC security group, use the VpcId property.",
+  "properties": [
+    {
+      "name": "GroupDescription",
+      "description": "Description of the security group.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "SecurityGroupEgress",
+      "description": "A list of Amazon EC2 security group egress rules.",
+      "required": false,
+      "type": "EC2SecurityGroupRule[]",
+      "update": "No interruption"
+    },
+    {
+      "name": "SecurityGroupIngress",
+      "description": "A list of Amazon EC2 security group ingress rules.",
+      "required": false,
+      "type": "EC2SecurityGroupRule[]",
+      "update": "No interruption"
+    },
+    {
+      "name": "Tags",
+      "description": "The tags that you want to attach to the resource.",
+      "required": false,
+      "type": "AWSCloudFormationResourceTags",
+      "update": "No interruption."
+    },
+    {
+      "name": "VpcId",
+      "description": "The physical ID of the VPC. Can be obtained by using a reference to an AWS::EC2::VPC, such as: { \"Ref\" : \"myVPC\" }.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "GroupId",
+      "description": "The group ID of the specified security group, such as sg-94b3a1f6."
+    }
+  ]
+}

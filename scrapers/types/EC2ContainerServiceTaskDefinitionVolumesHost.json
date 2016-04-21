@@ -1,0 +1,12 @@
+{
+  "name": "EC2ContainerServiceTaskDefinitionVolumesHost",
+  "description": "Host is a property of the Amazon EC2 Container Service TaskDefinition Volumes property that specifies the data volume path on the host container instance.",
+  "properties": [
+    {
+      "name": "SourcePath",
+      "description": "The data volume path on the host container instance.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "CloudFrontLogging",
+  "description": "Logging is a property of the DistributionConfig property that enables Amazon CloudFront to deliver access logs for each distribution to an Amazon Simple Storage Service (S3) bucket.",
+  "properties": [
+    {
+      "name": "Bucket",
+      "description": "The Amazon S3 bucket address where access logs are stored, for example, mybucket.s3.amazonaws.com.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "IncludeCookies",
+      "description": "Indicates whether CloudFront includes cookies in access logs.",
+      "required": false,
+      "type": "Boolean"
+    },
+    {
+      "name": "Prefix",
+      "description": "A prefix for the access log file names for this distribution.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

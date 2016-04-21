@@ -1,0 +1,17 @@
+{
+  "name": "ElasticLoadBalancingLBCookieStickinessPolicyType",
+  "description": "The LBCookieStickinessPolicy type is an embedded property of the AWS::ElasticLoadBalancing::LoadBalancer type.",
+  "properties": [
+    {
+      "name": "CookieExpirationPeriod",
+      "description": "The time period, in seconds, after which the cookie should be considered stale. If this parameter isn't specified, the sticky session will last for the duration of the browser session.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "PolicyName",
+      "description": "The name of the policy being created. The name must be unique within the set of policies for this load balancer.",
+      "required": false
+    }
+  ]
+}

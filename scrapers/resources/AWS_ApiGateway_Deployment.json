@@ -1,0 +1,38 @@
+{
+  "fullName": "AWS::ApiGateway::Deployment",
+  "namespace": "AWS",
+  "category": "ApiGateway",
+  "name": "Deployment",
+  "description": "The AWS::ApiGateway::Deployment resource deploys an Amazon API Gateway (API Gateway) RestApi resource to a stage so that clients can call the API over the Internet. The stage acts as an environment",
+  "properties": [
+    {
+      "name": "Description",
+      "description": "A description of the purpose of the API Gateway deployment.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "RestApiId",
+      "description": "The ID of the RestApi resource to deploy.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "StageDescription",
+      "description": "Configures the stage that API Gateway creates with this deployment.",
+      "required": false,
+      "type": "APIGatewayDeploymentStageDescription",
+      "update": "No interruption"
+    },
+    {
+      "name": "StageName",
+      "description": "A name for the stage that API Gateway creates with this deployment.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

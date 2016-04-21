@@ -1,0 +1,18 @@
+{
+  "name": "DynamoDBProvisionedThroughput",
+  "description": "Describes a set of provisioned throughput values for an AWS::DynamoDB::Table resource. DynamoDB uses these capacity units to allocate sufficient resources to provide the requested throughput.",
+  "properties": [
+    {
+      "name": "ReadCapacityUnits",
+      "description": "Sets the desired minimum number of consistent reads of items (up to 1KB in size) per second for the specified table before Amazon DynamoDB balances the load.",
+      "required": true,
+      "type": "Number"
+    },
+    {
+      "name": "WriteCapacityUnits",
+      "description": "Sets the desired minimum number of consistent writes of items (up to 1KB in size) per second for the specified table before Amazon DynamoDB balances the load.",
+      "required": true,
+      "type": "Number"
+    }
+  ]
+}

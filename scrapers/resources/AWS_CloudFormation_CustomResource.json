@@ -1,0 +1,16 @@
+{
+  "fullName": "AWS::CloudFormation::CustomResource",
+  "namespace": "AWS",
+  "category": "CloudFormation",
+  "name": "CustomResource",
+  "description": "In an AWS CloudFormation template, you use the AWS::CloudFormation::CustomResource or Custom::String resource type to specify custom resources.",
+  "properties": [
+    {
+      "name": "ServiceToken",
+      "description": "The service token that was given to the template developer by the service provider to access the service, such as an Amazon SNS topic ARN or Lambda function ARN. The service token must be from the same region in which you are creating the stack.",
+      "required": true,
+      "type": "String"
+    }
+  ],
+  "attributes": []
+}

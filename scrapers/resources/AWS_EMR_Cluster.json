@@ -1,0 +1,106 @@
+{
+  "fullName": "AWS::EMR::Cluster",
+  "namespace": "AWS",
+  "category": "EMR",
+  "name": "Cluster",
+  "description": "The AWS::EMR::Cluster resource creates an Amazon Elastic MapReduce (Amazon EMR) cluster, which is a collection of EC2 instances on which you can run big data frameworks to process and analyze vast amounts of data. For more information, see Plan an Amazon EMR Cluster in the Amazon Elastic MapReduce Management Guide.",
+  "properties": [
+    {
+      "name": "AdditionalInfo",
+      "description": "Additional features that you want to select.",
+      "required": false,
+      "type": "JSONobject",
+      "update": "Replacement"
+    },
+    {
+      "name": "Applications",
+      "description": "The software applications to deploy on the cluster, and the arguments that Amazon EMR passes to those applications.",
+      "required": false,
+      "type": "ElasticMapReduceClusterApplication[]",
+      "update": "Replacement"
+    },
+    {
+      "name": "BootstrapActions",
+      "description": "A list of bootstrap actions that Amazon EMR runs before starting applications on the cluster.",
+      "required": false,
+      "type": "ElasticMapReduceClusterBootstrapActionConfig[]",
+      "update": "Replacement"
+    },
+    {
+      "name": "Configurations",
+      "description": "The software configuration of the Amazon EMR cluster.",
+      "required": false,
+      "type": "ElasticMapReduceClusterConfiguration[]",
+      "update": "Replacement"
+    },
+    {
+      "name": "EbsConfiguration",
+      "description": "Configures Amazon Elastic Block Store (Amazon EBS) storage volumes to attach to your instances.",
+      "required": false,
+      "type": "ElasticMapReduceEbsConfiguration",
+      "update": "Replacement"
+    },
+    {
+      "name": "Instances",
+      "description": "Configures the EC2 instances that will run jobs in the Amazon EMR cluster.",
+      "required": true,
+      "type": "ElasticMapReduceClusterJobFlowInstancesConfig",
+      "update": "Replacement"
+    },
+    {
+      "name": "JobFlowRole",
+      "description": "An AWS Identity and Access Management (IAM) role for an Amazon EMR cluster. All EC2 instances in the cluster assume this role, which instances use to access AWS services and resources to complete a job. For more information, see Configure IAM Roles for Amazon EMR in the Amazon Elastic MapReduce Management Guide.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "LogUri",
+      "description": "An S3 bucket location to which Amazon EMR writes logs files from a job flow. If you don't specify a value, Amazon EMR doesn't write any log files.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Name",
+      "description": "A name for the Amazon EMR cluster.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "ReleaseLabel",
+      "description": "The Amazon EMR software release label. A release is a set of software applications and components that you can install and configure on an Amazon EMR cluster. For more information, see About Amazon EMR Releases in the Amazon Elastic MapReduce Release Guide.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "ServiceRole",
+      "description": "The IAM role that Amazon EMR assumes to access AWS resources on your behalf. For more information, see Configure IAM Roles for Amazon EMR in the Amazon Elastic MapReduce Management Guide.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Tags",
+      "description": "An arbitrary set of tags (key–value pairs) to help you identify the Amazon EMR cluster.",
+      "required": false,
+      "type": "AWSCloudFormationResourceTagsType[]",
+      "update": "No interruption."
+    },
+    {
+      "name": "VisibleToAllUsers",
+      "description": "Indicates whether the instances in the cluster are visible to all IAM users in the AWS account. If you specify true, all IAM users can view and (if they have permissions) manage the instances. If you specify false, only the IAM user that created the cluster can view and manage it. By default, AWS CloudFormation sets this property to false.",
+      "required": false,
+      "type": "Boolean",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "MasterPublicDNS",
+      "description": "The public DNS name of the master node (instance), such as ec2-12-123-123-123.us-west-2.compute.amazonaws.com."
+    }
+  ]
+}

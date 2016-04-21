@@ -1,0 +1,49 @@
+/**
+ * LoginProfile is a property of the AWS::IAM::User resource that creates a login profile for users so that they can access the AWS Management Console.
+ * @constructor
+ */
+function IAMUserLoginProfile(initialData) {
+	this.data = initialData || {};
+}
+
+IAMUserLoginProfile.prototype = {
+	
+	/**
+	 * The password for the user.
+	 *
+	 * Required: true
+	 *
+	 * @param {String} value
+	 * @return {IAMUserLoginProfile}
+	 */
+	password: function(value) {
+		return this.set('Password', value);
+	},
+
+	/**
+	 * Specifies whether the user is required to set a new password the next time the user logs in to the AWS Management Console.
+	 *
+	 * Required: false
+	 *
+	 * @param {Boolean} value
+	 * @return {IAMUserLoginProfile}
+	 */
+	passwordResetRequired: function(value) {
+		return this.set('PasswordResetRequired', value);
+	},
+
+	set: function(key, value) {
+		this.data[key] = value;
+		return this;
+	},
+
+	toJSON: function() {
+		return this.data;
+	},
+
+	toString: function() {
+		return JSON.stringify(this, null, '  ');
+	}
+};
+
+module.exports = IAMUserLoginProfile;

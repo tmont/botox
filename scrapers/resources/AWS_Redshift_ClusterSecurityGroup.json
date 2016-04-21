@@ -1,0 +1,17 @@
+{
+  "fullName": "AWS::Redshift::ClusterSecurityGroup",
+  "namespace": "AWS",
+  "category": "Redshift",
+  "name": "ClusterSecurityGroup",
+  "description": "Creates an Amazon Redshift security group. You use security groups to control access to Amazon Redshift clusters that are not in a VPC.",
+  "properties": [
+    {
+      "name": "Description",
+      "description": "A description of the security group.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

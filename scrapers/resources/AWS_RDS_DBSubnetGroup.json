@@ -1,0 +1,31 @@
+{
+  "fullName": "AWS::RDS::DBSubnetGroup",
+  "namespace": "AWS",
+  "category": "RDS",
+  "name": "DBSubnetGroup",
+  "description": "The AWS::RDS::DBSubnetGroup type creates an RDS database subnet group. Subnet groups must contain at least two subnet in two different Availability Zones in the same region.",
+  "properties": [
+    {
+      "name": "DBSubnetGroupDescription",
+      "description": "The description for the DB Subnet Group.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "SubnetIds",
+      "description": "The EC2 Subnet IDs for the DB Subnet Group.",
+      "required": true,
+      "type": "string[]",
+      "update": "No interruption"
+    },
+    {
+      "name": "Tags",
+      "description": "The tags that you want to attach to the RDS database subnet group.",
+      "required": false,
+      "type": "resourcetag[]",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

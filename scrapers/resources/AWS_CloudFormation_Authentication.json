@@ -1,0 +1,58 @@
+{
+  "fullName": "AWS::CloudFormation::Authentication",
+  "namespace": "AWS",
+  "category": "CloudFormation",
+  "name": "Authentication",
+  "description": "Use the AWS::CloudFormation::Authentication resource to specify authentication credentials for files or sources that you specify with the AWS::CloudFormation::Init resource.",
+  "properties": [
+    {
+      "name": "accessKeyId",
+      "description": "Specifies the access key ID for S3 authentication.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "buckets",
+      "description": "A comma-delimited list of Amazon S3 buckets to be associated with the S3 authentication credentials.",
+      "required": false,
+      "type": "string[]"
+    },
+    {
+      "name": "password",
+      "description": "Specifies the password for basic authentication.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "secretKey",
+      "description": "Specifies the secret key for S3 authentication.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "type",
+      "description": "Specifies whether the authentication scheme uses a user name and password (\"basic\") or an access key ID and secret key (\"S3\").",
+      "required": true,
+      "type": "StringValidvaluesarebasicorS3"
+    },
+    {
+      "name": "uris",
+      "description": "A comma-delimited list of URIs to be associated with the basic authentication credentials. The authorization applies to the specified URIs and any more specific URI. For example, if you specify http://www.example.com, the authorization will also apply to http://www.example.com/test.",
+      "required": false,
+      "type": "string[]"
+    },
+    {
+      "name": "username",
+      "description": "Specifies the user name for basic authentication.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "roleName",
+      "description": "Describes the role for role-based authentication.",
+      "required": false,
+      "type": "String"
+    }
+  ],
+  "attributes": []
+}

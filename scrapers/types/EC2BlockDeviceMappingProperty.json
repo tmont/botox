@@ -1,0 +1,30 @@
+{
+  "name": "EC2BlockDeviceMappingProperty",
+  "description": "The Amazon EC2 block device mapping property is an embedded property of the AWS::EC2::Instance resource. For block device mappings for an Auto Scaling launch configuration, see AutoScaling Block Device Mapping.",
+  "properties": [
+    {
+      "name": "DeviceName",
+      "description": "The name of the device within Amazon EC2.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Ebs",
+      "description": "Required: Conditional You can specify either VirtualName or Ebs, but not both.",
+      "required": false,
+      "type": "ElasticBlockStoreBlockDeviceProperty"
+    },
+    {
+      "name": "NoDevice",
+      "description": "This property can be used to unmap a defined device.",
+      "required": false,
+      "type": "Object"
+    },
+    {
+      "name": "VirtualName",
+      "description": "The name of the virtual device. The name must be in the form ephemeralX where X is a number starting from zero (0); for example, ephemeral0.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Route53HostedZoneConfigProperty",
+  "description": "The HostedZoneConfig property is part of the AWS::Route53::HostedZone resource that can contain a comment about the hosted zone.",
+  "properties": [
+    {
+      "name": "Comment",
+      "description": "Any comments that you want to include about the hosted zone.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

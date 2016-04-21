@@ -1,0 +1,64 @@
+{
+  "fullName": "AWS::ApiGateway::Stage",
+  "namespace": "AWS",
+  "category": "ApiGateway",
+  "name": "Stage",
+  "description": "The AWS::ApiGateway::Authorizer resource creates a stage for an Amazon API Gateway (API Gateway) deployment.",
+  "properties": [
+    {
+      "name": "CacheClusterEnabled",
+      "description": "Indicates whether cache clustering is enabled for the stage.",
+      "required": false,
+      "type": "Boolean"
+    },
+    {
+      "name": "CacheClusterSize",
+      "description": "The stage's cache cluster size.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "ClientCertificateId",
+      "description": "The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "DeploymentId",
+      "description": "The ID of the deployment that the stage points to.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "Description",
+      "description": "A description of the stage's purpose.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "MethodSettings",
+      "description": "Settings for all methods in the stage.",
+      "required": false,
+      "type": "APIGatewayStageMethodSetting"
+    },
+    {
+      "name": "RestApiId",
+      "description": "The ID of the RestApi resource that you're deploying with this stage.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "StageName",
+      "description": "The name of the stage, which API Gateway uses as the first path segment in the invoke Uniform Resource Identifier (URI).",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "Variables",
+      "description": "A map (string to string map) that defines the stage variables, where the variable name is the key and the variable value is the value. Variable names are limited to alphanumeric characters. Values must match the following regular expression: [A-Za-z0-9-._~:/?#&amp;=,]+.",
+      "required": false,
+      "type": "key[]"
+    }
+  ],
+  "attributes": []
+}

@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::Kinesis::Stream",
+  "namespace": "AWS",
+  "category": "Kinesis",
+  "name": "Stream",
+  "description": "Creates an Amazon Kinesis stream that captures and transports data records that are emitted from data sources. For specific information about creating streams, see CreateStream in the Amazon Kinesis API Reference.",
+  "properties": [
+    {
+      "name": "ShardCount",
+      "description": "The number of shards that the stream uses. For greater provisioned throughput, increase the number of shards.",
+      "required": true,
+      "type": "Integer",
+      "update": "Replacement"
+    },
+    {
+      "name": "Tags",
+      "description": "An arbitrary set of tags (key–value pairs) to associate with the Amazon Kinesis stream.",
+      "required": false,
+      "type": "AWSCloudFormationResourceTagsType[]",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

@@ -1,0 +1,18 @@
+{
+  "name": "ElasticLoadBalancingAppCookieStickinessPolicyType",
+  "description": "The AppCookieStickinessPolicy type is an embedded property of the AWS::ElasticLoadBalancing::LoadBalancer type.",
+  "properties": [
+    {
+      "name": "CookieName",
+      "description": "Name of the application cookie used for stickiness.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "PolicyName",
+      "description": "The name of the policy being created. The name must be unique within the set of policies for this Load Balancer.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

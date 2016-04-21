@@ -1,0 +1,38 @@
+{
+  "fullName": "AWS::ApiGateway::ApiKey",
+  "namespace": "AWS",
+  "category": "ApiGateway",
+  "name": "ApiKey",
+  "description": "The AWS::ApiGateway::ApiKey resource creates a unique key that you can distribute to clients who are executing Amazon API Gateway (API Gateway) Method resources that require an API key. To specify which API key clients must use, map the API key with the RestApi and Stage resources that include the methods requiring a key.",
+  "properties": [
+    {
+      "name": "Description",
+      "description": "A description of the purpose of the API key.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Enabled",
+      "description": "Indicates whether the API key can be used by clients.",
+      "required": false,
+      "type": "Boolean",
+      "update": "No interruption"
+    },
+    {
+      "name": "Name",
+      "description": "A name for the API key. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name. For more information, see Name Type.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "StageKeys",
+      "description": "A list of stages to associated with this API key.",
+      "required": false,
+      "type": "APIGatewayApiKeyStageKey[]",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

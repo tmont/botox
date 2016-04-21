@@ -1,0 +1,17 @@
+{
+  "fullName": "AWS::ElastiCache::SecurityGroup",
+  "namespace": "AWS",
+  "category": "ElastiCache",
+  "name": "SecurityGroup",
+  "description": "The AWS::ElastiCache::SecurityGroup resource creates a cache security group. For more information about cache security groups, go to Cache Security Groups in the Amazon ElastiCache User Guide or go to CreateCacheSecurityGroup in the Amazon ElastiCache API Reference Guide.",
+  "properties": [
+    {
+      "name": "Description",
+      "description": "A description for the cache security group.",
+      "required": false,
+      "type": "String",
+      "update": "Updates are not supported."
+    }
+  ],
+  "attributes": []
+}

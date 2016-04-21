@@ -1,0 +1,30 @@
+{
+  "name": "DynamoDBGlobalSecondaryIndexes",
+  "description": "Describes global secondary indexes for the AWS::DynamoDB::Table resource.",
+  "properties": [
+    {
+      "name": "IndexName",
+      "description": "The name of the global secondary index. The index name can be 3 – 255 characters long and have no character restrictions.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "KeySchema",
+      "description": "The complete index key schema for the global secondary index, which consists of one or more pairs of attribute names and key types.",
+      "required": true,
+      "type": "DynamoDBKeySchema"
+    },
+    {
+      "name": "Projection",
+      "description": "Attributes that are copied (projected) from the source table into the index. These attributes are in addition to the primary key attributes and index key attributes, which are automatically projected.",
+      "required": true,
+      "type": "DynamoDBProjectionObject"
+    },
+    {
+      "name": "ProvisionedThroughput",
+      "description": "The provisioned throughput settings for the index.",
+      "required": true,
+      "type": "DynamoDBProvisionedThroughput"
+    }
+  ]
+}

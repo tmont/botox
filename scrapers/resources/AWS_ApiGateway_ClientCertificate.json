@@ -1,0 +1,17 @@
+{
+  "fullName": "AWS::ApiGateway::ClientCertificate",
+  "namespace": "AWS",
+  "category": "ApiGateway",
+  "name": "ClientCertificate",
+  "description": "The AWS::ApiGateway::ClientCertificate resource creates a client certificate that Amazon API Gateway (API Gateway) uses to configure client-side SSL authentication for sending requests to the integration endpoint.",
+  "properties": [
+    {
+      "name": "Description",
+      "description": "A description of the client certificate.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

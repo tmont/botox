@@ -1,0 +1,17 @@
+{
+  "fullName": "AWS::EC2::SpotFleet",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "SpotFleet",
+  "description": "The AWS::EC2::SpotFleet resource creates a request for a collection of Spot instances. The Spot fleet attempts to launch the number of Spot instances to meet the target capacity that you specified. For more information, see Spot Instances in the Amazon EC2 User Guide for Linux Instances.",
+  "properties": [
+    {
+      "name": "SpotFleetRequestConfigData",
+      "description": "The configuration for a Spot fleet request.",
+      "required": true,
+      "type": "EC2SpotFleetSpotFleetRequestConfigData",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

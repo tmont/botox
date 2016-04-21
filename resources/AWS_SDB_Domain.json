@@ -1,9 +1,0 @@
-{
-  "fullName": "AWS::SDB::Domain",
-  "namespace": "AWS",
-  "category": "SDB",
-  "name": "Domain",
-  "shortDesc": "The AWS::SDB::Domain type does not have any properties.",
-  "properties": [],
-  "attributes": []
-}

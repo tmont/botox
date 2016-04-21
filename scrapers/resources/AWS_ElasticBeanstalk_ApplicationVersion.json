@@ -1,0 +1,31 @@
+{
+  "fullName": "AWS::ElasticBeanstalk::ApplicationVersion",
+  "namespace": "AWS",
+  "category": "ElasticBeanstalk",
+  "name": "ApplicationVersion",
+  "description": "Creates an application version, an iteration of deployable code, for an Elastic Beanstalk application.",
+  "properties": [
+    {
+      "name": "ApplicationName",
+      "description": "Name of the Elastic Beanstalk application that is associated with this application version.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Description",
+      "description": "A description of this application version.",
+      "required": false,
+      "type": "String",
+      "update": "Some interruptions"
+    },
+    {
+      "name": "SourceBundle",
+      "description": "The location of the source bundle for this version.",
+      "required": true,
+      "type": "SourceBundle",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

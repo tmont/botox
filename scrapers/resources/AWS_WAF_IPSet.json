@@ -1,0 +1,34 @@
+{
+  "fullName": "AWS::WAF::IPSet",
+  "namespace": "AWS",
+  "category": "WAF",
+  "name": "IPSet",
+  "description": "The AWS::WAF::IPSet resource creates an AWS WAF IPSet that specifies which web requests to permit or block based on the IP addresses from which the requests originate. For more information, see CreateIPSet in the AWS WAF API Reference.",
+  "properties": [
+    {
+      "name": "IPSetDescriptors",
+      "description": "The IP address type and IP address range (in CIDR notation) from which web requests originate. If you associate the IPSet with a web ACL that is associated with a Amazon CloudFront (CloudFront) distribution, this descriptor is the value of one of the following fields in the CloudFront access logs:",
+      "required": false,
+      "type": "AWSWAFIPSetIPSetDescriptor[]",
+      "update": "No interruption"
+    },
+    {
+      "name": "c-ip",
+      "description": "If the viewer did not use an HTTP proxy or a load balancer to send the request",
+      "required": false
+    },
+    {
+      "name": "x-forwarded-for",
+      "description": "If the viewer did use an HTTP proxy or a load balancer to send the request",
+      "required": false
+    },
+    {
+      "name": "Name",
+      "description": "A friendly name or description of the IPSet.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

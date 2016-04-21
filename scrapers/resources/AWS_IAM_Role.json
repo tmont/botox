@@ -1,0 +1,43 @@
+{
+  "fullName": "AWS::IAM::Role",
+  "namespace": "AWS",
+  "category": "IAM",
+  "name": "Role",
+  "description": "Creates an AWS Identity and Access Management (IAM) role. An IAM role can be used to enable applications running on an Amazon EC2 instance to securely access your AWS resources.",
+  "properties": [
+    {
+      "name": "AssumeRolePolicyDocument",
+      "description": "The IAM assume role policy that is associated with this role.",
+      "required": true,
+      "type": "AJSONpolicydocument",
+      "update": "No interruption"
+    },
+    {
+      "name": "ManagedPolicyArns",
+      "description": "One or more managed policy ARNs to attach to this role.",
+      "required": false,
+      "type": "string[]",
+      "update": "No interruption"
+    },
+    {
+      "name": "Path",
+      "description": "The path associated with this role. For information about IAM paths, see Friendly Names and Paths in IAM User Guide.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Policies",
+      "description": "The policies to associate with this role. Policies can also be specified externally. For sample templates that demonstrates both embedded and external policies, see Template Examples.",
+      "required": false,
+      "type": "IAMPolicy[]",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Arn",
+      "description": "Returns the Amazon Resource Name (ARN) for the instance profile. For example:{\"Fn::GetAtt\" : [\"MyRole\", \"Arn\"] }This will return a value such as “arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF”."
+    }
+  ]
+}

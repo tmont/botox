@@ -1,0 +1,18 @@
+{
+  "name": "AWSCodePipelineCustomActionTypeArtifactDetails",
+  "description": "ArtifactDetails is a property of the AWS::CodePipeline::CustomActionType resource that specifies the details of an artifact for an AWS CodePipeline custom action. For valid values, see ArtifactDetails in the AWS CodePipeline API Reference.",
+  "properties": [
+    {
+      "name": "MaximumCount",
+      "description": "The maximum number of artifacts allowed for the action type.",
+      "required": true,
+      "type": "Integer"
+    },
+    {
+      "name": "MinimumCount",
+      "description": "The minimum number of artifacts allowed for the action type.",
+      "required": true,
+      "type": "Integer"
+    }
+  ]
+}

@@ -1,9 +1,0 @@
-{
-  "fullName": "AWS::CloudFormation::WaitConditionHandle",
-  "namespace": "AWS",
-  "category": "CloudFormation",
-  "name": "WaitConditionHandle",
-  "shortDesc": "Important",
-  "properties": [],
-  "attributes": []
-}

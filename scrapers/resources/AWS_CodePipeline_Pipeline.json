@@ -1,0 +1,52 @@
+{
+  "fullName": "AWS::CodePipeline::Pipeline",
+  "namespace": "AWS",
+  "category": "CodePipeline",
+  "name": "Pipeline",
+  "description": "The AWS::CodePipeline::Pipeline resource creates an AWS CodePipeline pipeline that describes how software changes go through a release process. For more information, see What Is AWS CodePipeline? in the AWS CodePipeline User Guide.",
+  "properties": [
+    {
+      "name": "ArtifactStore",
+      "description": "The Amazon Simple Storage Service (Amazon S3) location where AWS CodePipeline stores pipeline artifacts. The S3 bucket must have versioning enabled. For more information, see Create an Amazon S3 Bucket for Your Application in the AWS CodePipeline User Guide.",
+      "required": true,
+      "type": "AWSCodePipelinePipelineArtifactStore",
+      "update": "No interruption"
+    },
+    {
+      "name": "DisableInboundStageTransitions",
+      "description": "Prevents artifacts in a pipeline from transitioning to the stage that you specified. This enables you to manually control transitions.",
+      "required": false,
+      "type": "AWSCodePipelinePipelineDisableInboundStageTransition[]",
+      "update": "No interruption"
+    },
+    {
+      "name": "Name",
+      "description": "The name of your AWS CodePipeline pipeline.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "RestartExecutionOnUpdate",
+      "description": "Indicates whether to rerun the AWS CodePipeline pipeline after you update it.",
+      "required": false,
+      "type": "Boolean",
+      "update": "No interruption"
+    },
+    {
+      "name": "RoleArn",
+      "description": "A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf. For more information, see AWS CodePipeline Access Permissions Reference in the AWS CodePipeline User Guide.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Stages",
+      "description": "Defines the AWS CodePipeline pipeline stages.",
+      "required": true,
+      "type": "AWSCodePipelinePipelineStages",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

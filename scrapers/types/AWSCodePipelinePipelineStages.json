@@ -1,0 +1,24 @@
+{
+  "name": "AWSCodePipelinePipelineStages",
+  "description": "Stages is a property of the AWS::CodePipeline::Pipeline resource that specifies a sequence of tasks for AWS CodePipeline to complete on an artifact.",
+  "properties": [
+    {
+      "name": "Actions",
+      "description": "The actions to include in this stage.",
+      "required": true,
+      "type": "AWSCodePipelinePipelineStagesAction[]"
+    },
+    {
+      "name": "Blockers",
+      "description": "The gates included in a stage.",
+      "required": false,
+      "type": "AWSCodePipelinePipelineStagesBlocker[]"
+    },
+    {
+      "name": "Name",
+      "description": "A name for this stage.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

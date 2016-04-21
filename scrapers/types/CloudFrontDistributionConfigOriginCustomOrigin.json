@@ -1,0 +1,24 @@
+{
+  "name": "CloudFrontDistributionConfigOriginCustomOrigin",
+  "description": "CustomOrigin is a property of the Amazon CloudFront Origin property that describes an HTTP server.",
+  "properties": [
+    {
+      "name": "HTTPPort",
+      "description": "The HTTP port the custom origin listens on.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "HTTPSPort",
+      "description": "The HTTPS port the custom origin listens on.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "OriginProtocolPolicy",
+      "description": "The origin protocol policy to apply to your origin.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

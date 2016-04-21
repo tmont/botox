@@ -1,0 +1,30 @@
+{
+  "name": "CloudFrontDistributionConfigurationViewerCertificate",
+  "description": "ViewerCertificate is a property of the CloudFront DistributionConfig property that specifies which certificate to use when viewers use HTTPS to request objects.",
+  "properties": [
+    {
+      "name": "CloudFrontDefaultCertificate",
+      "description": "Indicates whether to use the default certificate for your CloudFront domain name when viewers use HTTPS to request your content.",
+      "required": false,
+      "type": "Boolean"
+    },
+    {
+      "name": "IamCertificateId",
+      "description": "The IAM certificate ID to use if you're using an alternate domain name.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "MinimumProtocolVersion",
+      "description": "The minimum version of the SSL protocol that you want CloudFront to use for HTTPS connections. CloudFront serves your objects only to browsers or devices that support at least the SSL version that you specify.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "SslSupportMethod",
+      "description": "Specifies how CloudFront serves HTTPS requests.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

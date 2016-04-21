@@ -1,9 +1,0 @@
-{
-  "fullName": "AWS::CloudFormation::Init",
-  "namespace": "AWS",
-  "category": "CloudFormation",
-  "name": "Init",
-  "shortDesc": "Topics",
-  "properties": [],
-  "attributes": []
-}

@@ -1,0 +1,38 @@
+{
+  "fullName": "AWS::RDS::DBSecurityGroup",
+  "namespace": "AWS",
+  "category": "RDS",
+  "name": "DBSecurityGroup",
+  "description": "The AWS::RDS::DBSecurityGroup type is used to create or update an Amazon RDS DB Security Group. For more information about DB Security Groups, see Working with DB Security Groups in the Amazon Relational Database Service Developer Guide.",
+  "properties": [
+    {
+      "name": "EC2VpcId",
+      "description": "The Id of VPC. Indicates which VPC this DB Security Group should belong to.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "DBSecurityGroupIngress",
+      "description": "Network ingress authorization for an Amazon EC2 security group or an IP address range.",
+      "required": true,
+      "type": "RDSSecurityGroupRule[]",
+      "update": "No interruption"
+    },
+    {
+      "name": "GroupDescription",
+      "description": "Description of the security group.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Tags",
+      "description": "The tags that you want to attach to the Amazon RDS DB security group.",
+      "required": false,
+      "type": "resourcetag[]",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

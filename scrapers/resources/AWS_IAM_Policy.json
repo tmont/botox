@@ -1,0 +1,45 @@
+{
+  "fullName": "AWS::IAM::Policy",
+  "namespace": "AWS",
+  "category": "IAM",
+  "name": "Policy",
+  "description": "The AWS::IAM::Policy resource associates an IAM policy with IAM users, roles, or groups. For more information about IAM policies, see Overview of IAM Policies in the IAM User Guide guide.",
+  "properties": [
+    {
+      "name": "Groups",
+      "description": "The names of groups to which you want to add the policy.",
+      "required": false,
+      "type": "string[]",
+      "update": "No interruption"
+    },
+    {
+      "name": "PolicyDocument",
+      "description": "A policy document that contains permissions to add to the specified users or groups.",
+      "required": true,
+      "type": "JSONobject",
+      "update": "No interruption"
+    },
+    {
+      "name": "PolicyName",
+      "description": "The name of the policy. If you specify multiple policies for an entity, specify unique names. For example, if you specify a list of policies for an IAM role, each policy must have a unique name.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Roles",
+      "description": "The names of AWS::IAM::Roles to attach to this policy.",
+      "required": false,
+      "type": "string[]",
+      "update": "No interruption"
+    },
+    {
+      "name": "Users",
+      "description": "The names of users for whom you want to add the policy.",
+      "required": false,
+      "type": "string[]",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

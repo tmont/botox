@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::WAF::XssMatchSet",
+  "namespace": "AWS",
+  "category": "WAF",
+  "name": "XssMatchSet",
+  "description": "The AWS::WAF::XssMatchSet resource specifies the parts of web requests that you want AWS WAF to inspect for cross-site scripting attacks and the name of the header to inspect. For more information, see XssMatchSet in the AWS WAF API Reference.",
+  "properties": [
+    {
+      "name": "Name",
+      "description": "A friendly name or description for the XssMatchSet.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "XssMatchTuples",
+      "description": "The parts of web requests that you want to inspect for cross-site scripting attacks.",
+      "required": false,
+      "type": "AWSWAFXssMatchSetXssMatchTuple[]",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

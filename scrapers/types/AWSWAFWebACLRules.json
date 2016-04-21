@@ -1,0 +1,24 @@
+{
+  "name": "AWSWAFWebACLRules",
+  "description": "Rules is a property of the AWS::WAF::WebACL resource that specifies the rule to associate with an AWS WAF web access control list (ACL) and the rule's settings.",
+  "properties": [
+    {
+      "name": "Action",
+      "description": "The action that Amazon CloudFront (CloudFront) or AWS WAF takes when a web request matches all conditions in the rule, such as allow, block, or count the request.",
+      "required": true,
+      "type": "AWSWAFWebACLAction"
+    },
+    {
+      "name": "Priority",
+      "description": "The order in which AWS WAF evaluates the rules in a web ACL. AWS WAF evaluates rules with a lower value before rules with a higher value. The value must be a unique integer. If you have multiple rules in a web ACL, the priority numbers do not need to be consecutive.",
+      "required": true,
+      "type": "Integer"
+    },
+    {
+      "name": "RuleId",
+      "description": "The ID of an AWS WAF rule to associate with a web ACL.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

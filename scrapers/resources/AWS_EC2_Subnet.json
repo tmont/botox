@@ -1,0 +1,50 @@
+{
+  "fullName": "AWS::EC2::Subnet",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "Subnet",
+  "description": "Creates a subnet in an existing VPC.",
+  "properties": [
+    {
+      "name": "AvailabilityZone",
+      "description": "The availability zone in which you want the subnet. Default: AWS selects a zone for you (recommended).",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "CidrBlock",
+      "description": "The CIDR block that you want the subnet to cover (for example, \"10.0.0.0/24\").",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "MapPublicIpOnLaunch",
+      "description": "Indicates whether instances that are launched in this subnet receive a public IP address. By default, the value is false.",
+      "required": false,
+      "type": "Boolean",
+      "update": "No interruption."
+    },
+    {
+      "name": "Tags",
+      "description": "An arbitrary set of tags (key–value pairs) for this subnet.",
+      "required": false,
+      "type": "AWSCloudFormationResourceTagsType[]",
+      "update": "No interruption."
+    },
+    {
+      "name": "VpcId",
+      "description": "A Ref structure that contains the ID of the VPC on which you want to create the subnet. The VPC ID is provided as the value of the \"Ref\" property, as: { \"Ref\": \"VPCID\" }.",
+      "required": true,
+      "type": "RefID",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "AvailabilityZone",
+      "description": "Returns the availability zone (for example, \"us-east-1a\") of this subnet.Example: { \"Fn::GetAtt\" : [ \"mySubnet\", \"AvailabilityZone\" ] }"
+    }
+  ]
+}

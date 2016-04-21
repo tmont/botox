@@ -1,0 +1,29 @@
+{
+  "fullName": "AWS::EC2::SubnetNetworkAclAssociation",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "SubnetNetworkAclAssociation",
+  "description": "Associates a subnet with a network ACL.",
+  "properties": [
+    {
+      "name": "SubnetId",
+      "description": "The ID representing the current association between the original network ACL and the subnet.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "NetworkAclId",
+      "description": "The ID of the new ACL to associate with the subnet.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "AssociationId",
+      "description": "Returns the value of this object's SubnetId property."
+    }
+  ]
+}

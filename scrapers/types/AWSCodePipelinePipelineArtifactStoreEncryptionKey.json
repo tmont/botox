@@ -1,0 +1,18 @@
+{
+  "name": "AWSCodePipelinePipelineArtifactStoreEncryptionKey",
+  "description": "EncryptionKey is a property of the AWS CodePipeline Pipeline ArtifactStore property that specifies which key AWS CodePipeline uses to encrypt data in the artifact store, such as an AWS Key Management Service (AWS KMS) key.",
+  "properties": [
+    {
+      "name": "Id",
+      "description": "The ID of the key. For an AWS KMS key, specify the key ID or key Amazon Resource Number (ARN).",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Type",
+      "description": "The type of encryption key, such as KMS. For valid values, see EncryptionKey in the AWS CodePipeline API Reference.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

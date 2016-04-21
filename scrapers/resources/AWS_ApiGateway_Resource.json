@@ -1,0 +1,31 @@
+{
+  "fullName": "AWS::ApiGateway::Resource",
+  "namespace": "AWS",
+  "category": "ApiGateway",
+  "name": "Resource",
+  "description": "The AWS::ApiGateway::Resource resource creates a resource in an Amazon API Gateway (API Gateway) API.",
+  "properties": [
+    {
+      "name": "ParentId",
+      "description": "If you want to create a child resource, the ID of the parent resource.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "PathPart",
+      "description": "A path name for the resource.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "RestApiId",
+      "description": "The ID of the RestApi resource in which you want to create this resource.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

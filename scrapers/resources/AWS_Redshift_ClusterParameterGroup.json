@@ -1,0 +1,31 @@
+{
+  "fullName": "AWS::Redshift::ClusterParameterGroup",
+  "namespace": "AWS",
+  "category": "Redshift",
+  "name": "ClusterParameterGroup",
+  "description": "Creates an Amazon Redshift parameter group that you can associate with an Amazon Redshift cluster. The parameters in the group apply to all the databases that you create in the cluster.",
+  "properties": [
+    {
+      "name": "Description",
+      "description": "A description of the parameter group.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "ParameterGroupFamily",
+      "description": "The Amazon Redshift engine version that applies to this cluster parameter group. The cluster engine version determines the set of parameters that you can specify in the Parameters property.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Parameters",
+      "description": "A list of parameter names and values that are allowed by the Amazon Redshift engine version that you specified in the ParameterGroupFamily property. For more information, see Amazon Redshift Parameter Groups in the Amazon Redshift Cluster Management Guide.",
+      "required": false,
+      "type": "RedshiftParameterType",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

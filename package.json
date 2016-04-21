@@ -2,8 +2,14 @@
 	"name": "botox",
 	"version": "0.0.0",
 	"description": "AWS CloudFormation template generating library",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tmont/botox.git"
+	},
+	"license": "MIT",
 	"devDependencies": {
 		"async": "1.5.2",
-		"cheerio": "0.20.0"
+		"cheerio": "0.20.0",
+		"inflection": "1.10.0"
 	}
 }

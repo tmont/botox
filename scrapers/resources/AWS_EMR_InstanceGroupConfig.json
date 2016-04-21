@@ -1,0 +1,73 @@
+{
+  "fullName": "AWS::EMR::InstanceGroupConfig",
+  "namespace": "AWS",
+  "category": "EMR",
+  "name": "InstanceGroupConfig",
+  "description": "The AWS::EMR::InstanceGroupConfig resource configures a task instance group for an Amazon Elastic MapReduce (Amazon EMR) cluster.",
+  "properties": [
+    {
+      "name": "BidPrice",
+      "description": "The bid price in USD for each EC2 instance in the instance group when launching instances (nodes) as Spot Instances.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Configurations",
+      "description": "A list of configurations to apply to this instance group. For more information see, Configuring Applications in the Amazon Elastic MapReduce Release Guide.",
+      "required": false,
+      "type": "ElasticMapReduceClusterConfiguration[]",
+      "update": "Replacement"
+    },
+    {
+      "name": "EbsConfiguration",
+      "description": "Configures Amazon Elastic Block Store (Amazon EBS) storage volumes to attach to your instances.",
+      "required": false,
+      "type": "ElasticMapReduceEbsConfiguration",
+      "update": "Replacement"
+    },
+    {
+      "name": "InstanceCount",
+      "description": "The number of instances to launch in the instance group.",
+      "required": true,
+      "type": "Integer",
+      "update": "No interruption"
+    },
+    {
+      "name": "InstanceRole",
+      "description": "The role of the servers in the Amazon EMR cluster, such as TASK. For more information, see Instance Groups in the Amazon Elastic MapReduce Management Guide.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "InstanceType",
+      "description": "The EC2 instance type for all instances in the instance group. For more information, see Instance Configurations in the Amazon Elastic MapReduce Management Guide.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "JobFlowId",
+      "description": "The ID of an Amazon EMR cluster that you want to associate this instance group with.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Market",
+      "description": "The type of marketplace from which your instances are provisioned into this group, either ON_DEMAND or SPOT. For more information, see Amazon EC2 Purchasing Options.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Name",
+      "description": "A name for the instance group.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

@@ -1,0 +1,18 @@
+{
+  "name": "EC2ContainerServiceTaskDefinitionVolumes",
+  "description": "Volumes is a property of the AWS::ECS::TaskDefinition resource that specifies a list of data volumes, which your containers can then access.",
+  "properties": [
+    {
+      "name": "Name",
+      "description": "The name of the volume. To specify mount points in your container definitions, use the value of this property.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Host",
+      "description": "Determines whether your data volume persists on the host container instance and at the location where it is stored.",
+      "required": false,
+      "type": "EC2ContainerServiceTaskDefinitionVolumesHost"
+    }
+  ]
+}

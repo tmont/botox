@@ -1,0 +1,31 @@
+{
+  "fullName": "AWS::EC2::VPCGatewayAttachment",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "VPCGatewayAttachment",
+  "description": "Attaches a gateway to a VPC.",
+  "properties": [
+    {
+      "name": "InternetGatewayId",
+      "description": "The ID of the Internet gateway.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "VpcId",
+      "description": "The ID of the VPC to associate with this gateway.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "VpnGatewayId",
+      "description": "The ID of the virtual private network (VPN) gateway to attach to the VPC.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

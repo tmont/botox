@@ -1,0 +1,24 @@
+{
+  "name": "S3NotificationConfigurationTopicConfigurations",
+  "description": "Describes the topic and events for the Amazon S3 NotificationConfiguration property.",
+  "properties": [
+    {
+      "name": "Event",
+      "description": "The Amazon Simple Storage Service (Amazon S3) bucket event about which to send notifications. For more information, see Supported Event Types in the Amazon Simple Storage Service Developer Guide.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Filter",
+      "description": "The filtering rules that determine for which objects to send notifications. For example, you can create a filter so that Amazon Simple Storage Service (Amazon S3) sends notifications only when image files with a .jpg extension are added to the bucket.",
+      "required": false,
+      "type": "S3NotificationConfigurationConfigFilter"
+    },
+    {
+      "name": "Topic",
+      "description": "The Amazon SNS topic Amazon Resource Name (ARN) to which Amazon S3 reports the specified events.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "fullName": "AWS::OpsWorks::App",
+  "namespace": "AWS",
+  "category": "OpsWorks",
+  "name": "App",
+  "description": "Defines an AWS OpsWorks app for an AWS OpsWorks stack. The app represents code that you want to run on an application server.",
+  "properties": [
+    {
+      "name": "AppSource",
+      "description": "Contains the information required to retrieve an app from a repository.",
+      "required": false,
+      "type": "AWSOpsWorksSourceType",
+      "update": "No interruption"
+    },
+    {
+      "name": "Attributes",
+      "description": "One or more user-defined key-value pairs to be added to the stack attributes bag.",
+      "required": false,
+      "type": "key[]",
+      "update": "No interruption"
+    },
+    {
+      "name": "Description",
+      "description": "A description of the app.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Domains",
+      "description": "The app virtual host settings, with multiple domains separated by commas. For example, 'www.example.com, example.com'.",
+      "required": false,
+      "type": "string[]",
+      "update": "No interruption"
+    },
+    {
+      "name": "EnableSsl",
+      "description": "Whether to enable SSL for this app.",
+      "required": false,
+      "type": "Boolean",
+      "update": "No interruption"
+    },
+    {
+      "name": "Environment",
+      "description": "The environment variables to associate with the AWS OpsWorks app.",
+      "required": false,
+      "type": "AWSOpsWorksAppEnvironment[]",
+      "update": "No interruption"
+    },
+    {
+      "name": "Name",
+      "description": "The AWS OpsWorks app name.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Shortname",
+      "description": "The app short name, which is used internally by AWS OpsWorks and by Chef recipes.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "SslConfiguration",
+      "description": "The SSL configuration",
+      "required": false,
+      "type": "AWSOpsWorksSslConfigurationType",
+      "update": "No interruption"
+    },
+    {
+      "name": "StackId",
+      "description": "The AWS OpsWorks stack ID that this app will be associated with.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Type",
+      "description": "The app type. Each supported type is associated with a particular layer. For more information, see CreateApp in the AWS OpsWorks API Reference.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

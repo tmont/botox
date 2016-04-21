@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::Logs::LogStream",
+  "namespace": "AWS",
+  "category": "Logs",
+  "name": "LogStream",
+  "description": "The AWS::Logs::LogStream resource creates an Amazon CloudWatch Logs log stream in a log group. A log stream represents the sequence of events coming from an application instance or resource that you are monitoring. For more information, see Monitoring Log Files in the Amazon CloudWatch Developer Guide.",
+  "properties": [
+    {
+      "name": "LogGroupName",
+      "description": "The name of the log group where the log stream is created.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "LogStreamName",
+      "description": "The name of the log stream to create. The name must be unique within the log group.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

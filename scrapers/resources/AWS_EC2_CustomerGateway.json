@@ -1,0 +1,38 @@
+{
+  "fullName": "AWS::EC2::CustomerGateway",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "CustomerGateway",
+  "description": "Provides information to AWS about your VPN customer gateway device.",
+  "properties": [
+    {
+      "name": "BgpAsn",
+      "description": "The customer gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).",
+      "required": true,
+      "type": "NumberBgpAsnisalwaysanintegervalue",
+      "update": "Replacement"
+    },
+    {
+      "name": "IpAddress",
+      "description": "The internet-routable IP address for the customer gateway's outside interface. The address must be static.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Tags",
+      "description": "The tags that you want to attach to the resource.",
+      "required": false,
+      "type": "AWSCloudFormationResourceTags",
+      "update": "No interruption."
+    },
+    {
+      "name": "Type",
+      "description": "The type of VPN connection that this customer gateway supports.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::EC2::VPNGateway",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "VPNGateway",
+  "description": "Creates a virtual private gateway. A virtual private gateway is the VPC-side endpoint for your VPN connection.",
+  "properties": [
+    {
+      "name": "Type",
+      "description": "The type of VPN connection this virtual private gateway supports. The only valid value is \"ipsec.1\".",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Tags",
+      "description": "An arbitrary set of tags (key–value pairs) for this resource.",
+      "required": false,
+      "type": "AWSCloudFormationResourceTagsType[]",
+      "update": "No interruption."
+    }
+  ],
+  "attributes": []
+}

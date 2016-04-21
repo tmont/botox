@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::SQS::QueuePolicy",
+  "namespace": "AWS",
+  "category": "SQS",
+  "name": "QueuePolicy",
+  "description": "The AWS::SQS::QueuePolicy type applies a policy to SQS queues.",
+  "properties": [
+    {
+      "name": "PolicyDocument",
+      "description": "A policy document containing permissions to add to the specified SQS queues.",
+      "required": true,
+      "type": "JSONobject",
+      "update": "No interruption"
+    },
+    {
+      "name": "Queues",
+      "description": "The URLs of the queues to which you want to add the policy. You can use the Ref function to specify an AWS::SQS::Queue resource.",
+      "required": true,
+      "type": "string[]",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

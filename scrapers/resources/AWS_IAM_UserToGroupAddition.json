@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::IAM::UserToGroupAddition",
+  "namespace": "AWS",
+  "category": "IAM",
+  "name": "UserToGroupAddition",
+  "description": "The AWS::IAM::UserToGroupAddition type adds AWS Identity and Access Management (IAM) users to a group.",
+  "properties": [
+    {
+      "name": "GroupName",
+      "description": "The name of group to add users to.",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Users",
+      "description": "Required: Yes",
+      "required": true,
+      "type": "user[]",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

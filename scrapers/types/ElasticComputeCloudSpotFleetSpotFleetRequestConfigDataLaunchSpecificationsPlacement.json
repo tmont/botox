@@ -1,0 +1,18 @@
+{
+  "name": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsPlacement",
+  "description": "Placement is a property of the Amazon Elastic Compute Cloud SpotFleet SpotFleetRequestConfigData LaunchSpecifications property that defines the placement group for the Spot instances.",
+  "properties": [
+    {
+      "name": "AvailabilityZone",
+      "description": "The Availability Zone (AZ) of the placement group.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "GroupName",
+      "description": "The name of the placement group (for cluster instances).",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

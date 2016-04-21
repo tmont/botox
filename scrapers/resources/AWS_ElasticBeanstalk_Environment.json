@@ -1,0 +1,85 @@
+{
+  "fullName": "AWS::ElasticBeanstalk::Environment",
+  "namespace": "AWS",
+  "category": "ElasticBeanstalk",
+  "name": "Environment",
+  "description": "Creates or updates an AWS Elastic Beanstalk environment.",
+  "properties": [
+    {
+      "name": "ApplicationName",
+      "description": "The name of the application that is associated with this environment.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "CNAMEPrefix",
+      "description": "A prefix for your Elastic Beanstalk environment URL.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Description",
+      "description": "A description that helps you identify this environment.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "EnvironmentName",
+      "description": "A name for the Elastic Beanstalk environment. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the environment name. For more information, see Name Type.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "OptionSettings",
+      "description": "Key-value pairs defining configuration options for this environment. These options override the values that are defined in the solution stack or the configuration template. If you remove any options during a stack update, the removed options revert to default values.",
+      "required": false,
+      "type": "OptionSetting[]",
+      "update": "Some interruptions"
+    },
+    {
+      "name": "SolutionStackName",
+      "description": "The name of an Elastic Beanstalk solution stack that this configuration will use. For more information, see Supported Platforms in the AWS Elastic Beanstalk Developer Guide. You must specify either this parameter or an Elastic Beanstalk configuration template name.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Tags",
+      "description": "An arbitrary set of tags (key–value pairs) for this environment.",
+      "required": false,
+      "type": "AWSCloudFormationResourceTagsType[]",
+      "update": "You can update tags only if you update another property that requires that the environment be replaced, such as the ApplicationName property."
+    },
+    {
+      "name": "TemplateName",
+      "description": "The name of the Elastic Beanstalk configuration template to use with the environment. You must specify either this parameter or a solution stack name.",
+      "required": false,
+      "type": "String",
+      "update": "Some interruptions"
+    },
+    {
+      "name": "Tier",
+      "description": "Specifies the tier to use in creating this environment. The environment tier that you choose determines whether Elastic Beanstalk provisions resources to support a web application that handles HTTP(S) requests or a web application that handles background-processing tasks.",
+      "required": false,
+      "type": "ElasticBeanstalkEnvironmentTierPropertyType",
+      "update": "See Elastic Beanstalk Environment Tier Property Type"
+    },
+    {
+      "name": "VersionLabel",
+      "description": "The version to associate with the environment.",
+      "required": false,
+      "type": "String",
+      "update": "Some interruptions"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "EndpointURL",
+      "description": "The URL to the load balancer for this environment.Example:awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-1.elb.amazonaws.com"
+    }
+  ]
+}

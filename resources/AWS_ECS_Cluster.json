@@ -1,9 +1,0 @@
-{
-  "fullName": "AWS::ECS::Cluster",
-  "namespace": "AWS",
-  "category": "ECS",
-  "name": "Cluster",
-  "shortDesc": "The AWS::ECS::Cluster resource creates an Amazon EC2 Container Service (Amazon ECS) cluster. This resource has no properties; use the Amazon ECS container agent to connect to the cluster. For more information, see Amazon ECS Container Agent in the Amazon EC2 Container Service Developer Guide.",
-  "properties": [],
-  "attributes": []
-}

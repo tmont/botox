@@ -1,0 +1,36 @@
+{
+  "name": "CloudFrontDistributionConfigOrigin",
+  "description": "Origin is a property of the DistributionConfig property that describes an Amazon CloudFront distribution origin.",
+  "properties": [
+    {
+      "name": "CustomOriginConfig",
+      "description": "Origin information to specify a custom origin.",
+      "required": false,
+      "type": "CustomOrigintype"
+    },
+    {
+      "name": "DomainName",
+      "description": "The DNS name of the Amazon Simple Storage Service (S3) bucket or the HTTP server from which you want CloudFront to get objects for this origin.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Id",
+      "description": "An identifier for the origin. The value of Id must be unique within the distribution.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "OriginPath",
+      "description": "The path that CloudFront uses to request content from an S3 bucket or custom origin. The combination of the DomainName and OriginPath properties must resolve to a valid path. The value must start with a slash mark (/) and cannot end with a slash mark.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "S3OriginConfig",
+      "description": "Origin information to specify an S3 origin.",
+      "required": false,
+      "type": "S3Origintype"
+    }
+  ]
+}

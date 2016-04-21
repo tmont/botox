@@ -1,0 +1,17 @@
+{
+  "fullName": "AWS::ApiGateway::Account",
+  "namespace": "AWS",
+  "category": "ApiGateway",
+  "name": "Account",
+  "description": "The AWS::ApiGateway::Account resource specifies the AWS Identity and Access Management (IAM) role that Amazon API Gateway (API Gateway) uses to write API logs to Amazon CloudWatch Logs (CloudWatch Logs).",
+  "properties": [
+    {
+      "name": "CloudWatchRoleArn",
+      "description": "The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

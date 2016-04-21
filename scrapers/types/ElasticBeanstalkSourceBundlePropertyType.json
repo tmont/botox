@@ -1,0 +1,18 @@
+{
+  "name": "ElasticBeanstalkSourceBundlePropertyType",
+  "description": "The SourceBundle property is an embedded property of the AWS::ElasticBeanstalk::ApplicationVersion resource.",
+  "properties": [
+    {
+      "name": "S3Bucket",
+      "description": "The Amazon S3 bucket where the data is located.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "S3Key",
+      "description": "The Amazon S3 key where the data is located.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

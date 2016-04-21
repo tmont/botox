@@ -1,0 +1,18 @@
+{
+  "name": "Route53HostedZoneVPCs",
+  "description": "The HostedZoneVPCs property is part of the AWS::Route53::HostedZone resource that specifies the VPCs to associate with the hosted zone.",
+  "properties": [
+    {
+      "name": "VPCId",
+      "description": "The ID of the Amazon VPC that you want to associate with the hosted zone.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "VPCRegion",
+      "description": "The region in which the Amazon VPC was created as specified in the VPCId property.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

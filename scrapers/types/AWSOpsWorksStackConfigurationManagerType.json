@@ -1,0 +1,18 @@
+{
+  "name": "AWSOpsWorksStackConfigurationManagerType",
+  "description": "Describes the stack configuration manager for the AWS::OpsWorks::Stack resource type. For more information, see StackConfigurationManager in the AWS OpsWorks API Reference.",
+  "properties": [
+    {
+      "name": "Name",
+      "description": "The name of the configuration manager.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "Version",
+      "description": "The Chef version.",
+      "required": false,
+      "type": "String"
+    }
+  ]
+}

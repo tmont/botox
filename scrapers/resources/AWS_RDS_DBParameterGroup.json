@@ -1,0 +1,38 @@
+{
+  "fullName": "AWS::RDS::DBParameterGroup",
+  "namespace": "AWS",
+  "category": "RDS",
+  "name": "DBParameterGroup",
+  "description": "Creates a custom parameter group for an RDS database family. For more information about RDS parameter groups, see Working with DB Parameter Groups in the Amazon Relational Database Service User Guide.",
+  "properties": [
+    {
+      "name": "Description",
+      "description": "A friendly description of the RDS parameter group. For example, \"My Parameter Group\".",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Family",
+      "description": "The database family of this RDS parameter group. For example, \"MySQL5.1\".",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Parameters",
+      "description": "The parameters to set for this RDS parameter group.",
+      "required": false,
+      "type": "AJSONobjectconsistingofstringkeyvaluepairsasshowninthefollowingexample",
+      "update": "No interruption or Some interruptions"
+    },
+    {
+      "name": "Tags",
+      "description": "The tags that you want to attach to the RDS parameter group.",
+      "required": false,
+      "type": "resourcetag[]",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

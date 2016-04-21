@@ -1,0 +1,38 @@
+{
+  "fullName": "AWS::RDS::DBClusterParameterGroup",
+  "namespace": "AWS",
+  "category": "RDS",
+  "name": "DBClusterParameterGroup",
+  "description": "The AWS::RDS::DBClusterParameterGroup resource creates a new Amazon Relational Database Service (Amazon RDS) database (DB) cluster parameter group. For more information about DB cluster parameter groups, see Appendix: DB Cluster and DB Instance Parameters in the Amazon Relational Database Service User Guide.",
+  "properties": [
+    {
+      "name": "Description",
+      "description": "A friendly description for this DB cluster parameter group.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Family",
+      "description": "The database family of this DB cluster parameter group, such as aurora5.6.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Parameters",
+      "description": "The parameters to set for this DB cluster parameter group. For a list of parameter keys, see Appendix: DB Cluster and DB Instance Parameters in the Amazon Relational Database Service User Guide.",
+      "required": true,
+      "type": "AJSONobjectconsistingofstringkeyvaluepairsasshowninthefollowingexample",
+      "update": "No interruption or some interruptions, depending on the parameters that you update."
+    },
+    {
+      "name": "Tags",
+      "description": "The tags that you want to attach to this parameter group.",
+      "required": false,
+      "type": "resourcetag[]",
+      "update": "Updates are not supported."
+    }
+  ],
+  "attributes": []
+}

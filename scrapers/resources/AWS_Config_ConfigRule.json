@@ -1,0 +1,65 @@
+{
+  "fullName": "AWS::Config::ConfigRule",
+  "namespace": "AWS",
+  "category": "Config",
+  "name": "ConfigRule",
+  "description": "The AWS::Config::ConfigRule resource uses an AWS Lambda (Lambda) function that evaluates configuration items to assess whether your AWS resources comply with your specified configurations. This function can run when AWS Config detects a configuration change or delivers a configuration snapshot. The resources this function evaluates must be in the recording group. For more information, see Evaluating AWS Resource Configurations with AWS Config in the AWS Config Developer Guide.",
+  "properties": [
+    {
+      "name": "ConfigRuleName",
+      "description": "A name for the AWS Config rule. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the rule name. For more information, see Name Type.",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Description",
+      "description": "A description about this AWS Config rule.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "InputParameters",
+      "description": "Input parameter values that are passed to the AWS Config rule (Lambda function).",
+      "required": false,
+      "type": "JSONobject",
+      "update": "No interruption"
+    },
+    {
+      "name": "MaximumExecutionFrequency",
+      "description": "The maximum frequency at which the AWS Config rule runs evaluations. For valid values, see the ConfigRule data type in the AWS Config API Reference.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Scope",
+      "description": "Defines which AWS resources will trigger an evaluation when their configurations change. The scope can include one or more resource types, a combination of a tag key and value, or a combination of one resource type and one resource ID. Specify a scope to constrain the resources that are evaluated. If you don't specify a scope, the rule evaluates all resources in the recording group.",
+      "required": false,
+      "type": "AWSConfigConfigRuleScope",
+      "update": "No interruption"
+    },
+    {
+      "name": "Source",
+      "description": "Specifies the rule owner, the rule identifier, and the events that cause the function to evaluate your AWS resources.",
+      "required": true,
+      "type": "AWSConfigConfigRuleSource",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Arn",
+      "description": "The Amazon Resource Name (ARN) of the AWS Config rule, such as arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi."
+    },
+    {
+      "name": "ConfigRuleId",
+      "description": "The ID of the AWS Config rule, such as config-rule-a1bzhi."
+    },
+    {
+      "name": "Compliance.Type",
+      "description": "The compliance status of an AWS Config rule, such as COMPLIANT or NON_COMPLIANT."
+    }
+  ]
+}

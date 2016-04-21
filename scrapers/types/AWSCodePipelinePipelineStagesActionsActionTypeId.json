@@ -1,0 +1,30 @@
+{
+  "name": "AWSCodePipelinePipelineStagesActionsActionTypeId",
+  "description": "ActionTypeId is a property of the AWS CodePipeline Pipeline Stages Actions property that specifies the action type and provider for an AWS CodePipeline action.",
+  "properties": [
+    {
+      "name": "Category",
+      "description": "A category that defines which action type the owner (the entitiy that performs the action) performs. The category that you select determine the providers that you can specify for the Provider property. For valid values, see ActionTypeId in the AWS CodePipeline API Reference.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Owner",
+      "description": "The entity that performs the action. For valid values, see ActionTypeId in the AWS CodePipeline API Reference.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Provider",
+      "description": "The service provider that the action calls. The providers that you can specify are determined by the category that you select. For example, a valid provider for the Deploy category is AWS CodeDeploy, which you would specify as CodeDeploy.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Version",
+      "description": "A version identifier for this action.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

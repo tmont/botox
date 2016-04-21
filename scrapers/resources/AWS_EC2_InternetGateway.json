@@ -1,0 +1,17 @@
+{
+  "fullName": "AWS::EC2::InternetGateway",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "InternetGateway",
+  "description": "Creates a new Internet gateway in your AWS account. After creating the Internet gateway, you then attach it to a VPC.",
+  "properties": [
+    {
+      "name": "Tags",
+      "description": "An arbitrary set of tags (key–value pairs) for this resource.",
+      "required": false,
+      "type": "AWSCloudFormationResourceTagsType[]",
+      "update": "No interruption."
+    }
+  ],
+  "attributes": []
+}

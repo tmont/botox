@@ -1,0 +1,31 @@
+{
+  "fullName": "AWS::WAF::Rule",
+  "namespace": "AWS",
+  "category": "WAF",
+  "name": "Rule",
+  "description": "The AWS::WAF::Rule resource creates an AWS WAF rule that specifies a combination of IPSet, ByteMatchSet, and SqlInjectionMatchSet objects that identify the web requests to allow, block, or count. To implement rules, you must associate them with a web ACL.",
+  "properties": [
+    {
+      "name": "MetricName",
+      "description": "A friendly name or description for the metrics of the rule.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Name",
+      "description": "A friendly name or description of the rule.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "Predicates",
+      "description": "The ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects to include in a rule. If you add more than one predicate to a rule, a request must match all conditions in order to be allowed or blocked.",
+      "required": false,
+      "type": "AWSWAFRulePredicate[]",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

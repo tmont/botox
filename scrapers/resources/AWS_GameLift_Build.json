@@ -1,0 +1,31 @@
+{
+  "fullName": "AWS::GameLift::Build",
+  "namespace": "AWS",
+  "category": "GameLift",
+  "name": "Build",
+  "description": "The AWS::GameLift::Build resource creates a build that includes all of the components to run your game server in an Amazon GameLift (GameLift) fleet.",
+  "properties": [
+    {
+      "name": "Name",
+      "description": "An identifier to associate with this build. Build names don't need to be unique.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "StorageLocation",
+      "description": "The Amazon Simple Storage Service (Amazon S3) location where your build package files are located.",
+      "required": false,
+      "type": "GameLiftBuildStorageLocation",
+      "update": "Replacement"
+    },
+    {
+      "name": "Version",
+      "description": "A version to associate with this build. Version is useful if you want to track updates to your build package files. Versions don't need to be unique.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    }
+  ],
+  "attributes": []
+}

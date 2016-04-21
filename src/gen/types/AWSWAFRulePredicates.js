@@ -1,0 +1,61 @@
+/**
+ * Predicates is a property of the AWS::WAF::Rule resource that specifies the ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects to include in an AWS WAF rule. If you add more than one predicate to a rule, an incoming request must match all of the specifications in the predicates to be allowed or blocked.
+ * @constructor
+ */
+function AWSWAFRulePredicates(initialData) {
+	this.data = initialData || {};
+}
+
+AWSWAFRulePredicates.prototype = {
+	
+	/**
+	 * The unique identifier of a predicate, such as the ID of a ByteMatchSet or IPSet.
+	 *
+	 * Required: true
+	 *
+	 * @param {String} value
+	 * @return {AWSWAFRulePredicates}
+	 */
+	dataId: function(value) {
+		return this.set('DataId', value);
+	},
+
+	/**
+	 * Whether to use the settings or the negated settings that you specified in the ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects.
+	 *
+	 * Required: true
+	 *
+	 * @param {Boolean} value
+	 * @return {AWSWAFRulePredicates}
+	 */
+	negated: function(value) {
+		return this.set('Negated', value);
+	},
+
+	/**
+	 * The type of predicate in a rule, such as an IPSet (IPMatch). For valid values, see the Type contents of the Predicate data type in the AWS WAF API Reference.
+	 *
+	 * Required: true
+	 *
+	 * @param {String} value
+	 * @return {AWSWAFRulePredicates}
+	 */
+	type: function(value) {
+		return this.set('Type', value);
+	},
+
+	set: function(key, value) {
+		this.data[key] = value;
+		return this;
+	},
+
+	toJSON: function() {
+		return this.data;
+	},
+
+	toString: function() {
+		return JSON.stringify(this, null, '  ');
+	}
+};
+
+module.exports = AWSWAFRulePredicates;

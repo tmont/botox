@@ -1,0 +1,78 @@
+{
+  "name": "CloudFrontDistributionConfigCacheBehavior",
+  "description": "CacheBehavior is a property of the DistributionConfig property that describes the Amazon CloudFront (CloudFront) cache behavior when the requested URL matches a pattern.",
+  "properties": [
+    {
+      "name": "AllowedMethods",
+      "description": "HTTP methods that CloudFront processes and forwards to your Amazon S3 bucket or your custom origin. You can specify [\"HEAD\", \"GET\"], [\"GET\", \"HEAD\", \"OPTIONS\"], or [\"DELETE\", \"GET\", \"HEAD\", \"OPTIONS\", \"PATCH\", \"POST\", \"PUT\"]. If you don't specify a value, AWS CloudFormation specifies [\"HEAD\", \"GET\"].",
+      "required": false,
+      "type": "string[]"
+    },
+    {
+      "name": "CachedMethods",
+      "description": "HTTP methods for which CloudFront caches responses. You can specify [\"HEAD\", \"GET\"] or [\"GET\", \"HEAD\", \"OPTIONS\"]. If you don't specify a value, AWS CloudFormation specifies [\"HEAD\", \"GET\"].",
+      "required": false,
+      "type": "string[]"
+    },
+    {
+      "name": "Compress",
+      "description": "Indicates whether CloudFront automatically compresses certain files for this cache behavior. For more information, see Serving Compressed Files in the Amazon CloudFront Developer Guide.",
+      "required": false,
+      "type": "Boolean"
+    },
+    {
+      "name": "DefaultTTL",
+      "description": "The default time in seconds that objects stay in CloudFront caches before CloudFront forwards another request to your custom origin to determine whether the object has been updated. This value applies only when your custom origin does not add HTTP headers, such as Cache-Control max-age, Cache-Control s-maxage, and Expires to objects.",
+      "required": false,
+      "type": "Number"
+    },
+    {
+      "name": "ForwardedValues",
+      "description": "Specifies how CloudFront handles query strings or cookies.",
+      "required": true,
+      "type": "ForwardedValuestype"
+    },
+    {
+      "name": "MaxTTL",
+      "description": "The maximum time in seconds that objects stay in CloudFront caches before CloudFront forwards another request to your custom origin to determine whether the object has been updated. This value applies only when your custom origin does not add HTTP headers, such as Cache-Control max-age, Cache-Control s-maxage, and Expires to objects.",
+      "required": false,
+      "type": "Number"
+    },
+    {
+      "name": "MinTTL",
+      "description": "The minimum amount of time that you want objects to stay in the cache before CloudFront queries your origin to see whether the object has been updated.",
+      "required": false,
+      "type": "Number"
+    },
+    {
+      "name": "PathPattern",
+      "description": "The pattern to which this cache behavior applies. For example, you can specify images/*.jpg.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "SmoothStreaming",
+      "description": "Indicates whether to use the origin that is associated with this cache behavior to distribute media files in the Microsoft Smooth Streaming format. If you specify true, you can still use this cache behavior to distribute other content if the content matches the PathPattern value.",
+      "required": false,
+      "type": "Boolean"
+    },
+    {
+      "name": "TargetOriginId",
+      "description": "The ID value of the origin to which you want CloudFront to route requests when a request matches the value of the PathPattern property.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "TrustedSigners",
+      "description": "A list of AWS accounts that can create signed URLs in order to access private content.",
+      "required": false,
+      "type": "string[]"
+    },
+    {
+      "name": "ViewerProtocolPolicy",
+      "description": "The protocol that users can use to access the files in the origin that you specified in the TargetOriginId property when a request matches the value of the PathPattern property. For more information about the valid values, see the ViewerProtocolPolicy elements in the DistributionConfig Complex Type topic in the Amazon CloudFront API Reference.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

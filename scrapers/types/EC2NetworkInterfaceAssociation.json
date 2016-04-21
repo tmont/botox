@@ -1,0 +1,30 @@
+{
+  "name": "EC2NetworkInterfaceAssociation",
+  "description": "Describes a network interface association for an Elastic Network Interface (ENI). AWS::EC2::NetworkInterface takes an object of this type in its Association property.",
+  "properties": [
+    {
+      "name": "AttachmentID",
+      "description": "The ID of the network interface attachment.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "InstanceID",
+      "description": "The ID of the instance attached to the network interface.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "PublicIp",
+      "description": "The address of the Elastic IP address bound to the network interface.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "IpOwnerId",
+      "description": "The ID of the Elastic IP address owner.",
+      "required": true,
+      "type": "String"
+    }
+  ]
+}

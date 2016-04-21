@@ -1,0 +1,18 @@
+{
+  "name": "ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig",
+  "description": "EbsBlockDeviceConfig is a property of the Amazon Elastic MapReduce EbsConfiguration property that defines the settings for the Amazon Elastic Block Store (Amazon EBS) volumes that Amazon Elastic MapReduce (Amazon EMR) associates with your instances.",
+  "properties": [
+    {
+      "name": "VolumeSpecification",
+      "description": "The settings for the Amazon EBS volumes.",
+      "required": true,
+      "type": "ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification"
+    },
+    {
+      "name": "VolumesPerInstance",
+      "description": "The number of Amazon EBS volumes that you want to create for each instance in the EMR cluster or instance group.",
+      "required": false,
+      "type": "Integer"
+    }
+  ]
+}

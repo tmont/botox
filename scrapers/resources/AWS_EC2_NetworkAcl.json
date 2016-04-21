@@ -1,0 +1,24 @@
+{
+  "fullName": "AWS::EC2::NetworkAcl",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "NetworkAcl",
+  "description": "Creates a new network ACL in a VPC.",
+  "properties": [
+    {
+      "name": "Tags",
+      "description": "An arbitrary set of tags (key–value pairs) for this ACL.",
+      "required": false,
+      "type": "AWSCloudFormationResourceTagsType[]",
+      "update": "No interruption."
+    },
+    {
+      "name": "VpcId",
+      "description": "The ID of the VPC where the network ACL will be created.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": []
+}

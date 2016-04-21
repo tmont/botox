@@ -1,0 +1,36 @@
+{
+  "fullName": "AWS::IAM::AccessKey",
+  "namespace": "AWS",
+  "category": "IAM",
+  "name": "AccessKey",
+  "description": "The AWS::IAM::AccessKey resource type generates a secret access key and assigns it to an IAM user or AWS account.",
+  "properties": [
+    {
+      "name": "Serial",
+      "description": "This value is specific to AWS CloudFormation and can only be incremented. Incrementing this value notifies AWS CloudFormation that you want to rotate your access key. When you update your stack, AWS CloudFormation will replace the existing access key with a new key.",
+      "required": false,
+      "type": "Integer",
+      "update": "Replacement"
+    },
+    {
+      "name": "Status",
+      "description": "The status of the access key. By default, AWS CloudFormation sets this property value to Active.",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "UserName",
+      "description": "The name of the user that the new key will belong to.",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "SecretAccessKey",
+      "description": "Returns the secret access key for the specified AWS::IAM::AccessKey resource. For example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY."
+    }
+  ]
+}
