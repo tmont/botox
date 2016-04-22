@@ -302,14 +302,14 @@ ElastiCacheCacheCluster.prototype = {
 			/**
 			 * The DNS address of the configuration endpoint for the Memcached cache cluster.
 			 */
-			configurationEndpoint.Address: function() {
+			configurationEndpointAddress: function() {
 				return new Attribute(resourceName, 'ConfigurationEndpoint.Address');
 			},
 
 			/**
 			 * The port number of the configuration endpoint for the Memcached cache cluster.
 			 */
-			configurationEndpoint.Port: function() {
+			configurationEndpointPort: function() {
 				return new Attribute(resourceName, 'ConfigurationEndpoint.Port');
 			}
 		};

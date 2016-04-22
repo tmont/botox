@@ -121,7 +121,7 @@ ConfigConfigRule.prototype = {
 			/**
 			 * The compliance status of an AWS Config rule, such as COMPLIANT or NON_COMPLIANT.
 			 */
-			compliance.Type: function() {
+			complianceType: function() {
 				return new Attribute(resourceName, 'Compliance.Type');
 			}
 		};

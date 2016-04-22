@@ -258,14 +258,14 @@ ElasticLoadBalancingLoadBalancer.prototype = {
 			/**
 			 * The security group that you can use as part of your inbound rules for your load balancer's back-end Amazon EC2 application instances.Example: amazon-elb
 			 */
-			sourceSecurityGroup.GroupName: function() {
+			sourceSecurityGroupGroupName: function() {
 				return new Attribute(resourceName, 'SourceSecurityGroup.GroupName');
 			},
 
 			/**
 			 * The owner of the source security group.Example: amazon-elb-sg
 			 */
-			sourceSecurityGroup.OwnerAlias: function() {
+			sourceSecurityGroupOwnerAlias: function() {
 				return new Attribute(resourceName, 'SourceSecurityGroup.OwnerAlias');
 			}
 		};

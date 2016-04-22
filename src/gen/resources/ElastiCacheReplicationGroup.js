@@ -263,42 +263,42 @@ ElastiCacheReplicationGroup.prototype = {
 			/**
 			 * The DNS address of the primary read-write cache node.
 			 */
-			primaryEndPoint.Address: function() {
+			primaryEndPointAddress: function() {
 				return new Attribute(resourceName, 'PrimaryEndPoint.Address');
 			},
 
 			/**
 			 * The number of the port that the primary read-write cache engine is listening on.
 			 */
-			primaryEndPoint.Port: function() {
+			primaryEndPointPort: function() {
 				return new Attribute(resourceName, 'PrimaryEndPoint.Port');
 			},
 
 			/**
 			 * A string with a list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports attribute.
 			 */
-			readEndPoint.Addresses: function() {
+			readEndPointAddresses: function() {
 				return new Attribute(resourceName, 'ReadEndPoint.Addresses');
 			},
 
 			/**
 			 * A string with a list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses attribute.
 			 */
-			readEndPoint.Ports: function() {
+			readEndPointPorts: function() {
 				return new Attribute(resourceName, 'ReadEndPoint.Ports');
 			},
 
 			/**
 			 * A list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports.List attribute.
 			 */
-			readEndPoint.Addresses.List: function() {
+			readEndPointAddressesList: function() {
 				return new Attribute(resourceName, 'ReadEndPoint.Addresses.List');
 			},
 
 			/**
 			 * A list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses.List attribute.
 			 */
-			readEndPoint.Ports.List: function() {
+			readEndPointPortsList: function() {
 				return new Attribute(resourceName, 'ReadEndPoint.Ports.List');
 			}
 		};

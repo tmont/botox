@@ -46,11 +46,12 @@ function createResources(files, next) {
 		}).join('\n');
 
 		const attributes = json.attributes.map((attr) => {
+			const methodName = camelize(attr.name.replace(/\W/g, ''));
 			return `
 			/**
 			 * ${attr.description}
 			 */
-			${camelize(attr.name)}: function() {
+			${methodName}: function() {
 				return new Attribute(resourceName, '${attr.name}');
 			}`;
 		}).join(',\n');
