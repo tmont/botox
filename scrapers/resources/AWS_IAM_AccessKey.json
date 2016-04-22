@@ -9,7 +9,7 @@
       "name": "Serial",
       "description": "This value is specific to AWS CloudFormation and can only be incremented. Incrementing this value notifies AWS CloudFormation that you want to rotate your access key. When you update your stack, AWS CloudFormation will replace the existing access key with a new key.",
       "required": false,
-      "type": "Integer",
+      "type": "Number",
       "update": "Replacement"
     },
     {

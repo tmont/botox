@@ -30,7 +30,7 @@
       "name": "HealthCheckGracePeriod",
       "description": "The length of time in seconds after a new EC2 instance comes into service that Auto Scaling starts checking its health.",
       "required": false,
-      "type": "Integer",
+      "type": "Number",
       "update": "No interruption"
     },
     {

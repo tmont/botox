@@ -6,7 +6,7 @@
       "name": "FailureThreshold",
       "description": "The number of consecutive health checks that an endpoint must pass or fail for Amazon Route 53 to change the current status of the endpoint from unhealthy to healthy or healthy to unhealthy. For more information, see How Amazon Route 53 Determines Whether an Endpoint Is Healthy in the Amazon Route 53 Developer Guide.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "FullyQualifiedDomainName",
@@ -24,13 +24,13 @@
       "name": "Port",
       "description": "The port on the endpoint on which you want Amazon Route 53 to perform health checks.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "RequestInterval",
       "description": "The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request. Each Amazon Route 53 health checker makes requests at this interval. For valid values, see the RequestInterval element in the Amazon Route 53 API Reference.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "ResourcePath",

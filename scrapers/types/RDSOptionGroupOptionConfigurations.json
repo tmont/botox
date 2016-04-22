@@ -24,7 +24,7 @@
       "name": "Port",
       "description": "The port number that this option uses.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "VpcSecurityGroupMemberships",

@@ -16,7 +16,7 @@
       "name": "AuthorizerResultTtlInSeconds",
       "description": "The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches authorizer results. If you specify a value greater than 0, API Gateway caches the authorizer responses. By default, API Gateway sets this property to 300. The maximum value is 3600, or 1 hour.",
       "required": false,
-      "type": "Integer",
+      "type": "Number",
       "update": "No interruption"
     },
     {

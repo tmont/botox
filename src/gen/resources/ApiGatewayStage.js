@@ -2,7 +2,7 @@ var Attribute = require('../../fun/attribute'),
 	Reference = require('../../fun/reference');
 
 /**
- * AWS::ApiGateway::Stage - The AWS::ApiGateway::Authorizer resource creates a stage for an Amazon API Gateway (API Gateway) deployment.
+ * AWS::ApiGateway::Stage - The AWS::ApiGateway::Stage resource creates a stage for an Amazon API Gateway (API Gateway) deployment.
  * @constructor
  */
 function ApiGatewayStage(name, initialData) {

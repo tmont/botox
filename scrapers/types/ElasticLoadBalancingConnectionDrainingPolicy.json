@@ -12,7 +12,7 @@
       "name": "Timeout",
       "description": "The time in seconds after the load balancer closes all connections to a deregistered or unhealthy instance.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     }
   ]
 }

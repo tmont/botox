@@ -25,7 +25,7 @@ ElasticsearchServiceDomainEBSOptions.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticsearchServiceDomainEBSOptions}
 	 */
 	iops: function(value) {
@@ -37,7 +37,7 @@ ElasticsearchServiceDomainEBSOptions.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticsearchServiceDomainEBSOptions}
 	 */
 	volumeSize: function(value) {

@@ -37,7 +37,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockD
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappingsEbs}
 	 */
 	iops: function(value) {
@@ -61,7 +61,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockD
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappingsEbs}
 	 */
 	volumeSize: function(value) {

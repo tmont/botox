@@ -13,7 +13,7 @@ ElasticLoadBalancingConnectionSettings.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticLoadBalancingConnectionSettings}
 	 */
 	idleTimeout: function(value) {

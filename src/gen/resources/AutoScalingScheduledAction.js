@@ -36,7 +36,7 @@ AutoScalingScheduledAction.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AutoScalingScheduledAction}
 	 */
 	desiredCapacity: function(value) {
@@ -62,7 +62,7 @@ AutoScalingScheduledAction.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AutoScalingScheduledAction}
 	 */
 	maxSize: function(value) {
@@ -75,7 +75,7 @@ AutoScalingScheduledAction.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AutoScalingScheduledAction}
 	 */
 	minSize: function(value) {

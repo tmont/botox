@@ -25,7 +25,7 @@ ElasticLoadBalancingConnectionDrainingPolicy.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticLoadBalancingConnectionDrainingPolicy}
 	 */
 	timeout: function(value) {

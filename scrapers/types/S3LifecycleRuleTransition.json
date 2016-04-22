@@ -18,7 +18,7 @@
       "name": "TransitionInDays",
       "description": "Indicates the number of days after creation when objects are transitioned to the specified storage class.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     }
   ]
 }

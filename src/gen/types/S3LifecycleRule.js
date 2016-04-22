@@ -25,7 +25,7 @@ S3LifecycleRule.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {S3LifecycleRule}
 	 */
 	expirationInDays: function(value) {
@@ -49,7 +49,7 @@ S3LifecycleRule.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {S3LifecycleRule}
 	 */
 	noncurrentVersionExpirationInDays: function(value) {

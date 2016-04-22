@@ -13,7 +13,7 @@ Route53HealthCheckConfig.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {Route53HealthCheckConfig}
 	 */
 	failureThreshold: function(value) {
@@ -49,7 +49,7 @@ Route53HealthCheckConfig.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {Route53HealthCheckConfig}
 	 */
 	port: function(value) {
@@ -61,7 +61,7 @@ Route53HealthCheckConfig.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {Route53HealthCheckConfig}
 	 */
 	requestInterval: function(value) {

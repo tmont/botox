@@ -9,7 +9,7 @@
       "name": "ShardCount",
       "description": "The number of shards that the stream uses. For greater provisioned throughput, increase the number of shards.",
       "required": true,
-      "type": "Integer",
+      "type": "Number",
       "update": "Replacement"
     },
     {

@@ -13,7 +13,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings}
 	 */
 	containerPort: function(value) {
@@ -25,7 +25,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings}
 	 */
 	hostPort: function(value) {

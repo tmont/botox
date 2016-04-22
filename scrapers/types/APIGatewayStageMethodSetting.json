@@ -12,7 +12,7 @@
       "name": "CacheTtlInSeconds",
       "description": "The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "CachingEnabled",
@@ -54,7 +54,7 @@
       "name": "ThrottlingBurstLimit",
       "description": "The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "ThrottlingRateLimit",

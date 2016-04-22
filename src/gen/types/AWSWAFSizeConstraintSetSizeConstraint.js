@@ -37,7 +37,7 @@ AWSWAFSizeConstraintSetSizeConstraint.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSWAFSizeConstraintSetSizeConstraint}
 	 */
 	size: function(value) {

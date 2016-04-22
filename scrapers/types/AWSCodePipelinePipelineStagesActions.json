@@ -42,7 +42,7 @@
       "name": "RunOrder",
       "description": "The order in which AWS CodePipeline runs this action.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     }
   ]
 }

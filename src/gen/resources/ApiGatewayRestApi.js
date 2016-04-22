@@ -49,7 +49,16 @@ ApiGatewayRestApi.prototype = {
 	},
 
 	attr: function() {
-		throw new Error('AWS::ApiGateway::RestApi has no attributes');
+		var resourceName = this.name;
+		return {
+			
+			/**
+			 * The root resource ID for a RestApi resource, such as a0bc123d4e.
+			 */
+			rootResourceId: function() {
+				return new Attribute(resourceName, 'RootResourceId');
+			}
+		};
 	},
 
 	get ref() {

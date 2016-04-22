@@ -85,7 +85,7 @@ AWSCodePipelinePipelineStagesActions.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSCodePipelinePipelineStagesActions}
 	 */
 	runOrder: function(value) {

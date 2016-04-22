@@ -49,7 +49,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetwor
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
 	 */
 	deviceIndex: function(value) {
@@ -97,7 +97,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetwor
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
 	 */
 	secondaryPrivateIpAddressCount: function(value) {

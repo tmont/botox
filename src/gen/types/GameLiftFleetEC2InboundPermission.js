@@ -13,7 +13,7 @@ GameLiftFleetEC2InboundPermission.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {GameLiftFleetEC2InboundPermission}
 	 */
 	fromPort: function(value) {

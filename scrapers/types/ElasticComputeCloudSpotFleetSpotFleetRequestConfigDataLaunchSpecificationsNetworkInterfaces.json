@@ -24,7 +24,7 @@
       "name": "DeviceIndex",
       "description": "The network interface's position in the attachment order.",
       "required": true,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "Groups",
@@ -48,7 +48,7 @@
       "name": "SecondaryPrivateIpAddressCount",
       "description": "The number of secondary private IP addresses that Amazon Elastic Compute Cloud (Amazon EC2) automatically assigns to the network interface.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "SubnetId",

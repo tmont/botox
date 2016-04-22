@@ -6,7 +6,7 @@
       "name": "DedicatedMasterCount",
       "description": "The number of instances to use for the master node.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "DedicatedMasterEnabled",
@@ -24,7 +24,7 @@
       "name": "InstanceCount",
       "description": "The number of data nodes (instances) to use in the Amazon ES domain.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "InstanceType",

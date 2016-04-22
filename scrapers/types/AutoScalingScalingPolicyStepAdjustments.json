@@ -18,7 +18,7 @@
       "name": "ScalingAdjustment",
       "description": "The amount by which to scale, based on the value that you specified in the AdjustmentType property. A positive value adds to the current capacity and a negative number subtracts from the current capacity.",
       "required": true,
-      "type": "Integer"
+      "type": "Number"
     }
   ]
 }

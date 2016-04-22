@@ -13,7 +13,7 @@ ElasticsearchServiceDomainSnapshotOptions.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticsearchServiceDomainSnapshotOptions}
 	 */
 	automatedSnapshotStartHour: function(value) {

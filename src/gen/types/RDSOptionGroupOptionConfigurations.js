@@ -49,7 +49,7 @@ RDSOptionGroupOptionConfigurations.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {RDSOptionGroupOptionConfigurations}
 	 */
 	port: function(value) {

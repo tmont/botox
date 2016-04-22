@@ -25,7 +25,7 @@ AWSOpsWorksAutoScalingThresholdsType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSOpsWorksAutoScalingThresholdsType}
 	 */
 	ignoreMetricsTime: function(value) {
@@ -37,7 +37,7 @@ AWSOpsWorksAutoScalingThresholdsType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSOpsWorksAutoScalingThresholdsType}
 	 */
 	instanceCount: function(value) {
@@ -73,7 +73,7 @@ AWSOpsWorksAutoScalingThresholdsType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSOpsWorksAutoScalingThresholdsType}
 	 */
 	thresholdsWaitTime: function(value) {

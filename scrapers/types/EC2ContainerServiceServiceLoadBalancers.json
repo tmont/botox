@@ -12,7 +12,7 @@
       "name": "ContainerPort",
       "description": "The port number on the container to direct load balancer traffic to. Your container instances must allow ingress traffic on this port.",
       "required": true,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "LoadBalancerName",

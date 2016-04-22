@@ -36,7 +36,7 @@
       "name": "MaxAge",
       "description": "The time in seconds that your browser is to cache the preflight response for the specified resource.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     }
   ]
 }

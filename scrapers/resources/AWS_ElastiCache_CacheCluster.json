@@ -86,7 +86,7 @@
       "name": "Port",
       "description": "The port number on which each of the cache nodes will accept connections.",
       "required": false,
-      "type": "Integer",
+      "type": "Number",
       "update": "Replacement"
     },
     {
@@ -127,7 +127,7 @@
       "name": "SnapshotRetentionLimit",
       "description": "For Redis cache clusters, the number of days for which ElastiCache retains automatic snapshots before deleting them. For example, if you set the value to 5, a snapshot that was taken today will be retained for 5 days before being deleted.",
       "required": false,
-      "type": "Integer",
+      "type": "Number",
       "update": "No interruption"
     },
     {

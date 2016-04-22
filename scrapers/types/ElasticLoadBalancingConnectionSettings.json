@@ -6,7 +6,7 @@
       "name": "IdleTimeout",
       "description": "The time (in seconds) that a connection to the load balancer can remain idle, which means no data is sent over the connection. After the specified time, the load balancer closes the connection.",
       "required": true,
-      "type": "Integer"
+      "type": "Number"
     }
   ]
 }

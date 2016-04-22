@@ -3,7 +3,7 @@
   "namespace": "AWS",
   "category": "ApiGateway",
   "name": "Stage",
-  "description": "The AWS::ApiGateway::Authorizer resource creates a stage for an Amazon API Gateway (API Gateway) deployment.",
+  "description": "The AWS::ApiGateway::Stage resource creates a stage for an Amazon API Gateway (API Gateway) deployment.",
   "properties": [
     {
       "name": "CacheClusterEnabled",

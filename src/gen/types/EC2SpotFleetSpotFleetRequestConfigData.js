@@ -73,7 +73,7 @@ EC2SpotFleetSpotFleetRequestConfigData.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EC2SpotFleetSpotFleetRequestConfigData}
 	 */
 	targetCapacity: function(value) {

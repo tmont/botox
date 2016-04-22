@@ -16,7 +16,7 @@
       "name": "DesiredCapacity",
       "description": "The number of Amazon EC2 instances that should be running in the Auto Scaling group.",
       "required": false,
-      "type": "Integer",
+      "type": "Number",
       "update": "No interruption"
     },
     {
@@ -30,14 +30,14 @@
       "name": "MaxSize",
       "description": "The maximum number of Amazon EC2 instances in the Auto Scaling group.",
       "required": false,
-      "type": "Integer",
+      "type": "Number",
       "update": "No interruption"
     },
     {
       "name": "MinSize",
       "description": "The minimum number of Amazon EC2 instances in the Auto Scaling group.",
       "required": false,
-      "type": "Integer",
+      "type": "Number",
       "update": "No interruption"
     },
     {

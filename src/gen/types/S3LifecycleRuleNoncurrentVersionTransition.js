@@ -25,7 +25,7 @@ S3LifecycleRuleNoncurrentVersionTransition.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {S3LifecycleRuleNoncurrentVersionTransition}
 	 */
 	transitionInDays: function(value) {

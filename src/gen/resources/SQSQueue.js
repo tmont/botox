@@ -23,7 +23,7 @@ SQSQueue.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {SQSQueue}
 	 */
 	delaySeconds: function(value) {
@@ -36,7 +36,7 @@ SQSQueue.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {SQSQueue}
 	 */
 	maximumMessageSize: function(value) {
@@ -49,7 +49,7 @@ SQSQueue.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {SQSQueue}
 	 */
 	messageRetentionPeriod: function(value) {
@@ -75,7 +75,7 @@ SQSQueue.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {SQSQueue}
 	 */
 	receiveMessageWaitTimeSeconds: function(value) {
@@ -101,7 +101,7 @@ SQSQueue.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {SQSQueue}
 	 */
 	visibilityTimeout: function(value) {

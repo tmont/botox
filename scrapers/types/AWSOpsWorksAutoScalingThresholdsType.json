@@ -12,13 +12,13 @@
       "name": "IgnoreMetricsTime",
       "description": "The amount of time (in minutes) after a scaling event occurs that AWS OpsWorks should ignore metrics and not start any additional scaling events.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "InstanceCount",
       "description": "The number of instances to add or remove when the load exceeds a threshold.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "LoadThreshold",
@@ -36,7 +36,7 @@
       "name": "ThresholdsWaitTime",
       "description": "The amount of time, in minutes, that the load must exceed a threshold before instances are added or removed.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     }
   ]
 }

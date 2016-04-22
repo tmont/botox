@@ -37,7 +37,7 @@ ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig}
 	 */
 	instanceCount: function(value) {

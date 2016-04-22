@@ -36,7 +36,7 @@ RDSDBCluster.prototype = {
 	 * Required: false
 	 * Update requires: No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference.
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {RDSDBCluster}
 	 */
 	backupRetentionPeriod: function(value) {
@@ -153,7 +153,7 @@ RDSDBCluster.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {RDSDBCluster}
 	 */
 	port: function(value) {

@@ -25,7 +25,7 @@ AWSOpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSOpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration}
 	 */
 	executionTimeout: function(value) {

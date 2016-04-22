@@ -62,7 +62,7 @@ AutoScalingScalingPolicy.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AutoScalingScalingPolicy}
 	 */
 	estimatedInstanceWarmup: function(value) {
@@ -88,7 +88,7 @@ AutoScalingScalingPolicy.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AutoScalingScalingPolicy}
 	 */
 	minAdjustmentMagnitude: function(value) {
@@ -114,7 +114,7 @@ AutoScalingScalingPolicy.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AutoScalingScalingPolicy}
 	 */
 	scalingAdjustment: function(value) {

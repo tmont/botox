@@ -13,7 +13,7 @@ CloudFrontDistributionConfigCustomErrorResponse.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {CloudFrontDistributionConfigCustomErrorResponse}
 	 */
 	errorCachingMinTTL: function(value) {
@@ -25,7 +25,7 @@ CloudFrontDistributionConfigCustomErrorResponse.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {CloudFrontDistributionConfigCustomErrorResponse}
 	 */
 	errorCode: function(value) {
@@ -37,7 +37,7 @@ CloudFrontDistributionConfigCustomErrorResponse.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {CloudFrontDistributionConfigCustomErrorResponse}
 	 */
 	responseCode: function(value) {

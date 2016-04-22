@@ -12,7 +12,7 @@
       "name": "VolumesPerInstance",
       "description": "The number of Amazon EBS volumes that you want to create for each instance in the EMR cluster or instance group.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     }
   ]
 }

@@ -36,7 +36,7 @@
       "name": "TargetCapacity",
       "description": "The number of units to request for the spot fleet. You can choose to set the target capacity as the number of instances or as a performance characteristic that is important to your application workload, such as vCPUs, memory, or I/O. For more information, see How Spot Fleet Works in the Amazon EC2 User Guide for Linux Instances.",
       "required": true,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "TerminateInstancesWithExpiration",

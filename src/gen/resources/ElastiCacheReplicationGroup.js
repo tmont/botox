@@ -140,7 +140,7 @@ ElastiCacheReplicationGroup.prototype = {
 	 * Required: true
 	 * Update requires: Replacement
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElastiCacheReplicationGroup}
 	 */
 	numCacheClusters: function(value) {
@@ -153,7 +153,7 @@ ElastiCacheReplicationGroup.prototype = {
 	 * Required: false
 	 * Update requires: Replacement
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElastiCacheReplicationGroup}
 	 */
 	port: function(value) {
@@ -231,7 +231,7 @@ ElastiCacheReplicationGroup.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElastiCacheReplicationGroup}
 	 */
 	snapshotRetentionLimit: function(value) {

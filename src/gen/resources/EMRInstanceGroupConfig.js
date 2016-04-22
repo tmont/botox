@@ -62,7 +62,7 @@ EMRInstanceGroupConfig.prototype = {
 	 * Required: true
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EMRInstanceGroupConfig}
 	 */
 	instanceCount: function(value) {

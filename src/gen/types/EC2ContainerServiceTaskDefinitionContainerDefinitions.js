@@ -25,7 +25,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
 	 */
 	cpu: function(value) {
@@ -97,7 +97,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
 	 */
 	memory: function(value) {

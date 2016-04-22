@@ -16,7 +16,7 @@
       "name": "AutomatedSnapshotRetentionPeriod",
       "description": "The number of days that automated snapshots are retained. If you set the value to 0, automated snapshots are disabled.",
       "required": false,
-      "type": "Integer",
+      "type": "Number",
       "update": "No interruption"
     },
     {
@@ -128,7 +128,7 @@
       "name": "NumberOfNodes",
       "description": "The number of compute nodes in the cluster. If you specify multi-node for the ClusterType parameter, you must specify a number greater than 1.",
       "required": false,
-      "type": "Integer",
+      "type": "Number",
       "update": "No interruption"
     },
     {
@@ -142,7 +142,7 @@
       "name": "Port",
       "description": "The port number on which the cluster accepts incoming connections.",
       "required": false,
-      "type": "Integer",
+      "type": "Number",
       "update": "Replacement"
     },
     {

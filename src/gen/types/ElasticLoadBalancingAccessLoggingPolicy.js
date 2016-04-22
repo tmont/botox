@@ -13,7 +13,7 @@ ElasticLoadBalancingAccessLoggingPolicy.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticLoadBalancingAccessLoggingPolicy}
 	 */
 	emitInterval: function(value) {

@@ -37,7 +37,7 @@ AutoScalingScalingPolicyStepAdjustments.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AutoScalingScalingPolicyStepAdjustments}
 	 */
 	scalingAdjustment: function(value) {

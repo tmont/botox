@@ -23,7 +23,7 @@
       "name": "FromPort",
       "description": "Start of port range for the TCP and UDP protocols, or an ICMP type number. If you specify icmp for the IpProtocol property, you can specify -1 as a wildcard (i.e., any ICMP type number).",
       "required": true,
-      "type": "Integer",
+      "type": "Number",
       "update": "Replacement"
     },
     {
@@ -44,7 +44,7 @@
       "name": "ToPort",
       "description": "End of port range for the TCP and UDP protocols, or an ICMP code. If you specify icmp for the IpProtocol property, you can specify -1 as a wildcard (i.e., any ICMP code).",
       "required": true,
-      "type": "Integer",
+      "type": "Number",
       "update": "Replacement"
     }
   ],

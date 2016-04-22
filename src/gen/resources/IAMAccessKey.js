@@ -23,7 +23,7 @@ IAMAccessKey.prototype = {
 	 * Required: false
 	 * Update requires: Replacement
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {IAMAccessKey}
 	 */
 	serial: function(value) {

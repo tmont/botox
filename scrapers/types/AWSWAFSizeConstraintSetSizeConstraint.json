@@ -18,7 +18,7 @@
       "name": "Size",
       "description": "The size in bytes that you want AWS WAF to compare against the size of the specified FieldToMatch. AWS WAF uses Size in combination with the ComparisonOperator and FieldToMatch property values to check if the size constraint of a web request is a match. For more information and valid values, see the Size content for the SizeConstraint data type in the AWS WAF API Reference.",
       "required": true,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "TextTransformation",

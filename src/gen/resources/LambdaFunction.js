@@ -75,7 +75,7 @@ LambdaFunction.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {LambdaFunction}
 	 */
 	memorySize: function(value) {
@@ -114,7 +114,7 @@ LambdaFunction.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {LambdaFunction}
 	 */
 	timeout: function(value) {

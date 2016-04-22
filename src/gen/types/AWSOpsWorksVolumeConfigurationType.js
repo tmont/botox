@@ -13,7 +13,7 @@ AWSOpsWorksVolumeConfigurationType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSOpsWorksVolumeConfigurationType}
 	 */
 	iops: function(value) {
@@ -37,7 +37,7 @@ AWSOpsWorksVolumeConfigurationType.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSOpsWorksVolumeConfigurationType}
 	 */
 	numberOfDisks: function(value) {
@@ -49,7 +49,7 @@ AWSOpsWorksVolumeConfigurationType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSOpsWorksVolumeConfigurationType}
 	 */
 	raidLevel: function(value) {
@@ -61,7 +61,7 @@ AWSOpsWorksVolumeConfigurationType.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSOpsWorksVolumeConfigurationType}
 	 */
 	size: function(value) {

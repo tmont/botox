@@ -25,7 +25,7 @@ AWSCodeDeployDeploymentConfigMinimumHealthyHosts.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSCodeDeployDeploymentConfigMinimumHealthyHosts}
 	 */
 	value: function(value) {

@@ -25,7 +25,7 @@ EC2ContainerServiceServiceLoadBalancers.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EC2ContainerServiceServiceLoadBalancers}
 	 */
 	containerPort: function(value) {

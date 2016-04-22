@@ -12,13 +12,13 @@
       "name": "Iops",
       "description": "The number of I/O operations per second (IOPS) that the volume supports. This property applies only to the Provisioned IOPS (SSD) EBS volume type.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "VolumeSize",
       "description": "The size of the EBS volume for each data node. The minimum and maximum size of an EBS volume depends on the EBS volume type and the instance type to which it is attached. For more information, see Configuring EBS-based Storage in the Amazon Elasticsearch Service Developer Guide.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "VolumeType",

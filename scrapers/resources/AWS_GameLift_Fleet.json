@@ -23,7 +23,7 @@
       "name": "DesiredEC2Instances",
       "description": "The number of EC2 instances that you want in this fleet.",
       "required": true,
-      "type": "Integer",
+      "type": "Number",
       "update": "No interruption"
     },
     {

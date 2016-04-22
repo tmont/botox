@@ -84,8 +84,12 @@ module.exports = {
 
 						const typeMatchers = [
 							(type) => {
-								if (type === 'String' || type === 'Boolean') {
-									return type;
+								switch (type) {
+									case 'String':
+									case 'Boolean':
+										return type;
+									case 'Integer':
+										return 'Number';
 								}
 
 								return null;

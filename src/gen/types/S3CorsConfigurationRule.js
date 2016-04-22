@@ -73,7 +73,7 @@ S3CorsConfigurationRule.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {S3CorsConfigurationRule}
 	 */
 	maxAge: function(value) {

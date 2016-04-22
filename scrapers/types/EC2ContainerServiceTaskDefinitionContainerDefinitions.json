@@ -12,7 +12,7 @@
       "name": "Cpu",
       "description": "The minimum number of CPU units to reserve for the container. Containers share unallocated CPU units with other containers on the instance by using the same ratio as their allocated CPU units.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "EntryPoint",
@@ -48,7 +48,7 @@
       "name": "Memory",
       "description": "The number of MiB of memory to reserve for the container. If your container attempts to exceed the allocated memory, the container is killed.",
       "required": true,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "MountPoints",

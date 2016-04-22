@@ -25,7 +25,7 @@ ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig}
 	 */
 	volumesPerInstance: function(value) {

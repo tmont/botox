@@ -25,7 +25,7 @@ AWSWAFWebACLRules.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSWAFWebACLRules}
 	 */
 	priority: function(value) {

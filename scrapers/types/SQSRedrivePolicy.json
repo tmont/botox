@@ -12,7 +12,7 @@
       "name": "maxReceiveCount",
       "description": "The number of times a message is delivered to the source queue before being sent to the dead letter queue.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     }
   ]
 }

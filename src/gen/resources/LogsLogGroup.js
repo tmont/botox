@@ -23,7 +23,7 @@ LogsLogGroup.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {LogsLogGroup}
 	 */
 	retentionInDays: function(value) {

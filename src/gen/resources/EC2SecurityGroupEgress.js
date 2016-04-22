@@ -49,7 +49,7 @@ EC2SecurityGroupEgress.prototype = {
 	 * Required: true
 	 * Update requires: Replacement
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EC2SecurityGroupEgress}
 	 */
 	fromPort: function(value) {
@@ -88,7 +88,7 @@ EC2SecurityGroupEgress.prototype = {
 	 * Required: true
 	 * Update requires: Replacement
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EC2SecurityGroupEgress}
 	 */
 	toPort: function(value) {

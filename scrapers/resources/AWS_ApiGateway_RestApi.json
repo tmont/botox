@@ -20,5 +20,10 @@
       "update": "No interruption"
     }
   ],
-  "attributes": []
+  "attributes": [
+    {
+      "name": "RootResourceId",
+      "description": "The root resource ID for a RestApi resource, such as a0bc123d4e."
+    }
+  ]
 }

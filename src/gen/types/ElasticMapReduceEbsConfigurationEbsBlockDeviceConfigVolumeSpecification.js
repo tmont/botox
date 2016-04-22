@@ -13,7 +13,7 @@ ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification.prototyp
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification}
 	 */
 	iops: function(value) {
@@ -25,7 +25,7 @@ ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification.prototyp
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification}
 	 */
 	sizeInGB: function(value) {

@@ -6,13 +6,13 @@
       "name": "Iops",
       "description": "The number of I/O operations per second (IOPS) that the volume supports. For more information, see Iops for the EbsBlockDevice action in the Amazon EC2 API Reference.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "SizeInGB",
       "description": "The volume size, in Gibibytes (GiB). For more information about specifying the volume size, see VolumeSize for the EbsBlockDevice action in the Amazon EC2 API Reference.",
       "required": true,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "VolumeType",

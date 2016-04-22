@@ -25,7 +25,7 @@ APIGatewayDeploymentStageDescriptionMethodSetting.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {APIGatewayDeploymentStageDescriptionMethodSetting}
 	 */
 	cacheTtlInSeconds: function(value) {
@@ -109,7 +109,7 @@ APIGatewayDeploymentStageDescriptionMethodSetting.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {APIGatewayDeploymentStageDescriptionMethodSetting}
 	 */
 	throttlingBurstLimit: function(value) {

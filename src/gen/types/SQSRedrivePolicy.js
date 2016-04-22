@@ -25,7 +25,7 @@ SQSRedrivePolicy.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {SQSRedrivePolicy}
 	 */
 	maxReceiveCount: function(value) {

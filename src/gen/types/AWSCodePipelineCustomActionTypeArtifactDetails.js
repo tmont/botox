@@ -13,7 +13,7 @@ AWSCodePipelineCustomActionTypeArtifactDetails.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSCodePipelineCustomActionTypeArtifactDetails}
 	 */
 	maximumCount: function(value) {
@@ -25,7 +25,7 @@ AWSCodePipelineCustomActionTypeArtifactDetails.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSCodePipelineCustomActionTypeArtifactDetails}
 	 */
 	minimumCount: function(value) {

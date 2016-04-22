@@ -18,7 +18,7 @@
       "name": "FromPort",
       "description": "The start of port range for the TCP and UDP protocols, or an ICMP type number. An ICMP type number of -1 indicates a wildcard (i.e., any ICMP type number).",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "IpProtocol",
@@ -48,7 +48,7 @@
       "name": "ToPort",
       "description": "The end of port range for the TCP and UDP protocols, or an ICMP code. An ICMP code of -1 indicates a wildcard (i.e., any ICMP code).",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     }
   ]
 }

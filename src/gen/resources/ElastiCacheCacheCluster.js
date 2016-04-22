@@ -166,7 +166,7 @@ ElastiCacheCacheCluster.prototype = {
 	 * Required: false
 	 * Update requires: Replacement
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElastiCacheCacheCluster}
 	 */
 	port: function(value) {
@@ -244,7 +244,7 @@ ElastiCacheCacheCluster.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElastiCacheCacheCluster}
 	 */
 	snapshotRetentionLimit: function(value) {

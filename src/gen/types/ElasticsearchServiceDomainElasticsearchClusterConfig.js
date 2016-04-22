@@ -13,7 +13,7 @@ ElasticsearchServiceDomainElasticsearchClusterConfig.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticsearchServiceDomainElasticsearchClusterConfig}
 	 */
 	dedicatedMasterCount: function(value) {
@@ -49,7 +49,7 @@ ElasticsearchServiceDomainElasticsearchClusterConfig.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {ElasticsearchServiceDomainElasticsearchClusterConfig}
 	 */
 	instanceCount: function(value) {

@@ -12,7 +12,7 @@
       "name": "TransitionInDays",
       "description": "The number of days between the time that a new version of the object is uploaded to the bucket and when old versions of the object are transitioned to the specified storage class.",
       "required": true,
-      "type": "Integer"
+      "type": "Number"
     }
   ]
 }

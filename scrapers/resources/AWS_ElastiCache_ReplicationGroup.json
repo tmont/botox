@@ -72,14 +72,14 @@
       "name": "NumCacheClusters",
       "description": "The number of cache clusters for this replication group. If automatic failover is enabled, you must specify a value greater than 1.",
       "required": true,
-      "type": "Integer",
+      "type": "Number",
       "update": "Replacement"
     },
     {
       "name": "Port",
       "description": "The port number on which each member of the replication group accepts connections.",
       "required": false,
-      "type": "Integer",
+      "type": "Number",
       "update": "Replacement"
     },
     {
@@ -121,7 +121,7 @@
       "name": "SnapshotRetentionLimit",
       "description": "The number of days that ElastiCache retains automatic snapshots before deleting them.",
       "required": false,
-      "type": "Integer",
+      "type": "Number",
       "update": "No interruption"
     },
     {

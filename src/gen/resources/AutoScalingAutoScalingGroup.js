@@ -62,7 +62,7 @@ AutoScalingAutoScalingGroup.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AutoScalingAutoScalingGroup}
 	 */
 	healthCheckGracePeriod: function(value) {

@@ -23,7 +23,7 @@ KinesisStream.prototype = {
 	 * Required: true
 	 * Update requires: Replacement
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {KinesisStream}
 	 */
 	shardCount: function(value) {

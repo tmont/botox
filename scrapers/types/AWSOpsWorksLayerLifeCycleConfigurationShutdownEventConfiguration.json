@@ -12,7 +12,7 @@
       "name": "ExecutionTimeout",
       "description": "The time, in seconds, that AWS OpsWorks waits after a shutdown event has been triggered before shutting down an instance.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     }
   ]
 }

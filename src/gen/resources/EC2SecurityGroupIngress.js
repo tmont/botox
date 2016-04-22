@@ -36,7 +36,7 @@ EC2SecurityGroupIngress.prototype = {
 	 * Required: true
 	 * Update requires: Replacement
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EC2SecurityGroupIngress}
 	 */
 	fromPort: function(value) {
@@ -127,7 +127,7 @@ EC2SecurityGroupIngress.prototype = {
 	 * Required: true
 	 * Update requires: Replacement
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EC2SecurityGroupIngress}
 	 */
 	toPort: function(value) {

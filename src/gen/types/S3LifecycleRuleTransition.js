@@ -37,7 +37,7 @@ S3LifecycleRuleTransition.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {S3LifecycleRuleTransition}
 	 */
 	transitionInDays: function(value) {

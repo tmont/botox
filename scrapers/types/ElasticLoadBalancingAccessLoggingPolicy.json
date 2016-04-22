@@ -6,7 +6,7 @@
       "name": "EmitInterval",
       "description": "The interval for publishing access logs in minutes. You can specify an interval of either 5 minutes or 60 minutes.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "Enabled",

@@ -23,7 +23,7 @@ LambdaEventSourceMapping.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {LambdaEventSourceMapping}
 	 */
 	batchSize: function(value) {

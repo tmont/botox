@@ -37,7 +37,7 @@ EC2SecurityGroupRulePropertyType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EC2SecurityGroupRulePropertyType}
 	 */
 	fromPort: function(value) {
@@ -97,7 +97,7 @@ EC2SecurityGroupRulePropertyType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EC2SecurityGroupRulePropertyType}
 	 */
 	toPort: function(value) {

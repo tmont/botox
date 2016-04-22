@@ -49,7 +49,7 @@ GameLiftFleet.prototype = {
 	 * Required: true
 	 * Update requires: No interruption
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {GameLiftFleet}
 	 */
 	desiredEC2Instances: function(value) {

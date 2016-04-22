@@ -30,7 +30,7 @@
       "name": "InstanceCount",
       "description": "The number of instances to launch in the instance group.",
       "required": true,
-      "type": "Integer",
+      "type": "Number",
       "update": "No interruption"
     },
     {
