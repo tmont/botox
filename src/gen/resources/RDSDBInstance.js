@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::RDS::DBInstance - The AWS::RDS::DBInstance type creates an Amazon RDS database instance. For detailed information about configuring RDS DB instances, see CreateDBInstance.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function RDSDBInstance(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(RDSDBInstance, Resource);
+
 RDSDBInstance.prototype = {
+	
 	
 	/**
 	 * The allocated storage size specified in gigabytes (GB).
@@ -432,27 +428,6 @@ RDSDBInstance.prototype = {
 	 */
 	vpcsecurityGroups: function(value) {
 		return this.set('VPCSecurityGroups', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::RDS::DBInstance has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

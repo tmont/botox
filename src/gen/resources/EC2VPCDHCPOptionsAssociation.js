@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::EC2::VPCDHCPOptionsAssociation - Associates a set of DHCP options (that you've previously created) with the specified VPC.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function EC2VPCDHCPOptionsAssociation(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(EC2VPCDHCPOptionsAssociation, Resource);
+
 EC2VPCDHCPOptionsAssociation.prototype = {
+	
 	
 	/**
 	 * The ID of the DHCP options you want to associate with the VPC. Specify default if you want the VPC to use no DHCP options.
@@ -42,27 +38,6 @@ EC2VPCDHCPOptionsAssociation.prototype = {
 	 */
 	vpcId: function(value) {
 		return this.set('VpcId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::EC2::VPCDHCPOptionsAssociation has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

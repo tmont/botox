@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::ApiGateway::BasePathMapping - The AWS::ApiGateway::BasePathMapping resource creates a base path that clients who call your Amazon API Gateway API must use in the invocation URL.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function ApiGatewayBasePathMapping(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(ApiGatewayBasePathMapping, Resource);
+
 ApiGatewayBasePathMapping.prototype = {
+	
 	
 	/**
 	 * The base path name that callers of the API must provide in the URL after the domain name.
@@ -68,27 +64,6 @@ ApiGatewayBasePathMapping.prototype = {
 	 */
 	stage: function(value) {
 		return this.set('Stage', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::ApiGateway::BasePathMapping has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::AutoScaling::LaunchConfiguration - The AWS::AutoScaling::LaunchConfiguration type creates an Auto Scaling launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances in the Auto Scaling group.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function AutoScalingLaunchConfiguration(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(AutoScalingLaunchConfiguration, Resource);
+
 AutoScalingLaunchConfiguration.prototype = {
+	
 	
 	/**
 	 * For Amazon EC2 instances in a VPC, indicates whether instances in the Auto Scaling group receive public IP addresses. If you specify true, each instance in the Auto Scaling receives a unique public IP address.
@@ -237,27 +233,6 @@ AutoScalingLaunchConfiguration.prototype = {
 	 */
 	userData: function(value) {
 		return this.set('UserData', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::AutoScaling::LaunchConfiguration has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

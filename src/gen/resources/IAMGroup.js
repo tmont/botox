@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::IAM::Group - The AWS::IAM::Group type creates an Identity and Access Management (IAM) group.
@@ -7,16 +6,26 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function IAMGroup(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(IAMGroup, Resource);
+
 IAMGroup.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * Returns the Amazon Resource Name (ARN) for the AWS::IAM::Group resource. For example: arn:aws:iam::123456789012:group/mystack-mygroup-1DZETITOWEKVO.
+			 * @return {Attribute}
+			 */
+			arn: function() {
+				return createAttribute('Arn');
+			}
+		};
+	},
+
 	
 	/**
 	 * One or more managed policy ARNs to attach to this group.
@@ -55,36 +64,6 @@ IAMGroup.prototype = {
 	 */
 	policies: function(value) {
 		return this.set('Policies', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * Returns the Amazon Resource Name (ARN) for the AWS::IAM::Group resource. For example: arn:aws:iam::123456789012:group/mystack-mygroup-1DZETITOWEKVO.
-			 */
-			arn: function() {
-				return new Attribute(self, 'Arn');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::CodeDeploy::DeploymentConfig - The AWS::CodeDeploy::DeploymentConfig resource creates a set of deployment rules, deployment success conditions, and deployment failure conditions that AWS CodeDeploy uses during a deployment.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function CodeDeployDeploymentConfig(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(CodeDeployDeploymentConfig, Resource);
+
 CodeDeployDeploymentConfig.prototype = {
+	
 	
 	/**
 	 * A name for the deployment configuration. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the deployment configuration name. For more information, see Name Type.
@@ -42,27 +38,6 @@ CodeDeployDeploymentConfig.prototype = {
 	 */
 	minimumHealthyHosts: function(value) {
 		return this.set('MinimumHealthyHosts', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::CodeDeploy::DeploymentConfig has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

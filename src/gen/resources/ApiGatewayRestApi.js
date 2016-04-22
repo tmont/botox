@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::ApiGateway::RestApi - The AWS::ApiGateway::RestApi resource contains a collection of Amazon API Gateway (API Gateway) resources and methods that can be invoked through HTTPS endpoints.
@@ -7,16 +6,26 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function ApiGatewayRestApi(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(ApiGatewayRestApi, Resource);
+
 ApiGatewayRestApi.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * The root resource ID for a RestApi resource, such as a0bc123d4e.
+			 * @return {Attribute}
+			 */
+			rootResourceId: function() {
+				return createAttribute('RootResourceId');
+			}
+		};
+	},
+
 	
 	/**
 	 * A Swagger specification that defines a set of RESTful APIs in JSON or YAML format.
@@ -42,36 +51,6 @@ ApiGatewayRestApi.prototype = {
 	 */
 	bodyS3Location: function(value) {
 		return this.set('BodyS3Location', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * The root resource ID for a RestApi resource, such as a0bc123d4e.
-			 */
-			rootResourceId: function() {
-				return new Attribute(self, 'RootResourceId');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

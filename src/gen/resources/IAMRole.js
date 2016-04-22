@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::IAM::Role - Creates an AWS Identity and Access Management (IAM) role. An IAM role can be used to enable applications running on an Amazon EC2 instance to securely access your AWS resources.
@@ -7,16 +6,26 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function IAMRole(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(IAMRole, Resource);
+
 IAMRole.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyRole", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF”.
+			 * @return {Attribute}
+			 */
+			arn: function() {
+				return createAttribute('Arn');
+			}
+		};
+	},
+
 	
 	/**
 	 * The IAM assume role policy that is associated with this role.
@@ -68,36 +77,6 @@ IAMRole.prototype = {
 	 */
 	policies: function(value) {
 		return this.set('Policies', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyRole", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF”.
-			 */
-			arn: function() {
-				return new Attribute(self, 'Arn');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

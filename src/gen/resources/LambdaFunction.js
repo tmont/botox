@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::Lambda::Function - The AWS::Lambda::Function resource creates an AWS Lambda (Lambda) function that can run code in response to events. For more information, see CreateFunction in the AWS Lambda Developer Guide.
@@ -7,16 +6,26 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function LambdaFunction(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(LambdaFunction, Resource);
+
 LambdaFunction.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * The ARN of the Lambda function, such as arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD.
+			 * @return {Attribute}
+			 */
+			arn: function() {
+				return createAttribute('Arn');
+			}
+		};
+	},
+
 	
 	/**
 	 * The source code of your Lambda function. You can point to a file in an Amazon Simple Storage Service (Amazon S3) bucket or specify your source code as inline text.
@@ -133,36 +142,6 @@ LambdaFunction.prototype = {
 	 */
 	vpcConfig: function(value) {
 		return this.set('VpcConfig', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * The ARN of the Lambda function, such as arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD.
-			 */
-			arn: function() {
-				return new Attribute(self, 'Arn');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

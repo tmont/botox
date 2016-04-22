@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::IAM::AccessKey - The AWS::IAM::AccessKey resource type generates a secret access key and assigns it to an IAM user or AWS account.
@@ -7,16 +6,26 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function IAMAccessKey(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(IAMAccessKey, Resource);
+
 IAMAccessKey.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * Returns the secret access key for the specified AWS::IAM::AccessKey resource. For example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY.
+			 * @return {Attribute}
+			 */
+			secretAccessKey: function() {
+				return createAttribute('SecretAccessKey');
+			}
+		};
+	},
+
 	
 	/**
 	 * This value is specific to AWS CloudFormation and can only be incremented. Incrementing this value notifies AWS CloudFormation that you want to rotate your access key. When you update your stack, AWS CloudFormation will replace the existing access key with a new key.
@@ -55,36 +64,6 @@ IAMAccessKey.prototype = {
 	 */
 	userName: function(value) {
 		return this.set('UserName', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * Returns the secret access key for the specified AWS::IAM::AccessKey resource. For example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY.
-			 */
-			secretAccessKey: function() {
-				return new Attribute(self, 'SecretAccessKey');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

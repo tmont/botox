@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::EC2::NetworkAclEntry - Creates an entry (i.e., rule) in a network ACL with a rule number you specify. Each network ACL has a set of numbered ingress rules and a separate set of numbered egress rules.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function EC2NetworkAclEntry(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(EC2NetworkAclEntry, Resource);
+
 EC2NetworkAclEntry.prototype = {
+	
 	
 	/**
 	 * The CIDR range to allow or deny, in CIDR notation (e.g., 172.16.0.0/24).
@@ -120,27 +116,6 @@ EC2NetworkAclEntry.prototype = {
 	 */
 	ruleNumber: function(value) {
 		return this.set('RuleNumber', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::EC2::NetworkAclEntry has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

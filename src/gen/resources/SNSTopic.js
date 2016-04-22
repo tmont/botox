@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::SNS::Topic - The AWS::SNS::Topic type creates an Amazon SNS topic.
@@ -7,16 +6,26 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function SNSTopic(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(SNSTopic, Resource);
+
 SNSTopic.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * Returns the name for an Amazon SNS topic.
+			 * @return {Attribute}
+			 */
+			topicName: function() {
+				return createAttribute('TopicName');
+			}
+		};
+	},
+
 	
 	/**
 	 * A developer-defined string that can be used to identify this SNS topic.
@@ -55,36 +64,6 @@ SNSTopic.prototype = {
 	 */
 	topicName: function(value) {
 		return this.set('TopicName', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * Returns the name for an Amazon SNS topic.
-			 */
-			topicName: function() {
-				return new Attribute(self, 'TopicName');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

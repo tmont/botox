@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::ElastiCache::CacheCluster - The AWS::ElastiCache::CacheCluster type creates an Amazon ElastiCache cache cluster.
@@ -7,16 +6,34 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function ElastiCacheCacheCluster(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(ElastiCacheCacheCluster, Resource);
+
 ElastiCacheCacheCluster.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * The DNS address of the configuration endpoint for the Memcached cache cluster.
+			 * @return {Attribute}
+			 */
+			configurationEndpointAddress: function() {
+				return createAttribute('ConfigurationEndpoint.Address');
+			},
+
+			/**
+			 * The port number of the configuration endpoint for the Memcached cache cluster.
+			 * @return {Attribute}
+			 */
+			configurationEndpointPort: function() {
+				return createAttribute('ConfigurationEndpoint.Port');
+			}
+		};
+	},
+
 	
 	/**
 	 * Indicates that minor engine upgrades will be applied automatically to the cache cluster during the maintenance window.
@@ -289,43 +306,6 @@ ElastiCacheCacheCluster.prototype = {
 	 */
 	vpcSecurityGroupIds: function(value) {
 		return this.set('VpcSecurityGroupIds', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * The DNS address of the configuration endpoint for the Memcached cache cluster.
-			 */
-			configurationEndpointAddress: function() {
-				return new Attribute(self, 'ConfigurationEndpoint.Address');
-			},
-
-			/**
-			 * The port number of the configuration endpoint for the Memcached cache cluster.
-			 */
-			configurationEndpointPort: function() {
-				return new Attribute(self, 'ConfigurationEndpoint.Port');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

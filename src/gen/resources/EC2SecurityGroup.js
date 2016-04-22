@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::EC2::SecurityGroup - Creates an Amazon EC2 security group. To create a VPC security group, use the VpcId property.
@@ -7,16 +6,26 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function EC2SecurityGroup(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(EC2SecurityGroup, Resource);
+
 EC2SecurityGroup.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * The group ID of the specified security group, such as sg-94b3a1f6.
+			 * @return {Attribute}
+			 */
+			groupId: function() {
+				return createAttribute('GroupId');
+			}
+		};
+	},
+
 	
 	/**
 	 * Description of the security group.
@@ -81,36 +90,6 @@ EC2SecurityGroup.prototype = {
 	 */
 	vpcId: function(value) {
 		return this.set('VpcId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * The group ID of the specified security group, such as sg-94b3a1f6.
-			 */
-			groupId: function() {
-				return new Attribute(self, 'GroupId');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

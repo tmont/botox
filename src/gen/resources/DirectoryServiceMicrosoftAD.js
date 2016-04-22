@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::DirectoryService::MicrosoftAD - The AWS::DirectoryService::MicrosoftAD resource creates a Microsoft Active Directory in AWS so that your directory users and groups can access the AWS Management Console and AWS applications using their existing credentials. For more information, see What Is AWS Directory Service? in the AWS Directory Service Administration Guide.
@@ -7,16 +6,34 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function DirectoryServiceMicrosoftAD(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(DirectoryServiceMicrosoftAD, Resource);
+
 DirectoryServiceMicrosoftAD.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * The alias for a directory. For example: d-12373a053a or alias4-mydirectory-12345abcgmzsk (if you have the CreateAlias property set to true).
+			 * @return {Attribute}
+			 */
+			alias: function() {
+				return createAttribute('Alias');
+			},
+
+			/**
+			 * The IP addresses of the DNS servers for the directory, such as [ "192.0.2.1", "192.0.2.2" ].
+			 * @return {Attribute}
+			 */
+			dnsIpAddresses: function() {
+				return createAttribute('DnsIpAddresses');
+			}
+		};
+	},
+
 	
 	/**
 	 * A unique alias to assign to the Microsoft Active Directory in AWS. AWS Directory Service uses the alias to construct the access URL for the directory, such as http://alias.awsapps.com. By default, AWS CloudFormation does not create an alias.
@@ -94,43 +111,6 @@ DirectoryServiceMicrosoftAD.prototype = {
 	 */
 	vpcSettings: function(value) {
 		return this.set('VpcSettings', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * The alias for a directory. For example: d-12373a053a or alias4-mydirectory-12345abcgmzsk (if you have the CreateAlias property set to true).
-			 */
-			alias: function() {
-				return new Attribute(self, 'Alias');
-			},
-
-			/**
-			 * The IP addresses of the DNS servers for the directory, such as [ "192.0.2.1", "192.0.2.2" ].
-			 */
-			dnsIpAddresses: function() {
-				return new Attribute(self, 'DnsIpAddresses');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

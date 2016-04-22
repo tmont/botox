@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::EC2::VolumeAttachment - Attaches an Amazon EBS volume to a running instance and exposes it to the instance with the specified device name.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function EC2VolumeAttachment(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(EC2VolumeAttachment, Resource);
+
 EC2VolumeAttachment.prototype = {
+	
 	
 	/**
 	 * How the device is exposed to the instance (e.g., /dev/sdh, or xvdh).
@@ -55,27 +51,6 @@ EC2VolumeAttachment.prototype = {
 	 */
 	volumeId: function(value) {
 		return this.set('VolumeId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::EC2::VolumeAttachment has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

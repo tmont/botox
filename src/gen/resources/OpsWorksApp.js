@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::OpsWorks::App - Defines an AWS OpsWorks app for an AWS OpsWorks stack. The app represents code that you want to run on an application server.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function OpsWorksApp(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(OpsWorksApp, Resource);
+
 OpsWorksApp.prototype = {
+	
 	
 	/**
 	 * Contains the information required to retrieve an app from a repository.
@@ -159,27 +155,6 @@ OpsWorksApp.prototype = {
 	 */
 	type: function(value) {
 		return this.set('Type', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::OpsWorks::App has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

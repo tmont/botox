@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::ElasticBeanstalk::ConfigurationTemplate - Creates a configuration template for an Elastic Beanstalk application. You can use configuration templates to deploy different versions of an application by using the configuration settings that you define in the configuration template.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function ElasticBeanstalkConfigurationTemplate(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(ElasticBeanstalkConfigurationTemplate, Resource);
+
 ElasticBeanstalkConfigurationTemplate.prototype = {
+	
 	
 	/**
 	 * Name of the Elastic Beanstalk application that is associated with this configuration template.
@@ -94,27 +90,6 @@ ElasticBeanstalkConfigurationTemplate.prototype = {
 	 */
 	sourceConfiguration: function(value) {
 		return this.set('SourceConfiguration', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::ElasticBeanstalk::ConfigurationTemplate has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

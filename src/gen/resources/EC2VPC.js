@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::EC2::VPC - Creates a Virtual Private Cloud (VPC) with the CIDR block that you specify.
@@ -7,16 +6,42 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function EC2VPC(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(EC2VPC, Resource);
+
 EC2VPC.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * The set of IP addresses for the VPC. For example, 10.0.0.0/16.
+			 * @return {Attribute}
+			 */
+			cidrBlock: function() {
+				return createAttribute('CidrBlock');
+			},
+
+			/**
+			 * The default network ACL ID that is associated with the VPC. For example, acl-814dafe3.
+			 * @return {Attribute}
+			 */
+			defaultNetworkAcl: function() {
+				return createAttribute('DefaultNetworkAcl');
+			},
+
+			/**
+			 * The default security group ID that is associated with the VPC. For example, sg-b178e0d3.
+			 * @return {Attribute}
+			 */
+			defaultSecurityGroup: function() {
+				return createAttribute('DefaultSecurityGroup');
+			}
+		};
+	},
+
 	
 	/**
 	 * The CIDR block you want the VPC to cover. For example: "10.0.0.0/16".
@@ -81,50 +106,6 @@ EC2VPC.prototype = {
 	 */
 	tags: function(value) {
 		return this.set('Tags', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * The set of IP addresses for the VPC. For example, 10.0.0.0/16.
-			 */
-			cidrBlock: function() {
-				return new Attribute(self, 'CidrBlock');
-			},
-
-			/**
-			 * The default network ACL ID that is associated with the VPC. For example, acl-814dafe3.
-			 */
-			defaultNetworkAcl: function() {
-				return new Attribute(self, 'DefaultNetworkAcl');
-			},
-
-			/**
-			 * The default security group ID that is associated with the VPC. For example, sg-b178e0d3.
-			 */
-			defaultSecurityGroup: function() {
-				return new Attribute(self, 'DefaultSecurityGroup');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::CodeDeploy::DeploymentGroup - The AWS::CodeDeploy::DeploymentGroup resource creates an AWS CodeDeploy deployment group that details which application revision to use and which instances your application revisions are deployed to.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function CodeDeployDeploymentGroup(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(CodeDeployDeploymentGroup, Resource);
+
 CodeDeployDeploymentGroup.prototype = {
+	
 	
 	/**
 	 * The name of an AWS CodeDeploy application for this deployment group.
@@ -120,27 +116,6 @@ CodeDeployDeploymentGroup.prototype = {
 	 */
 	serviceRoleArn: function(value) {
 		return this.set('ServiceRoleArn', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::CodeDeploy::DeploymentGroup has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

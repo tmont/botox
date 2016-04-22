@@ -42,30 +42,37 @@ function createResources(files, next) {
 	 */
 	${camelize(prop.name)}: function(value) {
 		return this.set('${prop.name}', value);
-	},`;
-		}).join('\n');
+	}`;
+		}).join(',\n');
 
 		const attributes = json.attributes.map((attr) => {
 			const methodName = camelize(attr.name.replace(/\W/g, ''));
 			return `
 			/**
 			 * ${attr.description}
+			 * @return {Attribute}
 			 */
 			${methodName}: function() {
-				return new Attribute(self, '${attr.name}');
+				return createAttribute('${attr.name}');
 			}`;
 		}).join(',\n');
 
-		let attributeBody = `throw new Error('${json.fullName} has no attributes');`;
+		let attributeMethod = '';
 		if (attributes) {
-			attributeBody = `var self = this;
+			attributeMethod = `get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
 		return {
 			${attributes}
-		};`;
+		};
+	}`;
+
+			if (methods) {
+				attributeMethod += ',';
+			}
+			attributeMethod += '\n';
 		}
 
-		const code = `var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+		const code = `var Resource = require('../../resource');
 
 /**
  * ${json.fullName} - ${json.description}
@@ -73,38 +80,14 @@ function createResources(files, next) {
  * @param {String} name Name of the resource
  */
 function ${className}(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(${className}, Resource);
+
 ${className}.prototype = {
+	${attributeMethod}
 	${methods}
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		${attributeBody}
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
-	}
 };
 
 module.exports = ${className};

@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::OpsWorks::ElasticLoadBalancerAttachment - Attaches an Elastic Load Balancing load balancer to an AWS OpsWorks layer that you specify.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function OpsWorksElasticLoadBalancerAttachment(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(OpsWorksElasticLoadBalancerAttachment, Resource);
+
 OpsWorksElasticLoadBalancerAttachment.prototype = {
+	
 	
 	/**
 	 * Elastic Load Balancing load balancer name.
@@ -42,27 +38,6 @@ OpsWorksElasticLoadBalancerAttachment.prototype = {
 	 */
 	layerId: function(value) {
 		return this.set('LayerId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::OpsWorks::ElasticLoadBalancerAttachment has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

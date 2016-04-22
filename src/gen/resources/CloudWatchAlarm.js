@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::CloudWatch::Alarm - The AWS::CloudWatch::Alarm type creates an CloudWatch alarm.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function CloudWatchAlarm(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(CloudWatchAlarm, Resource);
+
 CloudWatchAlarm.prototype = {
+	
 	
 	/**
 	 * Indicates whether or not actions should be executed during any changes to the alarm's state.
@@ -211,27 +207,6 @@ CloudWatchAlarm.prototype = {
 	 */
 	unit: function(value) {
 		return this.set('Unit', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::CloudWatch::Alarm has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

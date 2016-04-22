@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::Config::ConfigRule - The AWS::Config::ConfigRule resource uses an AWS Lambda (Lambda) function that evaluates configuration items to assess whether your AWS resources comply with your specified configurations. This function can run when AWS Config detects a configuration change or delivers a configuration snapshot. The resources this function evaluates must be in the recording group. For more information, see Evaluating AWS Resource Configurations with AWS Config in the AWS Config Developer Guide.
@@ -7,16 +6,42 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function ConfigConfigRule(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(ConfigConfigRule, Resource);
+
 ConfigConfigRule.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * The Amazon Resource Name (ARN) of the AWS Config rule, such as arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi.
+			 * @return {Attribute}
+			 */
+			arn: function() {
+				return createAttribute('Arn');
+			},
+
+			/**
+			 * The ID of the AWS Config rule, such as config-rule-a1bzhi.
+			 * @return {Attribute}
+			 */
+			configRuleId: function() {
+				return createAttribute('ConfigRuleId');
+			},
+
+			/**
+			 * The compliance status of an AWS Config rule, such as COMPLIANT or NON_COMPLIANT.
+			 * @return {Attribute}
+			 */
+			complianceType: function() {
+				return createAttribute('Compliance.Type');
+			}
+		};
+	},
+
 	
 	/**
 	 * A name for the AWS Config rule. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the rule name. For more information, see Name Type.
@@ -94,50 +119,6 @@ ConfigConfigRule.prototype = {
 	 */
 	source: function(value) {
 		return this.set('Source', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * The Amazon Resource Name (ARN) of the AWS Config rule, such as arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi.
-			 */
-			arn: function() {
-				return new Attribute(self, 'Arn');
-			},
-
-			/**
-			 * The ID of the AWS Config rule, such as config-rule-a1bzhi.
-			 */
-			configRuleId: function() {
-				return new Attribute(self, 'ConfigRuleId');
-			},
-
-			/**
-			 * The compliance status of an AWS Config rule, such as COMPLIANT or NON_COMPLIANT.
-			 */
-			complianceType: function() {
-				return new Attribute(self, 'Compliance.Type');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

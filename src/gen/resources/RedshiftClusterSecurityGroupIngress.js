@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::Redshift::ClusterSecurityGroupIngress - Specifies inbound (ingress) rules for an Amazon Redshift security group.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function RedshiftClusterSecurityGroupIngress(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(RedshiftClusterSecurityGroupIngress, Resource);
+
 RedshiftClusterSecurityGroupIngress.prototype = {
+	
 	
 	/**
 	 * The name of the Amazon Redshift security group that will be associated with the ingress rule.
@@ -68,27 +64,6 @@ RedshiftClusterSecurityGroupIngress.prototype = {
 	 */
 	ec2SecurityGroupOwnerId: function(value) {
 		return this.set('EC2SecurityGroupOwnerId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::Redshift::ClusterSecurityGroupIngress has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::ElasticBeanstalk::Environment - Creates or updates an AWS Elastic Beanstalk environment.
@@ -7,16 +6,26 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function ElasticBeanstalkEnvironment(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(ElasticBeanstalkEnvironment, Resource);
+
 ElasticBeanstalkEnvironment.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * The URL to the load balancer for this environment.Example:awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-1.elb.amazonaws.com
+			 * @return {Attribute}
+			 */
+			endpointURL: function() {
+				return createAttribute('EndpointURL');
+			}
+		};
+	},
+
 	
 	/**
 	 * The name of the application that is associated with this environment.
@@ -146,36 +155,6 @@ ElasticBeanstalkEnvironment.prototype = {
 	 */
 	versionLabel: function(value) {
 		return this.set('VersionLabel', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * The URL to the load balancer for this environment.Example:awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-1.elb.amazonaws.com
-			 */
-			endpointURL: function() {
-				return new Attribute(self, 'EndpointURL');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

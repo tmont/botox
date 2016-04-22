@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::SQS::Queue - The AWS::SQS::Queue type creates an Amazon SQS queue.
@@ -7,16 +6,34 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function SQSQueue(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(SQSQueue, Resource);
+
 SQSQueue.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * Returns the Amazon Resource Name (ARN) of the queue. For example: arn:aws:sqs:us-east-1:123456789012:mystack-myqueue-15PG5C2FC1CW8
+			 * @return {Attribute}
+			 */
+			arn: function() {
+				return createAttribute('Arn');
+			},
+
+			/**
+			 * Returns the queue name. For example:mystack-myqueue-1VF9BKQH5BJVI
+			 * @return {Attribute}
+			 */
+			queueName: function() {
+				return createAttribute('QueueName');
+			}
+		};
+	},
+
 	
 	/**
 	 * The time in seconds that the delivery of all messages in the queue will be delayed. You can specify an integer value of 0 to 900 (15 minutes). The default value is 0.
@@ -107,43 +124,6 @@ SQSQueue.prototype = {
 	 */
 	visibilityTimeout: function(value) {
 		return this.set('VisibilityTimeout', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * Returns the Amazon Resource Name (ARN) of the queue. For example: arn:aws:sqs:us-east-1:123456789012:mystack-myqueue-15PG5C2FC1CW8
-			 */
-			arn: function() {
-				return new Attribute(self, 'Arn');
-			},
-
-			/**
-			 * Returns the queue name. For example:mystack-myqueue-1VF9BKQH5BJVI
-			 */
-			queueName: function() {
-				return new Attribute(self, 'QueueName');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

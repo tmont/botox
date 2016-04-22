@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::EC2::VPCGatewayAttachment - Attaches a gateway to a VPC.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function EC2VPCGatewayAttachment(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(EC2VPCGatewayAttachment, Resource);
+
 EC2VPCGatewayAttachment.prototype = {
+	
 	
 	/**
 	 * The ID of the Internet gateway.
@@ -55,27 +51,6 @@ EC2VPCGatewayAttachment.prototype = {
 	 */
 	vpnGatewayId: function(value) {
 		return this.set('VpnGatewayId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::EC2::VPCGatewayAttachment has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

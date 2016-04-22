@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::ElastiCache::ReplicationGroup - The AWS::ElastiCache::ReplicationGroup resource creates an Amazon ElastiCache replication group. A replication group is a collection of cache clusters, where one of the clusters is a primary read-write cluster and the others are read-only replicas.
@@ -7,16 +6,66 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function ElastiCacheReplicationGroup(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(ElastiCacheReplicationGroup, Resource);
+
 ElastiCacheReplicationGroup.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * The DNS address of the primary read-write cache node.
+			 * @return {Attribute}
+			 */
+			primaryEndPointAddress: function() {
+				return createAttribute('PrimaryEndPoint.Address');
+			},
+
+			/**
+			 * The number of the port that the primary read-write cache engine is listening on.
+			 * @return {Attribute}
+			 */
+			primaryEndPointPort: function() {
+				return createAttribute('PrimaryEndPoint.Port');
+			},
+
+			/**
+			 * A string with a list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports attribute.
+			 * @return {Attribute}
+			 */
+			readEndPointAddresses: function() {
+				return createAttribute('ReadEndPoint.Addresses');
+			},
+
+			/**
+			 * A string with a list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses attribute.
+			 * @return {Attribute}
+			 */
+			readEndPointPorts: function() {
+				return createAttribute('ReadEndPoint.Ports');
+			},
+
+			/**
+			 * A list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports.List attribute.
+			 * @return {Attribute}
+			 */
+			readEndPointAddressesList: function() {
+				return createAttribute('ReadEndPoint.Addresses.List');
+			},
+
+			/**
+			 * A list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses.List attribute.
+			 * @return {Attribute}
+			 */
+			readEndPointPortsList: function() {
+				return createAttribute('ReadEndPoint.Ports.List');
+			}
+		};
+	},
+
 	
 	/**
 	 * Indicates whether Multi-AZ is enabled. When Multi-AZ is enabled, a read-only replica is automatically promoted to a read-write primary cluster if the existing primary cluster fails. If you specify true, you must specify a value greater than 1 for the NumCacheNodes property. By default, AWS CloudFormation sets the value to true.
@@ -250,71 +299,6 @@ ElastiCacheReplicationGroup.prototype = {
 	 */
 	snapshotWindow: function(value) {
 		return this.set('SnapshotWindow', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * The DNS address of the primary read-write cache node.
-			 */
-			primaryEndPointAddress: function() {
-				return new Attribute(self, 'PrimaryEndPoint.Address');
-			},
-
-			/**
-			 * The number of the port that the primary read-write cache engine is listening on.
-			 */
-			primaryEndPointPort: function() {
-				return new Attribute(self, 'PrimaryEndPoint.Port');
-			},
-
-			/**
-			 * A string with a list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports attribute.
-			 */
-			readEndPointAddresses: function() {
-				return new Attribute(self, 'ReadEndPoint.Addresses');
-			},
-
-			/**
-			 * A string with a list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses attribute.
-			 */
-			readEndPointPorts: function() {
-				return new Attribute(self, 'ReadEndPoint.Ports');
-			},
-
-			/**
-			 * A list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports.List attribute.
-			 */
-			readEndPointAddressesList: function() {
-				return new Attribute(self, 'ReadEndPoint.Addresses.List');
-			},
-
-			/**
-			 * A list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses.List attribute.
-			 */
-			readEndPointPortsList: function() {
-				return new Attribute(self, 'ReadEndPoint.Ports.List');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

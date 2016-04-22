@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::OpsWorks::Layer - Creates an AWS OpsWorks layer. A layer defines, for example, which packages and applications are installed and how they are configured.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function OpsWorksLayer(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(OpsWorksLayer, Resource);
+
 OpsWorksLayer.prototype = {
+	
 	
 	/**
 	 * One or more user-defined key-value pairs to be added to the stack attributes bag.
@@ -224,27 +220,6 @@ OpsWorksLayer.prototype = {
 	 */
 	volumeConfigurations: function(value) {
 		return this.set('VolumeConfigurations', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::OpsWorks::Layer has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

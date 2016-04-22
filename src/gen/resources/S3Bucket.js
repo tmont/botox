@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::S3::Bucket - The AWS::S3::Bucket type creates an Amazon S3 bucket.
@@ -7,16 +6,34 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function S3Bucket(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(S3Bucket, Resource);
+
 S3Bucket.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * Returns the DNS name of the specified bucket.Example: mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com
+			 * @return {Attribute}
+			 */
+			domainName: function() {
+				return createAttribute('DomainName');
+			},
+
+			/**
+			 * Amazon S3 website endpoint for the specified bucket.Example: http://mystack-mybucket-kdwwxmddtr2g.s3-website-us-east-1.amazonaws.com/
+			 * @return {Attribute}
+			 */
+			websiteURL: function() {
+				return createAttribute('WebsiteURL');
+			}
+		};
+	},
+
 	
 	/**
 	 * A canned access control list (ACL) that grants predefined permissions to the bucket. For more information about canned ACLs, see Canned ACLs in the Amazon S3 documentation.
@@ -146,43 +163,6 @@ S3Bucket.prototype = {
 	 */
 	websiteConfiguration: function(value) {
 		return this.set('WebsiteConfiguration', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * Returns the DNS name of the specified bucket.Example: mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com
-			 */
-			domainName: function() {
-				return new Attribute(self, 'DomainName');
-			},
-
-			/**
-			 * Amazon S3 website endpoint for the specified bucket.Example: http://mystack-mybucket-kdwwxmddtr2g.s3-website-us-east-1.amazonaws.com/
-			 */
-			websiteURL: function() {
-				return new Attribute(self, 'WebsiteURL');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

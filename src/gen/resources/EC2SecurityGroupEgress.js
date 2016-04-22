@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::EC2::SecurityGroupEgress - The AWS::EC2::SecurityGroupEgress resource adds an egress rule to an Amazon VPC security group.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function EC2SecurityGroupEgress(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(EC2SecurityGroupEgress, Resource);
+
 EC2SecurityGroupEgress.prototype = {
+	
 	
 	/**
 	 * CIDR range.
@@ -94,27 +90,6 @@ EC2SecurityGroupEgress.prototype = {
 	 */
 	toPort: function(value) {
 		return this.set('ToPort', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::EC2::SecurityGroupEgress has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

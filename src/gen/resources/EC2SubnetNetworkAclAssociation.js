@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::EC2::SubnetNetworkAclAssociation - Associates a subnet with a network ACL.
@@ -7,16 +6,26 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function EC2SubnetNetworkAclAssociation(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(EC2SubnetNetworkAclAssociation, Resource);
+
 EC2SubnetNetworkAclAssociation.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * Returns the value of this object's SubnetId property.
+			 * @return {Attribute}
+			 */
+			associationId: function() {
+				return createAttribute('AssociationId');
+			}
+		};
+	},
+
 	
 	/**
 	 * The ID representing the current association between the original network ACL and the subnet.
@@ -42,36 +51,6 @@ EC2SubnetNetworkAclAssociation.prototype = {
 	 */
 	networkAclId: function(value) {
 		return this.set('NetworkAclId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * Returns the value of this object's SubnetId property.
-			 */
-			associationId: function() {
-				return new Attribute(self, 'AssociationId');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

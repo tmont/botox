@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::EC2::NetworkInterface - Describes a network interface in an Elastic Compute Cloud (EC2) instance for AWS CloudFormation. This is provided in a list in the NetworkInterfaces property of AWS::EC2::Instance.
@@ -7,16 +6,34 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function EC2NetworkInterface(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(EC2NetworkInterface, Resource);
+
 EC2NetworkInterface.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * Returns the primary private IP address of the network interface. For example, 10.0.0.192.
+			 * @return {Attribute}
+			 */
+			primaryPrivateIpAddress: function() {
+				return createAttribute('PrimaryPrivateIpAddress');
+			},
+
+			/**
+			 * Returns the secondary private IP addresses of the network interface. For example, ["10.0.0.161", "10.0.0.162", "10.0.0.163"].
+			 * @return {Attribute}
+			 */
+			secondaryPrivateIpAddresses: function() {
+				return createAttribute('SecondaryPrivateIpAddresses');
+			}
+		};
+	},
+
 	
 	/**
 	 * The description of this network interface.
@@ -120,43 +137,6 @@ EC2NetworkInterface.prototype = {
 	 */
 	tags: function(value) {
 		return this.set('Tags', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * Returns the primary private IP address of the network interface. For example, 10.0.0.192.
-			 */
-			primaryPrivateIpAddress: function() {
-				return new Attribute(self, 'PrimaryPrivateIpAddress');
-			},
-
-			/**
-			 * Returns the secondary private IP addresses of the network interface. For example, ["10.0.0.161", "10.0.0.162", "10.0.0.163"].
-			 */
-			secondaryPrivateIpAddresses: function() {
-				return new Attribute(self, 'SecondaryPrivateIpAddresses');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

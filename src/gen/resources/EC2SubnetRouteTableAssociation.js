@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::EC2::SubnetRouteTableAssociation - Associates a subnet with a route table.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function EC2SubnetRouteTableAssociation(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(EC2SubnetRouteTableAssociation, Resource);
+
 EC2SubnetRouteTableAssociation.prototype = {
+	
 	
 	/**
 	 * The ID of the route table. This is commonly written as a reference to a route table declared elsewhere in the template. For example:
@@ -42,27 +38,6 @@ EC2SubnetRouteTableAssociation.prototype = {
 	 */
 	subnetId: function(value) {
 		return this.set('SubnetId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::EC2::SubnetRouteTableAssociation has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

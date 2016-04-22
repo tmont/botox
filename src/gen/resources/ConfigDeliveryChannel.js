@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::Config::DeliveryChannel - The AWS::Config::DeliveryChannel resource describes where AWS Config stores configuration changes to an AWS resource.
@@ -7,16 +6,13 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function ConfigDeliveryChannel(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(ConfigDeliveryChannel, Resource);
+
 ConfigDeliveryChannel.prototype = {
+	
 	
 	/**
 	 * Provides options for how AWS Config delivers configuration snapshots to the S3 bucket in your delivery channel.
@@ -81,27 +77,6 @@ ConfigDeliveryChannel.prototype = {
 	 */
 	snsTopicARN: function(value) {
 		return this.set('SnsTopicARN', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		throw new Error('AWS::Config::DeliveryChannel has no attributes');
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

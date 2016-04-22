@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::CloudFront::Distribution - Creates an Amazon CloudFront web distribution. For general information about CloudFront distributions, see the Introduction to Amazon CloudFront in the Amazon CloudFront Developer Guide. For specific information about creating CloudFront web distributions, see POST Distribution in the Amazon CloudFront API Reference.
@@ -7,16 +6,26 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function CloudFrontDistribution(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(CloudFrontDistribution, Resource);
+
 CloudFrontDistribution.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * Returns: The domain name of the resource. For example: d2fadu0nynjpfn.cloudfront.net.
+			 * @return {Attribute}
+			 */
+			domainName: function() {
+				return createAttribute('DomainName');
+			}
+		};
+	},
+
 	
 	/**
 	 * The distribution's configuration information.
@@ -29,36 +38,6 @@ CloudFrontDistribution.prototype = {
 	 */
 	distributionConfig: function(value) {
 		return this.set('DistributionConfig', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * Returns: The domain name of the resource. For example: d2fadu0nynjpfn.cloudfront.net.
-			 */
-			domainName: function() {
-				return new Attribute(self, 'DomainName');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

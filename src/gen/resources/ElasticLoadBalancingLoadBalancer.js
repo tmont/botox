@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::ElasticLoadBalancing::LoadBalancer - The AWS::ElasticLoadBalancing::LoadBalancer type creates a LoadBalancer.
@@ -7,16 +6,58 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function ElasticLoadBalancingLoadBalancer(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(ElasticLoadBalancingLoadBalancer, Resource);
+
 ElasticLoadBalancingLoadBalancer.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * The name of the Amazon Route 53 hosted zone that is associated with the load balancer.ImportantIf you specify internal for the Elastic Load Balancing scheme, use DNSName instead. For an internal scheme, the load balancer doesn't have a CanonicalHostedZoneName value.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
+			 * @return {Attribute}
+			 */
+			canonicalHostedZoneName: function() {
+				return createAttribute('CanonicalHostedZoneName');
+			},
+
+			/**
+			 * The ID of the Amazon Route 53 hosted zone name that is associated with the load balancer.Example: Z3DZXE0Q79N41H
+			 * @return {Attribute}
+			 */
+			canonicalHostedZoneNameID: function() {
+				return createAttribute('CanonicalHostedZoneNameID');
+			},
+
+			/**
+			 * The DNS name for the load balancer.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
+			 * @return {Attribute}
+			 */
+			dnsname: function() {
+				return createAttribute('DNSName');
+			},
+
+			/**
+			 * The security group that you can use as part of your inbound rules for your load balancer's back-end Amazon EC2 application instances.Example: amazon-elb
+			 * @return {Attribute}
+			 */
+			sourceSecurityGroupGroupName: function() {
+				return createAttribute('SourceSecurityGroup.GroupName');
+			},
+
+			/**
+			 * The owner of the source security group.Example: amazon-elb-sg
+			 * @return {Attribute}
+			 */
+			sourceSecurityGroupOwnerAlias: function() {
+				return createAttribute('SourceSecurityGroup.OwnerAlias');
+			}
+		};
+	},
+
 	
 	/**
 	 * Captures detailed information for all requests made to your load balancer, such as the time a request was received, client’s IP address, latencies, request path, and server responses.
@@ -224,64 +265,6 @@ ElasticLoadBalancingLoadBalancer.prototype = {
 	 */
 	tags: function(value) {
 		return this.set('Tags', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * The name of the Amazon Route 53 hosted zone that is associated with the load balancer.ImportantIf you specify internal for the Elastic Load Balancing scheme, use DNSName instead. For an internal scheme, the load balancer doesn't have a CanonicalHostedZoneName value.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
-			 */
-			canonicalHostedZoneName: function() {
-				return new Attribute(self, 'CanonicalHostedZoneName');
-			},
-
-			/**
-			 * The ID of the Amazon Route 53 hosted zone name that is associated with the load balancer.Example: Z3DZXE0Q79N41H
-			 */
-			canonicalHostedZoneNameID: function() {
-				return new Attribute(self, 'CanonicalHostedZoneNameID');
-			},
-
-			/**
-			 * The DNS name for the load balancer.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
-			 */
-			dnsname: function() {
-				return new Attribute(self, 'DNSName');
-			},
-
-			/**
-			 * The security group that you can use as part of your inbound rules for your load balancer's back-end Amazon EC2 application instances.Example: amazon-elb
-			 */
-			sourceSecurityGroupGroupName: function() {
-				return new Attribute(self, 'SourceSecurityGroup.GroupName');
-			},
-
-			/**
-			 * The owner of the source security group.Example: amazon-elb-sg
-			 */
-			sourceSecurityGroupOwnerAlias: function() {
-				return new Attribute(self, 'SourceSecurityGroup.OwnerAlias');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

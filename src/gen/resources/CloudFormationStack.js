@@ -1,5 +1,4 @@
-var Attribute = require('../../fun/attribute'),
-	Reference = require('../../fun/reference');
+var Resource = require('../../resource');
 
 /**
  * AWS::CloudFormation::Stack - The AWS::CloudFormation::Stack type nests a stack as a resource in a top-level template.
@@ -7,16 +6,26 @@ var Attribute = require('../../fun/attribute'),
  * @param {String} name Name of the resource
  */
 function CloudFormationStack(name) {
-	if (!name) {
-		throw new Error('name is required');
-	}
-
-	this.name = name;
-	this.data = {};
-	this.reference = new Reference(this);
+	Resource.call(this, name);
 }
 
+Object.setPrototypeOf(CloudFormationStack, Resource);
+
 CloudFormationStack.prototype = {
+	get attr() {
+		var createAttribute = this.createAttribute.bind(this, this);
+		return {
+			
+			/**
+			 * Returns: The output value from the specified nested stack where NestedStackOutputName is the name of the output value.
+			 * @return {Attribute}
+			 */
+			outputsNestedStackOutputName: function() {
+				return createAttribute('Outputs.NestedStackOutputName');
+			}
+		};
+	},
+
 	
 	/**
 	 * A list of existing Amazon SNS topics where notifications about stack events are sent.
@@ -81,36 +90,6 @@ CloudFormationStack.prototype = {
 	 */
 	timeoutInMinutes: function(value) {
 		return this.set('TimeoutInMinutes', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	attr: function() {
-		var self = this;
-		return {
-			
-			/**
-			 * Returns: The output value from the specified nested stack where NestedStackOutputName is the name of the output value.
-			 */
-			outputsNestedStackOutputName: function() {
-				return new Attribute(self, 'Outputs.NestedStackOutputName');
-			}
-		};
-	},
-
-	get ref() {
-		return this.reference;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 
