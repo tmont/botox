@@ -50,14 +50,14 @@ EC2EIP.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The ID that AWS assigns to represent the allocation of the address for use with Amazon VPC. This is returned only for VPC elastic IP addresses. Example return value: eipalloc-5723d13e
 			 */
 			allocationId: function() {
-				return new Attribute(resourceName, 'AllocationId');
+				return new Attribute(self, 'AllocationId');
 			}
 		};
 	},

@@ -76,14 +76,14 @@ IAMRole.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyRole", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF”.
 			 */
 			arn: function() {
-				return new Attribute(resourceName, 'Arn');
+				return new Attribute(self, 'Arn');
 			}
 		};
 	},

@@ -258,49 +258,49 @@ ElastiCacheReplicationGroup.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The DNS address of the primary read-write cache node.
 			 */
 			primaryEndPointAddress: function() {
-				return new Attribute(resourceName, 'PrimaryEndPoint.Address');
+				return new Attribute(self, 'PrimaryEndPoint.Address');
 			},
 
 			/**
 			 * The number of the port that the primary read-write cache engine is listening on.
 			 */
 			primaryEndPointPort: function() {
-				return new Attribute(resourceName, 'PrimaryEndPoint.Port');
+				return new Attribute(self, 'PrimaryEndPoint.Port');
 			},
 
 			/**
 			 * A string with a list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports attribute.
 			 */
 			readEndPointAddresses: function() {
-				return new Attribute(resourceName, 'ReadEndPoint.Addresses');
+				return new Attribute(self, 'ReadEndPoint.Addresses');
 			},
 
 			/**
 			 * A string with a list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses attribute.
 			 */
 			readEndPointPorts: function() {
-				return new Attribute(resourceName, 'ReadEndPoint.Ports');
+				return new Attribute(self, 'ReadEndPoint.Ports');
 			},
 
 			/**
 			 * A list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports.List attribute.
 			 */
 			readEndPointAddressesList: function() {
-				return new Attribute(resourceName, 'ReadEndPoint.Addresses.List');
+				return new Attribute(self, 'ReadEndPoint.Addresses.List');
 			},
 
 			/**
 			 * A list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses.List attribute.
 			 */
 			readEndPointPortsList: function() {
-				return new Attribute(resourceName, 'ReadEndPoint.Ports.List');
+				return new Attribute(self, 'ReadEndPoint.Ports.List');
 			}
 		};
 	},

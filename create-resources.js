@@ -52,13 +52,13 @@ function createResources(files, next) {
 			 * ${attr.description}
 			 */
 			${methodName}: function() {
-				return new Attribute(resourceName, '${attr.name}');
+				return new Attribute(self, '${attr.name}');
 			}`;
 		}).join(',\n');
 
 		let attributeBody = `throw new Error('${json.fullName} has no attributes');`;
 		if (attributes) {
-			attributeBody = `var resourceName = this.name;
+			attributeBody = `var self = this;
 		return {
 			${attributes}
 		};`;

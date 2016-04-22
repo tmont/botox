@@ -115,14 +115,14 @@ EventsRule.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-1:123456789012:rule/example.
 			 */
 			arn: function() {
-				return new Attribute(resourceName, 'Arn');
+				return new Attribute(self, 'Arn');
 			}
 		};
 	},

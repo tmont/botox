@@ -63,14 +63,14 @@ SNSTopic.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * Returns the name for an Amazon SNS topic.
 			 */
 			topicName: function() {
-				return new Attribute(resourceName, 'TopicName');
+				return new Attribute(self, 'TopicName');
 			}
 		};
 	},

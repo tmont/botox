@@ -63,14 +63,14 @@ IAMAccessKey.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * Returns the secret access key for the specified AWS::IAM::AccessKey resource. For example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY.
 			 */
 			secretAccessKey: function() {
-				return new Attribute(resourceName, 'SecretAccessKey');
+				return new Attribute(self, 'SecretAccessKey');
 			}
 		};
 	},

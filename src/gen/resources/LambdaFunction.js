@@ -141,14 +141,14 @@ LambdaFunction.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The ARN of the Lambda function, such as arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD.
 			 */
 			arn: function() {
-				return new Attribute(resourceName, 'Arn');
+				return new Attribute(self, 'Arn');
 			}
 		};
 	},

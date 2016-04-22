@@ -37,14 +37,14 @@ LogsLogGroup.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The Amazon resource name (ARN) of the CloudWatch Logs log group, such as arn:aws:logs:us-east-1:123456789012:log-group:/mystack-testgroup-12ABC1AB12A1:*.
 			 */
 			arn: function() {
-				return new Attribute(resourceName, 'Arn');
+				return new Attribute(self, 'Arn');
 			}
 		};
 	},

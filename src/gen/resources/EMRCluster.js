@@ -193,14 +193,14 @@ EMRCluster.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The public DNS name of the master node (instance), such as ec2-12-123-123-123.us-west-2.compute.amazonaws.com.
 			 */
 			masterPublicDNS: function() {
-				return new Attribute(resourceName, 'MasterPublicDNS');
+				return new Attribute(self, 'MasterPublicDNS');
 			}
 		};
 	},

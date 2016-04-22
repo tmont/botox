@@ -50,14 +50,14 @@ EC2SubnetNetworkAclAssociation.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * Returns the value of this object's SubnetId property.
 			 */
 			associationId: function() {
-				return new Attribute(resourceName, 'AssociationId');
+				return new Attribute(self, 'AssociationId');
 			}
 		};
 	},

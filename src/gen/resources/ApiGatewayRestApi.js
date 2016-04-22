@@ -50,14 +50,14 @@ ApiGatewayRestApi.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The root resource ID for a RestApi resource, such as a0bc123d4e.
 			 */
 			rootResourceId: function() {
-				return new Attribute(resourceName, 'RootResourceId');
+				return new Attribute(self, 'RootResourceId');
 			}
 		};
 	},

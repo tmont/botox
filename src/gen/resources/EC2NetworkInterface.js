@@ -128,21 +128,21 @@ EC2NetworkInterface.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * Returns the primary private IP address of the network interface. For example, 10.0.0.192.
 			 */
 			primaryPrivateIpAddress: function() {
-				return new Attribute(resourceName, 'PrimaryPrivateIpAddress');
+				return new Attribute(self, 'PrimaryPrivateIpAddress');
 			},
 
 			/**
 			 * Returns the secondary private IP addresses of the network interface. For example, ["10.0.0.161", "10.0.0.162", "10.0.0.163"].
 			 */
 			secondaryPrivateIpAddresses: function() {
-				return new Attribute(resourceName, 'SecondaryPrivateIpAddresses');
+				return new Attribute(self, 'SecondaryPrivateIpAddresses');
 			}
 		};
 	},

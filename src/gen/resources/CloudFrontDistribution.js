@@ -37,14 +37,14 @@ CloudFrontDistribution.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * Returns: The domain name of the resource. For example: d2fadu0nynjpfn.cloudfront.net.
 			 */
 			domainName: function() {
-				return new Attribute(resourceName, 'DomainName');
+				return new Attribute(self, 'DomainName');
 			}
 		};
 	},

@@ -63,14 +63,14 @@ CloudFormationWaitCondition.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * Returns: A JSON object that contains the UniqueId and Data values from the wait condition signal(s) for the specified wait condition. For more information about wait condition signals, see Wait Condition Signal JSON Format.Example return value for a wait condition with 2 signals: { "Signal1" : "Step 1 complete." , "Signal2" : "Step 2 complete." }
 			 */
 			data: function() {
-				return new Attribute(resourceName, 'Data');
+				return new Attribute(self, 'Data');
 			}
 		};
 	},

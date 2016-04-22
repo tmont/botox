@@ -102,28 +102,28 @@ ConfigConfigRule.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The Amazon Resource Name (ARN) of the AWS Config rule, such as arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi.
 			 */
 			arn: function() {
-				return new Attribute(resourceName, 'Arn');
+				return new Attribute(self, 'Arn');
 			},
 
 			/**
 			 * The ID of the AWS Config rule, such as config-rule-a1bzhi.
 			 */
 			configRuleId: function() {
-				return new Attribute(resourceName, 'ConfigRuleId');
+				return new Attribute(self, 'ConfigRuleId');
 			},
 
 			/**
 			 * The compliance status of an AWS Config rule, such as COMPLIANT or NON_COMPLIANT.
 			 */
 			complianceType: function() {
-				return new Attribute(resourceName, 'Compliance.Type');
+				return new Attribute(self, 'Compliance.Type');
 			}
 		};
 	},

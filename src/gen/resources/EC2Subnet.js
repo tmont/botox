@@ -89,14 +89,14 @@ EC2Subnet.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * Returns the availability zone (for example, "us-east-1a") of this subnet.Example: { "Fn::GetAtt" : [ "mySubnet", "AvailabilityZone" ] }
 			 */
 			availabilityZone: function() {
-				return new Attribute(resourceName, 'AvailabilityZone');
+				return new Attribute(self, 'AvailabilityZone');
 			}
 		};
 	},

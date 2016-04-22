@@ -115,14 +115,14 @@ DynamoDBTable.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The Amazon Resource Name (ARN) of the DynamoDB stream, such as arn:aws:dynamodb:us-east-1:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000.
 			 */
 			streamArn: function() {
-				return new Attribute(resourceName, 'StreamArn');
+				return new Attribute(self, 'StreamArn');
 			}
 		};
 	},

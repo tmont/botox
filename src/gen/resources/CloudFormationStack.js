@@ -89,14 +89,14 @@ CloudFormationStack.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * Returns: The output value from the specified nested stack where NestedStackOutputName is the name of the output value.
 			 */
 			outputsNestedStackOutputName: function() {
-				return new Attribute(resourceName, 'Outputs.NestedStackOutputName');
+				return new Attribute(self, 'Outputs.NestedStackOutputName');
 			}
 		};
 	},

@@ -115,21 +115,21 @@ SQSQueue.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * Returns the Amazon Resource Name (ARN) of the queue. For example: arn:aws:sqs:us-east-1:123456789012:mystack-myqueue-15PG5C2FC1CW8
 			 */
 			arn: function() {
-				return new Attribute(resourceName, 'Arn');
+				return new Attribute(self, 'Arn');
 			},
 
 			/**
 			 * Returns the queue name. For example:mystack-myqueue-1VF9BKQH5BJVI
 			 */
 			queueName: function() {
-				return new Attribute(resourceName, 'QueueName');
+				return new Attribute(self, 'QueueName');
 			}
 		};
 	},

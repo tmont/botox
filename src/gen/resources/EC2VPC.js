@@ -89,28 +89,28 @@ EC2VPC.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The set of IP addresses for the VPC. For example, 10.0.0.0/16.
 			 */
 			cidrBlock: function() {
-				return new Attribute(resourceName, 'CidrBlock');
+				return new Attribute(self, 'CidrBlock');
 			},
 
 			/**
 			 * The default network ACL ID that is associated with the VPC. For example, acl-814dafe3.
 			 */
 			defaultNetworkAcl: function() {
-				return new Attribute(resourceName, 'DefaultNetworkAcl');
+				return new Attribute(self, 'DefaultNetworkAcl');
 			},
 
 			/**
 			 * The default security group ID that is associated with the VPC. For example, sg-b178e0d3.
 			 */
 			defaultSecurityGroup: function() {
-				return new Attribute(resourceName, 'DefaultSecurityGroup');
+				return new Attribute(self, 'DefaultSecurityGroup');
 			}
 		};
 	},

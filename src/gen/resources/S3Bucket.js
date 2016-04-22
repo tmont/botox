@@ -154,21 +154,21 @@ S3Bucket.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * Returns the DNS name of the specified bucket.Example: mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com
 			 */
 			domainName: function() {
-				return new Attribute(resourceName, 'DomainName');
+				return new Attribute(self, 'DomainName');
 			},
 
 			/**
 			 * Amazon S3 website endpoint for the specified bucket.Example: http://mystack-mybucket-kdwwxmddtr2g.s3-website-us-east-1.amazonaws.com/
 			 */
 			websiteURL: function() {
-				return new Attribute(resourceName, 'WebsiteURL');
+				return new Attribute(self, 'WebsiteURL');
 			}
 		};
 	},

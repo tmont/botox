@@ -349,42 +349,42 @@ EC2Instance.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The Availability Zone where the specified instance is launched. For example: us-east-1b.You can retrieve a list of all Availability Zones for a region by using the Fn::GetAZs intrinsic function.
 			 */
 			availabilityZone: function() {
-				return new Attribute(resourceName, 'AvailabilityZone');
+				return new Attribute(self, 'AvailabilityZone');
 			},
 
 			/**
 			 * The private DNS name of the specified instance. For example: ip-10-24-34-0.ec2.internal.
 			 */
 			privateDnsName: function() {
-				return new Attribute(resourceName, 'PrivateDnsName');
+				return new Attribute(self, 'PrivateDnsName');
 			},
 
 			/**
 			 * The public DNS name of the specified instance. For example: ec2-107-20-50-45.compute-1.amazonaws.com.
 			 */
 			publicDnsName: function() {
-				return new Attribute(resourceName, 'PublicDnsName');
+				return new Attribute(self, 'PublicDnsName');
 			},
 
 			/**
 			 * The private IP address of the specified instance. For example: 10.24.34.0.
 			 */
 			privateIp: function() {
-				return new Attribute(resourceName, 'PrivateIp');
+				return new Attribute(self, 'PrivateIp');
 			},
 
 			/**
 			 * The public IP address of the specified instance. For example: 192.0.2.0.
 			 */
 			publicIp: function() {
-				return new Attribute(resourceName, 'PublicIp');
+				return new Attribute(self, 'PublicIp');
 			}
 		};
 	},

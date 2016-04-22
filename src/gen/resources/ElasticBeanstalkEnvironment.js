@@ -154,14 +154,14 @@ ElasticBeanstalkEnvironment.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The URL to the load balancer for this environment.Example:awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-1.elb.amazonaws.com
 			 */
 			endpointURL: function() {
-				return new Attribute(resourceName, 'EndpointURL');
+				return new Attribute(self, 'EndpointURL');
 			}
 		};
 	},

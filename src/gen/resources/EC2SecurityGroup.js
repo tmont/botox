@@ -89,14 +89,14 @@ EC2SecurityGroup.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The group ID of the specified security group, such as sg-94b3a1f6.
 			 */
 			groupId: function() {
-				return new Attribute(resourceName, 'GroupId');
+				return new Attribute(self, 'GroupId');
 			}
 		};
 	},

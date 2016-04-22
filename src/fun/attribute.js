@@ -1,24 +1,24 @@
 /**
  * Creates an attribute reference, e.g. Fn::GetAtt
- * @param {String} resourceName Name of the resource
+ * @param {Object} resource
  * @param {String} attribute Name of the attribute
  * @constructor
  */
-function Attribute(resourceName, attribute) {
-	if (!resourceName) {
-		throw new Error('resourceName is required');
+function Attribute(resource, attribute) {
+	if (!resource) {
+		throw new Error('resource is required');
 	}
 	if (!attribute) {
 		throw new Error('attribute is required');
 	}
-	this.resourceName = resourceName;
+	this.resource = resource;
 	this.attribute = attribute;
 }
 
 Attribute.prototype = {
 	toJSON: function() {
 		return {
-			'Fn::GetAtt': [ this.resourceName, this.attribute ]
+			'Fn::GetAtt': [ this.resource.name, this.attribute ]
 		};
 	},
 

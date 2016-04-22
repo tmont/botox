@@ -63,14 +63,14 @@ LambdaVersion.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The published version of a Lambda version, such as 1.
 			 */
 			version: function() {
-				return new Attribute(resourceName, 'Version');
+				return new Attribute(self, 'Version');
 			}
 		};
 	},

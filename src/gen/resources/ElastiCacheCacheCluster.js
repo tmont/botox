@@ -297,21 +297,21 @@ ElastiCacheCacheCluster.prototype = {
 	},
 
 	attr: function() {
-		var resourceName = this.name;
+		var self = this;
 		return {
 			
 			/**
 			 * The DNS address of the configuration endpoint for the Memcached cache cluster.
 			 */
 			configurationEndpointAddress: function() {
-				return new Attribute(resourceName, 'ConfigurationEndpoint.Address');
+				return new Attribute(self, 'ConfigurationEndpoint.Address');
 			},
 
 			/**
 			 * The port number of the configuration endpoint for the Memcached cache cluster.
 			 */
 			configurationEndpointPort: function() {
-				return new Attribute(resourceName, 'ConfigurationEndpoint.Port');
+				return new Attribute(self, 'ConfigurationEndpoint.Port');
 			}
 		};
 	},
