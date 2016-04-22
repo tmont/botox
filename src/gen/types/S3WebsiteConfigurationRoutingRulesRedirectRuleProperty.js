@@ -1,5 +1,6 @@
 /**
  * The RedirectRule property is an embedded property of the Amazon S3 Website Configuration Routing Rules Property that describes how requests are redirected. In the event of an error, you can specify a different error code to return.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html}
  * @constructor
  */
 function S3WebsiteConfigurationRoutingRulesRedirectRuleProperty() {

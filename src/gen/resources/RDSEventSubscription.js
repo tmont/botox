@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::RDS::EventSubscription - Use the AWS::RDS::EventSubscription resource to get notifications for Amazon Relational Database Service events through the Amazon Simple Notification Service. For more information, see Using Amazon RDS Event Notification in the Amazon Relational Database Service User Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html}
  * @constructor
  * @param {String} name Name of the resource
  */

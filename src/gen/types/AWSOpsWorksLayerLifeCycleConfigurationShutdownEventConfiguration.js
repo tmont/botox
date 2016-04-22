@@ -1,5 +1,6 @@
 /**
  * ShutdownEventConfiguration is a property of the AWS OpsWorks Layer LifeCycleConfiguration property that specifies the shutdown event configuration for a lifecycle event.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html}
  * @constructor
  */
 function AWSOpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration() {

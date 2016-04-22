@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EMR::Step - The AWS::EMR::Step resource creates a unit of work (a job flow step) that you submit to an Amazon Elastic MapReduce (Amazon EMR) cluster. The job flow step contains instructions for processing data on the cluster.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html}
  * @constructor
  * @param {String} name Name of the resource
  */

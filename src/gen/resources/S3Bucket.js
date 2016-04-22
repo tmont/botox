@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::S3::Bucket - The AWS::S3::Bucket type creates an Amazon S3 bucket.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html}
  * @constructor
  * @param {String} name Name of the resource
  */

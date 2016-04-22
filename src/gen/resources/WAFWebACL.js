@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::WAF::WebACL - The AWS::WAF::WebACL resource creates an AWS WAF web access control group (ACL) containing the rules that identify the Amazon CloudFront (CloudFront) web requests that you want to allow, block, or count. For more information, see CreateWebACL in the AWS WAF API Reference.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-webacl.html}
  * @constructor
  * @param {String} name Name of the resource
  */

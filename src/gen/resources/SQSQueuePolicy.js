@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::SQS::QueuePolicy - The AWS::SQS::QueuePolicy type applies a policy to SQS queues.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-policy.html}
  * @constructor
  * @param {String} name Name of the resource
  */

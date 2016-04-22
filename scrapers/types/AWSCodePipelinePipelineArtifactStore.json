@@ -20,5 +20,6 @@
       "required": true,
       "type": "String"
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html"
 }

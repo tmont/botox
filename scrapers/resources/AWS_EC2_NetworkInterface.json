@@ -71,5 +71,6 @@
       "name": "SecondaryPrivateIpAddresses",
       "description": "Returns the secondary private IP addresses of the network interface. For example, [\"10.0.0.161\", \"10.0.0.162\", \"10.0.0.163\"]."
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html"
 }

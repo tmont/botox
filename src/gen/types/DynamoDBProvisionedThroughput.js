@@ -1,5 +1,6 @@
 /**
  * Describes a set of provisioned throughput values for an AWS::DynamoDB::Table resource. DynamoDB uses these capacity units to allocate sufficient resources to provide the requested throughput.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html}
  * @constructor
  */
 function DynamoDBProvisionedThroughput() {

@@ -1,5 +1,6 @@
 /**
  * Describes the notification configuration for an AWS::S3::Bucket resource.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig.html}
  * @constructor
  */
 function S3NotificationConfiguration() {

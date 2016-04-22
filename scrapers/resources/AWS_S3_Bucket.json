@@ -85,5 +85,6 @@
       "name": "WebsiteURL",
       "description": "Amazon S3 website endpoint for the specified bucket.Example: http://mystack-mybucket-kdwwxmddtr2g.s3-website-us-east-1.amazonaws.com/"
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html"
 }

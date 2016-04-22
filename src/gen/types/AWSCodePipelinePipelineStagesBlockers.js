@@ -1,5 +1,6 @@
 /**
  * Blockers is a property of the AWS CodePipeline Pipeline Stages property that specifies an AWS CodePipeline gate declaration.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-blockers.html}
  * @constructor
  */
 function AWSCodePipelinePipelineStagesBlockers() {

@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::CloudTrail::Trail - The AWS::CloudTrail::Trail resource creates a trail and specifies where logs are published. An AWS CloudTrail (CloudTrail) trail can capture AWS API calls made by your AWS account and publishes the logs to an Amazon S3 bucket. For more information, see What is AWS CloudTrail? in the AWS CloudTrail User Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html}
  * @constructor
  * @param {String} name Name of the resource
  */

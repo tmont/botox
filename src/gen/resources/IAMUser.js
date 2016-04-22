@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::IAM::User - The AWS::IAM::User type creates a user.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html}
  * @constructor
  * @param {String} name Name of the resource
  */

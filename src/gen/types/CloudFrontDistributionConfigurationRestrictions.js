@@ -1,5 +1,6 @@
 /**
  * Restrictions is a property of the CloudFront DistributionConfig property that lets you limit which viewers can access your content.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-restrictions.html}
  * @constructor
  */
 function CloudFrontDistributionConfigurationRestrictions() {

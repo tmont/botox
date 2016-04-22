@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::CodeDeploy::DeploymentConfig - The AWS::CodeDeploy::DeploymentConfig resource creates a set of deployment rules, deployment success conditions, and deployment failure conditions that AWS CodeDeploy uses during a deployment.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html}
  * @constructor
  * @param {String} name Name of the resource
  */

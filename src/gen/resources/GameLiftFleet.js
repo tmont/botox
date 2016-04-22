@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::GameLift::Fleet - The AWS::GameLift::Fleet resource creates an Amazon GameLift (GameLift) fleet to host game servers. A fleet is a set of EC2 instances, each of which is a host in the fleet. For more information, see the CreateFleet action in the Amazon GameLift API Reference.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -61,5 +61,6 @@
       "name": "Compliance.Type",
       "description": "The compliance status of an AWS Config rule, such as COMPLIANT or NON_COMPLIANT."
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html"
 }

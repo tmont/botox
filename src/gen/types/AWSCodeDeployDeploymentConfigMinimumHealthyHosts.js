@@ -1,5 +1,6 @@
 /**
  * MinimumHealthyHosts is a property of the AWS::CodeDeploy::DeploymentConfig resource that defines how many instances must be healthy during an AWS CodeDeploy deployment.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html}
  * @constructor
  */
 function AWSCodeDeployDeploymentConfigMinimumHealthyHosts() {

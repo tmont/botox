@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::CloudFormation::WaitCondition - Important
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html}
  * @constructor
  * @param {String} name Name of the resource
  */

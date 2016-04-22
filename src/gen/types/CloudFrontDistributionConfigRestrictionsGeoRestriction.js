@@ -1,5 +1,6 @@
 /**
  * GeoRestriction is a property of the CloudFront DistributionConfiguration Restrictions property that describes the countries in which Amazon CloudFront allows viewers to access your content.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-restrictions-georestriction.html}
  * @constructor
  */
 function CloudFrontDistributionConfigRestrictionsGeoRestriction() {

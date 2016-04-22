@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::CloudFormation::Authentication - Use the AWS::CloudFormation::Authentication resource to specify authentication credentials for files or sources that you specify with the AWS::CloudFormation::Init resource.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-authentication.html}
  * @constructor
  * @param {String} name Name of the resource
  */

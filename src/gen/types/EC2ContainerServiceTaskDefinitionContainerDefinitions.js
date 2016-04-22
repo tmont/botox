@@ -1,5 +1,6 @@
 /**
  * ContainerDefinitions is a property of the AWS::ECS::TaskDefinition resource that describes the configuration of a container. The container definitions are passed to the Docker daemon.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html}
  * @constructor
  */
 function EC2ContainerServiceTaskDefinitionContainerDefinitions() {

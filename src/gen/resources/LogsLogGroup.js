@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Logs::LogGroup - The AWS::Logs::LogGroup resource creates an Amazon CloudWatch Logs log group that defines common properties for log streams, such as their retention and access control rules. Each log stream must belong to one log group.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html}
  * @constructor
  * @param {String} name Name of the resource
  */

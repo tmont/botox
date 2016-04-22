@@ -14,5 +14,6 @@
       "required": false,
       "type": "Number"
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html"
 }

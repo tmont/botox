@@ -1,5 +1,6 @@
 /**
  * Describes lifecycle rules for the Amazon S3 Lifecycle Configuration property.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html}
  * @constructor
  */
 function S3LifecycleRule() {
@@ -57,15 +58,15 @@ S3LifecycleRule.prototype = {
 	},
 
 	/**
-	 * For buckets with versioning enabled (or suspended), specifies when non-current objects transition to a specified storage class. If you specify a transition and expiration time, the expiration time must be later than the transition time. If you specify this property, don't specify the NoncurrentVersionTransitions property.
+	 * For buckets with versioning enabled (or suspended), specifies when non-current objects transition to a specified storage class. If you specify a transition and expiration time, the expiration time must be later than the transition time. If you specify this property, don't specify the NoncurrentVersionTransitions property. (deprecated)
 	 *
 	 * Required: false
 	 *
 	 * @param {S3LifecycleRuleNoncurrentVersionTransition} value
 	 * @return {S3LifecycleRule}
 	 */
-	noncurrentVersionTransition (deprecated): function(value) {
-		return this.set('NoncurrentVersionTransition (deprecated)', value);
+	noncurrentVersionTransition: function(value) {
+		return this.set('NoncurrentVersionTransition', value);
 	},
 
 	/**
@@ -105,15 +106,15 @@ S3LifecycleRule.prototype = {
 	},
 
 	/**
-	 * Specifies when an object transitions to a specified storage class. If you specify an expiration and transition time, you must use the same time unit for both properties (either in days or by date). The expiration time must also be later than the transition time. If you specify this property, don't specify the Transitions property.
+	 * Specifies when an object transitions to a specified storage class. If you specify an expiration and transition time, you must use the same time unit for both properties (either in days or by date). The expiration time must also be later than the transition time. If you specify this property, don't specify the Transitions property. (deprecated)
 	 *
 	 * Required: false
 	 *
 	 * @param {S3LifecycleRuleTransition} value
 	 * @return {S3LifecycleRule}
 	 */
-	transition (deprecated): function(value) {
-		return this.set('Transition (deprecated)', value);
+	transition: function(value) {
+		return this.set('Transition', value);
 	},
 
 	/**

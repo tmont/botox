@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::WAF::SqlInjectionMatchSet - The AWS::WAF::SqlInjectionMatchSet resource creates an AWS WAF SqlInjectionMatchSet, which you use to allow, block, or count requests that contain malicious SQL code in a specific part of web requests. For more information, see CreateSqlInjectionMatchSet in the AWS WAF API Reference.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sqlinjectionmatchset.html}
  * @constructor
  * @param {String} name Name of the resource
  */

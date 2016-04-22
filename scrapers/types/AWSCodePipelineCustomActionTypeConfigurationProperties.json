@@ -44,5 +44,6 @@
       "required": false,
       "type": "String"
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype-configurationproperties.html"
 }

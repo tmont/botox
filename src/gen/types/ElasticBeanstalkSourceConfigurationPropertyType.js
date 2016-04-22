@@ -1,5 +1,6 @@
 /**
  * Use settings from another Elastic Beanstalk configuration template for the AWS::ElasticBeanstalk::ConfigurationTemplate resource type.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-configurationtemplate-sourceconfiguration.html}
  * @constructor
  */
 function ElasticBeanstalkSourceConfigurationPropertyType() {

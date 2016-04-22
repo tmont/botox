@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::VPNGateway - Creates a virtual private gateway. A virtual private gateway is the VPC-side endpoint for your VPN connection.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gateway.html}
  * @constructor
  * @param {String} name Name of the resource
  */

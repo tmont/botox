@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::VPCEndpoint - The AWS::EC2::VPCEndpoint resource creates a VPC endpoint that you can use to establish a private connection between your VPC and another AWS service without requiring access over the Internet, a VPN connection, or AWS Direct Connect.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html}
  * @constructor
  * @param {String} name Name of the resource
  */

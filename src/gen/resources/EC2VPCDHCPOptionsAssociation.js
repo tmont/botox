@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::VPCDHCPOptionsAssociation - Associates a set of DHCP options (that you've previously created) with the specified VPC.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-dhcp-options-assoc.html}
  * @constructor
  * @param {String} name Name of the resource
  */

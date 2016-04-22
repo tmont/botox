@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::RDS::DBClusterParameterGroup - The AWS::RDS::DBClusterParameterGroup resource creates a new Amazon Relational Database Service (Amazon RDS) database (DB) cluster parameter group. For more information about DB cluster parameter groups, see Appendix: DB Cluster and DB Instance Parameters in the Amazon Relational Database Service User Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html}
  * @constructor
  * @param {String} name Name of the resource
  */

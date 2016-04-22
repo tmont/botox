@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::SubnetNetworkAclAssociation - Associates a subnet with a network ACL.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-network-acl-assoc.html}
  * @constructor
  * @param {String} name Name of the resource
  */

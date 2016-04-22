@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Lambda::Alias - The AWS::Lambda::Alias resource creates an alias that points to an AWS Lambda (Lambda) function that you specify. Use aliases when you want to control which version of your function other services or applications invoke. Those services or applications can use your function's alias so that they don't need to be updated whenever you release a new version of your function. For more information, see Introduction to AWS Lambda Aliases in the AWS Lambda Developer Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html}
  * @constructor
  * @param {String} name Name of the resource
  */

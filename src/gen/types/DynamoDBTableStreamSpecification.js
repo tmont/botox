@@ -1,5 +1,6 @@
 /**
  * StreamSpecification is a property of the AWS::DynamoDB::Table resource that defines the settings of a DynamoDB table's stream.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-streamspecification.html}
  * @constructor
  */
 function DynamoDBTableStreamSpecification() {

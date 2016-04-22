@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::EIPAssociation - The AWS::EC2::EIPAssociation resource type associates an Elastic IP address with an Amazon EC2 instance. The Elastic IP address can be an existing Elastic IP address or an Elastic IP address allocated through an AWS::EC2::EIP resource.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html}
  * @constructor
  * @param {String} name Name of the resource
  */

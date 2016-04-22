@@ -32,5 +32,6 @@
       "name": "Version",
       "description": "The published version of a Lambda version, such as 1."
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html"
 }

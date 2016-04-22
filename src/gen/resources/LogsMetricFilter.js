@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Logs::MetricFilter - The AWS::Logs::MetricFilter resource creates a metric filter that describes how Amazon CloudWatch Logs extracts information from logs that you specify and transforms it into Amazon CloudWatch metrics. If you have multiple metric filters that are associated with a log group, all the filters are applied to the log streams in that group.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html}
  * @constructor
  * @param {String} name Name of the resource
  */

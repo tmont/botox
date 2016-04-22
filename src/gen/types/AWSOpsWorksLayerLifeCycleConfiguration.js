@@ -1,5 +1,6 @@
 /**
  * LifeCycleConfiguration is property of the AWS::OpsWorks::Layer resource that specifies the lifecycle event configuration for the layer.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration.html}
  * @constructor
  */
 function AWSOpsWorksLayerLifeCycleConfiguration() {

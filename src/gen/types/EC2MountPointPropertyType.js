@@ -1,5 +1,6 @@
 /**
  * The EC2 MountPoint property is an embedded property of the AWS::EC2::Instance type.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-mount-point.html}
  * @constructor
  */
 function EC2MountPointPropertyType() {

@@ -1,5 +1,6 @@
 /**
  * Settings is a property of the AWS::CodePipeline::CustomActionType resource that provides URLs that users can access to view information about the AWS CodePipeline custom action.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype-settings.html}
  * @constructor
  */
 function AWSCodePipelineCustomActionTypeSettings() {

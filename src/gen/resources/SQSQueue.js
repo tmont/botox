@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::SQS::Queue - The AWS::SQS::Queue type creates an Amazon SQS queue.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html}
  * @constructor
  * @param {String} name Name of the resource
  */

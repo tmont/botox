@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::WorkSpaces::Workspace - The AWS::WorkSpaces::Workspace resource creates an Amazon WorkSpaces workspace, which is a cloud-based desktop experience for end users. For more information, see the Amazon WorkSpaces Administration Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html}
  * @constructor
  * @param {String} name Name of the resource
  */

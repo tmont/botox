@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::VolumeAttachment - Attaches an Amazon EBS volume to a running instance and exposes it to the instance with the specified device name.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html}
  * @constructor
  * @param {String} name Name of the resource
  */

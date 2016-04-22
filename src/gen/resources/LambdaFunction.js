@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Lambda::Function - The AWS::Lambda::Function resource creates an AWS Lambda (Lambda) function that can run code in response to events. For more information, see CreateFunction in the AWS Lambda Developer Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html}
  * @constructor
  * @param {String} name Name of the resource
  */

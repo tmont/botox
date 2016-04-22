@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::GameLift::Alias - The AWS::GameLift::Alias resource creates an alias for an Amazon GameLift (GameLift) fleet, which you can use to anonymize your fleet. You can reference the alias instead of a specific fleet when you create game sessions. For more information, see the CreateAlias action in the Amazon GameLift API Reference.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html}
  * @constructor
  * @param {String} name Name of the resource
  */

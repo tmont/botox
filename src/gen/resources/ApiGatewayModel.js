@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ApiGateway::Model - The AWS::ApiGateway::Model resource defines the structure of a request or response payload for an Amazon API Gateway (API Gateway) method.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html}
  * @constructor
  * @param {String} name Name of the resource
  */

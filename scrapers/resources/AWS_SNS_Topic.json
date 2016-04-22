@@ -32,5 +32,6 @@
       "name": "TopicName",
       "description": "Returns the name for an Amazon SNS topic."
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html"
 }

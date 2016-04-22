@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Redshift::Cluster - Creates an Amazon Redshift cluster. A cluster is a fully managed data warehouse that consists of set of compute nodes. For more information about default values and valid values, see CreateCluster in the Amazon Redshift API Reference.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html}
  * @constructor
  * @param {String} name Name of the resource
  */

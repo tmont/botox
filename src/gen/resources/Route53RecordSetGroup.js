@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Route53::RecordSetGroup - The AWS::Route53::RecordSetGroup resource creates record sets for a hosted zone. For more information about constraints and values for each property, see POST CreateHostedZone for hosted zones and POST ChangeResourceRecordSet for resource record sets.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup.html}
  * @constructor
  * @param {String} name Name of the resource
  */

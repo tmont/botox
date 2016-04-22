@@ -1,5 +1,6 @@
 /**
  * The AccessLoggingPolicy property describes where and how access logs are stored for the AWS::ElasticLoadBalancing::LoadBalancer resource.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html}
  * @constructor
  */
 function ElasticLoadBalancingAccessLoggingPolicy() {

@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Redshift::ClusterSecurityGroupIngress - Specifies inbound (ingress) rules for an Amazon Redshift security group.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html}
  * @constructor
  * @param {String} name Name of the resource
  */

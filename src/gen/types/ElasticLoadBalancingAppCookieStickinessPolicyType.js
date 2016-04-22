@@ -1,5 +1,6 @@
 /**
  * The AppCookieStickinessPolicy type is an embedded property of the AWS::ElasticLoadBalancing::LoadBalancer type.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html}
  * @constructor
  */
 function ElasticLoadBalancingAppCookieStickinessPolicyType() {

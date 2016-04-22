@@ -1,5 +1,6 @@
 /**
  * Deployment is a property of the AWS::CodeDeploy::DeploymentGroup resource that specifies the AWS CodeDeploy application revision that will be deployed to the deployment group.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html}
  * @constructor
  */
 function AWSCodeDeployDeploymentGroupDeployment() {

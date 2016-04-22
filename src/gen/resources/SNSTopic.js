@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::SNS::Topic - The AWS::SNS::Topic type creates an Amazon SNS topic.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html}
  * @constructor
  * @param {String} name Name of the resource
  */

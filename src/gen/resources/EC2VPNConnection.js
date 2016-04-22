@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::VPNConnection - Creates a new VPN connection between an existing virtual private gateway and a VPN customer gateway.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html}
  * @constructor
  * @param {String} name Name of the resource
  */

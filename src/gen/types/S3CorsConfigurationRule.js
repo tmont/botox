@@ -1,5 +1,6 @@
 /**
  * Describes cross-origin access rules for the Amazon S3 Cors Configuration property.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors-corsrule.html}
  * @constructor
  */
 function S3CorsConfigurationRule() {

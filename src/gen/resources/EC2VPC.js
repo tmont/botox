@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::VPC - Creates a Virtual Private Cloud (VPC) with the CIDR block that you specify.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html}
  * @constructor
  * @param {String} name Name of the resource
  */

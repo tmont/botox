@@ -8,5 +8,6 @@
       "required": false,
       "type": "AWSCloudFormationInterfaceLabel"
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-interface-parameterlabel.html"
 }

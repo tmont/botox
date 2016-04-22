@@ -1,5 +1,6 @@
 /**
  * EBSOptions is a property of the the section called “AWS::Elasticsearch::Domain” resource that configures the Amazon Elastic Block Store (Amazon EBS) volumes that are attached to data nodes in the Amazon Elasticsearch Service (Amazon ES) domain.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html}
  * @constructor
  */
 function ElasticsearchServiceDomainEBSOptions() {

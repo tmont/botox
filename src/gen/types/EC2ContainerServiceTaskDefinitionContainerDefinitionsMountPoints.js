@@ -1,5 +1,6 @@
 /**
  * MountPoints is a property of the Amazon EC2 Container Service TaskDefinition ContainerDefinitions property that specifies the mount points for data volumes in a container.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-mountpoints.html}
  * @constructor
  */
 function EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints() {

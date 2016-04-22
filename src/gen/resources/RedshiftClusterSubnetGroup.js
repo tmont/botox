@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Redshift::ClusterSubnetGroup - Creates an Amazon Redshift subnet group. You must provide a list of one or more subnets in your existing Amazon VPC when creating an Amazon Redshift subnet group.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersubnetgroup.html}
  * @constructor
  * @param {String} name Name of the resource
  */

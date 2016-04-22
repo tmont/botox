@@ -1,5 +1,6 @@
 /**
  * The Amazon Elastic Block Store block device type is an embedded property of the Amazon EC2 Block Device Mapping Property property.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-template.html}
  * @constructor
  */
 function ElasticBlockStoreBlockDeviceProperty() {

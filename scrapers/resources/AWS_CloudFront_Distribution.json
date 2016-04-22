@@ -18,5 +18,6 @@
       "name": "DomainName",
       "description": "Returns: The domain name of the resource. For example: d2fadu0nynjpfn.cloudfront.net."
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution.html"
 }

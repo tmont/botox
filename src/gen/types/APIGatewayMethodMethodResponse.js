@@ -1,5 +1,6 @@
 /**
  * MethodResponse is a property of the AWS::ApiGateway::Method resource that defines the responses that can be sent to the client who calls an Amazon API Gateway (API Gateway) method.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html}
  * @constructor
  */
 function APIGatewayMethodMethodResponse() {

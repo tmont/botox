@@ -1,5 +1,6 @@
 /**
  * IPSetDescriptors is a property of the AWS::WAF::IPSet resource that specifies the IP address type and IP address range (in CIDR notation) from which web requests originate.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-ipset-ipsetdescriptors.html}
  * @constructor
  */
 function AWSWAFIPSetIPSetDescriptors() {

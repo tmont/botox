@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ECS::TaskDefinition - The AWS::ECS::TaskDefinition resource describes the container and volume definitions of an Amazon EC2 Container Service (Amazon ECS) task. You can specify which Docker images to use, the required resources, and other configurations related to launching the task definition through an Amazon ECS service or task.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html}
  * @constructor
  * @param {String} name Name of the resource
  */

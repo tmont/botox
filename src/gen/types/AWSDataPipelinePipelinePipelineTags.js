@@ -1,5 +1,6 @@
 /**
  * PipelineTags is a property of the AWS::DataPipeline::Pipeline resource that defines arbitrary key-value pairs for a pipeline.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetags.html}
  * @constructor
  */
 function AWSDataPipelinePipelinePipelineTags() {

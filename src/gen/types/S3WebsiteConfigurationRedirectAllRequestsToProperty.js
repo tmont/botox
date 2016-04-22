@@ -1,5 +1,6 @@
 /**
  * The RedirectAllRequestsTo code is an embedded property of the Amazon S3 Website Configuration Property property that describes the redirect behavior of all requests to a website endpoint of an Amazon S3 bucket.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-redirectallrequeststo.html}
  * @constructor
  */
 function S3WebsiteConfigurationRedirectAllRequestsToProperty() {

@@ -1,5 +1,6 @@
 /**
  * Describes the topic and events for the Amazon S3 NotificationConfiguration property.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-topicconfig.html}
  * @constructor
  */
 function S3NotificationConfigurationTopicConfigurations() {

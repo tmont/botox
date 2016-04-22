@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::VPCGatewayAttachment - Attaches a gateway to a VPC.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html}
  * @constructor
  * @param {String} name Name of the resource
  */

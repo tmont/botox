@@ -1,5 +1,6 @@
 /**
  * AliasTarget is a property of the AWS::Route53::RecordSet resource.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html}
  * @constructor
  */
 function Route53AliasTargetProperty() {

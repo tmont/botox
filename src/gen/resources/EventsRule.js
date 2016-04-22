@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Events::Rule - The AWS::Events::Rule resource creates a rule that matches incoming Amazon CloudWatch Events (CloudWatch Events) events and routes them to one or more targets for processing. For more information, see Using CloudWatch Events in the Amazon CloudWatch Developer Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html}
  * @constructor
  * @param {String} name Name of the resource
  */

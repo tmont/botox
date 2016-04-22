@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::RDS::DBCluster - The AWS::RDS::DBCluster resource creates a cluster, such as an Aurora for Amazon RDS (Amazon Aurora) DB cluster. Amazon Aurora is a fully managed, MySQL-compatible, relational database engine. For more information, see Aurora on Amazon RDS in the Amazon Relational Database Service User Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html}
  * @constructor
  * @param {String} name Name of the resource
  */

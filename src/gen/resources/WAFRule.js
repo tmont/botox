@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::WAF::Rule - The AWS::WAF::Rule resource creates an AWS WAF rule that specifies a combination of IPSet, ByteMatchSet, and SqlInjectionMatchSet objects that identify the web requests to allow, block, or count. To implement rules, you must associate them with a web ACL.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-rule.html}
  * @constructor
  * @param {String} name Name of the resource
  */

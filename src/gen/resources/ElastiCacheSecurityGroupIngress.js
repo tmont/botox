@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ElastiCache::SecurityGroupIngress - The AWS::ElastiCache::SecurityGroupIngress type authorizes ingress to a cache security group from hosts in specified Amazon EC2 security groups. For more information about ElastiCache security group ingress, go to AuthorizeCacheSecurityGroupIngress in the Amazon ElastiCache API Reference Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group-ingress.html}
  * @constructor
  * @param {String} name Name of the resource
  */

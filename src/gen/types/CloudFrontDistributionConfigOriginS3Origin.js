@@ -1,5 +1,6 @@
 /**
  * S3Origin is a property of the Origin property that describes the Amazon Simple Storage Service (S3) origin to associate with an Amazon CloudFront origin.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-s3origin.html}
  * @constructor
  */
 function CloudFrontDistributionConfigOriginS3Origin() {

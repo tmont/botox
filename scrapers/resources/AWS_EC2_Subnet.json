@@ -46,5 +46,6 @@
       "name": "AvailabilityZone",
       "description": "Returns the availability zone (for example, \"us-east-1a\") of this subnet.Example: { \"Fn::GetAtt\" : [ \"mySubnet\", \"AvailabilityZone\" ] }"
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html"
 }

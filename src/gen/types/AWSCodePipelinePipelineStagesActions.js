@@ -1,5 +1,6 @@
 /**
  * Actions is a property of the AWS CodePipeline Pipeline Stages property that specifies an action for an AWS CodePipeline stage.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html}
  * @constructor
  */
 function AWSCodePipelinePipelineStagesActions() {

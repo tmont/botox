@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::GameLift::Build - The AWS::GameLift::Build resource creates a build that includes all of the components to run your game server in an Amazon GameLift (GameLift) fleet.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html}
  * @constructor
  * @param {String} name Name of the resource
  */

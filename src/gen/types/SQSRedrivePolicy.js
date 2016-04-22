@@ -1,5 +1,6 @@
 /**
  * The RedrivePolicy type is a property of the AWS::SQS::Queue resource.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues-redrivepolicy.html}
  * @constructor
  */
 function SQSRedrivePolicy() {

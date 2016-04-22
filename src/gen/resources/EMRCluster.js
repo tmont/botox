@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EMR::Cluster - The AWS::EMR::Cluster resource creates an Amazon Elastic MapReduce (Amazon EMR) cluster, which is a collection of EC2 instances on which you can run big data frameworks to process and analyze vast amounts of data. For more information, see Plan an Amazon EMR Cluster in the Amazon Elastic MapReduce Management Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html}
  * @constructor
  * @param {String} name Name of the resource
  */

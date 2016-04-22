@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::SubnetRouteTableAssociation - Associates a subnet with a route table.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-route-table-assoc.html}
  * @constructor
  * @param {String} name Name of the resource
  */

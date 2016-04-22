@@ -1,5 +1,6 @@
 /**
  * Refers to an individual Amazon EC2 security group by ID or name in a group set. AWS::EC2::NetworkInterface takes a list of objects of this type in its GroupSet property.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-groupitem.html}
  * @constructor
  */
 function EC2NetworkInterfaceGroupItem() {

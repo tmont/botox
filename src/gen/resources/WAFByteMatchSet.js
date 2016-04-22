@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::WAF::ByteMatchSet - The AWS::WAF::ByteMatchSet resource creates an AWS WAF ByteMatchSet that identifies a part of a web request that you want to inspect. For more information, see CreateByteMatchSet in the AWS WAF API Reference.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-bytematchset.html}
  * @constructor
  * @param {String} name Name of the resource
  */

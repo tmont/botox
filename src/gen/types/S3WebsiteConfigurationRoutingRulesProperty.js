@@ -1,5 +1,6 @@
 /**
  * The RoutingRules property is an embedded property of the Amazon S3 Website Configuration Property property. This property describes the redirect behavior and when a redirect is applied.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html}
  * @constructor
  */
 function S3WebsiteConfigurationRoutingRulesProperty() {

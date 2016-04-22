@@ -1,5 +1,6 @@
 /**
  * SqlInjectionMatchTuples is a property of the AWS::WAF::SqlInjectionMatchSet resource that specifies the parts of web requests that AWS WAF inspects for SQL code.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.html}
  * @constructor
  */
 function AWSWAFSqlInjectionMatchSetSqlInjectionMatchTuples() {

@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::RDS::DBSubnetGroup - The AWS::RDS::DBSubnetGroup type creates an RDS database subnet group. Subnet groups must contain at least two subnet in two different Availability Zones in the same region.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnet-group.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -1,5 +1,6 @@
 /**
  * PlacementType is a property of the Amazon Elastic MapReduce Cluster JobFlowInstancesConfig property that specifies the Availability Zone (AZ) in which the job flow runs.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-placementtype.html}
  * @constructor
  */
 function ElasticMapReduceClusterJobFlowInstancesConfigPlacementType() {

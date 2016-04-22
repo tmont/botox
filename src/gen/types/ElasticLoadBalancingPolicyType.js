@@ -1,5 +1,6 @@
 /**
  * The ElasticLoadBalancing policy type is an embedded property of the AWS::ElasticLoadBalancing::LoadBalancer resource. You associate policies with a listener by referencing a policy's name in the listener's PolicyNames property.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html}
  * @constructor
  */
 function ElasticLoadBalancingPolicyType() {

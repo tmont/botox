@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ElastiCache::SubnetGroup - Creates a cache subnet group. For more information about cache subnet groups, go to Cache Subnet Groups in the Amazon ElastiCache User Guide or go to CreateCacheSubnetGroup in the Amazon ElastiCache API Reference Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html}
  * @constructor
  * @param {String} name Name of the resource
  */

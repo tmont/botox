@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::KMS::Key - The AWS::KMS::Key resource creates a customer master key (CMK) in AWS Key Management Service (AWS KMS). Users (customers) can use the master key to encrypt their data stored in AWS services that are integrated with AWS KMS or within their applications. For more information, see What is the AWS Key Management Service? in the AWS Key Management Service Developer Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html}
  * @constructor
  * @param {String} name Name of the resource
  */

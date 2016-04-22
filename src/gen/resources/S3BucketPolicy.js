@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::S3::BucketPolicy - The AWS::S3::BucketPolicy type applies an Amazon S3 bucket policy to an Amazon S3 bucket.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html}
  * @constructor
  * @param {String} name Name of the resource
  */

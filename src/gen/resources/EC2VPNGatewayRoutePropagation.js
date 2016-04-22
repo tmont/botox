@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::VPNGatewayRoutePropagation - Enables a virtual private gateway (VGW) to propagate routes to the routing tables of a VPC.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html}
  * @constructor
  * @param {String} name Name of the resource
  */

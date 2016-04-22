@@ -46,5 +46,6 @@
       "name": "Outputs.NestedStackOutputName",
       "description": "Returns: The output value from the specified nested stack where NestedStackOutputName is the name of the output value."
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html"
 }

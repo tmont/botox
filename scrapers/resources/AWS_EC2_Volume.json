@@ -69,5 +69,6 @@
       "update": "Updates are not supported."
     }
   ],
-  "attributes": []
+  "attributes": [],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html"
 }

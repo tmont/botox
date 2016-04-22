@@ -41,5 +41,6 @@
       "update": "Replacement if you're removing this property after it was previously specified. All other updates require no interruption."
     }
   ],
-  "attributes": []
+  "attributes": [],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html"
 }

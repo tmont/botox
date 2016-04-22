@@ -1,5 +1,6 @@
 /**
  * The HealthCheckConfig property is part of the AWS::Route53::HealthCheck resource that describes a health check that Amazon Route 53 uses before responding to a DNS query.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html}
  * @constructor
  */
 function Route53HealthCheckConfig() {

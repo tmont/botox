@@ -1,5 +1,6 @@
 /**
  * MethodSetting is a property of the Amazon API Gateway Deployment StageDescription property that configures settings for all methods in an Amazon API Gateway (API Gateway) stage.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription-methodsetting.html}
  * @constructor
  */
 function APIGatewayDeploymentStageDescriptionMethodSetting() {

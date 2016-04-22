@@ -1,5 +1,6 @@
 /**
  * The NotificationConfigurations property is an embedded property of the AWS::AutoScaling::AutoScalingGroup resource that specifies the events for which the Auto Scaling group sends notifications.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-notificationconfigurations.html}
  * @constructor
  */
 function AutoScalingNotificationConfigurations() {

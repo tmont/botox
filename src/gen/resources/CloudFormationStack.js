@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::CloudFormation::Stack - The AWS::CloudFormation::Stack type nests a stack as a resource in a top-level template.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html}
  * @constructor
  * @param {String} name Name of the resource
  */

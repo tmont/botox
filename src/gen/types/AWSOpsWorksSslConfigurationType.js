@@ -1,5 +1,6 @@
 /**
  * Describes an SSL configuration for the AWS::OpsWorks::App resource type.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html}
  * @constructor
  */
 function AWSOpsWorksSslConfigurationType() {

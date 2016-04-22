@@ -1,5 +1,6 @@
 /**
  * Describes the stack configuration manager for the AWS::OpsWorks::Stack resource type. For more information, see StackConfigurationManager in the AWS OpsWorks API Reference.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-stackconfigmanager.html}
  * @constructor
  */
 function AWSOpsWorksStackConfigurationManagerType() {

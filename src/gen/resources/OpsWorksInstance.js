@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::OpsWorks::Instance - Creates an instance for an AWS OpsWorks stack. These instances are the Amazon Elastic Compute Cloud (Amazon EC2) instances that, for example, handle the work of serving applications and balancing traffic.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html}
  * @constructor
  * @param {String} name Name of the resource
  */

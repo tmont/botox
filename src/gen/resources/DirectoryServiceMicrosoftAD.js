@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::DirectoryService::MicrosoftAD - The AWS::DirectoryService::MicrosoftAD resource creates a Microsoft Active Directory in AWS so that your directory users and groups can access the AWS Management Console and AWS applications using their existing credentials. For more information, see What Is AWS Directory Service? in the AWS Directory Service Administration Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html}
  * @constructor
  * @param {String} name Name of the resource
  */

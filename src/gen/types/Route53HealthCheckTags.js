@@ -1,5 +1,6 @@
 /**
  * The HealthCheckTags property describes key-value pairs that are associated with an AWS::Route53::HealthCheck resource.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktags.html}
  * @constructor
  */
 function Route53HealthCheckTags() {

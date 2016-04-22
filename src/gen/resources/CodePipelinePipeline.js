@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::CodePipeline::Pipeline - The AWS::CodePipeline::Pipeline resource creates an AWS CodePipeline pipeline that describes how software changes go through a release process. For more information, see What Is AWS CodePipeline? in the AWS CodePipeline User Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html}
  * @constructor
  * @param {String} name Name of the resource
  */

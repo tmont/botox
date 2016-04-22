@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::RouteTable - Creates a new route table within a VPC. After you create a new route table, you can add routes and associate the table with a subnet.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route-table.html}
  * @constructor
  * @param {String} name Name of the resource
  */

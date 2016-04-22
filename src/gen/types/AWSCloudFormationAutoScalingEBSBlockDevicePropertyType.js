@@ -1,5 +1,6 @@
 /**
  * The AutoScaling EBS Block Device type is an embedded property of the AutoScaling Block Device Mapping type.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html}
  * @constructor
  */
 function AWSCloudFormationAutoScalingEBSBlockDevicePropertyType() {

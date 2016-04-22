@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::AutoScaling::AutoScalingGroup - The AWS::AutoScaling::AutoScalingGroup type creates an Auto Scaling group.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::IAM::Role - Creates an AWS Identity and Access Management (IAM) role. An IAM role can be used to enable applications running on an Amazon EC2 instance to securely access your AWS resources.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -26,5 +26,6 @@
       "required": false,
       "type": "ElasticMapReduceStepHadoopJarStepConfigKeyValue[]"
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-step-hadoopjarstepconfig.html"
 }

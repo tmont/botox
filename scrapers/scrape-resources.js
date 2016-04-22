@@ -23,6 +23,7 @@ function processReferenceLinks(urls, next) {
 
 		function writeData($, next) {
 			const data = helpers.getPropertyInfo($, true);
+			data.referenceUrl = url;
 
 			console.log(' detected ' + data.fullName + ' ' +
 				' (' + data.properties.length + ' properties, ' + data.attributes.length + ' attributes)');

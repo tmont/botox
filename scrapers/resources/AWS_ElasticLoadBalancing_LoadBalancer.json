@@ -139,5 +139,6 @@
       "name": "SourceSecurityGroup.OwnerAlias",
       "description": "The owner of the source security group.Example: amazon-elb-sg"
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html"
 }

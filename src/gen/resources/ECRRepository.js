@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ECR::Repository - The AWS::ECR::Repository resource creates an Amazon EC2 Container Registry (Amazon ECR) repository, where users can push and pull Docker images. For more information, see Amazon ECR Repositories in the Amazon EC2 Container Registry User Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html}
  * @constructor
  * @param {String} name Name of the resource
  */

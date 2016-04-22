@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::OpsWorks::ElasticLoadBalancerAttachment - Attaches an Elastic Load Balancing load balancer to an AWS OpsWorks layer that you specify.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elbattachment.html}
  * @constructor
  * @param {String} name Name of the resource
  */

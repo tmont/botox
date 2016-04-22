@@ -157,5 +157,6 @@
       "name": "ReadEndPoint.Ports.List",
       "description": "A list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses.List attribute."
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html"
 }

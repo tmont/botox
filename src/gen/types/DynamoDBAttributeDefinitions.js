@@ -1,5 +1,6 @@
 /**
  * A list of attribute definitions for the AWS::DynamoDB::Table resource. Each element is composed of an AttributeName and AttributeType.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-attributedef.html}
  * @constructor
  */
 function DynamoDBAttributeDefinitions() {

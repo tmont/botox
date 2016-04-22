@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ElastiCache::CacheCluster - The AWS::ElastiCache::CacheCluster type creates an Amazon ElastiCache cache cluster.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html}
  * @constructor
  * @param {String} name Name of the resource
  */

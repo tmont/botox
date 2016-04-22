@@ -1,5 +1,6 @@
 /**
  * Describes parameters for the AWS::Redshift::ClusterParameterGroup resource type.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-property-redshift-clusterparametergroup-parameter.html}
  * @constructor
  */
 function RedshiftParameterType() {

@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ElasticBeanstalk::ApplicationVersion - Creates an application version, an iteration of deployable code, for an Elastic Beanstalk application.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -102,5 +102,6 @@
       "name": "MasterPublicDNS",
       "description": "The public DNS name of the master node (instance), such as ec2-12-123-123-123.us-west-2.compute.amazonaws.com."
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html"
 }

@@ -1,5 +1,6 @@
 /**
  * EbsConfiguration is a property of the AWS::EMR::Cluster and AWS::EMR::InstanceGroupConfig resources that defines Amazon Elastic Block Store (Amazon EBS) storage volumes to attach to your Amazon Elastic MapReduce (Amazon EMR) instances.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration.html}
  * @constructor
  */
 function ElasticMapReduceEbsConfiguration() {

@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EMR::InstanceGroupConfig - The AWS::EMR::InstanceGroupConfig resource configures a task instance group for an Amazon Elastic MapReduce (Amazon EMR) cluster.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html}
  * @constructor
  * @param {String} name Name of the resource
  */

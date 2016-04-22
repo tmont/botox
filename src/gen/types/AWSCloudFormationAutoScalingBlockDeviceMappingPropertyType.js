@@ -1,5 +1,6 @@
 /**
  * The AutoScaling Block Device Mapping type is an embedded property of the AWS::AutoScaling::LaunchConfiguration type.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html}
  * @constructor
  */
 function AWSCloudFormationAutoScalingBlockDeviceMappingPropertyType() {

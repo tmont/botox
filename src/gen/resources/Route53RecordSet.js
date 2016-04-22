@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Route53::RecordSet - The AWS::Route53::RecordSet type can be used as a standalone resource or as an embedded property in the AWS::Route53::RecordSetGroup type. Note that some AWS::Route53::RecordSet properties are valid only when used within AWS::Route53::RecordSetGroup.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -1,5 +1,6 @@
 /**
  * Target is a property of the AWS::Events::Rule resource that specifies the targets that CloudWatch Events invokes when a rule is triggered, such as AWS Lambda (Lambda) functions or Amazon Kinesis streams.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html}
  * @constructor
  */
 function CloudWatchEventsRuleTarget() {

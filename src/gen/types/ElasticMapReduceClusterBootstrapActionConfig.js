@@ -1,5 +1,6 @@
 /**
  * BootstrapActionConfig is a property of the AWS::EMR::Cluster resource that specifies bootstrap actions that Amazon Elastic MapReduce (Amazon EMR) runs before it installs applications on the cluster nodes.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig.html}
  * @constructor
  */
 function ElasticMapReduceClusterBootstrapActionConfig() {

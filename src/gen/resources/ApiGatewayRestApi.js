@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ApiGateway::RestApi - The AWS::ApiGateway::RestApi resource contains a collection of Amazon API Gateway (API Gateway) resources and methods that can be invoked through HTTPS endpoints.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html}
  * @constructor
  * @param {String} name Name of the resource
  */

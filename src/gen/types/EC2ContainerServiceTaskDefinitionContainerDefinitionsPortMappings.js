@@ -1,5 +1,6 @@
 /**
  * PortMappings is a property of the Amazon EC2 Container Service TaskDefinition ContainerDefinitions property that maps a container port to a host port.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-portmappings.html}
  * @constructor
  */
 function EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings() {

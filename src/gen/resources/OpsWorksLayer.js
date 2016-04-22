@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::OpsWorks::Layer - Creates an AWS OpsWorks layer. A layer defines, for example, which packages and applications are installed and how they are configured.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html}
  * @constructor
  * @param {String} name Name of the resource
  */

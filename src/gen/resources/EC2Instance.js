@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::Instance - The AWS::EC2::Instance type creates an Amazon EC2 instance.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html}
  * @constructor
  * @param {String} name Name of the resource
  */

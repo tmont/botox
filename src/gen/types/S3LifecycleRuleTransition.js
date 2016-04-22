@@ -1,5 +1,6 @@
 /**
  * Describes when an object transitions to a specified storage class for the Amazon S3 Lifecycle Rule property.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-transition.html}
  * @constructor
  */
 function S3LifecycleRuleTransition() {

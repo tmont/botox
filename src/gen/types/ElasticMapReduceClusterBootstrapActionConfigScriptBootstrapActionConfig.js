@@ -1,5 +1,6 @@
 /**
  * ScriptBootstrapActionConfig is a property of the Amazon Elastic MapReduce Cluster BootstrapActionConfig property that specifies the arguments and location of the bootstrap script that Amazon Elastic MapReduce (Amazon EMR) runs before it installs applications on the cluster nodes.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig-scriptbootstrapactionconfig.html}
  * @constructor
  */
 function ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig() {

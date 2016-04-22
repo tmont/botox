@@ -25,5 +25,6 @@
       "name": "RootResourceId",
       "description": "The root resource ID for a RestApi resource, such as a0bc123d4e."
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html"
 }

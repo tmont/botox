@@ -1,5 +1,6 @@
 /**
  * Placement is a property of the Amazon Elastic Compute Cloud SpotFleet SpotFleetRequestConfigData LaunchSpecifications property that defines the placement group for the Spot instances.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.html}
  * @constructor
  */
 function ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsPlacement() {

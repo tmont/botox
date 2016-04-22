@@ -1,5 +1,6 @@
 /**
  * Attributes that are copied (projected) from the source table into the index. These attributes are additions to the primary key attributes and index key attributes, which are automatically projected.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-projectionobject.html}
  * @constructor
  */
 function DynamoDBProjectionObject() {

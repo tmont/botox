@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ApiGateway::Authorizer - The AWS::ApiGateway::Authorizer resource creates an authorization layer that Amazon API Gateway (API Gateway) activates for methods that have authorization enabled. API Gateway activates the authorizer when a client calls those methods.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html}
  * @constructor
  * @param {String} name Name of the resource
  */

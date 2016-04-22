@@ -1,5 +1,6 @@
 /**
  * DefaultCacheBehavior is a property of the DistributionConfig property that describes the default cache behavior for an Amazon CloudFront distribution.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html}
  * @constructor
  */
 function CloudFrontDefaultCacheBehavior() {

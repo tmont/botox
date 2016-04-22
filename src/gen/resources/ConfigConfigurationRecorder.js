@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Config::ConfigurationRecorder - The AWS::Config::ConfigurationRecorder resource describes the AWS resource types for which AWS Config records configuration changes. The configuration recorder stores the configurations of the supported resources in your account as configuration items.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html}
  * @constructor
  * @param {String} name Name of the resource
  */

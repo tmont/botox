@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ElastiCache::ParameterGroup - The AWS::ElastiCache::ParameterGroup type creates a new cache parameter group. Cache parameter groups control the parameters for a cache cluster.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::IAM::AccessKey - The AWS::IAM::AccessKey resource type generates a secret access key and assigns it to an IAM user or AWS account.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html}
  * @constructor
  * @param {String} name Name of the resource
  */

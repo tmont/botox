@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::CodeDeploy::Application - The AWS::CodeDeploy::Application resource creates an AWS CodeDeploy application. An application revision, deployment configuration, and deployment group must all be included in an AWS CodeDeploy application. For more information, see AWS CodeDeploy Deployments in the AWS CodeDeploy User Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html}
  * @constructor
  * @param {String} name Name of the resource
  */

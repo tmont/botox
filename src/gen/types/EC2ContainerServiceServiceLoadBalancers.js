@@ -1,5 +1,6 @@
 /**
  * LoadBalancers is a property of the AWS::ECS::Service resource that specifies the load balancer to associate with an Amazon EC2 Container Service (Amazon ECS) service.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html}
  * @constructor
  */
 function EC2ContainerServiceServiceLoadBalancers() {

@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::AutoScaling::ScalingPolicy - The AWS::AutoScaling::ScalingPolicy resource adds a scaling policy to an auto scaling group. A scaling policy specifies whether to scale the auto scaling group up or down, and by how much. For more information on scaling policies, see Scaling by Policy in the Auto Scaling Developer Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html}
  * @constructor
  * @param {String} name Name of the resource
  */

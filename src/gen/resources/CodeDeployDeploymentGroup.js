@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::CodeDeploy::DeploymentGroup - The AWS::CodeDeploy::DeploymentGroup resource creates an AWS CodeDeploy deployment group that details which application revision to use and which instances your application revisions are deployed to.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html}
  * @constructor
  * @param {String} name Name of the resource
  */

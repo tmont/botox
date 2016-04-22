@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EFS::MountTarget - The AWS::EFS::MountTarget resource creates a mount target for an Amazon Elastic File System (Amazon EFS) file system (AWS::EFS::FileSystem). Use the mount target to mount file systems on Amazon Elastic Compute Cloud (Amazon EC2) instances. For more information, see the CreateMountTarget API in the Amazon Elastic File System User Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Redshift::ClusterParameterGroup - Creates an Amazon Redshift parameter group that you can associate with an Amazon Redshift cluster. The parameters in the group apply to all the databases that you create in the cluster.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html}
  * @constructor
  * @param {String} name Name of the resource
  */

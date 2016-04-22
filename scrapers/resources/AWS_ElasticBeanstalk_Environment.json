@@ -81,5 +81,6 @@
       "name": "EndpointURL",
       "description": "The URL to the load balancer for this environment.Example:awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-1.elb.amazonaws.com"
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html"
 }

@@ -76,6 +76,7 @@ function createResources(files, next) {
 
 /**
  * ${json.fullName} - ${json.description}
+ * @see {@link ${json.referenceUrl}}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::WAF::XssMatchSet - The AWS::WAF::XssMatchSet resource specifies the parts of web requests that you want AWS WAF to inspect for cross-site scripting attacks and the name of the header to inspect. For more information, see XssMatchSet in the AWS WAF API Reference.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-xssmatchset.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -1,5 +1,6 @@
 /**
  * RecordingGroup is property of the AWS::Config::ConfigurationRecorder resource that defines which AWS resource types to include in a recording group.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html}
  * @constructor
  */
 function AWSConfigConfigurationRecorderRecordingGroup() {

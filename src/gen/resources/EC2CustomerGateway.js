@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::CustomerGateway - Provides information to AWS about your VPN customer gateway device.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -1,5 +1,6 @@
 /**
  * Origin is a property of the DistributionConfig property that describes an Amazon CloudFront distribution origin.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html}
  * @constructor
  */
 function CloudFrontDistributionConfigOrigin() {

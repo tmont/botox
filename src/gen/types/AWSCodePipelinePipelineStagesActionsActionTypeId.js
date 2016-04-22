@@ -1,5 +1,6 @@
 /**
  * ActionTypeId is a property of the AWS CodePipeline Pipeline Stages Actions property that specifies the action type and provider for an AWS CodePipeline action.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.html}
  * @constructor
  */
 function AWSCodePipelinePipelineStagesActionsActionTypeId() {

@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ApiGateway::Resource - The AWS::ApiGateway::Resource resource creates a resource in an Amazon API Gateway (API Gateway) API.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-resource.html}
  * @constructor
  * @param {String} name Name of the resource
  */

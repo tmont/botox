@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::AutoScaling::ScheduledAction - Creates a scheduled scaling action for an Auto Scaling group, changing the number of servers available for your application in response to predictable load changes.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html}
  * @constructor
  * @param {String} name Name of the resource
  */

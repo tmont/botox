@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Route53::HostedZone - The AWS::Route53::HostedZone resource creates a hosted zone, which can contain a collection of record sets for a domain. You cannot create a hosted zone for a top-level domain (TLD). For more information, see POST CreateHostedZone or POST CreateHostedZone (Private) in the Amazon Route 53 API Reference.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html}
  * @constructor
  * @param {String} name Name of the resource
  */

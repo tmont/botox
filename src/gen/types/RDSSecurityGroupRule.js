@@ -1,5 +1,6 @@
 /**
  * The Amazon RDS security group rule is an embedded property of the AWS::RDS::DBSecurityGroup type.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group-rule.html}
  * @constructor
  */
 function RDSSecurityGroupRule() {

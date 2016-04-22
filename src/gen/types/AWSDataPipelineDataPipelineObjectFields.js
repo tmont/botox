@@ -1,5 +1,6 @@
 /**
  * Key-value pairs that describe the properties of a data pipeline object.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html}
  * @constructor
  */
 function AWSDataPipelineDataPipelineObjectFields() {

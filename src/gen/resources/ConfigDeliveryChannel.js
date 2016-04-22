@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Config::DeliveryChannel - The AWS::Config::DeliveryChannel resource describes where AWS Config stores configuration changes to an AWS resource.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::IAM::ManagedPolicy - AWS::IAM::ManagedPolicy creates an AWS Identity and Access Management (IAM) managed policy for your AWS account that you can use to apply permissions to IAM users, groups, and roles. For more information about managed policies, see Managed Policies and Inline Policies in the IAM User Guide guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html}
  * @constructor
  * @param {String} name Name of the resource
  */

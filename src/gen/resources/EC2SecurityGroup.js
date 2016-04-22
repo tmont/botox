@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::SecurityGroup - Creates an Amazon EC2 security group. To create a VPC security group, use the VpcId property.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html}
  * @constructor
  * @param {String} name Name of the resource
  */

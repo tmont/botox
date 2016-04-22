@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ElastiCache::ReplicationGroup - The AWS::ElastiCache::ReplicationGroup resource creates an Amazon ElastiCache replication group. A replication group is a collection of cache clusters, where one of the clusters is a primary read-write cluster and the others are read-only replicas.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html}
  * @constructor
  * @param {String} name Name of the resource
  */

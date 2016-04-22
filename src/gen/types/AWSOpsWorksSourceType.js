@@ -1,5 +1,6 @@
 /**
  * Describes the information required to retrieve a cookbook or app from a repository for the AWS::OpsWorks::Stack or AWS::OpsWorks::App resource types. For more information, see Source in the AWS OpsWorks API Reference.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-source.html}
  * @constructor
  */
 function AWSOpsWorksSourceType() {

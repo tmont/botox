@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Elasticsearch::Domain - The AWS::Elasticsearch::Domain resource creates an Amazon Elasticsearch Service (Amazon ES) domain that encapsulates the Amazon ES engine instances. For more information, see CreateElasticsearchDomain in the Amazon Elasticsearch Service Developer Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html}
  * @constructor
  * @param {String} name Name of the resource
  */

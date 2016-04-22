@@ -1,5 +1,6 @@
 /**
  * Describes custom event recipes for the AWS::OpsWorks::Layer resource type that AWS OpsWorks runs after the standard event recipes. For more information, see AWS OpsWorks Lifecycle Events in the AWS OpsWorks User Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html}
  * @constructor
  */
 function AWSOpsWorksRecipesType() {

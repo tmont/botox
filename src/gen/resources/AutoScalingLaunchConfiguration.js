@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::AutoScaling::LaunchConfiguration - The AWS::AutoScaling::LaunchConfiguration type creates an Auto Scaling launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances in the Auto Scaling group.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Lambda::Permission - The AWS::Lambda::Permission resource associates a policy statement with a specific AWS Lambda (Lambda) function's access policy. The function policy grants a specific AWS service or application permission to invoke the function. For more information, see AddPermission in the AWS Lambda Developer Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html}
  * @constructor
  * @param {String} name Name of the resource
  */

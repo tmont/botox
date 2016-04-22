@@ -29,5 +29,6 @@
       "description": "All of the table attributes are projected into the index.",
       "required": false
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-projectionobject.html"
 }

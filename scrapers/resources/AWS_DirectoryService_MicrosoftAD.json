@@ -57,5 +57,6 @@
       "name": "DnsIpAddresses",
       "description": "The IP addresses of the DNS servers for the directory, such as [ \"192.0.2.1\", \"192.0.2.2\" ]."
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html"
 }

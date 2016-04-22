@@ -16,5 +16,6 @@
       "type": "String",
       "update": "No interruption"
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html"
 }

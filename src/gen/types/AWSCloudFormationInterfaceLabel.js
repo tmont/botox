@@ -1,5 +1,6 @@
 /**
  * Label is a property of the ParameterGroup and ParameterLabel properties that defines name for a parameter group or parameter.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-interface-label.html}
  * @constructor
  */
 function AWSCloudFormationInterfaceLabel() {

@@ -1,5 +1,6 @@
 /**
  * Subscription is an embedded property of the AWS::SNS::Topic resource that describes the subscription endpoints for a topic.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html}
  * @constructor
  */
 function SNSSubscriptionPropertyType() {

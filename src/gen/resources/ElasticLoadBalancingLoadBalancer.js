@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ElasticLoadBalancing::LoadBalancer - The AWS::ElasticLoadBalancing::LoadBalancer type creates a LoadBalancer.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -25,6 +25,7 @@ function processTypeUrls(urls, next) {
 
 		function writeData($, next) {
 			const data = helpers.getPropertyInfo($);
+			data.referenceUrl = url;
 
 			console.log(' detected ' + data.name + ' ' +
 				' (' + data.properties.length + ' properties)');

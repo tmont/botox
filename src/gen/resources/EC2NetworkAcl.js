@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::NetworkAcl - Creates a new network ACL in a VPC.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl.html}
  * @constructor
  * @param {String} name Name of the resource
  */

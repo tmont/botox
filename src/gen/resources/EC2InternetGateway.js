@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::InternetGateway - Creates a new Internet gateway in your AWS account. After creating the Internet gateway, you then attach it to a VPC.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internet-gateway.html}
  * @constructor
  * @param {String} name Name of the resource
  */

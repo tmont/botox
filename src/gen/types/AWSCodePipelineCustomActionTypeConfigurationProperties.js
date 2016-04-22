@@ -1,5 +1,6 @@
 /**
  * ConfigurationProperties is a property of the AWS::CodePipeline::CustomActionType resource that defines a configuration for an AWS CodePipeline custom action.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype-configurationproperties.html}
  * @constructor
  */
 function AWSCodePipelineCustomActionTypeConfigurationProperties() {

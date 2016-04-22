@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::IAM::UserToGroupAddition - The AWS::IAM::UserToGroupAddition type adds AWS Identity and Access Management (IAM) users to a group.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -1,5 +1,6 @@
 /**
  * Describes global secondary indexes for the AWS::DynamoDB::Table resource.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-gsi.html}
  * @constructor
  */
 function DynamoDBGlobalSecondaryIndexes() {

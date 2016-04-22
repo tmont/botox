@@ -1,5 +1,6 @@
 /**
  * ArtifactStore is a property of the AWS::CodePipeline::Pipeline resource that defines the S3 location where AWS CodePipeline stores pipeline artifacts.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html}
  * @constructor
  */
 function AWSCodePipelinePipelineArtifactStore() {

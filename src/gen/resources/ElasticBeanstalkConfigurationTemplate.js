@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ElasticBeanstalk::ConfigurationTemplate - Creates a configuration template for an Elastic Beanstalk application. You can use configuration templates to deploy different versions of an application by using the configuration settings that you define in the configuration template.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html}
  * @constructor
  * @param {String} name Name of the resource
  */

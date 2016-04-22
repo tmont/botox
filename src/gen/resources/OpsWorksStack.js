@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::OpsWorks::Stack - Creates an AWS OpsWorks stack. An AWS OpsWorks stack represents a set of instances that you want to manage collectively, typically because they have a common purpose such as serving PHP applications.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html}
  * @constructor
  * @param {String} name Name of the resource
  */

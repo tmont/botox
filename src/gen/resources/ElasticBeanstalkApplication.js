@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ElasticBeanstalk::Application - Creates an Elastic Beanstalk application.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk.html}
  * @constructor
  * @param {String} name Name of the resource
  */

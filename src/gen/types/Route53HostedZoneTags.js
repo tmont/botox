@@ -1,5 +1,6 @@
 /**
  * The HostedZoneTags property describes key-value pairs that are associated with an AWS::Route53::HostedZone resource.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html}
  * @constructor
  */
 function Route53HostedZoneTags() {

@@ -1,5 +1,6 @@
 /**
  * LoginProfile is a property of the AWS::IAM::User resource that creates a login profile for users so that they can access the AWS Management Console.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html}
  * @constructor
  */
 function IAMUserLoginProfile() {

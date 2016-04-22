@@ -1,5 +1,6 @@
 /**
  * Describes where logs are stored and the prefix that Amazon S3 assigns to all log object keys for an AWS::S3::Bucket resource. These logs track requests to an Amazon S3 bucket. For more information, see PUT Bucket logging in the Amazon Simple Storage Service API Reference.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-loggingconfig.html}
  * @constructor
  */
 function S3LoggingConfiguration() {

@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::DynamoDB::Table - Creates a DynamoDB table.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html}
  * @constructor
  * @param {String} name Name of the resource
  */

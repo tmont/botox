@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Kinesis::Stream - Creates an Amazon Kinesis stream that captures and transports data records that are emitted from data sources. For specific information about creating streams, see CreateStream in the Amazon Kinesis API Reference.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html}
  * @constructor
  * @param {String} name Name of the resource
  */

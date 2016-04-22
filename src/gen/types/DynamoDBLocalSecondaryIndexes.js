@@ -1,5 +1,6 @@
 /**
  * Describes local secondary indexes for the AWS::DynamoDB::Table resource. Each index is scoped to a given hash key value. Tables with one or more local secondary indexes are subject to an item collection size limit, where the amount of data within a given item collection cannot exceed 10 GB.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-lsi.html}
  * @constructor
  */
 function DynamoDBLocalSecondaryIndexes() {

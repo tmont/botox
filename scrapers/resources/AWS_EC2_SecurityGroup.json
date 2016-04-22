@@ -46,5 +46,6 @@
       "name": "GroupId",
       "description": "The group ID of the specified security group, such as sg-94b3a1f6."
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html"
 }

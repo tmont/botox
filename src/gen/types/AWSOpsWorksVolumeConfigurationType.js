@@ -1,5 +1,6 @@
 /**
  * Describes the Amazon EBS volumes for the AWS::OpsWorks::Layer resource type.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfig.html}
  * @constructor
  */
 function AWSOpsWorksVolumeConfigurationType() {

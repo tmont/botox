@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::IAM::Group - The AWS::IAM::Group type creates an Identity and Access Management (IAM) group.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html}
  * @constructor
  * @param {String} name Name of the resource
  */

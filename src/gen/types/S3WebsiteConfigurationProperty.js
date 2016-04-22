@@ -1,5 +1,6 @@
 /**
  * WebsiteConfiguration is an embedded property of the AWS::S3::Bucket resource.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration.html}
  * @constructor
  */
 function S3WebsiteConfigurationProperty() {

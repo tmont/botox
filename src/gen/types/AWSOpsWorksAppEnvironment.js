@@ -1,5 +1,6 @@
 /**
  * Environment is a property of the AWS::OpsWorks::App resource that specifies the environment variable to associate with the AWS OpsWorks app.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html}
  * @constructor
  */
 function AWSOpsWorksAppEnvironment() {

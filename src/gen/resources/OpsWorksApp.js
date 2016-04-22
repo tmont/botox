@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::OpsWorks::App - Defines an AWS OpsWorks app for an AWS OpsWorks stack. The app represents code that you want to run on an application server.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html}
  * @constructor
  * @param {String} name Name of the resource
  */

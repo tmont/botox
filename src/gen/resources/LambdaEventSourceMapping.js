@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Lambda::EventSourceMapping - The AWS::Lambda::EventSourceMapping resource specifies a stream as an event source for an AWS Lambda (Lambda) function. The stream can be an Amazon Kinesis stream or an Amazon DynamoDB (DynamoDB) stream. Lambda invokes the associated function when records are posted to the stream. For more information, see CreateEventSourceMapping in the AWS Lambda Developer Guide.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html}
  * @constructor
  * @param {String} name Name of the resource
  */

@@ -1,5 +1,6 @@
 /**
  * JobFlowInstancesConfig is a property of the AWS::EMR::Cluster resource that configures the EC2 instances (nodes) that will run jobs in an Amazon Elastic MapReduce (Amazon EMR) cluster.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html}
  * @constructor
  */
 function ElasticMapReduceClusterJobFlowInstancesConfig() {

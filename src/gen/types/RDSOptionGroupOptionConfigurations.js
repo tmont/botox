@@ -1,5 +1,6 @@
 /**
  * Use the OptionConfigurations property to configure an option and its settings for an AWS::RDS::OptionGroup resource.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html}
  * @constructor
  */
 function RDSOptionGroupOptionConfigurations() {

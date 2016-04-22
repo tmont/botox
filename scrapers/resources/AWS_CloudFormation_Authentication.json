@@ -54,5 +54,6 @@
       "type": "String"
     }
   ],
-  "attributes": []
+  "attributes": [],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-authentication.html"
 }

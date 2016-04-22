@@ -1,5 +1,6 @@
 /**
  * Rules is a property of the Amazon S3 NotificationConfiguration Config Filter S3Key property that describes the Amazon Simple Storage Service (Amazon S3) object key name to filter on and whether to filter on the suffix or prefix of the key name.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules.html}
  * @constructor
  */
 function S3NotificationConfigurationConfigFilterS3KeyRules() {

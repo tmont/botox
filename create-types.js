@@ -46,6 +46,7 @@ function createTypes(files, next) {
 
 		const code = `/**
  * ${json.description}
+ * @see {@link ${json.referenceUrl}}
  * @constructor
  */
 function ${className}() {

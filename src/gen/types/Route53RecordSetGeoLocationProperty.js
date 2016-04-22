@@ -1,5 +1,6 @@
 /**
  * The GeoLocation property is part of the AWS::Route53::RecordSet resource that describes how Amazon Route 53 responds to DNS queries based on the geographic location of the query.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html}
  * @constructor
  */
 function Route53RecordSetGeoLocationProperty() {

@@ -64,5 +64,6 @@
       "name": "QueueName",
       "description": "Returns the queue name. For example:mystack-myqueue-1VF9BKQH5BJVI"
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html"
 }

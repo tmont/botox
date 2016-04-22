@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::Logs::SubscriptionFilter - The AWS::Logs::SubscriptionFilter resource creates an Amazon CloudWatch Logs (CloudWatch Logs) subscription filter that defines which log events are delivered to your Amazon Kinesis stream or AWS Lambda (Lambda) function and where to send them.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html}
  * @constructor
  * @param {String} name Name of the resource
  */

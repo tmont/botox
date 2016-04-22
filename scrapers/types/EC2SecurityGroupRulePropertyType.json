@@ -9,8 +9,8 @@
       "type": "String"
     },
     {
-      "name": "DestinationSecurityGroupId (SecurityGroupEgress only)",
-      "description": "Specifies the GroupId of the destination Amazon VPC security group.",
+      "name": "DestinationSecurityGroupId",
+      "description": "Specifies the GroupId of the destination Amazon VPC security group. (SecurityGroupEgress only)",
       "required": false,
       "type": "String"
     },
@@ -27,20 +27,20 @@
       "type": "String"
     },
     {
-      "name": "SourceSecurityGroupId (SecurityGroupIngress only)",
-      "description": "For VPC security groups only. Specifies the ID of the Amazon EC2 Security Group to allow access. You can use the Ref intrinsic function to refer to the logical ID of a security group defined in the same template.",
+      "name": "SourceSecurityGroupId",
+      "description": "For VPC security groups only. Specifies the ID of the Amazon EC2 Security Group to allow access. You can use the Ref intrinsic function to refer to the logical ID of a security group defined in the same template. (SecurityGroupIngress only)",
       "required": false,
       "type": "String"
     },
     {
-      "name": "SourceSecurityGroupName (SecurityGroupIngress only)",
-      "description": "For non-VPC security groups only. Specifies the name of the Amazon EC2 Security Group to use for access. You can use the Ref intrinsic function to refer to the logical name of a security group that is defined in the same template.",
+      "name": "SourceSecurityGroupName",
+      "description": "For non-VPC security groups only. Specifies the name of the Amazon EC2 Security Group to use for access. You can use the Ref intrinsic function to refer to the logical name of a security group that is defined in the same template. (SecurityGroupIngress only)",
       "required": false,
       "type": "String"
     },
     {
-      "name": "SourceSecurityGroupOwnerId (SecurityGroupIngress only)",
-      "description": "Specifies the AWS Account ID of the owner of the Amazon EC2 Security Group that is specified in the SourceSecurityGroupName property.",
+      "name": "SourceSecurityGroupOwnerId",
+      "description": "Specifies the AWS Account ID of the owner of the Amazon EC2 Security Group that is specified in the SourceSecurityGroupName property. (SecurityGroupIngress only)",
       "required": false,
       "type": "String"
     },
@@ -50,5 +50,6 @@
       "required": false,
       "type": "Number"
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html"
 }

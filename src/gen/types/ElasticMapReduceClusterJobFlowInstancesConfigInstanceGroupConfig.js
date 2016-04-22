@@ -1,5 +1,6 @@
 /**
  * InstanceGroupConfig is a property of the CoreInstanceGroup and MasterInstanceGroup properties of the job flow instances configuration. The InstanceGroupConfig property specifies the settings for instances (nodes) in the core and master instance groups of an Amazon Elastic MapReduce (Amazon EMR) cluster.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html}
  * @constructor
  */
 function ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig() {

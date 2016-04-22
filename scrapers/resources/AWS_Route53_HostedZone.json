@@ -33,5 +33,6 @@
       "type": "Route53HostedZoneVPC[]"
     }
   ],
-  "attributes": []
+  "attributes": [],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html"
 }

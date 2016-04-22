@@ -1,5 +1,6 @@
 /**
  * Describes the versioning state of an AWS::S3::Bucket resource. For more information, see PUT Bucket versioning in the Amazon Simple Storage Service API Reference.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-versioningconfig.html}
  * @constructor
  */
 function S3VersioningConfiguration() {

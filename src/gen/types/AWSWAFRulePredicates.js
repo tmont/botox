@@ -1,5 +1,6 @@
 /**
  * Predicates is a property of the AWS::WAF::Rule resource that specifies the ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects to include in an AWS WAF rule. If you add more than one predicate to a rule, an incoming request must match all of the specifications in the predicates to be allowed or blocked.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html}
  * @constructor
  */
 function AWSWAFRulePredicates() {

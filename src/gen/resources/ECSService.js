@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::ECS::Service - The AWS::ECS::Service resource creates an Amazon EC2 Container Service (Amazon ECS) service that runs and maintains the desired number of tasks and associated load balancers.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html}
  * @constructor
  * @param {String} name Name of the resource
  */

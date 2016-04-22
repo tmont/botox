@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::EC2::Volume - The AWS::EC2::Volume type creates a new Amazon Elastic Block Store (Amazon EBS) volume.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html}
  * @constructor
  * @param {String} name Name of the resource
  */

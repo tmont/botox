@@ -1,5 +1,6 @@
 /**
  * Rules is a property of the Amazon S3 ReplicationConfiguration property that specifies which Amazon Simple Storage Service (Amazon S3) objects to replicate and where to store them.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html}
  * @constructor
  */
 function S3ReplicationConfigurationRules() {

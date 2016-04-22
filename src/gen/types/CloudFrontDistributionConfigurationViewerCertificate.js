@@ -1,5 +1,6 @@
 /**
  * ViewerCertificate is a property of the CloudFront DistributionConfig property that specifies which certificate to use when viewers use HTTPS to request objects.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-viewercertificate.html}
  * @constructor
  */
 function CloudFrontDistributionConfigurationViewerCertificate() {

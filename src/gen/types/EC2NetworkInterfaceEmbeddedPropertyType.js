@@ -1,5 +1,6 @@
 /**
  * The EC2 Network Interface type is an embedded property of the AWS::EC2::Instance type. It specifies a network interface that is to be attached.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-iface-embedded.html}
  * @constructor
  */
 function EC2NetworkInterfaceEmbeddedPropertyType() {

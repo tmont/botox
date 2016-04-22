@@ -1,5 +1,6 @@
 /**
  * PipelineObjects is a property of the AWS::DataPipeline::Pipeline resource that describes a data pipeline object.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html}
  * @constructor
  */
 function AWSDataPipelinePipelineObjects() {

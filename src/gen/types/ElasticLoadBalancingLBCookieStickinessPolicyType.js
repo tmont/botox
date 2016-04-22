@@ -1,5 +1,6 @@
 /**
  * The LBCookieStickinessPolicy type is an embedded property of the AWS::ElasticLoadBalancing::LoadBalancer type.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html}
  * @constructor
  */
 function ElasticLoadBalancingLBCookieStickinessPolicyType() {

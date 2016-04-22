@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::CloudWatch::Alarm - The AWS::CloudWatch::Alarm type creates an CloudWatch alarm.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html}
  * @constructor
  * @param {String} name Name of the resource
  */

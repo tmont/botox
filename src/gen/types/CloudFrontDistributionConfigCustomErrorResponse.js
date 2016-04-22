@@ -1,5 +1,6 @@
 /**
  * CustomErrorResponse is a property of the CloudFront DistributionConfig resource that defines custom error messages for certain HTTP status codes.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-customerrorresponse.html}
  * @constructor
  */
 function CloudFrontDistributionConfigCustomErrorResponse() {

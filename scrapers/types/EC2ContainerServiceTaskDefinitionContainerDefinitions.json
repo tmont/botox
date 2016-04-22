@@ -74,5 +74,6 @@
       "required": false,
       "type": "EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom[]"
     }
-  ]
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html"
 }

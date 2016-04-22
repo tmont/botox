@@ -1,5 +1,6 @@
 /**
  * CustomOrigin is a property of the Amazon CloudFront Origin property that describes an HTTP server.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-customorigin.html}
  * @constructor
  */
 function CloudFrontDistributionConfigOriginCustomOrigin() {

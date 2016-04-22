@@ -2,6 +2,7 @@ var Resource = require('../../resource');
 
 /**
  * AWS::SNS::TopicPolicy - The AWS::SNS::TopicPolicy resource associates Amazon SNS topics with a policy.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html}
  * @constructor
  * @param {String} name Name of the resource
  */

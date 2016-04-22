@@ -1,5 +1,6 @@
 /**
  * LaunchSpecifications is a property of the Amazon EC2 SpotFleet SpotFleetRequestConfigData property that defines the launch specifications for the Spot fleet request.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html}
  * @constructor
  */
 function ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications() {

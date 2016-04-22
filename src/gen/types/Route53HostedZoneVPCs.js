@@ -1,5 +1,6 @@
 /**
  * The HostedZoneVPCs property is part of the AWS::Route53::HostedZone resource that specifies the VPCs to associate with the hosted zone.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html}
  * @constructor
  */
 function Route53HostedZoneVPCs() {

@@ -63,7 +63,7 @@ module.exports = {
 			.map((i, el) => {
 				const $el = $(el);
 				const $dd = $(el).next('dd');
-				const desc = normalize($dd.find('p').first().text());
+				let desc = normalize($dd.find('p').first().text());
 				const pText = $dd.find('p').map((i, el) => {
 					return normalize($(el).text());
 				}).get();
@@ -144,8 +144,15 @@ module.exports = {
 					})
 					.filter(Boolean)[0];
 
+				let name = normalize($el.find('.term').text());
+				const extraName = /(\w+)(\s\(.+\))/.exec(name);
+				if (extraName) {
+					name = extraName[1];
+					desc += extraName[2];
+				}
+
 				return {
-					name: normalize($el.find('.term').text()),
+					name: name,
 					description: desc,
 					required: /^yes/i.test(required),
 					type: type,

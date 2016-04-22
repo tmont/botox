@@ -1,5 +1,6 @@
 /**
  * DisableInboundStageTransitions is a property of the AWS::CodePipeline::Pipeline resource that specifies which AWS CodePipeline stage to disable transitions to.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-disableinboundstagetransitions.html}
  * @constructor
  */
 function AWSCodePipelinePipelineDisableInboundStageTransitions() {

@@ -1,5 +1,6 @@
 /**
  * VolumeSpecification is a property of the Amazon Elastic MapReduce EbsConfiguration property that configures the Amazon Elastic Block Store (Amazon EBS) volumes that Amazon Elastic MapReduce (Amazon EMR) associates with your instances.
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.html}
  * @constructor
  */
 function ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification() {
