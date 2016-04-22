@@ -2,8 +2,8 @@
  * The Amazon Elastic Block Store block device type is an embedded property of the Amazon EC2 Block Device Mapping Property property.
  * @constructor
  */
-function ElasticBlockStoreBlockDeviceProperty(initialData) {
-	this.data = initialData || {};
+function ElasticBlockStoreBlockDeviceProperty() {
+	this.data = {};
 }
 
 ElasticBlockStoreBlockDeviceProperty.prototype = {

@@ -2,8 +2,8 @@
  * StageKey is a property of the AWS::ApiGateway::ApiKey resource that specifies the Amazon API Gateway (API Gateway) stage to associate with the API key. This association allows only clients with the key to make requests to methods in that stage.
  * @constructor
  */
-function APIGatewayApiKeyStageKey(initialData) {
-	this.data = initialData || {};
+function APIGatewayApiKeyStageKey() {
+	this.data = {};
 }
 
 APIGatewayApiKeyStageKey.prototype = {

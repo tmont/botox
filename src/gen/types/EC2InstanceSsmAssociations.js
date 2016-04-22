@@ -2,8 +2,8 @@
  * SsmAssociations is a property of the AWS::EC2::Instance resource that specifies the Amazon EC2 Simple Systems Manager (SSM) document and parameter values to associate with an instance.
  * @constructor
  */
-function EC2InstanceSsmAssociations(initialData) {
-	this.data = initialData || {};
+function EC2InstanceSsmAssociations() {
+	this.data = {};
 }
 
 EC2InstanceSsmAssociations.prototype = {

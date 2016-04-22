@@ -2,8 +2,8 @@
  * IntegrationResponse is a property of the Amazon API Gateway Method Integration property that specifies the response that Amazon API Gateway (API Gateway) sends after a method's back end finishes processing a request.
  * @constructor
  */
-function APIGatewayMethodIntegrationIntegrationResponse(initialData) {
-	this.data = initialData || {};
+function APIGatewayMethodIntegrationIntegrationResponse() {
+	this.data = {};
 }
 
 APIGatewayMethodIntegrationIntegrationResponse.prototype = {

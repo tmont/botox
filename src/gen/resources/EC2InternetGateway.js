@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::EC2::InternetGateway - Creates a new Internet gateway in your AWS account. After creating the Internet gateway, you then attach it to a VPC.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function EC2InternetGateway(name, initialData) {
+function EC2InternetGateway(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

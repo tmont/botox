@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::Route53::RecordSetGroup - The AWS::Route53::RecordSetGroup resource creates record sets for a hosted zone. For more information about constraints and values for each property, see POST CreateHostedZone for hosted zones and POST ChangeResourceRecordSet for resource record sets.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function Route53RecordSetGroup(name, initialData) {
+function Route53RecordSetGroup(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

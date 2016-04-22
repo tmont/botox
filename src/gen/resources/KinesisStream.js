@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::Kinesis::Stream - Creates an Amazon Kinesis stream that captures and transports data records that are emitted from data sources. For specific information about creating streams, see CreateStream in the Amazon Kinesis API Reference.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function KinesisStream(name, initialData) {
+function KinesisStream(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

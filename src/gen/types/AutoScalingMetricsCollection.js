@@ -2,8 +2,8 @@
  * The MetricsCollection is a property of the AWS::AutoScaling::AutoScalingGroup resource that describes the group metrics that an Auto Scaling group sends to CloudWatch. These metrics describe the group rather than any of its instances. For more information, see EnableMetricsCollection in the Auto Scaling API Reference.
  * @constructor
  */
-function AutoScalingMetricsCollection(initialData) {
-	this.data = initialData || {};
+function AutoScalingMetricsCollection() {
+	this.data = {};
 }
 
 AutoScalingMetricsCollection.prototype = {

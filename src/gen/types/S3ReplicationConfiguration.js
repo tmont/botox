@@ -2,8 +2,8 @@
  * ReplicationConfiguration is a property of the AWS::S3::Bucket resource that specifies replication rules and the AWS Identity and Access Management (IAM) role Amazon Simple Storage Service (Amazon S3) uses to replicate objects.
  * @constructor
  */
-function S3ReplicationConfiguration(initialData) {
-	this.data = initialData || {};
+function S3ReplicationConfiguration() {
+	this.data = {};
 }
 
 S3ReplicationConfiguration.prototype = {

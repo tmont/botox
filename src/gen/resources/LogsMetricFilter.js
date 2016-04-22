@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::Logs::MetricFilter - The AWS::Logs::MetricFilter resource creates a metric filter that describes how Amazon CloudWatch Logs extracts information from logs that you specify and transforms it into Amazon CloudWatch metrics. If you have multiple metric filters that are associated with a log group, all the filters are applied to the log streams in that group.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function LogsMetricFilter(name, initialData) {
+function LogsMetricFilter(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

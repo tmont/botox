@@ -2,8 +2,8 @@
  * InputArtifacts is a property of the AWS CodePipeline Pipeline Stages Actions property that specifies an artifact that the AWS CodePipeline action works on, such as a test or build artifact.
  * @constructor
  */
-function AWSCodePipelinePipelineStagesActionsInputArtifacts(initialData) {
-	this.data = initialData || {};
+function AWSCodePipelinePipelineStagesActionsInputArtifacts() {
+	this.data = {};
 }
 
 AWSCodePipelinePipelineStagesActionsInputArtifacts.prototype = {

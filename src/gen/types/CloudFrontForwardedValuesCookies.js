@@ -2,8 +2,8 @@
  * Cookies is a property of the CloudFront ForwardedValues that describes which cookies are forwarded to the Amazon CloudFront origin.
  * @constructor
  */
-function CloudFrontForwardedValuesCookies(initialData) {
-	this.data = initialData || {};
+function CloudFrontForwardedValuesCookies() {
+	this.data = {};
 }
 
 CloudFrontForwardedValuesCookies.prototype = {

@@ -2,8 +2,8 @@
  * Filter is a property of the LambdaConfigurations, QueueConfigurations, and TopicConfigurations properties that describes the filtering rules that determine the Amazon Simple Storage Service (Amazon S3) objects for which to send notifications.
  * @constructor
  */
-function S3NotificationConfigurationConfigFilter(initialData) {
-	this.data = initialData || {};
+function S3NotificationConfigurationConfigFilter() {
+	this.data = {};
 }
 
 S3NotificationConfigurationConfigFilter.prototype = {

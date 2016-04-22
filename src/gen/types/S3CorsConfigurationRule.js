@@ -2,8 +2,8 @@
  * Describes cross-origin access rules for the Amazon S3 Cors Configuration property.
  * @constructor
  */
-function S3CorsConfigurationRule(initialData) {
-	this.data = initialData || {};
+function S3CorsConfigurationRule() {
+	this.data = {};
 }
 
 S3CorsConfigurationRule.prototype = {

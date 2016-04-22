@@ -2,8 +2,8 @@
  * FieldToMatch is a property of the AWS WAF XssMatchSet XssMatchTuple property that specifies the part of a web request that you want AWS WAF to search, such as a specific header or a query string.
  * @constructor
  */
-function AWSWAFXssMatchSetXssMatchTupleFieldToMatch(initialData) {
-	this.data = initialData || {};
+function AWSWAFXssMatchSetXssMatchTupleFieldToMatch() {
+	this.data = {};
 }
 
 AWSWAFXssMatchSetXssMatchTupleFieldToMatch.prototype = {

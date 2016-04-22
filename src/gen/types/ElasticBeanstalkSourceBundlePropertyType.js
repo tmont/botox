@@ -2,8 +2,8 @@
  * The SourceBundle property is an embedded property of the AWS::ElasticBeanstalk::ApplicationVersion resource.
  * @constructor
  */
-function ElasticBeanstalkSourceBundlePropertyType(initialData) {
-	this.data = initialData || {};
+function ElasticBeanstalkSourceBundlePropertyType() {
+	this.data = {};
 }
 
 ElasticBeanstalkSourceBundlePropertyType.prototype = {

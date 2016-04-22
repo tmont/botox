@@ -2,8 +2,8 @@
  * VpcSettings is a property of the AWS::DirectoryService::MicrosoftAD resource that specifies the VPC settings for a Microsoft directory server.
  * @constructor
  */
-function AWSDirectoryServiceMicrosoftADVpcSettings(initialData) {
-	this.data = initialData || {};
+function AWSDirectoryServiceMicrosoftADVpcSettings() {
+	this.data = {};
 }
 
 AWSDirectoryServiceMicrosoftADVpcSettings.prototype = {

@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::DynamoDB::Table - Creates a DynamoDB table.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function DynamoDBTable(name, initialData) {
+function DynamoDBTable(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

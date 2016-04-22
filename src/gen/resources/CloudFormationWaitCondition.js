@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::CloudFormation::WaitCondition - Important
  * @constructor
+ * @param {String} name Name of the resource
  */
-function CloudFormationWaitCondition(name, initialData) {
+function CloudFormationWaitCondition(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

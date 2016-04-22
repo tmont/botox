@@ -2,8 +2,8 @@
  * Monitoring is a property of the Amazon Elastic Compute Cloud SpotFleet SpotFleetRequestConfigData LaunchSpecifications property that enables instance monitoring.
  * @constructor
  */
-function EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring(initialData) {
-	this.data = initialData || {};
+function EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring() {
+	this.data = {};
 }
 
 EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring.prototype = {

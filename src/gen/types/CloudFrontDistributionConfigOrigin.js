@@ -2,8 +2,8 @@
  * Origin is a property of the DistributionConfig property that describes an Amazon CloudFront distribution origin.
  * @constructor
  */
-function CloudFrontDistributionConfigOrigin(initialData) {
-	this.data = initialData || {};
+function CloudFrontDistributionConfigOrigin() {
+	this.data = {};
 }
 
 CloudFrontDistributionConfigOrigin.prototype = {

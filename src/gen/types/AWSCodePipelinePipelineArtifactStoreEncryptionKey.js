@@ -2,8 +2,8 @@
  * EncryptionKey is a property of the AWS CodePipeline Pipeline ArtifactStore property that specifies which key AWS CodePipeline uses to encrypt data in the artifact store, such as an AWS Key Management Service (AWS KMS) key.
  * @constructor
  */
-function AWSCodePipelinePipelineArtifactStoreEncryptionKey(initialData) {
-	this.data = initialData || {};
+function AWSCodePipelinePipelineArtifactStoreEncryptionKey() {
+	this.data = {};
 }
 
 AWSCodePipelinePipelineArtifactStoreEncryptionKey.prototype = {

@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::IAM::User - The AWS::IAM::User type creates a user.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function IAMUser(name, initialData) {
+function IAMUser(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

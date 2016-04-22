@@ -2,8 +2,8 @@
  * The Metric Dimension is an embedded property of the AWS::CloudWatch::Alarm type. Dimensions are arbitrary name/value pairs that can be associated with a CloudWatch metric. You can specify a maximum of 10 dimensions for a given metric.
  * @constructor
  */
-function CloudWatchMetricDimensionPropertyType(initialData) {
-	this.data = initialData || {};
+function CloudWatchMetricDimensionPropertyType() {
+	this.data = {};
 }
 
 CloudWatchMetricDimensionPropertyType.prototype = {

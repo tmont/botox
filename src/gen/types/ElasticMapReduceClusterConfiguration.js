@@ -2,8 +2,8 @@
  * Configuration is a property of the AWS::EMR::Cluster resource that specifies the software configuration of an Amazon Elastic MapReduce (Amazon EMR) cluster. For example configurations, see Amazon EMR Configurations in the Amazon Elastic MapReduce API Reference.
  * @constructor
  */
-function ElasticMapReduceClusterConfiguration(initialData) {
-	this.data = initialData || {};
+function ElasticMapReduceClusterConfiguration() {
+	this.data = {};
 }
 
 ElasticMapReduceClusterConfiguration.prototype = {

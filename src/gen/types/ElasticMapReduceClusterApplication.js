@@ -2,8 +2,8 @@
  * Application is a property of the AWS::EMR::Cluster resource that adds an Amazon Elastic MapReduce (Amazon EMR) application bundle or third-party software to an Amazon EMR cluster.
  * @constructor
  */
-function ElasticMapReduceClusterApplication(initialData) {
-	this.data = initialData || {};
+function ElasticMapReduceClusterApplication() {
+	this.data = {};
 }
 
 ElasticMapReduceClusterApplication.prototype = {

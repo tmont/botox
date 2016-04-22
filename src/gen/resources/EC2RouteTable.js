@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::EC2::RouteTable - Creates a new route table within a VPC. After you create a new route table, you can add routes and associate the table with a subnet.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function EC2RouteTable(name, initialData) {
+function EC2RouteTable(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

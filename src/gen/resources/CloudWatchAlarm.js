@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::CloudWatch::Alarm - The AWS::CloudWatch::Alarm type creates an CloudWatch alarm.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function CloudWatchAlarm(name, initialData) {
+function CloudWatchAlarm(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

@@ -2,8 +2,8 @@
  * Label is a property of the ParameterGroup and ParameterLabel properties that defines name for a parameter group or parameter.
  * @constructor
  */
-function AWSCloudFormationInterfaceLabel(initialData) {
-	this.data = initialData || {};
+function AWSCloudFormationInterfaceLabel() {
+	this.data = {};
 }
 
 AWSCloudFormationInterfaceLabel.prototype = {

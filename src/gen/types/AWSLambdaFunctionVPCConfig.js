@@ -2,8 +2,8 @@
  * VpcConfig is a property of the AWS::Lambda::Function resource that enables to your AWS Lambda (Lambda) function to access resources in a VPC. For more information, see Configuring a Lambda Function to Access Resources in an Amazon VPC in the AWS Lambda Developer Guide.
  * @constructor
  */
-function AWSLambdaFunctionVPCConfig(initialData) {
-	this.data = initialData || {};
+function AWSLambdaFunctionVPCConfig() {
+	this.data = {};
 }
 
 AWSLambdaFunctionVPCConfig.prototype = {

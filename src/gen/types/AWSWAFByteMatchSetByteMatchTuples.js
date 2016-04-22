@@ -2,8 +2,8 @@
  * ByteMatchTuples is a property of the AWS::WAF::ByteMatchSet resource that specifies settings for an AWS WAF ByteMatchSet resource, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests.
  * @constructor
  */
-function AWSWAFByteMatchSetByteMatchTuples(initialData) {
-	this.data = initialData || {};
+function AWSWAFByteMatchSetByteMatchTuples() {
+	this.data = {};
 }
 
 AWSWAFByteMatchSetByteMatchTuples.prototype = {

@@ -2,8 +2,8 @@
  * ParameterValues is a property of the AWS::DataPipeline::Pipeline resource that sets values for parameters that are used in a pipeline definition.
  * @constructor
  */
-function AWSDataPipelinePipelineParameterValues(initialData) {
-	this.data = initialData || {};
+function AWSDataPipelinePipelineParameterValues() {
+	this.data = {};
 }
 
 AWSDataPipelinePipelineParameterValues.prototype = {

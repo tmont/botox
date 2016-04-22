@@ -2,8 +2,8 @@
  * ForwardedValues is a property of the DefaultCacheBehavior and CacheBehavior properties that indicates whether Amazon CloudFront forwards query strings or cookies.
  * @constructor
  */
-function CloudFrontForwardedValues(initialData) {
-	this.data = initialData || {};
+function CloudFrontForwardedValues() {
+	this.data = {};
 }
 
 CloudFrontForwardedValues.prototype = {

@@ -2,8 +2,8 @@
  * The Listener property is an embedded property of the AWS::ElasticLoadBalancing::LoadBalancer type.
  * @constructor
  */
-function ElasticLoadBalancingListenerPropertyType(initialData) {
-	this.data = initialData || {};
+function ElasticLoadBalancingListenerPropertyType() {
+	this.data = {};
 }
 
 ElasticLoadBalancingListenerPropertyType.prototype = {

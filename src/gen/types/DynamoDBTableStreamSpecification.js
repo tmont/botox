@@ -2,8 +2,8 @@
  * StreamSpecification is a property of the AWS::DynamoDB::Table resource that defines the settings of a DynamoDB table's stream.
  * @constructor
  */
-function DynamoDBTableStreamSpecification(initialData) {
-	this.data = initialData || {};
+function DynamoDBTableStreamSpecification() {
+	this.data = {};
 }
 
 DynamoDBTableStreamSpecification.prototype = {

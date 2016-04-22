@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::EC2::VPCGatewayAttachment - Attaches a gateway to a VPC.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function EC2VPCGatewayAttachment(name, initialData) {
+function EC2VPCGatewayAttachment(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::ApiGateway::Resource - The AWS::ApiGateway::Resource resource creates a resource in an Amazon API Gateway (API Gateway) API.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function ApiGatewayResource(name, initialData) {
+function ApiGatewayResource(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

@@ -2,8 +2,8 @@
  * Use settings from another Elastic Beanstalk configuration template for the AWS::ElasticBeanstalk::ConfigurationTemplate resource type.
  * @constructor
  */
-function ElasticBeanstalkSourceConfigurationPropertyType(initialData) {
-	this.data = initialData || {};
+function ElasticBeanstalkSourceConfigurationPropertyType() {
+	this.data = {};
 }
 
 ElasticBeanstalkSourceConfigurationPropertyType.prototype = {

@@ -70,14 +70,15 @@ function createResources(files, next) {
 /**
  * ${json.fullName} - ${json.description}
  * @constructor
+ * @param {String} name Name of the resource
  */
-function ${className}(name, initialData) {
+function ${className}(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

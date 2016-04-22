@@ -2,8 +2,8 @@
  * Integration is a property of the AWS::ApiGateway::Method resource that specifies information about the target back end that an Amazon API Gateway (API Gateway) method calls.
  * @constructor
  */
-function APIGatewayMethodIntegration(initialData) {
-	this.data = initialData || {};
+function APIGatewayMethodIntegration() {
+	this.data = {};
 }
 
 APIGatewayMethodIntegration.prototype = {

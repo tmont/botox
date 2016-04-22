@@ -2,8 +2,8 @@
  * LambdaConfigurations is a property of the Amazon S3 NotificationConfiguration property that describes the AWS Lambda (Lambda) functions to invoke and the events for which to invoke them.
  * @constructor
  */
-function SimpleStorageServiceNotificationConfigurationLambdaConfigurations(initialData) {
-	this.data = initialData || {};
+function SimpleStorageServiceNotificationConfigurationLambdaConfigurations() {
+	this.data = {};
 }
 
 SimpleStorageServiceNotificationConfigurationLambdaConfigurations.prototype = {

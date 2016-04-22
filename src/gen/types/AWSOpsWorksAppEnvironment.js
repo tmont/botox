@@ -2,8 +2,8 @@
  * Environment is a property of the AWS::OpsWorks::App resource that specifies the environment variable to associate with the AWS OpsWorks app.
  * @constructor
  */
-function AWSOpsWorksAppEnvironment(initialData) {
-	this.data = initialData || {};
+function AWSOpsWorksAppEnvironment() {
+	this.data = {};
 }
 
 AWSOpsWorksAppEnvironment.prototype = {

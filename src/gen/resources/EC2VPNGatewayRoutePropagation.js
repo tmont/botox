@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::EC2::VPNGatewayRoutePropagation - Enables a virtual private gateway (VGW) to propagate routes to the routing tables of a VPC.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function EC2VPNGatewayRoutePropagation(name, initialData) {
+function EC2VPNGatewayRoutePropagation(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

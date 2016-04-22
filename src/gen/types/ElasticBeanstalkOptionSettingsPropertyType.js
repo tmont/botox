@@ -2,8 +2,8 @@
  * OptionSettings is an embedded property of the AWS::ElasticBeanstalk::Environment and AWS::ElasticBeanstalk::ConfigurationTemplate resources. You use the OptionSettings property to specify an array of options for the Elastic Beanstalk environment.
  * @constructor
  */
-function ElasticBeanstalkOptionSettingsPropertyType(initialData) {
-	this.data = initialData || {};
+function ElasticBeanstalkOptionSettingsPropertyType() {
+	this.data = {};
 }
 
 ElasticBeanstalkOptionSettingsPropertyType.prototype = {

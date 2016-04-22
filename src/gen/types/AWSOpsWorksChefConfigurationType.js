@@ -2,8 +2,8 @@
  * Describes the Chef configuration for the AWS::OpsWorks::Stack resource type. For more information, see ChefConfiguration in the AWS OpsWorks API Reference.
  * @constructor
  */
-function AWSOpsWorksChefConfigurationType(initialData) {
-	this.data = initialData || {};
+function AWSOpsWorksChefConfigurationType() {
+	this.data = {};
 }
 
 AWSOpsWorksChefConfigurationType.prototype = {

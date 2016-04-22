@@ -2,8 +2,8 @@
  * The EC2 PortRange property is an embedded property of the AWS::EC2::NetworkAclEntry type.
  * @constructor
  */
-function EC2PortRangePropertyType(initialData) {
-	this.data = initialData || {};
+function EC2PortRangePropertyType() {
+	this.data = {};
 }
 
 EC2PortRangePropertyType.prototype = {

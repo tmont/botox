@@ -2,8 +2,8 @@
  * Describes the versioning state of an AWS::S3::Bucket resource. For more information, see PUT Bucket versioning in the Amazon Simple Storage Service API Reference.
  * @constructor
  */
-function S3VersioningConfiguration(initialData) {
-	this.data = initialData || {};
+function S3VersioningConfiguration() {
+	this.data = {};
 }
 
 S3VersioningConfiguration.prototype = {

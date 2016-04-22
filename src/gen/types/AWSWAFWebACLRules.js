@@ -2,8 +2,8 @@
  * Rules is a property of the AWS::WAF::WebACL resource that specifies the rule to associate with an AWS WAF web access control list (ACL) and the rule's settings.
  * @constructor
  */
-function AWSWAFWebACLRules(initialData) {
-	this.data = initialData || {};
+function AWSWAFWebACLRules() {
+	this.data = {};
 }
 
 AWSWAFWebACLRules.prototype = {

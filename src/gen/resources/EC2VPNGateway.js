@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::EC2::VPNGateway - Creates a virtual private gateway. A virtual private gateway is the VPC-side endpoint for your VPN connection.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function EC2VPNGateway(name, initialData) {
+function EC2VPNGateway(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::RDS::EventSubscription - Use the AWS::RDS::EventSubscription resource to get notifications for Amazon Relational Database Service events through the Amazon Simple Notification Service. For more information, see Using Amazon RDS Event Notification in the Amazon Relational Database Service User Guide.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function RDSEventSubscription(name, initialData) {
+function RDSEventSubscription(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

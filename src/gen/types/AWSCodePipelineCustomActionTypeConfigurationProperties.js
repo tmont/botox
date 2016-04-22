@@ -2,8 +2,8 @@
  * ConfigurationProperties is a property of the AWS::CodePipeline::CustomActionType resource that defines a configuration for an AWS CodePipeline custom action.
  * @constructor
  */
-function AWSCodePipelineCustomActionTypeConfigurationProperties(initialData) {
-	this.data = initialData || {};
+function AWSCodePipelineCustomActionTypeConfigurationProperties() {
+	this.data = {};
 }
 
 AWSCodePipelineCustomActionTypeConfigurationProperties.prototype = {

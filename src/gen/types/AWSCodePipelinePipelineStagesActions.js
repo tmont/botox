@@ -2,8 +2,8 @@
  * Actions is a property of the AWS CodePipeline Pipeline Stages property that specifies an action for an AWS CodePipeline stage.
  * @constructor
  */
-function AWSCodePipelinePipelineStagesActions(initialData) {
-	this.data = initialData || {};
+function AWSCodePipelinePipelineStagesActions() {
+	this.data = {};
 }
 
 AWSCodePipelinePipelineStagesActions.prototype = {

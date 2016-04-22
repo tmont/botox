@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::EC2::Instance - The AWS::EC2::Instance type creates an Amazon EC2 instance.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function EC2Instance(name, initialData) {
+function EC2Instance(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

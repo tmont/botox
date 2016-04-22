@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::ElasticLoadBalancing::LoadBalancer - The AWS::ElasticLoadBalancing::LoadBalancer type creates a LoadBalancer.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function ElasticLoadBalancingLoadBalancer(name, initialData) {
+function ElasticLoadBalancingLoadBalancer(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

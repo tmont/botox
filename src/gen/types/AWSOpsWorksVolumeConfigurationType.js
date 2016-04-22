@@ -2,8 +2,8 @@
  * Describes the Amazon EBS volumes for the AWS::OpsWorks::Layer resource type.
  * @constructor
  */
-function AWSOpsWorksVolumeConfigurationType(initialData) {
-	this.data = initialData || {};
+function AWSOpsWorksVolumeConfigurationType() {
+	this.data = {};
 }
 
 AWSOpsWorksVolumeConfigurationType.prototype = {

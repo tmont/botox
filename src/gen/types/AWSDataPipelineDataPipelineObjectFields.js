@@ -2,8 +2,8 @@
  * Key-value pairs that describe the properties of a data pipeline object.
  * @constructor
  */
-function AWSDataPipelineDataPipelineObjectFields(initialData) {
-	this.data = initialData || {};
+function AWSDataPipelineDataPipelineObjectFields() {
+	this.data = {};
 }
 
 AWSDataPipelineDataPipelineObjectFields.prototype = {

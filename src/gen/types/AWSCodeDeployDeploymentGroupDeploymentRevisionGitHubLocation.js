@@ -2,8 +2,8 @@
  * GitHubLocation is a property of the AWS CodeDeploy DeploymentGroup Deployment Revision property that specifies the location of an application revision that is stored in GitHub.
  * @constructor
  */
-function AWSCodeDeployDeploymentGroupDeploymentRevisionGitHubLocation(initialData) {
-	this.data = initialData || {};
+function AWSCodeDeployDeploymentGroupDeploymentRevisionGitHubLocation() {
+	this.data = {};
 }
 
 AWSCodeDeployDeploymentGroupDeploymentRevisionGitHubLocation.prototype = {

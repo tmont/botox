@@ -2,8 +2,8 @@
  * Describes the environment tier for an AWS::ElasticBeanstalk::Environment resource. For more information, see Environment Tiers in the AWS Elastic Beanstalk Developer Guide.
  * @constructor
  */
-function ElasticBeanstalkEnvironmentTierPropertyType(initialData) {
-	this.data = initialData || {};
+function ElasticBeanstalkEnvironmentTierPropertyType() {
+	this.data = {};
 }
 
 ElasticBeanstalkEnvironmentTierPropertyType.prototype = {

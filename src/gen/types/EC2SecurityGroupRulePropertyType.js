@@ -2,8 +2,8 @@
  * The EC2 Security Group Rule is an embedded property of the AWS::EC2::SecurityGroup type.
  * @constructor
  */
-function EC2SecurityGroupRulePropertyType(initialData) {
-	this.data = initialData || {};
+function EC2SecurityGroupRulePropertyType() {
+	this.data = {};
 }
 
 EC2SecurityGroupRulePropertyType.prototype = {

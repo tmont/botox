@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::EC2::SecurityGroupEgress - The AWS::EC2::SecurityGroupEgress resource adds an egress rule to an Amazon VPC security group.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function EC2SecurityGroupEgress(name, initialData) {
+function EC2SecurityGroupEgress(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

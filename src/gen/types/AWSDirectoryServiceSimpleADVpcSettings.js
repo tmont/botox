@@ -2,8 +2,8 @@
  * VpcSettings is a property of the AWS::DirectoryService::SimpleAD resource that specifies the VPC settings for a directory server.
  * @constructor
  */
-function AWSDirectoryServiceSimpleADVpcSettings(initialData) {
-	this.data = initialData || {};
+function AWSDirectoryServiceSimpleADVpcSettings() {
+	this.data = {};
 }
 
 AWSDirectoryServiceSimpleADVpcSettings.prototype = {

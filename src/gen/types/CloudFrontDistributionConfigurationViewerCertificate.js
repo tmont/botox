@@ -2,8 +2,8 @@
  * ViewerCertificate is a property of the CloudFront DistributionConfig property that specifies which certificate to use when viewers use HTTPS to request objects.
  * @constructor
  */
-function CloudFrontDistributionConfigurationViewerCertificate(initialData) {
-	this.data = initialData || {};
+function CloudFrontDistributionConfigurationViewerCertificate() {
+	this.data = {};
 }
 
 CloudFrontDistributionConfigurationViewerCertificate.prototype = {

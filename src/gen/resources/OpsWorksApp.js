@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::OpsWorks::App - Defines an AWS OpsWorks app for an AWS OpsWorks stack. The app represents code that you want to run on an application server.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function OpsWorksApp(name, initialData) {
+function OpsWorksApp(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

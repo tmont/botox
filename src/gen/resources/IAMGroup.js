@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::IAM::Group - The AWS::IAM::Group type creates an Identity and Access Management (IAM) group.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function IAMGroup(name, initialData) {
+function IAMGroup(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

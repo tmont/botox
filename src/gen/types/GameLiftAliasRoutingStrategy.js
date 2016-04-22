@@ -2,8 +2,8 @@
  * RoutingStrategy is a property of the AWS::GameLift::Alias resource that configures the routing strategy for an Amazon GameLift (GameLift) alias. For more information, see the RoutingStrategy data type in the Amazon GameLift API Reference.
  * @constructor
  */
-function GameLiftAliasRoutingStrategy(initialData) {
-	this.data = initialData || {};
+function GameLiftAliasRoutingStrategy() {
+	this.data = {};
 }
 
 GameLiftAliasRoutingStrategy.prototype = {

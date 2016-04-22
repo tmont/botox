@@ -2,8 +2,8 @@
  * MetricTransformation is a property of the AWS::Logs::MetricFilter resource that describes how to transform log streams into a CloudWatch metric.
  * @constructor
  */
-function CloudWatchLogsMetricFilterMetricTransformationProperty(initialData) {
-	this.data = initialData || {};
+function CloudWatchLogsMetricFilterMetricTransformationProperty() {
+	this.data = {};
 }
 
 CloudWatchLogsMetricFilterMetricTransformationProperty.prototype = {

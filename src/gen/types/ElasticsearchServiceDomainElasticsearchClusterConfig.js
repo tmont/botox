@@ -2,8 +2,8 @@
  * ElasticsearchClusterConfig is a property of the the section called “AWS::Elasticsearch::Domain” resource that configures the cluster of an Amazon Elasticsearch Service (Amazon ES) domain.
  * @constructor
  */
-function ElasticsearchServiceDomainElasticsearchClusterConfig(initialData) {
-	this.data = initialData || {};
+function ElasticsearchServiceDomainElasticsearchClusterConfig() {
+	this.data = {};
 }
 
 ElasticsearchServiceDomainElasticsearchClusterConfig.prototype = {

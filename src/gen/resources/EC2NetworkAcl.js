@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::EC2::NetworkAcl - Creates a new network ACL in a VPC.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function EC2NetworkAcl(name, initialData) {
+function EC2NetworkAcl(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

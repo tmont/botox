@@ -2,8 +2,8 @@
  * LifeCycleConfiguration is property of the AWS::OpsWorks::Layer resource that specifies the lifecycle event configuration for the layer.
  * @constructor
  */
-function AWSOpsWorksLayerLifeCycleConfiguration(initialData) {
-	this.data = initialData || {};
+function AWSOpsWorksLayerLifeCycleConfiguration() {
+	this.data = {};
 }
 
 AWSOpsWorksLayerLifeCycleConfiguration.prototype = {

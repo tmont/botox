@@ -2,8 +2,8 @@
  * KeyValue is a property of the Amazon Elastic MapReduce Step HadoopJarStepConfig property that specifies key-value pairs, which are passed to a JAR file that Amazon Elastic MapReduce (Amazon EMR) executes.
  * @constructor
  */
-function ElasticMapReduceStepHadoopJarStepConfigKeyValue(initialData) {
-	this.data = initialData || {};
+function ElasticMapReduceStepHadoopJarStepConfigKeyValue() {
+	this.data = {};
 }
 
 ElasticMapReduceStepHadoopJarStepConfigKeyValue.prototype = {

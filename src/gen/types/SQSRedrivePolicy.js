@@ -2,8 +2,8 @@
  * The RedrivePolicy type is a property of the AWS::SQS::Queue resource.
  * @constructor
  */
-function SQSRedrivePolicy(initialData) {
-	this.data = initialData || {};
+function SQSRedrivePolicy() {
+	this.data = {};
 }
 
 SQSRedrivePolicy.prototype = {

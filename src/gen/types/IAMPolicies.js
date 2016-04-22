@@ -2,8 +2,8 @@
  * Policies is a property of the AWS::IAM::Role, AWS::IAM::Group, and AWS::IAM::User resources. The Policies property describes what actions are allowed on what resources. For more information about IAM policies, see Overview of Policies in IAM User Guide.
  * @constructor
  */
-function IAMPolicies(initialData) {
-	this.data = initialData || {};
+function IAMPolicies() {
+	this.data = {};
 }
 
 IAMPolicies.prototype = {

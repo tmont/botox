@@ -2,8 +2,8 @@
  * AssociationParameters is a property of the Amazon EC2 Instance SsmAssociations property that specifies input parameter values for an Amazon EC2 Simple Systems Manager (SSM) document.
  * @constructor
  */
-function EC2InstanceSsmAssociationsAssociationParameters(initialData) {
-	this.data = initialData || {};
+function EC2InstanceSsmAssociationsAssociationParameters() {
+	this.data = {};
 }
 
 EC2InstanceSsmAssociationsAssociationParameters.prototype = {

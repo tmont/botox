@@ -2,8 +2,8 @@
  * Describes an SSL configuration for the AWS::OpsWorks::App resource type.
  * @constructor
  */
-function AWSOpsWorksSslConfigurationType(initialData) {
-	this.data = initialData || {};
+function AWSOpsWorksSslConfigurationType() {
+	this.data = {};
 }
 
 AWSOpsWorksSslConfigurationType.prototype = {

@@ -2,8 +2,8 @@
  * Destination is a property of the Amazon S3 ReplicationConfiguration Rules property that specifies which Amazon Simple Storage Service (Amazon S3) bucket to store replicated objects and their storage class.
  * @constructor
  */
-function S3ReplicationConfigurationRulesDestination(initialData) {
-	this.data = initialData || {};
+function S3ReplicationConfigurationRulesDestination() {
+	this.data = {};
 }
 
 S3ReplicationConfigurationRulesDestination.prototype = {

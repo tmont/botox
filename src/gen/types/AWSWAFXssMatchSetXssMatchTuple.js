@@ -2,8 +2,8 @@
  * XssMatchTuple is a property of the AWS::WAF::XssMatchSet resource that specifies the part of a web request that you want AWS WAF to inspect for cross-site scripting attacks.
  * @constructor
  */
-function AWSWAFXssMatchSetXssMatchTuple(initialData) {
-	this.data = initialData || {};
+function AWSWAFXssMatchSetXssMatchTuple() {
+	this.data = {};
 }
 
 AWSWAFXssMatchSetXssMatchTuple.prototype = {

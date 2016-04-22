@@ -2,8 +2,8 @@
  * QueueConfigurations is a property of the Amazon S3 NotificationConfiguration property that describes the S3 bucket events about which you want to send messages to Amazon SQS and the queues to which you want to send them.
  * @constructor
  */
-function SimpleStorageServiceNotificationConfigurationQueueConfigurations(initialData) {
-	this.data = initialData || {};
+function SimpleStorageServiceNotificationConfigurationQueueConfigurations() {
+	this.data = {};
 }
 
 SimpleStorageServiceNotificationConfigurationQueueConfigurations.prototype = {

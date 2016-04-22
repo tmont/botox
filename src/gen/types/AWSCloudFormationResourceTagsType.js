@@ -2,8 +2,8 @@
  * You can use the AWS CloudFormation Resource Tags property to apply tags to resources, which can help you identify and categorize those resources. You can tag only resources for which AWS CloudFormation supports tagging. For information about which resources you can tag with AWS CloudFormation, see the individual resources in AWS Resource Types Reference.
  * @constructor
  */
-function AWSCloudFormationResourceTagsType(initialData) {
-	this.data = initialData || {};
+function AWSCloudFormationResourceTagsType() {
+	this.data = {};
 }
 
 AWSCloudFormationResourceTagsType.prototype = {

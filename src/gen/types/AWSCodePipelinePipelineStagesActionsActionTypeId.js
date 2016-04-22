@@ -2,8 +2,8 @@
  * ActionTypeId is a property of the AWS CodePipeline Pipeline Stages Actions property that specifies the action type and provider for an AWS CodePipeline action.
  * @constructor
  */
-function AWSCodePipelinePipelineStagesActionsActionTypeId(initialData) {
-	this.data = initialData || {};
+function AWSCodePipelinePipelineStagesActionsActionTypeId() {
+	this.data = {};
 }
 
 AWSCodePipelinePipelineStagesActionsActionTypeId.prototype = {

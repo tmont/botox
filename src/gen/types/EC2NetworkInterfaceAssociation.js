@@ -2,8 +2,8 @@
  * Describes a network interface association for an Elastic Network Interface (ENI). AWS::EC2::NetworkInterface takes an object of this type in its Association property.
  * @constructor
  */
-function EC2NetworkInterfaceAssociation(initialData) {
-	this.data = initialData || {};
+function EC2NetworkInterfaceAssociation() {
+	this.data = {};
 }
 
 EC2NetworkInterfaceAssociation.prototype = {

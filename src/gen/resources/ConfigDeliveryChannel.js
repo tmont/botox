@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::Config::DeliveryChannel - The AWS::Config::DeliveryChannel resource describes where AWS Config stores configuration changes to an AWS resource.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function ConfigDeliveryChannel(name, initialData) {
+function ConfigDeliveryChannel(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

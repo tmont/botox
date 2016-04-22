@@ -2,8 +2,8 @@
  * Ec2TagFilters is a property of the AWS::CodeDeploy::DeploymentGroup resource that specifies which EC2 instances to associate with the deployment group.
  * @constructor
  */
-function AWSCodeDeployDeploymentGroupEc2TagFilters(initialData) {
-	this.data = initialData || {};
+function AWSCodeDeployDeploymentGroupEc2TagFilters() {
+	this.data = {};
 }
 
 AWSCodeDeployDeploymentGroupEc2TagFilters.prototype = {

@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::ElasticBeanstalk::Application - Creates an Elastic Beanstalk application.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function ElasticBeanstalkApplication(name, initialData) {
+function ElasticBeanstalkApplication(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

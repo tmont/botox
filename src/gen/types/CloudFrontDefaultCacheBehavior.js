@@ -2,8 +2,8 @@
  * DefaultCacheBehavior is a property of the DistributionConfig property that describes the default cache behavior for an Amazon CloudFront distribution.
  * @constructor
  */
-function CloudFrontDefaultCacheBehavior(initialData) {
-	this.data = initialData || {};
+function CloudFrontDefaultCacheBehavior() {
+	this.data = {};
 }
 
 CloudFrontDefaultCacheBehavior.prototype = {

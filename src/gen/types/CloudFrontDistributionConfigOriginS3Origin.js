@@ -2,8 +2,8 @@
  * S3Origin is a property of the Origin property that describes the Amazon Simple Storage Service (S3) origin to associate with an Amazon CloudFront origin.
  * @constructor
  */
-function CloudFrontDistributionConfigOriginS3Origin(initialData) {
-	this.data = initialData || {};
+function CloudFrontDistributionConfigOriginS3Origin() {
+	this.data = {};
 }
 
 CloudFrontDistributionConfigOriginS3Origin.prototype = {

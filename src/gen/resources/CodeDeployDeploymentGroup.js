@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::CodeDeploy::DeploymentGroup - The AWS::CodeDeploy::DeploymentGroup resource creates an AWS CodeDeploy deployment group that details which application revision to use and which instances your application revisions are deployed to.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function CodeDeployDeploymentGroup(name, initialData) {
+function CodeDeployDeploymentGroup(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

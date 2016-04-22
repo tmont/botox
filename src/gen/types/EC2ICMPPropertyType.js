@@ -2,8 +2,8 @@
  * The EC2 ICMP property is an embedded property of the AWS::EC2::NetworkAclEntry type.
  * @constructor
  */
-function EC2ICMPPropertyType(initialData) {
-	this.data = initialData || {};
+function EC2ICMPPropertyType() {
+	this.data = {};
 }
 
 EC2ICMPPropertyType.prototype = {

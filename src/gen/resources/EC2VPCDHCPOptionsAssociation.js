@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::EC2::VPCDHCPOptionsAssociation - Associates a set of DHCP options (that you've previously created) with the specified VPC.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function EC2VPCDHCPOptionsAssociation(name, initialData) {
+function EC2VPCDHCPOptionsAssociation(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

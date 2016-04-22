@@ -2,8 +2,8 @@
  * Host is a property of the Amazon EC2 Container Service TaskDefinition Volumes property that specifies the data volume path on the host container instance.
  * @constructor
  */
-function EC2ContainerServiceTaskDefinitionVolumesHost(initialData) {
-	this.data = initialData || {};
+function EC2ContainerServiceTaskDefinitionVolumesHost() {
+	this.data = {};
 }
 
 EC2ContainerServiceTaskDefinitionVolumesHost.prototype = {

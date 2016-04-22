@@ -2,8 +2,8 @@
  * The ConnectionDrainingPolicy property describes how deregistered or unhealthy instances handle in-flight requests for the AWS::ElasticLoadBalancing::LoadBalancer resource. Connection draining ensures that the load balancer completes serving all in-flight requests made to a registered instance when the instance is deregistered or becomes unhealthy. Without connection draining, the load balancer closes connections to deregistered or unhealthy instances, and any in-flight requests are not completed.
  * @constructor
  */
-function ElasticLoadBalancingConnectionDrainingPolicy(initialData) {
-	this.data = initialData || {};
+function ElasticLoadBalancingConnectionDrainingPolicy() {
+	this.data = {};
 }
 
 ElasticLoadBalancingConnectionDrainingPolicy.prototype = {

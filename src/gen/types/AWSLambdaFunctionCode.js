@@ -2,8 +2,8 @@
  * Code is a property of the AWS::Lambda::Function resource that enables to you specify the source code of an AWS Lambda (Lambda) function. You can point to a file in an Amazon Simple Storage Service (Amazon S3) bucket or specify your source code as inline text (for nodejs runtime environments only).
  * @constructor
  */
-function AWSLambdaFunctionCode(initialData) {
-	this.data = initialData || {};
+function AWSLambdaFunctionCode() {
+	this.data = {};
 }
 
 AWSLambdaFunctionCode.prototype = {

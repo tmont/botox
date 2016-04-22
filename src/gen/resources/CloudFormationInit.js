@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::CloudFormation::Init - Topics
  * @constructor
+ * @param {String} name Name of the resource
  */
-function CloudFormationInit(name, initialData) {
+function CloudFormationInit(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

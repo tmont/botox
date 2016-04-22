@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::ECS::Cluster - The AWS::ECS::Cluster resource creates an Amazon EC2 Container Service (Amazon ECS) cluster. This resource has no properties; use the Amazon ECS container agent to connect to the cluster. For more information, see Amazon ECS Container Agent in the Amazon EC2 Container Service Developer Guide.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function ECSCluster(name, initialData) {
+function ECSCluster(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

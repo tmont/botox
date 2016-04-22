@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::EC2::NetworkInterfaceAttachment - Attaches an elastic network interface (ENI) to an Amazon EC2 instance. You can use this resource type to attach additional network interfaces to an instances without interruption.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function EC2NetworkInterfaceAttachment(name, initialData) {
+function EC2NetworkInterfaceAttachment(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

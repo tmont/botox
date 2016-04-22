@@ -2,8 +2,8 @@
  * Describes when an object transitions to a specified storage class for the Amazon S3 Lifecycle Rule property.
  * @constructor
  */
-function S3LifecycleRuleTransition(initialData) {
-	this.data = initialData || {};
+function S3LifecycleRuleTransition() {
+	this.data = {};
 }
 
 S3LifecycleRuleTransition.prototype = {

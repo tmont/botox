@@ -2,8 +2,8 @@
  * NoncurrentVersionTransition is a property of the Amazon S3 Lifecycle Rule property that describes when noncurrent objects transition to a specified storage class.
  * @constructor
  */
-function S3LifecycleRuleNoncurrentVersionTransition(initialData) {
-	this.data = initialData || {};
+function S3LifecycleRuleNoncurrentVersionTransition() {
+	this.data = {};
 }
 
 S3LifecycleRuleNoncurrentVersionTransition.prototype = {

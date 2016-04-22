@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::IAM::UserToGroupAddition - The AWS::IAM::UserToGroupAddition type adds AWS Identity and Access Management (IAM) users to a group.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function IAMUserToGroupAddition(name, initialData) {
+function IAMUserToGroupAddition(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

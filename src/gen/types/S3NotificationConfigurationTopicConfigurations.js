@@ -2,8 +2,8 @@
  * Describes the topic and events for the Amazon S3 NotificationConfiguration property.
  * @constructor
  */
-function S3NotificationConfigurationTopicConfigurations(initialData) {
-	this.data = initialData || {};
+function S3NotificationConfigurationTopicConfigurations() {
+	this.data = {};
 }
 
 S3NotificationConfigurationTopicConfigurations.prototype = {

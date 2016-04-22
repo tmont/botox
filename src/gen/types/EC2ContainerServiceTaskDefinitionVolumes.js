@@ -2,8 +2,8 @@
  * Volumes is a property of the AWS::ECS::TaskDefinition resource that specifies a list of data volumes, which your containers can then access.
  * @constructor
  */
-function EC2ContainerServiceTaskDefinitionVolumes(initialData) {
-	this.data = initialData || {};
+function EC2ContainerServiceTaskDefinitionVolumes() {
+	this.data = {};
 }
 
 EC2ContainerServiceTaskDefinitionVolumes.prototype = {

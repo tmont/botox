@@ -2,8 +2,8 @@
  * SizeConstraint is a property of the AWS::WAF::SizeConstraintSet resource that specifies a size constraint and which part of a web request that you want AWS WAF to constrain.
  * @constructor
  */
-function AWSWAFSizeConstraintSetSizeConstraint(initialData) {
-	this.data = initialData || {};
+function AWSWAFSizeConstraintSetSizeConstraint() {
+	this.data = {};
 }
 
 AWSWAFSizeConstraintSetSizeConstraint.prototype = {

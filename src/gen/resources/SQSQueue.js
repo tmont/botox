@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::SQS::Queue - The AWS::SQS::Queue type creates an Amazon SQS queue.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function SQSQueue(name, initialData) {
+function SQSQueue(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

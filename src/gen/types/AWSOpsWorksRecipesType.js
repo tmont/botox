@@ -2,8 +2,8 @@
  * Describes custom event recipes for the AWS::OpsWorks::Layer resource type that AWS OpsWorks runs after the standard event recipes. For more information, see AWS OpsWorks Lifecycle Events in the AWS OpsWorks User Guide.
  * @constructor
  */
-function AWSOpsWorksRecipesType(initialData) {
-	this.data = initialData || {};
+function AWSOpsWorksRecipesType() {
+	this.data = {};
 }
 
 AWSOpsWorksRecipesType.prototype = {

@@ -2,8 +2,8 @@
  * LoadBalancers is a property of the AWS::ECS::Service resource that specifies the load balancer to associate with an Amazon EC2 Container Service (Amazon ECS) service.
  * @constructor
  */
-function EC2ContainerServiceServiceLoadBalancers(initialData) {
-	this.data = initialData || {};
+function EC2ContainerServiceServiceLoadBalancers() {
+	this.data = {};
 }
 
 EC2ContainerServiceServiceLoadBalancers.prototype = {

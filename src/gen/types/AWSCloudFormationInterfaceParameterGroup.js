@@ -2,8 +2,8 @@
  * ParameterGroup is a property of the AWS::CloudFormation::Interface resource that defines a parameter group and the parameters to include in the group.
  * @constructor
  */
-function AWSCloudFormationInterfaceParameterGroup(initialData) {
-	this.data = initialData || {};
+function AWSCloudFormationInterfaceParameterGroup() {
+	this.data = {};
 }
 
 AWSCloudFormationInterfaceParameterGroup.prototype = {

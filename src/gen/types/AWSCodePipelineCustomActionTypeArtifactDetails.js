@@ -2,8 +2,8 @@
  * ArtifactDetails is a property of the AWS::CodePipeline::CustomActionType resource that specifies the details of an artifact for an AWS CodePipeline custom action. For valid values, see ArtifactDetails in the AWS CodePipeline API Reference.
  * @constructor
  */
-function AWSCodePipelineCustomActionTypeArtifactDetails(initialData) {
-	this.data = initialData || {};
+function AWSCodePipelineCustomActionTypeArtifactDetails() {
+	this.data = {};
 }
 
 AWSCodePipelineCustomActionTypeArtifactDetails.prototype = {

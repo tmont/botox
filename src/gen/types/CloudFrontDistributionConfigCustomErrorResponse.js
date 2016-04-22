@@ -2,8 +2,8 @@
  * CustomErrorResponse is a property of the CloudFront DistributionConfig resource that defines custom error messages for certain HTTP status codes.
  * @constructor
  */
-function CloudFrontDistributionConfigCustomErrorResponse(initialData) {
-	this.data = initialData || {};
+function CloudFrontDistributionConfigCustomErrorResponse() {
+	this.data = {};
 }
 
 CloudFrontDistributionConfigCustomErrorResponse.prototype = {

@@ -2,8 +2,8 @@
  * Describes parameters for the AWS::Redshift::ClusterParameterGroup resource type.
  * @constructor
  */
-function RedshiftParameterType(initialData) {
-	this.data = initialData || {};
+function RedshiftParameterType() {
+	this.data = {};
 }
 
 RedshiftParameterType.prototype = {

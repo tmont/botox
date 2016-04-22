@@ -2,8 +2,8 @@
  * Deployment is a property of the AWS::CodeDeploy::DeploymentGroup resource that specifies the AWS CodeDeploy application revision that will be deployed to the deployment group.
  * @constructor
  */
-function AWSCodeDeployDeploymentGroupDeployment(initialData) {
-	this.data = initialData || {};
+function AWSCodeDeployDeploymentGroupDeployment() {
+	this.data = {};
 }
 
 AWSCodeDeployDeploymentGroupDeployment.prototype = {

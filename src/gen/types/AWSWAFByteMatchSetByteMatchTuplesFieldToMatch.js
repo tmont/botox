@@ -2,8 +2,8 @@
  * FieldToMatch is a property of the AWS WAF ByteMatchSet ByteMatchTuples property that specifies the part of a web request that you want AWS WAF to search, such as a specific header or a query string.
  * @constructor
  */
-function AWSWAFByteMatchSetByteMatchTuplesFieldToMatch(initialData) {
-	this.data = initialData || {};
+function AWSWAFByteMatchSetByteMatchTuplesFieldToMatch() {
+	this.data = {};
 }
 
 AWSWAFByteMatchSetByteMatchTuplesFieldToMatch.prototype = {

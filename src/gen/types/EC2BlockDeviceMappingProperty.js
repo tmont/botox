@@ -2,8 +2,8 @@
  * The Amazon EC2 block device mapping property is an embedded property of the AWS::EC2::Instance resource. For block device mappings for an Auto Scaling launch configuration, see AutoScaling Block Device Mapping.
  * @constructor
  */
-function EC2BlockDeviceMappingProperty(initialData) {
-	this.data = initialData || {};
+function EC2BlockDeviceMappingProperty() {
+	this.data = {};
 }
 
 EC2BlockDeviceMappingProperty.prototype = {

@@ -2,8 +2,8 @@
  * Use the OptionConfigurations property to configure an option and its settings for an AWS::RDS::OptionGroup resource.
  * @constructor
  */
-function RDSOptionGroupOptionConfigurations(initialData) {
-	this.data = initialData || {};
+function RDSOptionGroupOptionConfigurations() {
+	this.data = {};
 }
 
 RDSOptionGroupOptionConfigurations.prototype = {

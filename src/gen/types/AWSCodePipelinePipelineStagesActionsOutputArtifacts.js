@@ -2,8 +2,8 @@
  * OutputArtifacts is a property of the AWS CodePipeline Pipeline Stages Actions property that specifies an artifact that is the result of an AWS CodePipeline action, such as a test or build artifact.
  * @constructor
  */
-function AWSCodePipelinePipelineStagesActionsOutputArtifacts(initialData) {
-	this.data = initialData || {};
+function AWSCodePipelinePipelineStagesActionsOutputArtifacts() {
+	this.data = {};
 }
 
 AWSCodePipelinePipelineStagesActionsOutputArtifacts.prototype = {

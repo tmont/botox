@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::EC2::VPC - Creates a Virtual Private Cloud (VPC) with the CIDR block that you specify.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function EC2VPC(name, initialData) {
+function EC2VPC(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

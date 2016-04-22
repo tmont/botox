@@ -2,8 +2,8 @@
  * StorageLocation is a property of the AWS::GameLift::Build resource that specifies the location of an Amazon GameLift (GameLift) build package files, such as the game server binaries. For more information, see Uploading a Build to Amazon GameLift in the Amazon GameLift Developer Guide.
  * @constructor
  */
-function GameLiftBuildStorageLocation(initialData) {
-	this.data = initialData || {};
+function GameLiftBuildStorageLocation() {
+	this.data = {};
 }
 
 GameLiftBuildStorageLocation.prototype = {

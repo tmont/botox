@@ -2,8 +2,8 @@
  * Attribute is a property of the AWS Data Pipeline Pipeline ParameterObjects property that defines the attributes of a parameter object as key-value pairs.
  * @constructor
  */
-function AWSDataPipelineParameterObjectsAttributes(initialData) {
-	this.data = initialData || {};
+function AWSDataPipelineParameterObjectsAttributes() {
+	this.data = {};
 }
 
 AWSDataPipelineParameterObjectsAttributes.prototype = {

@@ -2,8 +2,8 @@
  * Describes the cross-origin access configuration for objects in an AWS::S3::Bucket resource.
  * @constructor
  */
-function S3CorsConfiguration(initialData) {
-	this.data = initialData || {};
+function S3CorsConfiguration() {
+	this.data = {};
 }
 
 S3CorsConfiguration.prototype = {

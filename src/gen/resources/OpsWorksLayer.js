@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::OpsWorks::Layer - Creates an AWS OpsWorks layer. A layer defines, for example, which packages and applications are installed and how they are configured.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function OpsWorksLayer(name, initialData) {
+function OpsWorksLayer(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

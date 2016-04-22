@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::EC2::DHCPOptions - Creates a set of DHCP options for your VPC.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function EC2DHCPOptions(name, initialData) {
+function EC2DHCPOptions(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

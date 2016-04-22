@@ -2,8 +2,8 @@
  * The RoutingRuleCondition property is an embedded property of the Amazon S3 Website Configuration Routing Rules Property that describes a condition that must be met for a redirect to apply.
  * @constructor
  */
-function S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty(initialData) {
-	this.data = initialData || {};
+function S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty() {
+	this.data = {};
 }
 
 S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty.prototype = {

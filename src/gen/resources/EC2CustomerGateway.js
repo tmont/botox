@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::EC2::CustomerGateway - Provides information to AWS about your VPN customer gateway device.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function EC2CustomerGateway(name, initialData) {
+function EC2CustomerGateway(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

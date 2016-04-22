@@ -2,8 +2,8 @@
  * StepAdjustments is a property of the AWS::AutoScaling::ScalingPolicy resource that describes a scaling adjustment based on the difference between the value of the aggregated CloudWatch metric and the breach threshold that you've defined for the alarm. For more information, see StepAdjustment in the Auto Scaling API Reference.
  * @constructor
  */
-function AutoScalingScalingPolicyStepAdjustments(initialData) {
-	this.data = initialData || {};
+function AutoScalingScalingPolicyStepAdjustments() {
+	this.data = {};
 }
 
 AutoScalingScalingPolicyStepAdjustments.prototype = {

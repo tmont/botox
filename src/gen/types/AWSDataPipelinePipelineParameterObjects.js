@@ -2,8 +2,8 @@
  * ParameterObjects is a property of the AWS::DataPipeline::Pipeline resource that describes parameters that are used in a pipeline definition.
  * @constructor
  */
-function AWSDataPipelinePipelineParameterObjects(initialData) {
-	this.data = initialData || {};
+function AWSDataPipelinePipelineParameterObjects() {
+	this.data = {};
 }
 
 AWSDataPipelinePipelineParameterObjects.prototype = {

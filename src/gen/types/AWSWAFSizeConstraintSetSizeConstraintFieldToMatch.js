@@ -2,8 +2,8 @@
  * FieldToMatch is a property of the AWS WAF SizeConstraintSet SizeConstraint property that specifies the part of a web request that you want AWS WAF to check for a size constraint, such as a specific header or a query string.
  * @constructor
  */
-function AWSWAFSizeConstraintSetSizeConstraintFieldToMatch(initialData) {
-	this.data = initialData || {};
+function AWSWAFSizeConstraintSetSizeConstraintFieldToMatch() {
+	this.data = {};
 }
 
 AWSWAFSizeConstraintSetSizeConstraintFieldToMatch.prototype = {

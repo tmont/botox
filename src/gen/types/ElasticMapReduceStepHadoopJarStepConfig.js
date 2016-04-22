@@ -2,8 +2,8 @@
  * HadoopJarStepConfig is a property of the AWS::EMR::Step resource that specifies a JAR file and runtime settings that Amazon Elastic MapReduce (Amazon EMR) executes.
  * @constructor
  */
-function ElasticMapReduceStepHadoopJarStepConfig(initialData) {
-	this.data = initialData || {};
+function ElasticMapReduceStepHadoopJarStepConfig() {
+	this.data = {};
 }
 
 ElasticMapReduceStepHadoopJarStepConfig.prototype = {

@@ -2,8 +2,8 @@
  * Revision is a property of the AWS::CodeDeploy::DeploymentGroup property that defines the location of the AWS CodeDeploy application revision to deploy.
  * @constructor
  */
-function AWSCodeDeployDeploymentGroupDeploymentRevision(initialData) {
-	this.data = initialData || {};
+function AWSCodeDeployDeploymentGroupDeploymentRevision() {
+	this.data = {};
 }
 
 AWSCodeDeployDeploymentGroupDeploymentRevision.prototype = {

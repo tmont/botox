@@ -2,8 +2,8 @@
  * Describes a set of provisioned throughput values for an AWS::DynamoDB::Table resource. DynamoDB uses these capacity units to allocate sufficient resources to provide the requested throughput.
  * @constructor
  */
-function DynamoDBProvisionedThroughput(initialData) {
-	this.data = initialData || {};
+function DynamoDBProvisionedThroughput() {
+	this.data = {};
 }
 
 DynamoDBProvisionedThroughput.prototype = {

@@ -2,8 +2,8 @@
  * The Parameters type is an embedded property of the AWS::CloudFormation::Stack type.
  * @constructor
  */
-function CloudFormationStackParametersPropertyType(initialData) {
-	this.data = initialData || {};
+function CloudFormationStackParametersPropertyType() {
+	this.data = {};
 }
 
 CloudFormationStackParametersPropertyType.prototype = {

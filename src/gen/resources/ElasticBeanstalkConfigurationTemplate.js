@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::ElasticBeanstalk::ConfigurationTemplate - Creates a configuration template for an Elastic Beanstalk application. You can use configuration templates to deploy different versions of an application by using the configuration settings that you define in the configuration template.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function ElasticBeanstalkConfigurationTemplate(name, initialData) {
+function ElasticBeanstalkConfigurationTemplate(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

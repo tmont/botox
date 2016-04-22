@@ -2,8 +2,8 @@
  * Restrictions is a property of the CloudFront DistributionConfig property that lets you limit which viewers can access your content.
  * @constructor
  */
-function CloudFrontDistributionConfigurationRestrictions(initialData) {
-	this.data = initialData || {};
+function CloudFrontDistributionConfigurationRestrictions() {
+	this.data = {};
 }
 
 CloudFrontDistributionConfigurationRestrictions.prototype = {

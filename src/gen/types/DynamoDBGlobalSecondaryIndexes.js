@@ -2,8 +2,8 @@
  * Describes global secondary indexes for the AWS::DynamoDB::Table resource.
  * @constructor
  */
-function DynamoDBGlobalSecondaryIndexes(initialData) {
-	this.data = initialData || {};
+function DynamoDBGlobalSecondaryIndexes() {
+	this.data = {};
 }
 
 DynamoDBGlobalSecondaryIndexes.prototype = {

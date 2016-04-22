@@ -2,8 +2,8 @@
  * ConnectionSettings is a property of the AWS::ElasticLoadBalancing::LoadBalancer resource that describes how long the front-end and back-end connections of your load balancer can remain idle. For more information, see Configure Idle Connection Timeout in the Elastic Load Balancing Developer Guide.
  * @constructor
  */
-function ElasticLoadBalancingConnectionSettings(initialData) {
-	this.data = initialData || {};
+function ElasticLoadBalancingConnectionSettings() {
+	this.data = {};
 }
 
 ElasticLoadBalancingConnectionSettings.prototype = {

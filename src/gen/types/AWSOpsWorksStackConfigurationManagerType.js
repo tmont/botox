@@ -2,8 +2,8 @@
  * Describes the stack configuration manager for the AWS::OpsWorks::Stack resource type. For more information, see StackConfigurationManager in the AWS OpsWorks API Reference.
  * @constructor
  */
-function AWSOpsWorksStackConfigurationManagerType(initialData) {
-	this.data = initialData || {};
+function AWSOpsWorksStackConfigurationManagerType() {
+	this.data = {};
 }
 
 AWSOpsWorksStackConfigurationManagerType.prototype = {

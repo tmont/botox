@@ -2,8 +2,8 @@
  * SpotFleetRequestConfigData is a property of the AWS::EC2::SpotFleet resource that defines the configuration of a Spot fleet request.
  * @constructor
  */
-function EC2SpotFleetSpotFleetRequestConfigData(initialData) {
-	this.data = initialData || {};
+function EC2SpotFleetSpotFleetRequestConfigData() {
+	this.data = {};
 }
 
 EC2SpotFleetSpotFleetRequestConfigData.prototype = {

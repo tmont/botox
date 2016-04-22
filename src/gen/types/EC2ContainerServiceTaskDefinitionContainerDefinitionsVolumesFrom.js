@@ -2,8 +2,8 @@
  * VolumesFrom is a property of the Amazon EC2 Container Service TaskDefinition ContainerDefinitions property that mounts data volumes from other containers.
  * @constructor
  */
-function EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom(initialData) {
-	this.data = initialData || {};
+function EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom() {
+	this.data = {};
 }
 
 EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom.prototype = {

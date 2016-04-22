@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::AutoScaling::AutoScalingGroup - The AWS::AutoScaling::AutoScalingGroup type creates an Auto Scaling group.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function AutoScalingAutoScalingGroup(name, initialData) {
+function AutoScalingAutoScalingGroup(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

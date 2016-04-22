@@ -2,8 +2,8 @@
  * Describes a network interface attachment for an Elastic Network Interface (ENI). AWS::EC2::NetworkInterface takes an object of this type in its Attachment property.
  * @constructor
  */
-function EC2NetworkInterfaceAttachment(initialData) {
-	this.data = initialData || {};
+function EC2NetworkInterfaceAttachment() {
+	this.data = {};
 }
 
 EC2NetworkInterfaceAttachment.prototype = {

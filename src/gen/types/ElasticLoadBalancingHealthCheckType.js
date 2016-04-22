@@ -2,8 +2,8 @@
  * The ElasticLoadBalancing HealthCheck is an embedded property of the AWS::ElasticLoadBalancing::LoadBalancer type.
  * @constructor
  */
-function ElasticLoadBalancingHealthCheckType(initialData) {
-	this.data = initialData || {};
+function ElasticLoadBalancingHealthCheckType() {
+	this.data = {};
 }
 
 ElasticLoadBalancingHealthCheckType.prototype = {

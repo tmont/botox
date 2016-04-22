@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::SQS::QueuePolicy - The AWS::SQS::QueuePolicy type applies a policy to SQS queues.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function SQSQueuePolicy(name, initialData) {
+function SQSQueuePolicy(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

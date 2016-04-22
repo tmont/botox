@@ -2,8 +2,8 @@
  * DistributionConfig is a property of the AWS::CloudFront::Distribution property that describes which Amazon CloudFront origin servers to get your files from when users request the files through your website or application.
  * @constructor
  */
-function CloudFrontDistributionConfig(initialData) {
-	this.data = initialData || {};
+function CloudFrontDistributionConfig() {
+	this.data = {};
 }
 
 CloudFrontDistributionConfig.prototype = {

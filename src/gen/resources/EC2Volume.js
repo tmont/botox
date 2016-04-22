@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::EC2::Volume - The AWS::EC2::Volume type creates a new Amazon Elastic Block Store (Amazon EBS) volume.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function EC2Volume(name, initialData) {
+function EC2Volume(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

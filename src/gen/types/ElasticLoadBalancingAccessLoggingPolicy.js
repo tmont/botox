@@ -2,8 +2,8 @@
  * The AccessLoggingPolicy property describes where and how access logs are stored for the AWS::ElasticLoadBalancing::LoadBalancer resource.
  * @constructor
  */
-function ElasticLoadBalancingAccessLoggingPolicy(initialData) {
-	this.data = initialData || {};
+function ElasticLoadBalancingAccessLoggingPolicy() {
+	this.data = {};
 }
 
 ElasticLoadBalancingAccessLoggingPolicy.prototype = {

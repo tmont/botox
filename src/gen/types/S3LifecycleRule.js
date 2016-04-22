@@ -2,8 +2,8 @@
  * Describes lifecycle rules for the Amazon S3 Lifecycle Configuration property.
  * @constructor
  */
-function S3LifecycleRule(initialData) {
-	this.data = initialData || {};
+function S3LifecycleRule() {
+	this.data = {};
 }
 
 S3LifecycleRule.prototype = {

@@ -2,8 +2,8 @@
  * Describes the load-based automatic scaling configuration for an AWS::OpsWorks::Layer resource type. For more information, see SetLoadBasedAutoScaling in the AWS OpsWorks API Reference.
  * @constructor
  */
-function AWSOpsWorksLoadBasedAutoScalingType(initialData) {
-	this.data = initialData || {};
+function AWSOpsWorksLoadBasedAutoScalingType() {
+	this.data = {};
 }
 
 AWSOpsWorksLoadBasedAutoScalingType.prototype = {

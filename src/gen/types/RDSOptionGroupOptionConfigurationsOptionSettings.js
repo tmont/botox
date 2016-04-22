@@ -2,8 +2,8 @@
  * Use the OptionSettings property to specify settings for an option in the OptionConfigurations property.
  * @constructor
  */
-function RDSOptionGroupOptionConfigurationsOptionSettings(initialData) {
-	this.data = initialData || {};
+function RDSOptionGroupOptionConfigurationsOptionSettings() {
+	this.data = {};
 }
 
 RDSOptionGroupOptionConfigurationsOptionSettings.prototype = {

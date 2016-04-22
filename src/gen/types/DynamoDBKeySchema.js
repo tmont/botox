@@ -2,8 +2,8 @@
  * Describes a primary key for the AWS::DynamoDB::Table resource or a key schema for an index. Each element is composed of an AttributeName and KeyType.
  * @constructor
  */
-function DynamoDBKeySchema(initialData) {
-	this.data = initialData || {};
+function DynamoDBKeySchema() {
+	this.data = {};
 }
 
 DynamoDBKeySchema.prototype = {

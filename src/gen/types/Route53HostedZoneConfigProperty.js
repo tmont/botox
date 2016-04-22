@@ -2,8 +2,8 @@
  * The HostedZoneConfig property is part of the AWS::Route53::HostedZone resource that can contain a comment about the hosted zone.
  * @constructor
  */
-function Route53HostedZoneConfigProperty(initialData) {
-	this.data = initialData || {};
+function Route53HostedZoneConfigProperty() {
+	this.data = {};
 }
 
 Route53HostedZoneConfigProperty.prototype = {

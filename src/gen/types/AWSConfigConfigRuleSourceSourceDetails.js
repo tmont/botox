@@ -2,8 +2,8 @@
  * SourceDetails is a property of the AWS Config ConfigRule Source property that specifies the source and type of event that triggers AWS Config to evaluate your AWS resources.
  * @constructor
  */
-function AWSConfigConfigRuleSourceSourceDetails(initialData) {
-	this.data = initialData || {};
+function AWSConfigConfigRuleSourceSourceDetails() {
+	this.data = {};
 }
 
 AWSConfigConfigRuleSourceSourceDetails.prototype = {

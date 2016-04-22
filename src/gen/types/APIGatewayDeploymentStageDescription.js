@@ -2,8 +2,8 @@
  * StageKey is a property of the AWS::ApiGateway::Deployment resource that configures an Amazon API Gateway (API Gateway) deployment stage.
  * @constructor
  */
-function APIGatewayDeploymentStageDescription(initialData) {
-	this.data = initialData || {};
+function APIGatewayDeploymentStageDescription() {
+	this.data = {};
 }
 
 APIGatewayDeploymentStageDescription.prototype = {

@@ -2,8 +2,8 @@
  * The HostedZoneTags property describes key-value pairs that are associated with an AWS::Route53::HostedZone resource.
  * @constructor
  */
-function Route53HostedZoneTags(initialData) {
-	this.data = initialData || {};
+function Route53HostedZoneTags() {
+	this.data = {};
 }
 
 Route53HostedZoneTags.prototype = {

@@ -2,8 +2,8 @@
  * FileSystemTags is a property of the AWS::EFS::FileSystem resource that associates key-value pairs with a file system. You can use any of the following Unicode characters for keys and values: letters, digits, whitespace, _, ., /, =, +, and -.
  * @constructor
  */
-function ElasticFileSystemFileSystemFileSystemTags(initialData) {
-	this.data = initialData || {};
+function ElasticFileSystemFileSystemFileSystemTags() {
+	this.data = {};
 }
 
 ElasticFileSystemFileSystemFileSystemTags.prototype = {

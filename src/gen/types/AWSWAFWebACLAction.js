@@ -2,8 +2,8 @@
  * Action is a property of the AWS::WAF::WebACL resource and the AWS WAF WebACL Rules property that specifies the action AWS WAF takes when a web request matches or doesn't match all rule conditions.
  * @constructor
  */
-function AWSWAFWebACLAction(initialData) {
-	this.data = initialData || {};
+function AWSWAFWebACLAction() {
+	this.data = {};
 }
 
 AWSWAFWebACLAction.prototype = {

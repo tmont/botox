@@ -2,8 +2,8 @@
  * A list of attribute definitions for the AWS::DynamoDB::Table resource. Each element is composed of an AttributeName and AttributeType.
  * @constructor
  */
-function DynamoDBAttributeDefinitions(initialData) {
-	this.data = initialData || {};
+function DynamoDBAttributeDefinitions() {
+	this.data = {};
 }
 
 DynamoDBAttributeDefinitions.prototype = {

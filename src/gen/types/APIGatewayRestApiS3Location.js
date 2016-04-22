@@ -2,8 +2,8 @@
  * S3Location is a property of the AWS::ApiGateway::RestApi resource that specifies the Amazon Simple Storage Service (Amazon S3) location of a Swagger file that defines a set of RESTful APIs in JSON or YAML for an Amazon API Gateway (API Gateway) RestApi.
  * @constructor
  */
-function APIGatewayRestApiS3Location(initialData) {
-	this.data = initialData || {};
+function APIGatewayRestApiS3Location() {
+	this.data = {};
 }
 
 APIGatewayRestApiS3Location.prototype = {

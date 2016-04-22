@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::OpsWorks::ElasticLoadBalancerAttachment - Attaches an Elastic Load Balancing load balancer to an AWS OpsWorks layer that you specify.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function OpsWorksElasticLoadBalancerAttachment(name, initialData) {
+function OpsWorksElasticLoadBalancerAttachment(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

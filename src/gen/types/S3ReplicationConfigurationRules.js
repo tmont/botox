@@ -2,8 +2,8 @@
  * Rules is a property of the Amazon S3 ReplicationConfiguration property that specifies which Amazon Simple Storage Service (Amazon S3) objects to replicate and where to store them.
  * @constructor
  */
-function S3ReplicationConfigurationRules(initialData) {
-	this.data = initialData || {};
+function S3ReplicationConfigurationRules() {
+	this.data = {};
 }
 
 S3ReplicationConfigurationRules.prototype = {

@@ -2,8 +2,8 @@
  * Attributes that are copied (projected) from the source table into the index. These attributes are additions to the primary key attributes and index key attributes, which are automatically projected.
  * @constructor
  */
-function DynamoDBProjectionObject(initialData) {
-	this.data = initialData || {};
+function DynamoDBProjectionObject() {
+	this.data = {};
 }
 
 DynamoDBProjectionObject.prototype = {

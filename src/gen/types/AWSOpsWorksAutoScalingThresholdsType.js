@@ -2,8 +2,8 @@
  * Describes the scaling thresholds for the AWS OpsWorks LoadBasedAutoScaling Type property. For more information, see AutoScalingThresholds in the AWS OpsWorks API Reference.
  * @constructor
  */
-function AWSOpsWorksAutoScalingThresholdsType(initialData) {
-	this.data = initialData || {};
+function AWSOpsWorksAutoScalingThresholdsType() {
+	this.data = {};
 }
 
 AWSOpsWorksAutoScalingThresholdsType.prototype = {

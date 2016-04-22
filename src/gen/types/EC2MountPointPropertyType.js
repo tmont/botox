@@ -2,8 +2,8 @@
  * The EC2 MountPoint property is an embedded property of the AWS::EC2::Instance type.
  * @constructor
  */
-function EC2MountPointPropertyType(initialData) {
-	this.data = initialData || {};
+function EC2MountPointPropertyType() {
+	this.data = {};
 }
 
 EC2MountPointPropertyType.prototype = {

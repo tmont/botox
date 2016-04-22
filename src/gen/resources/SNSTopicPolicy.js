@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::SNS::TopicPolicy - The AWS::SNS::TopicPolicy resource associates Amazon SNS topics with a policy.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function SNSTopicPolicy(name, initialData) {
+function SNSTopicPolicy(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

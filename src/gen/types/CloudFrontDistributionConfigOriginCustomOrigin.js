@@ -2,8 +2,8 @@
  * CustomOrigin is a property of the Amazon CloudFront Origin property that describes an HTTP server.
  * @constructor
  */
-function CloudFrontDistributionConfigOriginCustomOrigin(initialData) {
-	this.data = initialData || {};
+function CloudFrontDistributionConfigOriginCustomOrigin() {
+	this.data = {};
 }
 
 CloudFrontDistributionConfigOriginCustomOrigin.prototype = {

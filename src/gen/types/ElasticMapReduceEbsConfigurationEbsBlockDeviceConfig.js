@@ -2,8 +2,8 @@
  * EbsBlockDeviceConfig is a property of the Amazon Elastic MapReduce EbsConfiguration property that defines the settings for the Amazon Elastic Block Store (Amazon EBS) volumes that Amazon Elastic MapReduce (Amazon EMR) associates with your instances.
  * @constructor
  */
-function ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig(initialData) {
-	this.data = initialData || {};
+function ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig() {
+	this.data = {};
 }
 
 ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig.prototype = {

@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::S3::Bucket - The AWS::S3::Bucket type creates an Amazon S3 bucket.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function S3Bucket(name, initialData) {
+function S3Bucket(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

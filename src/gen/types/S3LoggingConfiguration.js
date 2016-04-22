@@ -2,8 +2,8 @@
  * Describes where logs are stored and the prefix that Amazon S3 assigns to all log object keys for an AWS::S3::Bucket resource. These logs track requests to an Amazon S3 bucket. For more information, see PUT Bucket logging in the Amazon Simple Storage Service API Reference.
  * @constructor
  */
-function S3LoggingConfiguration(initialData) {
-	this.data = initialData || {};
+function S3LoggingConfiguration() {
+	this.data = {};
 }
 
 S3LoggingConfiguration.prototype = {

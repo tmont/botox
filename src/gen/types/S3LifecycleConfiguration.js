@@ -2,8 +2,8 @@
  * Describes the lifecycle configuration for objects in an AWS::S3::Bucket resource.
  * @constructor
  */
-function S3LifecycleConfiguration(initialData) {
-	this.data = initialData || {};
+function S3LifecycleConfiguration() {
+	this.data = {};
 }
 
 S3LifecycleConfiguration.prototype = {

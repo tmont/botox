@@ -2,8 +2,8 @@
  * Stages is a property of the AWS::CodePipeline::Pipeline resource that specifies a sequence of tasks for AWS CodePipeline to complete on an artifact.
  * @constructor
  */
-function AWSCodePipelinePipelineStages(initialData) {
-	this.data = initialData || {};
+function AWSCodePipelinePipelineStages() {
+	this.data = {};
 }
 
 AWSCodePipelinePipelineStages.prototype = {

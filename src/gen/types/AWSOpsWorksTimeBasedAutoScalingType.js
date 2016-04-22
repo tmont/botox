@@ -2,8 +2,8 @@
  * Describes the automatic time-based scaling configuration for an AWS::OpsWorks::Instance resource type. For more information, see SetTimeBasedAutoScaling in the AWS OpsWorks API Reference.
  * @constructor
  */
-function AWSOpsWorksTimeBasedAutoScalingType(initialData) {
-	this.data = initialData || {};
+function AWSOpsWorksTimeBasedAutoScalingType() {
+	this.data = {};
 }
 
 AWSOpsWorksTimeBasedAutoScalingType.prototype = {

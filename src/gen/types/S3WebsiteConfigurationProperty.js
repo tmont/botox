@@ -2,8 +2,8 @@
  * WebsiteConfiguration is an embedded property of the AWS::S3::Bucket resource.
  * @constructor
  */
-function S3WebsiteConfigurationProperty(initialData) {
-	this.data = initialData || {};
+function S3WebsiteConfigurationProperty() {
+	this.data = {};
 }
 
 S3WebsiteConfigurationProperty.prototype = {

@@ -48,8 +48,8 @@ function createTypes(files, next) {
  * ${json.description}
  * @constructor
  */
-function ${className}(initialData) {
-	this.data = initialData || {};
+function ${className}() {
+	this.data = {};
 }
 
 ${className}.prototype = {

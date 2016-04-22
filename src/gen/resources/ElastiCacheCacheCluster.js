@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::ElastiCache::CacheCluster - The AWS::ElastiCache::CacheCluster type creates an Amazon ElastiCache cache cluster.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function ElastiCacheCacheCluster(name, initialData) {
+function ElastiCacheCacheCluster(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

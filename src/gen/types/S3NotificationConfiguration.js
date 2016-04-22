@@ -2,8 +2,8 @@
  * Describes the notification configuration for an AWS::S3::Bucket resource.
  * @constructor
  */
-function S3NotificationConfiguration(initialData) {
-	this.data = initialData || {};
+function S3NotificationConfiguration() {
+	this.data = {};
 }
 
 S3NotificationConfiguration.prototype = {

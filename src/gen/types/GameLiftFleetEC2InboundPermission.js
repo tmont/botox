@@ -2,8 +2,8 @@
  * EC2InboundPermission is a property of the AWS::GameLift::Fleet resource that specifies the traffic that is permitted to access your game servers in an Amazon GameLift (GameLift) fleet.
  * @constructor
  */
-function GameLiftFleetEC2InboundPermission(initialData) {
-	this.data = initialData || {};
+function GameLiftFleetEC2InboundPermission() {
+	this.data = {};
 }
 
 GameLiftFleetEC2InboundPermission.prototype = {

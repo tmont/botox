@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::Redshift::ClusterSecurityGroupIngress - Specifies inbound (ingress) rules for an Amazon Redshift security group.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function RedshiftClusterSecurityGroupIngress(name, initialData) {
+function RedshiftClusterSecurityGroupIngress(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

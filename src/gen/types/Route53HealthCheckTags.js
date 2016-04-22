@@ -2,8 +2,8 @@
  * The HealthCheckTags property describes key-value pairs that are associated with an AWS::Route53::HealthCheck resource.
  * @constructor
  */
-function Route53HealthCheckTags(initialData) {
-	this.data = initialData || {};
+function Route53HealthCheckTags() {
+	this.data = {};
 }
 
 Route53HealthCheckTags.prototype = {

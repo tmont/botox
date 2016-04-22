@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::ElasticBeanstalk::ApplicationVersion - Creates an application version, an iteration of deployable code, for an Elastic Beanstalk application.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function ElasticBeanstalkApplicationVersion(name, initialData) {
+function ElasticBeanstalkApplicationVersion(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

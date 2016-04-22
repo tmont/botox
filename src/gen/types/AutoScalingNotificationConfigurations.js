@@ -2,8 +2,8 @@
  * The NotificationConfigurations property is an embedded property of the AWS::AutoScaling::AutoScalingGroup resource that specifies the events for which the Auto Scaling group sends notifications.
  * @constructor
  */
-function AutoScalingNotificationConfigurations(initialData) {
-	this.data = initialData || {};
+function AutoScalingNotificationConfigurations() {
+	this.data = {};
 }
 
 AutoScalingNotificationConfigurations.prototype = {

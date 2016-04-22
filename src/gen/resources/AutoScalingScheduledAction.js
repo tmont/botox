@@ -4,14 +4,15 @@ var Attribute = require('../../fun/attribute'),
 /**
  * AWS::AutoScaling::ScheduledAction - Creates a scheduled scaling action for an Auto Scaling group, changing the number of servers available for your application in response to predictable load changes.
  * @constructor
+ * @param {String} name Name of the resource
  */
-function AutoScalingScheduledAction(name, initialData) {
+function AutoScalingScheduledAction(name) {
 	if (!name) {
 		throw new Error('name is required');
 	}
 
 	this.name = name;
-	this.data = initialData || {};
+	this.data = {};
 	this.reference = new Reference(this);
 }
 

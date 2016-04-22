@@ -2,8 +2,8 @@
  * CacheBehavior is a property of the DistributionConfig property that describes the Amazon CloudFront (CloudFront) cache behavior when the requested URL matches a pattern.
  * @constructor
  */
-function CloudFrontDistributionConfigCacheBehavior(initialData) {
-	this.data = initialData || {};
+function CloudFrontDistributionConfigCacheBehavior() {
+	this.data = {};
 }
 
 CloudFrontDistributionConfigCacheBehavior.prototype = {

@@ -2,8 +2,8 @@
  * SnapshotOptions is a property of the the section called “AWS::Elasticsearch::Domain” resource that configures the automated snapshot of Amazon Elasticsearch Service (Amazon ES) domain indices.
  * @constructor
  */
-function ElasticsearchServiceDomainSnapshotOptions(initialData) {
-	this.data = initialData || {};
+function ElasticsearchServiceDomainSnapshotOptions() {
+	this.data = {};
 }
 
 ElasticsearchServiceDomainSnapshotOptions.prototype = {

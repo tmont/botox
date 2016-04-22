@@ -2,8 +2,8 @@
  * ParameterLabel is a property of the AWS::CloudFormation::Interface resource that specifies a friendly name or description for a parameter that the AWS CloudFormation console shows instead of the parameter's logical ID.
  * @constructor
  */
-function AWSCloudFormationInterfaceParameterLabel(initialData) {
-	this.data = initialData || {};
+function AWSCloudFormationInterfaceParameterLabel() {
+	this.data = {};
 }
 
 AWSCloudFormationInterfaceParameterLabel.prototype = {

@@ -2,8 +2,8 @@
  * The AutoScaling EBS Block Device type is an embedded property of the AutoScaling Block Device Mapping type.
  * @constructor
  */
-function AWSCloudFormationAutoScalingEBSBlockDevicePropertyType(initialData) {
-	this.data = initialData || {};
+function AWSCloudFormationAutoScalingEBSBlockDevicePropertyType() {
+	this.data = {};
 }
 
 AWSCloudFormationAutoScalingEBSBlockDevicePropertyType.prototype = {

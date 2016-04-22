@@ -2,8 +2,8 @@
  * The PrivateIpAddressSpecification type is an embedded property of the AWS::EC2::NetworkInterface type.
  * @constructor
  */
-function EC2NetworkInterfacePrivateIPSpecification(initialData) {
-	this.data = initialData || {};
+function EC2NetworkInterfacePrivateIPSpecification() {
+	this.data = {};
 }
 
 EC2NetworkInterfacePrivateIPSpecification.prototype = {

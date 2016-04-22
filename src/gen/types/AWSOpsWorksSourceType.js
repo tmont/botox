@@ -2,8 +2,8 @@
  * Describes the information required to retrieve a cookbook or app from a repository for the AWS::OpsWorks::Stack or AWS::OpsWorks::App resource types. For more information, see Source in the AWS OpsWorks API Reference.
  * @constructor
  */
-function AWSOpsWorksSourceType(initialData) {
-	this.data = initialData || {};
+function AWSOpsWorksSourceType() {
+	this.data = {};
 }
 
 AWSOpsWorksSourceType.prototype = {
