@@ -29,32 +29,6 @@ WAFIPSet.prototype = {
 	},
 
 	/**
-	 * If the viewer did not use an HTTP proxy or a load balancer to send the request
-	 *
-	 * Required: false
-	 * Update requires: undefined
-	 *
-	 * @param {undefined} value
-	 * @return {WAFIPSet}
-	 */
-	c-ip: function(value) {
-		return this.set('c-ip', value);
-	},
-
-	/**
-	 * If the viewer did use an HTTP proxy or a load balancer to send the request
-	 *
-	 * Required: false
-	 * Update requires: undefined
-	 *
-	 * @param {undefined} value
-	 * @return {WAFIPSet}
-	 */
-	x-forwarded-for: function(value) {
-		return this.set('x-forwarded-for', value);
-	},
-
-	/**
 	 * A friendly name or description of the IPSet.
 	 *
 	 * Required: true

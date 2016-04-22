@@ -13,16 +13,6 @@
       "update": "No interruption"
     },
     {
-      "name": "c-ip",
-      "description": "If the viewer did not use an HTTP proxy or a load balancer to send the request",
-      "required": false
-    },
-    {
-      "name": "x-forwarded-for",
-      "description": "If the viewer did use an HTTP proxy or a load balancer to send the request",
-      "required": false
-    },
-    {
       "name": "Name",
       "description": "A friendly name or description of the IPSet.",
       "required": true,

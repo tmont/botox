@@ -59,7 +59,7 @@ module.exports = {
 		const properties = $body
 			.find('.variablelist')
 			.first()
-			.find('dt')
+			.find('> dl > dt')
 			.map((i, el) => {
 				const $el = $(el);
 				const $dd = $(el).next('dd');
