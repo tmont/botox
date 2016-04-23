@@ -15,7 +15,7 @@ EventsRule.prototype = Object.create(Resource.prototype);
 /**
  * AWS::Events::Rule attribute map
  * @typedef {Object} EventsRuleAttributeMap
- * @property {Attribute} Arn The event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-1:123456789012:rule/example.
+ * @property {Attribute} arn The event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-1:123456789012:rule/example.
  */
 Object.defineProperty(EventsRule.prototype, 'attr', {
 	/**

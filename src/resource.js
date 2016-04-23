@@ -1,6 +1,14 @@
 var Reference = require('./fun/reference'),
-	Attribute = require('./fun/attribute');
+	Attribute = require('./fun/attribute'),
+	TemplateItemTrait = require('./template-item-trait');
 
+/**
+ * Base class for CloudFormation resources
+ * @param {String} name
+ * @param {String} type
+ * @constructor
+ * @implements TemplateItemTrait
+ */
 function Resource(name, type) {
 	if (!name || typeof(name) !== 'string') {
 		throw new Error('name must be a non-empty string');
@@ -40,20 +48,14 @@ Resource.prototype = {
 		return new Attribute(this, name);
 	},
 
-	getTemplateJson: function() {
-		return JSON.parse(this.toString());
-	},
-
 	toJSON: function() {
 		return {
 			Type: this.type,
 			Properties: this.data
 		};
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
+
+Object.assign(Resource.prototype, TemplateItemTrait.prototype);
 
 module.exports = Resource;

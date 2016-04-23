@@ -15,7 +15,7 @@ IAMUser.prototype = Object.create(Resource.prototype);
 /**
  * AWS::IAM::User attribute map
  * @typedef {Object} IAMUserAttributeMap
- * @property {Attribute} Arn Returns the Amazon Resource Name (ARN) for the specified AWS::IAM::User resource. For example: arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D.
+ * @property {Attribute} arn Returns the Amazon Resource Name (ARN) for the specified AWS::IAM::User resource. For example: arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D.
  */
 Object.defineProperty(IAMUser.prototype, 'attr', {
 	/**

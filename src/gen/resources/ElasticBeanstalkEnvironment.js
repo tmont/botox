@@ -15,7 +15,7 @@ ElasticBeanstalkEnvironment.prototype = Object.create(Resource.prototype);
 /**
  * AWS::ElasticBeanstalk::Environment attribute map
  * @typedef {Object} ElasticBeanstalkEnvironmentAttributeMap
- * @property {Attribute} EndpointURL The URL to the load balancer for this environment.Example:awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-1.elb.amazonaws.com
+ * @property {Attribute} endpointURL The URL to the load balancer for this environment.Example:awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-1.elb.amazonaws.com
  */
 Object.defineProperty(ElasticBeanstalkEnvironment.prototype, 'attr', {
 	/**

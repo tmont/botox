@@ -15,7 +15,7 @@ EC2SecurityGroup.prototype = Object.create(Resource.prototype);
 /**
  * AWS::EC2::SecurityGroup attribute map
  * @typedef {Object} EC2SecurityGroupAttributeMap
- * @property {Attribute} GroupId The group ID of the specified security group, such as sg-94b3a1f6.
+ * @property {Attribute} groupId The group ID of the specified security group, such as sg-94b3a1f6.
  */
 Object.defineProperty(EC2SecurityGroup.prototype, 'attr', {
 	/**

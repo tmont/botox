@@ -15,9 +15,9 @@ ConfigConfigRule.prototype = Object.create(Resource.prototype);
 /**
  * AWS::Config::ConfigRule attribute map
  * @typedef {Object} ConfigConfigRuleAttributeMap
- * @property {Attribute} Arn The Amazon Resource Name (ARN) of the AWS Config rule, such as arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi.
- * @property {Attribute} Compliance.Type The compliance status of an AWS Config rule, such as COMPLIANT or NON_COMPLIANT.
- * @property {Attribute} ConfigRuleId The ID of the AWS Config rule, such as config-rule-a1bzhi.
+ * @property {Attribute} arn The Amazon Resource Name (ARN) of the AWS Config rule, such as arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi.
+ * @property {Attribute} complianceType The compliance status of an AWS Config rule, such as COMPLIANT or NON_COMPLIANT.
+ * @property {Attribute} configRuleId The ID of the AWS Config rule, such as config-rule-a1bzhi.
  */
 Object.defineProperty(ConfigConfigRule.prototype, 'attr', {
 	/**

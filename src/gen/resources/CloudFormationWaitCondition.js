@@ -15,7 +15,7 @@ CloudFormationWaitCondition.prototype = Object.create(Resource.prototype);
 /**
  * AWS::CloudFormation::WaitCondition attribute map
  * @typedef {Object} CloudFormationWaitConditionAttributeMap
- * @property {Attribute} Data Returns: A JSON object that contains the UniqueId and Data values from the wait condition signal(s) for the specified wait condition. For more information about wait condition signals, see Wait Condition Signal JSON Format.Example return value for a wait condition with 2 signals: { "Signal1" : "Step 1 complete." , "Signal2" : "Step 2 complete." }
+ * @property {Attribute} data Returns: A JSON object that contains the UniqueId and Data values from the wait condition signal(s) for the specified wait condition. For more information about wait condition signals, see Wait Condition Signal JSON Format.Example return value for a wait condition with 2 signals: { "Signal1" : "Step 1 complete." , "Signal2" : "Step 2 complete." }
  */
 Object.defineProperty(CloudFormationWaitCondition.prototype, 'attr', {
 	/**

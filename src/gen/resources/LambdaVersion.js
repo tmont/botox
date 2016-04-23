@@ -15,7 +15,7 @@ LambdaVersion.prototype = Object.create(Resource.prototype);
 /**
  * AWS::Lambda::Version attribute map
  * @typedef {Object} LambdaVersionAttributeMap
- * @property {Attribute} Version The published version of a Lambda version, such as 1.
+ * @property {Attribute} version The published version of a Lambda version, such as 1.
  */
 Object.defineProperty(LambdaVersion.prototype, 'attr', {
 	/**

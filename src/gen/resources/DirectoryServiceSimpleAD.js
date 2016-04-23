@@ -15,8 +15,8 @@ DirectoryServiceSimpleAD.prototype = Object.create(Resource.prototype);
 /**
  * AWS::DirectoryService::SimpleAD attribute map
  * @typedef {Object} DirectoryServiceSimpleADAttributeMap
- * @property {Attribute} Alias The alias for a directory. For example: d-12373a053a or alias4-mydirectory-12345abcgmzsk (if you have the CreateAlias property set to true).
- * @property {Attribute} DnsIpAddresses The IP addresses of the DNS servers for the directory, such as [ "172.31.3.154", "172.31.63.203" ].
+ * @property {Attribute} alias The alias for a directory. For example: d-12373a053a or alias4-mydirectory-12345abcgmzsk (if you have the CreateAlias property set to true).
+ * @property {Attribute} dnsIpAddresses The IP addresses of the DNS servers for the directory, such as [ "172.31.3.154", "172.31.63.203" ].
  */
 Object.defineProperty(DirectoryServiceSimpleAD.prototype, 'attr', {
 	/**

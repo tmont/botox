@@ -15,7 +15,7 @@ CloudFormationStack.prototype = Object.create(Resource.prototype);
 /**
  * AWS::CloudFormation::Stack attribute map
  * @typedef {Object} CloudFormationStackAttributeMap
- * @property {Attribute} Outputs.NestedStackOutputName Returns: The output value from the specified nested stack where NestedStackOutputName is the name of the output value.
+ * @property {Attribute} outputsNestedStackOutputName Returns: The output value from the specified nested stack where NestedStackOutputName is the name of the output value.
  */
 Object.defineProperty(CloudFormationStack.prototype, 'attr', {
 	/**

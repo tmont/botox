@@ -15,7 +15,7 @@ LambdaFunction.prototype = Object.create(Resource.prototype);
 /**
  * AWS::Lambda::Function attribute map
  * @typedef {Object} LambdaFunctionAttributeMap
- * @property {Attribute} Arn The ARN of the Lambda function, such as arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD.
+ * @property {Attribute} arn The ARN of the Lambda function, such as arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD.
  */
 Object.defineProperty(LambdaFunction.prototype, 'attr', {
 	/**

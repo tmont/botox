@@ -15,12 +15,12 @@ ElastiCacheReplicationGroup.prototype = Object.create(Resource.prototype);
 /**
  * AWS::ElastiCache::ReplicationGroup attribute map
  * @typedef {Object} ElastiCacheReplicationGroupAttributeMap
- * @property {Attribute} PrimaryEndPoint.Address The DNS address of the primary read-write cache node.
- * @property {Attribute} PrimaryEndPoint.Port The number of the port that the primary read-write cache engine is listening on.
- * @property {Attribute} ReadEndPoint.Addresses A string with a list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports attribute.
- * @property {Attribute} ReadEndPoint.Addresses.List A list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports.List attribute.
- * @property {Attribute} ReadEndPoint.Ports A string with a list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses attribute.
- * @property {Attribute} ReadEndPoint.Ports.List A list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses.List attribute.
+ * @property {Attribute} primaryEndPointAddress The DNS address of the primary read-write cache node.
+ * @property {Attribute} primaryEndPointPort The number of the port that the primary read-write cache engine is listening on.
+ * @property {Attribute} readEndPointAddresses A string with a list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports attribute.
+ * @property {Attribute} readEndPointAddressesList A list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports.List attribute.
+ * @property {Attribute} readEndPointPorts A string with a list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses attribute.
+ * @property {Attribute} readEndPointPortsList A list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses.List attribute.
  */
 Object.defineProperty(ElastiCacheReplicationGroup.prototype, 'attr', {
 	/**

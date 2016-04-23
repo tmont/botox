@@ -15,8 +15,8 @@ DirectoryServiceMicrosoftAD.prototype = Object.create(Resource.prototype);
 /**
  * AWS::DirectoryService::MicrosoftAD attribute map
  * @typedef {Object} DirectoryServiceMicrosoftADAttributeMap
- * @property {Attribute} Alias The alias for a directory. For example: d-12373a053a or alias4-mydirectory-12345abcgmzsk (if you have the CreateAlias property set to true).
- * @property {Attribute} DnsIpAddresses The IP addresses of the DNS servers for the directory, such as [ "192.0.2.1", "192.0.2.2" ].
+ * @property {Attribute} alias The alias for a directory. For example: d-12373a053a or alias4-mydirectory-12345abcgmzsk (if you have the CreateAlias property set to true).
+ * @property {Attribute} dnsIpAddresses The IP addresses of the DNS servers for the directory, such as [ "192.0.2.1", "192.0.2.2" ].
  */
 Object.defineProperty(DirectoryServiceMicrosoftAD.prototype, 'attr', {
 	/**

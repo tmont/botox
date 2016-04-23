@@ -15,7 +15,7 @@ IAMAccessKey.prototype = Object.create(Resource.prototype);
 /**
  * AWS::IAM::AccessKey attribute map
  * @typedef {Object} IAMAccessKeyAttributeMap
- * @property {Attribute} SecretAccessKey Returns the secret access key for the specified AWS::IAM::AccessKey resource. For example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY.
+ * @property {Attribute} secretAccessKey Returns the secret access key for the specified AWS::IAM::AccessKey resource. For example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY.
  */
 Object.defineProperty(IAMAccessKey.prototype, 'attr', {
 	/**

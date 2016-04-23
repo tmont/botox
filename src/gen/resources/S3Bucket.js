@@ -15,8 +15,8 @@ S3Bucket.prototype = Object.create(Resource.prototype);
 /**
  * AWS::S3::Bucket attribute map
  * @typedef {Object} S3BucketAttributeMap
- * @property {Attribute} DomainName Returns the DNS name of the specified bucket.Example: mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com
- * @property {Attribute} WebsiteURL Amazon S3 website endpoint for the specified bucket.Example: http://mystack-mybucket-kdwwxmddtr2g.s3-website-us-east-1.amazonaws.com/
+ * @property {Attribute} domainName Returns the DNS name of the specified bucket.Example: mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com
+ * @property {Attribute} websiteURL Amazon S3 website endpoint for the specified bucket.Example: http://mystack-mybucket-kdwwxmddtr2g.s3-website-us-east-1.amazonaws.com/
  */
 Object.defineProperty(S3Bucket.prototype, 'attr', {
 	/**

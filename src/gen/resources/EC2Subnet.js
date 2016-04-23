@@ -15,7 +15,7 @@ EC2Subnet.prototype = Object.create(Resource.prototype);
 /**
  * AWS::EC2::Subnet attribute map
  * @typedef {Object} EC2SubnetAttributeMap
- * @property {Attribute} AvailabilityZone Returns the availability zone (for example, "us-east-1a") of this subnet.Example: { "Fn::GetAtt" : [ "mySubnet", "AvailabilityZone" ] }
+ * @property {Attribute} availabilityZone Returns the availability zone (for example, "us-east-1a") of this subnet.Example: { "Fn::GetAtt" : [ "mySubnet", "AvailabilityZone" ] }
  */
 Object.defineProperty(EC2Subnet.prototype, 'attr', {
 	/**

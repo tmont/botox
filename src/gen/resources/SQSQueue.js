@@ -15,8 +15,8 @@ SQSQueue.prototype = Object.create(Resource.prototype);
 /**
  * AWS::SQS::Queue attribute map
  * @typedef {Object} SQSQueueAttributeMap
- * @property {Attribute} Arn Returns the Amazon Resource Name (ARN) of the queue. For example: arn:aws:sqs:us-east-1:123456789012:mystack-myqueue-15PG5C2FC1CW8
- * @property {Attribute} QueueName Returns the queue name. For example:mystack-myqueue-1VF9BKQH5BJVI
+ * @property {Attribute} arn Returns the Amazon Resource Name (ARN) of the queue. For example: arn:aws:sqs:us-east-1:123456789012:mystack-myqueue-15PG5C2FC1CW8
+ * @property {Attribute} queueName Returns the queue name. For example:mystack-myqueue-1VF9BKQH5BJVI
  */
 Object.defineProperty(SQSQueue.prototype, 'attr', {
 	/**

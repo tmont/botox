@@ -15,7 +15,7 @@ LogsLogGroup.prototype = Object.create(Resource.prototype);
 /**
  * AWS::Logs::LogGroup attribute map
  * @typedef {Object} LogsLogGroupAttributeMap
- * @property {Attribute} Arn The Amazon resource name (ARN) of the CloudWatch Logs log group, such as arn:aws:logs:us-east-1:123456789012:log-group:/mystack-testgroup-12ABC1AB12A1:*.
+ * @property {Attribute} arn The Amazon resource name (ARN) of the CloudWatch Logs log group, such as arn:aws:logs:us-east-1:123456789012:log-group:/mystack-testgroup-12ABC1AB12A1:*.
  */
 Object.defineProperty(LogsLogGroup.prototype, 'attr', {
 	/**

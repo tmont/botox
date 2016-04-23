@@ -15,8 +15,8 @@ ElastiCacheCacheCluster.prototype = Object.create(Resource.prototype);
 /**
  * AWS::ElastiCache::CacheCluster attribute map
  * @typedef {Object} ElastiCacheCacheClusterAttributeMap
- * @property {Attribute} ConfigurationEndpoint.Address The DNS address of the configuration endpoint for the Memcached cache cluster.
- * @property {Attribute} ConfigurationEndpoint.Port The port number of the configuration endpoint for the Memcached cache cluster.
+ * @property {Attribute} configurationEndpointAddress The DNS address of the configuration endpoint for the Memcached cache cluster.
+ * @property {Attribute} configurationEndpointPort The port number of the configuration endpoint for the Memcached cache cluster.
  */
 Object.defineProperty(ElastiCacheCacheCluster.prototype, 'attr', {
 	/**

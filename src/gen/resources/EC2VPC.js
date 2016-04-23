@@ -15,9 +15,9 @@ EC2VPC.prototype = Object.create(Resource.prototype);
 /**
  * AWS::EC2::VPC attribute map
  * @typedef {Object} EC2VPCAttributeMap
- * @property {Attribute} CidrBlock The set of IP addresses for the VPC. For example, 10.0.0.0/16.
- * @property {Attribute} DefaultNetworkAcl The default network ACL ID that is associated with the VPC. For example, acl-814dafe3.
- * @property {Attribute} DefaultSecurityGroup The default security group ID that is associated with the VPC. For example, sg-b178e0d3.
+ * @property {Attribute} cidrBlock The set of IP addresses for the VPC. For example, 10.0.0.0/16.
+ * @property {Attribute} defaultNetworkAcl The default network ACL ID that is associated with the VPC. For example, acl-814dafe3.
+ * @property {Attribute} defaultSecurityGroup The default security group ID that is associated with the VPC. For example, sg-b178e0d3.
  */
 Object.defineProperty(EC2VPC.prototype, 'attr', {
 	/**

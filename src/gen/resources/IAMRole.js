@@ -15,7 +15,7 @@ IAMRole.prototype = Object.create(Resource.prototype);
 /**
  * AWS::IAM::Role attribute map
  * @typedef {Object} IAMRoleAttributeMap
- * @property {Attribute} Arn Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyRole", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF”.
+ * @property {Attribute} arn Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyRole", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF”.
  */
 Object.defineProperty(IAMRole.prototype, 'attr', {
 	/**

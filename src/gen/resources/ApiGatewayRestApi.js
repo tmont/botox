@@ -15,7 +15,7 @@ ApiGatewayRestApi.prototype = Object.create(Resource.prototype);
 /**
  * AWS::ApiGateway::RestApi attribute map
  * @typedef {Object} ApiGatewayRestApiAttributeMap
- * @property {Attribute} RootResourceId The root resource ID for a RestApi resource, such as a0bc123d4e.
+ * @property {Attribute} rootResourceId The root resource ID for a RestApi resource, such as a0bc123d4e.
  */
 Object.defineProperty(ApiGatewayRestApi.prototype, 'attr', {
 	/**

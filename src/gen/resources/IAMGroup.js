@@ -15,7 +15,7 @@ IAMGroup.prototype = Object.create(Resource.prototype);
 /**
  * AWS::IAM::Group attribute map
  * @typedef {Object} IAMGroupAttributeMap
- * @property {Attribute} Arn Returns the Amazon Resource Name (ARN) for the AWS::IAM::Group resource. For example: arn:aws:iam::123456789012:group/mystack-mygroup-1DZETITOWEKVO.
+ * @property {Attribute} arn Returns the Amazon Resource Name (ARN) for the AWS::IAM::Group resource. For example: arn:aws:iam::123456789012:group/mystack-mygroup-1DZETITOWEKVO.
  */
 Object.defineProperty(IAMGroup.prototype, 'attr', {
 	/**

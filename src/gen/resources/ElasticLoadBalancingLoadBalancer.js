@@ -15,11 +15,11 @@ ElasticLoadBalancingLoadBalancer.prototype = Object.create(Resource.prototype);
 /**
  * AWS::ElasticLoadBalancing::LoadBalancer attribute map
  * @typedef {Object} ElasticLoadBalancingLoadBalancerAttributeMap
- * @property {Attribute} CanonicalHostedZoneName The name of the Amazon Route 53 hosted zone that is associated with the load balancer.ImportantIf you specify internal for the Elastic Load Balancing scheme, use DNSName instead. For an internal scheme, the load balancer doesn't have a CanonicalHostedZoneName value.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
- * @property {Attribute} CanonicalHostedZoneNameID The ID of the Amazon Route 53 hosted zone name that is associated with the load balancer.Example: Z3DZXE0Q79N41H
- * @property {Attribute} DNSName The DNS name for the load balancer.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
- * @property {Attribute} SourceSecurityGroup.GroupName The security group that you can use as part of your inbound rules for your load balancer's back-end Amazon EC2 application instances.Example: amazon-elb
- * @property {Attribute} SourceSecurityGroup.OwnerAlias The owner of the source security group.Example: amazon-elb-sg
+ * @property {Attribute} canonicalHostedZoneName The name of the Amazon Route 53 hosted zone that is associated with the load balancer.ImportantIf you specify internal for the Elastic Load Balancing scheme, use DNSName instead. For an internal scheme, the load balancer doesn't have a CanonicalHostedZoneName value.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
+ * @property {Attribute} canonicalHostedZoneNameID The ID of the Amazon Route 53 hosted zone name that is associated with the load balancer.Example: Z3DZXE0Q79N41H
+ * @property {Attribute} dnsname The DNS name for the load balancer.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
+ * @property {Attribute} sourceSecurityGroupGroupName The security group that you can use as part of your inbound rules for your load balancer's back-end Amazon EC2 application instances.Example: amazon-elb
+ * @property {Attribute} sourceSecurityGroupOwnerAlias The owner of the source security group.Example: amazon-elb-sg
  */
 Object.defineProperty(ElasticLoadBalancingLoadBalancer.prototype, 'attr', {
 	/**

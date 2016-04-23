@@ -15,7 +15,7 @@ IAMInstanceProfile.prototype = Object.create(Resource.prototype);
 /**
  * AWS::IAM::InstanceProfile attribute map
  * @typedef {Object} IAMInstanceProfileAttributeMap
- * @property {Attribute} Arn Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyProfile", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:instance-profile/MyProfile-ASDNSDLKJ”.
+ * @property {Attribute} arn Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyProfile", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:instance-profile/MyProfile-ASDNSDLKJ”.
  */
 Object.defineProperty(IAMInstanceProfile.prototype, 'attr', {
 	/**

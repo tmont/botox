@@ -15,7 +15,7 @@ EC2SubnetNetworkAclAssociation.prototype = Object.create(Resource.prototype);
 /**
  * AWS::EC2::SubnetNetworkAclAssociation attribute map
  * @typedef {Object} EC2SubnetNetworkAclAssociationAttributeMap
- * @property {Attribute} AssociationId Returns the value of this object's SubnetId property.
+ * @property {Attribute} associationId Returns the value of this object's SubnetId property.
  */
 Object.defineProperty(EC2SubnetNetworkAclAssociation.prototype, 'attr', {
 	/**

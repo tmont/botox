@@ -15,8 +15,8 @@ EC2NetworkInterface.prototype = Object.create(Resource.prototype);
 /**
  * AWS::EC2::NetworkInterface attribute map
  * @typedef {Object} EC2NetworkInterfaceAttributeMap
- * @property {Attribute} PrimaryPrivateIpAddress Returns the primary private IP address of the network interface. For example, 10.0.0.192.
- * @property {Attribute} SecondaryPrivateIpAddresses Returns the secondary private IP addresses of the network interface. For example, ["10.0.0.161", "10.0.0.162", "10.0.0.163"].
+ * @property {Attribute} primaryPrivateIpAddress Returns the primary private IP address of the network interface. For example, 10.0.0.192.
+ * @property {Attribute} secondaryPrivateIpAddresses Returns the secondary private IP addresses of the network interface. For example, ["10.0.0.161", "10.0.0.162", "10.0.0.163"].
  */
 Object.defineProperty(EC2NetworkInterface.prototype, 'attr', {
 	/**

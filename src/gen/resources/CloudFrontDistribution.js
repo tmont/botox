@@ -15,7 +15,7 @@ CloudFrontDistribution.prototype = Object.create(Resource.prototype);
 /**
  * AWS::CloudFront::Distribution attribute map
  * @typedef {Object} CloudFrontDistributionAttributeMap
- * @property {Attribute} DomainName Returns: The domain name of the resource. For example: d2fadu0nynjpfn.cloudfront.net.
+ * @property {Attribute} domainName Returns: The domain name of the resource. For example: d2fadu0nynjpfn.cloudfront.net.
  */
 Object.defineProperty(CloudFrontDistribution.prototype, 'attr', {
 	/**

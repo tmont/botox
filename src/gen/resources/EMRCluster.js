@@ -15,7 +15,7 @@ EMRCluster.prototype = Object.create(Resource.prototype);
 /**
  * AWS::EMR::Cluster attribute map
  * @typedef {Object} EMRClusterAttributeMap
- * @property {Attribute} MasterPublicDNS The public DNS name of the master node (instance), such as ec2-12-123-123-123.us-west-2.compute.amazonaws.com.
+ * @property {Attribute} masterPublicDNS The public DNS name of the master node (instance), such as ec2-12-123-123-123.us-west-2.compute.amazonaws.com.
  */
 Object.defineProperty(EMRCluster.prototype, 'attr', {
 	/**

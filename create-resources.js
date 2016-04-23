@@ -59,7 +59,7 @@ ${propertyPrefix}.${camelize(prop.name)} = function(value) {
 			})
 			.map((attr) => {
 				const propName = camelize(attr.name.replace(/\W/g, ''));
-				attrTypeDefs.push(` * @property {Attribute} ${attr.name} ${attr.description}`);
+				attrTypeDefs.push(` * @property {Attribute} ${propName} ${attr.description}`);
 				return `
 			/**
 			 * ${attr.description}

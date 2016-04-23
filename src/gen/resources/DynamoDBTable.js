@@ -15,7 +15,7 @@ DynamoDBTable.prototype = Object.create(Resource.prototype);
 /**
  * AWS::DynamoDB::Table attribute map
  * @typedef {Object} DynamoDBTableAttributeMap
- * @property {Attribute} StreamArn The Amazon Resource Name (ARN) of the DynamoDB stream, such as arn:aws:dynamodb:us-east-1:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000.
+ * @property {Attribute} streamArn The Amazon Resource Name (ARN) of the DynamoDB stream, such as arn:aws:dynamodb:us-east-1:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000.
  */
 Object.defineProperty(DynamoDBTable.prototype, 'attr', {
 	/**

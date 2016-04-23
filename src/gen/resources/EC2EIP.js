@@ -15,7 +15,7 @@ EC2EIP.prototype = Object.create(Resource.prototype);
 /**
  * AWS::EC2::EIP attribute map
  * @typedef {Object} EC2EIPAttributeMap
- * @property {Attribute} AllocationId The ID that AWS assigns to represent the allocation of the address for use with Amazon VPC. This is returned only for VPC elastic IP addresses. Example return value: eipalloc-5723d13e
+ * @property {Attribute} allocationId The ID that AWS assigns to represent the allocation of the address for use with Amazon VPC. This is returned only for VPC elastic IP addresses. Example return value: eipalloc-5723d13e
  */
 Object.defineProperty(EC2EIP.prototype, 'attr', {
 	/**

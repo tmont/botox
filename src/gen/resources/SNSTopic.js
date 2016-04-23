@@ -15,7 +15,7 @@ SNSTopic.prototype = Object.create(Resource.prototype);
 /**
  * AWS::SNS::Topic attribute map
  * @typedef {Object} SNSTopicAttributeMap
- * @property {Attribute} TopicName Returns the name for an Amazon SNS topic.
+ * @property {Attribute} topicName Returns the name for an Amazon SNS topic.
  */
 Object.defineProperty(SNSTopic.prototype, 'attr', {
 	/**

@@ -15,11 +15,11 @@ EC2Instance.prototype = Object.create(Resource.prototype);
 /**
  * AWS::EC2::Instance attribute map
  * @typedef {Object} EC2InstanceAttributeMap
- * @property {Attribute} AvailabilityZone The Availability Zone where the specified instance is launched. For example: us-east-1b.You can retrieve a list of all Availability Zones for a region by using the Fn::GetAZs intrinsic function.
- * @property {Attribute} PrivateDnsName The private DNS name of the specified instance. For example: ip-10-24-34-0.ec2.internal.
- * @property {Attribute} PrivateIp The private IP address of the specified instance. For example: 10.24.34.0.
- * @property {Attribute} PublicDnsName The public DNS name of the specified instance. For example: ec2-107-20-50-45.compute-1.amazonaws.com.
- * @property {Attribute} PublicIp The public IP address of the specified instance. For example: 192.0.2.0.
+ * @property {Attribute} availabilityZone The Availability Zone where the specified instance is launched. For example: us-east-1b.You can retrieve a list of all Availability Zones for a region by using the Fn::GetAZs intrinsic function.
+ * @property {Attribute} privateDnsName The private DNS name of the specified instance. For example: ip-10-24-34-0.ec2.internal.
+ * @property {Attribute} privateIp The private IP address of the specified instance. For example: 10.24.34.0.
+ * @property {Attribute} publicDnsName The public DNS name of the specified instance. For example: ec2-107-20-50-45.compute-1.amazonaws.com.
+ * @property {Attribute} publicIp The public IP address of the specified instance. For example: 192.0.2.0.
  */
 Object.defineProperty(EC2Instance.prototype, 'attr', {
 	/**
