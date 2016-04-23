@@ -34,7 +34,7 @@ CodePipelinePipeline.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {AWSCodePipelinePipelineDisableInboundStageTransition[]} value
+	 * @param {AWSCodePipelinePipelineDisableInboundStageTransitions[]} value
 	 * @return {CodePipelinePipeline}
 	 */
 	disableInboundStageTransitions: function(value) {

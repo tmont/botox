@@ -54,7 +54,7 @@ EC2SpotFleetSpotFleetRequestConfigData.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecification[]} value
+	 * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications[]} value
 	 * @return {EC2SpotFleetSpotFleetRequestConfigData}
 	 */
 	launchSpecifications: function(value) {

@@ -9,14 +9,14 @@
       "name": "ContainerDefinitions",
       "description": "A list of container definitions in JSON format that describe the containers that make up your task.",
       "required": true,
-      "type": "EC2ContainerServiceTaskDefinitionContainerDefinition[]",
+      "type": "EC2ContainerServiceTaskDefinitionContainerDefinitions[]",
       "update": "Replacement"
     },
     {
       "name": "Volumes",
       "description": "A list of volume definitions in JSON format for volumes that you can use in your container definitions.",
       "required": true,
-      "type": "EC2ContainerServiceTaskDefinitionVolume[]",
+      "type": "EC2ContainerServiceTaskDefinitionVolumes[]",
       "update": "Replacement"
     }
   ],

@@ -300,7 +300,7 @@ EC2Instance.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {EC2InstanceSsmAssociation[]} value
+	 * @param {EC2InstanceSsmAssociations[]} value
 	 * @return {EC2Instance}
 	 */
 	ssmAssociations: function(value) {

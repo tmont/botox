@@ -164,7 +164,7 @@ AutoScalingAutoScalingGroup.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {AutoScalingNotificationConfiguration[]} value
+	 * @param {AutoScalingNotificationConfigurations[]} value
 	 * @return {AutoScalingAutoScalingGroup}
 	 */
 	notificationConfigurations: function(value) {

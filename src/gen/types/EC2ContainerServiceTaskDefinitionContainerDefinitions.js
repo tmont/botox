@@ -114,7 +114,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoint[]} value
+	 * @param {EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints[]} value
 	 * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
 	 */
 	mountPoints: function(value) {
@@ -138,7 +138,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMapping[]} value
+	 * @param {EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings[]} value
 	 * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
 	 */
 	portMappings: function(value) {

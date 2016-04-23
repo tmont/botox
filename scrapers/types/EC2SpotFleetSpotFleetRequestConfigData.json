@@ -24,7 +24,7 @@
       "name": "LaunchSpecifications",
       "description": "The launch specifications for the Spot fleet request.",
       "required": true,
-      "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecification[]"
+      "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications[]"
     },
     {
       "name": "SpotPrice",

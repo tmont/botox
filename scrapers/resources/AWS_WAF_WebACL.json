@@ -30,7 +30,7 @@
       "name": "Rules",
       "description": "The rules to associate with the web ACL and the settings for each rule.",
       "required": false,
-      "type": "AWSWAFWebACLRule[]",
+      "type": "AWSWAFWebACLRules[]",
       "update": "No interruption"
     }
   ],

@@ -34,7 +34,7 @@ Route53HostedZone.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Route53HostedZoneTag[]} value
+	 * @param {Route53HostedZoneTags[]} value
 	 * @return {Route53HostedZone}
 	 */
 	hostedZoneTags: function(value) {
@@ -60,7 +60,7 @@ Route53HostedZone.prototype = {
 	 * Required: false
 	 * Update requires: undefined
 	 *
-	 * @param {Route53HostedZoneVPC[]} value
+	 * @param {Route53HostedZoneVPCs[]} value
 	 * @return {Route53HostedZone}
 	 */
 	vpcs: function(value) {

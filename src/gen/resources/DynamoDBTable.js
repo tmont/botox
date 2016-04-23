@@ -34,7 +34,7 @@ DynamoDBTable.prototype = {
 	 * Required: true
 	 * Update requires: Replacement
 	 *
-	 * @param {DynamoDBAttributeDefinition[]} value
+	 * @param {DynamoDBAttributeDefinitions[]} value
 	 * @return {DynamoDBTable}
 	 */
 	attributeDefinitions: function(value) {
@@ -47,7 +47,7 @@ DynamoDBTable.prototype = {
 	 * Required: false
 	 * Update requires: Updates are not supported. with the following exceptions:
 	 *
-	 * @param {DynamoDBGlobalSecondaryIndex[]} value
+	 * @param {DynamoDBGlobalSecondaryIndexes[]} value
 	 * @return {DynamoDBTable}
 	 */
 	globalSecondaryIndexes: function(value) {
@@ -73,7 +73,7 @@ DynamoDBTable.prototype = {
 	 * Required: false
 	 * Update requires: Replacement
 	 *
-	 * @param {DynamoDBLocalSecondaryIndex[]} value
+	 * @param {DynamoDBLocalSecondaryIndexes[]} value
 	 * @return {DynamoDBTable}
 	 */
 	localSecondaryIndexes: function(value) {

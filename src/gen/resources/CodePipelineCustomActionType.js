@@ -34,7 +34,7 @@ CodePipelineCustomActionType.prototype = {
 	 * Required: false
 	 * Update requires: Replacement
 	 *
-	 * @param {AWSCodePipelineCustomActionTypeConfigurationProperty[]} value
+	 * @param {AWSCodePipelineCustomActionTypeConfigurationProperties[]} value
 	 * @return {CodePipelineCustomActionType}
 	 */
 	configurationProperties: function(value) {

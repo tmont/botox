@@ -65,7 +65,7 @@
       "name": "StepAdjustments",
       "description": "A set of adjustments that enable you to scale based on the size of the alarm breach.",
       "required": false,
-      "type": "AutoScalingScalingPolicyStepAdjustment[]",
+      "type": "AutoScalingScalingPolicyStepAdjustments[]",
       "update": "No interruption"
     }
   ],

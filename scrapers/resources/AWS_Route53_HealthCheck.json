@@ -16,7 +16,7 @@
       "name": "HealthCheckTags",
       "description": "An arbitrary set of tags (key–value pairs) for this health check.",
       "required": false,
-      "type": "Route53HealthCheckTag[]",
+      "type": "Route53HealthCheckTags[]",
       "update": "No interruption"
     }
   ],

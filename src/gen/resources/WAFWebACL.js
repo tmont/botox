@@ -60,7 +60,7 @@ WAFWebACL.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {AWSWAFWebACLRule[]} value
+	 * @param {AWSWAFWebACLRules[]} value
 	 * @return {WAFWebACL}
 	 */
 	rules: function(value) {

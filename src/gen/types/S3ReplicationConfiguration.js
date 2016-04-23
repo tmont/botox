@@ -30,7 +30,7 @@ S3ReplicationConfiguration.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {S3ReplicationConfigurationRule[]} value
+	 * @param {S3ReplicationConfigurationRules[]} value
 	 * @return {S3ReplicationConfiguration}
 	 */
 	rules: function(value) {

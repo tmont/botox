@@ -34,7 +34,7 @@ Route53HealthCheck.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {Route53HealthCheckTag[]} value
+	 * @param {Route53HealthCheckTags[]} value
 	 * @return {Route53HealthCheck}
 	 */
 	healthCheckTags: function(value) {

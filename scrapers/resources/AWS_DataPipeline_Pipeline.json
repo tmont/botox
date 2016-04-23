@@ -44,7 +44,7 @@
       "name": "PipelineObjects",
       "description": "A list of pipeline objects that make up the pipeline. For more information about pipeline objects and a description of each object, see Pipeline Object Reference in the AWS Data Pipeline Developer Guide.",
       "required": true,
-      "type": "AWSDataPipelinePipelineObject[]",
+      "type": "AWSDataPipelinePipelineObjects[]",
       "update": "Some interruptions. Not all objects, fields, and values can be updated. Restrictions on what can be updated are documented in Editing Your Pipelines in the AWS Data Pipeline Developer Guide."
     },
     {

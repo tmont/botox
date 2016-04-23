@@ -135,7 +135,7 @@
       "name": "SsmAssociations",
       "description": "The Amazon EC2 Simple Systems Manager (SSM) document and parameter values to associate with this instance. To use this property, you must specify an IAM role for the instance. For more information, see Prerequisites for Remotely Running Commands on EC2 Instances in the Amazon EC2 User Guide for Microsoft Windows Instances.",
       "required": false,
-      "type": "EC2InstanceSsmAssociation[]",
+      "type": "EC2InstanceSsmAssociations[]",
       "update": "No interruption"
     },
     {

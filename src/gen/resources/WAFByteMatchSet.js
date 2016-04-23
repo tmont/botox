@@ -21,7 +21,7 @@ WAFByteMatchSet.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {AWSWAFByteMatchSetByteMatchTuple[]} value
+	 * @param {AWSWAFByteMatchSetByteMatchTuples[]} value
 	 * @return {WAFByteMatchSet}
 	 */
 	byteMatchTuples: function(value) {

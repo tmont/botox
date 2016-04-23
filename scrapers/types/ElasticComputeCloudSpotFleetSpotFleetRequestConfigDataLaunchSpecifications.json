@@ -6,7 +6,7 @@
       "name": "BlockDeviceMappings",
       "description": "Defines the block devices that are mapped to the Spot instances.",
       "required": false,
-      "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMapping[]"
+      "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings[]"
     },
     {
       "name": "EbsOptimized",
@@ -54,7 +54,7 @@
       "name": "NetworkInterfaces",
       "description": "The network interfaces to associate with the instances.",
       "required": false,
-      "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterface[]"
+      "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces[]"
     },
     {
       "name": "Placement",
@@ -72,7 +72,7 @@
       "name": "SecurityGroups",
       "description": "One or more security group IDs to associate with the instances.",
       "required": false,
-      "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroup[]"
+      "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups[]"
     },
     {
       "name": "SubnetId",

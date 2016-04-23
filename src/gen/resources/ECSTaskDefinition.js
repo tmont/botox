@@ -21,7 +21,7 @@ ECSTaskDefinition.prototype = {
 	 * Required: true
 	 * Update requires: Replacement
 	 *
-	 * @param {EC2ContainerServiceTaskDefinitionContainerDefinition[]} value
+	 * @param {EC2ContainerServiceTaskDefinitionContainerDefinitions[]} value
 	 * @return {ECSTaskDefinition}
 	 */
 	containerDefinitions: function(value) {
@@ -34,7 +34,7 @@ ECSTaskDefinition.prototype = {
 	 * Required: true
 	 * Update requires: Replacement
 	 *
-	 * @param {EC2ContainerServiceTaskDefinitionVolume[]} value
+	 * @param {EC2ContainerServiceTaskDefinitionVolumes[]} value
 	 * @return {ECSTaskDefinition}
 	 */
 	volumes: function(value) {

@@ -18,7 +18,7 @@
       "name": "InputArtifacts",
       "description": "The name or ID of the artifact that the action consumes, such as a test or build artifact.",
       "required": false,
-      "type": "AWSCodePipelinePipelineStagesActionsInputArtifact[]"
+      "type": "AWSCodePipelinePipelineStagesActionsInputArtifacts[]"
     },
     {
       "name": "Name",
@@ -30,7 +30,7 @@
       "name": "OutputArtifacts",
       "description": "The artifact name or ID that is a result of the action, such as a test or build artifact.",
       "required": false,
-      "type": "AWSCodePipelinePipelineStagesActionsOutputArtifact[]"
+      "type": "AWSCodePipelinePipelineStagesActionsOutputArtifacts[]"
     },
     {
       "name": "RoleArn",

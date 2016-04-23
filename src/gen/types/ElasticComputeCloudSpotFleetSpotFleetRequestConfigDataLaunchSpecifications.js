@@ -18,7 +18,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
 	 *
 	 * Required: false
 	 *
-	 * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMapping[]} value
+	 * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings[]} value
 	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
 	 */
 	blockDeviceMappings: function(value) {
@@ -114,7 +114,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
 	 *
 	 * Required: false
 	 *
-	 * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterface[]} value
+	 * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces[]} value
 	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
 	 */
 	networkInterfaces: function(value) {
@@ -150,7 +150,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
 	 *
 	 * Required: false
 	 *
-	 * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroup[]} value
+	 * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups[]} value
 	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
 	 */
 	securityGroups: function(value) {

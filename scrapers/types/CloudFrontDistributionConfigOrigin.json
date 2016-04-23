@@ -6,7 +6,7 @@
       "name": "CustomOriginConfig",
       "description": "Origin information to specify a custom origin.",
       "required": false,
-      "type": "CustomOrigintype"
+      "type": "CloudFrontDistributionConfigOriginCustomOrigin"
     },
     {
       "name": "DomainName",

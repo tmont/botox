@@ -16,7 +16,7 @@
       "name": "DisableInboundStageTransitions",
       "description": "Prevents artifacts in a pipeline from transitioning to the stage that you specified. This enables you to manually control transitions.",
       "required": false,
-      "type": "AWSCodePipelinePipelineDisableInboundStageTransition[]",
+      "type": "AWSCodePipelinePipelineDisableInboundStageTransitions[]",
       "update": "No interruption"
     },
     {

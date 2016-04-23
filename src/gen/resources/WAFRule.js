@@ -47,7 +47,7 @@ WAFRule.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {AWSWAFRulePredicate[]} value
+	 * @param {AWSWAFRulePredicates[]} value
 	 * @return {WAFRule}
 	 */
 	predicates: function(value) {

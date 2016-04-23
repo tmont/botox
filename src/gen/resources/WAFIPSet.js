@@ -21,7 +21,7 @@ WAFIPSet.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {AWSWAFIPSetIPSetDescriptor[]} value
+	 * @param {AWSWAFIPSetIPSetDescriptors[]} value
 	 * @return {WAFIPSet}
 	 */
 	ipsetDescriptors: function(value) {

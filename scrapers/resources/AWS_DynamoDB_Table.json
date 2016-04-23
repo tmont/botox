@@ -9,14 +9,14 @@
       "name": "AttributeDefinitions",
       "description": "A list of AttributeName and AttributeType objects that describe the key schema for the table and indexes.",
       "required": true,
-      "type": "DynamoDBAttributeDefinition[]",
+      "type": "DynamoDBAttributeDefinitions[]",
       "update": "Replacement"
     },
     {
       "name": "GlobalSecondaryIndexes",
       "description": "Global secondary indexes to be created on the table. You can create up to 5 global secondary indexes.",
       "required": false,
-      "type": "DynamoDBGlobalSecondaryIndex[]",
+      "type": "DynamoDBGlobalSecondaryIndexes[]",
       "update": "Updates are not supported. with the following exceptions:"
     },
     {
@@ -30,7 +30,7 @@
       "name": "LocalSecondaryIndexes",
       "description": "Local secondary indexes to be created on the table. You can create up to 5 local secondary indexes. Each index is scoped to a given hash key value. The size of each hash key can be up to 10 gigabytes.",
       "required": false,
-      "type": "DynamoDBLocalSecondaryIndex[]",
+      "type": "DynamoDBLocalSecondaryIndexes[]",
       "update": "Replacement"
     },
     {

@@ -42,7 +42,7 @@
       "name": "PrivateIpAddresses",
       "description": "One or more private IP addresses to assign to the network interface. You can designate only one private IP address as primary.",
       "required": false,
-      "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddress[]"
+      "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses[]"
     },
     {
       "name": "SecondaryPrivateIpAddressCount",

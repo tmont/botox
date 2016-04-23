@@ -54,7 +54,7 @@
       "name": "MountPoints",
       "description": "The mount points for data volumes in the container.",
       "required": false,
-      "type": "EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoint[]"
+      "type": "EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints[]"
     },
     {
       "name": "Name",
@@ -66,7 +66,7 @@
       "name": "PortMappings",
       "description": "A mapping of the container port to a host port. Port mappings enable containers to access ports on the host container instance to send or receive traffic.",
       "required": false,
-      "type": "EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMapping[]"
+      "type": "EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings[]"
     },
     {
       "name": "VolumesFrom",

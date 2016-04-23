@@ -86,7 +86,7 @@
       "name": "NotificationConfigurations",
       "description": "An embedded property that configures an Auto Scaling group to send notifications when specified events take place.",
       "required": false,
-      "type": "AutoScalingNotificationConfiguration[]",
+      "type": "AutoScalingNotificationConfigurations[]",
       "update": "No interruption"
     },
     {

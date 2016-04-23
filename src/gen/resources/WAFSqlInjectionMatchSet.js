@@ -34,7 +34,7 @@ WAFSqlInjectionMatchSet.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {AWSWAFSqlInjectionMatchSetSqlInjectionMatchTuple[]} value
+	 * @param {AWSWAFSqlInjectionMatchSetSqlInjectionMatchTuples[]} value
 	 * @return {WAFSqlInjectionMatchSet}
 	 */
 	sqlInjectionMatchTuples: function(value) {

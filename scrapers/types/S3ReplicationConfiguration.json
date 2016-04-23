@@ -12,7 +12,7 @@
       "name": "Rules",
       "description": "A replication rule that specifies which objects to replicate and where they are stored.",
       "required": true,
-      "type": "S3ReplicationConfigurationRule[]"
+      "type": "S3ReplicationConfigurationRules[]"
     }
   ],
   "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration.html"

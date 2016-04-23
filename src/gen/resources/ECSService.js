@@ -47,7 +47,7 @@ ECSService.prototype = {
 	 * Required: false
 	 * Update requires: Replacement
 	 *
-	 * @param {EC2ContainerServiceServiceLoadBalancer[]} value
+	 * @param {EC2ContainerServiceServiceLoadBalancers[]} value
 	 * @return {ECSService}
 	 */
 	loadBalancers: function(value) {

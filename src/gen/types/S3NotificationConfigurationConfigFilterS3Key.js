@@ -18,7 +18,7 @@ S3NotificationConfigurationConfigFilterS3Key.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {S3NotificationConfigurationConfigFilterS3KeyRule[]} value
+	 * @param {S3NotificationConfigurationConfigFilterS3KeyRules[]} value
 	 * @return {S3NotificationConfigurationConfigFilterS3Key}
 	 */
 	rules: function(value) {

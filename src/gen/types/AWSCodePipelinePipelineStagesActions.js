@@ -42,7 +42,7 @@ AWSCodePipelinePipelineStagesActions.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {AWSCodePipelinePipelineStagesActionsInputArtifact[]} value
+	 * @param {AWSCodePipelinePipelineStagesActionsInputArtifacts[]} value
 	 * @return {AWSCodePipelinePipelineStagesActions}
 	 */
 	inputArtifacts: function(value) {
@@ -66,7 +66,7 @@ AWSCodePipelinePipelineStagesActions.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {AWSCodePipelinePipelineStagesActionsOutputArtifact[]} value
+	 * @param {AWSCodePipelinePipelineStagesActionsOutputArtifacts[]} value
 	 * @return {AWSCodePipelinePipelineStagesActions}
 	 */
 	outputArtifacts: function(value) {

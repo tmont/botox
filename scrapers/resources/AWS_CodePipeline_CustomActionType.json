@@ -16,7 +16,7 @@
       "name": "ConfigurationProperties",
       "description": "The configuration properties for the custom action.",
       "required": false,
-      "type": "AWSCodePipelineCustomActionTypeConfigurationProperty[]",
+      "type": "AWSCodePipelineCustomActionTypeConfigurationProperties[]",
       "update": "Replacement"
     },
     {

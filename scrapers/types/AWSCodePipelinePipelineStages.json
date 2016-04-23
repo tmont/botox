@@ -6,13 +6,13 @@
       "name": "Actions",
       "description": "The actions to include in this stage.",
       "required": true,
-      "type": "AWSCodePipelinePipelineStagesAction[]"
+      "type": "AWSCodePipelinePipelineStagesActions[]"
     },
     {
       "name": "Blockers",
       "description": "The gates included in a stage.",
       "required": false,
-      "type": "AWSCodePipelinePipelineStagesBlocker[]"
+      "type": "AWSCodePipelinePipelineStagesBlockers[]"
     },
     {
       "name": "Name",

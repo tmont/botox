@@ -23,7 +23,7 @@
       "name": "LoadBalancers",
       "description": "A list of load balancer objects to associate with the cluster.",
       "required": false,
-      "type": "EC2ContainerServiceServiceLoadBalancer[]",
+      "type": "EC2ContainerServiceServiceLoadBalancers[]",
       "update": "Replacement"
     },
     {

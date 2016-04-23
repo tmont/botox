@@ -95,6 +95,8 @@ module.exports = {
 										return 'Object';
 									case 'string list':
 										return 'String[]';
+									case 'customorigin type':
+										return 'CloudFrontDistributionConfigOriginCustomOrigin';
 								}
 
 								return null;
@@ -105,13 +107,57 @@ module.exports = {
 									return null;
 								}
 
-								let newType = inflection.singularize(match[1].replace(/\s/g, ''));
-								if (newType === 'EC2MountPoint') {
-									newType = 'EC2MountPointPropertyType';
+								let newType = match[1].replace(/\s/g, '');
+								switch (newType) {
+									case 'AWSCodePipelinePipelineStagesActions':
+									case 'EC2InstanceSsmAssociationsAssociationParameters':
+									case 'S3NotificationConfigurationConfigFilterS3KeyRules':
+									case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings':
+									case 'EC2ContainerServiceTaskDefinitionVolumes':
+									case 'EC2ContainerServiceTaskDefinitionContainerDefinitions':
+									case 'AWSWAFByteMatchSetByteMatchTuples':
+									case 'AWSWAFIPSetIPSetDescriptors':
+									case 'AWSCodePipelinePipelineStagesBlockers':
+									case 'S3ReplicationConfigurationRules':
+									case 'AWSCodePipelineCustomActionTypeConfigurationProperties':
+									case 'AWSCodePipelinePipelineDisableInboundStageTransitions':
+									case 'DynamoDBGlobalSecondaryIndexes':
+									case 'DynamoDBAttributeDefinitions':
+									case 'Route53HealthCheckTags':
+									case 'Route53HostedZoneTags':
+									case 'AWSWAFSqlInjectionMatchSetSqlInjectionMatchTuples':
+									case 'AWSCodePipelinePipelineStagesActionsInputArtifacts':
+									case 'EC2ContainerServiceServiceLoadBalancers':
+									case 'AWSWAFRulePredicates':
+									case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications':
+									case 'Route53HostedZoneVPCs':
+									case 'AWSWAFWebACLRules':
+									case 'AWSCodePipelinePipelineStagesActionsOutputArtifacts':
+									case 'DynamoDBLocalSecondaryIndexes':
+									case 'AWSDataPipelinePipelineObjects':
+									case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses':
+									case 'EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints':
+									case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces':
+									case 'AutoScalingScalingPolicyStepAdjustments':
+									case 'EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings':
+									case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups':
+									case 'AutoScalingNotificationConfigurations':
+									case 'EC2InstanceSsmAssociations':
+										break;
+									default:
+										newType = inflection.singularize(newType);
+										break;
 								}
-								if (newType === 'JSONname') {
-									newType = 'Object';
+
+								switch (newType) {
+									case 'EC2MountPoint':
+										newType = 'EC2MountPointPropertyType';
+										break;
+									case 'JSONname':
+										newType = 'Object';
+										break;
 								}
+
 								return newType + '[]';
 							},
 							(type) => {

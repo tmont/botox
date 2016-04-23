@@ -86,7 +86,7 @@ DataPipelinePipeline.prototype = {
 	 * Required: true
 	 * Update requires: Some interruptions. Not all objects, fields, and values can be updated. Restrictions on what can be updated are documented in Editing Your Pipelines in the AWS Data Pipeline Developer Guide.
 	 *
-	 * @param {AWSDataPipelinePipelineObject[]} value
+	 * @param {AWSDataPipelinePipelineObjects[]} value
 	 * @return {DataPipelinePipeline}
 	 */
 	pipelineObjects: function(value) {

@@ -18,7 +18,7 @@ CloudFrontDistributionConfigOrigin.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {CustomOrigintype} value
+	 * @param {CloudFrontDistributionConfigOriginCustomOrigin} value
 	 * @return {CloudFrontDistributionConfigOrigin}
 	 */
 	customOriginConfig: function(value) {

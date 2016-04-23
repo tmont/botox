@@ -18,7 +18,7 @@ AWSCodePipelinePipelineStages.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {AWSCodePipelinePipelineStagesAction[]} value
+	 * @param {AWSCodePipelinePipelineStagesActions[]} value
 	 * @return {AWSCodePipelinePipelineStages}
 	 */
 	actions: function(value) {
@@ -30,7 +30,7 @@ AWSCodePipelinePipelineStages.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {AWSCodePipelinePipelineStagesBlocker[]} value
+	 * @param {AWSCodePipelinePipelineStagesBlockers[]} value
 	 * @return {AWSCodePipelinePipelineStages}
 	 */
 	blockers: function(value) {

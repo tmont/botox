@@ -18,7 +18,7 @@ EC2InstanceSsmAssociations.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {EC2InstanceSsmAssociationsAssociationParameter[]} value
+	 * @param {EC2InstanceSsmAssociationsAssociationParameters[]} value
 	 * @return {EC2InstanceSsmAssociations}
 	 */
 	associationParameters: function(value) {

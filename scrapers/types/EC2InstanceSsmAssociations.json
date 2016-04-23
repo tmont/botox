@@ -6,7 +6,7 @@
       "name": "AssociationParameters",
       "description": "The input parameter values to use with the associated SSM document.",
       "required": false,
-      "type": "EC2InstanceSsmAssociationsAssociationParameter[]"
+      "type": "EC2InstanceSsmAssociationsAssociationParameters[]"
     },
     {
       "name": "DocumentName",

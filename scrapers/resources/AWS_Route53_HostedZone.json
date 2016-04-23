@@ -16,7 +16,7 @@
       "name": "HostedZoneTags",
       "description": "An arbitrary set of tags (key–value pairs) for this hosted zone.",
       "required": false,
-      "type": "Route53HostedZoneTag[]",
+      "type": "Route53HostedZoneTags[]",
       "update": "No interruption"
     },
     {
@@ -30,7 +30,7 @@
       "name": "VPCs",
       "description": "One or more VPCs that you want to associate with this hosted zone. When you specify this property, AWS CloudFormation creates a private hosted zone.",
       "required": false,
-      "type": "Route53HostedZoneVPC[]"
+      "type": "Route53HostedZoneVPCs[]"
     }
   ],
   "attributes": [],
