@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Host is a property of the Amazon EC2 Container Service TaskDefinition Volumes property that specifies the data volume path on the host container instance.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes-host.html}
  * @constructor
  */
 function EC2ContainerServiceTaskDefinitionVolumesHost() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2ContainerServiceTaskDefinitionVolumesHost, PropertyType);
 
 EC2ContainerServiceTaskDefinitionVolumesHost.prototype = {
 	
@@ -19,19 +23,6 @@ EC2ContainerServiceTaskDefinitionVolumesHost.prototype = {
 	 */
 	sourcePath: function(value) {
 		return this.set('SourcePath', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

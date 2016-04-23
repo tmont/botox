@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * AliasTarget is a property of the AWS::Route53::RecordSet resource.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html}
  * @constructor
  */
 function Route53AliasTargetProperty() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(Route53AliasTargetProperty, PropertyType);
 
 Route53AliasTargetProperty.prototype = {
 	
@@ -43,19 +47,6 @@ Route53AliasTargetProperty.prototype = {
 	 */
 	hostedZoneId: function(value) {
 		return this.set('HostedZoneId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * HadoopJarStepConfig is a property of the AWS::EMR::Step resource that specifies a JAR file and runtime settings that Amazon Elastic MapReduce (Amazon EMR) executes.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-step-hadoopjarstepconfig.html}
  * @constructor
  */
 function ElasticMapReduceStepHadoopJarStepConfig() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticMapReduceStepHadoopJarStepConfig, PropertyType);
 
 ElasticMapReduceStepHadoopJarStepConfig.prototype = {
 	
@@ -55,19 +59,6 @@ ElasticMapReduceStepHadoopJarStepConfig.prototype = {
 	 */
 	stepProperties: function(value) {
 		return this.set('StepProperties', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

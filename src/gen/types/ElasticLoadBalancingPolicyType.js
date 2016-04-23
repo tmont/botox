@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The ElasticLoadBalancing policy type is an embedded property of the AWS::ElasticLoadBalancing::LoadBalancer resource. You associate policies with a listener by referencing a policy's name in the listener's PolicyNames property.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html}
  * @constructor
  */
 function ElasticLoadBalancingPolicyType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticLoadBalancingPolicyType, PropertyType);
 
 ElasticLoadBalancingPolicyType.prototype = {
 	
@@ -67,19 +71,6 @@ ElasticLoadBalancingPolicyType.prototype = {
 	 */
 	policyType: function(value) {
 		return this.set('PolicyType', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

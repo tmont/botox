@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The PrivateIpAddressSpecification type is an embedded property of the AWS::EC2::NetworkInterface type.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-privateipspec.html}
  * @constructor
  */
 function EC2NetworkInterfacePrivateIPSpecification() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2NetworkInterfacePrivateIPSpecification, PropertyType);
 
 EC2NetworkInterfacePrivateIPSpecification.prototype = {
 	
@@ -31,19 +35,6 @@ EC2NetworkInterfacePrivateIPSpecification.prototype = {
 	 */
 	primary: function(value) {
 		return this.set('Primary', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

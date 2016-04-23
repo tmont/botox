@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Integration is a property of the AWS::ApiGateway::Method resource that specifies information about the target back end that an Amazon API Gateway (API Gateway) method calls.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html}
  * @constructor
  */
 function APIGatewayMethodIntegration() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(APIGatewayMethodIntegration, PropertyType);
 
 APIGatewayMethodIntegration.prototype = {
 	
@@ -115,19 +119,6 @@ APIGatewayMethodIntegration.prototype = {
 	 */
 	uri: function(value) {
 		return this.set('Uri', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

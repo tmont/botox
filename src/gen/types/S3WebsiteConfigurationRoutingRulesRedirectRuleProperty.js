@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The RedirectRule property is an embedded property of the Amazon S3 Website Configuration Routing Rules Property that describes how requests are redirected. In the event of an error, you can specify a different error code to return.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html}
  * @constructor
  */
 function S3WebsiteConfigurationRoutingRulesRedirectRuleProperty() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(S3WebsiteConfigurationRoutingRulesRedirectRuleProperty, PropertyType);
 
 S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype = {
 	
@@ -67,19 +71,6 @@ S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype = {
 	 */
 	replaceKeyWith: function(value) {
 		return this.set('ReplaceKeyWith', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

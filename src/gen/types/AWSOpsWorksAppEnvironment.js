@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Environment is a property of the AWS::OpsWorks::App resource that specifies the environment variable to associate with the AWS OpsWorks app.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environment.html}
  * @constructor
  */
 function AWSOpsWorksAppEnvironment() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSOpsWorksAppEnvironment, PropertyType);
 
 AWSOpsWorksAppEnvironment.prototype = {
 	
@@ -43,19 +47,6 @@ AWSOpsWorksAppEnvironment.prototype = {
 	 */
 	value: function(value) {
 		return this.set('Value', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

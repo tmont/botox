@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ActionTypeId is a property of the AWS CodePipeline Pipeline Stages Actions property that specifies the action type and provider for an AWS CodePipeline action.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.html}
  * @constructor
  */
 function AWSCodePipelinePipelineStagesActionsActionTypeId() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodePipelinePipelineStagesActionsActionTypeId, PropertyType);
 
 AWSCodePipelinePipelineStagesActionsActionTypeId.prototype = {
 	
@@ -55,19 +59,6 @@ AWSCodePipelinePipelineStagesActionsActionTypeId.prototype = {
 	 */
 	version: function(value) {
 		return this.set('Version', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * MethodResponse is a property of the AWS::ApiGateway::Method resource that defines the responses that can be sent to the client who calls an Amazon API Gateway (API Gateway) method.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-methodresponse.html}
  * @constructor
  */
 function APIGatewayMethodMethodResponse() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(APIGatewayMethodMethodResponse, PropertyType);
 
 APIGatewayMethodMethodResponse.prototype = {
 	
@@ -43,19 +47,6 @@ APIGatewayMethodMethodResponse.prototype = {
 	 */
 	statusCode: function(value) {
 		return this.set('StatusCode', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

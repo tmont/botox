@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Origin is a property of the DistributionConfig property that describes an Amazon CloudFront distribution origin.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html}
  * @constructor
  */
 function CloudFrontDistributionConfigOrigin() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudFrontDistributionConfigOrigin, PropertyType);
 
 CloudFrontDistributionConfigOrigin.prototype = {
 	
@@ -67,19 +71,6 @@ CloudFrontDistributionConfigOrigin.prototype = {
 	 */
 	s3OriginConfig: function(value) {
 		return this.set('S3OriginConfig', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

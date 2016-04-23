@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * IntegrationResponse is a property of the Amazon API Gateway Method Integration property that specifies the response that Amazon API Gateway (API Gateway) sends after a method's back end finishes processing a request.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration-integrationresponse.html}
  * @constructor
  */
 function APIGatewayMethodIntegrationIntegrationResponse() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(APIGatewayMethodIntegrationIntegrationResponse, PropertyType);
 
 APIGatewayMethodIntegrationIntegrationResponse.prototype = {
 	
@@ -55,19 +59,6 @@ APIGatewayMethodIntegrationIntegrationResponse.prototype = {
 	 */
 	statusCode: function(value) {
 		return this.set('StatusCode', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

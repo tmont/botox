@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * VpcSettings is a property of the AWS::DirectoryService::MicrosoftAD resource that specifies the VPC settings for a Microsoft directory server.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html}
  * @constructor
  */
 function AWSDirectoryServiceMicrosoftADVpcSettings() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSDirectoryServiceMicrosoftADVpcSettings, PropertyType);
 
 AWSDirectoryServiceMicrosoftADVpcSettings.prototype = {
 	
@@ -31,19 +35,6 @@ AWSDirectoryServiceMicrosoftADVpcSettings.prototype = {
 	 */
 	vpcId: function(value) {
 		return this.set('VpcId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The ElasticLoadBalancing HealthCheck is an embedded property of the AWS::ElasticLoadBalancing::LoadBalancer type.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html}
  * @constructor
  */
 function ElasticLoadBalancingHealthCheckType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticLoadBalancingHealthCheckType, PropertyType);
 
 ElasticLoadBalancingHealthCheckType.prototype = {
 	
@@ -67,19 +71,6 @@ ElasticLoadBalancingHealthCheckType.prototype = {
 	 */
 	unhealthyThreshold: function(value) {
 		return this.set('UnhealthyThreshold', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

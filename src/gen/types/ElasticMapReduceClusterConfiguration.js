@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Configuration is a property of the AWS::EMR::Cluster resource that specifies the software configuration of an Amazon Elastic MapReduce (Amazon EMR) cluster. For example configurations, see Amazon EMR Configurations in the Amazon Elastic MapReduce API Reference.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html}
  * @constructor
  */
 function ElasticMapReduceClusterConfiguration() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticMapReduceClusterConfiguration, PropertyType);
 
 ElasticMapReduceClusterConfiguration.prototype = {
 	
@@ -43,19 +47,6 @@ ElasticMapReduceClusterConfiguration.prototype = {
 	 */
 	configurations: function(value) {
 		return this.set('Configurations', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

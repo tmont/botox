@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * MountPoints is a property of the Amazon EC2 Container Service TaskDefinition ContainerDefinitions property that specifies the mount points for data volumes in a container.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-mountpoints.html}
  * @constructor
  */
 function EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints, PropertyType);
 
 EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints.prototype = {
 	
@@ -43,19 +47,6 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints.prototype = {
 	 */
 	readOnly: function(value) {
 		return this.set('ReadOnly', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * LoadBalancers is a property of the AWS::ECS::Service resource that specifies the load balancer to associate with an Amazon EC2 Container Service (Amazon ECS) service.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html}
  * @constructor
  */
 function EC2ContainerServiceServiceLoadBalancers() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2ContainerServiceServiceLoadBalancers, PropertyType);
 
 EC2ContainerServiceServiceLoadBalancers.prototype = {
 	
@@ -43,19 +47,6 @@ EC2ContainerServiceServiceLoadBalancers.prototype = {
 	 */
 	loadBalancerName: function(value) {
 		return this.set('LoadBalancerName', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

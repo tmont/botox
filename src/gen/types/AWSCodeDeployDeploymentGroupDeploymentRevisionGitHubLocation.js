@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * GitHubLocation is a property of the AWS CodeDeploy DeploymentGroup Deployment Revision property that specifies the location of an application revision that is stored in GitHub.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation.html}
  * @constructor
  */
 function AWSCodeDeployDeploymentGroupDeploymentRevisionGitHubLocation() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodeDeployDeploymentGroupDeploymentRevisionGitHubLocation, PropertyType);
 
 AWSCodeDeployDeploymentGroupDeploymentRevisionGitHubLocation.prototype = {
 	
@@ -31,19 +35,6 @@ AWSCodeDeployDeploymentGroupDeploymentRevisionGitHubLocation.prototype = {
 	 */
 	repository: function(value) {
 		return this.set('Repository', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

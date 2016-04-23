@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ShutdownEventConfiguration is a property of the AWS OpsWorks Layer LifeCycleConfiguration property that specifies the shutdown event configuration for a lifecycle event.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html}
  * @constructor
  */
 function AWSOpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSOpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration, PropertyType);
 
 AWSOpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration.prototype = {
 	
@@ -31,19 +35,6 @@ AWSOpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration.prototype = {
 	 */
 	executionTimeout: function(value) {
 		return this.set('ExecutionTimeout', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

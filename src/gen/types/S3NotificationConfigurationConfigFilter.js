@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Filter is a property of the LambdaConfigurations, QueueConfigurations, and TopicConfigurations properties that describes the filtering rules that determine the Amazon Simple Storage Service (Amazon S3) objects for which to send notifications.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfiguration-config-filter.html}
  * @constructor
  */
 function S3NotificationConfigurationConfigFilter() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(S3NotificationConfigurationConfigFilter, PropertyType);
 
 S3NotificationConfigurationConfigFilter.prototype = {
 	
@@ -19,19 +23,6 @@ S3NotificationConfigurationConfigFilter.prototype = {
 	 */
 	s3Key: function(value) {
 		return this.set('S3Key', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

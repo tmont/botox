@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Use settings from another Elastic Beanstalk configuration template for the AWS::ElasticBeanstalk::ConfigurationTemplate resource type.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-configurationtemplate-sourceconfiguration.html}
  * @constructor
  */
 function ElasticBeanstalkSourceConfigurationPropertyType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticBeanstalkSourceConfigurationPropertyType, PropertyType);
 
 ElasticBeanstalkSourceConfigurationPropertyType.prototype = {
 	
@@ -31,19 +35,6 @@ ElasticBeanstalkSourceConfigurationPropertyType.prototype = {
 	 */
 	templateName: function(value) {
 		return this.set('TemplateName', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

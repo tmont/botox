@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The MetricsCollection is a property of the AWS::AutoScaling::AutoScalingGroup resource that describes the group metrics that an Auto Scaling group sends to CloudWatch. These metrics describe the group rather than any of its instances. For more information, see EnableMetricsCollection in the Auto Scaling API Reference.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html}
  * @constructor
  */
 function AutoScalingMetricsCollection() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AutoScalingMetricsCollection, PropertyType);
 
 AutoScalingMetricsCollection.prototype = {
 	
@@ -31,19 +35,6 @@ AutoScalingMetricsCollection.prototype = {
 	 */
 	metrics: function(value) {
 		return this.set('Metrics', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

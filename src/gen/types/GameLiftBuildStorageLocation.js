@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * StorageLocation is a property of the AWS::GameLift::Build resource that specifies the location of an Amazon GameLift (GameLift) build package files, such as the game server binaries. For more information, see Uploading a Build to Amazon GameLift in the Amazon GameLift Developer Guide.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html}
  * @constructor
  */
 function GameLiftBuildStorageLocation() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(GameLiftBuildStorageLocation, PropertyType);
 
 GameLiftBuildStorageLocation.prototype = {
 	
@@ -19,19 +23,6 @@ GameLiftBuildStorageLocation.prototype = {
 	 */
 	bucket: function(value) {
 		return this.set('Bucket', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

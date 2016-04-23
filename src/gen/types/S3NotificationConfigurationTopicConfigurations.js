@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes the topic and events for the Amazon S3 NotificationConfiguration property.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-topicconfig.html}
  * @constructor
  */
 function S3NotificationConfigurationTopicConfigurations() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(S3NotificationConfigurationTopicConfigurations, PropertyType);
 
 S3NotificationConfigurationTopicConfigurations.prototype = {
 	
@@ -43,19 +47,6 @@ S3NotificationConfigurationTopicConfigurations.prototype = {
 	 */
 	topic: function(value) {
 		return this.set('Topic', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ArtifactStore is a property of the AWS::CodePipeline::Pipeline resource that defines the S3 location where AWS CodePipeline stores pipeline artifacts.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html}
  * @constructor
  */
 function AWSCodePipelinePipelineArtifactStore() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodePipelinePipelineArtifactStore, PropertyType);
 
 AWSCodePipelinePipelineArtifactStore.prototype = {
 	
@@ -43,19 +47,6 @@ AWSCodePipelinePipelineArtifactStore.prototype = {
 	 */
 	type: function(value) {
 		return this.set('Type', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

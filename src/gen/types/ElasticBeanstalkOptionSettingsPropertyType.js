@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * OptionSettings is an embedded property of the AWS::ElasticBeanstalk::Environment and AWS::ElasticBeanstalk::ConfigurationTemplate resources. You use the OptionSettings property to specify an array of options for the Elastic Beanstalk environment.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html}
  * @constructor
  */
 function ElasticBeanstalkOptionSettingsPropertyType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticBeanstalkOptionSettingsPropertyType, PropertyType);
 
 ElasticBeanstalkOptionSettingsPropertyType.prototype = {
 	
@@ -43,19 +47,6 @@ ElasticBeanstalkOptionSettingsPropertyType.prototype = {
 	 */
 	value: function(value) {
 		return this.set('Value', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

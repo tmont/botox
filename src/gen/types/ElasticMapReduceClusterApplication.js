@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Application is a property of the AWS::EMR::Cluster resource that adds an Amazon Elastic MapReduce (Amazon EMR) application bundle or third-party software to an Amazon EMR cluster.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html}
  * @constructor
  */
 function ElasticMapReduceClusterApplication() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticMapReduceClusterApplication, PropertyType);
 
 ElasticMapReduceClusterApplication.prototype = {
 	
@@ -55,19 +59,6 @@ ElasticMapReduceClusterApplication.prototype = {
 	 */
 	version: function(value) {
 		return this.set('Version', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

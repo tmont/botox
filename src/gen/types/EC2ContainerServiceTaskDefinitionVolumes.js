@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Volumes is a property of the AWS::ECS::TaskDefinition resource that specifies a list of data volumes, which your containers can then access.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html}
  * @constructor
  */
 function EC2ContainerServiceTaskDefinitionVolumes() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2ContainerServiceTaskDefinitionVolumes, PropertyType);
 
 EC2ContainerServiceTaskDefinitionVolumes.prototype = {
 	
@@ -31,19 +35,6 @@ EC2ContainerServiceTaskDefinitionVolumes.prototype = {
 	 */
 	host: function(value) {
 		return this.set('Host', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

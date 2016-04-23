@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Deployment is a property of the AWS::CodeDeploy::DeploymentGroup resource that specifies the AWS CodeDeploy application revision that will be deployed to the deployment group.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html}
  * @constructor
  */
 function AWSCodeDeployDeploymentGroupDeployment() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodeDeployDeploymentGroupDeployment, PropertyType);
 
 AWSCodeDeployDeploymentGroupDeployment.prototype = {
 	
@@ -43,19 +47,6 @@ AWSCodeDeployDeploymentGroupDeployment.prototype = {
 	 */
 	revision: function(value) {
 		return this.set('Revision', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes the automatic time-based scaling configuration for an AWS::OpsWorks::Instance resource type. For more information, see SetTimeBasedAutoScaling in the AWS OpsWorks API Reference.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html}
  * @constructor
  */
 function AWSOpsWorksTimeBasedAutoScalingType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSOpsWorksTimeBasedAutoScalingType, PropertyType);
 
 AWSOpsWorksTimeBasedAutoScalingType.prototype = {
 	
@@ -91,19 +95,6 @@ AWSOpsWorksTimeBasedAutoScalingType.prototype = {
 	 */
 	wednesday: function(value) {
 		return this.set('Wednesday', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

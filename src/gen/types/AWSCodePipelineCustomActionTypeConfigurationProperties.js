@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ConfigurationProperties is a property of the AWS::CodePipeline::CustomActionType resource that defines a configuration for an AWS CodePipeline custom action.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype-configurationproperties.html}
  * @constructor
  */
 function AWSCodePipelineCustomActionTypeConfigurationProperties() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodePipelineCustomActionTypeConfigurationProperties, PropertyType);
 
 AWSCodePipelineCustomActionTypeConfigurationProperties.prototype = {
 	
@@ -91,19 +95,6 @@ AWSCodePipelineCustomActionTypeConfigurationProperties.prototype = {
 	 */
 	type: function(value) {
 		return this.set('Type', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

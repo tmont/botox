@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The EC2 Network Interface type is an embedded property of the AWS::EC2::Instance type. It specifies a network interface that is to be attached.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-iface-embedded.html}
  * @constructor
  */
 function EC2NetworkInterfaceEmbeddedPropertyType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2NetworkInterfaceEmbeddedPropertyType, PropertyType);
 
 EC2NetworkInterfaceEmbeddedPropertyType.prototype = {
 	
@@ -127,19 +131,6 @@ EC2NetworkInterfaceEmbeddedPropertyType.prototype = {
 	 */
 	subnetId: function(value) {
 		return this.set('SubnetId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

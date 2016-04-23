@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ViewerCertificate is a property of the CloudFront DistributionConfig property that specifies which certificate to use when viewers use HTTPS to request objects.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-viewercertificate.html}
  * @constructor
  */
 function CloudFrontDistributionConfigurationViewerCertificate() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudFrontDistributionConfigurationViewerCertificate, PropertyType);
 
 CloudFrontDistributionConfigurationViewerCertificate.prototype = {
 	
@@ -55,19 +59,6 @@ CloudFrontDistributionConfigurationViewerCertificate.prototype = {
 	 */
 	sslSupportMethod: function(value) {
 		return this.set('SslSupportMethod', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * A list of attribute definitions for the AWS::DynamoDB::Table resource. Each element is composed of an AttributeName and AttributeType.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-attributedef.html}
  * @constructor
  */
 function DynamoDBAttributeDefinitions() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(DynamoDBAttributeDefinitions, PropertyType);
 
 DynamoDBAttributeDefinitions.prototype = {
 	
@@ -31,19 +35,6 @@ DynamoDBAttributeDefinitions.prototype = {
 	 */
 	attributeType: function(value) {
 		return this.set('AttributeType', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

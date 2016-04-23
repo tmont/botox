@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes the environment tier for an AWS::ElasticBeanstalk::Environment resource. For more information, see Environment Tiers in the AWS Elastic Beanstalk Developer Guide.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment-tier.html}
  * @constructor
  */
 function ElasticBeanstalkEnvironmentTierPropertyType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticBeanstalkEnvironmentTierPropertyType, PropertyType);
 
 ElasticBeanstalkEnvironmentTierPropertyType.prototype = {
 	
@@ -43,19 +47,6 @@ ElasticBeanstalkEnvironmentTierPropertyType.prototype = {
 	 */
 	version: function(value) {
 		return this.set('Version', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

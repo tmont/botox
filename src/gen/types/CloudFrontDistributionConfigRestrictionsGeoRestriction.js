@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * GeoRestriction is a property of the CloudFront DistributionConfiguration Restrictions property that describes the countries in which Amazon CloudFront allows viewers to access your content.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-restrictions-georestriction.html}
  * @constructor
  */
 function CloudFrontDistributionConfigRestrictionsGeoRestriction() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudFrontDistributionConfigRestrictionsGeoRestriction, PropertyType);
 
 CloudFrontDistributionConfigRestrictionsGeoRestriction.prototype = {
 	
@@ -67,19 +71,6 @@ CloudFrontDistributionConfigRestrictionsGeoRestriction.prototype = {
 	 */
 	none: function(value) {
 		return this.set('none', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

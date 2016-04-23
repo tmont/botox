@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * You can use the AWS CloudFormation Resource Tags property to apply tags to resources, which can help you identify and categorize those resources. You can tag only resources for which AWS CloudFormation supports tagging. For information about which resources you can tag with AWS CloudFormation, see the individual resources in AWS Resource Types Reference.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html}
  * @constructor
  */
 function AWSCloudFormationResourceTagsType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCloudFormationResourceTagsType, PropertyType);
 
 AWSCloudFormationResourceTagsType.prototype = {
 	
@@ -31,19 +35,6 @@ AWSCloudFormationResourceTagsType.prototype = {
 	 */
 	value: function(value) {
 		return this.set('Value', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

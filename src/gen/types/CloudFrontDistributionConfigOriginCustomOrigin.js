@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * CustomOrigin is a property of the Amazon CloudFront Origin property that describes an HTTP server.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-customorigin.html}
  * @constructor
  */
 function CloudFrontDistributionConfigOriginCustomOrigin() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudFrontDistributionConfigOriginCustomOrigin, PropertyType);
 
 CloudFrontDistributionConfigOriginCustomOrigin.prototype = {
 	
@@ -43,19 +47,6 @@ CloudFrontDistributionConfigOriginCustomOrigin.prototype = {
 	 */
 	originProtocolPolicy: function(value) {
 		return this.set('OriginProtocolPolicy', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

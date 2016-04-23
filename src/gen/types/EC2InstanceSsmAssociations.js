@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * SsmAssociations is a property of the AWS::EC2::Instance resource that specifies the Amazon EC2 Simple Systems Manager (SSM) document and parameter values to associate with an instance.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ssmassociations.html}
  * @constructor
  */
 function EC2InstanceSsmAssociations() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2InstanceSsmAssociations, PropertyType);
 
 EC2InstanceSsmAssociations.prototype = {
 	
@@ -31,19 +35,6 @@ EC2InstanceSsmAssociations.prototype = {
 	 */
 	documentName: function(value) {
 		return this.set('DocumentName', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

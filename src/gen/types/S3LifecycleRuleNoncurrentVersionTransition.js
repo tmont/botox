@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * NoncurrentVersionTransition is a property of the Amazon S3 Lifecycle Rule property that describes when noncurrent objects transition to a specified storage class.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.html}
  * @constructor
  */
 function S3LifecycleRuleNoncurrentVersionTransition() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(S3LifecycleRuleNoncurrentVersionTransition, PropertyType);
 
 S3LifecycleRuleNoncurrentVersionTransition.prototype = {
 	
@@ -31,19 +35,6 @@ S3LifecycleRuleNoncurrentVersionTransition.prototype = {
 	 */
 	transitionInDays: function(value) {
 		return this.set('TransitionInDays', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

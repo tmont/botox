@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The SourceBundle property is an embedded property of the AWS::ElasticBeanstalk::ApplicationVersion resource.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-sourcebundle.html}
  * @constructor
  */
 function ElasticBeanstalkSourceBundlePropertyType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticBeanstalkSourceBundlePropertyType, PropertyType);
 
 ElasticBeanstalkSourceBundlePropertyType.prototype = {
 	
@@ -31,19 +35,6 @@ ElasticBeanstalkSourceBundlePropertyType.prototype = {
 	 */
 	s3Key: function(value) {
 		return this.set('S3Key', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

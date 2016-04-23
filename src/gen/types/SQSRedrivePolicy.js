@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The RedrivePolicy type is a property of the AWS::SQS::Queue resource.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues-redrivepolicy.html}
  * @constructor
  */
 function SQSRedrivePolicy() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(SQSRedrivePolicy, PropertyType);
 
 SQSRedrivePolicy.prototype = {
 	
@@ -31,19 +35,6 @@ SQSRedrivePolicy.prototype = {
 	 */
 	maxReceiveCount: function(value) {
 		return this.set('maxReceiveCount', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

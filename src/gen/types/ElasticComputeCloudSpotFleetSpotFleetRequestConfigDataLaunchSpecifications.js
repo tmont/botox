@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * LaunchSpecifications is a property of the Amazon EC2 SpotFleet SpotFleetRequestConfigData property that defines the launch specifications for the Spot fleet request.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.html}
  * @constructor
  */
 function ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications, PropertyType);
 
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype = {
 	
@@ -187,19 +191,6 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
 	 */
 	weightedCapacity: function(value) {
 		return this.set('WeightedCapacity', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

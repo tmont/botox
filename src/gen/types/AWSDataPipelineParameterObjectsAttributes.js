@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Attribute is a property of the AWS Data Pipeline Pipeline ParameterObjects property that defines the attributes of a parameter object as key-value pairs.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects-attributes.html}
  * @constructor
  */
 function AWSDataPipelineParameterObjectsAttributes() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSDataPipelineParameterObjectsAttributes, PropertyType);
 
 AWSDataPipelineParameterObjectsAttributes.prototype = {
 	
@@ -31,19 +35,6 @@ AWSDataPipelineParameterObjectsAttributes.prototype = {
 	 */
 	stringValue: function(value) {
 		return this.set('StringValue', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

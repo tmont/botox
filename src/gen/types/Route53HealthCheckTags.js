@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The HealthCheckTags property describes key-value pairs that are associated with an AWS::Route53::HealthCheck resource.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktags.html}
  * @constructor
  */
 function Route53HealthCheckTags() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(Route53HealthCheckTags, PropertyType);
 
 Route53HealthCheckTags.prototype = {
 	
@@ -31,19 +35,6 @@ Route53HealthCheckTags.prototype = {
 	 */
 	value: function(value) {
 		return this.set('Value', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

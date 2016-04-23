@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes an SSL configuration for the AWS::OpsWorks::App resource type.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html}
  * @constructor
  */
 function AWSOpsWorksSslConfigurationType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSOpsWorksSslConfigurationType, PropertyType);
 
 AWSOpsWorksSslConfigurationType.prototype = {
 	
@@ -43,19 +47,6 @@ AWSOpsWorksSslConfigurationType.prototype = {
 	 */
 	privateKey: function(value) {
 		return this.set('PrivateKey', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

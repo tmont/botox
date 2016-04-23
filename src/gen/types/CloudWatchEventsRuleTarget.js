@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Target is a property of the AWS::Events::Rule resource that specifies the targets that CloudWatch Events invokes when a rule is triggered, such as AWS Lambda (Lambda) functions or Amazon Kinesis streams.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html}
  * @constructor
  */
 function CloudWatchEventsRuleTarget() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudWatchEventsRuleTarget, PropertyType);
 
 CloudWatchEventsRuleTarget.prototype = {
 	
@@ -55,19 +59,6 @@ CloudWatchEventsRuleTarget.prototype = {
 	 */
 	inputPath: function(value) {
 		return this.set('InputPath', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * CustomErrorResponse is a property of the CloudFront DistributionConfig resource that defines custom error messages for certain HTTP status codes.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-customerrorresponse.html}
  * @constructor
  */
 function CloudFrontDistributionConfigCustomErrorResponse() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudFrontDistributionConfigCustomErrorResponse, PropertyType);
 
 CloudFrontDistributionConfigCustomErrorResponse.prototype = {
 	
@@ -55,19 +59,6 @@ CloudFrontDistributionConfigCustomErrorResponse.prototype = {
 	 */
 	responsePagePath: function(value) {
 		return this.set('ResponsePagePath', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

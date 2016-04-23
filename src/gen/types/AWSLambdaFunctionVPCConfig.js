@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * VpcConfig is a property of the AWS::Lambda::Function resource that enables to your AWS Lambda (Lambda) function to access resources in a VPC. For more information, see Configuring a Lambda Function to Access Resources in an Amazon VPC in the AWS Lambda Developer Guide.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html}
  * @constructor
  */
 function AWSLambdaFunctionVPCConfig() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSLambdaFunctionVPCConfig, PropertyType);
 
 AWSLambdaFunctionVPCConfig.prototype = {
 	
@@ -31,19 +35,6 @@ AWSLambdaFunctionVPCConfig.prototype = {
 	 */
 	subnetIds: function(value) {
 		return this.set('SubnetIds', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

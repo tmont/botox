@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Source is a property of the AWS::Config::ConfigRule resource that specifies the rule owner, the rule identifier, and the events that trigger an AWS Config evaluation of your AWS resources.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-source.html}
  * @constructor
  */
 function AWSConfigConfigRuleSource() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSConfigConfigRuleSource, PropertyType);
 
 AWSConfigConfigRuleSource.prototype = {
 	
@@ -43,19 +47,6 @@ AWSConfigConfigRuleSource.prototype = {
 	 */
 	sourceIdentifier: function(value) {
 		return this.set('SourceIdentifier', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

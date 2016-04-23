@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Restrictions is a property of the CloudFront DistributionConfig property that lets you limit which viewers can access your content.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-restrictions.html}
  * @constructor
  */
 function CloudFrontDistributionConfigurationRestrictions() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudFrontDistributionConfigurationRestrictions, PropertyType);
 
 CloudFrontDistributionConfigurationRestrictions.prototype = {
 	
@@ -19,19 +23,6 @@ CloudFrontDistributionConfigurationRestrictions.prototype = {
 	 */
 	geoRestriction: function(value) {
 		return this.set('GeoRestriction', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

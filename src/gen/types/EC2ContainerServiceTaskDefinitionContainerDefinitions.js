@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ContainerDefinitions is a property of the AWS::ECS::TaskDefinition resource that describes the configuration of a container. The container definitions are passed to the Docker daemon.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html}
  * @constructor
  */
 function EC2ContainerServiceTaskDefinitionContainerDefinitions() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2ContainerServiceTaskDefinitionContainerDefinitions, PropertyType);
 
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype = {
 	
@@ -151,19 +155,6 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype = {
 	 */
 	volumesFrom: function(value) {
 		return this.set('VolumesFrom', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

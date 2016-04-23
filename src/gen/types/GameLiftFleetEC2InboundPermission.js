@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * EC2InboundPermission is a property of the AWS::GameLift::Fleet resource that specifies the traffic that is permitted to access your game servers in an Amazon GameLift (GameLift) fleet.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html}
  * @constructor
  */
 function GameLiftFleetEC2InboundPermission() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(GameLiftFleetEC2InboundPermission, PropertyType);
 
 GameLiftFleetEC2InboundPermission.prototype = {
 	
@@ -19,19 +23,6 @@ GameLiftFleetEC2InboundPermission.prototype = {
 	 */
 	fromPort: function(value) {
 		return this.set('FromPort', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

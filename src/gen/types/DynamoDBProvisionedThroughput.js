@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes a set of provisioned throughput values for an AWS::DynamoDB::Table resource. DynamoDB uses these capacity units to allocate sufficient resources to provide the requested throughput.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html}
  * @constructor
  */
 function DynamoDBProvisionedThroughput() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(DynamoDBProvisionedThroughput, PropertyType);
 
 DynamoDBProvisionedThroughput.prototype = {
 	
@@ -31,19 +35,6 @@ DynamoDBProvisionedThroughput.prototype = {
 	 */
 	writeCapacityUnits: function(value) {
 		return this.set('WriteCapacityUnits', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

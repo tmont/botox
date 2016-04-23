@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes cross-origin access rules for the Amazon S3 Cors Configuration property.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors-corsrule.html}
  * @constructor
  */
 function S3CorsConfigurationRule() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(S3CorsConfigurationRule, PropertyType);
 
 S3CorsConfigurationRule.prototype = {
 	
@@ -79,19 +83,6 @@ S3CorsConfigurationRule.prototype = {
 	 */
 	maxAge: function(value) {
 		return this.set('MaxAge', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

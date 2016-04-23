@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * SourceDetails is a property of the AWS Config ConfigRule Source property that specifies the source and type of event that triggers AWS Config to evaluate your AWS resources.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-source-sourcedetails.html}
  * @constructor
  */
 function AWSConfigConfigRuleSourceSourceDetails() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSConfigConfigRuleSourceSourceDetails, PropertyType);
 
 AWSConfigConfigRuleSourceSourceDetails.prototype = {
 	
@@ -31,19 +35,6 @@ AWSConfigConfigRuleSourceSourceDetails.prototype = {
 	 */
 	messageType: function(value) {
 		return this.set('MessageType', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

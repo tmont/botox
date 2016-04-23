@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ReplicationConfiguration is a property of the AWS::S3::Bucket resource that specifies replication rules and the AWS Identity and Access Management (IAM) role Amazon Simple Storage Service (Amazon S3) uses to replicate objects.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration.html}
  * @constructor
  */
 function S3ReplicationConfiguration() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(S3ReplicationConfiguration, PropertyType);
 
 S3ReplicationConfiguration.prototype = {
 	
@@ -31,19 +35,6 @@ S3ReplicationConfiguration.prototype = {
 	 */
 	rules: function(value) {
 		return this.set('Rules', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

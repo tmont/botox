@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes parameters for the AWS::Redshift::ClusterParameterGroup resource type.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-property-redshift-clusterparametergroup-parameter.html}
  * @constructor
  */
 function RedshiftParameterType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(RedshiftParameterType, PropertyType);
 
 RedshiftParameterType.prototype = {
 	
@@ -31,19 +35,6 @@ RedshiftParameterType.prototype = {
 	 */
 	parameterValue: function(value) {
 		return this.set('ParameterValue', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

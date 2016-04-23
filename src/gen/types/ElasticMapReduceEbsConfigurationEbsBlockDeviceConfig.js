@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * EbsBlockDeviceConfig is a property of the Amazon Elastic MapReduce EbsConfiguration property that defines the settings for the Amazon Elastic Block Store (Amazon EBS) volumes that Amazon Elastic MapReduce (Amazon EMR) associates with your instances.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig.html}
  * @constructor
  */
 function ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig, PropertyType);
 
 ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig.prototype = {
 	
@@ -31,19 +35,6 @@ ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig.prototype = {
 	 */
 	volumesPerInstance: function(value) {
 		return this.set('VolumesPerInstance', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

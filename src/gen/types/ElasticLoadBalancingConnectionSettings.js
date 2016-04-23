@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ConnectionSettings is a property of the AWS::ElasticLoadBalancing::LoadBalancer resource that describes how long the front-end and back-end connections of your load balancer can remain idle. For more information, see Configure Idle Connection Timeout in the Elastic Load Balancing Developer Guide.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectionsettings.html}
  * @constructor
  */
 function ElasticLoadBalancingConnectionSettings() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticLoadBalancingConnectionSettings, PropertyType);
 
 ElasticLoadBalancingConnectionSettings.prototype = {
 	
@@ -19,19 +23,6 @@ ElasticLoadBalancingConnectionSettings.prototype = {
 	 */
 	idleTimeout: function(value) {
 		return this.set('IdleTimeout', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

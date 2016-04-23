@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Subscription is an embedded property of the AWS::SNS::Topic resource that describes the subscription endpoints for a topic.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html}
  * @constructor
  */
 function SNSSubscriptionPropertyType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(SNSSubscriptionPropertyType, PropertyType);
 
 SNSSubscriptionPropertyType.prototype = {
 	
@@ -31,19 +35,6 @@ SNSSubscriptionPropertyType.prototype = {
 	 */
 	protocol: function(value) {
 		return this.set('Protocol', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

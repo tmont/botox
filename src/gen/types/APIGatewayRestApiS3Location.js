@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * S3Location is a property of the AWS::ApiGateway::RestApi resource that specifies the Amazon Simple Storage Service (Amazon S3) location of a Swagger file that defines a set of RESTful APIs in JSON or YAML for an Amazon API Gateway (API Gateway) RestApi.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-restapi-bodys3location.html}
  * @constructor
  */
 function APIGatewayRestApiS3Location() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(APIGatewayRestApiS3Location, PropertyType);
 
 APIGatewayRestApiS3Location.prototype = {
 	
@@ -55,19 +59,6 @@ APIGatewayRestApiS3Location.prototype = {
 	 */
 	version: function(value) {
 		return this.set('Version', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

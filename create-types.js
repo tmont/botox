@@ -41,33 +41,24 @@ function createTypes(files, next) {
 	 */
 	${camelize(prop.name)}: function(value) {
 		return this.set('${prop.name}', value);
-	},`;
-		}).join('\n');
+	}`;
+		}).join(',\n');
 
-		const code = `/**
+		const code = `var PropertyType = require('../../property-type');
+
+/**
  * ${json.description}
  * @see {@link ${json.referenceUrl}}
  * @constructor
  */
 function ${className}() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(${className}, PropertyType);
 
 ${className}.prototype = {
 	${methods}
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
-	}
 };
 
 module.exports = ${className};

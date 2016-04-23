@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * InputArtifacts is a property of the AWS CodePipeline Pipeline Stages Actions property that specifies an artifact that the AWS CodePipeline action works on, such as a test or build artifact.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.html}
  * @constructor
  */
 function AWSCodePipelinePipelineStagesActionsInputArtifacts() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodePipelinePipelineStagesActionsInputArtifacts, PropertyType);
 
 AWSCodePipelinePipelineStagesActionsInputArtifacts.prototype = {
 	
@@ -19,19 +23,6 @@ AWSCodePipelinePipelineStagesActionsInputArtifacts.prototype = {
 	 */
 	name: function(value) {
 		return this.set('Name', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

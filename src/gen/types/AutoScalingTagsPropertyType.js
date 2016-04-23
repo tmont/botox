@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The Auto Scaling Tags property is an embedded property of the AWS::AutoScaling::AutoScalingGroup type. For more information about tags, go to Tagging Auto Scaling Groups and Amazon EC2 Instances in the Auto Scaling Developer Guide.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-tags.html}
  * @constructor
  */
 function AutoScalingTagsPropertyType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AutoScalingTagsPropertyType, PropertyType);
 
 AutoScalingTagsPropertyType.prototype = {
 	
@@ -43,19 +47,6 @@ AutoScalingTagsPropertyType.prototype = {
 	 */
 	propagateAtLaunch: function(value) {
 		return this.set('PropagateAtLaunch', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

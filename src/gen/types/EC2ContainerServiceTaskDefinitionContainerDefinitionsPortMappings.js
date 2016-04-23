@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * PortMappings is a property of the Amazon EC2 Container Service TaskDefinition ContainerDefinitions property that maps a container port to a host port.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-portmappings.html}
  * @constructor
  */
 function EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings, PropertyType);
 
 EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings.prototype = {
 	
@@ -31,19 +35,6 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings.prototype = {
 	 */
 	hostPort: function(value) {
 		return this.set('HostPort', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

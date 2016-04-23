@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The Amazon RDS security group rule is an embedded property of the AWS::RDS::DBSecurityGroup type.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group-rule.html}
  * @constructor
  */
 function RDSSecurityGroupRule() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(RDSSecurityGroupRule, PropertyType);
 
 RDSSecurityGroupRule.prototype = {
 	
@@ -55,19 +59,6 @@ RDSSecurityGroupRule.prototype = {
 	 */
 	ec2SecurityGroupOwnerId: function(value) {
 		return this.set('EC2SecurityGroupOwnerId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

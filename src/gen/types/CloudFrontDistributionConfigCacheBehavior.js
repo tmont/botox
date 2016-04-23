@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * CacheBehavior is a property of the DistributionConfig property that describes the Amazon CloudFront (CloudFront) cache behavior when the requested URL matches a pattern.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachebehavior.html}
  * @constructor
  */
 function CloudFrontDistributionConfigCacheBehavior() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudFrontDistributionConfigCacheBehavior, PropertyType);
 
 CloudFrontDistributionConfigCacheBehavior.prototype = {
 	
@@ -151,19 +155,6 @@ CloudFrontDistributionConfigCacheBehavior.prototype = {
 	 */
 	viewerProtocolPolicy: function(value) {
 		return this.set('ViewerProtocolPolicy', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

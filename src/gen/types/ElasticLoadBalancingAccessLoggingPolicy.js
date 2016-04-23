@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The AccessLoggingPolicy property describes where and how access logs are stored for the AWS::ElasticLoadBalancing::LoadBalancer resource.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html}
  * @constructor
  */
 function ElasticLoadBalancingAccessLoggingPolicy() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticLoadBalancingAccessLoggingPolicy, PropertyType);
 
 ElasticLoadBalancingAccessLoggingPolicy.prototype = {
 	
@@ -55,19 +59,6 @@ ElasticLoadBalancingAccessLoggingPolicy.prototype = {
 	 */
 	s3BucketPrefix: function(value) {
 		return this.set('S3BucketPrefix', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

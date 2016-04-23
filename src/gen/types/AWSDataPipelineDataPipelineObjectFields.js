@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Key-value pairs that describe the properties of a data pipeline object.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects-fields.html}
  * @constructor
  */
 function AWSDataPipelineDataPipelineObjectFields() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSDataPipelineDataPipelineObjectFields, PropertyType);
 
 AWSDataPipelineDataPipelineObjectFields.prototype = {
 	
@@ -43,19 +47,6 @@ AWSDataPipelineDataPipelineObjectFields.prototype = {
 	 */
 	stringValue: function(value) {
 		return this.set('StringValue', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

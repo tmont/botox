@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The HostedZoneVPCs property is part of the AWS::Route53::HostedZone resource that specifies the VPCs to associate with the hosted zone.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html}
  * @constructor
  */
 function Route53HostedZoneVPCs() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(Route53HostedZoneVPCs, PropertyType);
 
 Route53HostedZoneVPCs.prototype = {
 	
@@ -31,19 +35,6 @@ Route53HostedZoneVPCs.prototype = {
 	 */
 	vpcregion: function(value) {
 		return this.set('VPCRegion', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

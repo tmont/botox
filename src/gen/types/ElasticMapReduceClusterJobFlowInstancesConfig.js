@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * JobFlowInstancesConfig is a property of the AWS::EMR::Cluster resource that configures the EC2 instances (nodes) that will run jobs in an Amazon Elastic MapReduce (Amazon EMR) cluster.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html}
  * @constructor
  */
 function ElasticMapReduceClusterJobFlowInstancesConfig() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticMapReduceClusterJobFlowInstancesConfig, PropertyType);
 
 ElasticMapReduceClusterJobFlowInstancesConfig.prototype = {
 	
@@ -151,19 +155,6 @@ ElasticMapReduceClusterJobFlowInstancesConfig.prototype = {
 	 */
 	terminationProtected: function(value) {
 		return this.set('TerminationProtected', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

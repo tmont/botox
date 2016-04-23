@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Settings is a property of the AWS::CodePipeline::CustomActionType resource that provides URLs that users can access to view information about the AWS CodePipeline custom action.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype-settings.html}
  * @constructor
  */
 function AWSCodePipelineCustomActionTypeSettings() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodePipelineCustomActionTypeSettings, PropertyType);
 
 AWSCodePipelineCustomActionTypeSettings.prototype = {
 	
@@ -55,19 +59,6 @@ AWSCodePipelineCustomActionTypeSettings.prototype = {
 	 */
 	thirdPartyConfigurationUrl: function(value) {
 		return this.set('ThirdPartyConfigurationUrl', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

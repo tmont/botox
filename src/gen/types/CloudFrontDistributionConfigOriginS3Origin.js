@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * S3Origin is a property of the Origin property that describes the Amazon Simple Storage Service (S3) origin to associate with an Amazon CloudFront origin.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-s3origin.html}
  * @constructor
  */
 function CloudFrontDistributionConfigOriginS3Origin() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudFrontDistributionConfigOriginS3Origin, PropertyType);
 
 CloudFrontDistributionConfigOriginS3Origin.prototype = {
 	
@@ -19,19 +23,6 @@ CloudFrontDistributionConfigOriginS3Origin.prototype = {
 	 */
 	originAccessIdentity: function(value) {
 		return this.set('OriginAccessIdentity', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

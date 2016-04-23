@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * StepAdjustments is a property of the AWS::AutoScaling::ScalingPolicy resource that describes a scaling adjustment based on the difference between the value of the aggregated CloudWatch metric and the breach threshold that you've defined for the alarm. For more information, see StepAdjustment in the Auto Scaling API Reference.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html}
  * @constructor
  */
 function AutoScalingScalingPolicyStepAdjustments() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AutoScalingScalingPolicyStepAdjustments, PropertyType);
 
 AutoScalingScalingPolicyStepAdjustments.prototype = {
 	
@@ -43,19 +47,6 @@ AutoScalingScalingPolicyStepAdjustments.prototype = {
 	 */
 	scalingAdjustment: function(value) {
 		return this.set('ScalingAdjustment', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

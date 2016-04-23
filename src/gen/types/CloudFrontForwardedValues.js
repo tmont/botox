@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ForwardedValues is a property of the DefaultCacheBehavior and CacheBehavior properties that indicates whether Amazon CloudFront forwards query strings or cookies.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-forwardedvalues.html}
  * @constructor
  */
 function CloudFrontForwardedValues() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudFrontForwardedValues, PropertyType);
 
 CloudFrontForwardedValues.prototype = {
 	
@@ -43,19 +47,6 @@ CloudFrontForwardedValues.prototype = {
 	 */
 	queryString: function(value) {
 		return this.set('QueryString', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ParameterObjects is a property of the AWS::DataPipeline::Pipeline resource that describes parameters that are used in a pipeline definition.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html}
  * @constructor
  */
 function AWSDataPipelinePipelineParameterObjects() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSDataPipelinePipelineParameterObjects, PropertyType);
 
 AWSDataPipelinePipelineParameterObjects.prototype = {
 	
@@ -31,19 +35,6 @@ AWSDataPipelinePipelineParameterObjects.prototype = {
 	 */
 	id: function(value) {
 		return this.set('Id', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

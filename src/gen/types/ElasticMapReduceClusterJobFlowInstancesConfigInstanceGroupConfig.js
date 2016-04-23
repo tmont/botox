@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * InstanceGroupConfig is a property of the CoreInstanceGroup and MasterInstanceGroup properties of the job flow instances configuration. The InstanceGroupConfig property specifies the settings for instances (nodes) in the core and master instance groups of an Amazon Elastic MapReduce (Amazon EMR) cluster.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html}
  * @constructor
  */
 function ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig, PropertyType);
 
 ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype = {
 	
@@ -79,19 +83,6 @@ ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype = {
 	 */
 	name: function(value) {
 		return this.set('Name', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

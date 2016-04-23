@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * EncryptionKey is a property of the AWS CodePipeline Pipeline ArtifactStore property that specifies which key AWS CodePipeline uses to encrypt data in the artifact store, such as an AWS Key Management Service (AWS KMS) key.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore-encryptionkey.html}
  * @constructor
  */
 function AWSCodePipelinePipelineArtifactStoreEncryptionKey() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodePipelinePipelineArtifactStoreEncryptionKey, PropertyType);
 
 AWSCodePipelinePipelineArtifactStoreEncryptionKey.prototype = {
 	
@@ -31,19 +35,6 @@ AWSCodePipelinePipelineArtifactStoreEncryptionKey.prototype = {
 	 */
 	type: function(value) {
 		return this.set('Type', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

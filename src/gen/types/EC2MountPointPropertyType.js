@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The EC2 MountPoint property is an embedded property of the AWS::EC2::Instance type.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-mount-point.html}
  * @constructor
  */
 function EC2MountPointPropertyType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2MountPointPropertyType, PropertyType);
 
 EC2MountPointPropertyType.prototype = {
 	
@@ -31,19 +35,6 @@ EC2MountPointPropertyType.prototype = {
 	 */
 	volumeId: function(value) {
 		return this.set('VolumeId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

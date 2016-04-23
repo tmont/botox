@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * IPSetDescriptors is a property of the AWS::WAF::IPSet resource that specifies the IP address type and IP address range (in CIDR notation) from which web requests originate.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-ipset-ipsetdescriptors.html}
  * @constructor
  */
 function AWSWAFIPSetIPSetDescriptors() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSWAFIPSetIPSetDescriptors, PropertyType);
 
 AWSWAFIPSetIPSetDescriptors.prototype = {
 	
@@ -31,19 +35,6 @@ AWSWAFIPSetIPSetDescriptors.prototype = {
 	 */
 	value: function(value) {
 		return this.set('Value', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

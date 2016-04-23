@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes the load-based automatic scaling configuration for an AWS::OpsWorks::Layer resource type. For more information, see SetLoadBasedAutoScaling in the AWS OpsWorks API Reference.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html}
  * @constructor
  */
 function AWSOpsWorksLoadBasedAutoScalingType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSOpsWorksLoadBasedAutoScalingType, PropertyType);
 
 AWSOpsWorksLoadBasedAutoScalingType.prototype = {
 	
@@ -43,19 +47,6 @@ AWSOpsWorksLoadBasedAutoScalingType.prototype = {
 	 */
 	upScaling: function(value) {
 		return this.set('UpScaling', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

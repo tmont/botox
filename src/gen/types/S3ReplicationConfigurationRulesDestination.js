@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Destination is a property of the Amazon S3 ReplicationConfiguration Rules property that specifies which Amazon Simple Storage Service (Amazon S3) bucket to store replicated objects and their storage class.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html}
  * @constructor
  */
 function S3ReplicationConfigurationRulesDestination() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(S3ReplicationConfigurationRulesDestination, PropertyType);
 
 S3ReplicationConfigurationRulesDestination.prototype = {
 	
@@ -31,19 +35,6 @@ S3ReplicationConfigurationRulesDestination.prototype = {
 	 */
 	storageClass: function(value) {
 		return this.set('StorageClass', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

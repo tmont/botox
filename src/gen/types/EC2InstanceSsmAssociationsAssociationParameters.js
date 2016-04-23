@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * AssociationParameters is a property of the Amazon EC2 Instance SsmAssociations property that specifies input parameter values for an Amazon EC2 Simple Systems Manager (SSM) document.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ssmassociations-associationparameters.html}
  * @constructor
  */
 function EC2InstanceSsmAssociationsAssociationParameters() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2InstanceSsmAssociationsAssociationParameters, PropertyType);
 
 EC2InstanceSsmAssociationsAssociationParameters.prototype = {
 	
@@ -31,19 +35,6 @@ EC2InstanceSsmAssociationsAssociationParameters.prototype = {
 	 */
 	value: function(value) {
 		return this.set('Value', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

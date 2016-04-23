@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ByteMatchTuples is a property of the AWS::WAF::ByteMatchSet resource that specifies settings for an AWS WAF ByteMatchSet resource, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples.html}
  * @constructor
  */
 function AWSWAFByteMatchSetByteMatchTuples() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSWAFByteMatchSetByteMatchTuples, PropertyType);
 
 AWSWAFByteMatchSetByteMatchTuples.prototype = {
 	
@@ -67,19 +71,6 @@ AWSWAFByteMatchSetByteMatchTuples.prototype = {
 	 */
 	textTransformation: function(value) {
 		return this.set('TextTransformation', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

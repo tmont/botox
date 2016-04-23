@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ParameterValues is a property of the AWS::DataPipeline::Pipeline resource that sets values for parameters that are used in a pipeline definition.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalues.html}
  * @constructor
  */
 function AWSDataPipelinePipelineParameterValues() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSDataPipelinePipelineParameterValues, PropertyType);
 
 AWSDataPipelinePipelineParameterValues.prototype = {
 	
@@ -31,19 +35,6 @@ AWSDataPipelinePipelineParameterValues.prototype = {
 	 */
 	stringValue: function(value) {
 		return this.set('StringValue', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

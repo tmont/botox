@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * LambdaConfigurations is a property of the Amazon S3 NotificationConfiguration property that describes the AWS Lambda (Lambda) functions to invoke and the events for which to invoke them.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-lambdaconfig.html}
  * @constructor
  */
 function SimpleStorageServiceNotificationConfigurationLambdaConfigurations() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(SimpleStorageServiceNotificationConfigurationLambdaConfigurations, PropertyType);
 
 SimpleStorageServiceNotificationConfigurationLambdaConfigurations.prototype = {
 	
@@ -43,19 +47,6 @@ SimpleStorageServiceNotificationConfigurationLambdaConfigurations.prototype = {
 	 */
 	function: function(value) {
 		return this.set('Function', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

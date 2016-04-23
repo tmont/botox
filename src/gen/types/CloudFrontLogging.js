@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Logging is a property of the DistributionConfig property that enables Amazon CloudFront to deliver access logs for each distribution to an Amazon Simple Storage Service (S3) bucket.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-logging.html}
  * @constructor
  */
 function CloudFrontLogging() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudFrontLogging, PropertyType);
 
 CloudFrontLogging.prototype = {
 	
@@ -43,19 +47,6 @@ CloudFrontLogging.prototype = {
 	 */
 	prefix: function(value) {
 		return this.set('Prefix', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

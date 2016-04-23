@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * VolumeSpecification is a property of the Amazon Elastic MapReduce EbsConfiguration property that configures the Amazon Elastic Block Store (Amazon EBS) volumes that Amazon Elastic MapReduce (Amazon EMR) associates with your instances.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.html}
  * @constructor
  */
 function ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification, PropertyType);
 
 ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification.prototype = {
 	
@@ -43,19 +47,6 @@ ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification.prototyp
 	 */
 	volumeType: function(value) {
 		return this.set('VolumeType', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

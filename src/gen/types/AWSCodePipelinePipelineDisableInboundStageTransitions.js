@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * DisableInboundStageTransitions is a property of the AWS::CodePipeline::Pipeline resource that specifies which AWS CodePipeline stage to disable transitions to.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-disableinboundstagetransitions.html}
  * @constructor
  */
 function AWSCodePipelinePipelineDisableInboundStageTransitions() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodePipelinePipelineDisableInboundStageTransitions, PropertyType);
 
 AWSCodePipelinePipelineDisableInboundStageTransitions.prototype = {
 	
@@ -31,19 +35,6 @@ AWSCodePipelinePipelineDisableInboundStageTransitions.prototype = {
 	 */
 	stageName: function(value) {
 		return this.set('StageName', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

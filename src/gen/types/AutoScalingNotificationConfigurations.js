@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The NotificationConfigurations property is an embedded property of the AWS::AutoScaling::AutoScalingGroup resource that specifies the events for which the Auto Scaling group sends notifications.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-notificationconfigurations.html}
  * @constructor
  */
 function AutoScalingNotificationConfigurations() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AutoScalingNotificationConfigurations, PropertyType);
 
 AutoScalingNotificationConfigurations.prototype = {
 	
@@ -31,19 +35,6 @@ AutoScalingNotificationConfigurations.prototype = {
 	 */
 	topicARN: function(value) {
 		return this.set('TopicARN', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

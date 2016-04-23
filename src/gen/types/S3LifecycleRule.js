@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes lifecycle rules for the Amazon S3 Lifecycle Configuration property.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html}
  * @constructor
  */
 function S3LifecycleRule() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(S3LifecycleRule, PropertyType);
 
 S3LifecycleRule.prototype = {
 	
@@ -127,19 +131,6 @@ S3LifecycleRule.prototype = {
 	 */
 	transitions: function(value) {
 		return this.set('Transitions', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

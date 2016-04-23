@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Rules is a property of the AWS::WAF::WebACL resource that specifies the rule to associate with an AWS WAF web access control list (ACL) and the rule's settings.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html}
  * @constructor
  */
 function AWSWAFWebACLRules() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSWAFWebACLRules, PropertyType);
 
 AWSWAFWebACLRules.prototype = {
 	
@@ -43,19 +47,6 @@ AWSWAFWebACLRules.prototype = {
 	 */
 	ruleId: function(value) {
 		return this.set('RuleId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

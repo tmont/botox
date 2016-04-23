@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * VolumesFrom is a property of the Amazon EC2 Container Service TaskDefinition ContainerDefinitions property that mounts data volumes from other containers.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom.html}
  * @constructor
  */
 function EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom, PropertyType);
 
 EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom.prototype = {
 	
@@ -31,19 +35,6 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom.prototype = {
 	 */
 	readOnly: function(value) {
 		return this.set('ReadOnly', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

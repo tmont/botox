@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The Amazon Elastic Block Store block device type is an embedded property of the Amazon EC2 Block Device Mapping Property property.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-template.html}
  * @constructor
  */
 function ElasticBlockStoreBlockDeviceProperty() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticBlockStoreBlockDeviceProperty, PropertyType);
 
 ElasticBlockStoreBlockDeviceProperty.prototype = {
 	
@@ -79,19 +83,6 @@ ElasticBlockStoreBlockDeviceProperty.prototype = {
 	 */
 	volumeType: function(value) {
 		return this.set('VolumeType', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

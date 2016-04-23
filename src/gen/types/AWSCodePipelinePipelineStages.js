@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Stages is a property of the AWS::CodePipeline::Pipeline resource that specifies a sequence of tasks for AWS CodePipeline to complete on an artifact.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages.html}
  * @constructor
  */
 function AWSCodePipelinePipelineStages() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodePipelinePipelineStages, PropertyType);
 
 AWSCodePipelinePipelineStages.prototype = {
 	
@@ -43,19 +47,6 @@ AWSCodePipelinePipelineStages.prototype = {
 	 */
 	name: function(value) {
 		return this.set('Name', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

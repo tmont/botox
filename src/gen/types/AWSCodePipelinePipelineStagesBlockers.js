@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Blockers is a property of the AWS CodePipeline Pipeline Stages property that specifies an AWS CodePipeline gate declaration.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-blockers.html}
  * @constructor
  */
 function AWSCodePipelinePipelineStagesBlockers() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodePipelinePipelineStagesBlockers, PropertyType);
 
 AWSCodePipelinePipelineStagesBlockers.prototype = {
 	
@@ -31,19 +35,6 @@ AWSCodePipelinePipelineStagesBlockers.prototype = {
 	 */
 	type: function(value) {
 		return this.set('Type', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

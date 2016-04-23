@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * S3Location is a property of the AWS CodeDeploy DeploymentGroup Deployment Revision property that specifies the location of an application revision that is stored in Amazon Simple Storage Service (Amazon S3).
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.html}
  * @constructor
  */
 function AWSCodeDeployDeploymentGroupDeploymentRevisionS3Location() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodeDeployDeploymentGroupDeploymentRevisionS3Location, PropertyType);
 
 AWSCodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype = {
 	
@@ -67,19 +71,6 @@ AWSCodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype = {
 	 */
 	version: function(value) {
 		return this.set('Version', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

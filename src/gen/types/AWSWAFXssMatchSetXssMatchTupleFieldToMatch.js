@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * FieldToMatch is a property of the AWS WAF XssMatchSet XssMatchTuple property that specifies the part of a web request that you want AWS WAF to search, such as a specific header or a query string.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-xssmatchset-xssmatchtuple-fieldtomatch.html}
  * @constructor
  */
 function AWSWAFXssMatchSetXssMatchTupleFieldToMatch() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSWAFXssMatchSetXssMatchTupleFieldToMatch, PropertyType);
 
 AWSWAFXssMatchSetXssMatchTupleFieldToMatch.prototype = {
 	
@@ -31,19 +35,6 @@ AWSWAFXssMatchSetXssMatchTupleFieldToMatch.prototype = {
 	 */
 	type: function(value) {
 		return this.set('Type', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

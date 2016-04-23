@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The EC2 Security Group Rule is an embedded property of the AWS::EC2::SecurityGroup type.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html}
  * @constructor
  */
 function EC2SecurityGroupRulePropertyType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2SecurityGroupRulePropertyType, PropertyType);
 
 EC2SecurityGroupRulePropertyType.prototype = {
 	
@@ -103,19 +107,6 @@ EC2SecurityGroupRulePropertyType.prototype = {
 	 */
 	toPort: function(value) {
 		return this.set('ToPort', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

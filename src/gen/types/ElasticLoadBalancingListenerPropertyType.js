@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The Listener property is an embedded property of the AWS::ElasticLoadBalancing::LoadBalancer type.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html}
  * @constructor
  */
 function ElasticLoadBalancingListenerPropertyType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticLoadBalancingListenerPropertyType, PropertyType);
 
 ElasticLoadBalancingListenerPropertyType.prototype = {
 	
@@ -79,19 +83,6 @@ ElasticLoadBalancingListenerPropertyType.prototype = {
 	 */
 	sslcertificateId: function(value) {
 		return this.set('SSLCertificateId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

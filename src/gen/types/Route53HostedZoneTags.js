@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The HostedZoneTags property describes key-value pairs that are associated with an AWS::Route53::HostedZone resource.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html}
  * @constructor
  */
 function Route53HostedZoneTags() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(Route53HostedZoneTags, PropertyType);
 
 Route53HostedZoneTags.prototype = {
 	
@@ -31,19 +35,6 @@ Route53HostedZoneTags.prototype = {
 	 */
 	value: function(value) {
 		return this.set('Value', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

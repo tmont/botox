@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * SnapshotOptions is a property of the the section called “AWS::Elasticsearch::Domain” resource that configures the automated snapshot of Amazon Elasticsearch Service (Amazon ES) domain indices.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-snapshotoptions.html}
  * @constructor
  */
 function ElasticsearchServiceDomainSnapshotOptions() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticsearchServiceDomainSnapshotOptions, PropertyType);
 
 ElasticsearchServiceDomainSnapshotOptions.prototype = {
 	
@@ -19,19 +23,6 @@ ElasticsearchServiceDomainSnapshotOptions.prototype = {
 	 */
 	automatedSnapshotStartHour: function(value) {
 		return this.set('AutomatedSnapshotStartHour', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

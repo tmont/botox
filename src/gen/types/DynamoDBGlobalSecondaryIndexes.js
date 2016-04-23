@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes global secondary indexes for the AWS::DynamoDB::Table resource.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-gsi.html}
  * @constructor
  */
 function DynamoDBGlobalSecondaryIndexes() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(DynamoDBGlobalSecondaryIndexes, PropertyType);
 
 DynamoDBGlobalSecondaryIndexes.prototype = {
 	
@@ -55,19 +59,6 @@ DynamoDBGlobalSecondaryIndexes.prototype = {
 	 */
 	provisionedThroughput: function(value) {
 		return this.set('ProvisionedThroughput', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

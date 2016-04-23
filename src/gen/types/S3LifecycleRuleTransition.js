@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes when an object transitions to a specified storage class for the Amazon S3 Lifecycle Rule property.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-transition.html}
  * @constructor
  */
 function S3LifecycleRuleTransition() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(S3LifecycleRuleTransition, PropertyType);
 
 S3LifecycleRuleTransition.prototype = {
 	
@@ -43,19 +47,6 @@ S3LifecycleRuleTransition.prototype = {
 	 */
 	transitionInDays: function(value) {
 		return this.set('TransitionInDays', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * SqlInjectionMatchTuples is a property of the AWS::WAF::SqlInjectionMatchSet resource that specifies the parts of web requests that AWS WAF inspects for SQL code.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.html}
  * @constructor
  */
 function AWSWAFSqlInjectionMatchSetSqlInjectionMatchTuples() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSWAFSqlInjectionMatchSetSqlInjectionMatchTuples, PropertyType);
 
 AWSWAFSqlInjectionMatchSetSqlInjectionMatchTuples.prototype = {
 	
@@ -31,19 +35,6 @@ AWSWAFSqlInjectionMatchSetSqlInjectionMatchTuples.prototype = {
 	 */
 	textTransformation: function(value) {
 		return this.set('TextTransformation', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

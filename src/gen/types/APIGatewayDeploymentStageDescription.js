@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * StageKey is a property of the AWS::ApiGateway::Deployment resource that configures an Amazon API Gateway (API Gateway) deployment stage.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-deployment-stagedescription.html}
  * @constructor
  */
 function APIGatewayDeploymentStageDescription() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(APIGatewayDeploymentStageDescription, PropertyType);
 
 APIGatewayDeploymentStageDescription.prototype = {
 	
@@ -115,19 +119,6 @@ APIGatewayDeploymentStageDescription.prototype = {
 	 */
 	variables: function(value) {
 		return this.set('Variables', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * SizeConstraint is a property of the AWS::WAF::SizeConstraintSet resource that specifies a size constraint and which part of a web request that you want AWS WAF to constrain.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sizeconstraintset-sizeconstraint.html}
  * @constructor
  */
 function AWSWAFSizeConstraintSetSizeConstraint() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSWAFSizeConstraintSetSizeConstraint, PropertyType);
 
 AWSWAFSizeConstraintSetSizeConstraint.prototype = {
 	
@@ -55,19 +59,6 @@ AWSWAFSizeConstraintSetSizeConstraint.prototype = {
 	 */
 	textTransformation: function(value) {
 		return this.set('TextTransformation', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

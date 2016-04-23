@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes the notification configuration for an AWS::S3::Bucket resource.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig.html}
  * @constructor
  */
 function S3NotificationConfiguration() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(S3NotificationConfiguration, PropertyType);
 
 S3NotificationConfiguration.prototype = {
 	
@@ -43,19 +47,6 @@ S3NotificationConfiguration.prototype = {
 	 */
 	topicConfigurations: function(value) {
 		return this.set('TopicConfigurations', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

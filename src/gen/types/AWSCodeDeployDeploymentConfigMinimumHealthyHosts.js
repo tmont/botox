@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * MinimumHealthyHosts is a property of the AWS::CodeDeploy::DeploymentConfig resource that defines how many instances must be healthy during an AWS CodeDeploy deployment.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html}
  * @constructor
  */
 function AWSCodeDeployDeploymentConfigMinimumHealthyHosts() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodeDeployDeploymentConfigMinimumHealthyHosts, PropertyType);
 
 AWSCodeDeployDeploymentConfigMinimumHealthyHosts.prototype = {
 	
@@ -31,19 +35,6 @@ AWSCodeDeployDeploymentConfigMinimumHealthyHosts.prototype = {
 	 */
 	value: function(value) {
 		return this.set('Value', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

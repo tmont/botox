@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * BootstrapActionConfig is a property of the AWS::EMR::Cluster resource that specifies bootstrap actions that Amazon Elastic MapReduce (Amazon EMR) runs before it installs applications on the cluster nodes.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig.html}
  * @constructor
  */
 function ElasticMapReduceClusterBootstrapActionConfig() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticMapReduceClusterBootstrapActionConfig, PropertyType);
 
 ElasticMapReduceClusterBootstrapActionConfig.prototype = {
 	
@@ -31,19 +35,6 @@ ElasticMapReduceClusterBootstrapActionConfig.prototype = {
 	 */
 	scriptBootstrapAction: function(value) {
 		return this.set('ScriptBootstrapAction', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

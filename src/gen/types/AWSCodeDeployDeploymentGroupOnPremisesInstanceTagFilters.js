@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * OnPremisesInstanceTagFilters is a property of the AWS::CodeDeploy::DeploymentGroup resource that specifies which on-premises instances to associate with the deployment group. To register on-premise instances with AWS CodeDeploy, see Configure Existing On-Premises Instances by Using AWS CodeDeploy in the AWS CodeDeploy User Guide.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisesinstancetagfilters.html}
  * @constructor
  */
 function AWSCodeDeployDeploymentGroupOnPremisesInstanceTagFilters() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodeDeployDeploymentGroupOnPremisesInstanceTagFilters, PropertyType);
 
 AWSCodeDeployDeploymentGroupOnPremisesInstanceTagFilters.prototype = {
 	
@@ -43,19 +47,6 @@ AWSCodeDeployDeploymentGroupOnPremisesInstanceTagFilters.prototype = {
 	 */
 	value: function(value) {
 		return this.set('Value', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

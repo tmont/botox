@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Use the OptionConfigurations property to configure an option and its settings for an AWS::RDS::OptionGroup resource.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html}
  * @constructor
  */
 function RDSOptionGroupOptionConfigurations() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(RDSOptionGroupOptionConfigurations, PropertyType);
 
 RDSOptionGroupOptionConfigurations.prototype = {
 	
@@ -67,19 +71,6 @@ RDSOptionGroupOptionConfigurations.prototype = {
 	 */
 	vpcSecurityGroupMemberships: function(value) {
 		return this.set('VpcSecurityGroupMemberships', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

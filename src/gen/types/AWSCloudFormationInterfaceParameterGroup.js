@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ParameterGroup is a property of the AWS::CloudFormation::Interface resource that defines a parameter group and the parameters to include in the group.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-interface-parametergroup.html}
  * @constructor
  */
 function AWSCloudFormationInterfaceParameterGroup() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCloudFormationInterfaceParameterGroup, PropertyType);
 
 AWSCloudFormationInterfaceParameterGroup.prototype = {
 	
@@ -31,19 +35,6 @@ AWSCloudFormationInterfaceParameterGroup.prototype = {
 	 */
 	parameters: function(value) {
 		return this.set('Parameters', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

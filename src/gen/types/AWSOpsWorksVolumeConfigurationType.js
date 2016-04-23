@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes the Amazon EBS volumes for the AWS::OpsWorks::Layer resource type.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfig.html}
  * @constructor
  */
 function AWSOpsWorksVolumeConfigurationType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSOpsWorksVolumeConfigurationType, PropertyType);
 
 AWSOpsWorksVolumeConfigurationType.prototype = {
 	
@@ -79,19 +83,6 @@ AWSOpsWorksVolumeConfigurationType.prototype = {
 	 */
 	volumeType: function(value) {
 		return this.set('VolumeType', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes the scaling thresholds for the AWS OpsWorks LoadBasedAutoScaling Type property. For more information, see AutoScalingThresholds in the AWS OpsWorks API Reference.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html}
  * @constructor
  */
 function AWSOpsWorksAutoScalingThresholdsType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSOpsWorksAutoScalingThresholdsType, PropertyType);
 
 AWSOpsWorksAutoScalingThresholdsType.prototype = {
 	
@@ -79,19 +83,6 @@ AWSOpsWorksAutoScalingThresholdsType.prototype = {
 	 */
 	thresholdsWaitTime: function(value) {
 		return this.set('ThresholdsWaitTime', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

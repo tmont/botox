@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The Amazon EC2 block device mapping property is an embedded property of the AWS::EC2::Instance resource. For block device mappings for an Auto Scaling launch configuration, see AutoScaling Block Device Mapping.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-mapping.html}
  * @constructor
  */
 function EC2BlockDeviceMappingProperty() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2BlockDeviceMappingProperty, PropertyType);
 
 EC2BlockDeviceMappingProperty.prototype = {
 	
@@ -55,19 +59,6 @@ EC2BlockDeviceMappingProperty.prototype = {
 	 */
 	virtualName: function(value) {
 		return this.set('VirtualName', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

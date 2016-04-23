@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Code is a property of the AWS::Lambda::Function resource that enables to you specify the source code of an AWS Lambda (Lambda) function. You can point to a file in an Amazon Simple Storage Service (Amazon S3) bucket or specify your source code as inline text (for nodejs runtime environments only).
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html}
  * @constructor
  */
 function AWSLambdaFunctionCode() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSLambdaFunctionCode, PropertyType);
 
 AWSLambdaFunctionCode.prototype = {
 	
@@ -55,19 +59,6 @@ AWSLambdaFunctionCode.prototype = {
 	 */
 	zipFile: function(value) {
 		return this.set('ZipFile', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * Describes a network interface attachment for an Elastic Network Interface (ENI). AWS::EC2::NetworkInterface takes an object of this type in its Attachment property.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-attachment.html}
  * @constructor
  */
 function EC2NetworkInterfaceAttachment() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2NetworkInterfaceAttachment, PropertyType);
 
 EC2NetworkInterfaceAttachment.prototype = {
 	
@@ -31,19 +35,6 @@ EC2NetworkInterfaceAttachment.prototype = {
 	 */
 	instanceID: function(value) {
 		return this.set('InstanceID', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

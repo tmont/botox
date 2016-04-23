@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * RecordingGroup is property of the AWS::Config::ConfigurationRecorder resource that defines which AWS resource types to include in a recording group.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html}
  * @constructor
  */
 function AWSConfigConfigurationRecorderRecordingGroup() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSConfigConfigurationRecorderRecordingGroup, PropertyType);
 
 AWSConfigConfigurationRecorderRecordingGroup.prototype = {
 	
@@ -43,19 +47,6 @@ AWSConfigConfigurationRecorderRecordingGroup.prototype = {
 	 */
 	resourceTypes: function(value) {
 		return this.set('ResourceTypes', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

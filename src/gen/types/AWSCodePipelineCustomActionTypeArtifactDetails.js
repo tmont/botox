@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ArtifactDetails is a property of the AWS::CodePipeline::CustomActionType resource that specifies the details of an artifact for an AWS CodePipeline custom action. For valid values, see ArtifactDetails in the AWS CodePipeline API Reference.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype-artifactdetails.html}
  * @constructor
  */
 function AWSCodePipelineCustomActionTypeArtifactDetails() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCodePipelineCustomActionTypeArtifactDetails, PropertyType);
 
 AWSCodePipelineCustomActionTypeArtifactDetails.prototype = {
 	
@@ -31,19 +35,6 @@ AWSCodePipelineCustomActionTypeArtifactDetails.prototype = {
 	 */
 	minimumCount: function(value) {
 		return this.set('MinimumCount', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

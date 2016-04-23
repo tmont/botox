@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The RoutingRuleCondition property is an embedded property of the Amazon S3 Website Configuration Routing Rules Property that describes a condition that must be met for a redirect to apply.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition.html}
  * @constructor
  */
 function S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty, PropertyType);
 
 S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty.prototype = {
 	
@@ -31,19 +35,6 @@ S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty.prototype = {
 	 */
 	keyPrefixEquals: function(value) {
 		return this.set('KeyPrefixEquals', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The Metric Dimension is an embedded property of the AWS::CloudWatch::Alarm type. Dimensions are arbitrary name/value pairs that can be associated with a CloudWatch metric. You can specify a maximum of 10 dimensions for a given metric.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dimension.html}
  * @constructor
  */
 function CloudWatchMetricDimensionPropertyType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudWatchMetricDimensionPropertyType, PropertyType);
 
 CloudWatchMetricDimensionPropertyType.prototype = {
 	
@@ -31,19 +35,6 @@ CloudWatchMetricDimensionPropertyType.prototype = {
 	 */
 	value: function(value) {
 		return this.set('Value', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

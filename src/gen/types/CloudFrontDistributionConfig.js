@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * DistributionConfig is a property of the AWS::CloudFront::Distribution property that describes which Amazon CloudFront origin servers to get your files from when users request the files through your website or application.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig.html}
  * @constructor
  */
 function CloudFrontDistributionConfig() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudFrontDistributionConfig, PropertyType);
 
 CloudFrontDistributionConfig.prototype = {
 	
@@ -163,19 +167,6 @@ CloudFrontDistributionConfig.prototype = {
 	 */
 	webACLId: function(value) {
 		return this.set('WebACLId', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * ElasticsearchClusterConfig is a property of the the section called “AWS::Elasticsearch::Domain” resource that configures the cluster of an Amazon Elasticsearch Service (Amazon ES) domain.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html}
  * @constructor
  */
 function ElasticsearchServiceDomainElasticsearchClusterConfig() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticsearchServiceDomainElasticsearchClusterConfig, PropertyType);
 
 ElasticsearchServiceDomainElasticsearchClusterConfig.prototype = {
 	
@@ -79,19 +83,6 @@ ElasticsearchServiceDomainElasticsearchClusterConfig.prototype = {
 	 */
 	zoneAwarenessEnabled: function(value) {
 		return this.set('ZoneAwarenessEnabled', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

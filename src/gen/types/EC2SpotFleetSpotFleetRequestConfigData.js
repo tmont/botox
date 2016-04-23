@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * SpotFleetRequestConfigData is a property of the AWS::EC2::SpotFleet resource that defines the configuration of a Spot fleet request.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html}
  * @constructor
  */
 function EC2SpotFleetSpotFleetRequestConfigData() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(EC2SpotFleetSpotFleetRequestConfigData, PropertyType);
 
 EC2SpotFleetSpotFleetRequestConfigData.prototype = {
 	
@@ -115,19 +119,6 @@ EC2SpotFleetSpotFleetRequestConfigData.prototype = {
 	 */
 	validUntil: function(value) {
 		return this.set('ValidUntil', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

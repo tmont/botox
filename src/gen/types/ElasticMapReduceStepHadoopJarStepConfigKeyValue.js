@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * KeyValue is a property of the Amazon Elastic MapReduce Step HadoopJarStepConfig property that specifies key-value pairs, which are passed to a JAR file that Amazon Elastic MapReduce (Amazon EMR) executes.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-step-hadoopjarstepconfig-keyvalue.html}
  * @constructor
  */
 function ElasticMapReduceStepHadoopJarStepConfigKeyValue() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(ElasticMapReduceStepHadoopJarStepConfigKeyValue, PropertyType);
 
 ElasticMapReduceStepHadoopJarStepConfigKeyValue.prototype = {
 	
@@ -31,19 +35,6 @@ ElasticMapReduceStepHadoopJarStepConfigKeyValue.prototype = {
 	 */
 	value: function(value) {
 		return this.set('Value', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

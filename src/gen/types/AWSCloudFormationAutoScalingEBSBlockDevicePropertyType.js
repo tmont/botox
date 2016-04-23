@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The AutoScaling EBS Block Device type is an embedded property of the AutoScaling Block Device Mapping type.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-template.html}
  * @constructor
  */
 function AWSCloudFormationAutoScalingEBSBlockDevicePropertyType() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(AWSCloudFormationAutoScalingEBSBlockDevicePropertyType, PropertyType);
 
 AWSCloudFormationAutoScalingEBSBlockDevicePropertyType.prototype = {
 	
@@ -79,19 +83,6 @@ AWSCloudFormationAutoScalingEBSBlockDevicePropertyType.prototype = {
 	 */
 	volumeType: function(value) {
 		return this.set('VolumeType', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * The HealthCheckConfig property is part of the AWS::Route53::HealthCheck resource that describes a health check that Amazon Route 53 uses before responding to a DNS query.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html}
  * @constructor
  */
 function Route53HealthCheckConfig() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(Route53HealthCheckConfig, PropertyType);
 
 Route53HealthCheckConfig.prototype = {
 	
@@ -103,19 +107,6 @@ Route53HealthCheckConfig.prototype = {
 	 */
 	type: function(value) {
 		return this.set('Type', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

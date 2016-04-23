@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * MetricTransformation is a property of the AWS::Logs::MetricFilter resource that describes how to transform log streams into a CloudWatch metric.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html}
  * @constructor
  */
 function CloudWatchLogsMetricFilterMetricTransformationProperty() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudWatchLogsMetricFilterMetricTransformationProperty, PropertyType);
 
 CloudWatchLogsMetricFilterMetricTransformationProperty.prototype = {
 	
@@ -43,19 +47,6 @@ CloudWatchLogsMetricFilterMetricTransformationProperty.prototype = {
 	 */
 	metricValue: function(value) {
 		return this.set('MetricValue', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 

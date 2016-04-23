@@ -1,11 +1,15 @@
+var PropertyType = require('../../property-type');
+
 /**
  * DefaultCacheBehavior is a property of the DistributionConfig property that describes the default cache behavior for an Amazon CloudFront distribution.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html}
  * @constructor
  */
 function CloudFrontDefaultCacheBehavior() {
-	this.data = {};
+	PropertyType.call(this);
 }
+
+Object.setPrototypeOf(CloudFrontDefaultCacheBehavior, PropertyType);
 
 CloudFrontDefaultCacheBehavior.prototype = {
 	
@@ -139,19 +143,6 @@ CloudFrontDefaultCacheBehavior.prototype = {
 	 */
 	viewerProtocolPolicy: function(value) {
 		return this.set('ViewerProtocolPolicy', value);
-	},
-
-	set: function(key, value) {
-		this.data[key] = value;
-		return this;
-	},
-
-	toJSON: function() {
-		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
 
