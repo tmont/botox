@@ -18,6 +18,7 @@ function readFiles(next) {
 
 function createResources(files, next) {
 	const objDir = path.join(__dirname, 'src', 'gen', 'resources');
+	const resourceMap = {};
 
 	function camelize(str) {
 		return str.replace(/^[A-Z]+/, (match) => {
@@ -94,13 +95,44 @@ ${className}.prototype = {
 module.exports = ${className};
 `;
 
-		fs.writeFile(path.join(objDir, className + '.js'), code, next);
+		const targetFile = path.join(objDir, className + '.js');
+		if (!resourceMap[json.category]) {
+			resourceMap[json.category] = [];
+		}
+		resourceMap[json.category].push({ file: targetFile, obj: json, name: json.name });
+		fs.writeFile(targetFile, code, next);
 	}
 
-	async.each(files, createResource, next);
+	async.each(files, createResource, (err) => {
+		next(err, resourceMap);
+	});
 }
 
-async.waterfall([ readFiles, createResources ], (err) => {
+function createIndex(resourceMap, next) {
+	const indexFile = path.join(__dirname, 'src', 'resources.js');
+	const categories = Object.keys(resourceMap).sort();
+	const resourceProps = categories.map((category) => {
+		const resources = resourceMap[category].sort((a, b) => {
+			return a.name.localeCompare(b.name);
+		});
+
+		const requires = resources.map((resource) => {
+			const file = '.' + resource.file.substring(path.dirname(indexFile).length);
+			return `${resource.name}: require('${file}')`;
+		});
+
+		return `${category}: {\n\t\t` + requires.join(',\n\t\t') + '\n\t}';
+	}).join(',\n\t');
+
+	const code = `module.exports = {
+	${resourceProps}
+};
+`;
+
+	fs.writeFile(indexFile, code, next);
+}
+
+async.waterfall([ readFiles, createResources, createIndex ], (err) => {
 	err && console.error(err);
 	process.exit(err ? 1 : 0);
 });
