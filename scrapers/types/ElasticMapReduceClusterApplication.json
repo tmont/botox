@@ -6,7 +6,7 @@
       "name": "AdditionalInfo",
       "description": "Metadata about third-party applications that third-party vendors use for testing purposes.",
       "required": false,
-      "type": "Stringtostringmap"
+      "type": "Object"
     },
     {
       "name": "Args",

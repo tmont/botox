@@ -204,7 +204,7 @@ ElasticLoadBalancingLoadBalancer.prototype = {
 	},
 
 	/**
-	 * A list of elastic load balancing policies to apply to this elastic load balancer.
+	 * A list of elastic load balancing policies to apply to this elastic load balancer. Specify only back-end server policies. For more information, see DescribeLoadBalancerPolicyTypes in the Elastic Load Balancing API Reference.
 	 *
 	 * Required: false
 	 * Update requires: No interruption

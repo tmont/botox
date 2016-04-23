@@ -12,7 +12,7 @@
       "name": "Configuration",
       "description": "The action's configuration. These are key-value pairs that specify input values for an action.",
       "required": false,
-      "type": "JSONobject"
+      "type": "Object"
     },
     {
       "name": "InputArtifacts",

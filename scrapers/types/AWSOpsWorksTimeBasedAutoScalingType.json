@@ -6,43 +6,43 @@
       "name": "Friday",
       "description": "The schedule for Friday.",
       "required": false,
-      "type": "Stringtostringmap"
+      "type": "Object"
     },
     {
       "name": "Monday",
       "description": "The schedule for Monday.",
       "required": false,
-      "type": "Stringtostringmap"
+      "type": "Object"
     },
     {
       "name": "Saturday",
       "description": "The schedule for Saturday.",
       "required": false,
-      "type": "Stringtostringmap"
+      "type": "Object"
     },
     {
       "name": "Sunday",
       "description": "The schedule for Sunday.",
       "required": false,
-      "type": "Stringtostringmap"
+      "type": "Object"
     },
     {
       "name": "Thursday",
       "description": "The schedule for Thursday.",
       "required": false,
-      "type": "Stringtostringmap"
+      "type": "Object"
     },
     {
       "name": "Tuesday",
       "description": "The schedule for Tuesday.",
       "required": false,
-      "type": "Stringtostringmap"
+      "type": "Object"
     },
     {
       "name": "Wednesday",
       "description": "The schedule for Wednesday.",
       "required": false,
-      "type": "Stringtostringmap"
+      "type": "Object"
     }
   ],
   "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html"

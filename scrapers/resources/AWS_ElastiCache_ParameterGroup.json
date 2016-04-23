@@ -23,7 +23,7 @@
       "name": "Properties",
       "description": "A comma-delimited list of parameter name/value pairs. For more information, go to ModifyCacheParameterGroup in the Amazon ElastiCache API Reference Guide.",
       "required": true,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "Updates are not supported."
     }
   ],

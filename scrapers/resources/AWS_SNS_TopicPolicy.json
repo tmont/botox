@@ -9,7 +9,7 @@
       "name": "PolicyDocument",
       "description": "A policy document that contains permissions to add to the specified SNS topics.",
       "required": true,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "No interruption"
     },
     {

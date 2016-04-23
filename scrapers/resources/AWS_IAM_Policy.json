@@ -16,7 +16,7 @@
       "name": "PolicyDocument",
       "description": "A policy document that contains permissions to add to the specified users or groups.",
       "required": true,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "No interruption"
     },
     {

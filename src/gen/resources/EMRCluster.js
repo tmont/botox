@@ -34,7 +34,7 @@ EMRCluster.prototype = {
 	 * Required: false
 	 * Update requires: Replacement
 	 *
-	 * @param {JSONobject} value
+	 * @param {Object} value
 	 * @return {EMRCluster}
 	 */
 	additionalInfo: function(value) {

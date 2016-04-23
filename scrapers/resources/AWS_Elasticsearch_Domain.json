@@ -9,7 +9,7 @@
       "name": "AccessPolicies",
       "description": "An AWS Identity and Access Management (IAM) policy document that specifies who can access the Amazon ES domain and their permissions. For more information, see Configuring Access Policies in the Amazon Elasticsearch Service Developer Guide.",
       "required": false,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "No interruption"
     },
     {

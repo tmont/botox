@@ -21,7 +21,7 @@ SSMDocument.prototype = {
 	 * Required: true
 	 * Update requires: Replacement
 	 *
-	 * @param {JSONobject} value
+	 * @param {Object} value
 	 * @return {SSMDocument}
 	 */
 	content: function(value) {

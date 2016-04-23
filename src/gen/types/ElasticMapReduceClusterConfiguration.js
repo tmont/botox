@@ -30,7 +30,7 @@ ElasticMapReduceClusterConfiguration.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Stringtostringmap} value
+	 * @param {Object} value
 	 * @return {ElasticMapReduceClusterConfiguration}
 	 */
 	configurationProperties: function(value) {

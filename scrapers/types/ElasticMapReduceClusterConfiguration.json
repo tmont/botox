@@ -12,7 +12,7 @@
       "name": "ConfigurationProperties",
       "description": "The settings that you want to change in the application-specific configuration file. For more information see, Configuring Applications in the Amazon Elastic MapReduce Release Guide.",
       "required": false,
-      "type": "Stringtostringmap"
+      "type": "Object"
     },
     {
       "name": "Configurations",

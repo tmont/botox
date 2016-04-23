@@ -18,7 +18,7 @@ IAMPolicies.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {JSONobject} value
+	 * @param {Object} value
 	 * @return {IAMPolicies}
 	 */
 	policyDocument: function(value) {

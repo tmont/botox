@@ -42,7 +42,7 @@ AWSCloudFormationAutoScalingEBSBlockDevicePropertyType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSCloudFormationAutoScalingEBSBlockDevicePropertyType}
 	 */
 	iops: function(value) {
@@ -66,7 +66,7 @@ AWSCloudFormationAutoScalingEBSBlockDevicePropertyType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {AWSCloudFormationAutoScalingEBSBlockDevicePropertyType}
 	 */
 	volumeSize: function(value) {

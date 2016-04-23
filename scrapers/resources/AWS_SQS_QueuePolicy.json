@@ -9,7 +9,7 @@
       "name": "PolicyDocument",
       "description": "A policy document containing permissions to add to the specified SQS queues.",
       "required": true,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "No interruption"
     },
     {

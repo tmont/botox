@@ -21,7 +21,7 @@ SQSQueuePolicy.prototype = {
 	 * Required: true
 	 * Update requires: No interruption
 	 *
-	 * @param {JSONobject} value
+	 * @param {Object} value
 	 * @return {SQSQueuePolicy}
 	 */
 	policyDocument: function(value) {

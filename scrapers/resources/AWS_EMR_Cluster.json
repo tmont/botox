@@ -9,7 +9,7 @@
       "name": "AdditionalInfo",
       "description": "Additional features that you want to select.",
       "required": false,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "Replacement"
     },
     {

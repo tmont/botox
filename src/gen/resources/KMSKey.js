@@ -60,7 +60,7 @@ KMSKey.prototype = {
 	 * Required: true
 	 * Update requires: No interruption
 	 *
-	 * @param {JSONobject} value
+	 * @param {Object} value
 	 * @return {KMSKey}
 	 */
 	keyPolicy: function(value) {

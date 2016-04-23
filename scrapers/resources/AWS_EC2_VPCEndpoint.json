@@ -9,7 +9,7 @@
       "name": "PolicyDocument",
       "description": "A policy to attach to the endpoint that controls access to the service. The policy must be valid JSON. The default policy allows full access to the AWS service. For more information, see Controlling Access to Services in the Amazon VPC User Guide.",
       "required": false,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "No interruption"
     },
     {

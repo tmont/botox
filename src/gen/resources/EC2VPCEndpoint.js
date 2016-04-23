@@ -21,7 +21,7 @@ EC2VPCEndpoint.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {JSONobject} value
+	 * @param {Object} value
 	 * @return {EC2VPCEndpoint}
 	 */
 	policyDocument: function(value) {

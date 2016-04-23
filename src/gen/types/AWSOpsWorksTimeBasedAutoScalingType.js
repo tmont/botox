@@ -18,7 +18,7 @@ AWSOpsWorksTimeBasedAutoScalingType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Stringtostringmap} value
+	 * @param {Object} value
 	 * @return {AWSOpsWorksTimeBasedAutoScalingType}
 	 */
 	friday: function(value) {
@@ -30,7 +30,7 @@ AWSOpsWorksTimeBasedAutoScalingType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Stringtostringmap} value
+	 * @param {Object} value
 	 * @return {AWSOpsWorksTimeBasedAutoScalingType}
 	 */
 	monday: function(value) {
@@ -42,7 +42,7 @@ AWSOpsWorksTimeBasedAutoScalingType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Stringtostringmap} value
+	 * @param {Object} value
 	 * @return {AWSOpsWorksTimeBasedAutoScalingType}
 	 */
 	saturday: function(value) {
@@ -54,7 +54,7 @@ AWSOpsWorksTimeBasedAutoScalingType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Stringtostringmap} value
+	 * @param {Object} value
 	 * @return {AWSOpsWorksTimeBasedAutoScalingType}
 	 */
 	sunday: function(value) {
@@ -66,7 +66,7 @@ AWSOpsWorksTimeBasedAutoScalingType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Stringtostringmap} value
+	 * @param {Object} value
 	 * @return {AWSOpsWorksTimeBasedAutoScalingType}
 	 */
 	thursday: function(value) {
@@ -78,7 +78,7 @@ AWSOpsWorksTimeBasedAutoScalingType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Stringtostringmap} value
+	 * @param {Object} value
 	 * @return {AWSOpsWorksTimeBasedAutoScalingType}
 	 */
 	tuesday: function(value) {
@@ -90,7 +90,7 @@ AWSOpsWorksTimeBasedAutoScalingType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Stringtostringmap} value
+	 * @param {Object} value
 	 * @return {AWSOpsWorksTimeBasedAutoScalingType}
 	 */
 	wednesday: function(value) {

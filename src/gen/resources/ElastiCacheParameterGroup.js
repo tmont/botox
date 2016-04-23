@@ -47,7 +47,7 @@ ElastiCacheParameterGroup.prototype = {
 	 * Required: true
 	 * Update requires: Updates are not supported.
 	 *
-	 * @param {JSONobject} value
+	 * @param {Object} value
 	 * @return {ElastiCacheParameterGroup}
 	 */
 	properties: function(value) {

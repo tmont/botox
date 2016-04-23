@@ -18,7 +18,7 @@ ElasticLoadBalancingPolicyType.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {JSONname[]} value
+	 * @param {Object[]} value
 	 * @return {ElasticLoadBalancingPolicyType}
 	 */
 	attributes: function(value) {

@@ -30,7 +30,7 @@
       "name": "PolicyDocument",
       "description": "Policies that define the permissions for this managed policy. For more information about policy syntax, see IAM Policy Elements Reference in IAM User Guide.",
       "required": true,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "No interruption"
     },
     {

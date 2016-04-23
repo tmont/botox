@@ -16,7 +16,7 @@
       "name": "RepositoryPolicyText",
       "description": "A policy that controls who has access to the repository and which actions they can perform on it. For more information, see Amazon ECR Repository Policies in the Amazon EC2 Container Registry User Guide.",
       "required": false,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "No interruption"
     }
   ],

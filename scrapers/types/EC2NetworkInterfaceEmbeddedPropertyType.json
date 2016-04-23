@@ -54,7 +54,7 @@
       "name": "SecondaryPrivateIpAddressCount",
       "description": "The number of secondary private IP addresses that Amazon EC2 auto assigns to the network interface. Amazon EC2 uses the value of the PrivateIpAddress property as the primary private IP address. If you don't specify that property, Amazon EC2 auto assigns both the primary and secondary private IP addresses.",
       "required": false,
-      "type": "Integer"
+      "type": "Number"
     },
     {
       "name": "SubnetId",

@@ -34,7 +34,7 @@ ECRRepository.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {JSONobject} value
+	 * @param {Object} value
 	 * @return {ECRRepository}
 	 */
 	repositoryPolicyText: function(value) {

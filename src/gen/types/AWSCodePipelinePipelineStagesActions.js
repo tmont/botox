@@ -30,7 +30,7 @@ AWSCodePipelinePipelineStagesActions.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {JSONobject} value
+	 * @param {Object} value
 	 * @return {AWSCodePipelinePipelineStagesActions}
 	 */
 	configuration: function(value) {

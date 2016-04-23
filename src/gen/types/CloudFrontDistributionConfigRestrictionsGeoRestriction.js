@@ -35,42 +35,6 @@ CloudFrontDistributionConfigRestrictionsGeoRestriction.prototype = {
 	 */
 	restrictionType: function(value) {
 		return this.set('RestrictionType', value);
-	},
-
-	/**
-	 * Prevents viewers in the countries that you specified from accessing your content.
-	 *
-	 * Required: false
-	 *
-	 * @param {undefined} value
-	 * @return {CloudFrontDistributionConfigRestrictionsGeoRestriction}
-	 */
-	blacklist: function(value) {
-		return this.set('blacklist', value);
-	},
-
-	/**
-	 * Allows viewers in the countries that you specified to access your content.
-	 *
-	 * Required: false
-	 *
-	 * @param {undefined} value
-	 * @return {CloudFrontDistributionConfigRestrictionsGeoRestriction}
-	 */
-	whitelist: function(value) {
-		return this.set('whitelist', value);
-	},
-
-	/**
-	 * No distribution restrictions by country.
-	 *
-	 * Required: false
-	 *
-	 * @param {undefined} value
-	 * @return {CloudFrontDistributionConfigRestrictionsGeoRestriction}
-	 */
-	none: function(value) {
-		return this.set('none', value);
 	}
 };
 

@@ -84,12 +84,17 @@ module.exports = {
 
 						const typeMatchers = [
 							(type) => {
-								switch (type) {
-									case 'String':
-									case 'Boolean':
+								switch (type.toLowerCase()) {
+									case 'string':
+									case 'boolean':
 										return type;
-									case 'Integer':
+									case 'integer':
+									case 'integer.':
 										return 'Number';
+									case 'json object':
+										return 'Object';
+									case 'string list':
+										return 'String[]';
 								}
 
 								return null;
@@ -103,6 +108,9 @@ module.exports = {
 								let newType = inflection.singularize(match[1].replace(/\s/g, ''));
 								if (newType === 'EC2MountPoint') {
 									newType = 'EC2MountPointPropertyType';
+								}
+								if (newType === 'JSONname') {
+									newType = 'Object';
 								}
 								return newType + '[]';
 							},
@@ -121,7 +129,13 @@ module.exports = {
 								return null;
 							},
 							(type) => {
-								return type.replace(/^Amazon\s+/i, '').replace(/\W/g, '');
+								const lastResort = type.replace(/^Amazon\s+/i, '').replace(/\W/g, '');
+
+								if (lastResort === 'Stringtostringmap') {
+									return 'Object';
+								}
+
+								return lastResort;
 							}
 						];
 

@@ -16,7 +16,7 @@
       "name": "SubnetIds",
       "description": "The Amazon EC2 subnet IDs for the cache subnet group.",
       "required": true,
-      "type": "Stringlist",
+      "type": "String[]",
       "update": "No interruption"
     }
   ],

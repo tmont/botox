@@ -21,7 +21,7 @@ ElasticsearchDomain.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {JSONobject} value
+	 * @param {Object} value
 	 * @return {ElasticsearchDomain}
 	 */
 	accessPolicies: function(value) {

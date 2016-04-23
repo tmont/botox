@@ -94,7 +94,7 @@ EC2NetworkInterface.prototype = {
 	 * Required: false
 	 * Update requires: No interruption.
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EC2NetworkInterface}
 	 */
 	secondaryPrivateIpAddressCount: function(value) {

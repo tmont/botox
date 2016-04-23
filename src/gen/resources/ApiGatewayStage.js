@@ -57,7 +57,7 @@ ApiGatewayStage.prototype = {
 	/**
 	 * The ID of the deployment that the stage points to.
 	 *
-	 * Required: false
+	 * Required: true
 	 * Update requires: undefined
 	 *
 	 * @param {String} value

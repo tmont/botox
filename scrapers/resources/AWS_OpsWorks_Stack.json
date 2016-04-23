@@ -44,7 +44,7 @@
       "name": "CustomJson",
       "description": "A user-defined custom JSON object. The custom JSON is used to override the corresponding default stack configuration JSON values. For more information, see CreateStack in the AWS OpsWorks API Reference.",
       "required": false,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "No interruption"
     },
     {

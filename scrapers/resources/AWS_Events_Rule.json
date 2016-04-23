@@ -16,7 +16,7 @@
       "name": "EventPattern",
       "description": "Describes which events CloudWatch Events routes to the specified target. These routed events are matched events. For more information, see Events and Event Patterns in the Amazon CloudWatch Developer Guide.",
       "required": false,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "No interruption"
     },
     {

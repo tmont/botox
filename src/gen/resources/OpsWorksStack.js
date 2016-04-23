@@ -86,7 +86,7 @@ OpsWorksStack.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {JSONobject} value
+	 * @param {Object} value
 	 * @return {OpsWorksStack}
 	 */
 	customJson: function(value) {

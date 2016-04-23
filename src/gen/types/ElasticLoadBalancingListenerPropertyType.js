@@ -50,7 +50,7 @@ ElasticLoadBalancingListenerPropertyType.prototype = {
 	},
 
 	/**
-	 * A list of ElasticLoadBalancing policy names to associate with the listener.
+	 * A list of ElasticLoadBalancing policy names to associate with the listener. Specify only policies that are compatible with listeners. For more information, see DescribeLoadBalancerPolicyTypes in the Elastic Load Balancing API Reference.
 	 *
 	 * Required: false
 	 *

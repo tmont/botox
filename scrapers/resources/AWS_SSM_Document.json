@@ -9,7 +9,7 @@
       "name": "Content",
       "description": "A JSON object that describes an instance configuration. For more information, see SSM Documents in the Amazon EC2 Simple Systems Manager API Reference.",
       "required": true,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "Replacement"
     }
   ],

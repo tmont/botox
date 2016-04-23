@@ -15,7 +15,7 @@
       "name": "PolicyDocument",
       "description": "A policy document containing permissions to add to the specified bucket. For more information, see Access Policy Language Overview in the Amazon Simple Storage Service Developer Guide.",
       "required": true,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "No interruption"
     }
   ],

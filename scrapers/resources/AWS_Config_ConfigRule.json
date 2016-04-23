@@ -23,7 +23,7 @@
       "name": "InputParameters",
       "description": "Input parameter values that are passed to the AWS Config rule (Lambda function).",
       "required": false,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "No interruption"
     },
     {

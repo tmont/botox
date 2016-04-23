@@ -6,7 +6,7 @@
       "name": "PolicyDocument",
       "description": "A policy document that describes what actions are allowed on which resources.",
       "required": true,
-      "type": "JSONobject",
+      "type": "Object",
       "update": "No interruption"
     },
     {

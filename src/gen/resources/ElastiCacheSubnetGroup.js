@@ -34,7 +34,7 @@ ElastiCacheSubnetGroup.prototype = {
 	 * Required: true
 	 * Update requires: No interruption
 	 *
-	 * @param {Stringlist} value
+	 * @param {String[]} value
 	 * @return {ElastiCacheSubnetGroup}
 	 */
 	subnetIds: function(value) {

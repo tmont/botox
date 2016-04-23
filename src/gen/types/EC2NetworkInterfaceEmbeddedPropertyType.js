@@ -114,7 +114,7 @@ EC2NetworkInterfaceEmbeddedPropertyType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Integer} value
+	 * @param {Number} value
 	 * @return {EC2NetworkInterfaceEmbeddedPropertyType}
 	 */
 	secondaryPrivateIpAddressCount: function(value) {

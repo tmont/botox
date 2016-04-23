@@ -18,7 +18,7 @@ ElasticMapReduceClusterApplication.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Stringtostringmap} value
+	 * @param {Object} value
 	 * @return {ElasticMapReduceClusterApplication}
 	 */
 	additionalInfo: function(value) {

@@ -47,7 +47,7 @@ EventsRule.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {JSONobject} value
+	 * @param {Object} value
 	 * @return {EventsRule}
 	 */
 	eventPattern: function(value) {

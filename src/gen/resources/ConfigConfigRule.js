@@ -76,7 +76,7 @@ ConfigConfigRule.prototype = {
 	 * Required: false
 	 * Update requires: No interruption
 	 *
-	 * @param {JSONobject} value
+	 * @param {Object} value
 	 * @return {ConfigConfigRule}
 	 */
 	inputParameters: function(value) {
