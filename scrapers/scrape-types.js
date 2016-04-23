@@ -43,7 +43,7 @@ function processTypeUrls(urls, next) {
 		async.waterfall([getDoc, writeData], next);
 	}
 
-	async.each(urls, processUrl, next);
+	async.eachLimit(urls, 20, processUrl, next);
 }
 
 async.waterfall([

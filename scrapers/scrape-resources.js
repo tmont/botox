@@ -41,7 +41,7 @@ function processReferenceLinks(urls, next) {
 		async.waterfall([ getDoc, writeData ], next);
 	}
 
-	async.each(urls, processLink, next);
+	async.eachLimit(urls, 20, processLink, next);
 }
 
 async.waterfall([
