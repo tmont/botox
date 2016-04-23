@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function EC2RouteTable(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::EC2::RouteTable');
 }
 
-Object.setPrototypeOf(EC2RouteTable, Resource);
+EC2RouteTable.prototype = Object.create(Resource.prototype);
 
-EC2RouteTable.prototype = {
-	
-	
-	/**
-	 * The ID of the VPC where the route table will be created.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {EC2RouteTable}
-	 */
-	vpcId: function(value) {
-		return this.set('VpcId', value);
-	},
 
-	/**
-	 * An arbitrary set of tags (key–value pairs) for this route table.
-	 *
-	 * Required: false
-	 * Update requires: No interruption.
-	 *
-	 * @param {AWSCloudFormationResourceTagsType[]} value
-	 * @return {EC2RouteTable}
-	 */
-	tags: function(value) {
-		return this.set('Tags', value);
-	}
+/**
+ * The ID of the VPC where the route table will be created.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EC2RouteTable}
+ */
+EC2RouteTable.prototype.vpcId = function(value) {
+	return this.set('VpcId', value);
+};
+
+/**
+ * An arbitrary set of tags (key–value pairs) for this route table.
+ *
+ * Required: false
+ * Update requires: No interruption.
+ *
+ * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @return {EC2RouteTable}
+ */
+EC2RouteTable.prototype.tags = function(value) {
+	return this.set('Tags', value);
 };
 
 module.exports = EC2RouteTable;

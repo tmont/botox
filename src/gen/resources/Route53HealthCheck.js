@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function Route53HealthCheck(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::Route53::HealthCheck');
 }
 
-Object.setPrototypeOf(Route53HealthCheck, Resource);
+Route53HealthCheck.prototype = Object.create(Resource.prototype);
 
-Route53HealthCheck.prototype = {
-	
-	
-	/**
-	 * An Amazon Route 53 health check.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {Route53HealthCheckConfig} value
-	 * @return {Route53HealthCheck}
-	 */
-	healthCheckConfig: function(value) {
-		return this.set('HealthCheckConfig', value);
-	},
 
-	/**
-	 * An arbitrary set of tags (key–value pairs) for this health check.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Route53HealthCheckTags[]} value
-	 * @return {Route53HealthCheck}
-	 */
-	healthCheckTags: function(value) {
-		return this.set('HealthCheckTags', value);
-	}
+/**
+ * An Amazon Route 53 health check.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {Route53HealthCheckConfig|Attribute|Reference} value
+ * @return {Route53HealthCheck}
+ */
+Route53HealthCheck.prototype.healthCheckConfig = function(value) {
+	return this.set('HealthCheckConfig', value);
+};
+
+/**
+ * An arbitrary set of tags (key–value pairs) for this health check.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Route53HealthCheckTags[]|Attribute|Reference} value
+ * @return {Route53HealthCheck}
+ */
+Route53HealthCheck.prototype.healthCheckTags = function(value) {
+	return this.set('HealthCheckTags', value);
 };
 
 module.exports = Route53HealthCheck;

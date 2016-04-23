@@ -7,104 +7,101 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function CodePipelineCustomActionType(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::CodePipeline::CustomActionType');
 }
 
-Object.setPrototypeOf(CodePipelineCustomActionType, Resource);
+CodePipelineCustomActionType.prototype = Object.create(Resource.prototype);
 
-CodePipelineCustomActionType.prototype = {
-	
-	
-	/**
-	 * The category of the custom action, such as a source action or a build action. For valid values, see CreateCustomActionType in the AWS CodePipeline API Reference.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {CodePipelineCustomActionType}
-	 */
-	category: function(value) {
-		return this.set('Category', value);
-	},
 
-	/**
-	 * The configuration properties for the custom action.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {AWSCodePipelineCustomActionTypeConfigurationProperties[]} value
-	 * @return {CodePipelineCustomActionType}
-	 */
-	configurationProperties: function(value) {
-		return this.set('ConfigurationProperties', value);
-	},
+/**
+ * The category of the custom action, such as a source action or a build action. For valid values, see CreateCustomActionType in the AWS CodePipeline API Reference.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {CodePipelineCustomActionType}
+ */
+CodePipelineCustomActionType.prototype.category = function(value) {
+	return this.set('Category', value);
+};
 
-	/**
-	 * The input artifact details for this custom action.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {AWSCodePipelineCustomActionTypeArtifactDetails} value
-	 * @return {CodePipelineCustomActionType}
-	 */
-	inputArtifactDetails: function(value) {
-		return this.set('InputArtifactDetails', value);
-	},
+/**
+ * The configuration properties for the custom action.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {AWSCodePipelineCustomActionTypeConfigurationProperties[]|Attribute|Reference} value
+ * @return {CodePipelineCustomActionType}
+ */
+CodePipelineCustomActionType.prototype.configurationProperties = function(value) {
+	return this.set('ConfigurationProperties', value);
+};
 
-	/**
-	 * The output artifact details for this custom action.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {AWSCodePipelineCustomActionTypeArtifactDetails} value
-	 * @return {CodePipelineCustomActionType}
-	 */
-	outputArtifactDetails: function(value) {
-		return this.set('OutputArtifactDetails', value);
-	},
+/**
+ * The input artifact details for this custom action.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {AWSCodePipelineCustomActionTypeArtifactDetails|Attribute|Reference} value
+ * @return {CodePipelineCustomActionType}
+ */
+CodePipelineCustomActionType.prototype.inputArtifactDetails = function(value) {
+	return this.set('InputArtifactDetails', value);
+};
 
-	/**
-	 * The name of the service provider that AWS CodePipeline uses for this custom action.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {CodePipelineCustomActionType}
-	 */
-	provider: function(value) {
-		return this.set('Provider', value);
-	},
+/**
+ * The output artifact details for this custom action.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {AWSCodePipelineCustomActionTypeArtifactDetails|Attribute|Reference} value
+ * @return {CodePipelineCustomActionType}
+ */
+CodePipelineCustomActionType.prototype.outputArtifactDetails = function(value) {
+	return this.set('OutputArtifactDetails', value);
+};
 
-	/**
-	 * URLs that provide users information about this custom action.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {AWSCodePipelineCustomActionTypeSettings} value
-	 * @return {CodePipelineCustomActionType}
-	 */
-	settings: function(value) {
-		return this.set('Settings', value);
-	},
+/**
+ * The name of the service provider that AWS CodePipeline uses for this custom action.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {CodePipelineCustomActionType}
+ */
+CodePipelineCustomActionType.prototype.provider = function(value) {
+	return this.set('Provider', value);
+};
 
-	/**
-	 * The version number of this custom action.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {CodePipelineCustomActionType}
-	 */
-	version: function(value) {
-		return this.set('Version', value);
-	}
+/**
+ * URLs that provide users information about this custom action.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {AWSCodePipelineCustomActionTypeSettings|Attribute|Reference} value
+ * @return {CodePipelineCustomActionType}
+ */
+CodePipelineCustomActionType.prototype.settings = function(value) {
+	return this.set('Settings', value);
+};
+
+/**
+ * The version number of this custom action.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {CodePipelineCustomActionType}
+ */
+CodePipelineCustomActionType.prototype.version = function(value) {
+	return this.set('Version', value);
 };
 
 module.exports = CodePipelineCustomActionType;

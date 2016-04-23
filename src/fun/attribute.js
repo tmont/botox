@@ -1,7 +1,10 @@
+var TemplateItemTrait = require('../template-item-trait');
+
 /**
  * Creates an attribute reference, e.g. Fn::GetAtt
  * @param {Object} resource
  * @param {String} attribute Name of the attribute
+ * @implements TemplateItemTrait
  * @constructor
  */
 function Attribute(resource, attribute) {
@@ -15,16 +18,12 @@ function Attribute(resource, attribute) {
 	this.attribute = attribute;
 }
 
-Attribute.prototype = {
+Object.assign(Attribute.prototype, TemplateItemTrait.prototype, {
 	toJSON: function() {
 		return {
 			'Fn::GetAtt': [ this.resource.name, this.attribute ]
 		};
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
-};
+});
 
 module.exports = Attribute;

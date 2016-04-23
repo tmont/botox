@@ -7,221 +7,218 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function OpsWorksLayer(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::OpsWorks::Layer');
 }
 
-Object.setPrototypeOf(OpsWorksLayer, Resource);
+OpsWorksLayer.prototype = Object.create(Resource.prototype);
 
-OpsWorksLayer.prototype = {
-	
-	
-	/**
-	 * One or more user-defined key-value pairs to be added to the stack attributes bag.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {key[]} value
-	 * @return {OpsWorksLayer}
-	 */
-	attributes: function(value) {
-		return this.set('Attributes', value);
-	},
 
-	/**
-	 * Whether to automatically assign an Elastic IP address to Amazon EC2 instances in this layer.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {Boolean} value
-	 * @return {OpsWorksLayer}
-	 */
-	autoAssignElasticIps: function(value) {
-		return this.set('AutoAssignElasticIps', value);
-	},
+/**
+ * One or more user-defined key-value pairs to be added to the stack attributes bag.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {key[]|Attribute|Reference} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.attributes = function(value) {
+	return this.set('Attributes', value);
+};
 
-	/**
-	 * For AWS OpsWorks stacks that are running in a VPC, whether to automatically assign a public IP address to Amazon EC2 instances in this layer.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {Boolean} value
-	 * @return {OpsWorksLayer}
-	 */
-	autoAssignPublicIps: function(value) {
-		return this.set('AutoAssignPublicIps', value);
-	},
+/**
+ * Whether to automatically assign an Elastic IP address to Amazon EC2 instances in this layer.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {Boolean|Attribute|Reference} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.autoAssignElasticIps = function(value) {
+	return this.set('AutoAssignElasticIps', value);
+};
 
-	/**
-	 * The Amazon Resource Name (ARN) of an IAM instance profile that is to be used for the Amazon EC2 instances in this layer.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksLayer}
-	 */
-	customInstanceProfileArn: function(value) {
-		return this.set('CustomInstanceProfileArn', value);
-	},
+/**
+ * For AWS OpsWorks stacks that are running in a VPC, whether to automatically assign a public IP address to Amazon EC2 instances in this layer.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {Boolean|Attribute|Reference} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.autoAssignPublicIps = function(value) {
+	return this.set('AutoAssignPublicIps', value);
+};
 
-	/**
-	 * Custom event recipes for this layer.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSOpsWorksRecipesType} value
-	 * @return {OpsWorksLayer}
-	 */
-	customRecipes: function(value) {
-		return this.set('CustomRecipes', value);
-	},
+/**
+ * The Amazon Resource Name (ARN) of an IAM instance profile that is to be used for the Amazon EC2 instances in this layer.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.customInstanceProfileArn = function(value) {
+	return this.set('CustomInstanceProfileArn', value);
+};
 
-	/**
-	 * Custom security group IDs for this layer.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {string[]} value
-	 * @return {OpsWorksLayer}
-	 */
-	customSecurityGroupIds: function(value) {
-		return this.set('CustomSecurityGroupIds', value);
-	},
+/**
+ * Custom event recipes for this layer.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSOpsWorksRecipesType|Attribute|Reference} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.customRecipes = function(value) {
+	return this.set('CustomRecipes', value);
+};
 
-	/**
-	 * Whether to automatically heal Amazon EC2 instances that have become disconnected or timed out.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {Boolean} value
-	 * @return {OpsWorksLayer}
-	 */
-	enableAutoHealing: function(value) {
-		return this.set('EnableAutoHealing', value);
-	},
+/**
+ * Custom security group IDs for this layer.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {string[]|Attribute|Reference} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.customSecurityGroupIds = function(value) {
+	return this.set('CustomSecurityGroupIds', value);
+};
 
-	/**
-	 * Whether to install operating system and package updates when the instance boots.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Boolean} value
-	 * @return {OpsWorksLayer}
-	 */
-	installUpdatesOnBoot: function(value) {
-		return this.set('InstallUpdatesOnBoot', value);
-	},
+/**
+ * Whether to automatically heal Amazon EC2 instances that have become disconnected or timed out.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {Boolean|Attribute|Reference} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.enableAutoHealing = function(value) {
+	return this.set('EnableAutoHealing', value);
+};
 
-	/**
-	 * The lifecycle events for the AWS OpsWorks layer.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSOpsWorksLayerLifeCycleConfiguration} value
-	 * @return {OpsWorksLayer}
-	 */
-	lifecycleEventConfiguration: function(value) {
-		return this.set('LifecycleEventConfiguration', value);
-	},
+/**
+ * Whether to install operating system and package updates when the instance boots.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Boolean|Attribute|Reference} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.installUpdatesOnBoot = function(value) {
+	return this.set('InstallUpdatesOnBoot', value);
+};
 
-	/**
-	 * The load-based scaling configuration for the AWS OpsWorks layer.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSOpsWorksLoadBasedAutoScalingType} value
-	 * @return {OpsWorksLayer}
-	 */
-	loadBasedAutoScaling: function(value) {
-		return this.set('LoadBasedAutoScaling', value);
-	},
+/**
+ * The lifecycle events for the AWS OpsWorks layer.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSOpsWorksLayerLifeCycleConfiguration|Attribute|Reference} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.lifecycleEventConfiguration = function(value) {
+	return this.set('LifecycleEventConfiguration', value);
+};
 
-	/**
-	 * The AWS OpsWorks layer name.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksLayer}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * The load-based scaling configuration for the AWS OpsWorks layer.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSOpsWorksLoadBasedAutoScalingType|Attribute|Reference} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.loadBasedAutoScaling = function(value) {
+	return this.set('LoadBasedAutoScaling', value);
+};
 
-	/**
-	 * The packages for this layer.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {string[]} value
-	 * @return {OpsWorksLayer}
-	 */
-	packages: function(value) {
-		return this.set('Packages', value);
-	},
+/**
+ * The AWS OpsWorks layer name.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.name = function(value) {
+	return this.set('Name', value);
+};
 
-	/**
-	 * The layer short name, which is used internally by AWS OpsWorks and by Chef recipes. The short name is also used as the name for the directory where your app files are installed.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksLayer}
-	 */
-	shortname: function(value) {
-		return this.set('Shortname', value);
-	},
+/**
+ * The packages for this layer.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {string[]|Attribute|Reference} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.packages = function(value) {
+	return this.set('Packages', value);
+};
 
-	/**
-	 * The ID of the AWS OpsWorks stack that this layer will be associated with.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksLayer}
-	 */
-	stackId: function(value) {
-		return this.set('StackId', value);
-	},
+/**
+ * The layer short name, which is used internally by AWS OpsWorks and by Chef recipes. The short name is also used as the name for the directory where your app files are installed.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.shortname = function(value) {
+	return this.set('Shortname', value);
+};
 
-	/**
-	 * The layer type. A stack cannot have more than one layer of the same type, except for the custom type. You can have any number of custom types. For more information, see CreateLayer in the AWS OpsWorks API Reference.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksLayer}
-	 */
-	type: function(value) {
-		return this.set('Type', value);
-	},
+/**
+ * The ID of the AWS OpsWorks stack that this layer will be associated with.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.stackId = function(value) {
+	return this.set('StackId', value);
+};
 
-	/**
-	 * Describes the Amazon EBS volumes for this layer.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {AWSOpsWorksVolumeConfigurationType[]} value
-	 * @return {OpsWorksLayer}
-	 */
-	volumeConfigurations: function(value) {
-		return this.set('VolumeConfigurations', value);
-	}
+/**
+ * The layer type. A stack cannot have more than one layer of the same type, except for the custom type. You can have any number of custom types. For more information, see CreateLayer in the AWS OpsWorks API Reference.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.type = function(value) {
+	return this.set('Type', value);
+};
+
+/**
+ * Describes the Amazon EBS volumes for this layer.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {AWSOpsWorksVolumeConfigurationType[]|Attribute|Reference} value
+ * @return {OpsWorksLayer}
+ */
+OpsWorksLayer.prototype.volumeConfigurations = function(value) {
+	return this.set('VolumeConfigurations', value);
 };
 
 module.exports = OpsWorksLayer;

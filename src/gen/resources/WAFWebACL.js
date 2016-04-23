@@ -7,65 +7,62 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function WAFWebACL(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::WAF::WebACL');
 }
 
-Object.setPrototypeOf(WAFWebACL, Resource);
+WAFWebACL.prototype = Object.create(Resource.prototype);
 
-WAFWebACL.prototype = {
-	
-	
-	/**
-	 * The action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSWAFWebACLAction} value
-	 * @return {WAFWebACL}
-	 */
-	defaultAction: function(value) {
-		return this.set('DefaultAction', value);
-	},
 
-	/**
-	 * A friendly name or description for the Amazon CloudWatch metric of this web ACL.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {WAFWebACL}
-	 */
-	metricName: function(value) {
-		return this.set('MetricName', value);
-	},
+/**
+ * The action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {AWSWAFWebACLAction|Attribute|Reference} value
+ * @return {WAFWebACL}
+ */
+WAFWebACL.prototype.defaultAction = function(value) {
+	return this.set('DefaultAction', value);
+};
 
-	/**
-	 * A friendly name or description of the web ACL.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {WAFWebACL}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * A friendly name or description for the Amazon CloudWatch metric of this web ACL.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {WAFWebACL}
+ */
+WAFWebACL.prototype.metricName = function(value) {
+	return this.set('MetricName', value);
+};
 
-	/**
-	 * The rules to associate with the web ACL and the settings for each rule.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSWAFWebACLRules[]} value
-	 * @return {WAFWebACL}
-	 */
-	rules: function(value) {
-		return this.set('Rules', value);
-	}
+/**
+ * A friendly name or description of the web ACL.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {WAFWebACL}
+ */
+WAFWebACL.prototype.name = function(value) {
+	return this.set('Name', value);
+};
+
+/**
+ * The rules to associate with the web ACL and the settings for each rule.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSWAFWebACLRules[]|Attribute|Reference} value
+ * @return {WAFWebACL}
+ */
+WAFWebACL.prototype.rules = function(value) {
+	return this.set('Rules', value);
 };
 
 module.exports = WAFWebACL;

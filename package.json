@@ -7,9 +7,14 @@
 		"url": "https://github.com/tmont/botox.git"
 	},
 	"license": "MIT",
+	"scripts": {
+		"test": "node_modules/.bin/mocha tests"
+	},
 	"devDependencies": {
 		"async": "1.5.2",
 		"cheerio": "0.20.0",
-		"inflection": "1.10.0"
+		"inflection": "1.10.0",
+		"mocha": "*",
+		"expect.js": "*"
 	}
 }

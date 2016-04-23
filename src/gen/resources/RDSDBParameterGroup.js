@@ -7,65 +7,62 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function RDSDBParameterGroup(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::RDS::DBParameterGroup');
 }
 
-Object.setPrototypeOf(RDSDBParameterGroup, Resource);
+RDSDBParameterGroup.prototype = Object.create(Resource.prototype);
 
-RDSDBParameterGroup.prototype = {
-	
-	
-	/**
-	 * A friendly description of the RDS parameter group. For example, "My Parameter Group".
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {RDSDBParameterGroup}
-	 */
-	description: function(value) {
-		return this.set('Description', value);
-	},
 
-	/**
-	 * The database family of this RDS parameter group. For example, "MySQL5.1".
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {RDSDBParameterGroup}
-	 */
-	family: function(value) {
-		return this.set('Family', value);
-	},
+/**
+ * A friendly description of the RDS parameter group. For example, "My Parameter Group".
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBParameterGroup}
+ */
+RDSDBParameterGroup.prototype.description = function(value) {
+	return this.set('Description', value);
+};
 
-	/**
-	 * The parameters to set for this RDS parameter group.
-	 *
-	 * Required: false
-	 * Update requires: No interruption or Some interruptions
-	 *
-	 * @param {AJSONobjectconsistingofstringkeyvaluepairsasshowninthefollowingexample} value
-	 * @return {RDSDBParameterGroup}
-	 */
-	parameters: function(value) {
-		return this.set('Parameters', value);
-	},
+/**
+ * The database family of this RDS parameter group. For example, "MySQL5.1".
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBParameterGroup}
+ */
+RDSDBParameterGroup.prototype.family = function(value) {
+	return this.set('Family', value);
+};
 
-	/**
-	 * The tags that you want to attach to the RDS parameter group.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {resourcetag[]} value
-	 * @return {RDSDBParameterGroup}
-	 */
-	tags: function(value) {
-		return this.set('Tags', value);
-	}
+/**
+ * The parameters to set for this RDS parameter group.
+ *
+ * Required: false
+ * Update requires: No interruption or Some interruptions
+ *
+ * @param {AJSONobjectconsistingofstringkeyvaluepairsasshowninthefollowingexample|Attribute|Reference} value
+ * @return {RDSDBParameterGroup}
+ */
+RDSDBParameterGroup.prototype.parameters = function(value) {
+	return this.set('Parameters', value);
+};
+
+/**
+ * The tags that you want to attach to the RDS parameter group.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {resourcetag[]|Attribute|Reference} value
+ * @return {RDSDBParameterGroup}
+ */
+RDSDBParameterGroup.prototype.tags = function(value) {
+	return this.set('Tags', value);
 };
 
 module.exports = RDSDBParameterGroup;

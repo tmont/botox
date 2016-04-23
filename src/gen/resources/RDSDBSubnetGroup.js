@@ -7,52 +7,49 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function RDSDBSubnetGroup(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::RDS::DBSubnetGroup');
 }
 
-Object.setPrototypeOf(RDSDBSubnetGroup, Resource);
+RDSDBSubnetGroup.prototype = Object.create(Resource.prototype);
 
-RDSDBSubnetGroup.prototype = {
-	
-	
-	/**
-	 * The description for the DB Subnet Group.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {RDSDBSubnetGroup}
-	 */
-	dbsubnetGroupDescription: function(value) {
-		return this.set('DBSubnetGroupDescription', value);
-	},
 
-	/**
-	 * The EC2 Subnet IDs for the DB Subnet Group.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {string[]} value
-	 * @return {RDSDBSubnetGroup}
-	 */
-	subnetIds: function(value) {
-		return this.set('SubnetIds', value);
-	},
+/**
+ * The description for the DB Subnet Group.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBSubnetGroup}
+ */
+RDSDBSubnetGroup.prototype.dbsubnetGroupDescription = function(value) {
+	return this.set('DBSubnetGroupDescription', value);
+};
 
-	/**
-	 * The tags that you want to attach to the RDS database subnet group.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {resourcetag[]} value
-	 * @return {RDSDBSubnetGroup}
-	 */
-	tags: function(value) {
-		return this.set('Tags', value);
-	}
+/**
+ * The EC2 Subnet IDs for the DB Subnet Group.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {string[]|Attribute|Reference} value
+ * @return {RDSDBSubnetGroup}
+ */
+RDSDBSubnetGroup.prototype.subnetIds = function(value) {
+	return this.set('SubnetIds', value);
+};
+
+/**
+ * The tags that you want to attach to the RDS database subnet group.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {resourcetag[]|Attribute|Reference} value
+ * @return {RDSDBSubnetGroup}
+ */
+RDSDBSubnetGroup.prototype.tags = function(value) {
+	return this.set('Tags', value);
 };
 
 module.exports = RDSDBSubnetGroup;

@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function ElasticBeanstalkApplication(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::ElasticBeanstalk::Application');
 }
 
-Object.setPrototypeOf(ElasticBeanstalkApplication, Resource);
+ElasticBeanstalkApplication.prototype = Object.create(Resource.prototype);
 
-ElasticBeanstalkApplication.prototype = {
-	
-	
-	/**
-	 * A name for the Elastic Beanstalk application. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the application name. For more information, see Name Type.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {ElasticBeanstalkApplication}
-	 */
-	applicationName: function(value) {
-		return this.set('ApplicationName', value);
-	},
 
-	/**
-	 * An optional description of this application.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {ElasticBeanstalkApplication}
-	 */
-	description: function(value) {
-		return this.set('Description', value);
-	}
+/**
+ * A name for the Elastic Beanstalk application. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the application name. For more information, see Name Type.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ElasticBeanstalkApplication}
+ */
+ElasticBeanstalkApplication.prototype.applicationName = function(value) {
+	return this.set('ApplicationName', value);
+};
+
+/**
+ * An optional description of this application.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ElasticBeanstalkApplication}
+ */
+ElasticBeanstalkApplication.prototype.description = function(value) {
+	return this.set('Description', value);
 };
 
 module.exports = ElasticBeanstalkApplication;

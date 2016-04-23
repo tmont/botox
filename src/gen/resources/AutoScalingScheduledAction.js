@@ -7,104 +7,101 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function AutoScalingScheduledAction(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::AutoScaling::ScheduledAction');
 }
 
-Object.setPrototypeOf(AutoScalingScheduledAction, Resource);
+AutoScalingScheduledAction.prototype = Object.create(Resource.prototype);
 
-AutoScalingScheduledAction.prototype = {
-	
-	
-	/**
-	 * The name or ARN of the Auto Scaling group.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {AutoScalingScheduledAction}
-	 */
-	autoScalingGroupName: function(value) {
-		return this.set('AutoScalingGroupName', value);
-	},
 
-	/**
-	 * The number of Amazon EC2 instances that should be running in the Auto Scaling group.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Number} value
-	 * @return {AutoScalingScheduledAction}
-	 */
-	desiredCapacity: function(value) {
-		return this.set('DesiredCapacity', value);
-	},
+/**
+ * The name or ARN of the Auto Scaling group.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {AutoScalingScheduledAction}
+ */
+AutoScalingScheduledAction.prototype.autoScalingGroupName = function(value) {
+	return this.set('AutoScalingGroupName', value);
+};
 
-	/**
-	 * The time in UTC for this schedule to end. For example, 2010-06-01T00:00:00Z.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Timestamp} value
-	 * @return {AutoScalingScheduledAction}
-	 */
-	endTime: function(value) {
-		return this.set('EndTime', value);
-	},
+/**
+ * The number of Amazon EC2 instances that should be running in the Auto Scaling group.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Number|Attribute|Reference} value
+ * @return {AutoScalingScheduledAction}
+ */
+AutoScalingScheduledAction.prototype.desiredCapacity = function(value) {
+	return this.set('DesiredCapacity', value);
+};
 
-	/**
-	 * The maximum number of Amazon EC2 instances in the Auto Scaling group.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Number} value
-	 * @return {AutoScalingScheduledAction}
-	 */
-	maxSize: function(value) {
-		return this.set('MaxSize', value);
-	},
+/**
+ * The time in UTC for this schedule to end. For example, 2010-06-01T00:00:00Z.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Timestamp|Attribute|Reference} value
+ * @return {AutoScalingScheduledAction}
+ */
+AutoScalingScheduledAction.prototype.endTime = function(value) {
+	return this.set('EndTime', value);
+};
 
-	/**
-	 * The minimum number of Amazon EC2 instances in the Auto Scaling group.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Number} value
-	 * @return {AutoScalingScheduledAction}
-	 */
-	minSize: function(value) {
-		return this.set('MinSize', value);
-	},
+/**
+ * The maximum number of Amazon EC2 instances in the Auto Scaling group.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Number|Attribute|Reference} value
+ * @return {AutoScalingScheduledAction}
+ */
+AutoScalingScheduledAction.prototype.maxSize = function(value) {
+	return this.set('MaxSize', value);
+};
 
-	/**
-	 * The time in UTC when recurring future actions will start. You specify the start time by following the Unix cron syntax format. For more information about cron syntax, go to http://en.wikipedia.org/wiki/Cron.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {AutoScalingScheduledAction}
-	 */
-	recurrence: function(value) {
-		return this.set('Recurrence', value);
-	},
+/**
+ * The minimum number of Amazon EC2 instances in the Auto Scaling group.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Number|Attribute|Reference} value
+ * @return {AutoScalingScheduledAction}
+ */
+AutoScalingScheduledAction.prototype.minSize = function(value) {
+	return this.set('MinSize', value);
+};
 
-	/**
-	 * The time in UTC for this schedule to start. For example, 2010-06-01T00:00:00Z.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Timestamp} value
-	 * @return {AutoScalingScheduledAction}
-	 */
-	startTime: function(value) {
-		return this.set('StartTime', value);
-	}
+/**
+ * The time in UTC when recurring future actions will start. You specify the start time by following the Unix cron syntax format. For more information about cron syntax, go to http://en.wikipedia.org/wiki/Cron.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {AutoScalingScheduledAction}
+ */
+AutoScalingScheduledAction.prototype.recurrence = function(value) {
+	return this.set('Recurrence', value);
+};
+
+/**
+ * The time in UTC for this schedule to start. For example, 2010-06-01T00:00:00Z.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Timestamp|Attribute|Reference} value
+ * @return {AutoScalingScheduledAction}
+ */
+AutoScalingScheduledAction.prototype.startTime = function(value) {
+	return this.set('StartTime', value);
 };
 
 module.exports = AutoScalingScheduledAction;

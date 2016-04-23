@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function IAMUserToGroupAddition(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::IAM::UserToGroupAddition');
 }
 
-Object.setPrototypeOf(IAMUserToGroupAddition, Resource);
+IAMUserToGroupAddition.prototype = Object.create(Resource.prototype);
 
-IAMUserToGroupAddition.prototype = {
-	
-	
-	/**
-	 * The name of group to add users to.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {IAMUserToGroupAddition}
-	 */
-	groupName: function(value) {
-		return this.set('GroupName', value);
-	},
 
-	/**
-	 * Required: Yes
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {user[]} value
-	 * @return {IAMUserToGroupAddition}
-	 */
-	users: function(value) {
-		return this.set('Users', value);
-	}
+/**
+ * The name of group to add users to.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {IAMUserToGroupAddition}
+ */
+IAMUserToGroupAddition.prototype.groupName = function(value) {
+	return this.set('GroupName', value);
+};
+
+/**
+ * Required: Yes
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {user[]|Attribute|Reference} value
+ * @return {IAMUserToGroupAddition}
+ */
+IAMUserToGroupAddition.prototype.users = function(value) {
+	return this.set('Users', value);
 };
 
 module.exports = IAMUserToGroupAddition;

@@ -7,26 +7,23 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function CodeDeployApplication(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::CodeDeploy::Application');
 }
 
-Object.setPrototypeOf(CodeDeployApplication, Resource);
+CodeDeployApplication.prototype = Object.create(Resource.prototype);
 
-CodeDeployApplication.prototype = {
-	
-	
-	/**
-	 * A name for the application. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the application name. For more information, see Name Type.
-	 *
-	 * Required: false
-	 * Update requires: Updates are not supported.
-	 *
-	 * @param {String} value
-	 * @return {CodeDeployApplication}
-	 */
-	applicationName: function(value) {
-		return this.set('ApplicationName', value);
-	}
+
+/**
+ * A name for the application. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the application name. For more information, see Name Type.
+ *
+ * Required: false
+ * Update requires: Updates are not supported.
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {CodeDeployApplication}
+ */
+CodeDeployApplication.prototype.applicationName = function(value) {
+	return this.set('ApplicationName', value);
 };
 
 module.exports = CodeDeployApplication;

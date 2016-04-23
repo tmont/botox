@@ -7,78 +7,75 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function ApiGatewayModel(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::ApiGateway::Model');
 }
 
-Object.setPrototypeOf(ApiGatewayModel, Resource);
+ApiGatewayModel.prototype = Object.create(Resource.prototype);
 
-ApiGatewayModel.prototype = {
-	
-	
-	/**
-	 * The content type for the model.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {ApiGatewayModel}
-	 */
-	contentType: function(value) {
-		return this.set('ContentType', value);
-	},
 
-	/**
-	 * A description that identifies this model.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {ApiGatewayModel}
-	 */
-	description: function(value) {
-		return this.set('Description', value);
-	},
+/**
+ * The content type for the model.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ApiGatewayModel}
+ */
+ApiGatewayModel.prototype.contentType = function(value) {
+	return this.set('ContentType', value);
+};
 
-	/**
-	 * A name for the mode. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name. For more information, see Name Type.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {ApiGatewayModel}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * A description that identifies this model.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ApiGatewayModel}
+ */
+ApiGatewayModel.prototype.description = function(value) {
+	return this.set('Description', value);
+};
 
-	/**
-	 * The ID of a REST API with which to associate this model.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {ApiGatewayModel}
-	 */
-	restApiId: function(value) {
-		return this.set('RestApiId', value);
-	},
+/**
+ * A name for the mode. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name. For more information, see Name Type.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ApiGatewayModel}
+ */
+ApiGatewayModel.prototype.name = function(value) {
+	return this.set('Name', value);
+};
 
-	/**
-	 * The schema to use to transform data to one or more output formats.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {ApiGatewayModel}
-	 */
-	schema: function(value) {
-		return this.set('Schema', value);
-	}
+/**
+ * The ID of a REST API with which to associate this model.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ApiGatewayModel}
+ */
+ApiGatewayModel.prototype.restApiId = function(value) {
+	return this.set('RestApiId', value);
+};
+
+/**
+ * The schema to use to transform data to one or more output formats.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ApiGatewayModel}
+ */
+ApiGatewayModel.prototype.schema = function(value) {
+	return this.set('Schema', value);
 };
 
 module.exports = ApiGatewayModel;

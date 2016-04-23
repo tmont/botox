@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function CloudFormationInterface(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::CloudFormation::Interface');
 }
 
-Object.setPrototypeOf(CloudFormationInterface, Resource);
+CloudFormationInterface.prototype = Object.create(Resource.prototype);
 
-CloudFormationInterface.prototype = {
-	
-	
-	/**
-	 * A list of parameter group types, where you specify group names, the parameters in each group, and the order in which the parameters are shown.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSCloudFormationInterfaceParameterGroup} value
-	 * @return {CloudFormationInterface}
-	 */
-	parameterGroups: function(value) {
-		return this.set('ParameterGroups', value);
-	},
 
-	/**
-	 * A list of parameters and their friendly names that the AWS CloudFormation console shows when a stack is created or updated.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSCloudFormationInterfaceParameterLabel} value
-	 * @return {CloudFormationInterface}
-	 */
-	parameterLabels: function(value) {
-		return this.set('ParameterLabels', value);
-	}
+/**
+ * A list of parameter group types, where you specify group names, the parameters in each group, and the order in which the parameters are shown.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSCloudFormationInterfaceParameterGroup|Attribute|Reference} value
+ * @return {CloudFormationInterface}
+ */
+CloudFormationInterface.prototype.parameterGroups = function(value) {
+	return this.set('ParameterGroups', value);
+};
+
+/**
+ * A list of parameters and their friendly names that the AWS CloudFormation console shows when a stack is created or updated.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSCloudFormationInterfaceParameterLabel|Attribute|Reference} value
+ * @return {CloudFormationInterface}
+ */
+CloudFormationInterface.prototype.parameterLabels = function(value) {
+	return this.set('ParameterLabels', value);
 };
 
 module.exports = CloudFormationInterface;

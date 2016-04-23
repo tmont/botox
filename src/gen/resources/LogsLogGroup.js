@@ -7,39 +7,46 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function LogsLogGroup(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::Logs::LogGroup');
 }
 
-Object.setPrototypeOf(LogsLogGroup, Resource);
+LogsLogGroup.prototype = Object.create(Resource.prototype);
 
-LogsLogGroup.prototype = {
-	get attr() {
-		var createAttribute = this.createAttribute.bind(this, this);
+/**
+ * AWS::Logs::LogGroup attribute map
+ * @typedef {Object} LogsLogGroupAttributeMap
+ * @property {Attribute} Arn The Amazon resource name (ARN) of the CloudWatch Logs log group, such as arn:aws:logs:us-east-1:123456789012:log-group:/mystack-testgroup-12ABC1AB12A1:*.
+ */
+Object.defineProperty(LogsLogGroup.prototype, 'attr', {
+	/**
+	 * @return {LogsLogGroupAttributeMap}
+	 */
+	get: function() {
+		var createAttribute = this.createAttribute.bind(this);
 		return {
 			
 			/**
 			 * The Amazon resource name (ARN) of the CloudWatch Logs log group, such as arn:aws:logs:us-east-1:123456789012:log-group:/mystack-testgroup-12ABC1AB12A1:*.
 			 * @return {Attribute}
 			 */
-			arn: function() {
+			get arn() {
 				return createAttribute('Arn');
 			}
 		};
-	},
-
-	
-	/**
-	 * The number of days log events are kept in CloudWatch Logs. When a log event expires, CloudWatch Logs automatically deletes it. For valid values, see PutRetentionPolicy in the Amazon CloudWatch Logs API Reference.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Number} value
-	 * @return {LogsLogGroup}
-	 */
-	retentionInDays: function(value) {
-		return this.set('RetentionInDays', value);
 	}
+});
+
+/**
+ * The number of days log events are kept in CloudWatch Logs. When a log event expires, CloudWatch Logs automatically deletes it. For valid values, see PutRetentionPolicy in the Amazon CloudWatch Logs API Reference.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Number|Attribute|Reference} value
+ * @return {LogsLogGroup}
+ */
+LogsLogGroup.prototype.retentionInDays = function(value) {
+	return this.set('RetentionInDays', value);
 };
 
 module.exports = LogsLogGroup;

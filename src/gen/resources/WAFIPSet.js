@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function WAFIPSet(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::WAF::IPSet');
 }
 
-Object.setPrototypeOf(WAFIPSet, Resource);
+WAFIPSet.prototype = Object.create(Resource.prototype);
 
-WAFIPSet.prototype = {
-	
-	
-	/**
-	 * The IP address type and IP address range (in CIDR notation) from which web requests originate. If you associate the IPSet with a web ACL that is associated with a Amazon CloudFront (CloudFront) distribution, this descriptor is the value of one of the following fields in the CloudFront access logs:
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSWAFIPSetIPSetDescriptors[]} value
-	 * @return {WAFIPSet}
-	 */
-	ipsetDescriptors: function(value) {
-		return this.set('IPSetDescriptors', value);
-	},
 
-	/**
-	 * A friendly name or description of the IPSet.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {WAFIPSet}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	}
+/**
+ * The IP address type and IP address range (in CIDR notation) from which web requests originate. If you associate the IPSet with a web ACL that is associated with a Amazon CloudFront (CloudFront) distribution, this descriptor is the value of one of the following fields in the CloudFront access logs:
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSWAFIPSetIPSetDescriptors[]|Attribute|Reference} value
+ * @return {WAFIPSet}
+ */
+WAFIPSet.prototype.ipsetDescriptors = function(value) {
+	return this.set('IPSetDescriptors', value);
+};
+
+/**
+ * A friendly name or description of the IPSet.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {WAFIPSet}
+ */
+WAFIPSet.prototype.name = function(value) {
+	return this.set('Name', value);
 };
 
 module.exports = WAFIPSet;

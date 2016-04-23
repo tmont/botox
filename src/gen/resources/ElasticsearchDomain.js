@@ -7,104 +7,101 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function ElasticsearchDomain(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::Elasticsearch::Domain');
 }
 
-Object.setPrototypeOf(ElasticsearchDomain, Resource);
+ElasticsearchDomain.prototype = Object.create(Resource.prototype);
 
-ElasticsearchDomain.prototype = {
-	
-	
-	/**
-	 * An AWS Identity and Access Management (IAM) policy document that specifies who can access the Amazon ES domain and their permissions. For more information, see Configuring Access Policies in the Amazon Elasticsearch Service Developer Guide.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Object} value
-	 * @return {ElasticsearchDomain}
-	 */
-	accessPolicies: function(value) {
-		return this.set('AccessPolicies', value);
-	},
 
-	/**
-	 * Additional options to specify for the Amazon ES domain. For more information, see Configuring Advanced Options in the Amazon Elasticsearch Service Developer Guide.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {AJSONobjectconsistingofastringkeyvaluepairsuchas} value
-	 * @return {ElasticsearchDomain}
-	 */
-	advancedOptions: function(value) {
-		return this.set('AdvancedOptions', value);
-	},
+/**
+ * An AWS Identity and Access Management (IAM) policy document that specifies who can access the Amazon ES domain and their permissions. For more information, see Configuring Access Policies in the Amazon Elasticsearch Service Developer Guide.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Object|Attribute|Reference} value
+ * @return {ElasticsearchDomain}
+ */
+ElasticsearchDomain.prototype.accessPolicies = function(value) {
+	return this.set('AccessPolicies', value);
+};
 
-	/**
-	 * A name for the Amazon ES domain. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the domain name. For more information, see Name Type.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {ElasticsearchDomain}
-	 */
-	domainName: function(value) {
-		return this.set('DomainName', value);
-	},
+/**
+ * Additional options to specify for the Amazon ES domain. For more information, see Configuring Advanced Options in the Amazon Elasticsearch Service Developer Guide.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {AJSONobjectconsistingofastringkeyvaluepairsuchas|Attribute|Reference} value
+ * @return {ElasticsearchDomain}
+ */
+ElasticsearchDomain.prototype.advancedOptions = function(value) {
+	return this.set('AdvancedOptions', value);
+};
 
-	/**
-	 * The configurations of Amazon Elastic Block Store (Amazon EBS) volumes that are attached to data nodes in the Amazon ES domain. For more information, see Configuring EBS-based Storage in the Amazon Elasticsearch Service Developer Guide.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {ElasticsearchServiceDomainEBSOptions} value
-	 * @return {ElasticsearchDomain}
-	 */
-	ebsoptions: function(value) {
-		return this.set('EBSOptions', value);
-	},
+/**
+ * A name for the Amazon ES domain. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the domain name. For more information, see Name Type.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ElasticsearchDomain}
+ */
+ElasticsearchDomain.prototype.domainName = function(value) {
+	return this.set('DomainName', value);
+};
 
-	/**
-	 * The cluster configuration for the Amazon ES domain. You can specify options such as the instance type and the number of instances. For more information, see Configuring Amazon ES Domains in the Amazon Elasticsearch Service Developer Guide.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {ElasticsearchServiceDomainElasticsearchClusterConfig} value
-	 * @return {ElasticsearchDomain}
-	 */
-	elasticsearchClusterConfig: function(value) {
-		return this.set('ElasticsearchClusterConfig', value);
-	},
+/**
+ * The configurations of Amazon Elastic Block Store (Amazon EBS) volumes that are attached to data nodes in the Amazon ES domain. For more information, see Configuring EBS-based Storage in the Amazon Elasticsearch Service Developer Guide.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {ElasticsearchServiceDomainEBSOptions|Attribute|Reference} value
+ * @return {ElasticsearchDomain}
+ */
+ElasticsearchDomain.prototype.ebsoptions = function(value) {
+	return this.set('EBSOptions', value);
+};
 
-	/**
-	 * The automated snapshot configuration for the Amazon ES domain indices.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {ElasticsearchServiceDomainSnapshotOptions} value
-	 * @return {ElasticsearchDomain}
-	 */
-	snapshotOptions: function(value) {
-		return this.set('SnapshotOptions', value);
-	},
+/**
+ * The cluster configuration for the Amazon ES domain. You can specify options such as the instance type and the number of instances. For more information, see Configuring Amazon ES Domains in the Amazon Elasticsearch Service Developer Guide.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {ElasticsearchServiceDomainElasticsearchClusterConfig|Attribute|Reference} value
+ * @return {ElasticsearchDomain}
+ */
+ElasticsearchDomain.prototype.elasticsearchClusterConfig = function(value) {
+	return this.set('ElasticsearchClusterConfig', value);
+};
 
-	/**
-	 * An arbitrary set of tags (key–value pairs) to associate with the Amazon ES domain.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSCloudFormationResourceTagsType[]} value
-	 * @return {ElasticsearchDomain}
-	 */
-	tags: function(value) {
-		return this.set('Tags', value);
-	}
+/**
+ * The automated snapshot configuration for the Amazon ES domain indices.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {ElasticsearchServiceDomainSnapshotOptions|Attribute|Reference} value
+ * @return {ElasticsearchDomain}
+ */
+ElasticsearchDomain.prototype.snapshotOptions = function(value) {
+	return this.set('SnapshotOptions', value);
+};
+
+/**
+ * An arbitrary set of tags (key–value pairs) to associate with the Amazon ES domain.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @return {ElasticsearchDomain}
+ */
+ElasticsearchDomain.prototype.tags = function(value) {
+	return this.set('Tags', value);
 };
 
 module.exports = ElasticsearchDomain;

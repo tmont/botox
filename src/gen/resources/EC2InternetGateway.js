@@ -7,26 +7,23 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function EC2InternetGateway(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::EC2::InternetGateway');
 }
 
-Object.setPrototypeOf(EC2InternetGateway, Resource);
+EC2InternetGateway.prototype = Object.create(Resource.prototype);
 
-EC2InternetGateway.prototype = {
-	
-	
-	/**
-	 * An arbitrary set of tags (key–value pairs) for this resource.
-	 *
-	 * Required: false
-	 * Update requires: No interruption.
-	 *
-	 * @param {AWSCloudFormationResourceTagsType[]} value
-	 * @return {EC2InternetGateway}
-	 */
-	tags: function(value) {
-		return this.set('Tags', value);
-	}
+
+/**
+ * An arbitrary set of tags (key–value pairs) for this resource.
+ *
+ * Required: false
+ * Update requires: No interruption.
+ *
+ * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @return {EC2InternetGateway}
+ */
+EC2InternetGateway.prototype.tags = function(value) {
+	return this.set('Tags', value);
 };
 
 module.exports = EC2InternetGateway;

@@ -7,26 +7,23 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function EC2SpotFleet(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::EC2::SpotFleet');
 }
 
-Object.setPrototypeOf(EC2SpotFleet, Resource);
+EC2SpotFleet.prototype = Object.create(Resource.prototype);
 
-EC2SpotFleet.prototype = {
-	
-	
-	/**
-	 * The configuration for a Spot fleet request.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {EC2SpotFleetSpotFleetRequestConfigData} value
-	 * @return {EC2SpotFleet}
-	 */
-	spotFleetRequestConfigData: function(value) {
-		return this.set('SpotFleetRequestConfigData', value);
-	}
+
+/**
+ * The configuration for a Spot fleet request.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {EC2SpotFleetSpotFleetRequestConfigData|Attribute|Reference} value
+ * @return {EC2SpotFleet}
+ */
+EC2SpotFleet.prototype.spotFleetRequestConfigData = function(value) {
+	return this.set('SpotFleetRequestConfigData', value);
 };
 
 module.exports = EC2SpotFleet;

@@ -7,78 +7,75 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function RDSOptionGroup(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::RDS::OptionGroup');
 }
 
-Object.setPrototypeOf(RDSOptionGroup, Resource);
+RDSOptionGroup.prototype = Object.create(Resource.prototype);
 
-RDSOptionGroup.prototype = {
-	
-	
-	/**
-	 * The name of the database engine that this option group is associated with.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {RDSOptionGroup}
-	 */
-	engineName: function(value) {
-		return this.set('EngineName', value);
-	},
 
-	/**
-	 * The major version number of the database engine that this option group is associated with.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {RDSOptionGroup}
-	 */
-	majorEngineVersion: function(value) {
-		return this.set('MajorEngineVersion', value);
-	},
+/**
+ * The name of the database engine that this option group is associated with.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSOptionGroup}
+ */
+RDSOptionGroup.prototype.engineName = function(value) {
+	return this.set('EngineName', value);
+};
 
-	/**
-	 * A description of the option group.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {RDSOptionGroup}
-	 */
-	optionGroupDescription: function(value) {
-		return this.set('OptionGroupDescription', value);
-	},
+/**
+ * The major version number of the database engine that this option group is associated with.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSOptionGroup}
+ */
+RDSOptionGroup.prototype.majorEngineVersion = function(value) {
+	return this.set('MajorEngineVersion', value);
+};
 
-	/**
-	 * The configurations for this option group.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {RDSOptionGroupOptionConfigurations} value
-	 * @return {RDSOptionGroup}
-	 */
-	optionConfigurations: function(value) {
-		return this.set('OptionConfigurations', value);
-	},
+/**
+ * A description of the option group.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSOptionGroup}
+ */
+RDSOptionGroup.prototype.optionGroupDescription = function(value) {
+	return this.set('OptionGroupDescription', value);
+};
 
-	/**
-	 * An arbitrary set of tags (key–value pairs) for this option group.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSCloudFormationResourceTagsType[]} value
-	 * @return {RDSOptionGroup}
-	 */
-	tags: function(value) {
-		return this.set('Tags', value);
-	}
+/**
+ * The configurations for this option group.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {RDSOptionGroupOptionConfigurations|Attribute|Reference} value
+ * @return {RDSOptionGroup}
+ */
+RDSOptionGroup.prototype.optionConfigurations = function(value) {
+	return this.set('OptionConfigurations', value);
+};
+
+/**
+ * An arbitrary set of tags (key–value pairs) for this option group.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @return {RDSOptionGroup}
+ */
+RDSOptionGroup.prototype.tags = function(value) {
+	return this.set('Tags', value);
 };
 
 module.exports = RDSOptionGroup;

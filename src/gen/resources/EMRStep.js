@@ -7,65 +7,62 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function EMRStep(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::EMR::Step');
 }
 
-Object.setPrototypeOf(EMRStep, Resource);
+EMRStep.prototype = Object.create(Resource.prototype);
 
-EMRStep.prototype = {
-	
-	
-	/**
-	 * The action to take if the job flow step fails. Currently, AWS CloudFormation supports CONTINUE and CONTINUE_AND_WAIT. For more information, see Managing Cluster Termination in the Amazon Elastic MapReduce Management Guide.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {EMRStep}
-	 */
-	actionOnFailure: function(value) {
-		return this.set('ActionOnFailure', value);
-	},
 
-	/**
-	 * The JAR file that includes the main function that Amazon EMR executes.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {ElasticMapReduceStepHadoopJarStepConfig} value
-	 * @return {EMRStep}
-	 */
-	hadoopJarStep: function(value) {
-		return this.set('HadoopJarStep', value);
-	},
+/**
+ * The action to take if the job flow step fails. Currently, AWS CloudFormation supports CONTINUE and CONTINUE_AND_WAIT. For more information, see Managing Cluster Termination in the Amazon Elastic MapReduce Management Guide.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EMRStep}
+ */
+EMRStep.prototype.actionOnFailure = function(value) {
+	return this.set('ActionOnFailure', value);
+};
 
-	/**
-	 * The ID of a cluster in which you want to run this job flow step.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {EMRStep}
-	 */
-	jobFlowId: function(value) {
-		return this.set('JobFlowId', value);
-	},
+/**
+ * The JAR file that includes the main function that Amazon EMR executes.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {ElasticMapReduceStepHadoopJarStepConfig|Attribute|Reference} value
+ * @return {EMRStep}
+ */
+EMRStep.prototype.hadoopJarStep = function(value) {
+	return this.set('HadoopJarStep', value);
+};
 
-	/**
-	 * A name for the job flow step.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {EMRStep}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	}
+/**
+ * The ID of a cluster in which you want to run this job flow step.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EMRStep}
+ */
+EMRStep.prototype.jobFlowId = function(value) {
+	return this.set('JobFlowId', value);
+};
+
+/**
+ * A name for the job flow step.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EMRStep}
+ */
+EMRStep.prototype.name = function(value) {
+	return this.set('Name', value);
 };
 
 module.exports = EMRStep;

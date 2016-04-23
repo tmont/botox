@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function WAFXssMatchSet(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::WAF::XssMatchSet');
 }
 
-Object.setPrototypeOf(WAFXssMatchSet, Resource);
+WAFXssMatchSet.prototype = Object.create(Resource.prototype);
 
-WAFXssMatchSet.prototype = {
-	
-	
-	/**
-	 * A friendly name or description for the XssMatchSet.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {WAFXssMatchSet}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
 
-	/**
-	 * The parts of web requests that you want to inspect for cross-site scripting attacks.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSWAFXssMatchSetXssMatchTuple[]} value
-	 * @return {WAFXssMatchSet}
-	 */
-	xssMatchTuples: function(value) {
-		return this.set('XssMatchTuples', value);
-	}
+/**
+ * A friendly name or description for the XssMatchSet.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {WAFXssMatchSet}
+ */
+WAFXssMatchSet.prototype.name = function(value) {
+	return this.set('Name', value);
+};
+
+/**
+ * The parts of web requests that you want to inspect for cross-site scripting attacks.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSWAFXssMatchSetXssMatchTuple[]|Attribute|Reference} value
+ * @return {WAFXssMatchSet}
+ */
+WAFXssMatchSet.prototype.xssMatchTuples = function(value) {
+	return this.set('XssMatchTuples', value);
 };
 
 module.exports = WAFXssMatchSet;

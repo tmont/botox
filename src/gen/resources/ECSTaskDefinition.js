@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function ECSTaskDefinition(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::ECS::TaskDefinition');
 }
 
-Object.setPrototypeOf(ECSTaskDefinition, Resource);
+ECSTaskDefinition.prototype = Object.create(Resource.prototype);
 
-ECSTaskDefinition.prototype = {
-	
-	
-	/**
-	 * A list of container definitions in JSON format that describe the containers that make up your task.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {EC2ContainerServiceTaskDefinitionContainerDefinitions[]} value
-	 * @return {ECSTaskDefinition}
-	 */
-	containerDefinitions: function(value) {
-		return this.set('ContainerDefinitions', value);
-	},
 
-	/**
-	 * A list of volume definitions in JSON format for volumes that you can use in your container definitions.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {EC2ContainerServiceTaskDefinitionVolumes[]} value
-	 * @return {ECSTaskDefinition}
-	 */
-	volumes: function(value) {
-		return this.set('Volumes', value);
-	}
+/**
+ * A list of container definitions in JSON format that describe the containers that make up your task.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {EC2ContainerServiceTaskDefinitionContainerDefinitions[]|Attribute|Reference} value
+ * @return {ECSTaskDefinition}
+ */
+ECSTaskDefinition.prototype.containerDefinitions = function(value) {
+	return this.set('ContainerDefinitions', value);
+};
+
+/**
+ * A list of volume definitions in JSON format for volumes that you can use in your container definitions.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {EC2ContainerServiceTaskDefinitionVolumes[]|Attribute|Reference} value
+ * @return {ECSTaskDefinition}
+ */
+ECSTaskDefinition.prototype.volumes = function(value) {
+	return this.set('Volumes', value);
 };
 
 module.exports = ECSTaskDefinition;

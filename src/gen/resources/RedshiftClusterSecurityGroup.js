@@ -7,26 +7,23 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function RedshiftClusterSecurityGroup(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::Redshift::ClusterSecurityGroup');
 }
 
-Object.setPrototypeOf(RedshiftClusterSecurityGroup, Resource);
+RedshiftClusterSecurityGroup.prototype = Object.create(Resource.prototype);
 
-RedshiftClusterSecurityGroup.prototype = {
-	
-	
-	/**
-	 * A description of the security group.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {RedshiftClusterSecurityGroup}
-	 */
-	description: function(value) {
-		return this.set('Description', value);
-	}
+
+/**
+ * A description of the security group.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RedshiftClusterSecurityGroup}
+ */
+RedshiftClusterSecurityGroup.prototype.description = function(value) {
+	return this.set('Description', value);
 };
 
 module.exports = RedshiftClusterSecurityGroup;

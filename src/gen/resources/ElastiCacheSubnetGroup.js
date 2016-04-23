@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function ElastiCacheSubnetGroup(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::ElastiCache::SubnetGroup');
 }
 
-Object.setPrototypeOf(ElastiCacheSubnetGroup, Resource);
+ElastiCacheSubnetGroup.prototype = Object.create(Resource.prototype);
 
-ElastiCacheSubnetGroup.prototype = {
-	
-	
-	/**
-	 * The description for the cache subnet group.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {ElastiCacheSubnetGroup}
-	 */
-	description: function(value) {
-		return this.set('Description', value);
-	},
 
-	/**
-	 * The Amazon EC2 subnet IDs for the cache subnet group.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {String[]} value
-	 * @return {ElastiCacheSubnetGroup}
-	 */
-	subnetIds: function(value) {
-		return this.set('SubnetIds', value);
-	}
+/**
+ * The description for the cache subnet group.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ElastiCacheSubnetGroup}
+ */
+ElastiCacheSubnetGroup.prototype.description = function(value) {
+	return this.set('Description', value);
+};
+
+/**
+ * The Amazon EC2 subnet IDs for the cache subnet group.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {String[]|Attribute|Reference} value
+ * @return {ElastiCacheSubnetGroup}
+ */
+ElastiCacheSubnetGroup.prototype.subnetIds = function(value) {
+	return this.set('SubnetIds', value);
 };
 
 module.exports = ElastiCacheSubnetGroup;

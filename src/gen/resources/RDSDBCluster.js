@@ -7,234 +7,231 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function RDSDBCluster(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::RDS::DBCluster');
 }
 
-Object.setPrototypeOf(RDSDBCluster, Resource);
+RDSDBCluster.prototype = Object.create(Resource.prototype);
 
-RDSDBCluster.prototype = {
-	
-	
-	/**
-	 * A list of Availability Zones (AZs) in which DB instances in the cluster can be created.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {RDSDBCluster}
-	 */
-	availabilityZones: function(value) {
-		return this.set('AvailabilityZones', value);
-	},
 
-	/**
-	 * The number of days for which automatic backups are retained. For more information, see CreateDBCluster in the Amazon Relational Database Service API Reference.
-	 *
-	 * Required: false
-	 * Update requires: No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference.
-	 *
-	 * @param {Number} value
-	 * @return {RDSDBCluster}
-	 */
-	backupRetentionPeriod: function(value) {
-		return this.set('BackupRetentionPeriod', value);
-	},
+/**
+ * A list of Availability Zones (AZs) in which DB instances in the cluster can be created.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.availabilityZones = function(value) {
+	return this.set('AvailabilityZones', value);
+};
 
-	/**
-	 * The name of your database. You can specify a name of up to eight alpha-numeric characters. If you do not provide a name, Amazon Relational Database Service (Amazon RDS) won't create a database in this DB cluster.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {RDSDBCluster}
-	 */
-	databaseName: function(value) {
-		return this.set('DatabaseName', value);
-	},
+/**
+ * The number of days for which automatic backups are retained. For more information, see CreateDBCluster in the Amazon Relational Database Service API Reference.
+ *
+ * Required: false
+ * Update requires: No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference.
+ *
+ * @param {Number|Attribute|Reference} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.backupRetentionPeriod = function(value) {
+	return this.set('BackupRetentionPeriod', value);
+};
 
-	/**
-	 * The name of the DB cluster parameter group to associate with this DB cluster. For the default value, see the DBClusterParameterGroupName parameter of the CreateDBCluster action in the Amazon Relational Database Service API Reference.
-	 *
-	 * Required: false
-	 * Update requires: Some interruptions
-	 *
-	 * @param {String} value
-	 * @return {RDSDBCluster}
-	 */
-	dbclusterParameterGroupName: function(value) {
-		return this.set('DBClusterParameterGroupName', value);
-	},
+/**
+ * The name of your database. You can specify a name of up to eight alpha-numeric characters. If you do not provide a name, Amazon Relational Database Service (Amazon RDS) won't create a database in this DB cluster.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.databaseName = function(value) {
+	return this.set('DatabaseName', value);
+};
 
-	/**
-	 * A DB subnet group that you want to associate with this DB cluster.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {RDSDBCluster}
-	 */
-	dbsubnetGroupName: function(value) {
-		return this.set('DBSubnetGroupName', value);
-	},
+/**
+ * The name of the DB cluster parameter group to associate with this DB cluster. For the default value, see the DBClusterParameterGroupName parameter of the CreateDBCluster action in the Amazon Relational Database Service API Reference.
+ *
+ * Required: false
+ * Update requires: Some interruptions
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.dbclusterParameterGroupName = function(value) {
+	return this.set('DBClusterParameterGroupName', value);
+};
 
-	/**
-	 * The name of the database engine that you want to use for this DB cluster.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {RDSDBCluster}
-	 */
-	engine: function(value) {
-		return this.set('Engine', value);
-	},
+/**
+ * A DB subnet group that you want to associate with this DB cluster.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.dbsubnetGroupName = function(value) {
+	return this.set('DBSubnetGroupName', value);
+};
 
-	/**
-	 * The version number of the database engine that you want to use.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {RDSDBCluster}
-	 */
-	engineVersion: function(value) {
-		return this.set('EngineVersion', value);
-	},
+/**
+ * The name of the database engine that you want to use for this DB cluster.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.engine = function(value) {
+	return this.set('Engine', value);
+};
 
-	/**
-	 * The Amazon Resource Name (ARN) of the AWS Key Management Service master key that is used to encrypt the database instances in the DB cluster, such as arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef. If you enable the StorageEncrypted property but don't specify this property, the default master key is used. If you specify this property, you must set the StorageEncrypted property to true.
-	 *
-	 * Required: false
-	 * Update requires: Replacement.
-	 *
-	 * @param {String} value
-	 * @return {RDSDBCluster}
-	 */
-	kmsKeyId: function(value) {
-		return this.set('KmsKeyId', value);
-	},
+/**
+ * The version number of the database engine that you want to use.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.engineVersion = function(value) {
+	return this.set('EngineVersion', value);
+};
 
-	/**
-	 * The master user name for the DB instance.
-	 *
-	 * Required: false
-	 * Update requires: Replacement.
-	 *
-	 * @param {String} value
-	 * @return {RDSDBCluster}
-	 */
-	masterUsername: function(value) {
-		return this.set('MasterUsername', value);
-	},
+/**
+ * The Amazon Resource Name (ARN) of the AWS Key Management Service master key that is used to encrypt the database instances in the DB cluster, such as arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef. If you enable the StorageEncrypted property but don't specify this property, the default master key is used. If you specify this property, you must set the StorageEncrypted property to true.
+ *
+ * Required: false
+ * Update requires: Replacement.
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.kmsKeyId = function(value) {
+	return this.set('KmsKeyId', value);
+};
 
-	/**
-	 * The password for the master database user.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {RDSDBCluster}
-	 */
-	masterUserPassword: function(value) {
-		return this.set('MasterUserPassword', value);
-	},
+/**
+ * The master user name for the DB instance.
+ *
+ * Required: false
+ * Update requires: Replacement.
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.masterUsername = function(value) {
+	return this.set('MasterUsername', value);
+};
 
-	/**
-	 * The port number on which the DB instances in the cluster can accept connections.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Number} value
-	 * @return {RDSDBCluster}
-	 */
-	port: function(value) {
-		return this.set('Port', value);
-	},
+/**
+ * The password for the master database user.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.masterUserPassword = function(value) {
+	return this.set('MasterUserPassword', value);
+};
 
-	/**
-	 * if automated backups are enabled (see the BackupRetentionPeriod property), the daily time range in UTC during which you want to create automated backups.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {RDSDBCluster}
-	 */
-	preferredBackupWindow: function(value) {
-		return this.set('PreferredBackupWindow', value);
-	},
+/**
+ * The port number on which the DB instances in the cluster can accept connections.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Number|Attribute|Reference} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.port = function(value) {
+	return this.set('Port', value);
+};
 
-	/**
-	 * The weekly time range (in UTC) during which system maintenance can occur.
-	 *
-	 * Required: false
-	 * Update requires: No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference.
-	 *
-	 * @param {String} value
-	 * @return {RDSDBCluster}
-	 */
-	preferredMaintenanceWindow: function(value) {
-		return this.set('PreferredMaintenanceWindow', value);
-	},
+/**
+ * if automated backups are enabled (see the BackupRetentionPeriod property), the daily time range in UTC during which you want to create automated backups.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.preferredBackupWindow = function(value) {
+	return this.set('PreferredBackupWindow', value);
+};
 
-	/**
-	 * The identifier for the DB cluster snapshot from which you want to restore.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {RDSDBCluster}
-	 */
-	snapshotIdentifier: function(value) {
-		return this.set('SnapshotIdentifier', value);
-	},
+/**
+ * The weekly time range (in UTC) during which system maintenance can occur.
+ *
+ * Required: false
+ * Update requires: No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference.
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.preferredMaintenanceWindow = function(value) {
+	return this.set('PreferredMaintenanceWindow', value);
+};
 
-	/**
-	 * Indicates whether the DB instances in the cluster are encrypted.
-	 *
-	 * Required: false
-	 * Update requires: Replacement.
-	 *
-	 * @param {Boolean} value
-	 * @return {RDSDBCluster}
-	 */
-	storageEncrypted: function(value) {
-		return this.set('StorageEncrypted', value);
-	},
+/**
+ * The identifier for the DB cluster snapshot from which you want to restore.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.snapshotIdentifier = function(value) {
+	return this.set('SnapshotIdentifier', value);
+};
 
-	/**
-	 * The tags that you want to attach to this DB cluster.
-	 *
-	 * Required: false
-	 * Update requires: Updates are not supported.
-	 *
-	 * @param {resourcetag[]} value
-	 * @return {RDSDBCluster}
-	 */
-	tags: function(value) {
-		return this.set('Tags', value);
-	},
+/**
+ * Indicates whether the DB instances in the cluster are encrypted.
+ *
+ * Required: false
+ * Update requires: Replacement.
+ *
+ * @param {Boolean|Attribute|Reference} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.storageEncrypted = function(value) {
+	return this.set('StorageEncrypted', value);
+};
 
-	/**
-	 * A list of VPC security groups to associate with this DB cluster.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {string[]} value
-	 * @return {RDSDBCluster}
-	 */
-	vpcSecurityGroupIds: function(value) {
-		return this.set('VpcSecurityGroupIds', value);
-	}
+/**
+ * The tags that you want to attach to this DB cluster.
+ *
+ * Required: false
+ * Update requires: Updates are not supported.
+ *
+ * @param {resourcetag[]|Attribute|Reference} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.tags = function(value) {
+	return this.set('Tags', value);
+};
+
+/**
+ * A list of VPC security groups to associate with this DB cluster.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {string[]|Attribute|Reference} value
+ * @return {RDSDBCluster}
+ */
+RDSDBCluster.prototype.vpcSecurityGroupIds = function(value) {
+	return this.set('VpcSecurityGroupIds', value);
 };
 
 module.exports = RDSDBCluster;

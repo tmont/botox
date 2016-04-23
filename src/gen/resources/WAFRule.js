@@ -7,52 +7,49 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function WAFRule(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::WAF::Rule');
 }
 
-Object.setPrototypeOf(WAFRule, Resource);
+WAFRule.prototype = Object.create(Resource.prototype);
 
-WAFRule.prototype = {
-	
-	
-	/**
-	 * A friendly name or description for the metrics of the rule.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {WAFRule}
-	 */
-	metricName: function(value) {
-		return this.set('MetricName', value);
-	},
 
-	/**
-	 * A friendly name or description of the rule.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {WAFRule}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * A friendly name or description for the metrics of the rule.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {WAFRule}
+ */
+WAFRule.prototype.metricName = function(value) {
+	return this.set('MetricName', value);
+};
 
-	/**
-	 * The ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects to include in a rule. If you add more than one predicate to a rule, a request must match all conditions in order to be allowed or blocked.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSWAFRulePredicates[]} value
-	 * @return {WAFRule}
-	 */
-	predicates: function(value) {
-		return this.set('Predicates', value);
-	}
+/**
+ * A friendly name or description of the rule.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {WAFRule}
+ */
+WAFRule.prototype.name = function(value) {
+	return this.set('Name', value);
+};
+
+/**
+ * The ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects to include in a rule. If you add more than one predicate to a rule, a request must match all conditions in order to be allowed or blocked.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSWAFRulePredicates[]|Attribute|Reference} value
+ * @return {WAFRule}
+ */
+WAFRule.prototype.predicates = function(value) {
+	return this.set('Predicates', value);
 };
 
 module.exports = WAFRule;

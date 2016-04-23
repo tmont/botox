@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function SNSTopicPolicy(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::SNS::TopicPolicy');
 }
 
-Object.setPrototypeOf(SNSTopicPolicy, Resource);
+SNSTopicPolicy.prototype = Object.create(Resource.prototype);
 
-SNSTopicPolicy.prototype = {
-	
-	
-	/**
-	 * A policy document that contains permissions to add to the specified SNS topics.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {Object} value
-	 * @return {SNSTopicPolicy}
-	 */
-	policyDocument: function(value) {
-		return this.set('PolicyDocument', value);
-	},
 
-	/**
-	 * The Amazon Resource Names (ARN) of the topics to which you want to add the policy. You can use the Ref function to specify an AWS::SNS::Topic resource.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {SNStopicsARN[]} value
-	 * @return {SNSTopicPolicy}
-	 */
-	topics: function(value) {
-		return this.set('Topics', value);
-	}
+/**
+ * A policy document that contains permissions to add to the specified SNS topics.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {Object|Attribute|Reference} value
+ * @return {SNSTopicPolicy}
+ */
+SNSTopicPolicy.prototype.policyDocument = function(value) {
+	return this.set('PolicyDocument', value);
+};
+
+/**
+ * The Amazon Resource Names (ARN) of the topics to which you want to add the policy. You can use the Ref function to specify an AWS::SNS::Topic resource.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {SNStopicsARN[]|Attribute|Reference} value
+ * @return {SNSTopicPolicy}
+ */
+SNSTopicPolicy.prototype.topics = function(value) {
+	return this.set('Topics', value);
 };
 
 module.exports = SNSTopicPolicy;

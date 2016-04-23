@@ -7,52 +7,49 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function GameLiftAlias(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::GameLift::Alias');
 }
 
-Object.setPrototypeOf(GameLiftAlias, Resource);
+GameLiftAlias.prototype = Object.create(Resource.prototype);
 
-GameLiftAlias.prototype = {
-	
-	
-	/**
-	 * Information that helps you identify the purpose of this alias.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {GameLiftAlias}
-	 */
-	description: function(value) {
-		return this.set('Description', value);
-	},
 
-	/**
-	 * An identifier to associate with this alias. Alias names don't need to be unique.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {GameLiftAlias}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * Information that helps you identify the purpose of this alias.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {GameLiftAlias}
+ */
+GameLiftAlias.prototype.description = function(value) {
+	return this.set('Description', value);
+};
 
-	/**
-	 * A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {GameLiftAliasRoutingStrategy} value
-	 * @return {GameLiftAlias}
-	 */
-	routingStrategy: function(value) {
-		return this.set('RoutingStrategy', value);
-	}
+/**
+ * An identifier to associate with this alias. Alias names don't need to be unique.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {GameLiftAlias}
+ */
+GameLiftAlias.prototype.name = function(value) {
+	return this.set('Name', value);
+};
+
+/**
+ * A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {GameLiftAliasRoutingStrategy|Attribute|Reference} value
+ * @return {GameLiftAlias}
+ */
+GameLiftAlias.prototype.routingStrategy = function(value) {
+	return this.set('RoutingStrategy', value);
 };
 
 module.exports = GameLiftAlias;

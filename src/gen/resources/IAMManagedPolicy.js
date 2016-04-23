@@ -7,91 +7,88 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function IAMManagedPolicy(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::IAM::ManagedPolicy');
 }
 
-Object.setPrototypeOf(IAMManagedPolicy, Resource);
+IAMManagedPolicy.prototype = Object.create(Resource.prototype);
 
-IAMManagedPolicy.prototype = {
-	
-	
-	/**
-	 * A description of the policy. For example, you can describe the permissions that are defined in the policy.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {IAMManagedPolicy}
-	 */
-	description: function(value) {
-		return this.set('Description', value);
-	},
 
-	/**
-	 * The names of groups to attach to this policy.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {string[]} value
-	 * @return {IAMManagedPolicy}
-	 */
-	groups: function(value) {
-		return this.set('Groups', value);
-	},
+/**
+ * A description of the policy. For example, you can describe the permissions that are defined in the policy.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {IAMManagedPolicy}
+ */
+IAMManagedPolicy.prototype.description = function(value) {
+	return this.set('Description', value);
+};
 
-	/**
-	 * The path for the policy. By default, the path is /. For more information, see IAM Identifiers in the IAM User Guide guide.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {IAMManagedPolicy}
-	 */
-	path: function(value) {
-		return this.set('Path', value);
-	},
+/**
+ * The names of groups to attach to this policy.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {string[]|Attribute|Reference} value
+ * @return {IAMManagedPolicy}
+ */
+IAMManagedPolicy.prototype.groups = function(value) {
+	return this.set('Groups', value);
+};
 
-	/**
-	 * Policies that define the permissions for this managed policy. For more information about policy syntax, see IAM Policy Elements Reference in IAM User Guide.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {Object} value
-	 * @return {IAMManagedPolicy}
-	 */
-	policyDocument: function(value) {
-		return this.set('PolicyDocument', value);
-	},
+/**
+ * The path for the policy. By default, the path is /. For more information, see IAM Identifiers in the IAM User Guide guide.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {IAMManagedPolicy}
+ */
+IAMManagedPolicy.prototype.path = function(value) {
+	return this.set('Path', value);
+};
 
-	/**
-	 * The names of roles to attach to this policy.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {string[]} value
-	 * @return {IAMManagedPolicy}
-	 */
-	roles: function(value) {
-		return this.set('Roles', value);
-	},
+/**
+ * Policies that define the permissions for this managed policy. For more information about policy syntax, see IAM Policy Elements Reference in IAM User Guide.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {Object|Attribute|Reference} value
+ * @return {IAMManagedPolicy}
+ */
+IAMManagedPolicy.prototype.policyDocument = function(value) {
+	return this.set('PolicyDocument', value);
+};
 
-	/**
-	 * The names of users to attach to this policy.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {string[]} value
-	 * @return {IAMManagedPolicy}
-	 */
-	users: function(value) {
-		return this.set('Users', value);
-	}
+/**
+ * The names of roles to attach to this policy.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {string[]|Attribute|Reference} value
+ * @return {IAMManagedPolicy}
+ */
+IAMManagedPolicy.prototype.roles = function(value) {
+	return this.set('Roles', value);
+};
+
+/**
+ * The names of users to attach to this policy.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {string[]|Attribute|Reference} value
+ * @return {IAMManagedPolicy}
+ */
+IAMManagedPolicy.prototype.users = function(value) {
+	return this.set('Users', value);
 };
 
 module.exports = IAMManagedPolicy;

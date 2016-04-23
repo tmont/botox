@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function EC2NetworkAcl(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::EC2::NetworkAcl');
 }
 
-Object.setPrototypeOf(EC2NetworkAcl, Resource);
+EC2NetworkAcl.prototype = Object.create(Resource.prototype);
 
-EC2NetworkAcl.prototype = {
-	
-	
-	/**
-	 * An arbitrary set of tags (key–value pairs) for this ACL.
-	 *
-	 * Required: false
-	 * Update requires: No interruption.
-	 *
-	 * @param {AWSCloudFormationResourceTagsType[]} value
-	 * @return {EC2NetworkAcl}
-	 */
-	tags: function(value) {
-		return this.set('Tags', value);
-	},
 
-	/**
-	 * The ID of the VPC where the network ACL will be created.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {EC2NetworkAcl}
-	 */
-	vpcId: function(value) {
-		return this.set('VpcId', value);
-	}
+/**
+ * An arbitrary set of tags (key–value pairs) for this ACL.
+ *
+ * Required: false
+ * Update requires: No interruption.
+ *
+ * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @return {EC2NetworkAcl}
+ */
+EC2NetworkAcl.prototype.tags = function(value) {
+	return this.set('Tags', value);
+};
+
+/**
+ * The ID of the VPC where the network ACL will be created.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EC2NetworkAcl}
+ */
+EC2NetworkAcl.prototype.vpcId = function(value) {
+	return this.set('VpcId', value);
 };
 
 module.exports = EC2NetworkAcl;

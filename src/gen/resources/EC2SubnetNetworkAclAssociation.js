@@ -7,52 +7,59 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function EC2SubnetNetworkAclAssociation(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::EC2::SubnetNetworkAclAssociation');
 }
 
-Object.setPrototypeOf(EC2SubnetNetworkAclAssociation, Resource);
+EC2SubnetNetworkAclAssociation.prototype = Object.create(Resource.prototype);
 
-EC2SubnetNetworkAclAssociation.prototype = {
-	get attr() {
-		var createAttribute = this.createAttribute.bind(this, this);
+/**
+ * AWS::EC2::SubnetNetworkAclAssociation attribute map
+ * @typedef {Object} EC2SubnetNetworkAclAssociationAttributeMap
+ * @property {Attribute} AssociationId Returns the value of this object's SubnetId property.
+ */
+Object.defineProperty(EC2SubnetNetworkAclAssociation.prototype, 'attr', {
+	/**
+	 * @return {EC2SubnetNetworkAclAssociationAttributeMap}
+	 */
+	get: function() {
+		var createAttribute = this.createAttribute.bind(this);
 		return {
 			
 			/**
 			 * Returns the value of this object's SubnetId property.
 			 * @return {Attribute}
 			 */
-			associationId: function() {
+			get associationId() {
 				return createAttribute('AssociationId');
 			}
 		};
-	},
-
-	
-	/**
-	 * The ID representing the current association between the original network ACL and the subnet.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {EC2SubnetNetworkAclAssociation}
-	 */
-	subnetId: function(value) {
-		return this.set('SubnetId', value);
-	},
-
-	/**
-	 * The ID of the new ACL to associate with the subnet.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {EC2SubnetNetworkAclAssociation}
-	 */
-	networkAclId: function(value) {
-		return this.set('NetworkAclId', value);
 	}
+});
+
+/**
+ * The ID representing the current association between the original network ACL and the subnet.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EC2SubnetNetworkAclAssociation}
+ */
+EC2SubnetNetworkAclAssociation.prototype.subnetId = function(value) {
+	return this.set('SubnetId', value);
+};
+
+/**
+ * The ID of the new ACL to associate with the subnet.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EC2SubnetNetworkAclAssociation}
+ */
+EC2SubnetNetworkAclAssociation.prototype.networkAclId = function(value) {
+	return this.set('NetworkAclId', value);
 };
 
 module.exports = EC2SubnetNetworkAclAssociation;

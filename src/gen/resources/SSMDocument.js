@@ -7,26 +7,23 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function SSMDocument(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::SSM::Document');
 }
 
-Object.setPrototypeOf(SSMDocument, Resource);
+SSMDocument.prototype = Object.create(Resource.prototype);
 
-SSMDocument.prototype = {
-	
-	
-	/**
-	 * A JSON object that describes an instance configuration. For more information, see SSM Documents in the Amazon EC2 Simple Systems Manager API Reference.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {Object} value
-	 * @return {SSMDocument}
-	 */
-	content: function(value) {
-		return this.set('Content', value);
-	}
+
+/**
+ * A JSON object that describes an instance configuration. For more information, see SSM Documents in the Amazon EC2 Simple Systems Manager API Reference.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {Object|Attribute|Reference} value
+ * @return {SSMDocument}
+ */
+SSMDocument.prototype.content = function(value) {
+	return this.set('Content', value);
 };
 
 module.exports = SSMDocument;

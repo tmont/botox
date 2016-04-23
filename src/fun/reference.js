@@ -1,3 +1,5 @@
+var TemplateItemTrait = require('../template-item-trait');
+
 /**
  * Creates a reference to a resource/parameter/condition/etc.
  * @param {Object} object The resource/parameter/condition instance to reference
@@ -10,16 +12,11 @@ function Reference(object) {
 	this.ref = object;
 }
 
-Reference.prototype = {
-	toJSON: function() {
-		return {
-			Ref: this.ref.name
-		};
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
-	}
+Reference.prototype = Object.create(TemplateItemTrait);
+Reference.prototype.toJSON = function() {
+	return {
+		Ref: this.ref.name
+	};
 };
 
 module.exports = Reference;

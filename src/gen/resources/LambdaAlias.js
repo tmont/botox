@@ -7,65 +7,62 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function LambdaAlias(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::Lambda::Alias');
 }
 
-Object.setPrototypeOf(LambdaAlias, Resource);
+LambdaAlias.prototype = Object.create(Resource.prototype);
 
-LambdaAlias.prototype = {
-	
-	
-	/**
-	 * Information that describes the alias, such as its purpose or the function that it's associated with.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {LambdaAlias}
-	 */
-	description: function(value) {
-		return this.set('Description', value);
-	},
 
-	/**
-	 * The Lambda function that you want to associate with this alias. You can specify the function's name or its Amazon Resource Name (ARN).
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {LambdaAlias}
-	 */
-	functionName: function(value) {
-		return this.set('FunctionName', value);
-	},
+/**
+ * Information that describes the alias, such as its purpose or the function that it's associated with.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {LambdaAlias}
+ */
+LambdaAlias.prototype.description = function(value) {
+	return this.set('Description', value);
+};
 
-	/**
-	 * The version of the Lambda function that you want to associate with this alias.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {LambdaAlias}
-	 */
-	functionVersion: function(value) {
-		return this.set('FunctionVersion', value);
-	},
+/**
+ * The Lambda function that you want to associate with this alias. You can specify the function's name or its Amazon Resource Name (ARN).
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {LambdaAlias}
+ */
+LambdaAlias.prototype.functionName = function(value) {
+	return this.set('FunctionName', value);
+};
 
-	/**
-	 * A name for the alias.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {LambdaAlias}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	}
+/**
+ * The version of the Lambda function that you want to associate with this alias.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {LambdaAlias}
+ */
+LambdaAlias.prototype.functionVersion = function(value) {
+	return this.set('FunctionVersion', value);
+};
+
+/**
+ * A name for the alias.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {LambdaAlias}
+ */
+LambdaAlias.prototype.name = function(value) {
+	return this.set('Name', value);
 };
 
 module.exports = LambdaAlias;

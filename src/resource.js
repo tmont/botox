@@ -1,9 +1,12 @@
 var Reference = require('./fun/reference'),
 	Attribute = require('./fun/attribute');
 
-function Resource(name) {
+function Resource(name, type) {
 	if (!name || typeof(name) !== 'string') {
 		throw new Error('name must be a non-empty string');
+	}
+	if (!type || typeof(type) !== 'string') {
+		throw new Error('type must be a non-empty string');
 	}
 
 	Object.defineProperty(this, 'data', {
@@ -16,6 +19,10 @@ function Resource(name) {
 
 	Object.defineProperty(this, 'name', {
 		value: name
+	});
+
+	Object.defineProperty(this, 'type', {
+		value: type
 	});
 }
 
@@ -33,8 +40,15 @@ Resource.prototype = {
 		return new Attribute(this, name);
 	},
 
+	getTemplateJson: function() {
+		return JSON.parse(this.toString());
+	},
+
 	toJSON: function() {
-		return this.data;
+		return {
+			Type: this.type,
+			Properties: this.data
+		};
 	},
 
 	toString: function() {

@@ -7,65 +7,62 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function Route53RecordSetGroup(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::Route53::RecordSetGroup');
 }
 
-Object.setPrototypeOf(Route53RecordSetGroup, Resource);
+Route53RecordSetGroup.prototype = Object.create(Resource.prototype);
 
-Route53RecordSetGroup.prototype = {
-	
-	
-	/**
-	 * Any comments you want to include about the hosted zone.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {Route53RecordSetGroup}
-	 */
-	comment: function(value) {
-		return this.set('Comment', value);
-	},
 
-	/**
-	 * The ID of the hosted zone.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {Route53RecordSetGroup}
-	 */
-	hostedZoneId: function(value) {
-		return this.set('HostedZoneId', value);
-	},
+/**
+ * Any comments you want to include about the hosted zone.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {Route53RecordSetGroup}
+ */
+Route53RecordSetGroup.prototype.comment = function(value) {
+	return this.set('Comment', value);
+};
 
-	/**
-	 * The name of the domain for the hosted zone where you want to add the record set.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {Route53RecordSetGroup}
-	 */
-	hostedZoneName: function(value) {
-		return this.set('HostedZoneName', value);
-	},
+/**
+ * The ID of the hosted zone.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {Route53RecordSetGroup}
+ */
+Route53RecordSetGroup.prototype.hostedZoneId = function(value) {
+	return this.set('HostedZoneId', value);
+};
 
-	/**
-	 * List of resource record sets to add.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {ListofAWSRoute53RecordSetobjectsasshowninthefollowingexample} value
-	 * @return {Route53RecordSetGroup}
-	 */
-	recordSets: function(value) {
-		return this.set('RecordSets', value);
-	}
+/**
+ * The name of the domain for the hosted zone where you want to add the record set.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {Route53RecordSetGroup}
+ */
+Route53RecordSetGroup.prototype.hostedZoneName = function(value) {
+	return this.set('HostedZoneName', value);
+};
+
+/**
+ * List of resource record sets to add.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {ListofAWSRoute53RecordSetobjectsasshowninthefollowingexample|Attribute|Reference} value
+ * @return {Route53RecordSetGroup}
+ */
+Route53RecordSetGroup.prototype.recordSets = function(value) {
+	return this.set('RecordSets', value);
 };
 
 module.exports = Route53RecordSetGroup;

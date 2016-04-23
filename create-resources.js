@@ -29,48 +29,67 @@ function createResources(files, next) {
 	function createResource(file, next) {
 		const json = require(file);
 		const className = json.category + json.name;
+		const propertyPrefix = `${className}.prototype`;
 
 		const methods = json.properties.map((prop) => {
-			return `
-	/**
-	 * ${prop.description}
-	 *
-	 * Required: ${prop.required}
-	 * Update requires: ${prop.update}
-	 *
-	 * @param {${prop.type}} value
-	 * @return {${className}}
-	 */
-	${camelize(prop.name)}: function(value) {
-		return this.set('${prop.name}', value);
-	}`;
-		}).join(',\n');
+			const types = [ prop.type, 'Attribute', 'Reference' ];
+			if (prop.type === 'String') {
+				types.push('Join');
+			}
 
-		const attributes = json.attributes.map((attr) => {
-			const methodName = camelize(attr.name.replace(/\W/g, ''));
 			return `
+/**
+ * ${prop.description}
+ *
+ * Required: ${prop.required}
+ * Update requires: ${prop.update}
+ *
+ * @param {${types.join('|')}} value
+ * @return {${className}}
+ */
+${propertyPrefix}.${camelize(prop.name)} = function(value) {
+	return this.set('${prop.name}', value);
+};`;
+		}).join('\n');
+
+		const attrTypeDefs = [];
+		const attributes = json.attributes
+			.sort((a, b) => {
+				return a.name.localeCompare(b.name);
+			})
+			.map((attr) => {
+				const propName = camelize(attr.name.replace(/\W/g, ''));
+				attrTypeDefs.push(` * @property {Attribute} ${attr.name} ${attr.description}`);
+				return `
 			/**
 			 * ${attr.description}
 			 * @return {Attribute}
 			 */
-			${methodName}: function() {
+			get ${propName}() {
 				return createAttribute('${attr.name}');
 			}`;
-		}).join(',\n');
+			})
+			.join(',\n');
 
-		let attributeMethod = '';
+		let attributeProp = '';
 		if (attributes) {
-			attributeMethod = `get attr() {
-		var createAttribute = this.createAttribute.bind(this, this);
+			attributeProp = `
+/**
+ * ${json.fullName} attribute map
+ * @typedef {Object} ${className}AttributeMap
+${attrTypeDefs.join('\n')}
+ */
+Object.defineProperty(${propertyPrefix}, 'attr', {
+	/**
+	 * @return {${className}AttributeMap}
+	 */
+	get: function() {
+		var createAttribute = this.createAttribute.bind(this);
 		return {
 			${attributes}
 		};
-	}`;
-
-			if (methods) {
-				attributeMethod += ',';
-			}
-			attributeMethod += '\n';
+	}
+});`;
 		}
 
 		const code = `var Resource = require('../../resource');
@@ -82,15 +101,12 @@ function createResources(files, next) {
  * @param {String} name Name of the resource
  */
 function ${className}(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, '${json.fullName}');
 }
 
-Object.setPrototypeOf(${className}, Resource);
-
-${className}.prototype = {
-	${attributeMethod}
-	${methods}
-};
+${className}.prototype = Object.create(Resource.prototype);
+${attributeProp}
+${methods}
 
 module.exports = ${className};
 `;

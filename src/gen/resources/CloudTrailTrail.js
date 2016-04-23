@@ -7,52 +7,49 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function CloudTrailTrail(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::CloudTrail::Trail');
 }
 
-Object.setPrototypeOf(CloudTrailTrail, Resource);
+CloudTrailTrail.prototype = Object.create(Resource.prototype);
 
-CloudTrailTrail.prototype = {
-	
-	
-	/**
-	 * The Amazon Resource Name (ARN) of a log group to which CloudTrail logs will be delivered.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {CloudTrailTrail}
-	 */
-	cloudWatchLogsLogGroupArn: function(value) {
-		return this.set('CloudWatchLogsLogGroupArn', value);
-	},
 
-	/**
-	 * The role ARN that Amazon CloudWatch Logs (CloudWatch Logs) assumes to write logs to a log group. For more information, see Role Policy Document for CloudTrail to Use CloudWatch Logs for Monitoring in the AWS CloudTrail User Guide.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {CloudTrailTrail}
-	 */
-	cloudWatchLogsRoleArn: function(value) {
-		return this.set('CloudWatchLogsRoleArn', value);
-	},
+/**
+ * The Amazon Resource Name (ARN) of a log group to which CloudTrail logs will be delivered.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {CloudTrailTrail}
+ */
+CloudTrailTrail.prototype.cloudWatchLogsLogGroupArn = function(value) {
+	return this.set('CloudWatchLogsLogGroupArn', value);
+};
 
-	/**
-	 * Indicates whether CloudTrail validates the integrity of log files. By default, AWS CloudFormation sets this value to false. When you disable log file integrity validation, CloudTrail stops creating digest files. For more information, see CreateTrail in the AWS CloudTrail API Reference.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Boolean} value
-	 * @return {CloudTrailTrail}
-	 */
-	enableLogFileValidation: function(value) {
-		return this.set('EnableLogFileValidation', value);
-	}
+/**
+ * The role ARN that Amazon CloudWatch Logs (CloudWatch Logs) assumes to write logs to a log group. For more information, see Role Policy Document for CloudTrail to Use CloudWatch Logs for Monitoring in the AWS CloudTrail User Guide.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {CloudTrailTrail}
+ */
+CloudTrailTrail.prototype.cloudWatchLogsRoleArn = function(value) {
+	return this.set('CloudWatchLogsRoleArn', value);
+};
+
+/**
+ * Indicates whether CloudTrail validates the integrity of log files. By default, AWS CloudFormation sets this value to false. When you disable log file integrity validation, CloudTrail stops creating digest files. For more information, see CreateTrail in the AWS CloudTrail API Reference.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Boolean|Attribute|Reference} value
+ * @return {CloudTrailTrail}
+ */
+CloudTrailTrail.prototype.enableLogFileValidation = function(value) {
+	return this.set('EnableLogFileValidation', value);
 };
 
 module.exports = CloudTrailTrail;

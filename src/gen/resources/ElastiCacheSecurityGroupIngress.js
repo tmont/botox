@@ -7,52 +7,49 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function ElastiCacheSecurityGroupIngress(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::ElastiCache::SecurityGroupIngress');
 }
 
-Object.setPrototypeOf(ElastiCacheSecurityGroupIngress, Resource);
+ElastiCacheSecurityGroupIngress.prototype = Object.create(Resource.prototype);
 
-ElastiCacheSecurityGroupIngress.prototype = {
-	
-	
-	/**
-	 * The name of the Cache Security Group to authorize.
-	 *
-	 * Required: true
-	 * Update requires: Updates are not supported.
-	 *
-	 * @param {String} value
-	 * @return {ElastiCacheSecurityGroupIngress}
-	 */
-	cacheSecurityGroupName: function(value) {
-		return this.set('CacheSecurityGroupName', value);
-	},
 
-	/**
-	 * Name of the EC2 Security Group to include in the authorization.
-	 *
-	 * Required: true
-	 * Update requires: Updates are not supported.
-	 *
-	 * @param {String} value
-	 * @return {ElastiCacheSecurityGroupIngress}
-	 */
-	ec2SecurityGroupName: function(value) {
-		return this.set('EC2SecurityGroupName', value);
-	},
+/**
+ * The name of the Cache Security Group to authorize.
+ *
+ * Required: true
+ * Update requires: Updates are not supported.
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ElastiCacheSecurityGroupIngress}
+ */
+ElastiCacheSecurityGroupIngress.prototype.cacheSecurityGroupName = function(value) {
+	return this.set('CacheSecurityGroupName', value);
+};
 
-	/**
-	 * Specifies the AWS Account ID of the owner of the EC2 security group specified in the EC2SecurityGroupName property. The AWS access key ID is not an acceptable value.
-	 *
-	 * Required: false
-	 * Update requires: Updates are not supported.
-	 *
-	 * @param {String} value
-	 * @return {ElastiCacheSecurityGroupIngress}
-	 */
-	ec2SecurityGroupOwnerId: function(value) {
-		return this.set('EC2SecurityGroupOwnerId', value);
-	}
+/**
+ * Name of the EC2 Security Group to include in the authorization.
+ *
+ * Required: true
+ * Update requires: Updates are not supported.
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ElastiCacheSecurityGroupIngress}
+ */
+ElastiCacheSecurityGroupIngress.prototype.ec2SecurityGroupName = function(value) {
+	return this.set('EC2SecurityGroupName', value);
+};
+
+/**
+ * Specifies the AWS Account ID of the owner of the EC2 security group specified in the EC2SecurityGroupName property. The AWS access key ID is not an acceptable value.
+ *
+ * Required: false
+ * Update requires: Updates are not supported.
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ElastiCacheSecurityGroupIngress}
+ */
+ElastiCacheSecurityGroupIngress.prototype.ec2SecurityGroupOwnerId = function(value) {
+	return this.set('EC2SecurityGroupOwnerId', value);
 };
 
 module.exports = ElastiCacheSecurityGroupIngress;

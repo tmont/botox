@@ -7,39 +7,46 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function CloudFrontDistribution(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::CloudFront::Distribution');
 }
 
-Object.setPrototypeOf(CloudFrontDistribution, Resource);
+CloudFrontDistribution.prototype = Object.create(Resource.prototype);
 
-CloudFrontDistribution.prototype = {
-	get attr() {
-		var createAttribute = this.createAttribute.bind(this, this);
+/**
+ * AWS::CloudFront::Distribution attribute map
+ * @typedef {Object} CloudFrontDistributionAttributeMap
+ * @property {Attribute} DomainName Returns: The domain name of the resource. For example: d2fadu0nynjpfn.cloudfront.net.
+ */
+Object.defineProperty(CloudFrontDistribution.prototype, 'attr', {
+	/**
+	 * @return {CloudFrontDistributionAttributeMap}
+	 */
+	get: function() {
+		var createAttribute = this.createAttribute.bind(this);
 		return {
 			
 			/**
 			 * Returns: The domain name of the resource. For example: d2fadu0nynjpfn.cloudfront.net.
 			 * @return {Attribute}
 			 */
-			domainName: function() {
+			get domainName() {
 				return createAttribute('DomainName');
 			}
 		};
-	},
-
-	
-	/**
-	 * The distribution's configuration information.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {DistributionConfigtype} value
-	 * @return {CloudFrontDistribution}
-	 */
-	distributionConfig: function(value) {
-		return this.set('DistributionConfig', value);
 	}
+});
+
+/**
+ * The distribution's configuration information.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {DistributionConfigtype|Attribute|Reference} value
+ * @return {CloudFrontDistribution}
+ */
+CloudFrontDistribution.prototype.distributionConfig = function(value) {
+	return this.set('DistributionConfig', value);
 };
 
 module.exports = CloudFrontDistribution;

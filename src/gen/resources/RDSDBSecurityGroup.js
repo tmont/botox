@@ -7,65 +7,62 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function RDSDBSecurityGroup(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::RDS::DBSecurityGroup');
 }
 
-Object.setPrototypeOf(RDSDBSecurityGroup, Resource);
+RDSDBSecurityGroup.prototype = Object.create(Resource.prototype);
 
-RDSDBSecurityGroup.prototype = {
-	
-	
-	/**
-	 * The Id of VPC. Indicates which VPC this DB Security Group should belong to.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {RDSDBSecurityGroup}
-	 */
-	ec2VpcId: function(value) {
-		return this.set('EC2VpcId', value);
-	},
 
-	/**
-	 * Network ingress authorization for an Amazon EC2 security group or an IP address range.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {RDSSecurityGroupRule[]} value
-	 * @return {RDSDBSecurityGroup}
-	 */
-	dbsecurityGroupIngress: function(value) {
-		return this.set('DBSecurityGroupIngress', value);
-	},
+/**
+ * The Id of VPC. Indicates which VPC this DB Security Group should belong to.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBSecurityGroup}
+ */
+RDSDBSecurityGroup.prototype.ec2VpcId = function(value) {
+	return this.set('EC2VpcId', value);
+};
 
-	/**
-	 * Description of the security group.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {RDSDBSecurityGroup}
-	 */
-	groupDescription: function(value) {
-		return this.set('GroupDescription', value);
-	},
+/**
+ * Network ingress authorization for an Amazon EC2 security group or an IP address range.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {RDSSecurityGroupRule[]|Attribute|Reference} value
+ * @return {RDSDBSecurityGroup}
+ */
+RDSDBSecurityGroup.prototype.dbsecurityGroupIngress = function(value) {
+	return this.set('DBSecurityGroupIngress', value);
+};
 
-	/**
-	 * The tags that you want to attach to the Amazon RDS DB security group.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {resourcetag[]} value
-	 * @return {RDSDBSecurityGroup}
-	 */
-	tags: function(value) {
-		return this.set('Tags', value);
-	}
+/**
+ * Description of the security group.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {RDSDBSecurityGroup}
+ */
+RDSDBSecurityGroup.prototype.groupDescription = function(value) {
+	return this.set('GroupDescription', value);
+};
+
+/**
+ * The tags that you want to attach to the Amazon RDS DB security group.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {resourcetag[]|Attribute|Reference} value
+ * @return {RDSDBSecurityGroup}
+ */
+RDSDBSecurityGroup.prototype.tags = function(value) {
+	return this.set('Tags', value);
 };
 
 module.exports = RDSDBSecurityGroup;

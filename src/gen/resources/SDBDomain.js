@@ -7,14 +7,11 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function SDBDomain(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::SDB::Domain');
 }
 
-Object.setPrototypeOf(SDBDomain, Resource);
+SDBDomain.prototype = Object.create(Resource.prototype);
 
-SDBDomain.prototype = {
-	
-	
-};
+
 
 module.exports = SDBDomain;

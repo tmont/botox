@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function LogsLogStream(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::Logs::LogStream');
 }
 
-Object.setPrototypeOf(LogsLogStream, Resource);
+LogsLogStream.prototype = Object.create(Resource.prototype);
 
-LogsLogStream.prototype = {
-	
-	
-	/**
-	 * The name of the log group where the log stream is created.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {LogsLogStream}
-	 */
-	logGroupName: function(value) {
-		return this.set('LogGroupName', value);
-	},
 
-	/**
-	 * The name of the log stream to create. The name must be unique within the log group.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {LogsLogStream}
-	 */
-	logStreamName: function(value) {
-		return this.set('LogStreamName', value);
-	}
+/**
+ * The name of the log group where the log stream is created.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {LogsLogStream}
+ */
+LogsLogStream.prototype.logGroupName = function(value) {
+	return this.set('LogGroupName', value);
+};
+
+/**
+ * The name of the log stream to create. The name must be unique within the log group.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {LogsLogStream}
+ */
+LogsLogStream.prototype.logStreamName = function(value) {
+	return this.set('LogStreamName', value);
 };
 
 module.exports = LogsLogStream;

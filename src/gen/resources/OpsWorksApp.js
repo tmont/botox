@@ -7,156 +7,153 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function OpsWorksApp(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::OpsWorks::App');
 }
 
-Object.setPrototypeOf(OpsWorksApp, Resource);
+OpsWorksApp.prototype = Object.create(Resource.prototype);
 
-OpsWorksApp.prototype = {
-	
-	
-	/**
-	 * Contains the information required to retrieve an app from a repository.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSOpsWorksSourceType} value
-	 * @return {OpsWorksApp}
-	 */
-	appSource: function(value) {
-		return this.set('AppSource', value);
-	},
 
-	/**
-	 * One or more user-defined key-value pairs to be added to the stack attributes bag.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {key[]} value
-	 * @return {OpsWorksApp}
-	 */
-	attributes: function(value) {
-		return this.set('Attributes', value);
-	},
+/**
+ * Contains the information required to retrieve an app from a repository.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSOpsWorksSourceType|Attribute|Reference} value
+ * @return {OpsWorksApp}
+ */
+OpsWorksApp.prototype.appSource = function(value) {
+	return this.set('AppSource', value);
+};
 
-	/**
-	 * A description of the app.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksApp}
-	 */
-	description: function(value) {
-		return this.set('Description', value);
-	},
+/**
+ * One or more user-defined key-value pairs to be added to the stack attributes bag.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {key[]|Attribute|Reference} value
+ * @return {OpsWorksApp}
+ */
+OpsWorksApp.prototype.attributes = function(value) {
+	return this.set('Attributes', value);
+};
 
-	/**
-	 * The app virtual host settings, with multiple domains separated by commas. For example, 'www.example.com, example.com'.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {string[]} value
-	 * @return {OpsWorksApp}
-	 */
-	domains: function(value) {
-		return this.set('Domains', value);
-	},
+/**
+ * A description of the app.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {OpsWorksApp}
+ */
+OpsWorksApp.prototype.description = function(value) {
+	return this.set('Description', value);
+};
 
-	/**
-	 * Whether to enable SSL for this app.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Boolean} value
-	 * @return {OpsWorksApp}
-	 */
-	enableSsl: function(value) {
-		return this.set('EnableSsl', value);
-	},
+/**
+ * The app virtual host settings, with multiple domains separated by commas. For example, 'www.example.com, example.com'.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {string[]|Attribute|Reference} value
+ * @return {OpsWorksApp}
+ */
+OpsWorksApp.prototype.domains = function(value) {
+	return this.set('Domains', value);
+};
 
-	/**
-	 * The environment variables to associate with the AWS OpsWorks app.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSOpsWorksAppEnvironment[]} value
-	 * @return {OpsWorksApp}
-	 */
-	environment: function(value) {
-		return this.set('Environment', value);
-	},
+/**
+ * Whether to enable SSL for this app.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Boolean|Attribute|Reference} value
+ * @return {OpsWorksApp}
+ */
+OpsWorksApp.prototype.enableSsl = function(value) {
+	return this.set('EnableSsl', value);
+};
 
-	/**
-	 * The AWS OpsWorks app name.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksApp}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * The environment variables to associate with the AWS OpsWorks app.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSOpsWorksAppEnvironment[]|Attribute|Reference} value
+ * @return {OpsWorksApp}
+ */
+OpsWorksApp.prototype.environment = function(value) {
+	return this.set('Environment', value);
+};
 
-	/**
-	 * The app short name, which is used internally by AWS OpsWorks and by Chef recipes.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksApp}
-	 */
-	shortname: function(value) {
-		return this.set('Shortname', value);
-	},
+/**
+ * The AWS OpsWorks app name.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {OpsWorksApp}
+ */
+OpsWorksApp.prototype.name = function(value) {
+	return this.set('Name', value);
+};
 
-	/**
-	 * The SSL configuration
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSOpsWorksSslConfigurationType} value
-	 * @return {OpsWorksApp}
-	 */
-	sslConfiguration: function(value) {
-		return this.set('SslConfiguration', value);
-	},
+/**
+ * The app short name, which is used internally by AWS OpsWorks and by Chef recipes.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {OpsWorksApp}
+ */
+OpsWorksApp.prototype.shortname = function(value) {
+	return this.set('Shortname', value);
+};
 
-	/**
-	 * The AWS OpsWorks stack ID that this app will be associated with.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksApp}
-	 */
-	stackId: function(value) {
-		return this.set('StackId', value);
-	},
+/**
+ * The SSL configuration
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSOpsWorksSslConfigurationType|Attribute|Reference} value
+ * @return {OpsWorksApp}
+ */
+OpsWorksApp.prototype.sslConfiguration = function(value) {
+	return this.set('SslConfiguration', value);
+};
 
-	/**
-	 * The app type. Each supported type is associated with a particular layer. For more information, see CreateApp in the AWS OpsWorks API Reference.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksApp}
-	 */
-	type: function(value) {
-		return this.set('Type', value);
-	}
+/**
+ * The AWS OpsWorks stack ID that this app will be associated with.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {OpsWorksApp}
+ */
+OpsWorksApp.prototype.stackId = function(value) {
+	return this.set('StackId', value);
+};
+
+/**
+ * The app type. Each supported type is associated with a particular layer. For more information, see CreateApp in the AWS OpsWorks API Reference.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {OpsWorksApp}
+ */
+OpsWorksApp.prototype.type = function(value) {
+	return this.set('Type', value);
 };
 
 module.exports = OpsWorksApp;

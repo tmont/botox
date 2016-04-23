@@ -7,78 +7,75 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function EC2VPNConnection(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::EC2::VPNConnection');
 }
 
-Object.setPrototypeOf(EC2VPNConnection, Resource);
+EC2VPNConnection.prototype = Object.create(Resource.prototype);
 
-EC2VPNConnection.prototype = {
-	
-	
-	/**
-	 * The type of VPN connection this virtual private gateway supports.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {EC2VPNConnection}
-	 */
-	type: function(value) {
-		return this.set('Type', value);
-	},
 
-	/**
-	 * The ID of the customer gateway. This can either be an embedded JSON object or a reference to a Gateway ID.
-	 *
-	 * Required: true
-	 * Update requires: undefined
-	 *
-	 * @param {String} value
-	 * @return {EC2VPNConnection}
-	 */
-	customerGatewayId: function(value) {
-		return this.set('CustomerGatewayId', value);
-	},
+/**
+ * The type of VPN connection this virtual private gateway supports.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EC2VPNConnection}
+ */
+EC2VPNConnection.prototype.type = function(value) {
+	return this.set('Type', value);
+};
 
-	/**
-	 * Indicates whether the VPN connection requires static routes.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {Boolean} value
-	 * @return {EC2VPNConnection}
-	 */
-	staticRoutesOnly: function(value) {
-		return this.set('StaticRoutesOnly', value);
-	},
+/**
+ * The ID of the customer gateway. This can either be an embedded JSON object or a reference to a Gateway ID.
+ *
+ * Required: true
+ * Update requires: undefined
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EC2VPNConnection}
+ */
+EC2VPNConnection.prototype.customerGatewayId = function(value) {
+	return this.set('CustomerGatewayId', value);
+};
 
-	/**
-	 * The tags that you want to attach to the resource.
-	 *
-	 * Required: false
-	 * Update requires: No interruption.
-	 *
-	 * @param {AWSCloudFormationResourceTags} value
-	 * @return {EC2VPNConnection}
-	 */
-	tags: function(value) {
-		return this.set('Tags', value);
-	},
+/**
+ * Indicates whether the VPN connection requires static routes.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {Boolean|Attribute|Reference} value
+ * @return {EC2VPNConnection}
+ */
+EC2VPNConnection.prototype.staticRoutesOnly = function(value) {
+	return this.set('StaticRoutesOnly', value);
+};
 
-	/**
-	 * The ID of the virtual private gateway. This can either be an embedded JSON object or a reference to a Gateway ID.
-	 *
-	 * Required: true
-	 * Update requires: undefined
-	 *
-	 * @param {String} value
-	 * @return {EC2VPNConnection}
-	 */
-	vpnGatewayId: function(value) {
-		return this.set('VpnGatewayId', value);
-	}
+/**
+ * The tags that you want to attach to the resource.
+ *
+ * Required: false
+ * Update requires: No interruption.
+ *
+ * @param {AWSCloudFormationResourceTags|Attribute|Reference} value
+ * @return {EC2VPNConnection}
+ */
+EC2VPNConnection.prototype.tags = function(value) {
+	return this.set('Tags', value);
+};
+
+/**
+ * The ID of the virtual private gateway. This can either be an embedded JSON object or a reference to a Gateway ID.
+ *
+ * Required: true
+ * Update requires: undefined
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EC2VPNConnection}
+ */
+EC2VPNConnection.prototype.vpnGatewayId = function(value) {
+	return this.set('VpnGatewayId', value);
 };
 
 module.exports = EC2VPNConnection;

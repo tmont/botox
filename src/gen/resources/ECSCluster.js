@@ -7,14 +7,11 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function ECSCluster(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::ECS::Cluster');
 }
 
-Object.setPrototypeOf(ECSCluster, Resource);
+ECSCluster.prototype = Object.create(Resource.prototype);
 
-ECSCluster.prototype = {
-	
-	
-};
+
 
 module.exports = ECSCluster;

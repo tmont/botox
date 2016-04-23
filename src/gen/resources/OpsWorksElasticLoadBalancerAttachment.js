@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function OpsWorksElasticLoadBalancerAttachment(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::OpsWorks::ElasticLoadBalancerAttachment');
 }
 
-Object.setPrototypeOf(OpsWorksElasticLoadBalancerAttachment, Resource);
+OpsWorksElasticLoadBalancerAttachment.prototype = Object.create(Resource.prototype);
 
-OpsWorksElasticLoadBalancerAttachment.prototype = {
-	
-	
-	/**
-	 * Elastic Load Balancing load balancer name.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksElasticLoadBalancerAttachment}
-	 */
-	elasticLoadBalancerName: function(value) {
-		return this.set('ElasticLoadBalancerName', value);
-	},
 
-	/**
-	 * The AWS OpsWorks layer ID that the Elastic Load Balancing load balancer will be attached to.
-	 *
-	 * Required: true
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksElasticLoadBalancerAttachment}
-	 */
-	layerId: function(value) {
-		return this.set('LayerId', value);
-	}
+/**
+ * Elastic Load Balancing load balancer name.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {OpsWorksElasticLoadBalancerAttachment}
+ */
+OpsWorksElasticLoadBalancerAttachment.prototype.elasticLoadBalancerName = function(value) {
+	return this.set('ElasticLoadBalancerName', value);
+};
+
+/**
+ * The AWS OpsWorks layer ID that the Elastic Load Balancing load balancer will be attached to.
+ *
+ * Required: true
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {OpsWorksElasticLoadBalancerAttachment}
+ */
+OpsWorksElasticLoadBalancerAttachment.prototype.layerId = function(value) {
+	return this.set('LayerId', value);
 };
 
 module.exports = OpsWorksElasticLoadBalancerAttachment;

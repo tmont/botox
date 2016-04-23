@@ -7,65 +7,62 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function Route53HostedZone(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::Route53::HostedZone');
 }
 
-Object.setPrototypeOf(Route53HostedZone, Resource);
+Route53HostedZone.prototype = Object.create(Resource.prototype);
 
-Route53HostedZone.prototype = {
-	
-	
-	/**
-	 * A complex type that contains an optional comment about your hosted zone.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Route53HostedZoneConfigProperty} value
-	 * @return {Route53HostedZone}
-	 */
-	hostedZoneConfig: function(value) {
-		return this.set('HostedZoneConfig', value);
-	},
 
-	/**
-	 * An arbitrary set of tags (key–value pairs) for this hosted zone.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Route53HostedZoneTags[]} value
-	 * @return {Route53HostedZone}
-	 */
-	hostedZoneTags: function(value) {
-		return this.set('HostedZoneTags', value);
-	},
+/**
+ * A complex type that contains an optional comment about your hosted zone.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Route53HostedZoneConfigProperty|Attribute|Reference} value
+ * @return {Route53HostedZone}
+ */
+Route53HostedZone.prototype.hostedZoneConfig = function(value) {
+	return this.set('HostedZoneConfig', value);
+};
 
-	/**
-	 * The name of the domain. For resource record types that include a domain name, specify a fully qualified domain name.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {Route53HostedZone}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * An arbitrary set of tags (key–value pairs) for this hosted zone.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Route53HostedZoneTags[]|Attribute|Reference} value
+ * @return {Route53HostedZone}
+ */
+Route53HostedZone.prototype.hostedZoneTags = function(value) {
+	return this.set('HostedZoneTags', value);
+};
 
-	/**
-	 * One or more VPCs that you want to associate with this hosted zone. When you specify this property, AWS CloudFormation creates a private hosted zone.
-	 *
-	 * Required: false
-	 * Update requires: undefined
-	 *
-	 * @param {Route53HostedZoneVPCs[]} value
-	 * @return {Route53HostedZone}
-	 */
-	vpcs: function(value) {
-		return this.set('VPCs', value);
-	}
+/**
+ * The name of the domain. For resource record types that include a domain name, specify a fully qualified domain name.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {Route53HostedZone}
+ */
+Route53HostedZone.prototype.name = function(value) {
+	return this.set('Name', value);
+};
+
+/**
+ * One or more VPCs that you want to associate with this hosted zone. When you specify this property, AWS CloudFormation creates a private hosted zone.
+ *
+ * Required: false
+ * Update requires: undefined
+ *
+ * @param {Route53HostedZoneVPCs[]|Attribute|Reference} value
+ * @return {Route53HostedZone}
+ */
+Route53HostedZone.prototype.vpcs = function(value) {
+	return this.set('VPCs', value);
 };
 
 module.exports = Route53HostedZone;

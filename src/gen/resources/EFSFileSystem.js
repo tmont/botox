@@ -7,26 +7,23 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function EFSFileSystem(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::EFS::FileSystem');
 }
 
-Object.setPrototypeOf(EFSFileSystem, Resource);
+EFSFileSystem.prototype = Object.create(Resource.prototype);
 
-EFSFileSystem.prototype = {
-	
-	
-	/**
-	 * Tags to associate with the file system.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {ElasticFileSystemFileSystemFileSystemTags} value
-	 * @return {EFSFileSystem}
-	 */
-	fileSystemTags: function(value) {
-		return this.set('FileSystemTags', value);
-	}
+
+/**
+ * Tags to associate with the file system.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {ElasticFileSystemFileSystemFileSystemTags|Attribute|Reference} value
+ * @return {EFSFileSystem}
+ */
+EFSFileSystem.prototype.fileSystemTags = function(value) {
+	return this.set('FileSystemTags', value);
 };
 
 module.exports = EFSFileSystem;

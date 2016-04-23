@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function ECRRepository(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::ECR::Repository');
 }
 
-Object.setPrototypeOf(ECRRepository, Resource);
+ECRRepository.prototype = Object.create(Resource.prototype);
 
-ECRRepository.prototype = {
-	
-	
-	/**
-	 * A name for the image repository. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the repository name. For more information, see Name Type.
-	 *
-	 * Required: false
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {ECRRepository}
-	 */
-	repositoryName: function(value) {
-		return this.set('RepositoryName', value);
-	},
 
-	/**
-	 * A policy that controls who has access to the repository and which actions they can perform on it. For more information, see Amazon ECR Repository Policies in the Amazon EC2 Container Registry User Guide.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {Object} value
-	 * @return {ECRRepository}
-	 */
-	repositoryPolicyText: function(value) {
-		return this.set('RepositoryPolicyText', value);
-	}
+/**
+ * A name for the image repository. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the repository name. For more information, see Name Type.
+ *
+ * Required: false
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ECRRepository}
+ */
+ECRRepository.prototype.repositoryName = function(value) {
+	return this.set('RepositoryName', value);
+};
+
+/**
+ * A policy that controls who has access to the repository and which actions they can perform on it. For more information, see Amazon ECR Repository Policies in the Amazon EC2 Container Registry User Guide.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Object|Attribute|Reference} value
+ * @return {ECRRepository}
+ */
+ECRRepository.prototype.repositoryPolicyText = function(value) {
+	return this.set('RepositoryPolicyText', value);
 };
 
 module.exports = ECRRepository;

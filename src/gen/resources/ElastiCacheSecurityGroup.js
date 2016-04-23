@@ -7,26 +7,23 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function ElastiCacheSecurityGroup(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::ElastiCache::SecurityGroup');
 }
 
-Object.setPrototypeOf(ElastiCacheSecurityGroup, Resource);
+ElastiCacheSecurityGroup.prototype = Object.create(Resource.prototype);
 
-ElastiCacheSecurityGroup.prototype = {
-	
-	
-	/**
-	 * A description for the cache security group.
-	 *
-	 * Required: false
-	 * Update requires: Updates are not supported.
-	 *
-	 * @param {String} value
-	 * @return {ElastiCacheSecurityGroup}
-	 */
-	description: function(value) {
-		return this.set('Description', value);
-	}
+
+/**
+ * A description for the cache security group.
+ *
+ * Required: false
+ * Update requires: Updates are not supported.
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ElastiCacheSecurityGroup}
+ */
+ElastiCacheSecurityGroup.prototype.description = function(value) {
+	return this.set('Description', value);
 };
 
 module.exports = ElastiCacheSecurityGroup;

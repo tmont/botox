@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function KinesisStream(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::Kinesis::Stream');
 }
 
-Object.setPrototypeOf(KinesisStream, Resource);
+KinesisStream.prototype = Object.create(Resource.prototype);
 
-KinesisStream.prototype = {
-	
-	
-	/**
-	 * The number of shards that the stream uses. For greater provisioned throughput, increase the number of shards.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {Number} value
-	 * @return {KinesisStream}
-	 */
-	shardCount: function(value) {
-		return this.set('ShardCount', value);
-	},
 
-	/**
-	 * An arbitrary set of tags (key–value pairs) to associate with the Amazon Kinesis stream.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {AWSCloudFormationResourceTagsType[]} value
-	 * @return {KinesisStream}
-	 */
-	tags: function(value) {
-		return this.set('Tags', value);
-	}
+/**
+ * The number of shards that the stream uses. For greater provisioned throughput, increase the number of shards.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {Number|Attribute|Reference} value
+ * @return {KinesisStream}
+ */
+KinesisStream.prototype.shardCount = function(value) {
+	return this.set('ShardCount', value);
+};
+
+/**
+ * An arbitrary set of tags (key–value pairs) to associate with the Amazon Kinesis stream.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @return {KinesisStream}
+ */
+KinesisStream.prototype.tags = function(value) {
+	return this.set('Tags', value);
 };
 
 module.exports = KinesisStream;

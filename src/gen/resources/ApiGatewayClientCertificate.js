@@ -7,26 +7,23 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function ApiGatewayClientCertificate(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::ApiGateway::ClientCertificate');
 }
 
-Object.setPrototypeOf(ApiGatewayClientCertificate, Resource);
+ApiGatewayClientCertificate.prototype = Object.create(Resource.prototype);
 
-ApiGatewayClientCertificate.prototype = {
-	
-	
-	/**
-	 * A description of the client certificate.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {ApiGatewayClientCertificate}
-	 */
-	description: function(value) {
-		return this.set('Description', value);
-	}
+
+/**
+ * A description of the client certificate.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ApiGatewayClientCertificate}
+ */
+ApiGatewayClientCertificate.prototype.description = function(value) {
+	return this.set('Description', value);
 };
 
 module.exports = ApiGatewayClientCertificate;

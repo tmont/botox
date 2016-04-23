@@ -7,26 +7,23 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function CloudFormationCustomResource(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::CloudFormation::CustomResource');
 }
 
-Object.setPrototypeOf(CloudFormationCustomResource, Resource);
+CloudFormationCustomResource.prototype = Object.create(Resource.prototype);
 
-CloudFormationCustomResource.prototype = {
-	
-	
-	/**
-	 * The service token that was given to the template developer by the service provider to access the service, such as an Amazon SNS topic ARN or Lambda function ARN. The service token must be from the same region in which you are creating the stack.
-	 *
-	 * Required: true
-	 * Update requires: undefined
-	 *
-	 * @param {String} value
-	 * @return {CloudFormationCustomResource}
-	 */
-	serviceToken: function(value) {
-		return this.set('ServiceToken', value);
-	}
+
+/**
+ * The service token that was given to the template developer by the service provider to access the service, such as an Amazon SNS topic ARN or Lambda function ARN. The service token must be from the same region in which you are creating the stack.
+ *
+ * Required: true
+ * Update requires: undefined
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {CloudFormationCustomResource}
+ */
+CloudFormationCustomResource.prototype.serviceToken = function(value) {
+	return this.set('ServiceToken', value);
 };
 
 module.exports = CloudFormationCustomResource;

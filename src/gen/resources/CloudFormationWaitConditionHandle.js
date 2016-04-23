@@ -7,14 +7,11 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function CloudFormationWaitConditionHandle(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::CloudFormation::WaitConditionHandle');
 }
 
-Object.setPrototypeOf(CloudFormationWaitConditionHandle, Resource);
+CloudFormationWaitConditionHandle.prototype = Object.create(Resource.prototype);
 
-CloudFormationWaitConditionHandle.prototype = {
-	
-	
-};
+
 
 module.exports = CloudFormationWaitConditionHandle;

@@ -7,14 +7,11 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function CloudFormationInit(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::CloudFormation::Init');
 }
 
-Object.setPrototypeOf(CloudFormationInit, Resource);
+CloudFormationInit.prototype = Object.create(Resource.prototype);
 
-CloudFormationInit.prototype = {
-	
-	
-};
+
 
 module.exports = CloudFormationInit;

@@ -7,26 +7,23 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function ApiGatewayAccount(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::ApiGateway::Account');
 }
 
-Object.setPrototypeOf(ApiGatewayAccount, Resource);
+ApiGatewayAccount.prototype = Object.create(Resource.prototype);
 
-ApiGatewayAccount.prototype = {
-	
-	
-	/**
-	 * The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.
-	 *
-	 * Required: false
-	 * Update requires: No interruption
-	 *
-	 * @param {String} value
-	 * @return {ApiGatewayAccount}
-	 */
-	cloudWatchRoleArn: function(value) {
-		return this.set('CloudWatchRoleArn', value);
-	}
+
+/**
+ * The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ApiGatewayAccount}
+ */
+ApiGatewayAccount.prototype.cloudWatchRoleArn = function(value) {
+	return this.set('CloudWatchRoleArn', value);
 };
 
 module.exports = ApiGatewayAccount;

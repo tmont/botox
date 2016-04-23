@@ -7,39 +7,36 @@ var Resource = require('../../resource');
  * @param {String} name Name of the resource
  */
 function EC2VPNConnectionRoute(name) {
-	Resource.call(this, name);
+	Resource.call(this, name, 'AWS::EC2::VPNConnectionRoute');
 }
 
-Object.setPrototypeOf(EC2VPNConnectionRoute, Resource);
+EC2VPNConnectionRoute.prototype = Object.create(Resource.prototype);
 
-EC2VPNConnectionRoute.prototype = {
-	
-	
-	/**
-	 * The CIDR block that is associated with the local subnet of the customer network.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {EC2VPNConnectionRoute}
-	 */
-	destinationCidrBlock: function(value) {
-		return this.set('DestinationCidrBlock', value);
-	},
 
-	/**
-	 * The ID of the VPN connection.
-	 *
-	 * Required: true
-	 * Update requires: Replacement
-	 *
-	 * @param {String} value
-	 * @return {EC2VPNConnectionRoute}
-	 */
-	vpnConnectionId: function(value) {
-		return this.set('VpnConnectionId', value);
-	}
+/**
+ * The CIDR block that is associated with the local subnet of the customer network.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EC2VPNConnectionRoute}
+ */
+EC2VPNConnectionRoute.prototype.destinationCidrBlock = function(value) {
+	return this.set('DestinationCidrBlock', value);
+};
+
+/**
+ * The ID of the VPN connection.
+ *
+ * Required: true
+ * Update requires: Replacement
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EC2VPNConnectionRoute}
+ */
+EC2VPNConnectionRoute.prototype.vpnConnectionId = function(value) {
+	return this.set('VpnConnectionId', value);
 };
 
 module.exports = EC2VPNConnectionRoute;
