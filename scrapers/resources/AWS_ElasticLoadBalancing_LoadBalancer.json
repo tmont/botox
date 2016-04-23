@@ -84,7 +84,7 @@
     },
     {
       "name": "Policies",
-      "description": "A list of elastic load balancing policies to apply to this elastic load balancer.",
+      "description": "A list of elastic load balancing policies to apply to this elastic load balancer. Specify only back-end server policies. For more information, see DescribeLoadBalancerPolicyTypes in the Elastic Load Balancing API Reference.",
       "required": false,
       "type": "ElasticLoadBalancingpolicyobject[]",
       "update": "No interruption"

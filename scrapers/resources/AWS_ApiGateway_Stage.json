@@ -26,7 +26,7 @@
     {
       "name": "DeploymentId",
       "description": "The ID of the deployment that the stage points to.",
-      "required": false,
+      "required": true,
       "type": "String"
     },
     {

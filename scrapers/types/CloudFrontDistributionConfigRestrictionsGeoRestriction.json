@@ -13,21 +13,6 @@
       "description": "The method to restrict distribution of your content:",
       "required": true,
       "type": "String"
-    },
-    {
-      "name": "blacklist",
-      "description": "Prevents viewers in the countries that you specified from accessing your content.",
-      "required": false
-    },
-    {
-      "name": "whitelist",
-      "description": "Allows viewers in the countries that you specified to access your content.",
-      "required": false
-    },
-    {
-      "name": "none",
-      "description": "No distribution restrictions by country.",
-      "required": false
     }
   ],
   "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-restrictions-georestriction.html"
