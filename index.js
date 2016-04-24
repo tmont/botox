@@ -3,6 +3,7 @@ var Resources = require('./src/gen/resources');
 var Types = require('./src/gen/types');
 var Functions = require('./src/fun');
 var Parameter = require('./src/parameter');
+var Output = require('./src/output');
 var Reference = Functions.Reference;
 
 var pseudoParams = {
@@ -20,6 +21,7 @@ module.exports = {
 	fun: Functions,
 	Template: Template,
 	Parameter: Parameter,
+	Output: Output,
 
 	/**
 	 * Returns a string representing the AWS Region in which the encompassing resource is being created, such as us-west-2.
@@ -84,8 +86,14 @@ module.exports = {
 		return new Functions.Join(things, delimiter);
 	},
 
-	template: (description) => {
+	template: function(description) {
 		return new Template(description);
+	},
+	output: function(name) {
+		return new Output(name);
+	},
+	parameter: function(name) {
+		return new Parameter(name);
 	},
 
 	//@@start sugar

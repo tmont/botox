@@ -178,8 +178,14 @@ module.exports = ${className};
 
 			Template: 1,
 			Parameter: 1,
+			Output: 1,
+			Condition: 1,
 
 			template: 1,
+			parameter: 1,
+			output: 1,
+			condition: 1,
+
 			join: 1,
 			base64: 1,
 			select: 1,
