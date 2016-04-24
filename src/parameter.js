@@ -6,6 +6,7 @@ var Reference = require('./fun/reference'),
  * @param {String} name
  * @constructor
  * @implements TemplateItemTrait
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html}
  */
 function Parameter(name) {
 	if (!name || typeof(name) !== 'string') {
