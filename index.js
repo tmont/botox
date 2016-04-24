@@ -2,13 +2,67 @@ var Template = require('./src/template');
 var Resources = require('./src/gen/resources');
 var Types = require('./src/gen/types');
 var Functions = require('./src/fun');
+var Parameter = require('./src/parameter');
+var Reference = Functions.Reference;
+
+var pseudoParams = {
+	region: new Reference('AWS::Region'),
+	accountId: new Reference('AWS::AccountId'),
+	notificationARNs: new Reference('AWS::NotificationARNs'),
+	noValue: new Reference('AWS::NoValue'),
+	stackId: new Reference('AWS::StackId'),
+	stackName: new Reference('AWS::StackName')
+};
 
 module.exports = {
 	resources: Resources,
 	types: Types,
 	fun: Functions,
-
 	Template: Template,
+	Parameter: Parameter,
+
+	/**
+	 * Returns a string representing the AWS Region in which the encompassing resource is being created, such as us-west-2.
+	 * @returns {Reference}
+	 */
+	get region() {
+		return pseudoParams.region;
+	},
+	/**
+	 * Returns the AWS account ID of the account in which the stack is being created, such as 123456789012.
+	 * @returns {Reference}
+	 */
+	get accountId() {
+		return pseudoParams.accountId;
+	},
+	/**
+	 * Returns the list of notification Amazon Resource Names (ARNs) for the current stack.
+	 * @returns {Reference}
+	 */
+	get notificationARNs() {
+		return pseudoParams.notificationARNs;
+	},
+	/**
+	 * Removes the corresponding resource property when specified as a return value in the Fn::If intrinsic function.
+	 * @returns {Reference}
+	 */
+	get noValue() {
+		return pseudoParams.noValue;
+	},
+	/**
+	 * Returns the ID of the stack as specified with the aws cloudformation create-stack command, such as arn:aws:cloudformation:us-west-2:123456789012:stack/teststack/51af3dc0-da77-11e4-872e-1234567db123.
+	 * @returns {Reference}
+	 */
+	get stackId() {
+		return pseudoParams.stackId;
+	},
+	/**
+	 * Returns the name of the stack as specified with the aws cloudformation create-stack command, such as teststack.
+	 * @returns {Reference}
+	 */
+	get stackName() {
+		return pseudoParams.stackName;
+	},
 
 	base64: function(value) {
 		return new Functions.Base64(value);

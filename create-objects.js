@@ -172,13 +172,28 @@ module.exports = ${className};
 		console.log(' generating syntax sugar index');
 
 		const cache = {
+			resources: 1,
+			types: 1,
+			fun: 1,
+
+			Template: 1,
+			Parameter: 1,
+
 			template: 1,
 			join: 1,
 			base64: 1,
-			resources: 1,
-			types: 1,
-			fun: 1
+			select: 1,
+			findInMap: 1,
+			getAZs: 1,
+
+			region: 1,
+			accountId: 1,
+			notificationARNs: 1,
+			noValue: 1,
+			stackId: 1,
+			stackName: 1
 		};
+
 		const resources = context.resources
 			.map((resource) => {
 				let prop = camelize(resource.obj.name);
