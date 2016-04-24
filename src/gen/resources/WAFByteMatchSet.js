@@ -19,7 +19,7 @@ WAFByteMatchSet.prototype = Object.create(Resource.prototype);
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSWAFByteMatchSetByteMatchTuples[]|Attribute|Reference} value
+ * @param {WAFByteMatchSetByteMatchTuples[]|Attribute|Reference} value
  * @return {WAFByteMatchSet}
  */
 WAFByteMatchSet.prototype.byteMatchTuples = function(value) {

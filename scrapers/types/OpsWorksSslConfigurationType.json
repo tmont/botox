@@ -1,0 +1,25 @@
+{
+  "name": "OpsWorksSslConfigurationType",
+  "description": "Describes an SSL configuration for the AWS::OpsWorks::App resource type.",
+  "properties": [
+    {
+      "name": "Certificate",
+      "description": "The contents of the certificate's domain.crt file.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Chain",
+      "description": "An intermediate certificate authority key or client authentication.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "PrivateKey",
+      "description": "The private key; the contents of the certificate's domain.kex file.",
+      "required": true,
+      "type": "String"
+    }
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html"
+}

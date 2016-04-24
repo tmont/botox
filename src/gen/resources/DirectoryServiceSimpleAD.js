@@ -142,7 +142,7 @@ DirectoryServiceSimpleAD.prototype.size = function(value) {
  * Required: true
  * Update requires: Replacement
  *
- * @param {AWSDirectoryServiceSimpleADVpcSettings|Attribute|Reference} value
+ * @param {DirectoryServiceSimpleADVpcSettings|Attribute|Reference} value
  * @return {DirectoryServiceSimpleAD}
  */
 DirectoryServiceSimpleAD.prototype.vpcSettings = function(value) {

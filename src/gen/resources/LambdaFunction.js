@@ -42,7 +42,7 @@ Object.defineProperty(LambdaFunction.prototype, 'attr', {
  * Required: true
  * Update requires: No interruption
  *
- * @param {AWSLambdaFunctionCode|Attribute|Reference} value
+ * @param {LambdaFunctionCode|Attribute|Reference} value
  * @return {LambdaFunction}
  */
 LambdaFunction.prototype.code = function(value) {
@@ -146,7 +146,7 @@ LambdaFunction.prototype.timeout = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSLambdaFunctionVPCConfig|Attribute|Reference} value
+ * @param {LambdaFunctionVPCConfig|Attribute|Reference} value
  * @return {LambdaFunction}
  */
 LambdaFunction.prototype.vpcConfig = function(value) {

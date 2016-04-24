@@ -114,7 +114,7 @@
       "name": "Tags",
       "description": "An arbitrary set of tags (key-value pairs) for this load balancer.",
       "required": false,
-      "type": "AWSCloudFormationResourceTagsType[]",
+      "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption"
     }
   ],

@@ -45,7 +45,7 @@ EC2CustomerGateway.prototype.ipAddress = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {AWSCloudFormationResourceTags|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
  * @return {EC2CustomerGateway}
  */
 EC2CustomerGateway.prototype.tags = function(value) {

@@ -58,7 +58,7 @@ EC2VPNConnection.prototype.staticRoutesOnly = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {AWSCloudFormationResourceTags|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
  * @return {EC2VPNConnection}
  */
 EC2VPNConnection.prototype.tags = function(value) {

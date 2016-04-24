@@ -19,7 +19,7 @@ WAFIPSet.prototype = Object.create(Resource.prototype);
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSWAFIPSetIPSetDescriptors[]|Attribute|Reference} value
+ * @param {WAFIPSetIPSetDescriptors[]|Attribute|Reference} value
  * @return {WAFIPSet}
  */
 WAFIPSet.prototype.ipSetDescriptors = function(value) {

@@ -32,7 +32,7 @@ EC2VPNGateway.prototype.type = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
  * @return {EC2VPNGateway}
  */
 EC2VPNGateway.prototype.tags = function(value) {

@@ -68,7 +68,7 @@ CloudFormationStack.prototype.parameters = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
  * @return {CloudFormationStack}
  */
 CloudFormationStack.prototype.tags = function(value) {

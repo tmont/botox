@@ -9,7 +9,7 @@
       "name": "AppSource",
       "description": "Contains the information required to retrieve an app from a repository.",
       "required": false,
-      "type": "AWSOpsWorksSourceType",
+      "type": "OpsWorksSourceType",
       "update": "No interruption"
     },
     {
@@ -44,7 +44,7 @@
       "name": "Environment",
       "description": "The environment variables to associate with the AWS OpsWorks app.",
       "required": false,
-      "type": "AWSOpsWorksAppEnvironment[]",
+      "type": "OpsWorksAppEnvironment[]",
       "update": "No interruption"
     },
     {
@@ -65,7 +65,7 @@
       "name": "SslConfiguration",
       "description": "The SSL configuration",
       "required": false,
-      "type": "AWSOpsWorksSslConfigurationType",
+      "type": "OpsWorksSslConfigurationType",
       "update": "No interruption"
     },
     {

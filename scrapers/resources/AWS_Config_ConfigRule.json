@@ -37,14 +37,14 @@
       "name": "Scope",
       "description": "Defines which AWS resources will trigger an evaluation when their configurations change. The scope can include one or more resource types, a combination of a tag key and value, or a combination of one resource type and one resource ID. Specify a scope to constrain the resources that are evaluated. If you don't specify a scope, the rule evaluates all resources in the recording group.",
       "required": false,
-      "type": "AWSConfigConfigRuleScope",
+      "type": "ConfigConfigRuleScope",
       "update": "No interruption"
     },
     {
       "name": "Source",
       "description": "Specifies the rule owner, the rule identifier, and the events that cause the function to evaluate your AWS resources.",
       "required": true,
-      "type": "AWSConfigConfigRuleSource",
+      "type": "ConfigConfigRuleSource",
       "update": "No interruption"
     }
   ],

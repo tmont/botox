@@ -84,7 +84,7 @@ EC2DHCPOptions.prototype.ntpServers = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
  * @return {EC2DHCPOptions}
  */
 EC2DHCPOptions.prototype.tags = function(value) {

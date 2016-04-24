@@ -185,7 +185,7 @@ EMRCluster.prototype.serviceRole = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
  * @return {EMRCluster}
  */
 EMRCluster.prototype.tags = function(value) {

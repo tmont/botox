@@ -16,7 +16,7 @@
       "name": "XssMatchTuples",
       "description": "The parts of web requests that you want to inspect for cross-site scripting attacks.",
       "required": false,
-      "type": "AWSWAFXssMatchSetXssMatchTuple[]",
+      "type": "WAFXssMatchSetXssMatchTuple[]",
       "update": "No interruption"
     }
   ],

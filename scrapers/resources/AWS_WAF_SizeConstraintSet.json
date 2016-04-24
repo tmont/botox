@@ -16,7 +16,7 @@
       "name": "SizeConstraints",
       "description": "The size constraint and the part of the web request to check.",
       "required": true,
-      "type": "AWSWAFSizeConstraintSetSizeConstraint[]",
+      "type": "WAFSizeConstraintSetSizeConstraint[]",
       "update": "No interruption"
     }
   ],

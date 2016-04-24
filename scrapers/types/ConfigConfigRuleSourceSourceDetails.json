@@ -1,0 +1,19 @@
+{
+  "name": "ConfigConfigRuleSourceSourceDetails",
+  "description": "SourceDetails is a property of the AWS Config ConfigRule Source property that specifies the source and type of event that triggers AWS Config to evaluate your AWS resources.",
+  "properties": [
+    {
+      "name": "EventSource",
+      "description": "The source, such as an AWS service, that generate events, triggering AWS Config to evaluate your AWS resources. For valid values, see the SourceDetail data type in the AWS Config API Reference.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "MessageType",
+      "description": "The type of Amazon Simple Notification Service (Amazon SNS) message that triggers AWS Config to run an evaluation.",
+      "required": true,
+      "type": "String"
+    }
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-source-sourcedetails.html"
+}

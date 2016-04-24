@@ -19,7 +19,7 @@ OpsWorksApp.prototype = Object.create(Resource.prototype);
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSOpsWorksSourceType|Attribute|Reference} value
+ * @param {OpsWorksSourceType|Attribute|Reference} value
  * @return {OpsWorksApp}
  */
 OpsWorksApp.prototype.appSource = function(value) {
@@ -84,7 +84,7 @@ OpsWorksApp.prototype.enableSsl = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSOpsWorksAppEnvironment[]|Attribute|Reference} value
+ * @param {OpsWorksAppEnvironment[]|Attribute|Reference} value
  * @return {OpsWorksApp}
  */
 OpsWorksApp.prototype.environment = function(value) {
@@ -123,7 +123,7 @@ OpsWorksApp.prototype.shortname = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSOpsWorksSslConfigurationType|Attribute|Reference} value
+ * @param {OpsWorksSslConfigurationType|Attribute|Reference} value
  * @return {OpsWorksApp}
  */
 OpsWorksApp.prototype.sslConfiguration = function(value) {

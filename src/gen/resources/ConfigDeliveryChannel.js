@@ -19,7 +19,7 @@ ConfigDeliveryChannel.prototype = Object.create(Resource.prototype);
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSConfigDeliveryChannelConfigSnapshotDeliveryProperties|Attribute|Reference} value
+ * @param {ConfigDeliveryChannelConfigSnapshotDeliveryProperties|Attribute|Reference} value
  * @return {ConfigDeliveryChannel}
  */
 ConfigDeliveryChannel.prototype.configSnapshotDeliveryProperties = function(value) {

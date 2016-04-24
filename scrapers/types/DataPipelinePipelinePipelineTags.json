@@ -1,0 +1,19 @@
+{
+  "name": "DataPipelinePipelinePipelineTags",
+  "description": "PipelineTags is a property of the AWS::DataPipeline::Pipeline resource that defines arbitrary key-value pairs for a pipeline.",
+  "properties": [
+    {
+      "name": "Key",
+      "description": "The key name of a tag.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Value",
+      "description": "The value to associate with the key name.",
+      "required": true,
+      "type": "String"
+    }
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetags.html"
+}

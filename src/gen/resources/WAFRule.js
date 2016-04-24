@@ -45,7 +45,7 @@ WAFRule.prototype.name = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSWAFRulePredicates[]|Attribute|Reference} value
+ * @param {WAFRulePredicates[]|Attribute|Reference} value
  * @return {WAFRule}
  */
 WAFRule.prototype.predicates = function(value) {

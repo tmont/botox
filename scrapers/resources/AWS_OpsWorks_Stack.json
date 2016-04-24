@@ -23,21 +23,21 @@
       "name": "ChefConfiguration",
       "description": "Describes the Chef configuration. For more information, see the CreateStack ChefConfiguration parameter in the AWS OpsWorks API Reference.",
       "required": false,
-      "type": "AWSOpsWorksChefConfigurationType",
+      "type": "OpsWorksChefConfigurationType",
       "update": "No interruption"
     },
     {
       "name": "ConfigurationManager",
       "description": "Describes the configuration manager. When you create a stack, you use the configuration manager to specify the Chef version. For supported Chef versions, see the CreateStack ConfigurationManager parameter in the AWS OpsWorks API Reference.",
       "required": false,
-      "type": "AWSOpsWorksStackConfigurationManagerType",
+      "type": "OpsWorksStackConfigurationManagerType",
       "update": "No interruption"
     },
     {
       "name": "CustomCookbooksSource",
       "description": "Contains the information required to retrieve a cookbook from a repository.",
       "required": false,
-      "type": "AWSOpsWorksSourceType",
+      "type": "OpsWorksSourceType",
       "update": "No interruption"
     },
     {

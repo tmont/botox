@@ -120,7 +120,7 @@ ElasticBeanstalkEnvironment.prototype.solutionStackName = function(value) {
  * Required: false
  * Update requires: You can update tags only if you update another property that requires that the environment be replaced, such as the ApplicationName property.
  *
- * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
  * @return {ElasticBeanstalkEnvironment}
  */
 ElasticBeanstalkEnvironment.prototype.tags = function(value) {

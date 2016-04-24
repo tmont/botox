@@ -112,7 +112,7 @@ ConfigConfigRule.prototype.maximumExecutionFrequency = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSConfigConfigRuleScope|Attribute|Reference} value
+ * @param {ConfigConfigRuleScope|Attribute|Reference} value
  * @return {ConfigConfigRule}
  */
 ConfigConfigRule.prototype.scope = function(value) {
@@ -125,7 +125,7 @@ ConfigConfigRule.prototype.scope = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {AWSConfigConfigRuleSource|Attribute|Reference} value
+ * @param {ConfigConfigRuleSource|Attribute|Reference} value
  * @return {ConfigConfigRule}
  */
 ConfigConfigRule.prototype.source = function(value) {

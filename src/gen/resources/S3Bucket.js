@@ -142,7 +142,7 @@ S3Bucket.prototype.replicationConfiguration = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
  * @return {S3Bucket}
  */
 S3Bucket.prototype.tags = function(value) {

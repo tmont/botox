@@ -45,7 +45,7 @@ OpsWorksStack.prototype.attributes = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSOpsWorksChefConfigurationType|Attribute|Reference} value
+ * @param {OpsWorksChefConfigurationType|Attribute|Reference} value
  * @return {OpsWorksStack}
  */
 OpsWorksStack.prototype.chefConfiguration = function(value) {
@@ -58,7 +58,7 @@ OpsWorksStack.prototype.chefConfiguration = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSOpsWorksStackConfigurationManagerType|Attribute|Reference} value
+ * @param {OpsWorksStackConfigurationManagerType|Attribute|Reference} value
  * @return {OpsWorksStack}
  */
 OpsWorksStack.prototype.configurationManager = function(value) {
@@ -71,7 +71,7 @@ OpsWorksStack.prototype.configurationManager = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSOpsWorksSourceType|Attribute|Reference} value
+ * @param {OpsWorksSourceType|Attribute|Reference} value
  * @return {OpsWorksStack}
  */
 OpsWorksStack.prototype.customCookbooksSource = function(value) {

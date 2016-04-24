@@ -298,7 +298,7 @@ ElastiCacheCacheCluster.prototype.snapshotWindow = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
  * @return {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.tags = function(value) {

@@ -32,7 +32,7 @@ KinesisStream.prototype.shardCount = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
  * @return {KinesisStream}
  */
 KinesisStream.prototype.tags = function(value) {

@@ -16,7 +16,7 @@
       "name": "RecordingGroup",
       "description": "Indicates whether to record configurations for all supported resources or for a list of resource types. The resource types that you list must be supported by AWS Config.",
       "required": false,
-      "type": "AWSConfigConfigurationRecorderRecordingGroup",
+      "type": "ConfigConfigurationRecorderRecordingGroup",
       "update": "No interruption"
     },
     {

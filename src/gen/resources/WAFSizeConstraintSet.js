@@ -32,7 +32,7 @@ WAFSizeConstraintSet.prototype.name = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {AWSWAFSizeConstraintSetSizeConstraint[]|Attribute|Reference} value
+ * @param {WAFSizeConstraintSetSizeConstraint[]|Attribute|Reference} value
  * @return {WAFSizeConstraintSet}
  */
 WAFSizeConstraintSet.prototype.sizeConstraints = function(value) {

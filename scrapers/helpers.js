@@ -5,6 +5,118 @@ const http = require('http');
 const https = require('https');
 const inflection = require('inflection');
 
+const typeMatchers = [
+	(type) => {
+		switch (type.toLowerCase()) {
+			case 'string':
+			case 'boolean':
+				return type;
+			case 'integer':
+			case 'integer.':
+				return 'Number';
+			case 'json object':
+				return 'Object';
+			case 'string list':
+				return 'String[]';
+			case 'customorigin type':
+				return 'CloudFrontDistributionConfigOriginCustomOrigin';
+		}
+
+		return null;
+	},
+	(type) => {
+		const match = /^(?:A )?list of (?:Amazon )?([\w\s]+)/i.exec(type);
+		if (!match) {
+			return null;
+		}
+
+		let newType = normalizeType(match[1]).replace(/\s/g, '');
+		switch (newType) {
+			case 'CodePipelinePipelineStagesActions':
+			case 'EC2InstanceSsmAssociationsAssociationParameters':
+			case 'S3NotificationConfigurationConfigFilterS3KeyRules':
+			case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings':
+			case 'EC2ContainerServiceTaskDefinitionVolumes':
+			case 'EC2ContainerServiceTaskDefinitionContainerDefinitions':
+			case 'WAFByteMatchSetByteMatchTuples':
+			case 'WAFIPSetIPSetDescriptors':
+			case 'CodePipelinePipelineStagesBlockers':
+			case 'S3ReplicationConfigurationRules':
+			case 'CodePipelineCustomActionTypeConfigurationProperties':
+			case 'CodePipelinePipelineDisableInboundStageTransitions':
+			case 'DynamoDBGlobalSecondaryIndexes':
+			case 'DynamoDBAttributeDefinitions':
+			case 'Route53HealthCheckTags':
+			case 'Route53HostedZoneTags':
+			case 'WAFSqlInjectionMatchSetSqlInjectionMatchTuples':
+			case 'CodePipelinePipelineStagesActionsInputArtifacts':
+			case 'EC2ContainerServiceServiceLoadBalancers':
+			case 'WAFRulePredicates':
+			case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications':
+			case 'Route53HostedZoneVPCs':
+			case 'WAFWebACLRules':
+			case 'CodePipelinePipelineStagesActionsOutputArtifacts':
+			case 'DynamoDBLocalSecondaryIndexes':
+			case 'DataPipelinePipelineObjects':
+			case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses':
+			case 'EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints':
+			case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces':
+			case 'AutoScalingScalingPolicyStepAdjustments':
+			case 'EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings':
+			case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups':
+			case 'AutoScalingNotificationConfigurations':
+			case 'EC2InstanceSsmAssociations':
+				break;
+			default:
+				newType = inflection.singularize(newType);
+				break;
+		}
+
+		switch (newType) {
+			case 'EC2MountPoint':
+				newType = 'EC2MountPointPropertyType';
+				break;
+			case 'JSONname':
+				newType = 'Object';
+				break;
+		}
+
+		return newType + '[]';
+	},
+	(type) => {
+		type = type.replace(/\W/g, '');
+		switch (type) {
+			case 'CloudFormationResourceTags':
+				return type + 'Type[]';
+			default:
+				return null;
+		}
+	},
+	(type) => {
+		if (/^an empty map/i.test(type)) {
+			return 'Object';
+		}
+
+		return null;
+	},
+	(type) => {
+		const lastResort = type.replace(/^Amazon\s+/i, '').replace(/\W/g, '');
+
+		if (lastResort === 'Stringtostringmap') {
+			return 'Object';
+		}
+
+		return lastResort;
+	}
+];
+
+function normalizeType(type) {
+	return type
+		.trim()
+		.replace(/\.$/, '') //remove trailing period
+		.replace(/^(AWS|Amazon)/i, ''); //remove common default stuff
+}
+
 module.exports = {
 	fetchDoc: function(url, callback) {
 		let lib = http;
@@ -82,110 +194,7 @@ module.exports = {
 							return null;
 						}
 
-						const typeMatchers = [
-							(type) => {
-								switch (type.toLowerCase()) {
-									case 'string':
-									case 'boolean':
-										return type;
-									case 'integer':
-									case 'integer.':
-										return 'Number';
-									case 'json object':
-										return 'Object';
-									case 'string list':
-										return 'String[]';
-									case 'customorigin type':
-										return 'CloudFrontDistributionConfigOriginCustomOrigin';
-								}
-
-								return null;
-							},
-							(type) => {
-								const match = /^(?:A )?list of (?:Amazon )?([\w\s]+)/i.exec(type);
-								if (!match) {
-									return null;
-								}
-
-								let newType = match[1].replace(/\s/g, '');
-								switch (newType) {
-									case 'AWSCodePipelinePipelineStagesActions':
-									case 'EC2InstanceSsmAssociationsAssociationParameters':
-									case 'S3NotificationConfigurationConfigFilterS3KeyRules':
-									case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings':
-									case 'EC2ContainerServiceTaskDefinitionVolumes':
-									case 'EC2ContainerServiceTaskDefinitionContainerDefinitions':
-									case 'AWSWAFByteMatchSetByteMatchTuples':
-									case 'AWSWAFIPSetIPSetDescriptors':
-									case 'AWSCodePipelinePipelineStagesBlockers':
-									case 'S3ReplicationConfigurationRules':
-									case 'AWSCodePipelineCustomActionTypeConfigurationProperties':
-									case 'AWSCodePipelinePipelineDisableInboundStageTransitions':
-									case 'DynamoDBGlobalSecondaryIndexes':
-									case 'DynamoDBAttributeDefinitions':
-									case 'Route53HealthCheckTags':
-									case 'Route53HostedZoneTags':
-									case 'AWSWAFSqlInjectionMatchSetSqlInjectionMatchTuples':
-									case 'AWSCodePipelinePipelineStagesActionsInputArtifacts':
-									case 'EC2ContainerServiceServiceLoadBalancers':
-									case 'AWSWAFRulePredicates':
-									case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications':
-									case 'Route53HostedZoneVPCs':
-									case 'AWSWAFWebACLRules':
-									case 'AWSCodePipelinePipelineStagesActionsOutputArtifacts':
-									case 'DynamoDBLocalSecondaryIndexes':
-									case 'AWSDataPipelinePipelineObjects':
-									case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses':
-									case 'EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints':
-									case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces':
-									case 'AutoScalingScalingPolicyStepAdjustments':
-									case 'EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings':
-									case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups':
-									case 'AutoScalingNotificationConfigurations':
-									case 'EC2InstanceSsmAssociations':
-										break;
-									default:
-										newType = inflection.singularize(newType);
-										break;
-								}
-
-								switch (newType) {
-									case 'EC2MountPoint':
-										newType = 'EC2MountPointPropertyType';
-										break;
-									case 'JSONname':
-										newType = 'Object';
-										break;
-								}
-
-								return newType + '[]';
-							},
-							(type) => {
-								if (type === 'AWS CloudFormation Resource Tags') {
-									return 'AWSCloudFormationResourceTagsType[]';
-								}
-
-								return null;
-							},
-							(type) => {
-								if (/^an empty map/i.test(type)) {
-									return 'Object';
-								}
-
-								return null;
-							},
-							(type) => {
-								const lastResort = type.replace(/^Amazon\s+/i, '').replace(/\W/g, '');
-
-								if (lastResort === 'Stringtostringmap') {
-									return 'Object';
-								}
-
-								return lastResort;
-							}
-						];
-
-						let type = result[1];
+						let type = normalizeType(result[1]);
 						for (let i = 0; i < typeMatchers.length; i++) {
 							const newType = typeMatchers[i](type);
 							if (newType) {
@@ -204,7 +213,7 @@ module.exports = {
 					})
 					.filter(Boolean)[0];
 
-				let name = normalize($el.find('.term').text());
+				let name = normalizeType(normalize($el.find('.term').text()));
 				const extraName = /(\w+)(\s\(.+\))/.exec(name);
 				if (extraName) {
 					name = extraName[1];
@@ -229,7 +238,7 @@ module.exports = {
 			.closest('.section')
 			.find('.variablelist dt')
 			.map((i, el) => {
-				const name = normalize($(el).text());
+				const name = normalizeType(normalize($(el).text()));
 				const desc = normalize($(el).next('dd').text());
 
 				return {
@@ -247,8 +256,10 @@ module.exports = {
 			result.namespace = name.split('::')[0];
 			result.category = name.split('::')[1];
 			result.name = name.split('::')[2];
+			//result.className = result.category + result.name;
 		} else {
-			result.name = name;
+			result.name = normalizeType(name);
+			//result.className = result.name;
 		}
 
 		result.description = desc;

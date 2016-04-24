@@ -45,7 +45,7 @@ CodeDeployDeploymentGroup.prototype.autoScalingGroups = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSCodeDeployDeploymentGroupDeployment|Attribute|Reference} value
+ * @param {CodeDeployDeploymentGroupDeployment|Attribute|Reference} value
  * @return {CodeDeployDeploymentGroup}
  */
 CodeDeployDeploymentGroup.prototype.deployment = function(value) {
@@ -84,7 +84,7 @@ CodeDeployDeploymentGroup.prototype.deploymentGroupName = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSCodeDeployDeploymentGroupEc2TagFilters|Attribute|Reference} value
+ * @param {CodeDeployDeploymentGroupEc2TagFilters|Attribute|Reference} value
  * @return {CodeDeployDeploymentGroup}
  */
 CodeDeployDeploymentGroup.prototype.ec2TagFilters = function(value) {
@@ -97,7 +97,7 @@ CodeDeployDeploymentGroup.prototype.ec2TagFilters = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSCodeDeployDeploymentGroupOnPremisesInstanceTagFilters|Attribute|Reference} value
+ * @param {CodeDeployDeploymentGroupOnPremisesInstanceTagFilters|Attribute|Reference} value
  * @return {CodeDeployDeploymentGroup}
  */
 CodeDeployDeploymentGroup.prototype.onPremisesInstanceTagFilters = function(value) {

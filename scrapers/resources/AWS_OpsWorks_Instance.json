@@ -100,7 +100,7 @@
       "name": "TimeBasedAutoScaling",
       "description": "The time-based scaling configuration for the instance.",
       "required": false,
-      "type": "AWSOpsWorksTimeBasedAutoScalingType",
+      "type": "OpsWorksTimeBasedAutoScalingType",
       "update": "Replacement"
     }
   ],

@@ -409,7 +409,7 @@ RDSDBInstance.prototype.storageType = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
  * @return {RDSDBInstance}
  */
 RDSDBInstance.prototype.tags = function(value) {

@@ -29,7 +29,7 @@
       "name": "Tags",
       "description": "The tags that you want to attach to the resource.",
       "required": false,
-      "type": "AWSCloudFormationResourceTags",
+      "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption."
     },
     {

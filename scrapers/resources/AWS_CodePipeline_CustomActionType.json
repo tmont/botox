@@ -16,21 +16,21 @@
       "name": "ConfigurationProperties",
       "description": "The configuration properties for the custom action.",
       "required": false,
-      "type": "AWSCodePipelineCustomActionTypeConfigurationProperties[]",
+      "type": "CodePipelineCustomActionTypeConfigurationProperties[]",
       "update": "Replacement"
     },
     {
       "name": "InputArtifactDetails",
       "description": "The input artifact details for this custom action.",
       "required": true,
-      "type": "AWSCodePipelineCustomActionTypeArtifactDetails",
+      "type": "CodePipelineCustomActionTypeArtifactDetails",
       "update": "Replacement"
     },
     {
       "name": "OutputArtifactDetails",
       "description": "The output artifact details for this custom action.",
       "required": true,
-      "type": "AWSCodePipelineCustomActionTypeArtifactDetails",
+      "type": "CodePipelineCustomActionTypeArtifactDetails",
       "update": "Replacement"
     },
     {
@@ -44,7 +44,7 @@
       "name": "Settings",
       "description": "URLs that provide users information about this custom action.",
       "required": false,
-      "type": "AWSCodePipelineCustomActionTypeSettings",
+      "type": "CodePipelineCustomActionTypeSettings",
       "update": "Replacement"
     },
     {

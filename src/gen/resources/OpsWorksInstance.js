@@ -188,7 +188,7 @@ OpsWorksInstance.prototype.subnetId = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {AWSOpsWorksTimeBasedAutoScalingType|Attribute|Reference} value
+ * @param {OpsWorksTimeBasedAutoScalingType|Attribute|Reference} value
  * @return {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.timeBasedAutoScaling = function(value) {

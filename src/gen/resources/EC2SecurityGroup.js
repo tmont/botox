@@ -81,7 +81,7 @@ EC2SecurityGroup.prototype.securityGroupIngress = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {AWSCloudFormationResourceTags|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
  * @return {EC2SecurityGroup}
  */
 EC2SecurityGroup.prototype.tags = function(value) {

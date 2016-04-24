@@ -71,7 +71,7 @@ OpsWorksLayer.prototype.customInstanceProfileArn = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSOpsWorksRecipesType|Attribute|Reference} value
+ * @param {OpsWorksRecipesType|Attribute|Reference} value
  * @return {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.customRecipes = function(value) {
@@ -123,7 +123,7 @@ OpsWorksLayer.prototype.installUpdatesOnBoot = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSOpsWorksLayerLifeCycleConfiguration|Attribute|Reference} value
+ * @param {OpsWorksLayerLifeCycleConfiguration|Attribute|Reference} value
  * @return {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.lifecycleEventConfiguration = function(value) {
@@ -136,7 +136,7 @@ OpsWorksLayer.prototype.lifecycleEventConfiguration = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSOpsWorksLoadBasedAutoScalingType|Attribute|Reference} value
+ * @param {OpsWorksLoadBasedAutoScalingType|Attribute|Reference} value
  * @return {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.loadBasedAutoScaling = function(value) {
@@ -214,7 +214,7 @@ OpsWorksLayer.prototype.type = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {AWSOpsWorksVolumeConfigurationType[]|Attribute|Reference} value
+ * @param {OpsWorksVolumeConfigurationType[]|Attribute|Reference} value
  * @return {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.volumeConfigurations = function(value) {

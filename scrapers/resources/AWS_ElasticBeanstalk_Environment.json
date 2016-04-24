@@ -51,7 +51,7 @@
       "name": "Tags",
       "description": "An arbitrary set of tags (key–value pairs) for this environment.",
       "required": false,
-      "type": "AWSCloudFormationResourceTagsType[]",
+      "type": "CloudFormationResourceTagsType[]",
       "update": "You can update tags only if you update another property that requires that the environment be replaced, such as the ApplicationName property."
     },
     {

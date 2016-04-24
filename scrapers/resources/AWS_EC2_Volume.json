@@ -58,7 +58,7 @@
       "name": "Tags",
       "description": "An arbitrary set of tags (key–value pairs) for this volume.",
       "required": false,
-      "type": "AWSCloudFormationResourceTagsType[]",
+      "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption"
     },
     {

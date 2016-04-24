@@ -23,7 +23,7 @@
       "name": "Predicates",
       "description": "The ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects to include in a rule. If you add more than one predicate to a rule, a request must match all conditions in order to be allowed or blocked.",
       "required": false,
-      "type": "AWSWAFRulePredicates[]",
+      "type": "WAFRulePredicates[]",
       "update": "No interruption"
     }
   ],

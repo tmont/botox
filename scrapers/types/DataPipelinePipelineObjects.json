@@ -1,0 +1,25 @@
+{
+  "name": "DataPipelinePipelineObjects",
+  "description": "PipelineObjects is a property of the AWS::DataPipeline::Pipeline resource that describes a data pipeline object.",
+  "properties": [
+    {
+      "name": "Fields",
+      "description": "Key-value pairs that define the properties of the object.",
+      "required": true,
+      "type": "DataPipelineDataPipelineObjectFields"
+    },
+    {
+      "name": "Id",
+      "description": "Identifier of the object.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Name",
+      "description": "Name of the object.",
+      "required": true,
+      "type": "String"
+    }
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html"
+}

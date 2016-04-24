@@ -1,0 +1,37 @@
+{
+  "name": "CodeDeployDeploymentGroupDeploymentRevisionS3Location",
+  "description": "S3Location is a property of the AWS CodeDeploy DeploymentGroup Deployment Revision property that specifies the location of an application revision that is stored in Amazon Simple Storage Service (Amazon S3).",
+  "properties": [
+    {
+      "name": "Bucket",
+      "description": "The name of the S3 bucket where the application revision is stored.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "BundleType",
+      "description": "The file type of the application revision, such as tar, tgz, or zip. For valid values, see S3Location in the AWS CodeDeploy API Reference.",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "ETag",
+      "description": "The Amazon S3 ETag (a file checksum) of the application revision. If you don't specify a value, AWS CodeDeploy skips the ETag validation of your application revision.",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "Key",
+      "description": "The file name of the application revision (Amazon S3 object name).",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Version",
+      "description": "For versioning-enabled buckets, a specific version of the application revision.",
+      "required": false,
+      "type": "String"
+    }
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.html"
+}

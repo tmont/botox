@@ -1,0 +1,19 @@
+{
+  "name": "LambdaFunctionVPCConfig",
+  "description": "VpcConfig is a property of the AWS::Lambda::Function resource that enables to your AWS Lambda (Lambda) function to access resources in a VPC. For more information, see Configuring a Lambda Function to Access Resources in an Amazon VPC in the AWS Lambda Developer Guide.",
+  "properties": [
+    {
+      "name": "SecurityGroupIds",
+      "description": "A list of one or more security groups IDs in the VPC that includes the resources to which your Lambda function requires access.",
+      "required": true,
+      "type": "string[]"
+    },
+    {
+      "name": "SubnetIds",
+      "description": "A list of one or more subnet IDs in the VPC that includes the resources to which your Lambda function requires access.",
+      "required": true,
+      "type": "string[]"
+    }
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html"
+}

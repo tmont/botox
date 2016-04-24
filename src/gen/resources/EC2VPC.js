@@ -112,7 +112,7 @@ EC2VPC.prototype.instanceTenancy = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
  * @return {EC2VPC}
  */
 EC2VPC.prototype.tags = function(value) {

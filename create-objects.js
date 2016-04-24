@@ -43,7 +43,6 @@ function createResources(next) {
 			const className = json.category + json.name;
 			const propertyPrefix = `${className}.prototype`;
 
-			console.log(`  generating ${className}`);
 			const methods = json.properties.map((prop) => {
 				const types = [prop.type, 'Attribute', 'Reference'];
 				if (prop.type === 'String') {
@@ -252,7 +251,7 @@ function createTypes(next) {
 		function createType(file, next) {
 			const json = require(file);
 			const className = json.name;
-			console.log(`  generating ${className}`);
+			//console.log(`  generating ${className}`);
 
 			const methods = json.properties.map((prop) => {
 				return `

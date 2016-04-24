@@ -37,7 +37,7 @@
       "name": "CustomRecipes",
       "description": "Custom event recipes for this layer.",
       "required": false,
-      "type": "AWSOpsWorksRecipesType",
+      "type": "OpsWorksRecipesType",
       "update": "No interruption"
     },
     {
@@ -65,14 +65,14 @@
       "name": "LifecycleEventConfiguration",
       "description": "The lifecycle events for the AWS OpsWorks layer.",
       "required": false,
-      "type": "AWSOpsWorksLayerLifeCycleConfiguration",
+      "type": "OpsWorksLayerLifeCycleConfiguration",
       "update": "No interruption"
     },
     {
       "name": "LoadBasedAutoScaling",
       "description": "The load-based scaling configuration for the AWS OpsWorks layer.",
       "required": false,
-      "type": "AWSOpsWorksLoadBasedAutoScalingType",
+      "type": "OpsWorksLoadBasedAutoScalingType",
       "update": "No interruption"
     },
     {
@@ -114,7 +114,7 @@
       "name": "VolumeConfigurations",
       "description": "Describes the Amazon EBS volumes for this layer.",
       "required": false,
-      "type": "AWSOpsWorksVolumeConfigurationType[]",
+      "type": "OpsWorksVolumeConfigurationType[]",
       "update": "Replacement"
     }
   ],

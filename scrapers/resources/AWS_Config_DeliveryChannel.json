@@ -9,7 +9,7 @@
       "name": "ConfigSnapshotDeliveryProperties",
       "description": "Provides options for how AWS Config delivers configuration snapshots to the S3 bucket in your delivery channel.",
       "required": false,
-      "type": "AWSConfigDeliveryChannelConfigSnapshotDeliveryProperties",
+      "type": "ConfigDeliveryChannelConfigSnapshotDeliveryProperties",
       "update": "No interruption"
     },
     {

@@ -9,7 +9,7 @@
       "name": "DefaultAction",
       "description": "The action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.",
       "required": true,
-      "type": "AWSWAFWebACLAction",
+      "type": "WAFWebACLAction",
       "update": "No interruption"
     },
     {
@@ -30,7 +30,7 @@
       "name": "Rules",
       "description": "The rules to associate with the web ACL and the settings for each rule.",
       "required": false,
-      "type": "AWSWAFWebACLRules[]",
+      "type": "WAFWebACLRules[]",
       "update": "No interruption"
     }
   ],

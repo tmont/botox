@@ -116,7 +116,7 @@ DirectoryServiceMicrosoftAD.prototype.shortName = function(value) {
  * Required: true
  * Update requires: Replacement
  *
- * @param {AWSDirectoryServiceMicrosoftADVpcSettings|Attribute|Reference} value
+ * @param {DirectoryServiceMicrosoftADVpcSettings|Attribute|Reference} value
  * @return {DirectoryServiceMicrosoftAD}
  */
 DirectoryServiceMicrosoftAD.prototype.vpcSettings = function(value) {

@@ -58,7 +58,7 @@
       "name": "Tags",
       "description": "An arbitrary set of tags (key-value pairs) for this Amazon S3 bucket.",
       "required": false,
-      "type": "AWSCloudFormationResourceTagsType[]",
+      "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption"
     },
     {

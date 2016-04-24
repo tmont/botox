@@ -23,7 +23,7 @@
       "name": "Deployment",
       "description": "The application revision that will be deployed to this deployment group.",
       "required": false,
-      "type": "AWSCodeDeployDeploymentGroupDeployment",
+      "type": "CodeDeployDeploymentGroupDeployment",
       "update": "No interruption"
     },
     {
@@ -44,14 +44,14 @@
       "name": "Ec2TagFilters",
       "description": "The Amazon EC2 tags to filter on. AWS CodeDeploy includes all instances that match the tag filter with this deployment group.",
       "required": false,
-      "type": "AWSCodeDeployDeploymentGroupEc2TagFilters",
+      "type": "CodeDeployDeploymentGroupEc2TagFilters",
       "update": "No interruption"
     },
     {
       "name": "OnPremisesInstanceTagFilters",
       "description": "The on-premises instance tags to filter on. AWS CodeDeploy includes all on-premises instances that match the tag filter with this deployment group. To register on-premises instances with AWS CodeDeploy, see Configure Existing On-Premises Instances by Using AWS CodeDeploy in the AWS CodeDeploy User Guide.",
       "required": false,
-      "type": "AWSCodeDeployDeploymentGroupOnPremisesInstanceTagFilters",
+      "type": "CodeDeployDeploymentGroupOnPremisesInstanceTagFilters",
       "update": "No interruption"
     },
     {

@@ -32,7 +32,7 @@ ConfigConfigurationRecorder.prototype.name = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSConfigConfigurationRecorderRecordingGroup|Attribute|Reference} value
+ * @param {ConfigConfigurationRecorderRecordingGroup|Attribute|Reference} value
  * @return {ConfigConfigurationRecorder}
  */
 ConfigConfigurationRecorder.prototype.recordingGroup = function(value) {

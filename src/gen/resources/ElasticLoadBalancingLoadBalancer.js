@@ -273,7 +273,7 @@ ElasticLoadBalancingLoadBalancer.prototype.subnets = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AWSCloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
  * @return {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.tags = function(value) {

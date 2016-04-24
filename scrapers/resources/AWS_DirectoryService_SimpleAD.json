@@ -58,7 +58,7 @@
       "name": "VpcSettings",
       "description": "Specifies the VPC settings of the directory server.",
       "required": true,
-      "type": "AWSDirectoryServiceSimpleADVpcSettings",
+      "type": "DirectoryServiceSimpleADVpcSettings",
       "update": "Replacement"
     }
   ],

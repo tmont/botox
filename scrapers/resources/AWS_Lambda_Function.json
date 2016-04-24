@@ -9,7 +9,7 @@
       "name": "Code",
       "description": "The source code of your Lambda function. You can point to a file in an Amazon Simple Storage Service (Amazon S3) bucket or specify your source code as inline text.",
       "required": true,
-      "type": "AWSLambdaFunctionCode",
+      "type": "LambdaFunctionCode",
       "update": "No interruption"
     },
     {
@@ -65,7 +65,7 @@
       "name": "VpcConfig",
       "description": "If the Lambda function requires access to resources in a VPC, specify a VPC configuration that Lambda uses to set up an elastic network interface (ENI). The ENI enables your function to connect to other resources in your VPC, but it doesn't provide public Internet access. If your function requires Internet access (for example, to access AWS services that don't have VPC endpoints), configure a Network Address Translation (NAT) instance inside your VPC or use an Amazon Virtual Private Cloud (Amazon VPC) NAT gateway. For more information, see NAT Gateways in the Amazon VPC User Guide.",
       "required": false,
-      "type": "AWSLambdaFunctionVPCConfig",
+      "type": "LambdaFunctionVPCConfig",
       "update": "No interruption"
     }
   ],
