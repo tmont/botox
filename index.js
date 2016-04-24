@@ -10,6 +10,22 @@ module.exports = {
 
 	Template: Template,
 
+	base64: function(value) {
+		return new Functions.Base64(value);
+	},
+
+	select: function(index, things) {
+		return new Functions.Select(index, things);
+	},
+
+	findInMap: function(mapName, topLevelKey, secondLevelKey) {
+		return new Functions.FindInMap(mapName, topLevelKey, secondLevelKey);
+	},
+
+	getAZs: function(region) {
+		return new Functions.GetAZs(region);
+	},
+
 	join: function(things, delimiter) {
 		return new Functions.Join(things, delimiter);
 	},
