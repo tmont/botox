@@ -5,12 +5,14 @@
     {
       "name": "Key",
       "description": "The unique identifier of a key-value pair.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Value",
       "description": "The value part of the identified key.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

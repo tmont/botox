@@ -8,6 +8,7 @@
     {
       "name": "AttributeDefinitions",
       "description": "A list of AttributeName and AttributeType objects that describe the key schema for the table and indexes.",
+      "typeDescription": "List of DynamoDB Attribute Definitions",
       "required": true,
       "type": "DynamoDBAttributeDefinitions[]",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "GlobalSecondaryIndexes",
       "description": "Global secondary indexes to be created on the table. You can create up to 5 global secondary indexes.",
+      "typeDescription": "List of DynamoDB Global Secondary Indexes",
       "required": false,
       "type": "DynamoDBGlobalSecondaryIndexes[]",
       "update": "Updates are not supported. with the following exceptions:"
@@ -22,6 +24,7 @@
     {
       "name": "KeySchema",
       "description": "Specifies the attributes that make up the primary key for the table. The attributes in the KeySchema property must also be defined in the AttributeDefinitions property.",
+      "typeDescription": "List of DynamoDB Key Schema",
       "required": true,
       "type": "DynamoDBKeySchema[]",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "LocalSecondaryIndexes",
       "description": "Local secondary indexes to be created on the table. You can create up to 5 local secondary indexes. Each index is scoped to a given hash key value. The size of each hash key can be up to 10 gigabytes.",
+      "typeDescription": "List of DynamoDB Local Secondary Indexes",
       "required": false,
       "type": "DynamoDBLocalSecondaryIndexes[]",
       "update": "Replacement"
@@ -36,6 +40,7 @@
     {
       "name": "ProvisionedThroughput",
       "description": "Throughput for the specified table, consisting of values for ReadCapacityUnits and WriteCapacityUnits. For more information about the contents of a provisioned throughput structure, see DynamoDB Provisioned Throughput.",
+      "typeDescription": "DynamoDB Provisioned Throughput",
       "required": true,
       "type": "DynamoDBProvisionedThroughput",
       "update": "No interruption"
@@ -43,6 +48,7 @@
     {
       "name": "StreamSpecification",
       "description": "The settings for the DynamoDB table stream, which capture changes to items stored in the table.",
+      "typeDescription": "DynamoDB Table StreamSpecification",
       "required": false,
       "type": "DynamoDBTableStreamSpecification",
       "update": "No interruption to the table; however, the stream is replaced."
@@ -50,6 +56,7 @@
     {
       "name": "TableName",
       "description": "A name for the table. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name. For more information, see Name Type.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"

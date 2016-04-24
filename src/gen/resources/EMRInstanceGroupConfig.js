@@ -32,7 +32,7 @@ EMRInstanceGroupConfig.prototype.bidPrice = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {ElasticMapReduceClusterConfiguration[]|Attribute|Reference} value
+ * @param {ElasticMapReduceClusterConfiguration[]|Attribute|Reference} value List of Amazon Elastic MapReduce Cluster Configuration
  * @return {EMRInstanceGroupConfig}
  */
 EMRInstanceGroupConfig.prototype.configurations = function(value) {
@@ -45,7 +45,7 @@ EMRInstanceGroupConfig.prototype.configurations = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {ElasticMapReduceEbsConfiguration|Attribute|Reference} value
+ * @param {ElasticMapReduceEbsConfiguration|Attribute|Reference} value Amazon Elastic MapReduce EbsConfiguration
  * @return {EMRInstanceGroupConfig}
  */
 EMRInstanceGroupConfig.prototype.ebsConfiguration = function(value) {

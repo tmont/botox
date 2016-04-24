@@ -5,6 +5,7 @@
     {
       "name": "Bucket",
       "description": "The S3 bucket where the GameLift build package files are stored.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

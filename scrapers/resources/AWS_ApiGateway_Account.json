@@ -8,6 +8,7 @@
     {
       "name": "CloudWatchRoleArn",
       "description": "The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"

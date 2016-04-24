@@ -12,11 +12,11 @@ const typeMatchers = [
 			case 'boolean':
 				return type;
 			case 'integer':
-			case 'integer.':
 				return 'Number';
 			case 'json object':
 				return 'Object';
 			case 'string list':
+			case 'a list of amazon sns topics arns': //http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html
 				return 'String[]';
 			case 'customorigin type':
 				return 'CloudFrontDistributionConfigOriginCustomOrigin';
@@ -25,7 +25,28 @@ const typeMatchers = [
 		return null;
 	},
 	(type) => {
-		const match = /^(?:A )?list of (?:Amazon )?([\w\s]+)/i.exec(type);
+		if (/^List of references to AWS::IAM::Role/i.test(type)) {
+			return 'IAMRole[]';
+		}
+
+		return null;
+	},
+	(type) => {
+		if (/^A list of security groups/i.test(type)) {
+			return 'String[]';
+		}
+
+		return null;
+	},
+	(type) => {
+		if (/String (?:Valid|\()/i.test(type)) {
+			return 'String';
+		}
+
+		return null;
+	},
+	(type) => {
+		const match = /^\s*(?::\s*)?(?:A )?list of (?:Amazon )?([\w\s]+)/i.exec(type);
 		if (!match) {
 			return null;
 		}
@@ -67,6 +88,11 @@ const typeMatchers = [
 			case 'AutoScalingNotificationConfigurations':
 			case 'EC2InstanceSsmAssociations':
 				break;
+			case 'routetableIDs':
+				//handle "List of route table IDs" from
+				//http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html
+				newType = 'String';
+				break;
 			default:
 				newType = inflection.singularize(newType);
 				break;
@@ -100,15 +126,128 @@ const typeMatchers = [
 		return null;
 	},
 	(type) => {
+		//handle "Number BgpAsn is always an integer value." from
+		//http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html
+		if (/^Number/.test(type)) {
+			return 'Number';
+		}
+
+		return null;
+	},
+	(type) => {
+		if (/^A JSON/.test(type)) {
+			//handle AdvancedOptions from
+			//http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html
+
+			//handle AssumeRolePolicyDocument from
+			//http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html
+			return 'Object';
+		}
+
+		return null;
+	},
+	(type) => {
 		const lastResort = type.replace(/^Amazon\s+/i, '').replace(/\W/g, '');
 
-		if (lastResort === 'Stringtostringmap') {
-			return 'Object';
+		switch (lastResort) {
+			case 'Stringtostringmap':
+				return 'Object';
 		}
 
 		return lastResort;
 	}
 ];
+
+function getRealType(type) {
+	if (!type) {
+		return type;
+	}
+
+	const suffixRegex = /\[]$/;
+	const typeSuffix = suffixRegex.test(type) ? '[]' : '';
+	let nakedType = type.replace(suffixRegex, '');
+
+	switch (nakedType) {
+		case 'AutoScalingEBSBlockDevice':
+			nakedType = 'CloudFormationAutoScalingEBSBlockDevicePropertyType';
+			break;
+		case 'AliasTarget':
+			nakedType = 'Route53AliasTargetProperty';
+			break;
+		case 'CacheBehavior':
+			nakedType = 'CloudFrontDistributionConfigCacheBehavior';
+			break;
+		case 'BlockDeviceMapping':
+			nakedType = 'CloudFormationAutoScalingBlockDeviceMappingPropertyType';
+			break;
+		case 'DistributionConfigtype':
+			nakedType = 'CloudFrontDistributionConfig';
+			break;
+		case 'Timestamp':
+			nakedType = 'String';
+			break;
+		case 'SourceBundle':
+			nakedType = 'ElasticBeanstalkSourceBundlePropertyType';
+			break;
+		case 'resourcetag':
+			nakedType = 'CloudFormationResourceTagsType';
+			break;
+		case 'EC2SecurityGroupRule':
+			nakedType = 'EC2SecurityGroupRulePropertyType';
+			break;
+		case 'SNSSubscription':
+			nakedType = 'SNSSubscriptionPropertyType';
+			break;
+		case 'OptionSetting':
+			nakedType = 'ElasticBeanstalkOptionSettingsPropertyType';
+			break;
+		case 'ForwardedValuestype':
+			nakedType = 'CloudFrontForwardedValues';
+			break;
+		case 'DefaultCacheBehaviortype':
+			nakedType = 'CloudFrontDefaultCacheBehavior';
+			break;
+		case 'S3Origintype':
+			nakedType = 'CloudFrontDistributionConfigOriginS3Origin';
+			break;
+		case 'MetricDimension':
+			nakedType = 'CloudWatchMetricDimensionPropertyType';
+			break;
+		case 'PrivateIpAddressSpecification':
+			nakedType = 'EC2NetworkInterfacePrivateIPSpecification';
+			break;
+		case 'AppCookieStickinessPolicyobject':
+		case 'LBCookieStickinessPolicyobject':
+			nakedType = 'ElasticLoadBalancingAppCookieStickinessPolicyType';
+			break;
+		case 'RefID':
+			nakedType = 'String';
+			break;
+		case 'Loggingtype':
+			nakedType = 'CloudFrontLogging';
+			break;
+		case 'Origin':
+			nakedType = 'CloudFrontDistributionConfigOrigin';
+			break;
+		case 'WebsiteConfigurationType':
+			nakedType = 'S3WebsiteConfigurationProperty';
+			break;
+		case 'AutoScalingTag':
+			nakedType = 'AutoScalingTagsPropertyType';
+			break;
+		case 'EC2securitygroup':
+			nakedType = 'String';
+			break;
+		case 'ElasticLoadBalancingListenerPropertyTypeobject':
+			nakedType = 'ElasticLoadBalancingListenerPropertyType';
+			break;
+		case 'ElasticLoadBalancingpolicyobject':
+			nakedType = 'ElasticLoadBalancingPolicyType';
+			break;
+	}
+
+	return nakedType + typeSuffix;
+}
 
 function normalizeType(type) {
 	return type
@@ -176,6 +315,7 @@ module.exports = {
 				const $el = $(el);
 				const $dd = $(el).next('dd');
 				let desc = normalize($dd.find('p').first().text());
+				let typeDesc = '';
 				const pText = $dd.find('p').map((i, el) => {
 					return normalize($(el).text());
 				}).get();
@@ -193,6 +333,8 @@ module.exports = {
 						if (!result) {
 							return null;
 						}
+
+						typeDesc = result[1];
 
 						let type = normalizeType(result[1]);
 						for (let i = 0; i < typeMatchers.length; i++) {
@@ -223,8 +365,9 @@ module.exports = {
 				return {
 					name: name,
 					description: desc,
+					typeDescription: typeDesc,
 					required: /^yes/i.test(required),
-					type: type,
+					type: getRealType(type),
 					update: update
 				};
 			})

@@ -8,6 +8,7 @@
     {
       "name": "ApplicationName",
       "description": "Name of the Elastic Beanstalk application that is associated with this application version.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "Description",
       "description": "A description of this application version.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Some interruptions"
@@ -22,8 +24,9 @@
     {
       "name": "SourceBundle",
       "description": "The location of the source bundle for this version.",
+      "typeDescription": "Source Bundle",
       "required": true,
-      "type": "SourceBundle",
+      "type": "ElasticBeanstalkSourceBundlePropertyType",
       "update": "Replacement"
     }
   ],

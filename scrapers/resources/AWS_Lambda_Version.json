@@ -8,6 +8,7 @@
     {
       "name": "CodeSha256",
       "description": "The SHA-256 hash of the deployment package that you want to publish. This value must match the SHA-256 hash of the $LATEST version of the function. Specify this property to validate that you are publishing the correct package.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Updates are not supported."
@@ -15,6 +16,7 @@
     {
       "name": "Description",
       "description": "A description of the version you are publishing. If you don't specify a value, Lambda copies the description from the $LATEST version of the function.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Updates are not supported."
@@ -22,6 +24,7 @@
     {
       "name": "FunctionName",
       "description": "The Lambda function for which you want to publish a version. You can specify the function's name or its Amazon Resource Name (ARN).",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

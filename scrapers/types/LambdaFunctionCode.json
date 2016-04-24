@@ -5,24 +5,28 @@
     {
       "name": "S3Bucket",
       "description": "The name of the S3 bucket that contains the source code of your Lambda function. The S3 bucket must be in the same region in which the stack is created.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "S3Key",
       "description": "The location and name of your source code .zip file. If you specify this property, you must also specify the S3Bucket property.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "S3ObjectVersion",
       "description": "If you have S3 versioning enabled, the version ID of your source code .zip file. You can specify this property only if you specify a bucket location.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "ZipFile",
       "description": "For nodejs runtime environments, the source code of your Lambda function. You cannot use this property with other runtime environments.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

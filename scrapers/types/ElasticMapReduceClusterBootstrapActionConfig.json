@@ -5,12 +5,14 @@
     {
       "name": "Name",
       "description": "The name of the bootstrap action to add to your cluster.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "ScriptBootstrapAction",
       "description": "The script that the bootstrap action runs.",
+      "typeDescription": "Amazon Elastic MapReduce Cluster BootstrapActionConfig ScriptBootstrapActionConfig",
       "required": true,
       "type": "ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig"
     }

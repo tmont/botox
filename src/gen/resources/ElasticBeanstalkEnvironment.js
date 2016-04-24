@@ -94,7 +94,7 @@ ElasticBeanstalkEnvironment.prototype.environmentName = function(value) {
  * Required: false
  * Update requires: Some interruptions
  *
- * @param {OptionSetting[]|Attribute|Reference} value
+ * @param {ElasticBeanstalkOptionSettingsPropertyType[]|Attribute|Reference} value A list of OptionSettings.
  * @return {ElasticBeanstalkEnvironment}
  */
 ElasticBeanstalkEnvironment.prototype.optionSettings = function(value) {
@@ -120,7 +120,7 @@ ElasticBeanstalkEnvironment.prototype.solutionStackName = function(value) {
  * Required: false
  * Update requires: You can update tags only if you update another property that requires that the environment be replaced, such as the ApplicationName property.
  *
- * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
  * @return {ElasticBeanstalkEnvironment}
  */
 ElasticBeanstalkEnvironment.prototype.tags = function(value) {
@@ -146,7 +146,7 @@ ElasticBeanstalkEnvironment.prototype.templateName = function(value) {
  * Required: false
  * Update requires: See Elastic Beanstalk Environment Tier Property Type
  *
- * @param {ElasticBeanstalkEnvironmentTierPropertyType|Attribute|Reference} value
+ * @param {ElasticBeanstalkEnvironmentTierPropertyType|Attribute|Reference} value Elastic Beanstalk Environment Tier Property Type
  * @return {ElasticBeanstalkEnvironment}
  */
 ElasticBeanstalkEnvironment.prototype.tier = function(value) {

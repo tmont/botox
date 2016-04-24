@@ -5,6 +5,7 @@
     {
       "name": "Rules",
       "description": "The object key name to filter on and whether to filter on the suffix or prefix of the key name.",
+      "typeDescription": "List of Amazon S3 NotificationConfiguration Config Filter S3Key Rules",
       "required": true,
       "type": "S3NotificationConfigurationConfigFilterS3KeyRules[]"
     }

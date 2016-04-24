@@ -5,18 +5,21 @@
     {
       "name": "ContinentCode",
       "description": "All DNS queries from the continent that you specified are routed to this resource record set. If you specify this property, omit the CountryCode and SubdivisionCode properties.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "CountryCode",
       "description": "All DNS queries from the country that you specified are routed to this resource record set. If you specify this property, omit the ContinentCode property.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "SubdivisionCode",
       "description": "If you specified US for the country code, you can specify a state in the United States. All DNS queries from the state that you specified are routed to this resource record set. If you specify this property, you must specify US for the CountryCode and omit the ContinentCode property.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

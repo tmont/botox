@@ -8,6 +8,7 @@
     {
       "name": "Name",
       "description": "A name for the configuration recorder. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the configuration recorder name. For more information, see Name Type.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Updates are not supported."
@@ -15,6 +16,7 @@
     {
       "name": "RecordingGroup",
       "description": "Indicates whether to record configurations for all supported resources or for a list of resource types. The resource types that you list must be supported by AWS Config.",
+      "typeDescription": "AWS Config ConfigurationRecorder RecordingGroup",
       "required": false,
       "type": "ConfigConfigurationRecorderRecordingGroup",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "RoleARN",
       "description": "The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that is used to make read or write requests to the delivery channel that you specify and to get configuration details for supported AWS resources. For more information, see Permissions for the AWS Config IAM Role in the AWS Config Developer Guide.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"

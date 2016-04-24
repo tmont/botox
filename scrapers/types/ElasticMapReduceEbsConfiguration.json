@@ -5,12 +5,14 @@
     {
       "name": "EbsBlockDeviceConfig",
       "description": "Configures the block storage devices that are associated with your EMR instances.",
+      "typeDescription": "List of Amazon Elastic MapReduce EbsConfiguration",
       "required": false,
       "type": "ElasticMapReduceEbsConfiguration[]"
     },
     {
       "name": "EbsOptimized",
       "description": "Indicates whether the instances are optimized for Amazon EBS I/O. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance. For more information about fees and supported instance types, see EBS-Optimized Instances in the Amazon EC2 User Guide for Linux Instances.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     }

@@ -8,6 +8,7 @@
     {
       "name": "ManagedPolicyArns",
       "description": "One or more managed policy ARNs to attach to this group.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "Path",
       "description": "The path to the group. For more information about paths, see Identifiers for IAM Entities in Using IAM.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "Policies",
       "description": "The policies to associate with this group. For information about policies, see Overview of Policies in Using IAM.",
+      "typeDescription": "List of IAM Policies",
       "required": false,
       "type": "IAMPolicy[]",
       "update": "No interruption"

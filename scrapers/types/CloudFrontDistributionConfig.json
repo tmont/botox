@@ -5,77 +5,90 @@
     {
       "name": "Aliases",
       "description": "CNAMEs (alternate domain names), if any, for the distribution.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     },
     {
       "name": "CacheBehaviors",
       "description": "A list of CacheBehavior types for the distribution.",
+      "typeDescription": "List of CacheBehavior",
       "required": false,
-      "type": "CacheBehavior[]"
+      "type": "CloudFrontDistributionConfigCacheBehavior[]"
     },
     {
       "name": "Comment",
       "description": "Any comments that you want to include about the distribution.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "CustomErrorResponses",
       "description": "Whether CloudFront replaces HTTP status codes in the 4xx and 5xx range with custom error messages before returning the response to the viewer.",
+      "typeDescription": "",
       "required": false
     },
     {
       "name": "DefaultCacheBehavior",
       "description": "The default cache behavior that is triggered if you do not specify the CacheBehavior property or if files don't match any of the values of PathPattern in the CacheBehavior property.",
+      "typeDescription": "DefaultCacheBehavior type",
       "required": true,
-      "type": "DefaultCacheBehaviortype"
+      "type": "CloudFrontDefaultCacheBehavior"
     },
     {
       "name": "DefaultRootObject",
       "description": "The object (such as index.html) that you want CloudFront to request from your origin when the root URL for your distribution (such as http://example.com/) is requested.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Enabled",
       "description": "Controls whether the distribution is enabled to accept end user requests for content.",
+      "typeDescription": "Boolean",
       "required": true,
       "type": "Boolean"
     },
     {
       "name": "Logging",
       "description": "Controls whether access logs are written for the distribution. To turn on access logs, specify this property.",
+      "typeDescription": "Logging type",
       "required": false,
-      "type": "Loggingtype"
+      "type": "CloudFrontLogging"
     },
     {
       "name": "Origins",
       "description": "A list of origins for this CloudFront distribution. For each origin, you can specify whether it is an Amazon S3 or custom origin.",
+      "typeDescription": "List of Origins.",
       "required": true,
-      "type": "Origin[]"
+      "type": "CloudFrontDistributionConfigOrigin[]"
     },
     {
       "name": "PriceClass",
       "description": "The price class that corresponds with the maximum price that you want to pay for the CloudFront service. For more information, see Choosing the Price Class in the Amazon CloudFront Developer Guide.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Restrictions",
       "description": "Specifies restrictions on who or how viewers can access your content.",
+      "typeDescription": "CloudFront DistributionConfiguration Restrictions",
       "required": false,
       "type": "CloudFrontDistributionConfigurationRestrictions"
     },
     {
       "name": "ViewerCertificate",
       "description": "The certificate to use when viewers use HTTPS to request objects.",
+      "typeDescription": "CloudFront DistributionConfiguration ViewerCertificate",
       "required": false,
       "type": "CloudFrontDistributionConfigurationViewerCertificate"
     },
     {
       "name": "WebACLId",
       "description": "The AWS WAF web ACL to associate with this distribution. AWS WAF is a web application firewall that enables you to monitor the HTTP and HTTPS requests that are forwarded to CloudFront and to control who can access your content. CloudFront permits or forbids requests based on conditions that you specify, such as the IP addresses from which requests originate or the values of query strings.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

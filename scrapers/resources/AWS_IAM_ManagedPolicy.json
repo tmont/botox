@@ -8,6 +8,7 @@
     {
       "name": "Description",
       "description": "A description of the policy. For example, you can describe the permissions that are defined in the policy.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "Groups",
       "description": "The names of groups to attach to this policy.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "Path",
       "description": "The path for the policy. By default, the path is /. For more information, see IAM Identifiers in the IAM User Guide guide.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "PolicyDocument",
       "description": "Policies that define the permissions for this managed policy. For more information about policy syntax, see IAM Policy Elements Reference in IAM User Guide.",
+      "typeDescription": "JSON object",
       "required": true,
       "type": "Object",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "Roles",
       "description": "The names of roles to attach to this policy.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -43,6 +48,7 @@
     {
       "name": "Users",
       "description": "The names of users to attach to this policy.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"

@@ -8,6 +8,7 @@
     {
       "name": "ConfigSnapshotDeliveryProperties",
       "description": "Provides options for how AWS Config delivers configuration snapshots to the S3 bucket in your delivery channel.",
+      "typeDescription": "AWS Config DeliveryChannel ConfigSnapshotDeliveryProperties",
       "required": false,
       "type": "ConfigDeliveryChannelConfigSnapshotDeliveryProperties",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "Name",
       "description": "A name for the delivery channel. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the delivery channel name. For more information, see Name Type.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Updates are not supported.. To change the name, you must run two separate updates. Delete this resource in the first update and then recreate it with a new name in the second update."
@@ -22,6 +24,7 @@
     {
       "name": "S3BucketName",
       "description": "The name of an S3 bucket where you want to store configuration history for the delivery channel.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "S3KeyPrefix",
       "description": "A key prefix (folder) for the specified S3 bucket.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "SnsTopicARN",
       "description": "The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (Amazon SNS) topic that AWS Config delivers notifications to.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"

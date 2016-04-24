@@ -5,12 +5,14 @@
     {
       "name": "AttributeName",
       "description": "The attribute name that is used as the primary key for this table. Primary key element names can be 1 – 255 characters long and have no character restrictions.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "KeyType",
       "description": "Represents the attribute data, consisting of the data type and the attribute value itself. You can specify HASH or RANGE.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

@@ -5,12 +5,14 @@
     {
       "name": "Key",
       "description": "ID of the security group.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Value",
       "description": "Name of the security group.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

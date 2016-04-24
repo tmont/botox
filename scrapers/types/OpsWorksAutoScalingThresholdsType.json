@@ -5,36 +5,42 @@
     {
       "name": "CpuThreshold",
       "description": "The percentage of CPU utilization that triggers the starting or stopping of instances (scaling).",
+      "typeDescription": "Number",
       "required": false,
       "type": "Number"
     },
     {
       "name": "IgnoreMetricsTime",
       "description": "The amount of time (in minutes) after a scaling event occurs that AWS OpsWorks should ignore metrics and not start any additional scaling events.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number"
     },
     {
       "name": "InstanceCount",
       "description": "The number of instances to add or remove when the load exceeds a threshold.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number"
     },
     {
       "name": "LoadThreshold",
       "description": "The degree of system load that triggers the starting or stopping of instances (scaling). For more information about how load is computed, see Load (computing).",
+      "typeDescription": "Number",
       "required": false,
       "type": "Number"
     },
     {
       "name": "MemoryThreshold",
       "description": "The percentage of memory consumption that triggers the starting or stopping of instances (scaling).",
+      "typeDescription": "Number",
       "required": false,
       "type": "Number"
     },
     {
       "name": "ThresholdsWaitTime",
       "description": "The amount of time, in minutes, that the load must exceed a threshold before instances are added or removed.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number"
     }

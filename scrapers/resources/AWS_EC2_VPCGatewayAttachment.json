@@ -8,6 +8,7 @@
     {
       "name": "InternetGatewayId",
       "description": "The ID of the Internet gateway.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "VpcId",
       "description": "The ID of the VPC to associate with this gateway.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "VpnGatewayId",
       "description": "The ID of the virtual private network (VPN) gateway to attach to the VPC.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"

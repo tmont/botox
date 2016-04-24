@@ -5,6 +5,7 @@
     {
       "name": "PolicyDocument",
       "description": "A policy document that describes what actions are allowed on which resources.",
+      "typeDescription": "JSON object",
       "required": true,
       "type": "Object",
       "update": "No interruption"
@@ -12,6 +13,7 @@
     {
       "name": "PolicyName",
       "description": "The name of the policy.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"

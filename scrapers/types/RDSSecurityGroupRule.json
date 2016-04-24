@@ -5,6 +5,7 @@
     {
       "name": "CIDRIP",
       "description": "The IP range to authorize.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -12,6 +13,7 @@
     {
       "name": "EC2SecurityGroupId",
       "description": "Id of the VPC or EC2 Security Group to authorize.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -19,6 +21,7 @@
     {
       "name": "EC2SecurityGroupName",
       "description": "Name of the EC2 Security Group to authorize.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -26,6 +29,7 @@
     {
       "name": "EC2SecurityGroupOwnerId",
       "description": "AWS Account Number of the owner of the EC2 Security Group specified in the EC2SecurityGroupName parameter. The AWS Access Key ID is not an acceptable value.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"

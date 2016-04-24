@@ -8,6 +8,7 @@
     {
       "name": "BidPrice",
       "description": "The bid price in USD for each EC2 instance in the instance group when launching instances (nodes) as Spot Instances.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "Configurations",
       "description": "A list of configurations to apply to this instance group. For more information see, Configuring Applications in the Amazon Elastic MapReduce Release Guide.",
+      "typeDescription": "List of Amazon Elastic MapReduce Cluster Configuration",
       "required": false,
       "type": "ElasticMapReduceClusterConfiguration[]",
       "update": "Replacement"
@@ -22,6 +24,7 @@
     {
       "name": "EbsConfiguration",
       "description": "Configures Amazon Elastic Block Store (Amazon EBS) storage volumes to attach to your instances.",
+      "typeDescription": "Amazon Elastic MapReduce EbsConfiguration",
       "required": false,
       "type": "ElasticMapReduceEbsConfiguration",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "InstanceCount",
       "description": "The number of instances to launch in the instance group.",
+      "typeDescription": "Integer",
       "required": true,
       "type": "Number",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "InstanceRole",
       "description": "The role of the servers in the Amazon EMR cluster, such as TASK. For more information, see Instance Groups in the Amazon Elastic MapReduce Management Guide.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -43,6 +48,7 @@
     {
       "name": "InstanceType",
       "description": "The EC2 instance type for all instances in the instance group. For more information, see Instance Configurations in the Amazon Elastic MapReduce Management Guide.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -50,6 +56,7 @@
     {
       "name": "JobFlowId",
       "description": "The ID of an Amazon EMR cluster that you want to associate this instance group with.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -57,6 +64,7 @@
     {
       "name": "Market",
       "description": "The type of marketplace from which your instances are provisioned into this group, either ON_DEMAND or SPOT. For more information, see Amazon EC2 Purchasing Options.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -64,6 +72,7 @@
     {
       "name": "Name",
       "description": "A name for the instance group.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"

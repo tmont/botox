@@ -8,6 +8,7 @@
     {
       "name": "Serial",
       "description": "This value is specific to AWS CloudFormation and can only be incremented. Incrementing this value notifies AWS CloudFormation that you want to rotate your access key. When you update your stack, AWS CloudFormation will replace the existing access key with a new key.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "Status",
       "description": "The status of the access key. By default, AWS CloudFormation sets this property value to Active.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "UserName",
       "description": "The name of the user that the new key will belong to.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

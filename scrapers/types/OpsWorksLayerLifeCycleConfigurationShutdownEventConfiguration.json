@@ -5,12 +5,14 @@
     {
       "name": "DelayUntilElbConnectionsDrained",
       "description": "Indicates whether to wait for connections to drain from the Elastic Load Balancing load balancers.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "ExecutionTimeout",
       "description": "The time, in seconds, that AWS OpsWorks waits after a shutdown event has been triggered before shutting down an instance.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number"
     }

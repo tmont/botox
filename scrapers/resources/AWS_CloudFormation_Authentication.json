@@ -8,48 +8,56 @@
     {
       "name": "accessKeyId",
       "description": "Specifies the access key ID for S3 authentication.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "buckets",
       "description": "A comma-delimited list of Amazon S3 buckets to be associated with the S3 authentication credentials.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     },
     {
       "name": "password",
       "description": "Specifies the password for basic authentication.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "secretKey",
       "description": "Specifies the secret key for S3 authentication.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "type",
       "description": "Specifies whether the authentication scheme uses a user name and password (\"basic\") or an access key ID and secret key (\"S3\").",
+      "typeDescription": "String Valid values are \"basic\" or \"S3\"",
       "required": true,
-      "type": "StringValidvaluesarebasicorS3"
+      "type": "String"
     },
     {
       "name": "uris",
       "description": "A comma-delimited list of URIs to be associated with the basic authentication credentials. The authorization applies to the specified URIs and any more specific URI. For example, if you specify http://www.example.com, the authorization will also apply to http://www.example.com/test.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     },
     {
       "name": "username",
       "description": "Specifies the user name for basic authentication.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "roleName",
       "description": "Describes the role for role-based authentication.",
+      "typeDescription": "String.",
       "required": false,
       "type": "String"
     }

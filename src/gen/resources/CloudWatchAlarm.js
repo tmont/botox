@@ -84,7 +84,7 @@ CloudWatchAlarm.prototype.comparisonOperator = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {MetricDimension[]|Attribute|Reference} value
+ * @param {CloudWatchMetricDimensionPropertyType[]|Attribute|Reference} value List of Metric Dimension
  * @return {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.dimensions = function(value) {

@@ -32,7 +32,7 @@ GameLiftBuild.prototype.name = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {GameLiftBuildStorageLocation|Attribute|Reference} value
+ * @param {GameLiftBuildStorageLocation|Attribute|Reference} value Amazon GameLift Build StorageLocation
  * @return {GameLiftBuild}
  */
 GameLiftBuild.prototype.storageLocation = function(value) {

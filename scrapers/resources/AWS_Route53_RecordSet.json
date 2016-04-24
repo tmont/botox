@@ -8,13 +8,15 @@
     {
       "name": "AliasTarget",
       "description": "Alias resource record sets only: Information about the domain to which you are redirecting traffic.",
+      "typeDescription": "AliasTarget",
       "required": false,
-      "type": "AliasTarget",
+      "type": "Route53AliasTargetProperty",
       "update": "No interruption"
     },
     {
       "name": "Comment",
       "description": "Any comments that you want to include about the hosted zone.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "Failover",
       "description": "Designates the record set as a PRIMARY or SECONDARY failover record set. When you have more than one resource performing the same function, you can configure Amazon Route 53 to check the health of your resources and use only health resources to respond to DNS queries. You cannot create nonfailover resource record sets that have the same Name and Type property values as failover resource record sets. For more information, see the Failover element in the Amazon Route 53 API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "GeoLocation",
       "description": "Describes how Amazon Route 53 responds to DNS queries based on the geographic origin of the query.",
+      "typeDescription": "Amazon Route 53 Record Set GeoLocation Property",
       "required": false,
       "type": "Route53RecordSetGeoLocationProperty",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "HealthCheckId",
       "description": "The health check ID that you want to apply to this record set. Amazon Route 53 returns this resource record set in response to a DNS query only while record set is healthy.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -43,6 +48,7 @@
     {
       "name": "HostedZoneId",
       "description": "The ID of the hosted zone.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -50,6 +56,7 @@
     {
       "name": "HostedZoneName",
       "description": "The name of the domain for the hosted zone where you want to add the record set.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -57,6 +64,7 @@
     {
       "name": "Name",
       "description": "The name of the domain. You must specify a fully qualified domain name that ends with a period as the last label indication. If you omit the final period, AWS CloudFormation adds it.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -64,11 +72,13 @@
     {
       "name": "Region",
       "description": "Latency resource record sets only: The Amazon EC2 region where the resource that is specified in this resource record set resides. The resource typically is an AWS resource, for example, Amazon EC2 instance or an Elastic Load Balancing load balancer, and is referred to by an IP address or a DNS domain name, depending on the record type.",
+      "typeDescription": "",
       "required": false
     },
     {
       "name": "ResourceRecords",
       "description": "List of resource records to add. Each record should be in the format appropriate for the record type specified by the Type property. For information about different record types and their record formats, see Appendix: Domain Name Format in the Amazon Route 53 Developer Guide.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -76,6 +86,7 @@
     {
       "name": "SetIdentifier",
       "description": "A unique identifier that differentiates among multiple resource record sets that have the same combination of DNS name and type.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -83,6 +94,7 @@
     {
       "name": "TTL",
       "description": "The resource record cache time to live (TTL), in seconds. If you specify this property, do not specify the AliasTarget property. For alias target records, the alias uses a TTL value from the target.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -90,6 +102,7 @@
     {
       "name": "Type",
       "description": "The type of records to add.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -97,8 +110,9 @@
     {
       "name": "Weight",
       "description": "Weighted resource record sets only: Among resource record sets that have the same combination of DNS name and type, a value that determines what portion of traffic for the current resource record set is routed to the associated location.",
+      "typeDescription": "Number. Weight expects integer values.",
       "required": false,
-      "type": "NumberWeightexpectsintegervalues",
+      "type": "Number",
       "update": "No interruption"
     }
   ],

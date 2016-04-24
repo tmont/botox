@@ -49,6 +49,10 @@ function createResources(next) {
 					types.push('Join');
 				}
 
+				const typeDesc = prop.typeDescription.length > 20 && prop.typeDescription !== prop.type ?
+					' ' + prop.typeDescription :
+					'';
+
 				return `
 /**
  * ${prop.description}
@@ -56,7 +60,7 @@ function createResources(next) {
  * Required: ${prop.required}
  * Update requires: ${prop.update}
  *
- * @param {${types.join('|')}} value
+ * @param {${types.join('|')}} value${typeDesc}
  * @return {${className}}
  */
 ${propertyPrefix}.${camelize(prop.name)} = function(value) {

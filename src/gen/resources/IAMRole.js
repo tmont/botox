@@ -42,7 +42,7 @@ Object.defineProperty(IAMRole.prototype, 'attr', {
  * Required: true
  * Update requires: No interruption
  *
- * @param {AJSONpolicydocument|Attribute|Reference} value
+ * @param {Object|Attribute|Reference} value A JSON policy document.
  * @return {IAMRole}
  */
 IAMRole.prototype.assumeRolePolicyDocument = function(value) {

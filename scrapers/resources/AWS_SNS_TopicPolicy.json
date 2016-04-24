@@ -8,6 +8,7 @@
     {
       "name": "PolicyDocument",
       "description": "A policy document that contains permissions to add to the specified SNS topics.",
+      "typeDescription": "JSON object",
       "required": true,
       "type": "Object",
       "update": "No interruption"
@@ -15,8 +16,9 @@
     {
       "name": "Topics",
       "description": "The Amazon Resource Names (ARN) of the topics to which you want to add the policy. You can use the Ref function to specify an AWS::SNS::Topic resource.",
+      "typeDescription": "A list of Amazon SNS topics ARNs",
       "required": true,
-      "type": "SNStopicsARN[]",
+      "type": "String[]",
       "update": "No interruption"
     }
   ],

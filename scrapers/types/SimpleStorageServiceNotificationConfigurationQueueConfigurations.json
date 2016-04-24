@@ -5,18 +5,21 @@
     {
       "name": "Event",
       "description": "The S3 bucket event about which you want to publish messages to Amazon Simple Queue Service ( Amazon SQS). For more information, see Supported Event Types in the Amazon Simple Storage Service Developer Guide.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Filter",
       "description": "The filtering rules that determine for which objects to send notifications. For example, you can create a filter so that Amazon Simple Storage Service (Amazon S3) sends notifications only when image files with a .jpg extension are added to the bucket.",
+      "typeDescription": "Amazon S3 NotificationConfiguration Config Filter",
       "required": false,
       "type": "S3NotificationConfigurationConfigFilter"
     },
     {
       "name": "Queue",
       "description": "The Amazon Resource Name (ARN) of the Amazon SQS queue that Amazon S3 publishes messages to when the specified event type occurs.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

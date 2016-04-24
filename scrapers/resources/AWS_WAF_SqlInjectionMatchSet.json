@@ -8,6 +8,7 @@
     {
       "name": "Name",
       "description": "A friendly name or description of the SqlInjectionMatchSet.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "SqlInjectionMatchTuples",
       "description": "The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.",
+      "typeDescription": "List of AWS WAF SqlInjectionMatchSet SqlInjectionMatchTuples",
       "required": false,
       "type": "WAFSqlInjectionMatchSetSqlInjectionMatchTuples[]",
       "update": "No interruption"

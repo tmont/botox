@@ -55,7 +55,7 @@ ApiGatewayRestApi.prototype.body = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {APIGatewayRestApiS3Location|Attribute|Reference} value
+ * @param {APIGatewayRestApiS3Location|Attribute|Reference} value Amazon API Gateway RestApi S3Location
  * @return {ApiGatewayRestApi}
  */
 ApiGatewayRestApi.prototype.bodyS3Location = function(value) {

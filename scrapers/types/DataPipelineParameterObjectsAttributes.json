@@ -5,12 +5,14 @@
     {
       "name": "Key",
       "description": "Specifies the name of a parameter attribute. To view parameter attributes, see Creating a Pipeline Using Parameterized Templates in the AWS Data Pipeline Developer Guide.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "StringValue",
       "description": "A parameter attribute value.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

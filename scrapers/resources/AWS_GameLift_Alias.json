@@ -8,6 +8,7 @@
     {
       "name": "Description",
       "description": "Information that helps you identify the purpose of this alias.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "Name",
       "description": "An identifier to associate with this alias. Alias names don't need to be unique.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "RoutingStrategy",
       "description": "A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.",
+      "typeDescription": "Amazon GameLift Alias RoutingStrategy",
       "required": true,
       "type": "GameLiftAliasRoutingStrategy",
       "update": "No interruption"

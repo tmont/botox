@@ -5,24 +5,28 @@
     {
       "name": "Bucket",
       "description": "The name of the S3 bucket where the Swagger file is stored.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "ETag",
       "description": "The Amazon S3 ETag (a file checksum) of the Swagger file. If you don't specify a value, API Gateway skips ETag validation of your Swagger file.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Key",
       "description": "The file name of the application revision (Amazon S3 object name).",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Version",
       "description": "For versioning-enabled buckets, a specific version of the Swagger file.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

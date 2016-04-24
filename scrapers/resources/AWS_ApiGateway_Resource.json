@@ -8,6 +8,7 @@
     {
       "name": "ParentId",
       "description": "If you want to create a child resource, the ID of the parent resource.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "PathPart",
       "description": "A path name for the resource.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -22,6 +24,7 @@
     {
       "name": "RestApiId",
       "description": "The ID of the RestApi resource in which you want to create this resource.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

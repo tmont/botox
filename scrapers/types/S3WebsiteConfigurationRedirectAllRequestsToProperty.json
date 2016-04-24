@@ -5,12 +5,14 @@
     {
       "name": "HostName",
       "description": "Name of the host where requests are redirected.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Protocol",
       "description": "Protocol to use (http or https) when redirecting requests. The default is the protocol that is used in the original request.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

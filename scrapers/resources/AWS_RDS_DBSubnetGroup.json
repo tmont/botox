@@ -8,6 +8,7 @@
     {
       "name": "DBSubnetGroupDescription",
       "description": "The description for the DB Subnet Group.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "SubnetIds",
       "description": "The EC2 Subnet IDs for the DB Subnet Group.",
+      "typeDescription": "List of strings",
       "required": true,
       "type": "string[]",
       "update": "No interruption"
@@ -22,8 +24,9 @@
     {
       "name": "Tags",
       "description": "The tags that you want to attach to the RDS database subnet group.",
+      "typeDescription": "A list of resource tags.",
       "required": false,
-      "type": "resourcetag[]",
+      "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption"
     }
   ],

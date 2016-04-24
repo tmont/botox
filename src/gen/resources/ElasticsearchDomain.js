@@ -32,7 +32,7 @@ ElasticsearchDomain.prototype.accessPolicies = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {AJSONobjectconsistingofastringkeyvaluepairsuchas|Attribute|Reference} value
+ * @param {Object|Attribute|Reference} value A JSON object consisting of a string key-value pair, such as:
  * @return {ElasticsearchDomain}
  */
 ElasticsearchDomain.prototype.advancedOptions = function(value) {
@@ -58,7 +58,7 @@ ElasticsearchDomain.prototype.domainName = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {ElasticsearchServiceDomainEBSOptions|Attribute|Reference} value
+ * @param {ElasticsearchServiceDomainEBSOptions|Attribute|Reference} value Amazon Elasticsearch Service Domain EBSOptions
  * @return {ElasticsearchDomain}
  */
 ElasticsearchDomain.prototype.ebsOptions = function(value) {
@@ -71,7 +71,7 @@ ElasticsearchDomain.prototype.ebsOptions = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {ElasticsearchServiceDomainElasticsearchClusterConfig|Attribute|Reference} value
+ * @param {ElasticsearchServiceDomainElasticsearchClusterConfig|Attribute|Reference} value Amazon Elasticsearch Service Domain ElasticsearchClusterConfig
  * @return {ElasticsearchDomain}
  */
 ElasticsearchDomain.prototype.elasticsearchClusterConfig = function(value) {
@@ -84,7 +84,7 @@ ElasticsearchDomain.prototype.elasticsearchClusterConfig = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {ElasticsearchServiceDomainSnapshotOptions|Attribute|Reference} value
+ * @param {ElasticsearchServiceDomainSnapshotOptions|Attribute|Reference} value Amazon Elasticsearch Service Domain SnapshotOptions
  * @return {ElasticsearchDomain}
  */
 ElasticsearchDomain.prototype.snapshotOptions = function(value) {
@@ -97,7 +97,7 @@ ElasticsearchDomain.prototype.snapshotOptions = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
  * @return {ElasticsearchDomain}
  */
 ElasticsearchDomain.prototype.tags = function(value) {

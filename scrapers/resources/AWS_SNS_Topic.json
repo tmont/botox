@@ -8,6 +8,7 @@
     {
       "name": "DisplayName",
       "description": "A developer-defined string that can be used to identify this SNS topic.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Updates are not supported."
@@ -15,13 +16,15 @@
     {
       "name": "Subscription",
       "description": "The SNS subscriptions (endpoints) for this topic.",
+      "typeDescription": "List of SNS Subscriptions",
       "required": false,
-      "type": "SNSSubscription[]",
+      "type": "SNSSubscriptionPropertyType[]",
       "update": "Updates are not supported."
     },
     {
       "name": "TopicName",
       "description": "A name for the topic. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the topic name. For more information, see Name Type.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Updates are not supported."

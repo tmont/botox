@@ -32,7 +32,7 @@ AutoScalingLaunchConfiguration.prototype.associatePublicIpAddress = function(val
  * Required: false
  * Update requires: Replacement
  *
- * @param {BlockDeviceMapping[]|Attribute|Reference} value
+ * @param {CloudFormationAutoScalingBlockDeviceMappingPropertyType[]|Attribute|Reference} value A list of BlockDeviceMappings.
  * @return {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.blockDeviceMappings = function(value) {
@@ -84,7 +84,7 @@ AutoScalingLaunchConfiguration.prototype.ebsOptimized = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {String11600chars|Attribute|Reference} value
+ * @param {String|Attribute|Reference|Join} value String (1–1600 chars)
  * @return {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.iamInstanceProfile = function(value) {
@@ -201,7 +201,7 @@ AutoScalingLaunchConfiguration.prototype.ramDiskId = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {EC2securitygroup[]|Attribute|Reference} value
+ * @param {String[]|Attribute|Reference} value A list of EC2 security groups.
  * @return {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.securityGroups = function(value) {

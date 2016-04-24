@@ -5,30 +5,35 @@
     {
       "name": "HealthyThreshold",
       "description": "Specifies the number of consecutive health probe successes required before moving the instance to the Healthy state.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Interval",
       "description": "Specifies the approximate interval, in seconds, between health checks of an individual instance.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Target",
       "description": "Specifies the instance's protocol and port to check. The protocol can be TCP, HTTP, HTTPS, or SSL. The range of valid ports is 1 through 65535.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Timeout",
       "description": "Specifies the amount of time, in seconds, during which no response means a failed health probe. This value must be less than the value for Interval.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "UnhealthyThreshold",
       "description": "Specifies the number of consecutive health probe failures required before moving the instance to the Unhealthy state.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

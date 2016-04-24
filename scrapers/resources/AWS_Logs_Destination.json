@@ -8,6 +8,7 @@
     {
       "name": "DestinationName",
       "description": "The name of the CloudWatch Logs destination.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "DestinationPolicy",
       "description": "An AWS Identity and Access Management (IAM) policy that specifies who can write to your destination.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "RoleArn",
       "description": "The Amazon Resource Name (ARN) of an IAM role that permits CloudWatch Logs to send data to the specified AWS resource (TargetArn).",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "TargetArn",
       "description": "The ARN of the AWS resource that receives log events. Currently, you can specify only an Amazon Kinesis stream.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"

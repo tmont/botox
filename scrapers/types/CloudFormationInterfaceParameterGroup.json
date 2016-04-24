@@ -5,12 +5,14 @@
     {
       "name": "Label",
       "description": "A name for the parameter group.",
+      "typeDescription": "AWS CloudFormation Interface Label",
       "required": false,
       "type": "CloudFormationInterfaceLabel"
     },
     {
       "name": "Parameters",
       "description": "A list of case-sensitive parameter logical IDs to include in the group. Parameters must already be defined in the Parameters section of the template. A parameter can be included in only one parameter group.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     }

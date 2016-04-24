@@ -5,12 +5,14 @@
     {
       "name": "Key",
       "description": "The key name of the tag. You can specify a value that is from 1 to 128 Unicode characters in length, but you cannot use the prefix aws:.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Value",
       "description": "The value of the tag key. You can specify a value that is from 0 to 128 Unicode characters in length.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

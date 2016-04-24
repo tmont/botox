@@ -8,6 +8,7 @@
     {
       "name": "Description",
       "description": "A description of the purpose of the API key.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "Enabled",
       "description": "Indicates whether the API key can be used by clients.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "Name",
       "description": "A name for the API key. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name. For more information, see Name Type.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "StageKeys",
       "description": "A list of stages to associated with this API key.",
+      "typeDescription": "List of Amazon API Gateway ApiKey StageKey",
       "required": false,
       "type": "APIGatewayApiKeyStageKey[]",
       "update": "No interruption"

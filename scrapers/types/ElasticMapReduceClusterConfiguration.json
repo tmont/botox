@@ -5,18 +5,21 @@
     {
       "name": "Classification",
       "description": "The name of an application-specific configuration file. For more information see, Configuring Applications in the Amazon Elastic MapReduce Release Guide.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "ConfigurationProperties",
       "description": "The settings that you want to change in the application-specific configuration file. For more information see, Configuring Applications in the Amazon Elastic MapReduce Release Guide.",
+      "typeDescription": "String-to-string map",
       "required": false,
       "type": "Object"
     },
     {
       "name": "Configurations",
       "description": "A list of configurations to apply to this configuration. You can nest configurations so that a single configuration can have its own configurations. In other words, you can configure a configuration. For more information see, Configuring Applications in the Amazon Elastic MapReduce Release Guide.",
+      "typeDescription": "List of Amazon Elastic MapReduce Cluster Configuration",
       "required": false,
       "type": "ElasticMapReduceClusterConfiguration[]"
     }

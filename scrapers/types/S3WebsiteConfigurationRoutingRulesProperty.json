@@ -5,12 +5,14 @@
     {
       "name": "RedirectRule",
       "description": "Redirect requests to another host, to another page, or with another protocol.",
+      "typeDescription": "Amazon S3 Website Configuration Routing Rules Redirect Rule Property",
       "required": true,
       "type": "S3WebsiteConfigurationRoutingRulesRedirectRuleProperty"
     },
     {
       "name": "RoutingRuleCondition",
       "description": "Rules that define when a redirect is applied.",
+      "typeDescription": "Amazon S3 Website Configuration Routing Rules Routing Rule Condition Property",
       "required": false,
       "type": "S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty"
     }

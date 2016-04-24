@@ -5,60 +5,70 @@
     {
       "name": "CacheDataEncrypted",
       "description": "Indicates whether the cached responses are encrypted.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "CacheTtlInSeconds",
       "description": "The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number"
     },
     {
       "name": "CachingEnabled",
       "description": "Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "DataTraceEnabled",
       "description": "Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "HttpMethod",
       "description": "The HTTP method.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "LoggingLevel",
       "description": "The logging level for this method.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "MetricsEnabled",
       "description": "Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "ResourcePath",
       "description": "The resource path for this method.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "ThrottlingBurstLimit",
       "description": "The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number"
     },
     {
       "name": "ThrottlingRateLimit",
       "description": "The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.",
+      "typeDescription": "Number",
       "required": false,
       "type": "Number"
     }

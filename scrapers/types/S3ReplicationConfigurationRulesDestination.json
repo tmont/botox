@@ -5,12 +5,14 @@
     {
       "name": "Bucket",
       "description": "The Amazon resource name (ARN) of an S3 bucket where Amazon S3 stores replicated objects. This destination bucket must be in a different region than your source bucket.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "StorageClass",
       "description": "The storage class to use when replicating objects, such as standard or reduced redundancy. By default, Amazon S3 uses the storage class of the source object to create object replica. For valid values, see the StorageClass element of the PUT Bucket replication action in the Amazon Simple Storage Service API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

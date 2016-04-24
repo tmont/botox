@@ -8,6 +8,7 @@
     {
       "name": "ParameterGroups",
       "description": "A list of parameter group types, where you specify group names, the parameters in each group, and the order in which the parameters are shown.",
+      "typeDescription": "AWS CloudFormation Interface ParameterGroup",
       "required": false,
       "type": "CloudFormationInterfaceParameterGroup",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "ParameterLabels",
       "description": "A list of parameters and their friendly names that the AWS CloudFormation console shows when a stack is created or updated.",
+      "typeDescription": "AWS CloudFormation Interface ParameterLabel",
       "required": false,
       "type": "CloudFormationInterfaceParameterLabel",
       "update": "No interruption"

@@ -55,7 +55,7 @@ SNSTopic.prototype.displayName = function(value) {
  * Required: false
  * Update requires: Updates are not supported.
  *
- * @param {SNSSubscription[]|Attribute|Reference} value
+ * @param {SNSSubscriptionPropertyType[]|Attribute|Reference} value List of SNS Subscriptions
  * @return {SNSTopic}
  */
 SNSTopic.prototype.subscription = function(value) {

@@ -5,6 +5,7 @@
     {
       "name": "DeliveryFrequency",
       "description": "The frequency with which AWS Config delivers configuration snapshots. For valid values, see ConfigSnapshotDeliveryProperties in the AWS Config API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

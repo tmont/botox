@@ -8,6 +8,7 @@
     {
       "name": "ApplicationName",
       "description": "A name for the Elastic Beanstalk application. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the application name. For more information, see Name Type.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "Description",
       "description": "An optional description of this application.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"

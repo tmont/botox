@@ -5,6 +5,7 @@
     {
       "name": "GroupId",
       "description": "The ID of a security group.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

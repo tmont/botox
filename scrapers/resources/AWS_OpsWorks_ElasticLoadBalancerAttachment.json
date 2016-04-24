@@ -8,6 +8,7 @@
     {
       "name": "ElasticLoadBalancerName",
       "description": "Elastic Load Balancing load balancer name.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "LayerId",
       "description": "The AWS OpsWorks layer ID that the Elastic Load Balancing load balancer will be attached to.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"

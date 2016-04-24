@@ -5,24 +5,28 @@
     {
       "name": "ComplianceResourceId",
       "description": "The ID of an AWS resource that you want AWS Config to evaluate against a rule. If you specify an ID, you must also specify a resource type for the ComplianceResourceTypes property.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "ComplianceResourceTypes",
       "description": "The types of AWS resources that you want AWS Config to evaluate against the rule. If you specify the ComplianceResourceId property, specify only one resource type.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     },
     {
       "name": "TagKey",
       "description": "The tag key that is applied to the AWS resources that you want AWS Config to evaluate against the rule.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "TagValue",
       "description": "The tag value that is applied to the AWS resources that you want AWS Config to evaluate against the rule.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

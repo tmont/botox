@@ -5,18 +5,21 @@
     {
       "name": "Bucket",
       "description": "The Amazon S3 bucket address where access logs are stored, for example, mybucket.s3.amazonaws.com.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "IncludeCookies",
       "description": "Indicates whether CloudFront includes cookies in access logs.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "Prefix",
       "description": "A prefix for the access log file names for this distribution.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

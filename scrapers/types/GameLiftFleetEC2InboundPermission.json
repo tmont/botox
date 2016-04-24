@@ -5,6 +5,7 @@
     {
       "name": "FromPort",
       "description": "The starting value for a range of allowed port numbers. This value must be lower than the ToPort value.",
+      "typeDescription": "Integer",
       "required": true,
       "type": "Number"
     }

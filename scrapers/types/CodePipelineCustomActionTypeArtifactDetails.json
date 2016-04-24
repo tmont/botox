@@ -5,12 +5,14 @@
     {
       "name": "MaximumCount",
       "description": "The maximum number of artifacts allowed for the action type.",
+      "typeDescription": "Integer",
       "required": true,
       "type": "Number"
     },
     {
       "name": "MinimumCount",
       "description": "The minimum number of artifacts allowed for the action type.",
+      "typeDescription": "Integer",
       "required": true,
       "type": "Number"
     }

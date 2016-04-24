@@ -5,12 +5,14 @@
     {
       "name": "ParameterName",
       "description": "The name of the parameter.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "ParameterValue",
       "description": "The value of the parameter.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

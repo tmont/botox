@@ -32,7 +32,7 @@ OpsWorksStack.prototype.agentVersion = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {key[]|Attribute|Reference} value
+ * @param {key[]|Attribute|Reference} value A list of key-value pairs
  * @return {OpsWorksStack}
  */
 OpsWorksStack.prototype.attributes = function(value) {
@@ -45,7 +45,7 @@ OpsWorksStack.prototype.attributes = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {OpsWorksChefConfigurationType|Attribute|Reference} value
+ * @param {OpsWorksChefConfigurationType|Attribute|Reference} value AWS OpsWorks ChefConfiguration Type
  * @return {OpsWorksStack}
  */
 OpsWorksStack.prototype.chefConfiguration = function(value) {
@@ -58,7 +58,7 @@ OpsWorksStack.prototype.chefConfiguration = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {OpsWorksStackConfigurationManagerType|Attribute|Reference} value
+ * @param {OpsWorksStackConfigurationManagerType|Attribute|Reference} value AWS OpsWorks StackConfigurationManager Type
  * @return {OpsWorksStack}
  */
 OpsWorksStack.prototype.configurationManager = function(value) {
@@ -71,7 +71,7 @@ OpsWorksStack.prototype.configurationManager = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {OpsWorksSourceType|Attribute|Reference} value
+ * @param {OpsWorksSourceType|Attribute|Reference} value AWS OpsWorks Source Type
  * @return {OpsWorksStack}
  */
 OpsWorksStack.prototype.customCookbooksSource = function(value) {

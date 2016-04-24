@@ -5,6 +5,7 @@
     {
       "name": "Name",
       "description": "The name of the artifact that is the result of an AWS CodePipeline action, such as My App. Output artifact names must be unique within a pipeline.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

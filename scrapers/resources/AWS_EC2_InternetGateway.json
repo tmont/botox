@@ -8,6 +8,7 @@
     {
       "name": "Tags",
       "description": "An arbitrary set of tags (key–value pairs) for this resource.",
+      "typeDescription": "AWS CloudFormation Resource Tags",
       "required": false,
       "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption."

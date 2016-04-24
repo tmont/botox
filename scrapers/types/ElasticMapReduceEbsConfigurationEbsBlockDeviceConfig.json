@@ -5,12 +5,14 @@
     {
       "name": "VolumeSpecification",
       "description": "The settings for the Amazon EBS volumes.",
+      "typeDescription": "Amazon Elastic MapReduce EbsConfiguration EbsBlockDeviceConfig VolumeSpecification",
       "required": true,
       "type": "ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification"
     },
     {
       "name": "VolumesPerInstance",
       "description": "The number of Amazon EBS volumes that you want to create for each instance in the EMR cluster or instance group.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number"
     }

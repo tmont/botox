@@ -8,6 +8,7 @@
     {
       "name": "ApiKeyRequired",
       "description": "Indicates whether the method requires clients to submit a valid API key.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "AuthorizationType",
       "description": "The method's authorization type.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "AuthorizerId",
       "description": "The identifier of the authorizer to use on this method. If you specify this property, specify CUSTOM for the AuthorizationType property.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "HttpMethod",
       "description": "The HTTP method that clients will use to call this method.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "Integration",
       "description": "The back-end system that the method calls when it receives a request.",
+      "typeDescription": "Amazon API Gateway Method Integration",
       "required": false,
       "type": "APIGatewayMethodIntegration",
       "update": "No interruption"
@@ -43,6 +48,7 @@
     {
       "name": "MethodResponses",
       "description": "The responses that can be sent to the client who calls the method.",
+      "typeDescription": "List of Amazon API Gateway Method MethodResponse",
       "required": false,
       "type": "APIGatewayMethodMethodResponse[]",
       "update": "No interruption"
@@ -50,6 +56,7 @@
     {
       "name": "RequestModels",
       "description": "The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.",
+      "typeDescription": "List of key-value pairs",
       "required": false,
       "type": "key[]",
       "update": "No interruption"
@@ -57,6 +64,7 @@
     {
       "name": "RequestParameters",
       "description": "Request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean maps), with a source as the key and a Boolean as the value. The Boolean specifies whether a parameter is required. A source must match the following format method.request.location.name, where the location is a query string, path, or header, and name is a valid, unique parameter name.",
+      "typeDescription": "List of key-value pairs",
       "required": false,
       "type": "key[]",
       "update": "No interruption"
@@ -64,6 +72,7 @@
     {
       "name": "ResourceId",
       "description": "The ID of an API Gateway resource.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -71,6 +80,7 @@
     {
       "name": "RestApiId",
       "description": "The ID of the RestApi resource in which API Gateway creates the method.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"

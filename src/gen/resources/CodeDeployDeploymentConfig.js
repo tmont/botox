@@ -32,7 +32,7 @@ CodeDeployDeploymentConfig.prototype.deploymentConfigName = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {CodeDeployDeploymentConfigMinimumHealthyHosts|Attribute|Reference} value
+ * @param {CodeDeployDeploymentConfigMinimumHealthyHosts|Attribute|Reference} value AWS CodeDeploy DeploymentConfig MinimumHealthyHosts
  * @return {CodeDeployDeploymentConfig}
  */
 CodeDeployDeploymentConfig.prototype.minimumHealthyHosts = function(value) {

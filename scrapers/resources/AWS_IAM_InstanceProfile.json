@@ -8,6 +8,7 @@
     {
       "name": "Path",
       "description": "The path associated with this IAM instance profile. For information about IAM paths, see Friendly Names and Paths in the AWS Identity and Access Management User Guide.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,8 +16,9 @@
     {
       "name": "Roles",
       "description": "The roles associated with this IAM instance profile.",
+      "typeDescription": "List of references to AWS::IAM::Roles. Currently, a maximum of one role can be assigned to an instance profile.",
       "required": true,
-      "type": "referencestoAW[]",
+      "type": "IAMRole[]",
       "update": "No interruption"
     }
   ],

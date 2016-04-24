@@ -55,7 +55,7 @@ EMRCluster.prototype.additionalInfo = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {ElasticMapReduceClusterApplication[]|Attribute|Reference} value
+ * @param {ElasticMapReduceClusterApplication[]|Attribute|Reference} value List of Amazon Elastic MapReduce Cluster Application
  * @return {EMRCluster}
  */
 EMRCluster.prototype.applications = function(value) {
@@ -68,7 +68,7 @@ EMRCluster.prototype.applications = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {ElasticMapReduceClusterBootstrapActionConfig[]|Attribute|Reference} value
+ * @param {ElasticMapReduceClusterBootstrapActionConfig[]|Attribute|Reference} value List of Amazon Elastic MapReduce Cluster BootstrapActionConfig
  * @return {EMRCluster}
  */
 EMRCluster.prototype.bootstrapActions = function(value) {
@@ -81,7 +81,7 @@ EMRCluster.prototype.bootstrapActions = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {ElasticMapReduceClusterConfiguration[]|Attribute|Reference} value
+ * @param {ElasticMapReduceClusterConfiguration[]|Attribute|Reference} value List of Amazon Elastic MapReduce Cluster Configuration
  * @return {EMRCluster}
  */
 EMRCluster.prototype.configurations = function(value) {
@@ -94,7 +94,7 @@ EMRCluster.prototype.configurations = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {ElasticMapReduceEbsConfiguration|Attribute|Reference} value
+ * @param {ElasticMapReduceEbsConfiguration|Attribute|Reference} value Amazon Elastic MapReduce EbsConfiguration
  * @return {EMRCluster}
  */
 EMRCluster.prototype.ebsConfiguration = function(value) {
@@ -107,7 +107,7 @@ EMRCluster.prototype.ebsConfiguration = function(value) {
  * Required: true
  * Update requires: Replacement
  *
- * @param {ElasticMapReduceClusterJobFlowInstancesConfig|Attribute|Reference} value
+ * @param {ElasticMapReduceClusterJobFlowInstancesConfig|Attribute|Reference} value Amazon Elastic MapReduce Cluster JobFlowInstancesConfig
  * @return {EMRCluster}
  */
 EMRCluster.prototype.instances = function(value) {
@@ -185,7 +185,7 @@ EMRCluster.prototype.serviceRole = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
  * @return {EMRCluster}
  */
 EMRCluster.prototype.tags = function(value) {

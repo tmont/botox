@@ -5,12 +5,14 @@
     {
       "name": "Enabled",
       "description": "Whether or not connection draining is enabled for the load balancer.",
+      "typeDescription": "Boolean",
       "required": true,
       "type": "Boolean"
     },
     {
       "name": "Timeout",
       "description": "The time in seconds after the load balancer closes all connections to a deregistered or unhealthy instance.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number"
     }

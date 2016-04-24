@@ -5,12 +5,14 @@
     {
       "name": "Reason",
       "description": "An explanation of why the transition between two stages of a pipeline was disabled.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "StageName",
       "description": "The name of the stage to which transitions are disabled.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

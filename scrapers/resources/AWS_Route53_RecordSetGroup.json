@@ -8,6 +8,7 @@
     {
       "name": "Comment",
       "description": "Any comments you want to include about the hosted zone.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "HostedZoneId",
       "description": "The ID of the hosted zone.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -22,6 +24,7 @@
     {
       "name": "HostedZoneName",
       "description": "The name of the domain for the hosted zone where you want to add the record set.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -29,8 +32,9 @@
     {
       "name": "RecordSets",
       "description": "List of resource record sets to add.",
+      "typeDescription": ": List of AWS::Route53::RecordSet objects, as shown in the following example:",
       "required": true,
-      "type": "ListofAWSRoute53RecordSetobjectsasshowninthefollowingexample",
+      "type": "[]",
       "update": "No interruption"
     }
   ],

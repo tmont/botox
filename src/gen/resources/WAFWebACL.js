@@ -19,7 +19,7 @@ WAFWebACL.prototype = Object.create(Resource.prototype);
  * Required: true
  * Update requires: No interruption
  *
- * @param {WAFWebACLAction|Attribute|Reference} value
+ * @param {WAFWebACLAction|Attribute|Reference} value AWS WAF WebACL Action
  * @return {WAFWebACL}
  */
 WAFWebACL.prototype.defaultAction = function(value) {
@@ -58,7 +58,7 @@ WAFWebACL.prototype.name = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {WAFWebACLRules[]|Attribute|Reference} value
+ * @param {WAFWebACLRules[]|Attribute|Reference} value List of AWS WAF WebACL Rules
  * @return {WAFWebACL}
  */
 WAFWebACL.prototype.rules = function(value) {

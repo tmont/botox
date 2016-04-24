@@ -90,7 +90,7 @@ EC2NetworkInterface.prototype.privateIpAddress = function(value) {
  * Required: false
  * Update requires: Replacement if you change the primary private IP address. If not, update requires No interruption.
  *
- * @param {PrivateIpAddressSpecification[]|Attribute|Reference} value
+ * @param {EC2NetworkInterfacePrivateIPSpecification[]|Attribute|Reference} value list of PrivateIpAddressSpecification.
  * @return {EC2NetworkInterface}
  */
 EC2NetworkInterface.prototype.privateIpAddresses = function(value) {
@@ -142,7 +142,7 @@ EC2NetworkInterface.prototype.subnetId = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
  * @return {EC2NetworkInterface}
  */
 EC2NetworkInterface.prototype.tags = function(value) {

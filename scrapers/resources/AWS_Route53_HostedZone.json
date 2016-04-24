@@ -8,6 +8,7 @@
     {
       "name": "HostedZoneConfig",
       "description": "A complex type that contains an optional comment about your hosted zone.",
+      "typeDescription": "Amazon Route 53 HostedZoneConfig Property",
       "required": false,
       "type": "Route53HostedZoneConfigProperty",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "HostedZoneTags",
       "description": "An arbitrary set of tags (key–value pairs) for this hosted zone.",
+      "typeDescription": "List of Amazon Route 53 HostedZoneTags",
       "required": false,
       "type": "Route53HostedZoneTags[]",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "Name",
       "description": "The name of the domain. For resource record types that include a domain name, specify a fully qualified domain name.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "VPCs",
       "description": "One or more VPCs that you want to associate with this hosted zone. When you specify this property, AWS CloudFormation creates a private hosted zone.",
+      "typeDescription": "List of Amazon Route 53 HostedZoneVPCs",
       "required": false,
       "type": "Route53HostedZoneVPCs[]"
     }

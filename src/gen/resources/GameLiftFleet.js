@@ -58,7 +58,7 @@ GameLiftFleet.prototype.desiredEC2Instances = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {GameLiftFleetEC2InboundPermission[]|Attribute|Reference} value
+ * @param {GameLiftFleetEC2InboundPermission[]|Attribute|Reference} value List of Amazon GameLift Fleet EC2InboundPermission
  * @return {GameLiftFleet}
  */
 GameLiftFleet.prototype.eC2InboundPermissions = function(value) {

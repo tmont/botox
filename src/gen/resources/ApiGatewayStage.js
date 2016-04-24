@@ -84,7 +84,7 @@ ApiGatewayStage.prototype.description = function(value) {
  * Required: false
  * Update requires: undefined
  *
- * @param {APIGatewayStageMethodSetting|Attribute|Reference} value
+ * @param {APIGatewayStageMethodSetting|Attribute|Reference} value Amazon API Gateway Stage MethodSetting
  * @return {ApiGatewayStage}
  */
 ApiGatewayStage.prototype.methodSettings = function(value) {
@@ -123,7 +123,7 @@ ApiGatewayStage.prototype.stageName = function(value) {
  * Required: false
  * Update requires: undefined
  *
- * @param {key[]|Attribute|Reference} value
+ * @param {key[]|Attribute|Reference} value List of key-value pairs
  * @return {ApiGatewayStage}
  */
 ApiGatewayStage.prototype.variables = function(value) {

@@ -8,6 +8,7 @@
     {
       "name": "Description",
       "description": "A description for the cache security group.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Updates are not supported."

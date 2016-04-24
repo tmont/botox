@@ -8,6 +8,7 @@
     {
       "name": "Description",
       "description": "The description of this network interface.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption."
@@ -15,6 +16,7 @@
     {
       "name": "GroupSet",
       "description": "A list of security group IDs associated with this network interface.",
+      "typeDescription": "List of strings.",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "PrivateIpAddress",
       "description": "Assigns a single private IP address to the network interface, which is used as the primary private IP address. If you want to specify multiple private IP address, use the PrivateIpAddresses property.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement."
@@ -29,13 +32,15 @@
     {
       "name": "PrivateIpAddresses",
       "description": "Assigns a list of private IP addresses to the network interface. You can specify a primary private IP address by setting the value of the Primary property to true in the PrivateIpAddressSpecification property. If you want Amazon EC2 to automatically assign private IP addresses, use the SecondaryPrivateIpAddressCount property and do not specify this property.",
+      "typeDescription": "list of PrivateIpAddressSpecification.",
       "required": false,
-      "type": "PrivateIpAddressSpecification[]",
+      "type": "EC2NetworkInterfacePrivateIPSpecification[]",
       "update": "Replacement if you change the primary private IP address. If not, update requires No interruption."
     },
     {
       "name": "SecondaryPrivateIpAddressCount",
       "description": "The number of secondary private IP addresses that Amazon EC2 automatically assigns to the network interface. Amazon EC2 uses the value of the PrivateIpAddress property as the primary private IP address. If you don't specify that property, Amazon EC2 automatically assigns both the primary and secondary private IP addresses.",
+      "typeDescription": "Integer.",
       "required": false,
       "type": "Number",
       "update": "No interruption."
@@ -43,6 +48,7 @@
     {
       "name": "SourceDestCheck",
       "description": "Flag indicating whether traffic to or from the instance is validated.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption."
@@ -50,6 +56,7 @@
     {
       "name": "SubnetId",
       "description": "The ID of the subnet to associate with the network interface.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement."
@@ -57,6 +64,7 @@
     {
       "name": "Tags",
       "description": "An arbitrary set of tags (key–value pairs) for this network interface.",
+      "typeDescription": "AWS CloudFormation Resource Tags",
       "required": false,
       "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption."

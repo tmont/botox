@@ -71,7 +71,7 @@ ApiGatewayMethod.prototype.httpMethod = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {APIGatewayMethodIntegration|Attribute|Reference} value
+ * @param {APIGatewayMethodIntegration|Attribute|Reference} value Amazon API Gateway Method Integration
  * @return {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.integration = function(value) {
@@ -84,7 +84,7 @@ ApiGatewayMethod.prototype.integration = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {APIGatewayMethodMethodResponse[]|Attribute|Reference} value
+ * @param {APIGatewayMethodMethodResponse[]|Attribute|Reference} value List of Amazon API Gateway Method MethodResponse
  * @return {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.methodResponses = function(value) {
@@ -97,7 +97,7 @@ ApiGatewayMethod.prototype.methodResponses = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {key[]|Attribute|Reference} value
+ * @param {key[]|Attribute|Reference} value List of key-value pairs
  * @return {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.requestModels = function(value) {
@@ -110,7 +110,7 @@ ApiGatewayMethod.prototype.requestModels = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {key[]|Attribute|Reference} value
+ * @param {key[]|Attribute|Reference} value List of key-value pairs
  * @return {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.requestParameters = function(value) {

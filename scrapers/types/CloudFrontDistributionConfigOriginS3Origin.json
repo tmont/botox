@@ -5,6 +5,7 @@
     {
       "name": "OriginAccessIdentity",
       "description": "The CloudFront origin access identity to associate with the origin. This is used to configure the origin so that end users can access objects in an Amazon S3 bucket through CloudFront only.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

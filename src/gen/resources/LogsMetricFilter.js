@@ -45,7 +45,7 @@ LogsMetricFilter.prototype.logGroupName = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {CloudWatchLogsMetricFilterMetricTransformationProperty[]|Attribute|Reference} value
+ * @param {CloudWatchLogsMetricFilterMetricTransformationProperty[]|Attribute|Reference} value A list of CloudWatch Logs MetricFilter MetricTransformation Property
  * @return {LogsMetricFilter}
  */
 LogsMetricFilter.prototype.metricTransformations = function(value) {

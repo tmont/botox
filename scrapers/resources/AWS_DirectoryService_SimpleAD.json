@@ -8,6 +8,7 @@
     {
       "name": "CreateAlias",
       "description": "A unique alias to assign to the directory. AWS Directory Service uses the alias to construct the access URL for the directory, such as http://alias.awsapps.com. By default, AWS CloudFormation does not create an alias.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "Description",
       "description": "A description of the directory.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -22,6 +24,7 @@
     {
       "name": "EnableSso",
       "description": "Whether to enable single sign-on for a directory. If you don't specify a value, AWS CloudFormation disables single sign-on by default.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "Name",
       "description": "The fully qualified name for the directory, such as corp.example.com.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -36,6 +40,7 @@
     {
       "name": "Password",
       "description": "The password for the directory administrator. AWS Directory Service creates a directory administrator account with the user name Administrator and this password.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -43,6 +48,7 @@
     {
       "name": "ShortName",
       "description": "The NetBIOS name of the on-premises directory, such as CORP.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -50,6 +56,7 @@
     {
       "name": "Size",
       "description": "The size of the directory. For valid values, see CreateDirectory in the AWS Directory Service API Reference.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -57,6 +64,7 @@
     {
       "name": "VpcSettings",
       "description": "Specifies the VPC settings of the directory server.",
+      "typeDescription": "AWS Directory Service SimpleAD VpcSettings",
       "required": true,
       "type": "DirectoryServiceSimpleADVpcSettings",
       "update": "Replacement"

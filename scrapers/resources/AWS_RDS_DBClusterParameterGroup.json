@@ -8,6 +8,7 @@
     {
       "name": "Description",
       "description": "A friendly description for this DB cluster parameter group.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "Family",
       "description": "The database family of this DB cluster parameter group, such as aurora5.6.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -22,15 +24,17 @@
     {
       "name": "Parameters",
       "description": "The parameters to set for this DB cluster parameter group. For a list of parameter keys, see Appendix: DB Cluster and DB Instance Parameters in the Amazon Relational Database Service User Guide.",
+      "typeDescription": "A JSON object consisting of string key-value pairs, as shown in the following example:",
       "required": true,
-      "type": "AJSONobjectconsistingofstringkeyvaluepairsasshowninthefollowingexample",
+      "type": "Object",
       "update": "No interruption or some interruptions, depending on the parameters that you update."
     },
     {
       "name": "Tags",
       "description": "The tags that you want to attach to this parameter group.",
+      "typeDescription": "A list of resource tags",
       "required": false,
-      "type": "resourcetag[]",
+      "type": "CloudFormationResourceTagsType[]",
       "update": "Updates are not supported."
     }
   ],

@@ -8,6 +8,7 @@
     {
       "name": "AvailabilityZone",
       "description": "Specifies the name of the Availability Zone in which the instance is located.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "BlockDeviceMappings",
       "description": "Defines a set of Amazon Elastic Block Store block device mappings, ephemeral instance store block device mappings, or both. For more information, see Amazon Elastic Block Store or Amazon EC2 Instance Store in the Amazon EC2 User Guide for Linux Instances.",
+      "typeDescription": "A list of Amazon EC2 Block Device Mapping Property.",
       "required": false,
       "type": "EC2BlockDeviceMappingProperty[]",
       "update": "Replacement. If you change only the DeleteOnTermination property for one or more block devices, update requires No interruption."
@@ -22,6 +24,7 @@
     {
       "name": "DisableApiTermination",
       "description": "Specifies whether the instance can be terminated through the API.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "EbsOptimized",
       "description": "Specifies whether the instance is optimized for Amazon Elastic Block Store I/O. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "Some interruptions for Amazon EBS-backed instances"
@@ -36,6 +40,7 @@
     {
       "name": "IamInstanceProfile",
       "description": "The physical ID (resource name) of an instance profile or a reference to an AWS::IAM::InstanceProfile resource.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -43,6 +48,7 @@
     {
       "name": "ImageId",
       "description": "Provides the unique ID of the Amazon Machine Image (AMI) that was assigned during registration.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -50,6 +56,7 @@
     {
       "name": "InstanceInitiatedShutdownBehavior",
       "description": "Indicates whether an instance stops or terminates when you shut down the instance from the instance's operating system shutdown command. You can specify stop or terminate. For more information, see the RunInstances command in the Amazon EC2 API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -57,6 +64,7 @@
     {
       "name": "InstanceType",
       "description": "The instance type, such as t2.micro. The default type is \"m1.small\". For a list of instance types, see Instance Families and Types.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Some interruptions for Amazon EBS-backed instances"
@@ -64,6 +72,7 @@
     {
       "name": "KernelId",
       "description": "The kernel ID.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Some interruptions for Amazon EBS-backed instances"
@@ -71,6 +80,7 @@
     {
       "name": "KeyName",
       "description": "Provides the name of the Amazon EC2 key pair.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -78,6 +88,7 @@
     {
       "name": "Monitoring",
       "description": "Specifies whether monitoring is enabled for the instance.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -85,6 +96,7 @@
     {
       "name": "NetworkInterfaces",
       "description": "A list of embedded objects that describe the network interfaces to associate with this instance.",
+      "typeDescription": "A list of EC2 NetworkInterface Embedded Property Type",
       "required": false,
       "type": "EC2NetworkInterfaceEmbeddedPropertyType[]",
       "update": "Replacement"
@@ -92,6 +104,7 @@
     {
       "name": "PlacementGroupName",
       "description": "The name of an existing placement group that you want to launch the instance into (for cluster instances).",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -99,6 +112,7 @@
     {
       "name": "PrivateIpAddress",
       "description": "The private IP address for this instance.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -106,6 +120,7 @@
     {
       "name": "RamdiskId",
       "description": "The ID of the RAM disk to select. Some kernels require additional drivers at launch. Check the kernel requirements for information about whether you need to specify a RAM disk. To find kernel requirements, go to the AWS Resource Center and search for the kernel ID.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Some interruptions for Amazon EBS-backed instances"
@@ -113,6 +128,7 @@
     {
       "name": "SecurityGroupIds",
       "description": "A list that contains the security group IDs for VPC security groups to assign to the Amazon EC2 instance. If you specified the NetworkInterfaces property, do not specify this property.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption for instances that are in a VPC."
@@ -120,6 +136,7 @@
     {
       "name": "SecurityGroups",
       "description": "Valid only for Amazon EC2 security groups. A list that contains the Amazon EC2 security groups to assign to the Amazon EC2 instance. The list can contain both the name of existing Amazon EC2 security groups or references to AWS::EC2::SecurityGroup resources created in the template.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "Replacement."
@@ -127,6 +144,7 @@
     {
       "name": "SourceDestCheck",
       "description": "Controls whether source/destination checking is enabled on the instance. Also determines if an instance in a VPC will perform network address translation (NAT).",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -134,6 +152,7 @@
     {
       "name": "SsmAssociations",
       "description": "The Amazon EC2 Simple Systems Manager (SSM) document and parameter values to associate with this instance. To use this property, you must specify an IAM role for the instance. For more information, see Prerequisites for Remotely Running Commands on EC2 Instances in the Amazon EC2 User Guide for Microsoft Windows Instances.",
+      "typeDescription": "List of Amazon EC2 Instance SsmAssociations.",
       "required": false,
       "type": "EC2InstanceSsmAssociations[]",
       "update": "No interruption"
@@ -141,6 +160,7 @@
     {
       "name": "SubnetId",
       "description": "If you're using Amazon VPC, this property specifies the ID of the subnet that you want to launch the instance into. If you specified the NetworkInterfaces property, do not specify this property.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -148,6 +168,7 @@
     {
       "name": "Tags",
       "description": "An arbitrary set of tags (key–value pairs) for this instance.",
+      "typeDescription": "AWS CloudFormation Resource Tags",
       "required": false,
       "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption."
@@ -155,6 +176,7 @@
     {
       "name": "Tenancy",
       "description": "The tenancy of the instance that you want to launch. This value can be either \"default\" or \"dedicated\". An instance that has a tenancy value of \"dedicated\" runs on single-tenant hardware and can be launched only into a VPC. For more information, see Using EC2 Dedicated Instances Within Your VPC in the Amazon VPC User Guide.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -162,6 +184,7 @@
     {
       "name": "UserData",
       "description": "Base64-encoded MIME user data that is made available to the instances.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Some interruptions for Amazon EBS-backed instances."
@@ -169,6 +192,7 @@
     {
       "name": "Volumes",
       "description": "The Amazon EBS volumes to attach to the instance.",
+      "typeDescription": "A list of EC2 MountPoints.",
       "required": false,
       "type": "EC2MountPointPropertyType[]",
       "update": "No interruption"
@@ -176,6 +200,7 @@
     {
       "name": "AdditionalInfo",
       "description": "Reserved.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Some interruptions for Amazon EBS-backed instances"

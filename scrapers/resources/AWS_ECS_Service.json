@@ -8,6 +8,7 @@
     {
       "name": "Cluster",
       "description": "The name or Amazon Resource Name (ARN) of the cluster that you want to run your service on. If you do not specify a cluster, Amazon ECS uses the default cluster.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "DesiredCount",
       "description": "The number of simultaneous tasks, which you specify by using the TaskDefinition property, that you want to run on the cluster.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "LoadBalancers",
       "description": "A list of load balancer objects to associate with the cluster.",
+      "typeDescription": "List of Amazon EC2 Container Service Service LoadBalancers",
       "required": false,
       "type": "EC2ContainerServiceServiceLoadBalancers[]",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "Role",
       "description": "The name or ARN of an AWS Identity and Access Management (IAM) role that allows your Amazon ECS container agent to make calls to your load balancer.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -36,6 +40,7 @@
     {
       "name": "TaskDefinition",
       "description": "The ARN of the task definition that you want to run on the cluster.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Some interruptions"

@@ -5,12 +5,14 @@
     {
       "name": "AttachmentID",
       "description": "The ID of the network interface attachment.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "InstanceID",
       "description": "The ID of the instance attached to the network interface.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

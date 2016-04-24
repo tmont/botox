@@ -5,30 +5,35 @@
     {
       "name": "HostName",
       "description": "Name of the host where requests are redirected.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "HttpRedirectCode",
       "description": "The HTTP redirect code to use on the response.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Protocol",
       "description": "The protocol to use in the redirect request.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "ReplaceKeyPrefixWith",
       "description": "The object key prefix to use in the redirect request. For example, to redirect requests for all pages with the prefix docs/ (objects in the docs/ folder) to the documents/ prefix, you can set the KeyPrefixEquals property in routing condition property to docs/, and set the ReplaceKeyPrefixWith property to documents/.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "ReplaceKeyWith",
       "description": "The specific object key to use in the redirect request. For example, redirect request to error.html.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

@@ -91,7 +91,7 @@ EC2Instance.prototype.availabilityZone = function(value) {
  * Required: false
  * Update requires: Replacement. If you change only the DeleteOnTermination property for one or more block devices, update requires No interruption.
  *
- * @param {EC2BlockDeviceMappingProperty[]|Attribute|Reference} value
+ * @param {EC2BlockDeviceMappingProperty[]|Attribute|Reference} value A list of Amazon EC2 Block Device Mapping Property.
  * @return {EC2Instance}
  */
 EC2Instance.prototype.blockDeviceMappings = function(value) {
@@ -221,7 +221,7 @@ EC2Instance.prototype.monitoring = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {EC2NetworkInterfaceEmbeddedPropertyType[]|Attribute|Reference} value
+ * @param {EC2NetworkInterfaceEmbeddedPropertyType[]|Attribute|Reference} value A list of EC2 NetworkInterface Embedded Property Type
  * @return {EC2Instance}
  */
 EC2Instance.prototype.networkInterfaces = function(value) {
@@ -312,7 +312,7 @@ EC2Instance.prototype.sourceDestCheck = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {EC2InstanceSsmAssociations[]|Attribute|Reference} value
+ * @param {EC2InstanceSsmAssociations[]|Attribute|Reference} value List of Amazon EC2 Instance SsmAssociations.
  * @return {EC2Instance}
  */
 EC2Instance.prototype.ssmAssociations = function(value) {
@@ -338,7 +338,7 @@ EC2Instance.prototype.subnetId = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
  * @return {EC2Instance}
  */
 EC2Instance.prototype.tags = function(value) {
@@ -377,7 +377,7 @@ EC2Instance.prototype.userData = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {EC2MountPointPropertyType[]|Attribute|Reference} value
+ * @param {EC2MountPointPropertyType[]|Attribute|Reference} value A list of EC2 MountPoints.
  * @return {EC2Instance}
  */
 EC2Instance.prototype.volumes = function(value) {

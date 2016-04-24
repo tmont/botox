@@ -19,7 +19,7 @@ EFSFileSystem.prototype = Object.create(Resource.prototype);
  * Required: false
  * Update requires: No interruption
  *
- * @param {ElasticFileSystemFileSystemFileSystemTags|Attribute|Reference} value
+ * @param {ElasticFileSystemFileSystemFileSystemTags|Attribute|Reference} value Amazon Elastic File System FileSystem FileSystemTags
  * @return {EFSFileSystem}
  */
 EFSFileSystem.prototype.fileSystemTags = function(value) {

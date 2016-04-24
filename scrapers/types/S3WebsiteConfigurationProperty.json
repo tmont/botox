@@ -5,24 +5,28 @@
     {
       "name": "ErrorDocument",
       "description": "The name of the error document for the website.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "IndexDocument",
       "description": "The name of the index document for the website.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "RedirectAllRequestsTo",
       "description": "The redirect behavior for every request to this bucket's website endpoint.",
+      "typeDescription": "Amazon S3 Website Configuration Redirect All Requests To Property",
       "required": false,
       "type": "S3WebsiteConfigurationRedirectAllRequestsToProperty"
     },
     {
       "name": "RoutingRules",
       "description": "Rules that define when a redirect is applied and the redirect behavior.",
+      "typeDescription": "List of Amazon S3 Website Configuration Routing Rules Property",
       "required": false,
       "type": "S3WebsiteConfigurationRoutingRulesProperty[]"
     }

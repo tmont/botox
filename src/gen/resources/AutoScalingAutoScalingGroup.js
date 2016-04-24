@@ -136,7 +136,7 @@ AutoScalingAutoScalingGroup.prototype.maxSize = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AutoScalingMetricsCollection[]|Attribute|Reference} value
+ * @param {AutoScalingMetricsCollection[]|Attribute|Reference} value A list of Auto Scaling MetricsCollection
  * @return {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.metricsCollection = function(value) {
@@ -162,7 +162,7 @@ AutoScalingAutoScalingGroup.prototype.minSize = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AutoScalingNotificationConfigurations[]|Attribute|Reference} value
+ * @param {AutoScalingNotificationConfigurations[]|Attribute|Reference} value List of Auto Scaling NotificationConfigurations
  * @return {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.notificationConfigurations = function(value) {
@@ -188,7 +188,7 @@ AutoScalingAutoScalingGroup.prototype.placementGroup = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AutoScalingTag[]|Attribute|Reference} value
+ * @param {AutoScalingTagsPropertyType[]|Attribute|Reference} value List of Auto Scaling Tags
  * @return {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.tags = function(value) {

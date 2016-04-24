@@ -58,7 +58,7 @@ RDSOptionGroup.prototype.optionGroupDescription = function(value) {
  * Required: true
  * Update requires: Replacement
  *
- * @param {RDSOptionGroupOptionConfigurations|Attribute|Reference} value
+ * @param {RDSOptionGroupOptionConfigurations|Attribute|Reference} value Amazon RDS OptionGroup OptionConfigurations
  * @return {RDSOptionGroup}
  */
 RDSOptionGroup.prototype.optionConfigurations = function(value) {
@@ -71,7 +71,7 @@ RDSOptionGroup.prototype.optionConfigurations = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
  * @return {RDSOptionGroup}
  */
 RDSOptionGroup.prototype.tags = function(value) {

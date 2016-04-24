@@ -8,6 +8,7 @@
     {
       "name": "Type",
       "description": "The type of VPN connection this virtual private gateway supports.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,12 +16,14 @@
     {
       "name": "CustomerGatewayId",
       "description": "The ID of the customer gateway. This can either be an embedded JSON object or a reference to a Gateway ID.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "StaticRoutesOnly",
       "description": "Indicates whether the VPN connection requires static routes.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "Replacement"
@@ -28,6 +31,7 @@
     {
       "name": "Tags",
       "description": "The tags that you want to attach to the resource.",
+      "typeDescription": "AWS CloudFormation Resource Tags.",
       "required": false,
       "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption."
@@ -35,6 +39,7 @@
     {
       "name": "VpnGatewayId",
       "description": "The ID of the virtual private gateway. This can either be an embedded JSON object or a reference to a Gateway ID.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

@@ -5,30 +5,35 @@
     {
       "name": "DBSecurityGroupMemberships",
       "description": "A list of database security group names for this option. If the option requires access to a port, the security groups must allow access to that port. If you specify this property, don't specify the VPCSecurityGroupMemberships property.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     },
     {
       "name": "OptionName",
       "description": "The name of the option. For more information about options, see Working with Option Groups in the Amazon Relational Database Service User Guide.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "OptionSettings",
       "description": "The settings for this option.",
+      "typeDescription": "Amazon RDS OptionGroup OptionConfigurations OptionSettings",
       "required": false,
       "type": "RDSOptionGroupOptionConfigurationsOptionSettings"
     },
     {
       "name": "Port",
       "description": "The port number that this option uses.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number"
     },
     {
       "name": "VpcSecurityGroupMemberships",
       "description": "A list of VPC security group IDs for this option. If the option requires access to a port, the security groups must allow access to that port. If you specify this property, don't specify the DBSecurityGroupMemberships property.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     }

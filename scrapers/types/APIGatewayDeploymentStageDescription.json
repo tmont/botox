@@ -5,54 +5,63 @@
     {
       "name": "CacheClusterEnabled",
       "description": "Indicates whether cache clustering is enabled for the stage.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "CacheClusterSize",
       "description": "The size of the stage's cache cluster.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "ClientCertificateId",
       "description": "The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "DeploymentId",
       "description": "The ID of the deployment that the stage points to.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Description",
       "description": "A description of the purpose of the stage.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "MethodSettings",
       "description": "Configures settings for all of the stage's methods.",
+      "typeDescription": "Amazon API Gateway Deployment StageDescription MethodSetting",
       "required": false,
       "type": "APIGatewayDeploymentStageDescriptionMethodSetting"
     },
     {
       "name": "RestApiId",
       "description": "The ID of a RestApi resource that you're deploying with this stage.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "StageName",
       "description": "The name of the stage, which API Gateway uses as the first path segment in the invoke Uniform Resource Identifier (URI).",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Variables",
       "description": "A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&amp;=,]+.",
+      "typeDescription": "List of key-value pairs",
       "required": false,
       "type": "key[]"
     }

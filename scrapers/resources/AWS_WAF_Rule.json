@@ -8,6 +8,7 @@
     {
       "name": "MetricName",
       "description": "A friendly name or description for the metrics of the rule.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "Name",
       "description": "A friendly name or description of the rule.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -22,6 +24,7 @@
     {
       "name": "Predicates",
       "description": "The ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects to include in a rule. If you add more than one predicate to a rule, a request must match all conditions in order to be allowed or blocked.",
+      "typeDescription": "List of AWS WAF Rule Predicates",
       "required": false,
       "type": "WAFRulePredicates[]",
       "update": "No interruption"

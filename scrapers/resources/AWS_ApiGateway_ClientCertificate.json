@@ -8,6 +8,7 @@
     {
       "name": "Description",
       "description": "A description of the client certificate.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"

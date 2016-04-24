@@ -8,6 +8,7 @@
     {
       "name": "Description",
       "description": "Information that describes the alias, such as its purpose or the function that it's associated with.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "FunctionName",
       "description": "The Lambda function that you want to associate with this alias. You can specify the function's name or its Amazon Resource Name (ARN).",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -22,6 +24,7 @@
     {
       "name": "FunctionVersion",
       "description": "The version of the Lambda function that you want to associate with this alias.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "Name",
       "description": "A name for the alias.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

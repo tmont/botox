@@ -8,6 +8,7 @@
     {
       "name": "AmiId",
       "description": "The ID of the custom Amazon Machine Image (AMI) to be used to create the instance. For more information about custom AMIs, see Using Custom AMIs in the AWS OpsWorks User Guide.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Updates are not supported."
@@ -15,6 +16,7 @@
     {
       "name": "Architecture",
       "description": "The instance architecture.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Some interruptions"
@@ -22,6 +24,7 @@
     {
       "name": "AutoScalingType",
       "description": "For scaling instances, the type of scaling. If you specify load-based scaling, do not specify a time-based scaling configuration. For valid values, see CreateInstance in the AWS OpsWorks API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "AvailabilityZone",
       "description": "The instance Availability Zone.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -36,6 +40,7 @@
     {
       "name": "EbsOptimized",
       "description": "Whether the instance is optimized for Amazon Elastic Block Store (Amazon EBS) I/O. If you specify an Amazon EBS-optimized instance type, AWS OpsWorks enables EBS optimization by default. For more information, see Amazon EBS–Optimized Instances in the Amazon EC2 User Guide for Linux Instances.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "Replacement"
@@ -43,6 +48,7 @@
     {
       "name": "InstallUpdatesOnBoot",
       "description": "Whether to install operating system and package updates when the instance boots.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "Some interruptions"
@@ -50,6 +56,7 @@
     {
       "name": "InstanceType",
       "description": "The instance type, which must be supported by AWS OpsWorks. For more information, see CreateInstance in the AWS OpsWorks API Reference.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Some interruptions"
@@ -57,6 +64,7 @@
     {
       "name": "LayerIds",
       "description": "The IDs of the AWS OpsWorks layers to associate with this instance.",
+      "typeDescription": "List of strings",
       "required": true,
       "type": "string[]",
       "update": "Some interruptions"
@@ -64,6 +72,7 @@
     {
       "name": "Os",
       "description": "The instance operating system. For more information, see CreateInstance in the AWS OpsWorks API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -71,6 +80,7 @@
     {
       "name": "RootDeviceType",
       "description": "The root device type of the instance.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -78,6 +88,7 @@
     {
       "name": "SshKeyName",
       "description": "The SSH key name of the instance.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Some interruptions"
@@ -85,6 +96,7 @@
     {
       "name": "StackId",
       "description": "The ID of the AWS OpsWorks stack that this instance will be associated with.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -92,6 +104,7 @@
     {
       "name": "SubnetId",
       "description": "The ID of the instance's subnet. If the stack is running in a VPC, you can use this parameter to override the stack's default subnet ID value and direct AWS OpsWorks to launch the instance in a different subnet.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -99,6 +112,7 @@
     {
       "name": "TimeBasedAutoScaling",
       "description": "The time-based scaling configuration for the instance.",
+      "typeDescription": "AWS OpsWorks TimeBasedAutoScaling Type",
       "required": false,
       "type": "OpsWorksTimeBasedAutoScalingType",
       "update": "Replacement"

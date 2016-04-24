@@ -5,32 +5,37 @@
     {
       "name": "CustomOriginConfig",
       "description": "Origin information to specify a custom origin.",
+      "typeDescription": "CustomOrigin type",
       "required": false,
       "type": "CloudFrontDistributionConfigOriginCustomOrigin"
     },
     {
       "name": "DomainName",
       "description": "The DNS name of the Amazon Simple Storage Service (S3) bucket or the HTTP server from which you want CloudFront to get objects for this origin.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Id",
       "description": "An identifier for the origin. The value of Id must be unique within the distribution.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "OriginPath",
       "description": "The path that CloudFront uses to request content from an S3 bucket or custom origin. The combination of the DomainName and OriginPath properties must resolve to a valid path. The value must start with a slash mark (/) and cannot end with a slash mark.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "S3OriginConfig",
       "description": "Origin information to specify an S3 origin.",
+      "typeDescription": "S3Origin type",
       "required": false,
-      "type": "S3Origintype"
+      "type": "CloudFrontDistributionConfigOriginS3Origin"
     }
   ],
   "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-origin.html"

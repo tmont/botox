@@ -5,18 +5,21 @@
     {
       "name": "LambdaConfigurations",
       "description": "The AWS Lambda functions to invoke and the events for which to invoke the functions.",
+      "typeDescription": "Amazon Simple Storage Service NotificationConfiguration LambdaConfigurations",
       "required": false,
       "type": "SimpleStorageServiceNotificationConfigurationLambdaConfigurations"
     },
     {
       "name": "QueueConfigurations",
       "description": "The Amazon Simple Queue Service queues to publish messages to and the events for which to publish messages.",
+      "typeDescription": "Amazon Simple Storage Service NotificationConfiguration QueueConfigurations",
       "required": false,
       "type": "SimpleStorageServiceNotificationConfigurationQueueConfigurations"
     },
     {
       "name": "TopicConfigurations",
       "description": "The topic to which notifications are sent and the events for which notification are generated.",
+      "typeDescription": "Amazon S3 NotificationConfiguration TopicConfigurations",
       "required": false,
       "type": "S3NotificationConfigurationTopicConfigurations"
     }

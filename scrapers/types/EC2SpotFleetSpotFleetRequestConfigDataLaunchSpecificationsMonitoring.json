@@ -5,6 +5,7 @@
     {
       "name": "Enabled",
       "description": "Indicates whether monitoring is enabled for the instances.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     }

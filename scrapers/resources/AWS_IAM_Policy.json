@@ -8,6 +8,7 @@
     {
       "name": "Groups",
       "description": "The names of groups to which you want to add the policy.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "PolicyDocument",
       "description": "A policy document that contains permissions to add to the specified users or groups.",
+      "typeDescription": "JSON object",
       "required": true,
       "type": "Object",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "PolicyName",
       "description": "The name of the policy. If you specify multiple policies for an entity, specify unique names. For example, if you specify a list of policies for an IAM role, each policy must have a unique name.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "Roles",
       "description": "The names of AWS::IAM::Roles to attach to this policy.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "Users",
       "description": "The names of users for whom you want to add the policy.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"

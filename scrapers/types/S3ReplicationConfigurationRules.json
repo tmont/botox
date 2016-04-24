@@ -5,24 +5,28 @@
     {
       "name": "Destination",
       "description": "Defines the destination where Amazon S3 stores replicated objects.",
+      "typeDescription": "Amazon S3 ReplicationConfiguration Rules Destination",
       "required": true,
       "type": "S3ReplicationConfigurationRulesDestination"
     },
     {
       "name": "Id",
       "description": "A unique identifier for the rule. If you don't specify a value, AWS CloudFormation generates a random ID.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Prefix",
       "description": "An object prefix. This rule applies to all Amazon S3 objects with this prefix. To specify all objects in an S3 bucket, specify an empty string.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Status",
       "description": "Whether the rule is enabled. For valid values, see the Status element of the PUT Bucket replication action in the Amazon Simple Storage Service API Reference.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

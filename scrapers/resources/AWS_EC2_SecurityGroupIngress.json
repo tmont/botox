@@ -8,6 +8,7 @@
     {
       "name": "CidrIp",
       "description": "Specifies a CIDR range.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "FromPort",
       "description": "Start of port range for the TCP and UDP protocols, or an ICMP type number. If you specify icmp for the IpProtocol property, you can specify -1 as a wildcard (i.e., any ICMP type number).",
+      "typeDescription": "Integer",
       "required": true,
       "type": "Number",
       "update": "Replacement"
@@ -22,6 +24,7 @@
     {
       "name": "GroupId",
       "description": "ID of the Amazon EC2 or VPC security group to modify. The group must belong to your account.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "GroupName",
       "description": "Name of the Amazon EC2 security group (non-VPC security group) to modify. This value can be a reference to an AWS::EC2::SecurityGroup resource or the name of an existing Amazon EC2 security group.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -36,6 +40,7 @@
     {
       "name": "IpProtocol",
       "description": "IP protocol name or number. For valid values, see the IpProtocol parameter in AuthorizeSecurityGroupIngress",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -43,6 +48,7 @@
     {
       "name": "SourceSecurityGroupId",
       "description": "Specifies the ID of the source security group or uses the Ref intrinsic function to refer to the logical ID of a security group defined in the same template.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -50,6 +56,7 @@
     {
       "name": "SourceSecurityGroupName",
       "description": "Specifies the name of the Amazon EC2 security group (non-VPC security group) to allow access or uses the Ref intrinsic function to refer to the logical name of a security group defined in the same template. For instances in a VPC, specify the SourceSecurityGroupId property.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -57,6 +64,7 @@
     {
       "name": "SourceSecurityGroupOwnerId",
       "description": "Specifies the AWS Account ID of the owner of the Amazon EC2 security group specified in the SourceSecurityGroupName property.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -64,6 +72,7 @@
     {
       "name": "ToPort",
       "description": "End of port range for the TCP and UDP protocols, or an ICMP code. If you specify icmp for the IpProtocol property, you can specify -1 as a wildcard (i.e., any ICMP code).",
+      "typeDescription": "Integer",
       "required": true,
       "type": "Number",
       "update": "Replacement"

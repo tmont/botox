@@ -8,6 +8,7 @@
     {
       "name": "Groups",
       "description": "A name of a group to which you want to add the user.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "LoginProfile",
       "description": "Creates a login profile so that the user can access the AWS Management Console.",
+      "typeDescription": "IAM User LoginProfile",
       "required": false,
       "type": "IAMUserLoginProfile",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "ManagedPolicyArns",
       "description": "One or more managed policy ARNs to attach to this user.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "Path",
       "description": "The path for the user name. For more information about paths, see Identifiers for IAM Entities in Using AWS Identity and Access Management.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "Policies",
       "description": "The policies to associate with this user. For information about policies, see Overview of Policies in [Using IAM].",
+      "typeDescription": "List of IAM Policies",
       "required": false,
       "type": "IAMPolicy[]",
       "update": "No interruption"

@@ -8,6 +8,7 @@
     {
       "name": "NotificationARNs",
       "description": "A list of existing Amazon SNS topics where notifications about stack events are sent.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "Parameters",
       "description": "The set of parameters passed to AWS CloudFormation when this nested stack is created.",
+      "typeDescription": "CloudFormation Stack Parameters Property Type",
       "required": false,
       "type": "CloudFormationStackParametersPropertyType",
       "update": "Whether an update causes interruptions depends on the resources that are being update. An update never causes a nested stack to be replaced."
@@ -22,6 +24,7 @@
     {
       "name": "Tags",
       "description": "An arbitrary set of tags (key–value pairs) to describe this stack.",
+      "typeDescription": "AWS CloudFormation Resource Tags",
       "required": false,
       "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption."
@@ -29,6 +32,7 @@
     {
       "name": "TemplateURL",
       "description": "The URL of a template that specifies the stack that you want to create as a resource. The template must be stored on an Amazon S3 bucket, so the URL must have the form: https://s3.amazonaws.com/.../TemplateName.template",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Whether an update causes interruptions depends on the resources that are being update. An update never causes a nested stack to be replaced."
@@ -36,6 +40,7 @@
     {
       "name": "TimeoutInMinutes",
       "description": "The length of time, in minutes, that AWS CloudFormation waits for the nested stack to reach the CREATE_COMPLETE state. The default is no timeout. When AWS CloudFormation detects that the nested stack has reached the CREATE_COMPLETE state, it marks the nested stack resource as CREATE_COMPLETE in the parent stack and resumes creating the parent stack. If the timeout period expires before the nested stack reaches CREATE_COMPLETE, AWS CloudFormation marks the nested stack as failed and rolls back both the nested stack and parent stack.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Updates are not supported."

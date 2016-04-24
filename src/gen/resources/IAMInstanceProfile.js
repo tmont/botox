@@ -55,7 +55,7 @@ IAMInstanceProfile.prototype.path = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {referencestoAW[]|Attribute|Reference} value
+ * @param {IAMRole[]|Attribute|Reference} value List of references to AWS::IAM::Roles. Currently, a maximum of one role can be assigned to an instance profile.
  * @return {IAMInstanceProfile}
  */
 IAMInstanceProfile.prototype.roles = function(value) {

@@ -8,6 +8,7 @@
     {
       "name": "AppSource",
       "description": "Contains the information required to retrieve an app from a repository.",
+      "typeDescription": "AWS OpsWorks Source Type",
       "required": false,
       "type": "OpsWorksSourceType",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "Attributes",
       "description": "One or more user-defined key-value pairs to be added to the stack attributes bag.",
+      "typeDescription": "A list of key-value pairs",
       "required": false,
       "type": "key[]",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "Description",
       "description": "A description of the app.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "Domains",
       "description": "The app virtual host settings, with multiple domains separated by commas. For example, 'www.example.com, example.com'.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "EnableSsl",
       "description": "Whether to enable SSL for this app.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -43,6 +48,7 @@
     {
       "name": "Environment",
       "description": "The environment variables to associate with the AWS OpsWorks app.",
+      "typeDescription": "List of AWS OpsWorks App Environment",
       "required": false,
       "type": "OpsWorksAppEnvironment[]",
       "update": "No interruption"
@@ -50,6 +56,7 @@
     {
       "name": "Name",
       "description": "The AWS OpsWorks app name.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -57,6 +64,7 @@
     {
       "name": "Shortname",
       "description": "The app short name, which is used internally by AWS OpsWorks and by Chef recipes.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -64,6 +72,7 @@
     {
       "name": "SslConfiguration",
       "description": "The SSL configuration",
+      "typeDescription": "AWS OpsWorks SslConfiguration Type",
       "required": false,
       "type": "OpsWorksSslConfigurationType",
       "update": "No interruption"
@@ -71,6 +80,7 @@
     {
       "name": "StackId",
       "description": "The AWS OpsWorks stack ID that this app will be associated with.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -78,6 +88,7 @@
     {
       "name": "Type",
       "description": "The app type. Each supported type is associated with a particular layer. For more information, see CreateApp in the AWS OpsWorks API Reference.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"

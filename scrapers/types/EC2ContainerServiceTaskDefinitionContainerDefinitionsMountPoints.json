@@ -5,18 +5,21 @@
     {
       "name": "ContainerPath",
       "description": "The path on the container that indicates where you want to mount the volume.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "SourceVolume",
       "description": "The name of the volume to mount.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "ReadOnly",
       "description": "Indicates whether the container can write to the volume. If you specify true, the container has read-only access to the volume. If you specify false, the container can write to the volume. By default, the value is false.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     }

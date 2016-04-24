@@ -5,12 +5,14 @@
     {
       "name": "Role",
       "description": "The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects. For more information, see How to Set Up Cross-Region Replication in the Amazon Simple Storage Service Developer Guide.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Rules",
       "description": "A replication rule that specifies which objects to replicate and where they are stored.",
+      "typeDescription": "List of Amazon S3 ReplicationConfiguration Rules",
       "required": true,
       "type": "S3ReplicationConfigurationRules[]"
     }

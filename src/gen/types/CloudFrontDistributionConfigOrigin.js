@@ -66,7 +66,7 @@ CloudFrontDistributionConfigOrigin.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {S3Origintype} value
+	 * @param {CloudFrontDistributionConfigOriginS3Origin} value
 	 * @return {CloudFrontDistributionConfigOrigin}
 	 */
 	s3OriginConfig: function(value) {

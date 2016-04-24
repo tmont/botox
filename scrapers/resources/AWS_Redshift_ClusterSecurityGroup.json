@@ -8,6 +8,7 @@
     {
       "name": "Description",
       "description": "A description of the security group.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

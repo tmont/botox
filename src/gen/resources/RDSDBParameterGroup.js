@@ -45,7 +45,7 @@ RDSDBParameterGroup.prototype.family = function(value) {
  * Required: false
  * Update requires: No interruption or Some interruptions
  *
- * @param {AJSONobjectconsistingofstringkeyvaluepairsasshowninthefollowingexample|Attribute|Reference} value
+ * @param {Object|Attribute|Reference} value A JSON object consisting of string key-value pairs, as shown in the following example:
  * @return {RDSDBParameterGroup}
  */
 RDSDBParameterGroup.prototype.parameters = function(value) {
@@ -58,7 +58,7 @@ RDSDBParameterGroup.prototype.parameters = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {resourcetag[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value A list of resource tags.
  * @return {RDSDBParameterGroup}
  */
 RDSDBParameterGroup.prototype.tags = function(value) {

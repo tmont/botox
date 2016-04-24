@@ -8,12 +8,14 @@
     {
       "name": "Bucket",
       "description": "The Amazon S3 bucket that the policy applies to.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "PolicyDocument",
       "description": "A policy document containing permissions to add to the specified bucket. For more information, see Access Policy Language Overview in the Amazon Simple Storage Service Developer Guide.",
+      "typeDescription": "JSON object",
       "required": true,
       "type": "Object",
       "update": "No interruption"

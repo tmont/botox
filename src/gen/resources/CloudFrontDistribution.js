@@ -42,7 +42,7 @@ Object.defineProperty(CloudFrontDistribution.prototype, 'attr', {
  * Required: true
  * Update requires: No interruption
  *
- * @param {DistributionConfigtype|Attribute|Reference} value
+ * @param {CloudFrontDistributionConfig|Attribute|Reference} value DistributionConfig type
  * @return {CloudFrontDistribution}
  */
 CloudFrontDistribution.prototype.distributionConfig = function(value) {

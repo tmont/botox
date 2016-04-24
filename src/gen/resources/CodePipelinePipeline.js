@@ -19,7 +19,7 @@ CodePipelinePipeline.prototype = Object.create(Resource.prototype);
  * Required: true
  * Update requires: No interruption
  *
- * @param {CodePipelinePipelineArtifactStore|Attribute|Reference} value
+ * @param {CodePipelinePipelineArtifactStore|Attribute|Reference} value AWS CodePipeline Pipeline ArtifactStore
  * @return {CodePipelinePipeline}
  */
 CodePipelinePipeline.prototype.artifactStore = function(value) {
@@ -32,7 +32,7 @@ CodePipelinePipeline.prototype.artifactStore = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {CodePipelinePipelineDisableInboundStageTransitions[]|Attribute|Reference} value
+ * @param {CodePipelinePipelineDisableInboundStageTransitions[]|Attribute|Reference} value List of AWS CodePipeline Pipeline DisableInboundStageTransitions
  * @return {CodePipelinePipeline}
  */
 CodePipelinePipeline.prototype.disableInboundStageTransitions = function(value) {
@@ -84,7 +84,7 @@ CodePipelinePipeline.prototype.roleArn = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {CodePipelinePipelineStages|Attribute|Reference} value
+ * @param {CodePipelinePipelineStages|Attribute|Reference} value AWS CodePipeline Pipeline Stages
  * @return {CodePipelinePipeline}
  */
 CodePipelinePipeline.prototype.stages = function(value) {

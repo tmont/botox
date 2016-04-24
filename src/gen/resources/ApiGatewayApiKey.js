@@ -58,7 +58,7 @@ ApiGatewayApiKey.prototype.name = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {APIGatewayApiKeyStageKey[]|Attribute|Reference} value
+ * @param {APIGatewayApiKeyStageKey[]|Attribute|Reference} value List of Amazon API Gateway ApiKey StageKey
  * @return {ApiGatewayApiKey}
  */
 ApiGatewayApiKey.prototype.stageKeys = function(value) {

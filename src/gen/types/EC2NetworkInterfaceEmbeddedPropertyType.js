@@ -102,7 +102,7 @@ EC2NetworkInterfaceEmbeddedPropertyType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {PrivateIpAddressSpecification[]} value
+	 * @param {EC2NetworkInterfacePrivateIPSpecification[]} value
 	 * @return {EC2NetworkInterfaceEmbeddedPropertyType}
 	 */
 	privateIpAddresses: function(value) {

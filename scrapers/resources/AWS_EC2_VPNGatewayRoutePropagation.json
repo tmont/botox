@@ -8,13 +8,15 @@
     {
       "name": "RouteTableIds",
       "description": "A list of routing table IDs that are associated with a VPC. The routing tables must be associated with the same VPC that the virtual private gateway is attached to.",
+      "typeDescription": "List of route table IDs",
       "required": true,
-      "type": "routetableID[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {
       "name": "VpnGatewayId",
       "description": "The ID of the virtual private gateway that is attached to a VPC. The virtual private gateway must be attached to the same VPC that the routing tables are associated with.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"

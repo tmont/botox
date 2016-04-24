@@ -8,6 +8,7 @@
     {
       "name": "EC2VpcId",
       "description": "The Id of VPC. Indicates which VPC this DB Security Group should belong to.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "DBSecurityGroupIngress",
       "description": "Network ingress authorization for an Amazon EC2 security group or an IP address range.",
+      "typeDescription": "List of RDS Security Group Rules.",
       "required": true,
       "type": "RDSSecurityGroupRule[]",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "GroupDescription",
       "description": "Description of the security group.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -29,8 +32,9 @@
     {
       "name": "Tags",
       "description": "The tags that you want to attach to the Amazon RDS DB security group.",
+      "typeDescription": "A list of resource tags.",
       "required": false,
-      "type": "resourcetag[]",
+      "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption"
     }
   ],

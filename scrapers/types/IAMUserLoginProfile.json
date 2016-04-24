@@ -5,12 +5,14 @@
     {
       "name": "Password",
       "description": "The password for the user.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "PasswordResetRequired",
       "description": "Specifies whether the user is required to set a new password the next time the user logs in to the AWS Management Console.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     }

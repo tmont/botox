@@ -5,12 +5,14 @@
     {
       "name": "EventSource",
       "description": "The source, such as an AWS service, that generate events, triggering AWS Config to evaluate your AWS resources. For valid values, see the SourceDetail data type in the AWS Config API Reference.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "MessageType",
       "description": "The type of Amazon Simple Notification Service (Amazon SNS) message that triggers AWS Config to run an evaluation.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

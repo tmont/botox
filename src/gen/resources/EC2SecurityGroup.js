@@ -55,7 +55,7 @@ EC2SecurityGroup.prototype.groupDescription = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {EC2SecurityGroupRule[]|Attribute|Reference} value
+ * @param {EC2SecurityGroupRulePropertyType[]|Attribute|Reference} value List of EC2 Security Group Rule
  * @return {EC2SecurityGroup}
  */
 EC2SecurityGroup.prototype.securityGroupEgress = function(value) {
@@ -68,7 +68,7 @@ EC2SecurityGroup.prototype.securityGroupEgress = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {EC2SecurityGroupRule[]|Attribute|Reference} value
+ * @param {EC2SecurityGroupRulePropertyType[]|Attribute|Reference} value List of EC2 Security Group Rule
  * @return {EC2SecurityGroup}
  */
 EC2SecurityGroup.prototype.securityGroupIngress = function(value) {
@@ -81,7 +81,7 @@ EC2SecurityGroup.prototype.securityGroupIngress = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags.
  * @return {EC2SecurityGroup}
  */
 EC2SecurityGroup.prototype.tags = function(value) {

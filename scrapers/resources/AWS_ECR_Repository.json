@@ -8,6 +8,7 @@
     {
       "name": "RepositoryName",
       "description": "A name for the image repository. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the repository name. For more information, see Name Type.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "RepositoryPolicyText",
       "description": "A policy that controls who has access to the repository and which actions they can perform on it. For more information, see Amazon ECR Repository Policies in the Amazon EC2 Container Registry User Guide.",
+      "typeDescription": "JSON object",
       "required": false,
       "type": "Object",
       "update": "No interruption"

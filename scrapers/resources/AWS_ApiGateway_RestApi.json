@@ -8,6 +8,7 @@
     {
       "name": "Body",
       "description": "A Swagger specification that defines a set of RESTful APIs in JSON or YAML format.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "BodyS3Location",
       "description": "The Amazon Simple Storage Service (Amazon S3) location that points to a Swagger file, which defines a set of RESTful APIs in JSON or YAML format.",
+      "typeDescription": "Amazon API Gateway RestApi S3Location",
       "required": false,
       "type": "APIGatewayRestApiS3Location",
       "update": "No interruption"

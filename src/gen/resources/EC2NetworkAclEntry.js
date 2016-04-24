@@ -45,7 +45,7 @@ EC2NetworkAclEntry.prototype.egress = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {EC2ICMPPropertyType|Attribute|Reference} value
+ * @param {EC2ICMPPropertyType|Attribute|Reference} value EC2 ICMP Property Type
  * @return {EC2NetworkAclEntry}
  */
 EC2NetworkAclEntry.prototype.icmp = function(value) {
@@ -71,7 +71,7 @@ EC2NetworkAclEntry.prototype.networkAclId = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {EC2PortRangePropertyType|Attribute|Reference} value
+ * @param {EC2PortRangePropertyType|Attribute|Reference} value EC2 PortRange Property Type
  * @return {EC2NetworkAclEntry}
  */
 EC2NetworkAclEntry.prototype.portRange = function(value) {

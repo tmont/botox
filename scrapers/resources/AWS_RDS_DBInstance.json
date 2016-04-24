@@ -8,6 +8,7 @@
     {
       "name": "AllocatedStorage",
       "description": "The allocated storage size specified in gigabytes (GB).",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "AllowMajorVersionUpgrade",
       "description": "Indicates whether major version upgrades are allowed. Changing this parameter does not result in an outage, and the change is applied asynchronously as soon as possible.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "AutoMinorVersionUpgrade",
       "description": "Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. The default value is true.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference."
@@ -29,6 +32,7 @@
     {
       "name": "AvailabilityZone",
       "description": "The name of the Availability Zone where the DB instance is located. You cannot set the AvailabilityZone parameter if the MultiAZ parameter is set to true.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -36,6 +40,7 @@
     {
       "name": "BackupRetentionPeriod",
       "description": "The number of days for which automatic DB snapshots are retained.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference."
@@ -43,6 +48,7 @@
     {
       "name": "CharacterSetName",
       "description": "For supported engines, specifies the character set to associate with the database instance. For more information, see Appendix: Oracle Character Sets Supported in Amazon RDS in the Amazon Relational Database Service User Guide.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -50,6 +56,7 @@
     {
       "name": "DBClusterIdentifier",
       "description": "The identifier of an existing DB cluster that this instance will be associated with. If you specify this property, specify aurora for the Engine property and do not specify any of the following properties: AllocatedStorage, CharacterSetName, DBSecurityGroups, SourceDBInstanceIdentifier, and StorageType.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -57,6 +64,7 @@
     {
       "name": "DBInstanceClass",
       "description": "The name of the compute and memory capacity class of the DB instance.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Some interruptions"
@@ -64,6 +72,7 @@
     {
       "name": "DBInstanceIdentifier",
       "description": "A name for the DB instance. If you specify a name, AWS CloudFormation converts it to lower case. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the DB instance. For more information, see Name Type.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -71,6 +80,7 @@
     {
       "name": "DBName",
       "description": "The name of the initial database of this instance that was provided at create time, if one was specified. This same name is returned for the life of the DB instance.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -78,6 +88,7 @@
     {
       "name": "DBParameterGroupName",
       "description": "The name of an existing DB parameter group or a reference to an AWS::RDS::DBParameterGroup resource created in the template.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference. Also, if any of the data members of the referenced parameter group are changed during an update, the database instance may need to be restarted, causing some interruption."
@@ -85,6 +96,7 @@
     {
       "name": "DBSecurityGroups",
       "description": "A list of the DB security groups to assign to the Amazon RDS instance. The list can include both the name of existing DB security groups or references to AWS::RDS::DBSecurityGroup resources created in the template.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -92,6 +104,7 @@
     {
       "name": "DBSnapshotIdentifier",
       "description": "The identifier for the DB snapshot to restore from.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -99,6 +112,7 @@
     {
       "name": "DBSubnetGroupName",
       "description": "A DB subnet group to associate with the DB instance.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -106,6 +120,7 @@
     {
       "name": "Engine",
       "description": "The name of the database engine that the DB instance uses. This property is optional when you specify the DBSnapshotIdentifier property to create DB instances.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -113,6 +128,7 @@
     {
       "name": "EngineVersion",
       "description": "The version number of the database engine to use.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Some interruptions"
@@ -120,6 +136,7 @@
     {
       "name": "Iops",
       "description": "The number of I/O operations per second (IOPS) that the database provisions. The value must be equal to or greater than 1000.",
+      "typeDescription": "Number",
       "required": false,
       "type": "Number",
       "update": "No interruption"
@@ -127,6 +144,7 @@
     {
       "name": "KmsKeyId",
       "description": "The Amazon Resource Name (ARN) of the AWS Key Management Service master key that is used to encrypt the database instance, such as arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef. If you enable the StorageEncrypted property but don't specify this property, the default master key is used. If you specify this property, you must set the StorageEncrypted property to true.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement."
@@ -134,6 +152,7 @@
     {
       "name": "LicenseModel",
       "description": "The license model information for the DB instance.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement."
@@ -141,6 +160,7 @@
     {
       "name": "MasterUsername",
       "description": "The master user name for the database instance. This property is optional when you specify the DBSnapshotIdentifier or the DBClusterIdentifier property to create DB instances.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement."
@@ -148,6 +168,7 @@
     {
       "name": "MasterUserPassword",
       "description": "The master password for the database instance. This property is optional when you specify the DBSnapshotIdentifier or the DBClusterIdentifier property to create DB instances.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption."
@@ -155,6 +176,7 @@
     {
       "name": "MultiAZ",
       "description": "Specifies if the database instance is a multiple Availability Zone deployment. You cannot set the AvailabilityZone parameter if the MultiAZ parameter is set to true.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption."
@@ -162,6 +184,7 @@
     {
       "name": "OptionGroupName",
       "description": "An option group that this database instance is associated with.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption."
@@ -169,6 +192,7 @@
     {
       "name": "Port",
       "description": "The port for the instance.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement."
@@ -176,6 +200,7 @@
     {
       "name": "PreferredBackupWindow",
       "description": "The daily time range during which automated backups are created if automated backups are enabled, as determined by the BackupRetentionPeriod.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption."
@@ -183,6 +208,7 @@
     {
       "name": "PreferredMaintenanceWindow",
       "description": "The weekly time range (in UTC) during which system maintenance can occur.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference."
@@ -190,6 +216,7 @@
     {
       "name": "PubliclyAccessible",
       "description": "Indicates whether the database instance is an Internet-facing instance. If you specify true, an instance is created with a publicly resolvable DNS name, which resolves to a public IP address. If you specify false, an internal instance is created with a DNS name that resolves to a private IP address.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "Replacement."
@@ -197,6 +224,7 @@
     {
       "name": "SourceDBInstanceIdentifier",
       "description": "If you want to create a read replica DB instance, specify the ID of the source database instance. Each database instance can have a certain number of read replicas. For more information, see Working with Read Replicas in the Amazon Relational Database Service Developer Guide.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement."
@@ -204,6 +232,7 @@
     {
       "name": "StorageEncrypted",
       "description": "Indicates whether the database instance is encrypted.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "Replacement."
@@ -211,6 +240,7 @@
     {
       "name": "StorageType",
       "description": "The storage type associated with this database instance.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Some interruptions"
@@ -218,6 +248,7 @@
     {
       "name": "Tags",
       "description": "An arbitrary set of tags (key–value pairs) for this database instance.",
+      "typeDescription": "AWS CloudFormation Resource Tags",
       "required": false,
       "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption."
@@ -225,6 +256,7 @@
     {
       "name": "VPCSecurityGroups",
       "description": "A list of the VPC security groups to assign to the Amazon RDS instance. The list can include both the physical IDs of existing VPC security groups or references to AWS::EC2::SecurityGroup resources created in the template.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption."

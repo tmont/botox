@@ -5,12 +5,14 @@
     {
       "name": "Primary",
       "description": "Indicates whether the private IP address is the primary private IP address. You can designate only one IP address as primary.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "PrivateIpAddress",
       "description": "The private IP address.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

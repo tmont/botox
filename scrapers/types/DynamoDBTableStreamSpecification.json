@@ -5,6 +5,7 @@
     {
       "name": "StreamViewType",
       "description": "Determines the information that the stream captures when an item in the table is modified. For valid values, see StreamSpecification in the Amazon DynamoDB API Reference.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

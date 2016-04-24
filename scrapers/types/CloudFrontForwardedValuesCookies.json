@@ -5,12 +5,14 @@
     {
       "name": "Forward",
       "description": "The cookies to forward to the origin of the cache behavior. You can specify none, all, or whitelist.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "WhitelistedNames",
       "description": "The names of cookies to forward to the origin for the cache behavior.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     }

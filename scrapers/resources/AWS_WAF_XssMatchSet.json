@@ -8,6 +8,7 @@
     {
       "name": "Name",
       "description": "A friendly name or description for the XssMatchSet.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "XssMatchTuples",
       "description": "The parts of web requests that you want to inspect for cross-site scripting attacks.",
+      "typeDescription": "List of AWS WAF XssMatchSet XssMatchTuple",
       "required": false,
       "type": "WAFXssMatchSetXssMatchTuple[]",
       "update": "No interruption"

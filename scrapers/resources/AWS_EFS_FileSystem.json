@@ -8,6 +8,7 @@
     {
       "name": "FileSystemTags",
       "description": "Tags to associate with the file system.",
+      "typeDescription": "Amazon Elastic File System FileSystem FileSystemTags",
       "required": false,
       "type": "ElasticFileSystemFileSystemFileSystemTags",
       "update": "No interruption"

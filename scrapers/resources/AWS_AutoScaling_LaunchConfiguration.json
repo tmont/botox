@@ -8,6 +8,7 @@
     {
       "name": "AssociatePublicIpAddress",
       "description": "For Amazon EC2 instances in a VPC, indicates whether instances in the Auto Scaling group receive public IP addresses. If you specify true, each instance in the Auto Scaling receives a unique public IP address.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "Replacement"
@@ -15,13 +16,15 @@
     {
       "name": "BlockDeviceMappings",
       "description": "Specifies how block devices are exposed to the instance. You can specify virtual devices and EBS volumes.",
+      "typeDescription": "A list of BlockDeviceMappings.",
       "required": false,
-      "type": "BlockDeviceMapping[]",
+      "type": "CloudFormationAutoScalingBlockDeviceMappingPropertyType[]",
       "update": "Replacement"
     },
     {
       "name": "ClassicLinkVPCId",
       "description": "The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. You can specify this property only for EC2-Classic instances. For more information, see ClassicLink in the Amazon Elastic Compute Cloud User Guide.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "ClassicLinkVPCSecurityGroups",
       "description": "The IDs of one or more security groups for the VPC that you specified in the ClassicLinkVPCId property.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "Replacement"
@@ -36,6 +40,7 @@
     {
       "name": "EbsOptimized",
       "description": "Specifies whether the launch configuration is optimized for EBS I/O. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "Replacement"
@@ -43,13 +48,15 @@
     {
       "name": "IamInstanceProfile",
       "description": "Provides the name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instance. The instance profile contains the IAM role.",
+      "typeDescription": "String (1–1600 chars)",
       "required": false,
-      "type": "String11600chars",
+      "type": "String",
       "update": "Replacement"
     },
     {
       "name": "ImageId",
       "description": "Provides the unique ID of the Amazon Machine Image (AMI) that was assigned during registration.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -57,6 +64,7 @@
     {
       "name": "InstanceId",
       "description": "The ID of the Amazon EC2 instance you want to use to create the launch configuration. Use this property if you want the launch configuration to use settings from an existing Amazon EC2 instance.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -64,6 +72,7 @@
     {
       "name": "InstanceMonitoring",
       "description": "Indicates whether detailed instance monitoring is enabled for the Auto Scaling group. By default, this property is set to true (enabled).",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "Replacement"
@@ -71,6 +80,7 @@
     {
       "name": "InstanceType",
       "description": "Specifies the instance type of the EC2 instance.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -78,6 +88,7 @@
     {
       "name": "KernelId",
       "description": "Provides the ID of the kernel associated with the EC2 AMI.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -85,6 +96,7 @@
     {
       "name": "KeyName",
       "description": "Provides the name of the EC2 key pair.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -92,6 +104,7 @@
     {
       "name": "PlacementTenancy",
       "description": "The tenancy of the instance. An instance with a tenancy of dedicated runs on single-tenant hardware and can only be launched in a VPC. You must set the value of this parameter to dedicated if want to launch dedicated instances in a shared tenancy VPC (a VPC with the instance placement tenancy attribute set to default). For more information, see CreateLaunchConfiguration in the Auto Scaling API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -99,6 +112,7 @@
     {
       "name": "RamDiskId",
       "description": "The ID of the RAM disk to select. Some kernels require additional drivers at launch. Check the kernel requirements for information about whether you need to specify a RAM disk. To find kernel requirements, refer to the AWS Resource Center and search for the kernel ID.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -106,13 +120,15 @@
     {
       "name": "SecurityGroups",
       "description": "A list that contains the EC2 security groups to assign to the Amazon EC2 instances in the Auto Scaling group. The list can contain the name of existing EC2 security groups or references to AWS::EC2::SecurityGroup resources created in the template. If your instances are launched within VPC, specify Amazon VPC security group IDs.",
+      "typeDescription": "A list of EC2 security groups.",
       "required": false,
-      "type": "EC2securitygroup[]",
+      "type": "String[]",
       "update": "Replacement"
     },
     {
       "name": "SpotPrice",
       "description": "The spot price for this autoscaling group. If a spot price is set, then the autoscaling group will launch when the current spot price is less than the amount specified in the template.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -120,6 +136,7 @@
     {
       "name": "UserData",
       "description": "The user data available to the launched EC2 instances.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"

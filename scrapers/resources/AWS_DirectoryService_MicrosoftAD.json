@@ -8,6 +8,7 @@
     {
       "name": "CreateAlias",
       "description": "A unique alias to assign to the Microsoft Active Directory in AWS. AWS Directory Service uses the alias to construct the access URL for the directory, such as http://alias.awsapps.com. By default, AWS CloudFormation does not create an alias.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "EnableSso",
       "description": "Whether to enable single sign-on for a Microsoft Active Directory in AWS. Single sign-on allows users in your directory to access certain AWS services from a computer joined to the directory without having to enter their credentials separately. If you don't specify a value, AWS CloudFormation disables single sign-on by default.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "Name",
       "description": "The fully qualified name for the Microsoft Active Directory in AWS, such as corp.example.com. The name doesn't need to be publicly resolvable; it will resolve inside your VPC only.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "Password",
       "description": "The password for the default administrative user, Admin.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -36,6 +40,7 @@
     {
       "name": "ShortName",
       "description": "The NetBIOS name for your domain, such as CORP. If you don't specify a value, AWS Directory Service uses the first part of your directory DNS server name. For example, if your directory DNS server name is corp.example.com, AWS Directory Service specifies CORP for the NetBIOS name.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -43,6 +48,7 @@
     {
       "name": "VpcSettings",
       "description": "Specifies the VPC settings of the Microsoft Active Directory server in AWS.",
+      "typeDescription": "AWS Directory Service MicrosoftAD VpcSettings",
       "required": true,
       "type": "DirectoryServiceMicrosoftADVpcSettings",
       "update": "Replacement"

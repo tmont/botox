@@ -5,18 +5,21 @@
     {
       "name": "GitHubLocation",
       "description": "If your application revision is stored in GitHub, information about the location where it is stored.",
+      "typeDescription": "AWS CodeDeploy DeploymentGroup Deployment Revision GitHubLocation",
       "required": false,
       "type": "CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation"
     },
     {
       "name": "RevisionType",
       "description": "The application revision's location, such as in an S3 bucket or GitHub repository. For valid values, see RevisionLocation in the AWS CodeDeploy API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "S3Location",
       "description": "If the application revision is stored in an S3 bucket, information about the location.",
+      "typeDescription": "AWS CodeDeploy DeploymentGroup Deployment Revision S3Location",
       "required": false,
       "type": "CodeDeployDeploymentGroupDeploymentRevisionS3Location"
     }

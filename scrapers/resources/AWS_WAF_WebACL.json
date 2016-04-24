@@ -8,6 +8,7 @@
     {
       "name": "DefaultAction",
       "description": "The action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.",
+      "typeDescription": "AWS WAF WebACL Action",
       "required": true,
       "type": "WAFWebACLAction",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "MetricName",
       "description": "A friendly name or description for the Amazon CloudWatch metric of this web ACL.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -22,6 +24,7 @@
     {
       "name": "Name",
       "description": "A friendly name or description of the web ACL.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "Rules",
       "description": "The rules to associate with the web ACL and the settings for each rule.",
+      "typeDescription": "List of AWS WAF WebACL Rules",
       "required": false,
       "type": "WAFWebACLRules[]",
       "update": "No interruption"

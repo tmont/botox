@@ -5,12 +5,14 @@
     {
       "name": "Attributes",
       "description": "Key-value pairs that define the attributes of the parameter object.",
+      "typeDescription": "AWS Data Pipeline Parameter Objects Attributes",
       "required": true,
       "type": "DataPipelineParameterObjectsAttributes"
     },
     {
       "name": "Id",
       "description": "The identifier of the parameter object.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

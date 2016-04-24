@@ -5,6 +5,7 @@
     {
       "name": "SourcePath",
       "description": "The data volume path on the host container instance.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

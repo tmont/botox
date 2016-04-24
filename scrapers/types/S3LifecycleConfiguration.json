@@ -5,6 +5,7 @@
     {
       "name": "Rules",
       "description": "A lifecycle rule for individual objects in an S3 bucket.",
+      "typeDescription": "Amazon S3 Lifecycle Rule",
       "required": true,
       "type": "S3LifecycleRule"
     }

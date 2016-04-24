@@ -30,7 +30,7 @@ CloudFormationAutoScalingBlockDeviceMappingPropertyType.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {AutoScalingEBSBlockDevice} value
+	 * @param {CloudFormationAutoScalingEBSBlockDevicePropertyType} value
 	 * @return {CloudFormationAutoScalingBlockDeviceMappingPropertyType}
 	 */
 	ebs: function(value) {

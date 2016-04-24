@@ -5,24 +5,28 @@
     {
       "name": "Arn",
       "description": "The Amazon Resource Name (ARN) of the target.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Id",
       "description": "A unique identifier for the target.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Input",
       "description": "A JSON-formatted text string that is passed to the target. This value overrides the matched event.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "InputPath",
       "description": "When you don't want to pass the entire matched event, the JSONPath that describes which part of the event to pass to the target.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

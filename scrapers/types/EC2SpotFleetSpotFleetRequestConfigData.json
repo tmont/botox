@@ -5,54 +5,63 @@
     {
       "name": "AllocationStrategy",
       "description": "Indicates how to allocate the target capacity across the Spot pools that you specified in the Spot fleet request. For valid values, see SpotFleetRequestConfigData in the Amazon EC2 API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "ExcessCapacityTerminationPolicy",
       "description": "Indicates whether running Spot instances are terminated if you decrease the target capacity of the Spot fleet request below the current size of the Spot fleet. For valid values, see SpotFleetRequestConfigData in the Amazon EC2 API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "IamFleetRole",
       "description": "The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that grants the Spot fleet the ability to bid on, launch, and terminate instances on your behalf. For more information, see Spot Fleet Prerequisites in the Amazon EC2 User Guide for Linux Instances.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "LaunchSpecifications",
       "description": "The launch specifications for the Spot fleet request.",
+      "typeDescription": "List of Amazon Elastic Compute Cloud SpotFleet SpotFleetRequestConfigData LaunchSpecifications",
       "required": true,
       "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications[]"
     },
     {
       "name": "SpotPrice",
       "description": "The bid price per unit hour. For more information, see How Spot Fleet Works in the Amazon EC2 User Guide for Linux Instances.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "TargetCapacity",
       "description": "The number of units to request for the spot fleet. You can choose to set the target capacity as the number of instances or as a performance characteristic that is important to your application workload, such as vCPUs, memory, or I/O. For more information, see How Spot Fleet Works in the Amazon EC2 User Guide for Linux Instances.",
+      "typeDescription": "Integer",
       "required": true,
       "type": "Number"
     },
     {
       "name": "TerminateInstancesWithExpiration",
       "description": "Indicates whether running Spot instances are terminated when the Spot fleet request expires.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "ValidFrom",
       "description": "The start date and time of the request, in UTC format (YYYY-MM-DDTHH:MM:SSZ). By default, Amazon Elastic Compute Cloud (Amazon EC2 ) starts fulfilling the request immediately.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "ValidUntil",
       "description": "The end date and time of the request, in UTC format (YYYY-MM-DDTHH:MM:SSZ). After the end date and time, Amazon EC2 doesn't request new Spot instances or enable them to fulfill the request.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

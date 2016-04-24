@@ -5,18 +5,21 @@
     {
       "name": "Fields",
       "description": "Key-value pairs that define the properties of the object.",
+      "typeDescription": "AWS Data Pipeline Data Pipeline Object Fields",
       "required": true,
       "type": "DataPipelineDataPipelineObjectFields"
     },
     {
       "name": "Id",
       "description": "Identifier of the object.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Name",
       "description": "Name of the object.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

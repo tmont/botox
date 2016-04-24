@@ -8,6 +8,7 @@
     {
       "name": "SpotFleetRequestConfigData",
       "description": "The configuration for a Spot fleet request.",
+      "typeDescription": "Amazon EC2 SpotFleet SpotFleetRequestConfigData",
       "required": true,
       "type": "EC2SpotFleetSpotFleetRequestConfigData",
       "update": "Replacement"

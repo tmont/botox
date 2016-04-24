@@ -8,6 +8,7 @@
     {
       "name": "DeleteOnTermination",
       "description": "Whether to delete the network interface when the instance terminates. By default, this value is set to True.",
+      "typeDescription": "Boolean.",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "DeviceIndex",
       "description": "The network interface's position in the attachment order. For example, the first attached network interface has a DeviceIndex of 0.",
+      "typeDescription": "String.",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "InstanceId",
       "description": "The ID of the instance to which you will attach the ENI.",
+      "typeDescription": "String.",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "NetworkInterfaceId",
       "description": "The ID of the ENI that you want to attach.",
+      "typeDescription": "String.",
       "required": true,
       "type": "String",
       "update": "No interruption"

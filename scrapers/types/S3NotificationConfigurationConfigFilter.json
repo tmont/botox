@@ -5,6 +5,7 @@
     {
       "name": "S3Key",
       "description": "Amazon S3 filtering rules that describe for which object key names to send notifications.",
+      "typeDescription": "Amazon S3 NotificationConfiguration Config Filter S3Key",
       "required": true,
       "type": "S3NotificationConfigurationConfigFilterS3Key"
     }

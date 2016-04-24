@@ -8,6 +8,7 @@
     {
       "name": "CidrBlock",
       "description": "The CIDR range to allow or deny, in CIDR notation (e.g., 172.16.0.0/24).",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "Egress",
       "description": "Whether this rule applies to egress traffic from the subnet (true) or ingress traffic to the subnet (false). By default, AWS CloudFormation specifies false.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "Replacement."
@@ -22,6 +24,7 @@
     {
       "name": "Icmp",
       "description": "The Internet Control Message Protocol (ICMP) code and type.",
+      "typeDescription": "EC2 ICMP Property Type",
       "required": false,
       "type": "EC2ICMPPropertyType",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "NetworkAclId",
       "description": "ID of the ACL where the entry will be created.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement."
@@ -36,6 +40,7 @@
     {
       "name": "PortRange",
       "description": "The range of port numbers for the UDP/TCP protocol.",
+      "typeDescription": "EC2 PortRange Property Type",
       "required": false,
       "type": "EC2PortRangePropertyType",
       "update": "No interruption"
@@ -43,6 +48,7 @@
     {
       "name": "Protocol",
       "description": "The IP protocol that the rule applies to. You must specify -1 or a protocol number (go to Protocol Numbers at iana.org). You can specify -1 for all protocols.",
+      "typeDescription": "Number",
       "required": true,
       "type": "Number",
       "update": "No interruption"
@@ -50,6 +56,7 @@
     {
       "name": "RuleAction",
       "description": "Whether to allow or deny traffic that matches the rule; valid values are \"allow\" or \"deny\".",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -57,6 +64,7 @@
     {
       "name": "RuleNumber",
       "description": "Rule number to assign to the entry (e.g., 100). This must be a positive integer from 1 to 32766.",
+      "typeDescription": "Number",
       "required": true,
       "type": "Number",
       "update": "Replacement."

@@ -5,12 +5,14 @@
     {
       "name": "Name",
       "description": "The name of the option setting that you want to specify.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Value",
       "description": "The value of the option setting.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

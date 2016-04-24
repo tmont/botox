@@ -8,6 +8,7 @@
     {
       "name": "Type",
       "description": "The type of VPN connection this virtual private gateway supports. The only valid value is \"ipsec.1\".",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "Tags",
       "description": "An arbitrary set of tags (key–value pairs) for this resource.",
+      "typeDescription": "AWS CloudFormation Resource Tags",
       "required": false,
       "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption."

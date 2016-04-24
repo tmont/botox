@@ -19,7 +19,7 @@ Route53HostedZone.prototype = Object.create(Resource.prototype);
  * Required: false
  * Update requires: No interruption
  *
- * @param {Route53HostedZoneConfigProperty|Attribute|Reference} value
+ * @param {Route53HostedZoneConfigProperty|Attribute|Reference} value Amazon Route 53 HostedZoneConfig Property
  * @return {Route53HostedZone}
  */
 Route53HostedZone.prototype.hostedZoneConfig = function(value) {
@@ -32,7 +32,7 @@ Route53HostedZone.prototype.hostedZoneConfig = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {Route53HostedZoneTags[]|Attribute|Reference} value
+ * @param {Route53HostedZoneTags[]|Attribute|Reference} value List of Amazon Route 53 HostedZoneTags
  * @return {Route53HostedZone}
  */
 Route53HostedZone.prototype.hostedZoneTags = function(value) {
@@ -58,7 +58,7 @@ Route53HostedZone.prototype.name = function(value) {
  * Required: false
  * Update requires: undefined
  *
- * @param {Route53HostedZoneVPCs[]|Attribute|Reference} value
+ * @param {Route53HostedZoneVPCs[]|Attribute|Reference} value List of Amazon Route 53 HostedZoneVPCs
  * @return {Route53HostedZone}
  */
 Route53HostedZone.prototype.vpCs = function(value) {

@@ -55,7 +55,7 @@ IAMUser.prototype.groups = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {IAMUserLoginProfile|Attribute|Reference} value
+ * @param {IAMUserLoginProfile|Attribute|Reference} value IAM User LoginProfile
  * @return {IAMUser}
  */
 IAMUser.prototype.loginProfile = function(value) {

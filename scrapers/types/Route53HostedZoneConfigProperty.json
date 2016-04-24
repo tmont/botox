@@ -5,6 +5,7 @@
     {
       "name": "Comment",
       "description": "Any comments that you want to include about the hosted zone.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

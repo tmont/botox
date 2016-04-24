@@ -8,6 +8,7 @@
     {
       "name": "CidrIp",
       "description": "CIDR range.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "DestinationSecurityGroupId",
       "description": "Specifies the group ID of the destination Amazon VPC security group.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -22,6 +24,7 @@
     {
       "name": "FromPort",
       "description": "Start of port range for the TCP and UDP protocols, or an ICMP type number. If you specify icmp for the IpProtocol property, you can specify -1 as a wildcard (i.e., any ICMP type number).",
+      "typeDescription": "Integer",
       "required": true,
       "type": "Number",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "GroupId",
       "description": "ID of the Amazon VPC security group to modify. This value can be a reference to an AWS::EC2::SecurityGroup resource that has a valid VpcId property or the ID of an existing Amazon VPC security group.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -36,6 +40,7 @@
     {
       "name": "IpProtocol",
       "description": "IP protocol name or number. For valid values, see the IpProtocol parameter in AuthorizeSecurityGroupIngress",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -43,6 +48,7 @@
     {
       "name": "ToPort",
       "description": "End of port range for the TCP and UDP protocols, or an ICMP code. If you specify icmp for the IpProtocol property, you can specify -1 as a wildcard (i.e., any ICMP code).",
+      "typeDescription": "Integer",
       "required": true,
       "type": "Number",
       "update": "Replacement"

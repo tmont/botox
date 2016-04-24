@@ -8,6 +8,7 @@
     {
       "name": "Activate",
       "description": "Indicates whether to validate and start the pipeline or stop an active pipeline. By default, the value is set to true.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "Description",
       "description": "A description for the pipeline.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement."
@@ -22,6 +24,7 @@
     {
       "name": "Name",
       "description": "A name for the pipeline. Because AWS CloudFormation assigns each new pipeline a unique identifier, you can use the same name for multiple pipelines that are associated with your AWS account.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "ParameterObjects",
       "description": "Defines the variables that are in the pipeline definition. For more information, see Creating a Pipeline Using Parameterized Templates in the AWS Data Pipeline Developer Guide.",
+      "typeDescription": "AWS Data Pipeline Pipeline ParameterObjects",
       "required": false,
       "type": "DataPipelinePipelineParameterObjects",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "ParameterValues",
       "description": "Defines the values for the parameters that are defined in the ParameterObjects property. For more information, see Creating a Pipeline Using Parameterized Templates in the AWS Data Pipeline Developer Guide.",
+      "typeDescription": "AWS Data Pipeline Pipeline ParameterValues",
       "required": false,
       "type": "DataPipelinePipelineParameterValues",
       "update": "No interruption"
@@ -43,6 +48,7 @@
     {
       "name": "PipelineObjects",
       "description": "A list of pipeline objects that make up the pipeline. For more information about pipeline objects and a description of each object, see Pipeline Object Reference in the AWS Data Pipeline Developer Guide.",
+      "typeDescription": "A list of AWS Data Pipeline PipelineObjects",
       "required": true,
       "type": "DataPipelinePipelineObjects[]",
       "update": "Some interruptions. Not all objects, fields, and values can be updated. Restrictions on what can be updated are documented in Editing Your Pipelines in the AWS Data Pipeline Developer Guide."
@@ -50,6 +56,7 @@
     {
       "name": "PipelineTags",
       "description": "A list of arbitrary tags (key-value pairs) to associate with the pipeline, which you can use to control permissions. For more information, see Controlling Access to Pipelines and Resources in the AWS Data Pipeline Developer Guide.",
+      "typeDescription": "AWS Data Pipeline Pipeline PipelineTags",
       "required": false,
       "type": "DataPipelinePipelinePipelineTags",
       "update": "No interruption"

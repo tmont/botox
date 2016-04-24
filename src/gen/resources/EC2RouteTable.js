@@ -32,7 +32,7 @@ EC2RouteTable.prototype.vpcId = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
  * @return {EC2RouteTable}
  */
 EC2RouteTable.prototype.tags = function(value) {

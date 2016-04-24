@@ -32,7 +32,7 @@ EMRStep.prototype.actionOnFailure = function(value) {
  * Required: true
  * Update requires: Replacement
  *
- * @param {ElasticMapReduceStepHadoopJarStepConfig|Attribute|Reference} value
+ * @param {ElasticMapReduceStepHadoopJarStepConfig|Attribute|Reference} value Amazon Elastic MapReduce Step HadoopJarStepConfig
  * @return {EMRStep}
  */
 EMRStep.prototype.hadoopJarStep = function(value) {

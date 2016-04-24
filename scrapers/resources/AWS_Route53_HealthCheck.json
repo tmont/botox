@@ -8,6 +8,7 @@
     {
       "name": "HealthCheckConfig",
       "description": "An Amazon Route 53 health check.",
+      "typeDescription": "Amazon Route 53 HealthCheckConfig",
       "required": true,
       "type": "Route53HealthCheckConfig",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "HealthCheckTags",
       "description": "An arbitrary set of tags (key–value pairs) for this health check.",
+      "typeDescription": "List of Amazon Route 53 HealthCheckTags",
       "required": false,
       "type": "Route53HealthCheckTags[]",
       "update": "No interruption"

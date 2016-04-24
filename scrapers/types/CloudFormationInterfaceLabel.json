@@ -5,6 +5,7 @@
     {
       "name": "default",
       "description": "The default label that the AWS CloudFormation console uses to name a parameter group or parameter.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

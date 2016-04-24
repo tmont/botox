@@ -214,7 +214,7 @@ RDSDBCluster.prototype.storageEncrypted = function(value) {
  * Required: false
  * Update requires: Updates are not supported.
  *
- * @param {resourcetag[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value A list of resource tags
  * @return {RDSDBCluster}
  */
 RDSDBCluster.prototype.tags = function(value) {

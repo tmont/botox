@@ -8,6 +8,7 @@
     {
       "name": "AutoScalingGroupName",
       "description": "The name of the Auto Scaling group for the lifecycle hook.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "DefaultResult",
       "description": "The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "HeartbeatTimeout",
       "description": "The amount of time that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action that you specified in the DefaultResult property.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "LifecycleTransition",
       "description": "The state of the Amazon EC2 instance to which you want to attach the lifecycle hook.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "NotificationMetadata",
       "description": "Additional information that you want to include when Auto Scaling sends a message to the notification target.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -43,6 +48,7 @@
     {
       "name": "NotificationTargetARN",
       "description": "The Amazon resource name (ARN) of the notification target that Auto Scaling uses to notify you when an instance is in the transition state for the lifecycle hook. You can specify an Amazon SQS queue or an Amazon SNS topic. The notification message includes the following information: lifecycle action token, user account ID, Auto Scaling group name, lifecycle hook name, instance ID, lifecycle transition, and notification metadata.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -50,6 +56,7 @@
     {
       "name": "RoleARN",
       "description": "The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target. The role requires permissions to Amazon SNS and Amazon SQS.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"

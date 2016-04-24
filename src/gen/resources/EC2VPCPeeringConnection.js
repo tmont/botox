@@ -32,7 +32,7 @@ EC2VPCPeeringConnection.prototype.peerVpcId = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
  * @return {EC2VPCPeeringConnection}
  */
 EC2VPCPeeringConnection.prototype.tags = function(value) {

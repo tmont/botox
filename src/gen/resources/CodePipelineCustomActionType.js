@@ -32,7 +32,7 @@ CodePipelineCustomActionType.prototype.category = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {CodePipelineCustomActionTypeConfigurationProperties[]|Attribute|Reference} value
+ * @param {CodePipelineCustomActionTypeConfigurationProperties[]|Attribute|Reference} value List of AWS CodePipeline CustomActionType ConfigurationProperties
  * @return {CodePipelineCustomActionType}
  */
 CodePipelineCustomActionType.prototype.configurationProperties = function(value) {
@@ -45,7 +45,7 @@ CodePipelineCustomActionType.prototype.configurationProperties = function(value)
  * Required: true
  * Update requires: Replacement
  *
- * @param {CodePipelineCustomActionTypeArtifactDetails|Attribute|Reference} value
+ * @param {CodePipelineCustomActionTypeArtifactDetails|Attribute|Reference} value AWS CodePipeline CustomActionType ArtifactDetails
  * @return {CodePipelineCustomActionType}
  */
 CodePipelineCustomActionType.prototype.inputArtifactDetails = function(value) {
@@ -58,7 +58,7 @@ CodePipelineCustomActionType.prototype.inputArtifactDetails = function(value) {
  * Required: true
  * Update requires: Replacement
  *
- * @param {CodePipelineCustomActionTypeArtifactDetails|Attribute|Reference} value
+ * @param {CodePipelineCustomActionTypeArtifactDetails|Attribute|Reference} value AWS CodePipeline CustomActionType ArtifactDetails
  * @return {CodePipelineCustomActionType}
  */
 CodePipelineCustomActionType.prototype.outputArtifactDetails = function(value) {
@@ -84,7 +84,7 @@ CodePipelineCustomActionType.prototype.provider = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {CodePipelineCustomActionTypeSettings|Attribute|Reference} value
+ * @param {CodePipelineCustomActionTypeSettings|Attribute|Reference} value AWS CodePipeline CustomActionType Settings
  * @return {CodePipelineCustomActionType}
  */
 CodePipelineCustomActionType.prototype.settings = function(value) {

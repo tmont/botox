@@ -8,6 +8,7 @@
     {
       "name": "Category",
       "description": "The category of the custom action, such as a source action or a build action. For valid values, see CreateCustomActionType in the AWS CodePipeline API Reference.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "ConfigurationProperties",
       "description": "The configuration properties for the custom action.",
+      "typeDescription": "List of AWS CodePipeline CustomActionType ConfigurationProperties",
       "required": false,
       "type": "CodePipelineCustomActionTypeConfigurationProperties[]",
       "update": "Replacement"
@@ -22,6 +24,7 @@
     {
       "name": "InputArtifactDetails",
       "description": "The input artifact details for this custom action.",
+      "typeDescription": "AWS CodePipeline CustomActionType ArtifactDetails",
       "required": true,
       "type": "CodePipelineCustomActionTypeArtifactDetails",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "OutputArtifactDetails",
       "description": "The output artifact details for this custom action.",
+      "typeDescription": "AWS CodePipeline CustomActionType ArtifactDetails",
       "required": true,
       "type": "CodePipelineCustomActionTypeArtifactDetails",
       "update": "Replacement"
@@ -36,6 +40,7 @@
     {
       "name": "Provider",
       "description": "The name of the service provider that AWS CodePipeline uses for this custom action.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -43,6 +48,7 @@
     {
       "name": "Settings",
       "description": "URLs that provide users information about this custom action.",
+      "typeDescription": "AWS CodePipeline CustomActionType Settings",
       "required": false,
       "type": "CodePipelineCustomActionTypeSettings",
       "update": "Replacement"
@@ -50,6 +56,7 @@
     {
       "name": "Version",
       "description": "The version number of this custom action.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"

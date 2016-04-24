@@ -5,12 +5,14 @@
     {
       "name": "ReadCapacityUnits",
       "description": "Sets the desired minimum number of consistent reads of items (up to 1KB in size) per second for the specified table before Amazon DynamoDB balances the load.",
+      "typeDescription": "Number",
       "required": true,
       "type": "Number"
     },
     {
       "name": "WriteCapacityUnits",
       "description": "Sets the desired minimum number of consistent writes of items (up to 1KB in size) per second for the specified table before Amazon DynamoDB balances the load.",
+      "typeDescription": "Number",
       "required": true,
       "type": "Number"
     }

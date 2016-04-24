@@ -81,7 +81,7 @@ EC2Subnet.prototype.mapPublicIpOnLaunch = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
  * @return {EC2Subnet}
  */
 EC2Subnet.prototype.tags = function(value) {
@@ -94,7 +94,7 @@ EC2Subnet.prototype.tags = function(value) {
  * Required: true
  * Update requires: Replacement
  *
- * @param {RefID|Attribute|Reference} value
+ * @param {String|Attribute|Reference|Join} value
  * @return {EC2Subnet}
  */
 EC2Subnet.prototype.vpcId = function(value) {

@@ -8,6 +8,7 @@
     {
       "name": "Description",
       "description": "A description of the subnet group.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "SubnetIds",
       "description": "A list of VPC subnet IDs. You can modify a maximum of 20 subnets.",
+      "typeDescription": "List of strings",
       "required": true,
       "type": "string[]",
       "update": "No interruption"

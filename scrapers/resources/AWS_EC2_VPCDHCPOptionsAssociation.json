@@ -8,6 +8,7 @@
     {
       "name": "DhcpOptionsId",
       "description": "The ID of the DHCP options you want to associate with the VPC. Specify default if you want the VPC to use no DHCP options.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "VpcId",
       "description": "The ID of the VPC to associate with this DHCP options set.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

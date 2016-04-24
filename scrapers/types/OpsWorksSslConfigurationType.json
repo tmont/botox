@@ -5,18 +5,21 @@
     {
       "name": "Certificate",
       "description": "The contents of the certificate's domain.crt file.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Chain",
       "description": "An intermediate certificate authority key or client authentication.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "PrivateKey",
       "description": "The private key; the contents of the certificate's domain.kex file.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

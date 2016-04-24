@@ -45,7 +45,7 @@ ECSService.prototype.desiredCount = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {EC2ContainerServiceServiceLoadBalancers[]|Attribute|Reference} value
+ * @param {EC2ContainerServiceServiceLoadBalancers[]|Attribute|Reference} value List of Amazon EC2 Container Service Service LoadBalancers
  * @return {ECSService}
  */
 ECSService.prototype.loadBalancers = function(value) {

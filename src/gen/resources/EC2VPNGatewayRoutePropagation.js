@@ -19,7 +19,7 @@ EC2VPNGatewayRoutePropagation.prototype = Object.create(Resource.prototype);
  * Required: true
  * Update requires: No interruption
  *
- * @param {routetableID[]|Attribute|Reference} value
+ * @param {String[]|Attribute|Reference} value List of route table IDs
  * @return {EC2VPNGatewayRoutePropagation}
  */
 EC2VPNGatewayRoutePropagation.prototype.routeTableIds = function(value) {

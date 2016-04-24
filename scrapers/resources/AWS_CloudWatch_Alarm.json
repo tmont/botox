@@ -8,6 +8,7 @@
     {
       "name": "ActionsEnabled",
       "description": "Indicates whether or not actions should be executed during any changes to the alarm's state.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "AlarmActions",
       "description": "The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Number (ARN). For more information about creating alarms and the actions you can specify, see Creating Amazon CloudWatch Alarms in the Amazon CloudWatch Developer Guide.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "AlarmDescription",
       "description": "The description for the alarm.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "AlarmName",
       "description": "A name for the alarm. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the alarm name. For more information, see Name Type.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -36,6 +40,7 @@
     {
       "name": "ComparisonOperator",
       "description": "The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -43,13 +48,15 @@
     {
       "name": "Dimensions",
       "description": "The dimensions for the alarm's associated metric.",
+      "typeDescription": "List of Metric Dimension",
       "required": false,
-      "type": "MetricDimension[]",
+      "type": "CloudWatchMetricDimensionPropertyType[]",
       "update": "No interruption"
     },
     {
       "name": "EvaluationPeriods",
       "description": "The number of periods over which data is compared to the specified threshold.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -57,6 +64,7 @@
     {
       "name": "InsufficientDataActions",
       "description": "The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Number (ARN). Currently the only action supported is publishing to an Amazon SNS topic or an Amazon Auto Scaling policy.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -64,6 +72,7 @@
     {
       "name": "MetricName",
       "description": "The name for the alarm's associated metric. For more information about the metrics that you can specify, see Amazon CloudWatch Namespaces, Dimensions, and Metrics Reference in the Amazon CloudWatch Developer Guide.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -71,6 +80,7 @@
     {
       "name": "Namespace",
       "description": "The namespace for the alarm's associated metric.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -78,6 +88,7 @@
     {
       "name": "OKActions",
       "description": "The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Number (ARN). Currently the only action supported is publishing to an Amazon SNS topic or an Amazon Auto Scaling policy.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -85,6 +96,7 @@
     {
       "name": "Period",
       "description": "The time over which the specified statistic is applied. You must specify a time in seconds that is also a multiple of 60.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -92,6 +104,7 @@
     {
       "name": "Statistic",
       "description": "The statistic to apply to the alarm's associated metric.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -99,6 +112,7 @@
     {
       "name": "Threshold",
       "description": "The value against which the specified statistic is compared.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -106,6 +120,7 @@
     {
       "name": "Unit",
       "description": "The unit for the alarm's associated metric.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"

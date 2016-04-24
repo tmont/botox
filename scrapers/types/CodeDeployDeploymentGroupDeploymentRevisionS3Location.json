@@ -5,30 +5,35 @@
     {
       "name": "Bucket",
       "description": "The name of the S3 bucket where the application revision is stored.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "BundleType",
       "description": "The file type of the application revision, such as tar, tgz, or zip. For valid values, see S3Location in the AWS CodeDeploy API Reference.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "ETag",
       "description": "The Amazon S3 ETag (a file checksum) of the application revision. If you don't specify a value, AWS CodeDeploy skips the ETag validation of your application revision.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Key",
       "description": "The file name of the application revision (Amazon S3 object name).",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Version",
       "description": "For versioning-enabled buckets, a specific version of the application revision.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

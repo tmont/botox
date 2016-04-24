@@ -5,6 +5,7 @@
     {
       "name": "Arn",
       "description": "The Amazon Resource Name (ARN) of the instance profile to associate with the instances. The instance profile contains the IAM role that is associated with the instances.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

@@ -5,24 +5,28 @@
     {
       "name": "Args",
       "description": "A list of command line arguments passed to the JAR file's main function when the function is executed.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Jar",
       "description": "A path to the JAR file that Amazon EMR runs for the job flow step.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "MainClass",
       "description": "The name of the main class in the specified JAR file. If you don't specify a value, you must specify a main class in the JAR file's manifest file.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "StepProperties",
       "description": "A list of Java properties that are set when the job flow step runs. You can use these properties to pass key-value pairs to your main function in the JAR file.",
+      "typeDescription": "List of Amazon Elastic MapReduce Step HadoopJarStepConfig KeyValue",
       "required": false,
       "type": "ElasticMapReduceStepHadoopJarStepConfigKeyValue[]"
     }

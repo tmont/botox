@@ -5,6 +5,7 @@
     {
       "name": "Name",
       "description": "The name of the artifact that the AWS CodePipeline action works on, such as My App.The input artifact of an action must match the output artifact from any preceding action.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

@@ -8,6 +8,7 @@
     {
       "name": "DestinationCidrBlock",
       "description": "The CIDR block that is associated with the local subnet of the customer network.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "VpnConnectionId",
       "description": "The ID of the VPN connection.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

@@ -5,12 +5,14 @@
     {
       "name": "Endpoint",
       "description": "The subscription's endpoint (format depends on the protocol). For more information, see the Subscribe Endpoint parameter in the Amazon Simple Notification Service API Reference.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Protocol",
       "description": "The subscription's protocol. For more information, see the Subscribe Protocol parameter in the Amazon Simple Notification Service API Reference.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

@@ -5,72 +5,84 @@
     {
       "name": "Command",
       "description": "The CMD value to pass to the container. For more information about the Docker CMD parameter, see https://docs.docker.com/reference/builder/#cmd.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     },
     {
       "name": "Cpu",
       "description": "The minimum number of CPU units to reserve for the container. Containers share unallocated CPU units with other containers on the instance by using the same ratio as their allocated CPU units.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number"
     },
     {
       "name": "EntryPoint",
       "description": "The ENTRYPOINT value to pass to the container. For more information about the Docker ENTRYPOINT parameter, see https://docs.docker.com/reference/builder/#entrypoint.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     },
     {
       "name": "Environment",
       "description": "The environment variables to pass to the container.",
+      "typeDescription": "List of Amazon EC2 Container Service TaskDefinition ContainerDefinitions Environment",
       "required": false,
       "type": "EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment[]"
     },
     {
       "name": "Essential",
       "description": "Indicates whether the task stops if this container fails. If you specify true and the container fails, all other containers in the task stop. If you specify false and the container fails, none of the other containers in the task are affected. This value is true by default.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "Image",
       "description": "The image to use for a container, which is passed directly to the Docker daemon. You can use images in the Docker Hub registry or specify other repositories (repository-url/image:tag).",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Links",
       "description": "The name of another container to connect to. With links, containers can communicate with each other without using port mappings.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     },
     {
       "name": "Memory",
       "description": "The number of MiB of memory to reserve for the container. If your container attempts to exceed the allocated memory, the container is killed.",
+      "typeDescription": "Integer",
       "required": true,
       "type": "Number"
     },
     {
       "name": "MountPoints",
       "description": "The mount points for data volumes in the container.",
+      "typeDescription": "List of Amazon EC2 Container Service TaskDefinition ContainerDefinitions MountPoints",
       "required": false,
       "type": "EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints[]"
     },
     {
       "name": "Name",
       "description": "A name for the container.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "PortMappings",
       "description": "A mapping of the container port to a host port. Port mappings enable containers to access ports on the host container instance to send or receive traffic.",
+      "typeDescription": "List of Amazon EC2 Container Service TaskDefinition ContainerDefinitions PortMappings",
       "required": false,
       "type": "EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings[]"
     },
     {
       "name": "VolumesFrom",
       "description": "Data volumes to mount from another container.",
+      "typeDescription": "List of Amazon EC2 Container Service TaskDefinition ContainerDefinitions VolumesFrom",
       "required": false,
       "type": "EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom[]"
     }

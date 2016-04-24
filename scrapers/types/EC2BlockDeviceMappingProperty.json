@@ -5,24 +5,28 @@
     {
       "name": "DeviceName",
       "description": "The name of the device within Amazon EC2.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Ebs",
       "description": "Required: Conditional You can specify either VirtualName or Ebs, but not both.",
+      "typeDescription": "Amazon Elastic Block Store Block Device Property.",
       "required": false,
       "type": "ElasticBlockStoreBlockDeviceProperty"
     },
     {
       "name": "NoDevice",
       "description": "This property can be used to unmap a defined device.",
+      "typeDescription": "an empty map: {}.",
       "required": false,
       "type": "Object"
     },
     {
       "name": "VirtualName",
       "description": "The name of the virtual device. The name must be in the form ephemeralX where X is a number starting from zero (0); for example, ephemeral0.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

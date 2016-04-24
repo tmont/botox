@@ -8,6 +8,7 @@
     {
       "name": "FileSystemId",
       "description": "The ID of the file system for which you want to create the mount target.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement. Before updating this property, stop EC2 instances that are using this mount target, and then restart them after the update is complete. This allows the instances to unmount the file system before the mount target is replaced. If you don't stop and restart them, instances or applications that are using those mounts might be disrupted when the mount target is deleted (uncommitted writes might be lost)."
@@ -15,6 +16,7 @@
     {
       "name": "IpAddress",
       "description": "An IPv4 address that is within the address range of the subnet that is specified in the SubnetId property. If you don't specify an IP address, Amazon EFS automatically assigns an address that is within the range of the subnet.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement. Before updating this property, stop EC2 instances that are using this mount target, and then restart them after the update is complete. This allows the instances to unmount the file system before the mount target is replaced. If you don't stop and restart them, instances or applications that are using those mounts might be disrupted when the mount target is deleted (uncommitted writes might be lost)."
@@ -22,6 +24,7 @@
     {
       "name": "SecurityGroups",
       "description": "A maximum of five VPC security group IDs that are in the same VPC as the subnet that is specified in the SubnetId property. For more information about security groups and mount targets, see Security in the Amazon Elastic File System User Guide.",
+      "typeDescription": "List of strings",
       "required": true,
       "type": "string[]",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "SubnetId",
       "description": "The ID of the subnet in which you want to add the mount target.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement. Before updating this property, stop EC2 instances that are using this mount target and then restart them after the update is complete. That way the instances can unmount the file system before the mount target is replaced. If you don't stop and restart them, instances or applications that are using those mounts might be disrupted when the mount target is deleted (uncommitted writes might be lost)."

@@ -5,12 +5,14 @@
     {
       "name": "VPCId",
       "description": "The ID of the Amazon VPC that you want to associate with the hosted zone.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "VPCRegion",
       "description": "The region in which the Amazon VPC was created as specified in the VPCId property.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

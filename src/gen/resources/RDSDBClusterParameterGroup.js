@@ -45,7 +45,7 @@ RDSDBClusterParameterGroup.prototype.family = function(value) {
  * Required: true
  * Update requires: No interruption or some interruptions, depending on the parameters that you update.
  *
- * @param {AJSONobjectconsistingofstringkeyvaluepairsasshowninthefollowingexample|Attribute|Reference} value
+ * @param {Object|Attribute|Reference} value A JSON object consisting of string key-value pairs, as shown in the following example:
  * @return {RDSDBClusterParameterGroup}
  */
 RDSDBClusterParameterGroup.prototype.parameters = function(value) {
@@ -58,7 +58,7 @@ RDSDBClusterParameterGroup.prototype.parameters = function(value) {
  * Required: false
  * Update requires: Updates are not supported.
  *
- * @param {resourcetag[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value A list of resource tags
  * @return {RDSDBClusterParameterGroup}
  */
 RDSDBClusterParameterGroup.prototype.tags = function(value) {

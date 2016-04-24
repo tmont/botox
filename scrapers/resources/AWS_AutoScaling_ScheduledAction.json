@@ -8,6 +8,7 @@
     {
       "name": "AutoScalingGroupName",
       "description": "The name or ARN of the Auto Scaling group.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "DesiredCapacity",
       "description": "The number of Amazon EC2 instances that should be running in the Auto Scaling group.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number",
       "update": "No interruption"
@@ -22,13 +24,15 @@
     {
       "name": "EndTime",
       "description": "The time in UTC for this schedule to end. For example, 2010-06-01T00:00:00Z.",
+      "typeDescription": "Time stamp",
       "required": false,
-      "type": "Timestamp",
+      "type": "String",
       "update": "No interruption"
     },
     {
       "name": "MaxSize",
       "description": "The maximum number of Amazon EC2 instances in the Auto Scaling group.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "MinSize",
       "description": "The minimum number of Amazon EC2 instances in the Auto Scaling group.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number",
       "update": "No interruption"
@@ -43,6 +48,7 @@
     {
       "name": "Recurrence",
       "description": "The time in UTC when recurring future actions will start. You specify the start time by following the Unix cron syntax format. For more information about cron syntax, go to http://en.wikipedia.org/wiki/Cron.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -50,8 +56,9 @@
     {
       "name": "StartTime",
       "description": "The time in UTC for this schedule to start. For example, 2010-06-01T00:00:00Z.",
+      "typeDescription": "Time stamp",
       "required": false,
-      "type": "Timestamp",
+      "type": "String",
       "update": "No interruption"
     }
   ],

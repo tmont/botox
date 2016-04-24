@@ -5,12 +5,14 @@
     {
       "name": "Key",
       "description": "The key name of the tag.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Value",
       "description": "The value for the tag.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

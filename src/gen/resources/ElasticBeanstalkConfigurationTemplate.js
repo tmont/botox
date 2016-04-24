@@ -58,7 +58,7 @@ ElasticBeanstalkConfigurationTemplate.prototype.environmentId = function(value) 
  * Required: false
  * Update requires: Some interruptions
  *
- * @param {OptionSetting[]|Attribute|Reference} value
+ * @param {ElasticBeanstalkOptionSettingsPropertyType[]|Attribute|Reference} value A list of OptionSettings.
  * @return {ElasticBeanstalkConfigurationTemplate}
  */
 ElasticBeanstalkConfigurationTemplate.prototype.optionSettings = function(value) {
@@ -84,7 +84,7 @@ ElasticBeanstalkConfigurationTemplate.prototype.solutionStackName = function(val
  * Required: false
  * Update requires: Replacement
  *
- * @param {ElasticBeanstalkSourceConfigurationPropertyType|Attribute|Reference} value
+ * @param {ElasticBeanstalkSourceConfigurationPropertyType|Attribute|Reference} value Elastic Beanstalk SourceConfiguration Property Type
  * @return {ElasticBeanstalkConfigurationTemplate}
  */
 ElasticBeanstalkConfigurationTemplate.prototype.sourceConfiguration = function(value) {

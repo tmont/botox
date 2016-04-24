@@ -66,7 +66,7 @@ CloudFrontDistributionConfigCacheBehavior.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {ForwardedValuestype} value
+	 * @param {CloudFrontForwardedValues} value
 	 * @return {CloudFrontDistributionConfigCacheBehavior}
 	 */
 	forwardedValues: function(value) {

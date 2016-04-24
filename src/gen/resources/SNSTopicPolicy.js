@@ -32,7 +32,7 @@ SNSTopicPolicy.prototype.policyDocument = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {SNStopicsARN[]|Attribute|Reference} value
+ * @param {String[]|Attribute|Reference} value A list of Amazon SNS topics ARNs
  * @return {SNSTopicPolicy}
  */
 SNSTopicPolicy.prototype.topics = function(value) {

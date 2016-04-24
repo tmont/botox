@@ -8,6 +8,7 @@
     {
       "name": "PeerVpcId",
       "description": "The ID of the VPC with which you are creating the peering connection.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "Tags",
       "description": "An arbitrary set of tags (key–value pairs) for this resource.",
+      "typeDescription": "AWS CloudFormation Resource Tags",
       "required": false,
       "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption."
@@ -22,6 +24,7 @@
     {
       "name": "VpcId",
       "description": "The ID of the VPC that is requesting a peering connection.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

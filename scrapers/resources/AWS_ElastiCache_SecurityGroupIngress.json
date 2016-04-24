@@ -8,6 +8,7 @@
     {
       "name": "CacheSecurityGroupName",
       "description": "The name of the Cache Security Group to authorize.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Updates are not supported."
@@ -15,6 +16,7 @@
     {
       "name": "EC2SecurityGroupName",
       "description": "Name of the EC2 Security Group to include in the authorization.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Updates are not supported."
@@ -22,6 +24,7 @@
     {
       "name": "EC2SecurityGroupOwnerId",
       "description": "Specifies the AWS Account ID of the owner of the EC2 security group specified in the EC2SecurityGroupName property. The AWS access key ID is not an acceptable value.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Updates are not supported."

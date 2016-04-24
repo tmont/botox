@@ -5,90 +5,105 @@
     {
       "name": "BlockDeviceMappings",
       "description": "Defines the block devices that are mapped to the Spot instances.",
+      "typeDescription": "List of Amazon Elastic Compute Cloud SpotFleet SpotFleetRequestConfigData LaunchSpecifications BlockDeviceMappings",
       "required": false,
       "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings[]"
     },
     {
       "name": "EbsOptimized",
       "description": "Indicates whether the instances are optimized for Amazon Elastic Block Store (Amazon EBS) I/O. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance. This optimization isn't available with all instance types. Additional usage charges apply when you use an Amazon EBS-optimized instance.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "IamInstanceProfile",
       "description": "Defines the AWS Identity and Access Management (IAM) instance profile to associate with the instances.",
+      "typeDescription": "Amazon Elastic Compute Cloud SpotFleet SpotFleetRequestConfigData LaunchSpecifications IamInstanceProfile",
       "required": false,
       "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIamInstanceProfile"
     },
     {
       "name": "ImageId",
       "description": "The unique ID of the Amazon Machine Image (AMI) to launch on the instances.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "InstanceType",
       "description": "Specifies the instance type of the EC2 instances.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "KernelId",
       "description": "The ID of the kernel that is associated with the Amazon Elastic Compute Cloud (Amazon EC2) AMI.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "KeyName",
       "description": "An Amazon EC2 key pair to associate with the instances.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Monitoring",
       "description": "Enable or disable monitoring for the instances.",
+      "typeDescription": "Amazon EC2 SpotFleet SpotFleetRequestConfigData LaunchSpecifications Monitoring",
       "required": false,
       "type": "EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring"
     },
     {
       "name": "NetworkInterfaces",
       "description": "The network interfaces to associate with the instances.",
+      "typeDescription": "List of Amazon Elastic Compute Cloud SpotFleet SpotFleetRequestConfigData LaunchSpecifications NetworkInterfaces",
       "required": false,
       "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces[]"
     },
     {
       "name": "Placement",
       "description": "Defines a placement group, which is a logical grouping of instances within a single Availability Zone (AZ).",
+      "typeDescription": "Amazon Elastic Compute Cloud SpotFleet SpotFleetRequestConfigData LaunchSpecifications Placement",
       "required": false,
       "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsPlacement"
     },
     {
       "name": "RamdiskId",
       "description": "The ID of the RAM disk to select. Some kernels require additional drivers at launch. Check the kernel requirements for information about whether you need to specify a RAM disk. To find kernel requirements, refer to the AWS Resource Center and search for the kernel ID.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "SecurityGroups",
       "description": "One or more security group IDs to associate with the instances.",
+      "typeDescription": "List of Amazon Elastic Compute Cloud SpotFleet SpotFleetRequestConfigData LaunchSpecifications SecurityGroups",
       "required": false,
       "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups[]"
     },
     {
       "name": "SubnetId",
       "description": "The ID of the subnet in which to launch the instances.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "UserData",
       "description": "Base64-encoded MIME user data that instances use when starting up.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "WeightedCapacity",
       "description": "The number of units provided by the specified instance type. These units are the same units that you chose to set the target capacity in terms of instances or a performance characteristic, such as vCPUs, memory, or I/O. For more information, see How Spot Fleet Works in the Amazon EC2 User Guide for Linux Instances.",
+      "typeDescription": "Number",
       "required": false,
       "type": "Number"
     }

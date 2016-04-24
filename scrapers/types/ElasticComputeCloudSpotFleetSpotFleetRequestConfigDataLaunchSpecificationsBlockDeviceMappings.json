@@ -5,24 +5,28 @@
     {
       "name": "DeviceName",
       "description": "The name of the device within the EC2 instance, such as /dev/dsh or xvdh.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Ebs",
       "description": "The Amazon Elastic Block Store (Amazon EBS) volume information.",
+      "typeDescription": "Amazon Elastic Compute Cloud SpotFleet SpotFleetRequestConfigData LaunchSpecifications BlockDeviceMappings Ebs",
       "required": false,
       "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappingsEbs"
     },
     {
       "name": "NoDevice",
       "description": "Suppresses the specified device that is included in the block device mapping of the Amazon Machine Image (AMI).",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "VirtualName",
       "description": "The name of the virtual device. The name must be in the form ephemeralX where X is a number equal to or greater than zero (0), for example, ephemeral0.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

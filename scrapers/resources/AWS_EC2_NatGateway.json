@@ -8,6 +8,7 @@
     {
       "name": "AllocationId",
       "description": "The allocation ID of an Elastic IP address to associate with the NAT gateway. If the Elastic IP address is associated with another resource, you must first disassociate it.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "SubnetId",
       "description": "The public subnet in which to create the NAT gateway.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

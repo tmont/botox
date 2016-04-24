@@ -45,7 +45,7 @@ ElasticBeanstalkApplicationVersion.prototype.description = function(value) {
  * Required: true
  * Update requires: Replacement
  *
- * @param {SourceBundle|Attribute|Reference} value
+ * @param {ElasticBeanstalkSourceBundlePropertyType|Attribute|Reference} value
  * @return {ElasticBeanstalkApplicationVersion}
  */
 ElasticBeanstalkApplicationVersion.prototype.sourceBundle = function(value) {

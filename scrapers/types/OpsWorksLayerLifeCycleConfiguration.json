@@ -5,6 +5,7 @@
     {
       "name": "ShutdownEventConfiguration",
       "description": "Specifies the shutdown event configuration for a layer.",
+      "typeDescription": "AWS OpsWorks Layer LifeCycleConfiguration ShutdownEventConfiguration",
       "required": false,
       "type": "OpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration"
     }

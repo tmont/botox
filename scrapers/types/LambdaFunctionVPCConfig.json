@@ -5,12 +5,14 @@
     {
       "name": "SecurityGroupIds",
       "description": "A list of one or more security groups IDs in the VPC that includes the resources to which your Lambda function requires access.",
+      "typeDescription": "List of strings",
       "required": true,
       "type": "string[]"
     },
     {
       "name": "SubnetIds",
       "description": "A list of one or more subnet IDs in the VPC that includes the resources to which your Lambda function requires access.",
+      "typeDescription": "List of strings",
       "required": true,
       "type": "string[]"
     }

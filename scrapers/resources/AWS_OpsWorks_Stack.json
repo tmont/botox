@@ -8,6 +8,7 @@
     {
       "name": "AgentVersion",
       "description": "The AWS OpsWorks agent version that you want to use. The agent communicates with the service and handles tasks such as initiating Chef runs in response to lifecycle events. For valid values, see the AgentVersion parameter for the CreateStack action in the AWS OpsWorks API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "Attributes",
       "description": "One or more user-defined key-value pairs to be added to the stack attributes bag.",
+      "typeDescription": "A list of key-value pairs",
       "required": false,
       "type": "key[]",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "ChefConfiguration",
       "description": "Describes the Chef configuration. For more information, see the CreateStack ChefConfiguration parameter in the AWS OpsWorks API Reference.",
+      "typeDescription": "AWS OpsWorks ChefConfiguration Type",
       "required": false,
       "type": "OpsWorksChefConfigurationType",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "ConfigurationManager",
       "description": "Describes the configuration manager. When you create a stack, you use the configuration manager to specify the Chef version. For supported Chef versions, see the CreateStack ConfigurationManager parameter in the AWS OpsWorks API Reference.",
+      "typeDescription": "AWS OpsWorks StackConfigurationManager Type",
       "required": false,
       "type": "OpsWorksStackConfigurationManagerType",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "CustomCookbooksSource",
       "description": "Contains the information required to retrieve a cookbook from a repository.",
+      "typeDescription": "AWS OpsWorks Source Type",
       "required": false,
       "type": "OpsWorksSourceType",
       "update": "No interruption"
@@ -43,6 +48,7 @@
     {
       "name": "CustomJson",
       "description": "A user-defined custom JSON object. The custom JSON is used to override the corresponding default stack configuration JSON values. For more information, see CreateStack in the AWS OpsWorks API Reference.",
+      "typeDescription": "JSON object",
       "required": false,
       "type": "Object",
       "update": "No interruption"
@@ -50,6 +56,7 @@
     {
       "name": "DefaultAvailabilityZone",
       "description": "The stack's default Availability Zone, which must be in the specified region.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -57,6 +64,7 @@
     {
       "name": "DefaultInstanceProfileArn",
       "description": "The Amazon Resource Name (ARN) of an IAM instance profile that is the default profile for all of the stack's Amazon EC2 instances.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -64,6 +72,7 @@
     {
       "name": "DefaultOs",
       "description": "The stack's default operating system. For more information, see CreateStack in the AWS OpsWorks API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -71,6 +80,7 @@
     {
       "name": "DefaultRootDeviceType",
       "description": "The default root device type. This value is used by default for all instances in the stack, but you can override it when you create an instance. For more information, see CreateStack in the AWS OpsWorks API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -78,6 +88,7 @@
     {
       "name": "DefaultSshKeyName",
       "description": "A default SSH key for the stack instances. You can override this value when you create or update an instance.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -85,6 +96,7 @@
     {
       "name": "DefaultSubnetId",
       "description": "The stack's default subnet ID. All instances are launched into this subnet unless you specify another subnet ID when you create the instance.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -92,6 +104,7 @@
     {
       "name": "HostnameTheme",
       "description": "The stack's host name theme, with spaces replaced by underscores. The theme is used to generate host names for the stack's instances. For more information, see CreateStack in the AWS OpsWorks API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -99,6 +112,7 @@
     {
       "name": "Name",
       "description": "The name of the AWS OpsWorks stack.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -106,6 +120,7 @@
     {
       "name": "ServiceRoleArn",
       "description": "The AWS Identity and Access Management (IAM) role that AWS OpsWorks uses to work with AWS resources on your behalf. You must specify an Amazon Resource Name (ARN) for an existing IAM role.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -113,6 +128,7 @@
     {
       "name": "UseCustomCookbooks",
       "description": "Whether the stack uses custom cookbooks.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -120,6 +136,7 @@
     {
       "name": "UseOpsworksSecurityGroups",
       "description": "Whether to associate the AWS OpsWorks built-in security groups with the stack's layers.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -127,6 +144,7 @@
     {
       "name": "VpcId",
       "description": "The ID of the VPC that the stack is to be launched into, which must be in the specified region. All instances are launched into this VPC. If you specify this property, you must specify the DefaultSubnetId property.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"

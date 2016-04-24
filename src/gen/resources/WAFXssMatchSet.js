@@ -32,7 +32,7 @@ WAFXssMatchSet.prototype.name = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {WAFXssMatchSetXssMatchTuple[]|Attribute|Reference} value
+ * @param {WAFXssMatchSetXssMatchTuple[]|Attribute|Reference} value List of AWS WAF XssMatchSet XssMatchTuple
  * @return {WAFXssMatchSet}
  */
 WAFXssMatchSet.prototype.xssMatchTuples = function(value) {

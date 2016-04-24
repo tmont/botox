@@ -5,12 +5,14 @@
     {
       "name": "Name",
       "description": "The name of the environment variable.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Value",
       "description": "The value of the environment variable.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

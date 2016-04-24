@@ -8,6 +8,7 @@
     {
       "name": "Description",
       "description": "A description of the purpose of the API Gateway deployment.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "RestApiId",
       "description": "The ID of the RestApi resource to deploy.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -22,6 +24,7 @@
     {
       "name": "StageDescription",
       "description": "Configures the stage that API Gateway creates with this deployment.",
+      "typeDescription": "Amazon API Gateway Deployment StageDescription",
       "required": false,
       "type": "APIGatewayDeploymentStageDescription",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "StageName",
       "description": "A name for the stage that API Gateway creates with this deployment.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"

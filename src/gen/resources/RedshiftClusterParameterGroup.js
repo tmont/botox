@@ -45,7 +45,7 @@ RedshiftClusterParameterGroup.prototype.parameterGroupFamily = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {RedshiftParameterType|Attribute|Reference} value
+ * @param {RedshiftParameterType|Attribute|Reference} value Amazon Redshift Parameter Type
  * @return {RedshiftClusterParameterGroup}
  */
 RedshiftClusterParameterGroup.prototype.parameters = function(value) {

@@ -8,6 +8,7 @@
     {
       "name": "ApplicationName",
       "description": "The name of an AWS CodeDeploy application for this deployment group.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "AutoScalingGroups",
       "description": "A list of associated Auto Scaling groups that AWS CodeDeploy automatically deploys revisions to when new instances are created.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "Deployment",
       "description": "The application revision that will be deployed to this deployment group.",
+      "typeDescription": "AWS CodeDeploy DeploymentGroup Deployment",
       "required": false,
       "type": "CodeDeployDeploymentGroupDeployment",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "DeploymentConfigName",
       "description": "A deployment configuration name or a predefined configuration name. With predefined configurations, you can deploy application revisions to one instance at a time, half of the instances at a time, or all the instances at once. For more information and valid values, see the DeploymentConfigName parameter for the CreateDeploymentGroup action in the AWS CodeDeploy API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "DeploymentGroupName",
       "description": "A name for the deployment group. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the deployment group name. For more information, see Name Type.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -43,6 +48,7 @@
     {
       "name": "Ec2TagFilters",
       "description": "The Amazon EC2 tags to filter on. AWS CodeDeploy includes all instances that match the tag filter with this deployment group.",
+      "typeDescription": "AWS CodeDeploy DeploymentGroup Ec2TagFilters",
       "required": false,
       "type": "CodeDeployDeploymentGroupEc2TagFilters",
       "update": "No interruption"
@@ -50,6 +56,7 @@
     {
       "name": "OnPremisesInstanceTagFilters",
       "description": "The on-premises instance tags to filter on. AWS CodeDeploy includes all on-premises instances that match the tag filter with this deployment group. To register on-premises instances with AWS CodeDeploy, see Configure Existing On-Premises Instances by Using AWS CodeDeploy in the AWS CodeDeploy User Guide.",
+      "typeDescription": "AWS CodeDeploy DeploymentGroup OnPremisesInstanceTagFilters",
       "required": false,
       "type": "CodeDeployDeploymentGroupOnPremisesInstanceTagFilters",
       "update": "No interruption"
@@ -57,6 +64,7 @@
     {
       "name": "ServiceRoleArn",
       "description": "A service role Amazon Resource Name (ARN) that grants AWS CodeDeploy permission to make calls to AWS services on your behalf. For more information, see Create a Service Role for AWS CodeDeploy in the AWS CodeDeploy User Guide.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"

@@ -8,6 +8,7 @@
     {
       "name": "SubnetId",
       "description": "The ID representing the current association between the original network ACL and the subnet.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "NetworkAclId",
       "description": "The ID of the new ACL to associate with the subnet.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

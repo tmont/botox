@@ -8,6 +8,7 @@
     {
       "name": "AvailabilityZones",
       "description": "Contains a list of availability zones for the group.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "Cooldown",
       "description": "The number of seconds after a scaling activity is completed before any further scaling activities can start.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "DesiredCapacity",
       "description": "Specifies the desired capacity for the Auto Scaling group.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "HealthCheckGracePeriod",
       "description": "The length of time in seconds after a new EC2 instance comes into service that Auto Scaling starts checking its health.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "HealthCheckType",
       "description": "The service you want the health status from, Amazon EC2 or Elastic Load Balancer. Valid values are EC2 or ELB.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -43,6 +48,7 @@
     {
       "name": "InstanceId",
       "description": "The ID of the Amazon EC2 instance you want to use to create the Auto Scaling group. Use this property if you want to create an Auto Scaling group that uses an existing Amazon EC2 instance instead of a launch configuration.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -50,6 +56,7 @@
     {
       "name": "LaunchConfigurationName",
       "description": "Specifies the name of the associated AWS::AutoScaling::LaunchConfiguration.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -57,6 +64,7 @@
     {
       "name": "LoadBalancerNames",
       "description": "A list of load balancers associated with this Auto Scaling group.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "Replacement"
@@ -64,6 +72,7 @@
     {
       "name": "MaxSize",
       "description": "The maximum size of the Auto Scaling group.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -71,6 +80,7 @@
     {
       "name": "MetricsCollection",
       "description": "Enables the monitoring of group metrics of an Auto Scaling group.",
+      "typeDescription": "A list of Auto Scaling MetricsCollection",
       "required": false,
       "type": "AutoScalingMetricsCollection[]",
       "update": "No interruption"
@@ -78,6 +88,7 @@
     {
       "name": "MinSize",
       "description": "The minimum size of the Auto Scaling group.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -85,6 +96,7 @@
     {
       "name": "NotificationConfigurations",
       "description": "An embedded property that configures an Auto Scaling group to send notifications when specified events take place.",
+      "typeDescription": "List of Auto Scaling NotificationConfigurations",
       "required": false,
       "type": "AutoScalingNotificationConfigurations[]",
       "update": "No interruption"
@@ -92,6 +104,7 @@
     {
       "name": "PlacementGroup",
       "description": "The name of an existing cluster placement group into which you want to launch your instances. A placement group is a logical grouping of instances within a single Availability Zone. You cannot specify multiple Availability Zones and a placement group.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -99,13 +112,15 @@
     {
       "name": "Tags",
       "description": "The tags you want to attach to this resource.",
+      "typeDescription": "List of Auto Scaling Tags",
       "required": false,
-      "type": "AutoScalingTag[]",
+      "type": "AutoScalingTagsPropertyType[]",
       "update": "No interruption"
     },
     {
       "name": "TerminationPolicies",
       "description": "A policy or a list of policies that are used to select the instances to terminate. The policies are executed in the order that you list them.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -113,6 +128,7 @@
     {
       "name": "VPCZoneIdentifier",
       "description": "A list of subnet identifiers of Amazon Virtual Private Cloud (Amazon VPCs).",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "Some interruptions"

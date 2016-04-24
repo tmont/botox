@@ -8,6 +8,7 @@
     {
       "name": "AllowVersionUpgrade",
       "description": "When a new version of the Amazon Redshift is released, indicates whether upgrades can be applied to the engine that is running on the cluster. The upgrades are applied during the maintenance window.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "AutomatedSnapshotRetentionPeriod",
       "description": "The number of days that automated snapshots are retained. If you set the value to 0, automated snapshots are disabled.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "AvailabilityZone",
       "description": "The Amazon EC2 Availability Zone in which you want to provision your Amazon Redshift cluster. For example, if you have several Amazon EC2 instances running in a specific Availability Zone, you might want the cluster to be provisioned in the same zone in order to decrease network latency.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "ClusterParameterGroupName",
       "description": "The name of the parameter group that you want to associate with this cluster.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Some interruptions"
@@ -36,6 +40,7 @@
     {
       "name": "ClusterSecurityGroups",
       "description": "A list of security groups that you want to associate with this cluster.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -43,6 +48,7 @@
     {
       "name": "ClusterSubnetGroupName",
       "description": "The name of a cluster subnet group that you want to associate with this cluster.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -50,6 +56,7 @@
     {
       "name": "ClusterType",
       "description": "The type of cluster. You can specify single-node or multi-node.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Some interruptions"
@@ -57,6 +64,7 @@
     {
       "name": "ClusterVersion",
       "description": "The Amazon Redshift engine version that you want to deploy on the cluster.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -64,6 +72,7 @@
     {
       "name": "DBName",
       "description": "The name of the first database that is created when the cluster is created.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -71,6 +80,7 @@
     {
       "name": "ElasticIp",
       "description": "The Elastic IP (EIP) address for the cluster.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -78,6 +88,7 @@
     {
       "name": "Encrypted",
       "description": "Indicates whether the data in the cluster is encrypted at rest.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "Replacement"
@@ -85,6 +96,7 @@
     {
       "name": "HsmClientCertificateIdentifier",
       "description": "Specifies the name of the HSM client certificate that the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -92,6 +104,7 @@
     {
       "name": "HsmConfigurationIdentifier",
       "description": "Specifies the name of the HSM configuration that contains the information that the Amazon Redshift cluster can use to retrieve and store keys in an HSM.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -99,6 +112,7 @@
     {
       "name": "KmsKeyId",
       "description": "The AWS Key Management Service (AWS KMS) key ID that you want to use to encrypt data in the cluster.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -106,6 +120,7 @@
     {
       "name": "MasterUsername",
       "description": "The user name that is associated with the master user account for this cluster.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -113,6 +128,7 @@
     {
       "name": "MasterUserPassword",
       "description": "The password associated with the master user account for this cluster.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -120,6 +136,7 @@
     {
       "name": "NodeType",
       "description": "The node type that is provisioned for this cluster.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -127,6 +144,7 @@
     {
       "name": "NumberOfNodes",
       "description": "The number of compute nodes in the cluster. If you specify multi-node for the ClusterType parameter, you must specify a number greater than 1.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number",
       "update": "No interruption"
@@ -134,6 +152,7 @@
     {
       "name": "OwnerAccount",
       "description": "When you restore from a snapshot from another AWS account, the 12-digit AWS account ID that contains that snapshot.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -141,6 +160,7 @@
     {
       "name": "Port",
       "description": "The port number on which the cluster accepts incoming connections.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number",
       "update": "Replacement"
@@ -148,6 +168,7 @@
     {
       "name": "PreferredMaintenanceWindow",
       "description": "The weekly time range (in UTC) during which automated cluster maintenance can occur. The format of the time range is ddd:hh24:mi-ddd:hh24:mi.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -155,6 +176,7 @@
     {
       "name": "PubliclyAccessible",
       "description": "Indicates whether the cluster can be accessed from a public network.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "Replacement"
@@ -162,12 +184,14 @@
     {
       "name": "SnapshotClusterIdentifier",
       "description": "The name of the cluster the source snapshot was created from.",
+      "typeDescription": "",
       "required": false,
       "update": "Replacement"
     },
     {
       "name": "SnapshotIdentifier",
       "description": "The name of the snapshot from which to create a new cluster.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -175,6 +199,7 @@
     {
       "name": "VpcSecurityGroupIds",
       "description": "A list of VPC security groups that are associated with this cluster.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"

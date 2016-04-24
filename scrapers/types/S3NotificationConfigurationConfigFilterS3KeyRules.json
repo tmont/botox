@@ -5,12 +5,14 @@
     {
       "name": "Name",
       "description": "Whether the filter matches the prefix or suffix of object key names. For valid values, see the Name request element of the PUT Bucket notification action in the Amazon Simple Storage Service API Reference.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Value",
       "description": "The value that the filter searches for in object key names.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

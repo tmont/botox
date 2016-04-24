@@ -5,12 +5,14 @@
     {
       "name": "Args",
       "description": "A list of command line arguments to pass to the bootstrap action script.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     },
     {
       "name": "Path",
       "description": "The location of the script that Amazon EMR runs during a bootstrap action. Specify a location in an S3 bucket or your local file system.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

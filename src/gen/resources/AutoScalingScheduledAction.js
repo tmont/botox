@@ -45,7 +45,7 @@ AutoScalingScheduledAction.prototype.desiredCapacity = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {Timestamp|Attribute|Reference} value
+ * @param {String|Attribute|Reference|Join} value
  * @return {AutoScalingScheduledAction}
  */
 AutoScalingScheduledAction.prototype.endTime = function(value) {
@@ -97,7 +97,7 @@ AutoScalingScheduledAction.prototype.recurrence = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {Timestamp|Attribute|Reference} value
+ * @param {String|Attribute|Reference|Join} value
  * @return {AutoScalingScheduledAction}
  */
 AutoScalingScheduledAction.prototype.startTime = function(value) {

@@ -66,7 +66,7 @@ CloudFrontDefaultCacheBehavior.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {ForwardedValuestype} value
+	 * @param {CloudFrontForwardedValues} value
 	 * @return {CloudFrontDefaultCacheBehavior}
 	 */
 	forwardedValues: function(value) {

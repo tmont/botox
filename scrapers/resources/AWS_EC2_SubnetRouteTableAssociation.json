@@ -8,6 +8,7 @@
     {
       "name": "RouteTableId",
       "description": "The ID of the route table. This is commonly written as a reference to a route table declared elsewhere in the template. For example:",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption. However, the physical ID changes when the route table ID is changed."
@@ -15,6 +16,7 @@
     {
       "name": "SubnetId",
       "description": "The ID of the subnet. This is commonly written as a reference to a subnet declared elsewhere in the template. For example:",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

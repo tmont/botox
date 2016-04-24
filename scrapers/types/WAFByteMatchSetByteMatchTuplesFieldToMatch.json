@@ -5,12 +5,14 @@
     {
       "name": "Data",
       "description": "If you specify HEADER for the Type property, the name of the header that AWS WAF searches for, such as User-Agent or Referer. If you specify any other value for the Type property, do not specify this property.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Type",
       "description": "The part of the web request in which AWS WAF searches for the target string. For valid values, see FieldToMatch in the AWS WAF API Reference.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

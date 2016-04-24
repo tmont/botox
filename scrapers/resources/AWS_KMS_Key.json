@@ -8,6 +8,7 @@
     {
       "name": "Description",
       "description": "A description of the key. Use a description that helps your users decide whether the key is appropriate for a particular task.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "Enabled",
       "description": "Indicates whether the key is available for use. AWS CloudFormation sets this value to true by default.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "EnableKeyRotation",
       "description": "Indicates whether AWS KMS rotates the key. AWS CloudFormation sets this value to false by default.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "KeyPolicy",
       "description": "An AWS Identity and Access Management (IAM) policy to attach to the key. Use a policy to specify who has permission to use the key and which actions they can perform. For more information, see Key Policies in the AWS Key Management Service Developer Guide.",
+      "typeDescription": "JSON object",
       "required": true,
       "type": "Object",
       "update": "No interruption"

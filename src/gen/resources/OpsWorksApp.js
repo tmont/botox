@@ -19,7 +19,7 @@ OpsWorksApp.prototype = Object.create(Resource.prototype);
  * Required: false
  * Update requires: No interruption
  *
- * @param {OpsWorksSourceType|Attribute|Reference} value
+ * @param {OpsWorksSourceType|Attribute|Reference} value AWS OpsWorks Source Type
  * @return {OpsWorksApp}
  */
 OpsWorksApp.prototype.appSource = function(value) {
@@ -32,7 +32,7 @@ OpsWorksApp.prototype.appSource = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {key[]|Attribute|Reference} value
+ * @param {key[]|Attribute|Reference} value A list of key-value pairs
  * @return {OpsWorksApp}
  */
 OpsWorksApp.prototype.attributes = function(value) {
@@ -84,7 +84,7 @@ OpsWorksApp.prototype.enableSsl = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {OpsWorksAppEnvironment[]|Attribute|Reference} value
+ * @param {OpsWorksAppEnvironment[]|Attribute|Reference} value List of AWS OpsWorks App Environment
  * @return {OpsWorksApp}
  */
 OpsWorksApp.prototype.environment = function(value) {
@@ -123,7 +123,7 @@ OpsWorksApp.prototype.shortname = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {OpsWorksSslConfigurationType|Attribute|Reference} value
+ * @param {OpsWorksSslConfigurationType|Attribute|Reference} value AWS OpsWorks SslConfiguration Type
  * @return {OpsWorksApp}
  */
 OpsWorksApp.prototype.sslConfiguration = function(value) {

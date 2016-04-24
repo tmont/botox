@@ -8,6 +8,7 @@
     {
       "name": "CIDRIP",
       "description": "The IP range to authorize.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "DBSecurityGroupName",
       "description": "The name (ARN) of the AWS::RDS::DBSecurityGroup to which this ingress will be added.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "EC2SecurityGroupId",
       "description": "The ID of the VPC or EC2 security group to authorize.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "EC2SecurityGroupName",
       "description": "The name of the EC2 security group to authorize.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "EC2SecurityGroupOwnerId",
       "description": "The AWS Account Number of the owner of the EC2 security group specified in the EC2SecurityGroupName parameter. The AWS Access Key ID is not an acceptable value.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"

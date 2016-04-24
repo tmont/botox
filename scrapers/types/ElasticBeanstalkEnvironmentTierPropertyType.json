@@ -5,6 +5,7 @@
     {
       "name": "Name",
       "description": "The name of the environment tier. You can specify WebServer or Worker.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -12,6 +13,7 @@
     {
       "name": "Type",
       "description": "The type of this environment tier. You can specify Standard for the WebServer tier or SQS/HTTP for the Worker tier.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -19,6 +21,7 @@
     {
       "name": "Version",
       "description": "The version of this environment tier.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"

@@ -5,12 +5,14 @@
     {
       "name": "Id",
       "description": "The ID of a parameter object.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "StringValue",
       "description": "A value to associate with the parameter object.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

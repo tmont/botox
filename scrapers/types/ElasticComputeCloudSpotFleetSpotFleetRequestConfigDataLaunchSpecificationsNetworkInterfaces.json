@@ -5,54 +5,63 @@
     {
       "name": "AssociatePublicIpAddress",
       "description": "Indicates whether monitoring is enabled for the instances.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "DeleteOnTermination",
       "description": "Indicates whether to delete the network interface when the instance terminates.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "Description",
       "description": "The description of this network interface.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "DeviceIndex",
       "description": "The network interface's position in the attachment order.",
+      "typeDescription": "Integer",
       "required": true,
       "type": "Number"
     },
     {
       "name": "Groups",
       "description": "A list of security group IDs to associate with this network interface.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     },
     {
       "name": "NetworkInterfaceId",
       "description": "A network interface ID.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "PrivateIpAddresses",
       "description": "One or more private IP addresses to assign to the network interface. You can designate only one private IP address as primary.",
+      "typeDescription": "List of Amazon Elastic Compute Cloud SpotFleet SpotFleetRequestConfigData LaunchSpecifications NetworkInterfaces PrivateIpAddresses",
       "required": false,
       "type": "ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses[]"
     },
     {
       "name": "SecondaryPrivateIpAddressCount",
       "description": "The number of secondary private IP addresses that Amazon Elastic Compute Cloud (Amazon EC2) automatically assigns to the network interface.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number"
     },
     {
       "name": "SubnetId",
       "description": "The ID of the subnet to associate with the network interface.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

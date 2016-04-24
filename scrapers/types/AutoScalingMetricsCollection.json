@@ -5,12 +5,14 @@
     {
       "name": "Granularity",
       "description": "The frequency at which Auto Scaling sends aggregated data to CloudWatch. For example, you can specify 1Minute to send aggregated data to CloudWatch every minute.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Metrics",
       "description": "The list of metrics to collect. If you don't specify any metrics, all metrics are enabled.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     }

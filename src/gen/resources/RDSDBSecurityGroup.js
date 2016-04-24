@@ -32,7 +32,7 @@ RDSDBSecurityGroup.prototype.eC2VpcId = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {RDSSecurityGroupRule[]|Attribute|Reference} value
+ * @param {RDSSecurityGroupRule[]|Attribute|Reference} value List of RDS Security Group Rules.
  * @return {RDSDBSecurityGroup}
  */
 RDSDBSecurityGroup.prototype.dbSecurityGroupIngress = function(value) {
@@ -58,7 +58,7 @@ RDSDBSecurityGroup.prototype.groupDescription = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {resourcetag[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value A list of resource tags.
  * @return {RDSDBSecurityGroup}
  */
 RDSDBSecurityGroup.prototype.tags = function(value) {

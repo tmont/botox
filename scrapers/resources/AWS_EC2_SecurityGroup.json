@@ -8,6 +8,7 @@
     {
       "name": "GroupDescription",
       "description": "Description of the security group.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,20 +16,23 @@
     {
       "name": "SecurityGroupEgress",
       "description": "A list of Amazon EC2 security group egress rules.",
+      "typeDescription": "List of EC2 Security Group Rule",
       "required": false,
-      "type": "EC2SecurityGroupRule[]",
+      "type": "EC2SecurityGroupRulePropertyType[]",
       "update": "No interruption"
     },
     {
       "name": "SecurityGroupIngress",
       "description": "A list of Amazon EC2 security group ingress rules.",
+      "typeDescription": "List of EC2 Security Group Rule",
       "required": false,
-      "type": "EC2SecurityGroupRule[]",
+      "type": "EC2SecurityGroupRulePropertyType[]",
       "update": "No interruption"
     },
     {
       "name": "Tags",
       "description": "The tags that you want to attach to the resource.",
+      "typeDescription": "AWS CloudFormation Resource Tags.",
       "required": false,
       "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption."
@@ -36,6 +40,7 @@
     {
       "name": "VpcId",
       "description": "The physical ID of the VPC. Can be obtained by using a reference to an AWS::EC2::VPC, such as: { \"Ref\" : \"myVPC\" }.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

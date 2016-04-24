@@ -42,7 +42,7 @@ Object.defineProperty(DynamoDBTable.prototype, 'attr', {
  * Required: true
  * Update requires: Replacement
  *
- * @param {DynamoDBAttributeDefinitions[]|Attribute|Reference} value
+ * @param {DynamoDBAttributeDefinitions[]|Attribute|Reference} value List of DynamoDB Attribute Definitions
  * @return {DynamoDBTable}
  */
 DynamoDBTable.prototype.attributeDefinitions = function(value) {
@@ -55,7 +55,7 @@ DynamoDBTable.prototype.attributeDefinitions = function(value) {
  * Required: false
  * Update requires: Updates are not supported. with the following exceptions:
  *
- * @param {DynamoDBGlobalSecondaryIndexes[]|Attribute|Reference} value
+ * @param {DynamoDBGlobalSecondaryIndexes[]|Attribute|Reference} value List of DynamoDB Global Secondary Indexes
  * @return {DynamoDBTable}
  */
 DynamoDBTable.prototype.globalSecondaryIndexes = function(value) {
@@ -68,7 +68,7 @@ DynamoDBTable.prototype.globalSecondaryIndexes = function(value) {
  * Required: true
  * Update requires: Replacement
  *
- * @param {DynamoDBKeySchema[]|Attribute|Reference} value
+ * @param {DynamoDBKeySchema[]|Attribute|Reference} value List of DynamoDB Key Schema
  * @return {DynamoDBTable}
  */
 DynamoDBTable.prototype.keySchema = function(value) {
@@ -81,7 +81,7 @@ DynamoDBTable.prototype.keySchema = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {DynamoDBLocalSecondaryIndexes[]|Attribute|Reference} value
+ * @param {DynamoDBLocalSecondaryIndexes[]|Attribute|Reference} value List of DynamoDB Local Secondary Indexes
  * @return {DynamoDBTable}
  */
 DynamoDBTable.prototype.localSecondaryIndexes = function(value) {
@@ -94,7 +94,7 @@ DynamoDBTable.prototype.localSecondaryIndexes = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {DynamoDBProvisionedThroughput|Attribute|Reference} value
+ * @param {DynamoDBProvisionedThroughput|Attribute|Reference} value DynamoDB Provisioned Throughput
  * @return {DynamoDBTable}
  */
 DynamoDBTable.prototype.provisionedThroughput = function(value) {
@@ -107,7 +107,7 @@ DynamoDBTable.prototype.provisionedThroughput = function(value) {
  * Required: false
  * Update requires: No interruption to the table; however, the stream is replaced.
  *
- * @param {DynamoDBTableStreamSpecification|Attribute|Reference} value
+ * @param {DynamoDBTableStreamSpecification|Attribute|Reference} value DynamoDB Table StreamSpecification
  * @return {DynamoDBTable}
  */
 DynamoDBTable.prototype.streamSpecification = function(value) {

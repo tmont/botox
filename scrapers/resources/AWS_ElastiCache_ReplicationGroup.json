@@ -8,6 +8,7 @@
     {
       "name": "AutomaticFailoverEnabled",
       "description": "Indicates whether Multi-AZ is enabled. When Multi-AZ is enabled, a read-only replica is automatically promoted to a read-write primary cluster if the existing primary cluster fails. If you specify true, you must specify a value greater than 1 for the NumCacheNodes property. By default, AWS CloudFormation sets the value to true.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "AutoMinorVersionUpgrade",
       "description": "Currently, this property isn't used by ElastiCache.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "CacheNodeType",
       "description": "The compute and memory capacity of nodes in the node group. To see valid values, see CreateReplicationGroup in the Amazon ElastiCache API Reference Guide.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "CacheParameterGroupName",
       "description": "The name of the parameter group to associate with this replication group.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "CacheSecurityGroupNames",
       "description": "A list of cache security group names to associate with this replication group. If you specify the SecurityGroupIds property, do not specify this property; you can specify only one.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -43,6 +48,7 @@
     {
       "name": "CacheSubnetGroupName",
       "description": "The name of a cache subnet group to use for this replication group.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -50,6 +56,7 @@
     {
       "name": "Engine",
       "description": "The name of the cache engine to use for the cache clusters in this replication group. Currently, you can specify only redis.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -57,6 +64,7 @@
     {
       "name": "EngineVersion",
       "description": "The version number of the cache engine to use for the cache clusters in this replication group.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -64,6 +72,7 @@
     {
       "name": "NotificationTopicArn",
       "description": "The Amazon Resource Name (ARN) of the Amazon Simple Notification Service topic to which notifications are sent.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -71,6 +80,7 @@
     {
       "name": "NumCacheClusters",
       "description": "The number of cache clusters for this replication group. If automatic failover is enabled, you must specify a value greater than 1.",
+      "typeDescription": "Integer",
       "required": true,
       "type": "Number",
       "update": "Replacement"
@@ -78,6 +88,7 @@
     {
       "name": "Port",
       "description": "The port number on which each member of the replication group accepts connections.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number",
       "update": "Replacement"
@@ -85,6 +96,7 @@
     {
       "name": "PreferredCacheClusterAZs",
       "description": "A list of Availability Zones (AZs) in which the cache clusters in this replication group are created.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "Replacement"
@@ -92,6 +104,7 @@
     {
       "name": "PreferredMaintenanceWindow",
       "description": "The weekly time range during which system maintenance can occur. Use the following format to specify a time range: ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). For example, you can specify sun:22:00-sun:23:30 for Sunday from 10 PM to 11:30 PM.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -99,6 +112,7 @@
     {
       "name": "ReplicationGroupDescription",
       "description": "The description of the replication group.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -106,6 +120,7 @@
     {
       "name": "SecurityGroupIds",
       "description": "A list of Amazon Virtual Private Cloud (Amazon VPC) security groups to associate with this replication group. Use this property only when you are creating a replication group in a VPC. If you specify the CacheSecurityGroupNames property, do not specify this property; you can specify only one.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -113,6 +128,7 @@
     {
       "name": "SnapshotArns",
       "description": "A single-element string list that specifies an ARN of a Redis .rdb snapshot file that is stored in Amazon Simple Storage Service (Amazon S3). The snapshot file populates the node group. The Amazon S3 object name in the ARN cannot contain commas. For example, you can specify arn:aws:s3:::my_bucket/snapshot1.rdb.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "Replacement"
@@ -120,6 +136,7 @@
     {
       "name": "SnapshotRetentionLimit",
       "description": "The number of days that ElastiCache retains automatic snapshots before deleting them.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number",
       "update": "No interruption"
@@ -127,6 +144,7 @@
     {
       "name": "SnapshotWindow",
       "description": "The time range (in UTC) when ElastiCache takes a daily snapshot of your node group. For example, you can specify 05:00-09:00.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"

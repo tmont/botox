@@ -188,7 +188,7 @@ OpsWorksInstance.prototype.subnetId = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {OpsWorksTimeBasedAutoScalingType|Attribute|Reference} value
+ * @param {OpsWorksTimeBasedAutoScalingType|Attribute|Reference} value AWS OpsWorks TimeBasedAutoScaling Type
  * @return {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.timeBasedAutoScaling = function(value) {

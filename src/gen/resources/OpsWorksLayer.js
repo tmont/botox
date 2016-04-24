@@ -19,7 +19,7 @@ OpsWorksLayer.prototype = Object.create(Resource.prototype);
  * Required: false
  * Update requires: No interruption
  *
- * @param {key[]|Attribute|Reference} value
+ * @param {key[]|Attribute|Reference} value A list of key-value pairs
  * @return {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.attributes = function(value) {
@@ -71,7 +71,7 @@ OpsWorksLayer.prototype.customInstanceProfileArn = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {OpsWorksRecipesType|Attribute|Reference} value
+ * @param {OpsWorksRecipesType|Attribute|Reference} value AWS OpsWorks Recipes Type
  * @return {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.customRecipes = function(value) {
@@ -123,7 +123,7 @@ OpsWorksLayer.prototype.installUpdatesOnBoot = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {OpsWorksLayerLifeCycleConfiguration|Attribute|Reference} value
+ * @param {OpsWorksLayerLifeCycleConfiguration|Attribute|Reference} value AWS OpsWorks Layer LifeCycleConfiguration
  * @return {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.lifecycleEventConfiguration = function(value) {
@@ -136,7 +136,7 @@ OpsWorksLayer.prototype.lifecycleEventConfiguration = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {OpsWorksLoadBasedAutoScalingType|Attribute|Reference} value
+ * @param {OpsWorksLoadBasedAutoScalingType|Attribute|Reference} value AWS OpsWorks LoadBasedAutoScaling Type
  * @return {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.loadBasedAutoScaling = function(value) {
@@ -214,7 +214,7 @@ OpsWorksLayer.prototype.type = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {OpsWorksVolumeConfigurationType[]|Attribute|Reference} value
+ * @param {OpsWorksVolumeConfigurationType[]|Attribute|Reference} value A list of AWS OpsWorks VolumeConfiguration Type
  * @return {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.volumeConfigurations = function(value) {

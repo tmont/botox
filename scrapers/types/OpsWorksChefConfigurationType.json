@@ -5,12 +5,14 @@
     {
       "name": "BerkshelfVersion",
       "description": "The Berkshelf version.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "ManageBerkshelf",
       "description": "Whether to enable Berkshelf.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     }

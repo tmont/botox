@@ -5,42 +5,49 @@
     {
       "name": "ActionTypeId",
       "description": "Specifies the action type and the provider of the action.",
+      "typeDescription": "AWS CodePipeline Pipeline Stages Actions ActionTypeId",
       "required": true,
       "type": "CodePipelinePipelineStagesActionsActionTypeId"
     },
     {
       "name": "Configuration",
       "description": "The action's configuration. These are key-value pairs that specify input values for an action.",
+      "typeDescription": "JSON object",
       "required": false,
       "type": "Object"
     },
     {
       "name": "InputArtifacts",
       "description": "The name or ID of the artifact that the action consumes, such as a test or build artifact.",
+      "typeDescription": "List of AWS CodePipeline Pipeline Stages Actions InputArtifacts",
       "required": false,
       "type": "CodePipelinePipelineStagesActionsInputArtifacts[]"
     },
     {
       "name": "Name",
       "description": "The action name.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "OutputArtifacts",
       "description": "The artifact name or ID that is a result of the action, such as a test or build artifact.",
+      "typeDescription": "List of AWS CodePipeline Pipeline Stages Actions OutputArtifacts",
       "required": false,
       "type": "CodePipelinePipelineStagesActionsOutputArtifacts[]"
     },
     {
       "name": "RoleArn",
       "description": "The Amazon Resource Name (ARN) of a service role that the action uses. The pipeline's role assumes this role.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "RunOrder",
       "description": "The order in which AWS CodePipeline runs this action.",
+      "typeDescription": "Integer",
       "required": false,
       "type": "Number"
     }

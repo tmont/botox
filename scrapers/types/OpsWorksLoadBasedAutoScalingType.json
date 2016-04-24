@@ -5,18 +5,21 @@
     {
       "name": "DownScaling",
       "description": "The threshold below which the instances are scaled down (stopped). If the load falls below this threshold for a specified amount of time, AWS OpsWorks stops a specified number of instances.",
+      "typeDescription": "AWS OpsWorks AutoScalingThresholds Type",
       "required": false,
       "type": "OpsWorksAutoScalingThresholdsType"
     },
     {
       "name": "Enable",
       "description": "Whether to enable automatic load-based scaling for the layer.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "UpScaling",
       "description": "The threshold above which the instances are scaled up (added). If the load exceeds this thresholds for a specified amount of time, AWS OpsWorks starts a specified number of instances.",
+      "typeDescription": "AWS OpsWorks AutoScalingThresholds Type",
       "required": false,
       "type": "OpsWorksAutoScalingThresholdsType"
     }

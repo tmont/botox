@@ -5,42 +5,49 @@
     {
       "name": "Friday",
       "description": "The schedule for Friday.",
+      "typeDescription": "String to string map",
       "required": false,
       "type": "Object"
     },
     {
       "name": "Monday",
       "description": "The schedule for Monday.",
+      "typeDescription": "String to string map",
       "required": false,
       "type": "Object"
     },
     {
       "name": "Saturday",
       "description": "The schedule for Saturday.",
+      "typeDescription": "String to string map",
       "required": false,
       "type": "Object"
     },
     {
       "name": "Sunday",
       "description": "The schedule for Sunday.",
+      "typeDescription": "String to string map",
       "required": false,
       "type": "Object"
     },
     {
       "name": "Thursday",
       "description": "The schedule for Thursday.",
+      "typeDescription": "String to string map",
       "required": false,
       "type": "Object"
     },
     {
       "name": "Tuesday",
       "description": "The schedule for Tuesday.",
+      "typeDescription": "String to string map",
       "required": false,
       "type": "Object"
     },
     {
       "name": "Wednesday",
       "description": "The schedule for Wednesday.",
+      "typeDescription": "String to string map",
       "required": false,
       "type": "Object"
     }

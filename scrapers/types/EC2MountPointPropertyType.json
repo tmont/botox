@@ -5,12 +5,14 @@
     {
       "name": "Device",
       "description": "How the device is exposed to the instance (such as /dev/sdh, or xvdh).",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "VolumeId",
       "description": "The ID of the Amazon EBS volume. The volume and instance must be within the same Availability Zone and the instance must be running.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

@@ -8,6 +8,7 @@
     {
       "name": "PolicyDocument",
       "description": "A policy to attach to the endpoint that controls access to the service. The policy must be valid JSON. The default policy allows full access to the AWS service. For more information, see Controlling Access to Services in the Amazon VPC User Guide.",
+      "typeDescription": "JSON object",
       "required": false,
       "type": "Object",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "RouteTableIds",
       "description": "One or more route table IDs that are used by the VPC to reach the endpoint.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "ServiceName",
       "description": "The AWS service to which you want to establish a connection. Specify the service name in the form of com.amazonaws.region.service.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "VpcId",
       "description": "The ID of the VPC in which the endpoint is used.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

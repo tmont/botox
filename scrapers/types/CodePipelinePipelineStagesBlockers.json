@@ -5,12 +5,14 @@
     {
       "name": "Name",
       "description": "The name of the gate declaration.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Type",
       "description": "The type of gate declaration. For valid values, see BlockerDeclaration in the AWS CodePipeline API Reference.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

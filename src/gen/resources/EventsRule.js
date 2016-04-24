@@ -120,7 +120,7 @@ EventsRule.prototype.state = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {CloudWatchEventsRuleTarget[]|Attribute|Reference} value
+ * @param {CloudWatchEventsRuleTarget[]|Attribute|Reference} value List of Amazon CloudWatch Events Rule Target
  * @return {EventsRule}
  */
 EventsRule.prototype.targets = function(value) {

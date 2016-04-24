@@ -45,7 +45,7 @@ ApiGatewayDeployment.prototype.restApiId = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {APIGatewayDeploymentStageDescription|Attribute|Reference} value
+ * @param {APIGatewayDeploymentStageDescription|Attribute|Reference} value Amazon API Gateway Deployment StageDescription
  * @return {ApiGatewayDeployment}
  */
 ApiGatewayDeployment.prototype.stageDescription = function(value) {

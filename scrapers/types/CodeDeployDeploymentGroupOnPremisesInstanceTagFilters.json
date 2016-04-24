@@ -5,18 +5,21 @@
     {
       "name": "Key",
       "description": "Filter on-premises instances with this key.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Type",
       "description": "The filter type. For example, you can filter on-premises instances by the key, tag value, or both. For valid values, see EC2TagFilter in the AWS CodeDeploy API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Value",
       "description": "Filter on-premises instances with this tag value.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

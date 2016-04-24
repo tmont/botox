@@ -5,6 +5,7 @@
     {
       "name": "GeoRestriction",
       "description": "The countries in which viewers are able to access your content.",
+      "typeDescription": "CloudFront DistributionConfig Restrictions GeoRestriction",
       "required": true,
       "type": "CloudFrontDistributionConfigRestrictionsGeoRestriction"
     }

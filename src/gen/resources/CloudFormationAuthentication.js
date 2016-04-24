@@ -71,7 +71,7 @@ CloudFormationAuthentication.prototype.secretKey = function(value) {
  * Required: true
  * Update requires: undefined
  *
- * @param {StringValidvaluesarebasicorS3|Attribute|Reference} value
+ * @param {String|Attribute|Reference|Join} value String Valid values are "basic" or "S3"
  * @return {CloudFormationAuthentication}
  */
 CloudFormationAuthentication.prototype.type = function(value) {

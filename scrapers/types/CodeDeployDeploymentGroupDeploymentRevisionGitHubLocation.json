@@ -5,12 +5,14 @@
     {
       "name": "CommitId",
       "description": "The SHA1 commit ID of the GitHub commit to use as your application revision.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Repository",
       "description": "The GitHub account and repository name that includes the application revision. Specify the value as account/repository_name.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

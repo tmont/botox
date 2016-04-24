@@ -5,18 +5,21 @@
     {
       "name": "DataId",
       "description": "The unique identifier of a predicate, such as the ID of a ByteMatchSet or IPSet.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Negated",
       "description": "Whether to use the settings or the negated settings that you specified in the ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects.",
+      "typeDescription": "Boolean",
       "required": true,
       "type": "Boolean"
     },
     {
       "name": "Type",
       "description": "The type of predicate in a rule, such as an IPSet (IPMatch). For valid values, see the Type contents of the Predicate data type in the AWS WAF API Reference.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

@@ -5,18 +5,21 @@
     {
       "name": "Event",
       "description": "The S3 bucket event for which to invoke the Lambda function. For more information, see Supported Event Types in the Amazon Simple Storage Service Developer Guide.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Filter",
       "description": "The filtering rules that determine which objects invoke the Lambda function. For example, you can create a filter so that only image files with a .jpg extension invoke the function when they are added to the S3 bucket.",
+      "typeDescription": "Amazon S3 NotificationConfiguration Config Filter",
       "required": false,
       "type": "S3NotificationConfigurationConfigFilter"
     },
     {
       "name": "Function",
       "description": "The Amazon Resource Name (ARN) of the Lambda function that Amazon S3 invokes when the specified event type occurs.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

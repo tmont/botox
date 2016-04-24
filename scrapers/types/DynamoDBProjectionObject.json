@@ -5,12 +5,14 @@
     {
       "name": "NonKeyAttributes",
       "description": "The non-key attribute names that are projected into the index.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     },
     {
       "name": "ProjectionType",
       "description": "The set of attributes that are projected into the index:",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

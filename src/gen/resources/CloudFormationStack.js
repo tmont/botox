@@ -55,7 +55,7 @@ CloudFormationStack.prototype.notificationARNs = function(value) {
  * Required: false
  * Update requires: Whether an update causes interruptions depends on the resources that are being update. An update never causes a nested stack to be replaced.
  *
- * @param {CloudFormationStackParametersPropertyType|Attribute|Reference} value
+ * @param {CloudFormationStackParametersPropertyType|Attribute|Reference} value CloudFormation Stack Parameters Property Type
  * @return {CloudFormationStack}
  */
 CloudFormationStack.prototype.parameters = function(value) {
@@ -68,7 +68,7 @@ CloudFormationStack.prototype.parameters = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
  * @return {CloudFormationStack}
  */
 CloudFormationStack.prototype.tags = function(value) {

@@ -45,7 +45,7 @@ RDSDBSubnetGroup.prototype.subnetIds = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {resourcetag[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value A list of resource tags.
  * @return {RDSDBSubnetGroup}
  */
 RDSDBSubnetGroup.prototype.tags = function(value) {

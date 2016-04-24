@@ -123,7 +123,7 @@ AutoScalingScalingPolicy.prototype.scalingAdjustment = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {AutoScalingScalingPolicyStepAdjustments[]|Attribute|Reference} value
+ * @param {AutoScalingScalingPolicyStepAdjustments[]|Attribute|Reference} value List of Auto Scaling ScalingPolicy StepAdjustments
  * @return {AutoScalingScalingPolicy}
  */
 AutoScalingScalingPolicy.prototype.stepAdjustments = function(value) {

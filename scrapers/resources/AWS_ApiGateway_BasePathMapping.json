@@ -8,6 +8,7 @@
     {
       "name": "BasePath",
       "description": "The base path name that callers of the API must provide in the URL after the domain name.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "DomainName",
       "description": "The name of a DomainName resource.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "RestApiId",
       "description": "The name of the API.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "Stage",
       "description": "The name of the API's stage.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"

@@ -30,7 +30,7 @@ CloudFrontDistributionConfig.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {CacheBehavior[]} value
+	 * @param {CloudFrontDistributionConfigCacheBehavior[]} value
 	 * @return {CloudFrontDistributionConfig}
 	 */
 	cacheBehaviors: function(value) {
@@ -66,7 +66,7 @@ CloudFrontDistributionConfig.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {DefaultCacheBehaviortype} value
+	 * @param {CloudFrontDefaultCacheBehavior} value
 	 * @return {CloudFrontDistributionConfig}
 	 */
 	defaultCacheBehavior: function(value) {
@@ -102,7 +102,7 @@ CloudFrontDistributionConfig.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {Loggingtype} value
+	 * @param {CloudFrontLogging} value
 	 * @return {CloudFrontDistributionConfig}
 	 */
 	logging: function(value) {
@@ -114,7 +114,7 @@ CloudFrontDistributionConfig.prototype = {
 	 *
 	 * Required: true
 	 *
-	 * @param {Origin[]} value
+	 * @param {CloudFrontDistributionConfigOrigin[]} value
 	 * @return {CloudFrontDistributionConfig}
 	 */
 	origins: function(value) {

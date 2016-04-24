@@ -8,6 +8,7 @@
     {
       "name": "DestinationCidrBlock",
       "description": "The CIDR address block used for the destination match. For example, 0.0.0.0/0. Routing decisions are based on the most specific match.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "GatewayId",
       "description": "The ID of an Internet gateway or virtual private gateway that is attached to your VPC. For example: igw-eaad4883.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -22,6 +24,7 @@
     {
       "name": "InstanceId",
       "description": "The ID of a NAT instance in your VPC. For example, i-1a2b3c4d.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -29,6 +32,7 @@
     {
       "name": "NatGatewayId",
       "description": "The ID of a NAT gateway. For example, nat-0a12bc456789de0fg.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -36,6 +40,7 @@
     {
       "name": "NetworkInterfaceId",
       "description": "Allows the routing of network interface IDs.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -43,6 +48,7 @@
     {
       "name": "RouteTableId",
       "description": "The ID of the route table where the route will be added.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

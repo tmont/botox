@@ -5,18 +5,21 @@
     {
       "name": "Key",
       "description": "The key name of the tag.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Value",
       "description": "The value for the tag.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "PropagateAtLaunch",
       "description": "Set to true if you want AWS CloudFormation to copy the tag to EC2 instances that are launched as part of the auto scaling group. Set to false if you want the tag attached only to the auto scaling group and not copied to any instances launched as part of the auto scaling group.",
+      "typeDescription": "Boolean",
       "required": true,
       "type": "Boolean"
     }

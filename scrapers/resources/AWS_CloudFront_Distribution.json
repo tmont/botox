@@ -8,8 +8,9 @@
     {
       "name": "DistributionConfig",
       "description": "The distribution's configuration information.",
+      "typeDescription": "DistributionConfig type",
       "required": true,
-      "type": "DistributionConfigtype",
+      "type": "CloudFrontDistributionConfig",
       "update": "No interruption"
     }
   ],

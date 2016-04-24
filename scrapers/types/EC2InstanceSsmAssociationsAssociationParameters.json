@@ -5,12 +5,14 @@
     {
       "name": "Key",
       "description": "The name of an input parameter that is in the associated SSM document.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Value",
       "description": "The value of an input parameter.",
+      "typeDescription": "List of strings",
       "required": true,
       "type": "string[]"
     }

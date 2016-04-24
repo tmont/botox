@@ -8,6 +8,7 @@
     {
       "name": "PolicyDocument",
       "description": "A policy document containing permissions to add to the specified SQS queues.",
+      "typeDescription": "JSON object",
       "required": true,
       "type": "Object",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "Queues",
       "description": "The URLs of the queues to which you want to add the policy. You can use the Ref function to specify an AWS::SQS::Queue resource.",
+      "typeDescription": "List of strings",
       "required": true,
       "type": "string[]",
       "update": "No interruption"

@@ -5,36 +5,42 @@
     {
       "name": "BidPrice",
       "description": "When launching instances as Spot Instances, the bid price in USD for each EC2 instance in the instance group.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Configurations",
       "description": "A list of configurations to apply to this instance group. For more information see, Configuring Applications in the Amazon EMR Release Guide.",
+      "typeDescription": "List of Amazon Elastic MapReduce Cluster Configuration",
       "required": false,
       "type": "ElasticMapReduceClusterConfiguration[]"
     },
     {
       "name": "InstanceCount",
       "description": "The number of instances to launch in the instance group.",
+      "typeDescription": "Integer",
       "required": true,
       "type": "Number"
     },
     {
       "name": "InstanceType",
       "description": "The EC2 instance type for all instances in the instance group. For more information, see Instance Configurations in the Amazon EMR Management Guide.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Market",
       "description": "The type of marketplace from which your instances are provisioned into this group, either ON_DEMAND or SPOT. For more information, see Amazon EC2 Purchasing Options.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Name",
       "description": "A name for the instance group.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

@@ -8,6 +8,7 @@
     {
       "name": "GroupName",
       "description": "The name of group to add users to.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "Users",
       "description": "Required: Yes",
+      "typeDescription": "List of users",
       "required": true,
       "type": "user[]",
       "update": "No interruption"

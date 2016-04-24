@@ -8,6 +8,7 @@
     {
       "name": "ActionOnFailure",
       "description": "The action to take if the job flow step fails. Currently, AWS CloudFormation supports CONTINUE and CONTINUE_AND_WAIT. For more information, see Managing Cluster Termination in the Amazon Elastic MapReduce Management Guide.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "HadoopJarStep",
       "description": "The JAR file that includes the main function that Amazon EMR executes.",
+      "typeDescription": "Amazon Elastic MapReduce Step HadoopJarStepConfig",
       "required": true,
       "type": "ElasticMapReduceStepHadoopJarStepConfig",
       "update": "Replacement"
@@ -22,6 +24,7 @@
     {
       "name": "JobFlowId",
       "description": "The ID of a cluster in which you want to run this job flow step.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "Name",
       "description": "A name for the job flow step.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"

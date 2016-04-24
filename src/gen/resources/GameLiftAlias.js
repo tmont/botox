@@ -45,7 +45,7 @@ GameLiftAlias.prototype.name = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {GameLiftAliasRoutingStrategy|Attribute|Reference} value
+ * @param {GameLiftAliasRoutingStrategy|Attribute|Reference} value Amazon GameLift Alias RoutingStrategy
  * @return {GameLiftAlias}
  */
 GameLiftAlias.prototype.routingStrategy = function(value) {

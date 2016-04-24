@@ -5,24 +5,28 @@
     {
       "name": "ResponseParameters",
       "description": "The response parameters from the back-end response that API Gateway sends to the method response. Specify response parameters as key-value pairs (string-to-string maps), with a destination as the key and a source as the value.",
+      "typeDescription": "List of key-value pairs",
       "required": false,
       "type": "key[]"
     },
     {
       "name": "ResponseTemplates",
       "description": "The templates used to transform the integration response body. Specify templates as key-value pairs (string-to-string maps), with a content type as the key and a template as the value.",
+      "typeDescription": "List of key-value pairs",
       "required": false,
       "type": "key[]"
     },
     {
       "name": "SelectionPattern",
       "description": "A regular expression that specifies which error strings or status codes from the back end map to the integration response.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "StatusCode",
       "description": "The status code that API Gateway uses to map the integration response to a MethodResponse status code.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

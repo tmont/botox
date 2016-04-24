@@ -8,6 +8,7 @@
     {
       "name": "DomainName",
       "description": "A domain name of your choice.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "DomainNameServers",
       "description": "The IP (IPv4) address of a domain name server. You can specify up to four addresses.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "Replacement"
@@ -22,6 +24,7 @@
     {
       "name": "NetbiosNameServers",
       "description": "The IP address (IPv4) of a NetBIOS name server. You can specify up to four addresses.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "Replacement"
@@ -29,6 +32,7 @@
     {
       "name": "NetbiosNodeType",
       "description": "An integer value indicating the NetBIOS node type:",
+      "typeDescription": "List of numbers",
       "required": false,
       "type": "number[]",
       "update": "Replacement"
@@ -36,6 +40,7 @@
     {
       "name": "NtpServers",
       "description": "The IP address (IPv4) of a Network Time Protocol (NTP) server. You can specify up to four addresses.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]",
       "update": "Replacement"
@@ -43,6 +48,7 @@
     {
       "name": "Tags",
       "description": "An arbitrary set of tags (key–value pairs) for this resource.",
+      "typeDescription": "AWS CloudFormation Resource Tags",
       "required": false,
       "type": "CloudFormationResourceTagsType[]",
       "update": "No interruption."

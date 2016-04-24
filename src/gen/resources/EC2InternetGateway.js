@@ -19,7 +19,7 @@ EC2InternetGateway.prototype = Object.create(Resource.prototype);
  * Required: false
  * Update requires: No interruption.
  *
- * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
  * @return {EC2InternetGateway}
  */
 EC2InternetGateway.prototype.tags = function(value) {

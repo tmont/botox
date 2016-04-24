@@ -5,24 +5,28 @@
     {
       "name": "AdditionalInfo",
       "description": "Metadata about third-party applications that third-party vendors use for testing purposes.",
+      "typeDescription": "String-to-string map",
       "required": false,
       "type": "Object"
     },
     {
       "name": "Args",
       "description": "Arguments that Amazon EMR passes to the application.",
+      "typeDescription": "List of strings",
       "required": false,
       "type": "string[]"
     },
     {
       "name": "Name",
       "description": "The name of the application to add to your cluster, such as Hadoop or Hive. For valid values, see the Applications parameter in the Amazon Elastic MapReduce API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "Version",
       "description": "The version of the application.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

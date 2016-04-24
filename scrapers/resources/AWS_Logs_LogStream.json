@@ -8,6 +8,7 @@
     {
       "name": "LogGroupName",
       "description": "The name of the log group where the log stream is created.",
+      "typeDescription": "String",
       "required": true,
       "type": "String",
       "update": "Replacement"
@@ -15,6 +16,7 @@
     {
       "name": "LogStreamName",
       "description": "The name of the log stream to create. The name must be unique within the log group.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"

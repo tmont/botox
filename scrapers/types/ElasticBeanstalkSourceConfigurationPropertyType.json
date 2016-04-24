@@ -5,12 +5,14 @@
     {
       "name": "ApplicationName",
       "description": "The name of the Elastic Beanstalk application that contains the configuration template that you want to use.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "TemplateName",
       "description": "The name of the configuration template.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

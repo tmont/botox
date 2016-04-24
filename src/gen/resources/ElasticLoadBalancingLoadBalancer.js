@@ -78,7 +78,7 @@ Object.defineProperty(ElasticLoadBalancingLoadBalancer.prototype, 'attr', {
  * Required: false
  * Update requires: No interruption
  *
- * @param {ElasticLoadBalancingAccessLoggingPolicy|Attribute|Reference} value
+ * @param {ElasticLoadBalancingAccessLoggingPolicy|Attribute|Reference} value Elastic Load Balancing AccessLoggingPolicy
  * @return {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.accessLoggingPolicy = function(value) {
@@ -91,7 +91,7 @@ ElasticLoadBalancingLoadBalancer.prototype.accessLoggingPolicy = function(value)
  * Required: false
  * Update requires: No interruption
  *
- * @param {AppCookieStickinessPolicyobject[]|Attribute|Reference} value
+ * @param {ElasticLoadBalancingAppCookieStickinessPolicyType[]|Attribute|Reference} value A list of AppCookieStickinessPolicy objects.
  * @return {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.appCookieStickinessPolicy = function(value) {
@@ -117,7 +117,7 @@ ElasticLoadBalancingLoadBalancer.prototype.availabilityZones = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {ElasticLoadBalancingConnectionDrainingPolicy|Attribute|Reference} value
+ * @param {ElasticLoadBalancingConnectionDrainingPolicy|Attribute|Reference} value Elastic Load Balancing ConnectionDrainingPolicy
  * @return {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.connectionDrainingPolicy = function(value) {
@@ -130,7 +130,7 @@ ElasticLoadBalancingLoadBalancer.prototype.connectionDrainingPolicy = function(v
  * Required: false
  * Update requires: No interruption
  *
- * @param {ElasticLoadBalancingConnectionSettings|Attribute|Reference} value
+ * @param {ElasticLoadBalancingConnectionSettings|Attribute|Reference} value Elastic Load Balancing ConnectionSettings
  * @return {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.connectionSettings = function(value) {
@@ -156,7 +156,7 @@ ElasticLoadBalancingLoadBalancer.prototype.crossZone = function(value) {
  * Required: false
  * Update requires: Replacement if you did not have a health check specified and you are adding one or if you are removing a health check. Otherwise, update requires no interruption.
  *
- * @param {ElasticLoadBalancingHealthCheckType|Attribute|Reference} value
+ * @param {ElasticLoadBalancingHealthCheckType|Attribute|Reference} value ElasticLoadBalancing HealthCheck Type.
  * @return {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.healthCheck = function(value) {
@@ -182,7 +182,7 @@ ElasticLoadBalancingLoadBalancer.prototype.instances = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {LBCookieStickinessPolicyobject[]|Attribute|Reference} value
+ * @param {ElasticLoadBalancingAppCookieStickinessPolicyType[]|Attribute|Reference} value A list of LBCookieStickinessPolicy objects.
  * @return {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.lbCookieStickinessPolicy = function(value) {
@@ -208,7 +208,7 @@ ElasticLoadBalancingLoadBalancer.prototype.loadBalancerName = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {ElasticLoadBalancingListenerPropertyTypeobject[]|Attribute|Reference} value
+ * @param {ElasticLoadBalancingListenerPropertyType[]|Attribute|Reference} value A list of ElasticLoadBalancing Listener Property Type objects.
  * @return {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.listeners = function(value) {
@@ -221,7 +221,7 @@ ElasticLoadBalancingLoadBalancer.prototype.listeners = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {ElasticLoadBalancingpolicyobject[]|Attribute|Reference} value
+ * @param {ElasticLoadBalancingPolicyType[]|Attribute|Reference} value A list of ElasticLoadBalancing policy objects.
  * @return {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.policies = function(value) {
@@ -247,7 +247,7 @@ ElasticLoadBalancingLoadBalancer.prototype.scheme = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {securitygroupsassignedtoyourloadbalancerwithinyourvirtualprivatecloud[]|Attribute|Reference} value
+ * @param {String[]|Attribute|Reference} value A list of security groups assigned to your load balancer within your virtual private cloud (VPC).
  * @return {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.securityGroups = function(value) {
@@ -273,7 +273,7 @@ ElasticLoadBalancingLoadBalancer.prototype.subnets = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
  * @return {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.tags = function(value) {

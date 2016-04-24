@@ -5,12 +5,14 @@
     {
       "name": "CookieName",
       "description": "Name of the application cookie used for stickiness.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "PolicyName",
       "description": "The name of the policy being created. The name must be unique within the set of policies for this Load Balancer.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

@@ -77,7 +77,7 @@ S3Bucket.prototype.bucketName = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {S3CorsConfiguration|Attribute|Reference} value
+ * @param {S3CorsConfiguration|Attribute|Reference} value Amazon S3 Cors Configuration
  * @return {S3Bucket}
  */
 S3Bucket.prototype.corsConfiguration = function(value) {
@@ -90,7 +90,7 @@ S3Bucket.prototype.corsConfiguration = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {S3LifecycleConfiguration|Attribute|Reference} value
+ * @param {S3LifecycleConfiguration|Attribute|Reference} value Amazon S3 Lifecycle Configuration
  * @return {S3Bucket}
  */
 S3Bucket.prototype.lifecycleConfiguration = function(value) {
@@ -103,7 +103,7 @@ S3Bucket.prototype.lifecycleConfiguration = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {S3LoggingConfiguration|Attribute|Reference} value
+ * @param {S3LoggingConfiguration|Attribute|Reference} value Amazon S3 Logging Configuration
  * @return {S3Bucket}
  */
 S3Bucket.prototype.loggingConfiguration = function(value) {
@@ -116,7 +116,7 @@ S3Bucket.prototype.loggingConfiguration = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {S3NotificationConfiguration|Attribute|Reference} value
+ * @param {S3NotificationConfiguration|Attribute|Reference} value Amazon S3 NotificationConfiguration
  * @return {S3Bucket}
  */
 S3Bucket.prototype.notificationConfiguration = function(value) {
@@ -129,7 +129,7 @@ S3Bucket.prototype.notificationConfiguration = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {S3ReplicationConfiguration|Attribute|Reference} value
+ * @param {S3ReplicationConfiguration|Attribute|Reference} value Amazon S3 ReplicationConfiguration
  * @return {S3Bucket}
  */
 S3Bucket.prototype.replicationConfiguration = function(value) {
@@ -142,7 +142,7 @@ S3Bucket.prototype.replicationConfiguration = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value
+ * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
  * @return {S3Bucket}
  */
 S3Bucket.prototype.tags = function(value) {
@@ -155,7 +155,7 @@ S3Bucket.prototype.tags = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {S3VersioningConfiguration|Attribute|Reference} value
+ * @param {S3VersioningConfiguration|Attribute|Reference} value Amazon S3 Versioning Configuration
  * @return {S3Bucket}
  */
 S3Bucket.prototype.versioningConfiguration = function(value) {
@@ -168,7 +168,7 @@ S3Bucket.prototype.versioningConfiguration = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {WebsiteConfigurationType|Attribute|Reference} value
+ * @param {S3WebsiteConfigurationProperty|Attribute|Reference} value Website Configuration Type
  * @return {S3Bucket}
  */
 S3Bucket.prototype.websiteConfiguration = function(value) {

@@ -116,7 +116,7 @@ SQSQueue.prototype.receiveMessageWaitTimeSeconds = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {SQSRedrivePolicy|Attribute|Reference} value
+ * @param {SQSRedrivePolicy|Attribute|Reference} value Amazon SQS RedrivePolicy
  * @return {SQSQueue}
  */
 SQSQueue.prototype.redrivePolicy = function(value) {

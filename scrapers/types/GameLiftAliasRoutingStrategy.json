@@ -5,6 +5,7 @@
     {
       "name": "FleetId",
       "description": "A unique identifier of a GameLift fleet to associate with the alias.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }

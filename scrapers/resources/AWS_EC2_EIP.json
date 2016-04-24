@@ -8,6 +8,7 @@
     {
       "name": "InstanceId",
       "description": "The Instance ID of the Amazon EC2 instance that you want to associate with this Elastic IP address.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "No interruption"
@@ -15,6 +16,7 @@
     {
       "name": "Domain",
       "description": "Set to vpc to allocate the address to your Virtual Private Cloud (VPC). No other values are supported.",
+      "typeDescription": "String",
       "required": false,
       "type": "String",
       "update": "Replacement"

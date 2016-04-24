@@ -5,12 +5,14 @@
     {
       "name": "Name",
       "description": "The name of the dimension, from 1–255 characters in length.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     },
     {
       "name": "Value",
       "description": "The value representing the dimension measurement, from 1–255 characters in length.",
+      "typeDescription": "String",
       "required": true,
       "type": "String"
     }

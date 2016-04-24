@@ -19,7 +19,7 @@ Route53RecordSet.prototype = Object.create(Resource.prototype);
  * Required: false
  * Update requires: No interruption
  *
- * @param {AliasTarget|Attribute|Reference} value
+ * @param {Route53AliasTargetProperty|Attribute|Reference} value
  * @return {Route53RecordSet}
  */
 Route53RecordSet.prototype.aliasTarget = function(value) {
@@ -58,7 +58,7 @@ Route53RecordSet.prototype.failover = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {Route53RecordSetGeoLocationProperty|Attribute|Reference} value
+ * @param {Route53RecordSetGeoLocationProperty|Attribute|Reference} value Amazon Route 53 Record Set GeoLocation Property
  * @return {Route53RecordSet}
  */
 Route53RecordSet.prototype.geoLocation = function(value) {
@@ -188,7 +188,7 @@ Route53RecordSet.prototype.type = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {NumberWeightexpectsintegervalues|Attribute|Reference} value
+ * @param {Number|Attribute|Reference} value Number. Weight expects integer values.
  * @return {Route53RecordSet}
  */
 Route53RecordSet.prototype.weight = function(value) {

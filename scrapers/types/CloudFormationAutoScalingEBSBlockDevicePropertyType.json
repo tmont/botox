@@ -5,30 +5,35 @@
     {
       "name": "DeleteOnTermination",
       "description": "Indicates whether to delete the volume when the instance is terminated. By default, Auto Scaling uses true.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "Encrypted",
       "description": "Indicates whether the volume is encrypted. Encrypted EBS volumes must be attached to instances that support Amazon EBS encryption. Volumes that you create from encrypted snapshots are automatically encrypted. You cannot create an encrypted volume from an unencrypted snapshot or an unencrypted volume from an encrypted snapshot.",
+      "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "Iops",
       "description": "The number of I/O operations per second (IOPS) that the volume supports. The maximum ratio of IOPS to volume size is 30.",
+      "typeDescription": "Integer.",
       "required": false,
       "type": "Number"
     },
     {
       "name": "SnapshotId",
       "description": "The snapshot ID of the volume to use.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     },
     {
       "name": "VolumeSize",
       "description": "The volume size, in Gibibytes (GiB). This can be a number from 1 – 1024. If the volume type is EBS optimized, the minimum value is 10. For more information about specifying the volume type, see EbsOptimized in AWS::AutoScaling::LaunchConfiguration.",
+      "typeDescription": "Integer.",
       "required": false,
       "type": "Number",
       "update": "Some interruptions"
@@ -36,6 +41,7 @@
     {
       "name": "VolumeType",
       "description": "The volume type. By default, Auto Scaling uses the standard volume type. For more information, see Ebs in the Auto Scaling API Reference.",
+      "typeDescription": "String",
       "required": false,
       "type": "String"
     }
