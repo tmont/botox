@@ -21,7 +21,7 @@ Route53AliasTargetProperty.prototype = {
 	 * @param {String} value
 	 * @return {Route53AliasTargetProperty}
 	 */
-	dnsname: function(value) {
+	dnsName: function(value) {
 		return this.set('DNSName', value);
 	},
 

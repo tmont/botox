@@ -35,7 +35,7 @@ ElastiCacheSecurityGroupIngress.prototype.cacheSecurityGroupName = function(valu
  * @param {String|Attribute|Reference|Join} value
  * @return {ElastiCacheSecurityGroupIngress}
  */
-ElastiCacheSecurityGroupIngress.prototype.ec2SecurityGroupName = function(value) {
+ElastiCacheSecurityGroupIngress.prototype.eC2SecurityGroupName = function(value) {
 	return this.set('EC2SecurityGroupName', value);
 };
 
@@ -48,7 +48,7 @@ ElastiCacheSecurityGroupIngress.prototype.ec2SecurityGroupName = function(value)
  * @param {String|Attribute|Reference|Join} value
  * @return {ElastiCacheSecurityGroupIngress}
  */
-ElastiCacheSecurityGroupIngress.prototype.ec2SecurityGroupOwnerId = function(value) {
+ElastiCacheSecurityGroupIngress.prototype.eC2SecurityGroupOwnerId = function(value) {
 	return this.set('EC2SecurityGroupOwnerId', value);
 };
 

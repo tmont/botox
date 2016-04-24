@@ -45,7 +45,7 @@ AWSCodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype = {
 	 * @param {String} value
 	 * @return {AWSCodeDeployDeploymentGroupDeploymentRevisionS3Location}
 	 */
-	etag: function(value) {
+	eTag: function(value) {
 		return this.set('ETag', value);
 	},
 

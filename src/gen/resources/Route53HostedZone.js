@@ -61,7 +61,7 @@ Route53HostedZone.prototype.name = function(value) {
  * @param {Route53HostedZoneVPCs[]|Attribute|Reference} value
  * @return {Route53HostedZone}
  */
-Route53HostedZone.prototype.vpcs = function(value) {
+Route53HostedZone.prototype.vpCs = function(value) {
 	return this.set('VPCs', value);
 };
 

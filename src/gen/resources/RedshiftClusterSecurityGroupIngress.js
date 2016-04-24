@@ -48,7 +48,7 @@ RedshiftClusterSecurityGroupIngress.prototype.cidrip = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RedshiftClusterSecurityGroupIngress}
  */
-RedshiftClusterSecurityGroupIngress.prototype.ec2SecurityGroupName = function(value) {
+RedshiftClusterSecurityGroupIngress.prototype.eC2SecurityGroupName = function(value) {
 	return this.set('EC2SecurityGroupName', value);
 };
 
@@ -61,7 +61,7 @@ RedshiftClusterSecurityGroupIngress.prototype.ec2SecurityGroupName = function(va
  * @param {String|Attribute|Reference|Join} value
  * @return {RedshiftClusterSecurityGroupIngress}
  */
-RedshiftClusterSecurityGroupIngress.prototype.ec2SecurityGroupOwnerId = function(value) {
+RedshiftClusterSecurityGroupIngress.prototype.eC2SecurityGroupOwnerId = function(value) {
 	return this.set('EC2SecurityGroupOwnerId', value);
 };
 

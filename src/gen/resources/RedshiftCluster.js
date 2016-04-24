@@ -126,7 +126,7 @@ RedshiftCluster.prototype.clusterVersion = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RedshiftCluster}
  */
-RedshiftCluster.prototype.dbname = function(value) {
+RedshiftCluster.prototype.dbName = function(value) {
 	return this.set('DBName', value);
 };
 

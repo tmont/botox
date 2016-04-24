@@ -45,7 +45,7 @@ Route53HealthCheckConfig.prototype = {
 	 * @param {String} value
 	 * @return {Route53HealthCheckConfig}
 	 */
-	ipaddress: function(value) {
+	ipAddress: function(value) {
 		return this.set('IPAddress', value);
 	},
 

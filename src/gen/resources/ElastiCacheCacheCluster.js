@@ -67,7 +67,7 @@ ElastiCacheCacheCluster.prototype.autoMinorVersionUpgrade = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {ElastiCacheCacheCluster}
  */
-ElastiCacheCacheCluster.prototype.azmode = function(value) {
+ElastiCacheCacheCluster.prototype.azMode = function(value) {
 	return this.set('AZMode', value);
 };
 

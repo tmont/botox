@@ -22,7 +22,7 @@ RDSDBSecurityGroup.prototype = Object.create(Resource.prototype);
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBSecurityGroup}
  */
-RDSDBSecurityGroup.prototype.ec2VpcId = function(value) {
+RDSDBSecurityGroup.prototype.eC2VpcId = function(value) {
 	return this.set('EC2VpcId', value);
 };
 
@@ -35,7 +35,7 @@ RDSDBSecurityGroup.prototype.ec2VpcId = function(value) {
  * @param {RDSSecurityGroupRule[]|Attribute|Reference} value
  * @return {RDSDBSecurityGroup}
  */
-RDSDBSecurityGroup.prototype.dbsecurityGroupIngress = function(value) {
+RDSDBSecurityGroup.prototype.dbSecurityGroupIngress = function(value) {
 	return this.set('DBSecurityGroupIngress', value);
 };
 

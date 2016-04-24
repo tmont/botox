@@ -61,7 +61,7 @@ RDSDBCluster.prototype.databaseName = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBCluster}
  */
-RDSDBCluster.prototype.dbclusterParameterGroupName = function(value) {
+RDSDBCluster.prototype.dbClusterParameterGroupName = function(value) {
 	return this.set('DBClusterParameterGroupName', value);
 };
 
@@ -74,7 +74,7 @@ RDSDBCluster.prototype.dbclusterParameterGroupName = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBCluster}
  */
-RDSDBCluster.prototype.dbsubnetGroupName = function(value) {
+RDSDBCluster.prototype.dbSubnetGroupName = function(value) {
 	return this.set('DBSubnetGroupName', value);
 };
 

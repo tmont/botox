@@ -21,7 +21,7 @@ CloudFrontDistributionConfigOriginCustomOrigin.prototype = {
 	 * @param {String} value
 	 * @return {CloudFrontDistributionConfigOriginCustomOrigin}
 	 */
-	httpport: function(value) {
+	httpPort: function(value) {
 		return this.set('HTTPPort', value);
 	},
 
@@ -33,7 +33,7 @@ CloudFrontDistributionConfigOriginCustomOrigin.prototype = {
 	 * @param {String} value
 	 * @return {CloudFrontDistributionConfigOriginCustomOrigin}
 	 */
-	httpsport: function(value) {
+	httpsPort: function(value) {
 		return this.set('HTTPSPort', value);
 	},
 

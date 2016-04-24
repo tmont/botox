@@ -33,7 +33,7 @@ APIGatewayRestApiS3Location.prototype = {
 	 * @param {String} value
 	 * @return {APIGatewayRestApiS3Location}
 	 */
-	etag: function(value) {
+	eTag: function(value) {
 		return this.set('ETag', value);
 	},
 

@@ -22,7 +22,7 @@ WAFIPSet.prototype = Object.create(Resource.prototype);
  * @param {AWSWAFIPSetIPSetDescriptors[]|Attribute|Reference} value
  * @return {WAFIPSet}
  */
-WAFIPSet.prototype.ipsetDescriptors = function(value) {
+WAFIPSet.prototype.ipSetDescriptors = function(value) {
 	return this.set('IPSetDescriptors', value);
 };
 

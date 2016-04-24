@@ -100,7 +100,7 @@ RDSDBInstance.prototype.characterSetName = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBInstance}
  */
-RDSDBInstance.prototype.dbclusterIdentifier = function(value) {
+RDSDBInstance.prototype.dbClusterIdentifier = function(value) {
 	return this.set('DBClusterIdentifier', value);
 };
 
@@ -113,7 +113,7 @@ RDSDBInstance.prototype.dbclusterIdentifier = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBInstance}
  */
-RDSDBInstance.prototype.dbinstanceClass = function(value) {
+RDSDBInstance.prototype.dbInstanceClass = function(value) {
 	return this.set('DBInstanceClass', value);
 };
 
@@ -126,7 +126,7 @@ RDSDBInstance.prototype.dbinstanceClass = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBInstance}
  */
-RDSDBInstance.prototype.dbinstanceIdentifier = function(value) {
+RDSDBInstance.prototype.dbInstanceIdentifier = function(value) {
 	return this.set('DBInstanceIdentifier', value);
 };
 
@@ -139,7 +139,7 @@ RDSDBInstance.prototype.dbinstanceIdentifier = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBInstance}
  */
-RDSDBInstance.prototype.dbname = function(value) {
+RDSDBInstance.prototype.dbName = function(value) {
 	return this.set('DBName', value);
 };
 
@@ -152,7 +152,7 @@ RDSDBInstance.prototype.dbname = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBInstance}
  */
-RDSDBInstance.prototype.dbparameterGroupName = function(value) {
+RDSDBInstance.prototype.dbParameterGroupName = function(value) {
 	return this.set('DBParameterGroupName', value);
 };
 
@@ -165,7 +165,7 @@ RDSDBInstance.prototype.dbparameterGroupName = function(value) {
  * @param {string[]|Attribute|Reference} value
  * @return {RDSDBInstance}
  */
-RDSDBInstance.prototype.dbsecurityGroups = function(value) {
+RDSDBInstance.prototype.dbSecurityGroups = function(value) {
 	return this.set('DBSecurityGroups', value);
 };
 
@@ -178,7 +178,7 @@ RDSDBInstance.prototype.dbsecurityGroups = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBInstance}
  */
-RDSDBInstance.prototype.dbsnapshotIdentifier = function(value) {
+RDSDBInstance.prototype.dbSnapshotIdentifier = function(value) {
 	return this.set('DBSnapshotIdentifier', value);
 };
 
@@ -191,7 +191,7 @@ RDSDBInstance.prototype.dbsnapshotIdentifier = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBInstance}
  */
-RDSDBInstance.prototype.dbsubnetGroupName = function(value) {
+RDSDBInstance.prototype.dbSubnetGroupName = function(value) {
 	return this.set('DBSubnetGroupName', value);
 };
 
@@ -425,7 +425,7 @@ RDSDBInstance.prototype.tags = function(value) {
  * @param {string[]|Attribute|Reference} value
  * @return {RDSDBInstance}
  */
-RDSDBInstance.prototype.vpcsecurityGroups = function(value) {
+RDSDBInstance.prototype.vpcSecurityGroups = function(value) {
 	return this.set('VPCSecurityGroups', value);
 };
 

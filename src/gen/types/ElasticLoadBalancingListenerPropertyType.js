@@ -81,7 +81,7 @@ ElasticLoadBalancingListenerPropertyType.prototype = {
 	 * @param {String} value
 	 * @return {ElasticLoadBalancingListenerPropertyType}
 	 */
-	sslcertificateId: function(value) {
+	sslCertificateId: function(value) {
 		return this.set('SSLCertificateId', value);
 	}
 };

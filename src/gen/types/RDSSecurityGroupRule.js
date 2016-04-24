@@ -33,7 +33,7 @@ RDSSecurityGroupRule.prototype = {
 	 * @param {String} value
 	 * @return {RDSSecurityGroupRule}
 	 */
-	ec2SecurityGroupId: function(value) {
+	eC2SecurityGroupId: function(value) {
 		return this.set('EC2SecurityGroupId', value);
 	},
 
@@ -45,7 +45,7 @@ RDSSecurityGroupRule.prototype = {
 	 * @param {String} value
 	 * @return {RDSSecurityGroupRule}
 	 */
-	ec2SecurityGroupName: function(value) {
+	eC2SecurityGroupName: function(value) {
 		return this.set('EC2SecurityGroupName', value);
 	},
 
@@ -57,7 +57,7 @@ RDSSecurityGroupRule.prototype = {
 	 * @param {String} value
 	 * @return {RDSSecurityGroupRule}
 	 */
-	ec2SecurityGroupOwnerId: function(value) {
+	eC2SecurityGroupOwnerId: function(value) {
 		return this.set('EC2SecurityGroupOwnerId', value);
 	}
 };

@@ -152,7 +152,7 @@ CloudWatchAlarm.prototype.namespace = function(value) {
  * @param {string[]|Attribute|Reference} value
  * @return {CloudWatchAlarm}
  */
-CloudWatchAlarm.prototype.okactions = function(value) {
+CloudWatchAlarm.prototype.okActions = function(value) {
 	return this.set('OKActions', value);
 };
 

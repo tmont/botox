@@ -61,7 +61,7 @@ GameLiftFleet.prototype.desiredEC2Instances = function(value) {
  * @param {GameLiftFleetEC2InboundPermission[]|Attribute|Reference} value
  * @return {GameLiftFleet}
  */
-GameLiftFleet.prototype.ec2InboundPermissions = function(value) {
+GameLiftFleet.prototype.eC2InboundPermissions = function(value) {
 	return this.set('EC2InboundPermissions', value);
 };
 
@@ -74,7 +74,7 @@ GameLiftFleet.prototype.ec2InboundPermissions = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {GameLiftFleet}
  */
-GameLiftFleet.prototype.ec2InstanceType = function(value) {
+GameLiftFleet.prototype.eC2InstanceType = function(value) {
 	return this.set('EC2InstanceType', value);
 };
 

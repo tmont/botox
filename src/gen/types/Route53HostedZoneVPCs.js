@@ -21,7 +21,7 @@ Route53HostedZoneVPCs.prototype = {
 	 * @param {String} value
 	 * @return {Route53HostedZoneVPCs}
 	 */
-	vpcid: function(value) {
+	vpcId: function(value) {
 		return this.set('VPCId', value);
 	},
 
@@ -33,7 +33,7 @@ Route53HostedZoneVPCs.prototype = {
 	 * @param {String} value
 	 * @return {Route53HostedZoneVPCs}
 	 */
-	vpcregion: function(value) {
+	vpcRegion: function(value) {
 		return this.set('VPCRegion', value);
 	}
 };

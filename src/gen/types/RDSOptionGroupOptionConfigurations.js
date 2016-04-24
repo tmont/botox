@@ -21,7 +21,7 @@ RDSOptionGroupOptionConfigurations.prototype = {
 	 * @param {string[]} value
 	 * @return {RDSOptionGroupOptionConfigurations}
 	 */
-	dbsecurityGroupMemberships: function(value) {
+	dbSecurityGroupMemberships: function(value) {
 		return this.set('DBSecurityGroupMemberships', value);
 	},
 

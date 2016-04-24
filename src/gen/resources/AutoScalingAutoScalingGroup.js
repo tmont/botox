@@ -217,7 +217,7 @@ AutoScalingAutoScalingGroup.prototype.terminationPolicies = function(value) {
  * @param {string[]|Attribute|Reference} value
  * @return {AutoScalingAutoScalingGroup}
  */
-AutoScalingAutoScalingGroup.prototype.vpczoneIdentifier = function(value) {
+AutoScalingAutoScalingGroup.prototype.vpcZoneIdentifier = function(value) {
 	return this.set('VPCZoneIdentifier', value);
 };
 

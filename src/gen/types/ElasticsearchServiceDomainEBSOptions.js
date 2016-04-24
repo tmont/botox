@@ -21,7 +21,7 @@ ElasticsearchServiceDomainEBSOptions.prototype = {
 	 * @param {Boolean} value
 	 * @return {ElasticsearchServiceDomainEBSOptions}
 	 */
-	ebsenabled: function(value) {
+	ebsEnabled: function(value) {
 		return this.set('EBSEnabled', value);
 	},
 

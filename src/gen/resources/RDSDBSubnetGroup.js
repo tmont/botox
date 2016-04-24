@@ -22,7 +22,7 @@ RDSDBSubnetGroup.prototype = Object.create(Resource.prototype);
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBSubnetGroup}
  */
-RDSDBSubnetGroup.prototype.dbsubnetGroupDescription = function(value) {
+RDSDBSubnetGroup.prototype.dbSubnetGroupDescription = function(value) {
 	return this.set('DBSubnetGroupDescription', value);
 };
 

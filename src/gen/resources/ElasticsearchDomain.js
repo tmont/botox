@@ -61,7 +61,7 @@ ElasticsearchDomain.prototype.domainName = function(value) {
  * @param {ElasticsearchServiceDomainEBSOptions|Attribute|Reference} value
  * @return {ElasticsearchDomain}
  */
-ElasticsearchDomain.prototype.ebsoptions = function(value) {
+ElasticsearchDomain.prototype.ebsOptions = function(value) {
 	return this.set('EBSOptions', value);
 };
 

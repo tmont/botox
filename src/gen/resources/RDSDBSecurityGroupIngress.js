@@ -35,7 +35,7 @@ RDSDBSecurityGroupIngress.prototype.cidrip = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBSecurityGroupIngress}
  */
-RDSDBSecurityGroupIngress.prototype.dbsecurityGroupName = function(value) {
+RDSDBSecurityGroupIngress.prototype.dbSecurityGroupName = function(value) {
 	return this.set('DBSecurityGroupName', value);
 };
 
@@ -48,7 +48,7 @@ RDSDBSecurityGroupIngress.prototype.dbsecurityGroupName = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBSecurityGroupIngress}
  */
-RDSDBSecurityGroupIngress.prototype.ec2SecurityGroupId = function(value) {
+RDSDBSecurityGroupIngress.prototype.eC2SecurityGroupId = function(value) {
 	return this.set('EC2SecurityGroupId', value);
 };
 
@@ -61,7 +61,7 @@ RDSDBSecurityGroupIngress.prototype.ec2SecurityGroupId = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBSecurityGroupIngress}
  */
-RDSDBSecurityGroupIngress.prototype.ec2SecurityGroupName = function(value) {
+RDSDBSecurityGroupIngress.prototype.eC2SecurityGroupName = function(value) {
 	return this.set('EC2SecurityGroupName', value);
 };
 
@@ -74,7 +74,7 @@ RDSDBSecurityGroupIngress.prototype.ec2SecurityGroupName = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {RDSDBSecurityGroupIngress}
  */
-RDSDBSecurityGroupIngress.prototype.ec2SecurityGroupOwnerId = function(value) {
+RDSDBSecurityGroupIngress.prototype.eC2SecurityGroupOwnerId = function(value) {
 	return this.set('EC2SecurityGroupOwnerId', value);
 };
 

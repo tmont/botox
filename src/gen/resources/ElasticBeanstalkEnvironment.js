@@ -58,7 +58,7 @@ ElasticBeanstalkEnvironment.prototype.applicationName = function(value) {
  * @param {String|Attribute|Reference|Join} value
  * @return {ElasticBeanstalkEnvironment}
  */
-ElasticBeanstalkEnvironment.prototype.cnameprefix = function(value) {
+ElasticBeanstalkEnvironment.prototype.cnamePrefix = function(value) {
 	return this.set('CNAMEPrefix', value);
 };
 
