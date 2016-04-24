@@ -7,6 +7,12 @@ const FindInMap = require('../src/fun/find-in-map');
 const GetAZs = require('../src/fun/get-azs');
 const Reference = require('../src/fun/reference');
 const Select = require('../src/fun/select');
+const Equals = require('../src/fun/conditional/equals');
+const And = require('../src/fun/conditional/and');
+const Or = require('../src/fun/conditional/or');
+const Not = require('../src/fun/conditional/not');
+const Condition = require('../src/condition');
+const If = require('../src/fun/conditional/if');
 
 describe('Functions', () => {
 	describe('GetAtt', () => {
@@ -200,6 +206,116 @@ describe('Functions', () => {
 
 			expect(json).to.eql({
 				'Fn::Select': [ { Ref: 'foo' }, { Ref: 'bar' } ]
+			});
+		});
+	});
+
+	describe('conditional', () => {
+		describe('Equals', () => {
+			it('should blow up if no LHS is given', () => {
+				expect(() => { new Equals(); }).to.throwError(/^lhs is required$/);
+			});
+			it('should blow up if no RHS is given', () => {
+				expect(() => { new Equals('foo'); }).to.throwError(/^rhs is required$/);
+			});
+
+			it('should generate JSON from strings', () => {
+				const equals = new Equals('foo', 'bar');
+				const json = equals.getTemplateJson();
+
+				expect(json).to.eql({
+					'Fn::Equals': [ 'foo', 'bar' ]
+				});
+			});
+		});
+
+		describe('Not', () => {
+			it('should blow up if no condition is given', () => {
+				expect(() => { new Not(); }).to.throwError(/^condition is required$/);
+			});
+
+			it('should generate JSON from function', () => {
+				const not = new Not(new Equals('foo', 'bar'));
+				const json = not.getTemplateJson();
+
+				expect(json).to.eql({
+					'Fn::Not': [ { 'Fn::Equals': [ 'foo', 'bar' ] } ]
+				});
+			});
+
+			it('should generate JSON from Condition object', () => {
+				const condition = new Condition('foo');
+				const not = new Not(condition);
+				const json = not.getTemplateJson();
+
+				expect(json).to.eql({
+					'Fn::Not': [ { Condition: 'foo' } ]
+				});
+			});
+		});
+
+		describe('If', () => {
+			it('should blow up if no condition is given', () => {
+				expect(() => { new If(); }).to.throwError(/^condition is required$/);
+			});
+			it('should blow up if condition is not a Condition', () => {
+				expect(() => { new If({}); }).to.throwError(/^condition must be an instance of Condition$/);
+			});
+			it('should blow up if not trueValue is given', () => {
+				expect(() => { new If(new Condition('foo')); }).to.throwError(/^trueValue is required$/);
+			});
+			it('should blow up if not falseValue is given', () => {
+				expect(() => { new If(new Condition('foo'), 'foo'); }).to.throwError(/^falseValue is required$/);
+			});
+
+			it('should generate JSON', () => {
+				const funIf = new If(new Condition('foo'), 'bar', 'baz');
+				const json = funIf.getTemplateJson();
+
+				expect(json).to.eql({
+					'Fn::If': [ 'foo', 'bar', 'baz' ]
+				});
+			});
+		});
+
+		[ 'And', 'Or'].forEach((conditional) => {
+			const ctor = conditional === 'And' ? And : Or;
+			describe(conditional, () => {
+				const fn = `Fn::${conditional}`;
+
+				it('should blow up if no conditions are given', () => {
+					expect(() => { new ctor(); }).to.throwError(/^conditions must be multiple conditions or an array of conditions$/);
+				});
+				it('should blow up if not enough conditions are given', () => {
+					expect(() => { new ctor(['foo']); }).to.throwError(/^Must provide between 2 and 10 conditions$/);
+				});
+				it('should blow up if too many conditions are given', () => {
+					const conditions = 'x'.repeat(11).split('');
+					expect(() => { new ctor(conditions); }).to.throwError(/^Must provide between 2 and 10 conditions$/);
+				});
+
+				it('should generate JSON from strings', () => {
+					const equals = new ctor('foo', 'bar');
+					const json = equals.getTemplateJson();
+
+					const expected = {};
+					expected[fn] = [ 'foo', 'bar' ];
+					expect(json).to.eql(expected);
+				});
+
+				it('should generate JSON from Condition objects and functions', () => {
+					const condition = new Condition('foo');
+					const equals = new ctor([condition, new Equals('bar', 'baz')]);
+					const json = equals.getTemplateJson();
+
+					const expected = {};
+					expected[fn] = [
+						{Condition: 'foo'},
+						{'Fn::Equals': ['bar', 'baz']}
+					];
+
+					expect(json).to.eql(expected);
+				});
 			});
 		});
 	});
