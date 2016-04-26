@@ -12,6 +12,4 @@ function ECSCluster(name) {
 
 ECSCluster.prototype = Object.create(Resource.prototype);
 
-
-
 module.exports = ECSCluster;

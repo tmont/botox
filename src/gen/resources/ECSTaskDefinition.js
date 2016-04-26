@@ -12,7 +12,6 @@ function ECSTaskDefinition(name) {
 
 ECSTaskDefinition.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A list of container definitions in JSON format that describe the containers that make up your task.
  *

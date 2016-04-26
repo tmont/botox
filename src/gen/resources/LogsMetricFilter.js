@@ -12,7 +12,6 @@ function LogsMetricFilter(name) {
 
 LogsMetricFilter.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Describes the pattern that CloudWatch Logs follows to interpret each entry in a log. For example, a log entry might contain fields such as timestamps, IP addresses, error codes, bytes transferred, and so on. You use the pattern to specify those fields and to specify what to look for in the log file. For example, if you're interested in error codes that begin with 1234, your filter pattern might be [timestamps, ip_addresses, error_codes = 1234*, size, ...].
  *

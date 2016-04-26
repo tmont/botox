@@ -12,7 +12,6 @@ function RDSEventSubscription(name) {
 
 RDSEventSubscription.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Indicates whether to activate the subscription. If you don't specify this property, AWS CloudFormation activates the subscription.
  *

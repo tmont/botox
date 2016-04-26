@@ -12,7 +12,6 @@ function CloudFormationInterface(name) {
 
 CloudFormationInterface.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A list of parameter group types, where you specify group names, the parameters in each group, and the order in which the parameters are shown.
  *

@@ -12,7 +12,6 @@ function EC2SpotFleet(name) {
 
 EC2SpotFleet.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The configuration for a Spot fleet request.
  *

@@ -12,7 +12,6 @@ function EMRInstanceGroupConfig(name) {
 
 EMRInstanceGroupConfig.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The bid price in USD for each EC2 instance in the instance group when launching instances (nodes) as Spot Instances.
  *

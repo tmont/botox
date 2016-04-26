@@ -12,7 +12,6 @@ function CloudTrailTrail(name) {
 
 CloudTrailTrail.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The Amazon Resource Name (ARN) of a log group to which CloudTrail logs will be delivered.
  *

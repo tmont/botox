@@ -12,7 +12,6 @@ function KinesisStream(name) {
 
 KinesisStream.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The number of shards that the stream uses. For greater provisioned throughput, increase the number of shards.
  *

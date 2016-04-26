@@ -12,7 +12,6 @@ function EFSMountTarget(name) {
 
 EFSMountTarget.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The ID of the file system for which you want to create the mount target.
  *

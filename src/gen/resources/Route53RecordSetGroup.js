@@ -12,7 +12,6 @@ function Route53RecordSetGroup(name) {
 
 Route53RecordSetGroup.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Any comments you want to include about the hosted zone.
  *

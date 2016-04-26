@@ -12,7 +12,6 @@ function RedshiftClusterSecurityGroup(name) {
 
 RedshiftClusterSecurityGroup.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A description of the security group.
  *

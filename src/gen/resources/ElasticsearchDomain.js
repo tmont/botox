@@ -12,7 +12,6 @@ function ElasticsearchDomain(name) {
 
 ElasticsearchDomain.prototype = Object.create(Resource.prototype);
 
-
 /**
  * An AWS Identity and Access Management (IAM) policy document that specifies who can access the Amazon ES domain and their permissions. For more information, see Configuring Access Policies in the Amazon Elasticsearch Service Developer Guide.
  *

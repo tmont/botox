@@ -12,7 +12,6 @@ function ApiGatewayAccount(name) {
 
 ApiGatewayAccount.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.
  *

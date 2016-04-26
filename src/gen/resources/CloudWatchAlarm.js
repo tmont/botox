@@ -12,7 +12,6 @@ function CloudWatchAlarm(name) {
 
 CloudWatchAlarm.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Indicates whether or not actions should be executed during any changes to the alarm's state.
  *

@@ -12,6 +12,4 @@ function CloudFormationInit(name) {
 
 CloudFormationInit.prototype = Object.create(Resource.prototype);
 
-
-
 module.exports = CloudFormationInit;

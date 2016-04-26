@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var CreationPolicy = require('../../attr/creation-policy');
 
 /**
  * AWS::EC2::Instance - The AWS::EC2::Instance resource creates an EC2 instance.
@@ -421,6 +422,15 @@ EC2Instance.prototype.volumes = function(value) {
  */
 EC2Instance.prototype.additionalInfo = function(value) {
 	return this.set('AdditionalInfo', value);
+};
+
+/**
+ * Sets a CreationPolicy for this resource
+ * @param {CreationPolicy} creationPolicy
+ * @returns {EC2Instance}
+ */
+EC2Instance.prototype.creationPolicy = function(creationPolicy) {
+	return this.setResourceAttribute('CreationPolicy', creationPolicy);
 };
 
 module.exports = EC2Instance;

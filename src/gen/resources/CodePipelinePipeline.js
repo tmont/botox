@@ -12,7 +12,6 @@ function CodePipelinePipeline(name) {
 
 CodePipelinePipeline.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The Amazon Simple Storage Service (Amazon S3) location where AWS CodePipeline stores pipeline artifacts. The S3 bucket must have versioning enabled. For more information, see Create an Amazon S3 Bucket for Your Application in the AWS CodePipeline User Guide.
  *

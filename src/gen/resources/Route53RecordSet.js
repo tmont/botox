@@ -12,7 +12,6 @@ function Route53RecordSet(name) {
 
 Route53RecordSet.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Alias resource record sets only: Information about the domain to which you are redirecting traffic.
  *

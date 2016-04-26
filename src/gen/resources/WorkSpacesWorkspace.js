@@ -12,7 +12,6 @@ function WorkSpacesWorkspace(name) {
 
 WorkSpacesWorkspace.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The identifier of the bundle from which you want to create the workspace. A bundle specifies the details of the workspace, such as the installed applications and the size of CPU, memory, and storage. Use the DescribeWorkspaceBundles action to list the bundles that AWS offers.
  *

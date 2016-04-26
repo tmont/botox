@@ -12,7 +12,6 @@ function EC2VPNConnection(name) {
 
 EC2VPNConnection.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The type of VPN connection this virtual private gateway supports.
  *

@@ -12,7 +12,6 @@ function GameLiftBuild(name) {
 
 GameLiftBuild.prototype = Object.create(Resource.prototype);
 
-
 /**
  * An identifier to associate with this build. Build names don't need to be unique.
  *

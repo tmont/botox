@@ -12,7 +12,6 @@ function OpsWorksInstance(name) {
 
 OpsWorksInstance.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The ID of the custom Amazon Machine Image (AMI) to be used to create the instance. For more information about custom AMIs, see Using Custom AMIs in the AWS OpsWorks User Guide.
  *

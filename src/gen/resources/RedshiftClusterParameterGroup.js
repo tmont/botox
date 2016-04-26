@@ -12,7 +12,6 @@ function RedshiftClusterParameterGroup(name) {
 
 RedshiftClusterParameterGroup.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A description of the parameter group.
  *

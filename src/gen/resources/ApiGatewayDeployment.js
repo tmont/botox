@@ -12,7 +12,6 @@ function ApiGatewayDeployment(name) {
 
 ApiGatewayDeployment.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A description of the purpose of the API Gateway deployment.
  *

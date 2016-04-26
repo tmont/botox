@@ -12,7 +12,6 @@ function ApiGatewayMethod(name) {
 
 ApiGatewayMethod.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Indicates whether the method requires clients to submit a valid API key.
  *

@@ -12,7 +12,6 @@ function EC2VPNGateway(name) {
 
 EC2VPNGateway.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The type of VPN connection this virtual private gateway supports. The only valid value is "ipsec.1".
  *

@@ -12,7 +12,6 @@ function Route53HealthCheck(name) {
 
 Route53HealthCheck.prototype = Object.create(Resource.prototype);
 
-
 /**
  * An Amazon Route 53 health check.
  *

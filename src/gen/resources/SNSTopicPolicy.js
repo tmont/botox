@@ -12,7 +12,6 @@ function SNSTopicPolicy(name) {
 
 SNSTopicPolicy.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A policy document that contains permissions to add to the specified SNS topics.
  *

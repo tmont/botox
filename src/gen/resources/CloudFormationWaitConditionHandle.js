@@ -12,6 +12,4 @@ function CloudFormationWaitConditionHandle(name) {
 
 CloudFormationWaitConditionHandle.prototype = Object.create(Resource.prototype);
 
-
-
 module.exports = CloudFormationWaitConditionHandle;

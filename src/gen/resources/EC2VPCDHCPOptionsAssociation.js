@@ -12,7 +12,6 @@ function EC2VPCDHCPOptionsAssociation(name) {
 
 EC2VPCDHCPOptionsAssociation.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The ID of the DHCP options you want to associate with the VPC. Specify default if you want the VPC to use no DHCP options.
  *

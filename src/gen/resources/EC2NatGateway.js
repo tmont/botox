@@ -12,7 +12,6 @@ function EC2NatGateway(name) {
 
 EC2NatGateway.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The allocation ID of an Elastic IP address to associate with the NAT gateway. If the Elastic IP address is associated with another resource, you must first disassociate it.
  *

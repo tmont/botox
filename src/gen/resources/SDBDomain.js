@@ -12,6 +12,4 @@ function SDBDomain(name) {
 
 SDBDomain.prototype = Object.create(Resource.prototype);
 
-
-
 module.exports = SDBDomain;

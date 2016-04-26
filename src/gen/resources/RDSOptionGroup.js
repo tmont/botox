@@ -12,7 +12,6 @@ function RDSOptionGroup(name) {
 
 RDSOptionGroup.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The name of the database engine that this option group is associated with.
  *

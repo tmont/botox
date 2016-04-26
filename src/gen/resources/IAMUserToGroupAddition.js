@@ -12,7 +12,6 @@ function IAMUserToGroupAddition(name) {
 
 IAMUserToGroupAddition.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The name of group to add users to.
  *

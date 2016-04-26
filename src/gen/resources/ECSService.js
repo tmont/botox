@@ -12,7 +12,6 @@ function ECSService(name) {
 
 ECSService.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The name or Amazon Resource Name (ARN) of the cluster that you want to run your service on. If you do not specify a cluster, Amazon ECS uses the default cluster.
  *

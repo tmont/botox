@@ -12,7 +12,6 @@ function CodeDeployDeploymentGroup(name) {
 
 CodeDeployDeploymentGroup.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The name of an AWS CodeDeploy application for this deployment group.
  *

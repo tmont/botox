@@ -12,7 +12,6 @@ function RDSDBSubnetGroup(name) {
 
 RDSDBSubnetGroup.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The description for the DB Subnet Group.
  *

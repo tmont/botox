@@ -12,7 +12,6 @@ function ElastiCacheParameterGroup(name) {
 
 ElastiCacheParameterGroup.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The name of the cache parameter group family that the cache parameter group can be used with.
  *

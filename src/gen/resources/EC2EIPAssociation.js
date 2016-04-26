@@ -12,7 +12,6 @@ function EC2EIPAssociation(name) {
 
 EC2EIPAssociation.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Allocation ID for the VPC Elastic IP address you want to associate with an Amazon EC2 instance in your VPC.
  *

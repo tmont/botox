@@ -12,7 +12,6 @@ function WAFByteMatchSet(name) {
 
 WAFByteMatchSet.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests.
  *

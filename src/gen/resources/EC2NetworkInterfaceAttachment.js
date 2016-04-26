@@ -12,7 +12,6 @@ function EC2NetworkInterfaceAttachment(name) {
 
 EC2NetworkInterfaceAttachment.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Whether to delete the network interface when the instance terminates. By default, this value is set to True.
  *

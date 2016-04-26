@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var CreationPolicy = require('../../attr/creation-policy');
 
 /**
  * AWS::CloudFormation::WaitCondition - Important
@@ -73,6 +74,15 @@ CloudFormationWaitCondition.prototype.handle = function(value) {
  */
 CloudFormationWaitCondition.prototype.timeout = function(value) {
 	return this.set('Timeout', value);
+};
+
+/**
+ * Sets a CreationPolicy for this resource
+ * @param {CreationPolicy} creationPolicy
+ * @returns {CloudFormationWaitCondition}
+ */
+CloudFormationWaitCondition.prototype.creationPolicy = function(creationPolicy) {
+	return this.setResourceAttribute('CreationPolicy', creationPolicy);
 };
 
 module.exports = CloudFormationWaitCondition;

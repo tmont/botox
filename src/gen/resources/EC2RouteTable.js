@@ -12,7 +12,6 @@ function EC2RouteTable(name) {
 
 EC2RouteTable.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The ID of the VPC where the route table will be created.
  *

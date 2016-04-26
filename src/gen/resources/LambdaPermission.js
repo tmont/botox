@@ -12,7 +12,6 @@ function LambdaPermission(name) {
 
 LambdaPermission.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The Lambda actions that you want to allow in this statement. For example, you can specify lambda:CreateFunction to specify a certain action, or use a wildcard (lambda:*) to grant permission to all Lambda actions. For a list of actions, see Actions in the AWS Lambda Developer Guide.
  *

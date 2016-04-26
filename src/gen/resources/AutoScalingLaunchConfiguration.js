@@ -12,7 +12,6 @@ function AutoScalingLaunchConfiguration(name) {
 
 AutoScalingLaunchConfiguration.prototype = Object.create(Resource.prototype);
 
-
 /**
  * For Amazon EC2 instances in a VPC, indicates whether instances in the Auto Scaling group receive public IP addresses. If you specify true, each instance in the Auto Scaling receives a unique public IP address.
  *

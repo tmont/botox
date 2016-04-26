@@ -12,7 +12,6 @@ function WAFSqlInjectionMatchSet(name) {
 
 WAFSqlInjectionMatchSet.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A friendly name or description of the SqlInjectionMatchSet.
  *

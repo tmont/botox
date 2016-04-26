@@ -12,7 +12,6 @@ function ElastiCacheSecurityGroup(name) {
 
 ElastiCacheSecurityGroup.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A description for the cache security group.
  *

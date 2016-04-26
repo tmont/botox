@@ -12,7 +12,6 @@ function CodeDeployDeploymentConfig(name) {
 
 CodeDeployDeploymentConfig.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A name for the deployment configuration. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the deployment configuration name. For more information, see Name Type.
  *

@@ -12,7 +12,6 @@ function RDSDBSecurityGroupIngress(name) {
 
 RDSDBSecurityGroupIngress.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The IP range to authorize.
  *

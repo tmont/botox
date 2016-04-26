@@ -12,7 +12,6 @@ function EC2VPCPeeringConnection(name) {
 
 EC2VPCPeeringConnection.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The ID of the VPC with which you are creating the peering connection.
  *

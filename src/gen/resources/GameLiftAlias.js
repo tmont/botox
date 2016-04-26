@@ -12,7 +12,6 @@ function GameLiftAlias(name) {
 
 GameLiftAlias.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Information that helps you identify the purpose of this alias.
  *

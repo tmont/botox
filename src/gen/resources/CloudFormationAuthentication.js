@@ -12,7 +12,6 @@ function CloudFormationAuthentication(name) {
 
 CloudFormationAuthentication.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Specifies the access key ID for S3 authentication.
  *

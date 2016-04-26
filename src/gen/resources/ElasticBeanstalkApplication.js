@@ -12,7 +12,6 @@ function ElasticBeanstalkApplication(name) {
 
 ElasticBeanstalkApplication.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A name for the Elastic Beanstalk application. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the application name. For more information, see Name Type.
  *

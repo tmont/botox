@@ -12,7 +12,6 @@ function LambdaAlias(name) {
 
 LambdaAlias.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Information that describes the alias, such as its purpose or the function that it's associated with.
  *

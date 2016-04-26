@@ -12,7 +12,6 @@ function ElastiCacheSubnetGroup(name) {
 
 ElastiCacheSubnetGroup.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The description for the cache subnet group.
  *

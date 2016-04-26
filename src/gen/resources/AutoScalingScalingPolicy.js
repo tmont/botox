@@ -12,7 +12,6 @@ function AutoScalingScalingPolicy(name) {
 
 AutoScalingScalingPolicy.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Specifies whether the ScalingAdjustment is an absolute number or a percentage of the current capacity. Valid values are ChangeInCapacity, ExactCapacity, and PercentChangeInCapacity.
  *

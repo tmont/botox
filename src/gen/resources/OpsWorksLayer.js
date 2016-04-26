@@ -12,7 +12,6 @@ function OpsWorksLayer(name) {
 
 OpsWorksLayer.prototype = Object.create(Resource.prototype);
 
-
 /**
  * One or more user-defined key-value pairs to be added to the stack attributes bag.
  *

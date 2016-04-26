@@ -12,7 +12,6 @@ function LogsSubscriptionFilter(name) {
 
 LogsSubscriptionFilter.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The Amazon Resource Name (ARN) of the Amazon Kinesis stream or Lambda function that you want to use as the subscription feed destination.
  *

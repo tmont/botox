@@ -12,7 +12,6 @@ function ApiGatewayResource(name) {
 
 ApiGatewayResource.prototype = Object.create(Resource.prototype);
 
-
 /**
  * If you want to create a child resource, the ID of the parent resource.
  *

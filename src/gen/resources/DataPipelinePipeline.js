@@ -12,7 +12,6 @@ function DataPipelinePipeline(name) {
 
 DataPipelinePipeline.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Indicates whether to validate and start the pipeline or stop an active pipeline. By default, the value is set to true.
  *

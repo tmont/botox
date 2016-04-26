@@ -12,7 +12,6 @@ function ApiGatewayApiKey(name) {
 
 ApiGatewayApiKey.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A description of the purpose of the API key.
  *

@@ -12,7 +12,6 @@ function EC2VPNGatewayRoutePropagation(name) {
 
 EC2VPNGatewayRoutePropagation.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A list of routing table IDs that are associated with a VPC. The routing tables must be associated with the same VPC that the virtual private gateway is attached to.
  *

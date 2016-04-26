@@ -12,7 +12,6 @@ function IAMPolicy(name) {
 
 IAMPolicy.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The names of groups to which you want to add the policy.
  *

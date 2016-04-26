@@ -12,7 +12,6 @@ function ApiGatewayAuthorizer(name) {
 
 ApiGatewayAuthorizer.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The credentials required for the authorizer. To specify an AWS Identity and Access Management (IAM) role that API Gateway assumes, specify the role's Amazon Resource Name (ARN). To use resource-based permissions on the AWS Lambda (Lambda) function, specify null.
  *

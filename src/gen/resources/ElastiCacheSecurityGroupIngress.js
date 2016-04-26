@@ -12,7 +12,6 @@ function ElastiCacheSecurityGroupIngress(name) {
 
 ElastiCacheSecurityGroupIngress.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The name of the Cache Security Group to authorize.
  *

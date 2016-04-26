@@ -12,7 +12,6 @@ function LogsDestination(name) {
 
 LogsDestination.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The name of the CloudWatch Logs destination.
  *

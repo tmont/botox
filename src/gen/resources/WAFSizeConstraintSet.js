@@ -12,7 +12,6 @@ function WAFSizeConstraintSet(name) {
 
 WAFSizeConstraintSet.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A friendly name or description for the SizeConstraintSet.
  *

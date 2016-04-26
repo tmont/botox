@@ -12,7 +12,6 @@ function EC2DHCPOptions(name) {
 
 EC2DHCPOptions.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A domain name of your choice.
  *

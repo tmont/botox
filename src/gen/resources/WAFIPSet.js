@@ -12,7 +12,6 @@ function WAFIPSet(name) {
 
 WAFIPSet.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The IP address type and IP address range (in CIDR notation) from which web requests originate. If you associate the IPSet with a web ACL that is associated with a Amazon CloudFront (CloudFront) distribution, this descriptor is the value of one of the following fields in the CloudFront access logs:
  *

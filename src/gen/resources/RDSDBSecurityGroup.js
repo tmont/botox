@@ -12,7 +12,6 @@ function RDSDBSecurityGroup(name) {
 
 RDSDBSecurityGroup.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The Id of VPC. Indicates which VPC this DB Security Group should belong to.
  *

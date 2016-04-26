@@ -12,7 +12,6 @@ function RedshiftCluster(name) {
 
 RedshiftCluster.prototype = Object.create(Resource.prototype);
 
-
 /**
  * When a new version of the Amazon Redshift is released, indicates whether upgrades can be applied to the engine that is running on the cluster. The upgrades are applied during the maintenance window.
  *

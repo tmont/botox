@@ -12,7 +12,6 @@ function ElasticBeanstalkApplicationVersion(name) {
 
 ElasticBeanstalkApplicationVersion.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Name of the Elastic Beanstalk application that is associated with this application version.
  *

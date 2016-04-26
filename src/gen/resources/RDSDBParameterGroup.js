@@ -12,7 +12,6 @@ function RDSDBParameterGroup(name) {
 
 RDSDBParameterGroup.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A friendly description of the RDS parameter group. For example, "My Parameter Group".
  *

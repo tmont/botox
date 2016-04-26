@@ -12,7 +12,6 @@ function ConfigDeliveryChannel(name) {
 
 ConfigDeliveryChannel.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Provides options for how AWS Config delivers configuration snapshots to the S3 bucket in your delivery channel.
  *

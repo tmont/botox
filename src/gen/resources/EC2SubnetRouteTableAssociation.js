@@ -12,7 +12,6 @@ function EC2SubnetRouteTableAssociation(name) {
 
 EC2SubnetRouteTableAssociation.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The ID of the route table. This is commonly written as a reference to a route table declared elsewhere in the template. For example:
  *

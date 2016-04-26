@@ -12,7 +12,6 @@ function LogsLogStream(name) {
 
 LogsLogStream.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The name of the log group where the log stream is created.
  *

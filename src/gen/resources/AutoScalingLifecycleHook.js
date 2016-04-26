@@ -12,7 +12,6 @@ function AutoScalingLifecycleHook(name) {
 
 AutoScalingLifecycleHook.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The name of the Auto Scaling group for the lifecycle hook.
  *

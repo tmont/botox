@@ -12,7 +12,6 @@ function EC2SecurityGroupIngress(name) {
 
 EC2SecurityGroupIngress.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Specifies a CIDR range.
  *

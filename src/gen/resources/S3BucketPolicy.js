@@ -12,7 +12,6 @@ function S3BucketPolicy(name) {
 
 S3BucketPolicy.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The Amazon S3 bucket that the policy applies to.
  *

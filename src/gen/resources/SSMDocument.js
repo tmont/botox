@@ -12,7 +12,6 @@ function SSMDocument(name) {
 
 SSMDocument.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A JSON object that describes an instance configuration. For more information, see SSM Documents in the Amazon EC2 Simple Systems Manager API Reference.
  *

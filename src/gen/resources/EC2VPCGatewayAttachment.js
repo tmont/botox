@@ -12,7 +12,6 @@ function EC2VPCGatewayAttachment(name) {
 
 EC2VPCGatewayAttachment.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The ID of the Internet gateway.
  *

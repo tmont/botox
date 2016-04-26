@@ -12,7 +12,6 @@ function OpsWorksElasticLoadBalancerAttachment(name) {
 
 OpsWorksElasticLoadBalancerAttachment.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Elastic Load Balancing load balancer name.
  *

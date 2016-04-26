@@ -12,7 +12,6 @@ function RedshiftClusterSubnetGroup(name) {
 
 RedshiftClusterSubnetGroup.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A description of the subnet group.
  *

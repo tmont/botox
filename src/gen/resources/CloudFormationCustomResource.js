@@ -12,7 +12,6 @@ function CloudFormationCustomResource(name) {
 
 CloudFormationCustomResource.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The service token that was given to the template developer by the service provider to access the service, such as an Amazon SNS topic ARN or Lambda function ARN. The service token must be from the same region in which you are creating the stack.
  *

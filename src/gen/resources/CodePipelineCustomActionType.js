@@ -12,7 +12,6 @@ function CodePipelineCustomActionType(name) {
 
 CodePipelineCustomActionType.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The category of the custom action, such as a source action or a build action. For valid values, see CreateCustomActionType in the AWS CodePipeline API Reference.
  *

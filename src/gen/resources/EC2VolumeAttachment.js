@@ -12,7 +12,6 @@ function EC2VolumeAttachment(name) {
 
 EC2VolumeAttachment.prototype = Object.create(Resource.prototype);
 
-
 /**
  * How the device is exposed to the instance (e.g., /dev/sdh, or xvdh).
  *

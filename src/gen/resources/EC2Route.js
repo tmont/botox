@@ -12,7 +12,6 @@ function EC2Route(name) {
 
 EC2Route.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The CIDR address block used for the destination match. For example, 0.0.0.0/0. Routing decisions are based on the most specific match.
  *

@@ -12,7 +12,6 @@ function SQSQueuePolicy(name) {
 
 SQSQueuePolicy.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A policy document containing permissions to add to the specified SQS queues.
  *

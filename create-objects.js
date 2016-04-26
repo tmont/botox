@@ -108,7 +108,44 @@ Object.defineProperty(${propertyPrefix}, 'attr', {
 });`;
 			}
 
+			const needsCreationPolicy = {
+				'AWS::AutoScaling::AutoScalingGroup': 1,
+				'AWS::EC2::Instance': 1,
+				'AWS::CloudFormation::WaitCondition': 1
+			}[json.fullName];
+
+			const needsUpdatePolicy = {
+				'AWS::AutoScaling::AutoScalingGroup': 1
+			}[json.fullName];
+
+			const creationPolicyRequire = !needsCreationPolicy ? '' :
+				'var CreationPolicy = require(\'../../attr/creation-policy\');';
+			const updatePolicyRequired = !needsUpdatePolicy ? '' :
+				'var UpdatePolicy = require(\'../../attr/update-policy\');';
+
+			const creationPolicyMethod = !needsCreationPolicy ? '' : `
+/**
+ * Sets a CreationPolicy for this resource
+ * @param {CreationPolicy} creationPolicy
+ * @returns {${className}}
+ */
+${className}.prototype.creationPolicy = function(creationPolicy) {
+	return this.setResourceAttribute('CreationPolicy', creationPolicy);
+};`;
+
+			const updatePolicyMethod = !needsUpdatePolicy ? '' : `
+/**
+ * Sets an UpdatePolicy for this resource
+ * @param {UpdatePolicy} updatePolicy
+ * @returns {${className}}
+ */
+${className}.prototype.updatePolicy = function(updatePolicy) {
+	return this.setResourceAttribute('UpdatePolicy', updatePolicy);
+};`;
+
 			const code = `var Resource = require('../../resource');
+${creationPolicyRequire}
+${updatePolicyRequired}
 
 /**
  * ${json.fullName} - ${json.description}
@@ -123,9 +160,11 @@ function ${className}(name) {
 ${className}.prototype = Object.create(Resource.prototype);
 ${attributeProp}
 ${methods}
+${creationPolicyMethod}
+${updatePolicyMethod}
 
 module.exports = ${className};
-`;
+`.replace(/\n{3,}/g, '\n\n');
 
 			const targetFile = path.join(objDir, className + '.js');
 			if (!resourceMap[json.category]) {

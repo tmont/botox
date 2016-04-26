@@ -12,7 +12,6 @@ function RDSDBInstance(name) {
 
 RDSDBInstance.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The allocated storage size specified in gigabytes (GB).
  *

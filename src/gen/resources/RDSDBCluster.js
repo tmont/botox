@@ -12,7 +12,6 @@ function RDSDBCluster(name) {
 
 RDSDBCluster.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A list of Availability Zones (AZs) in which DB instances in the cluster can be created.
  *

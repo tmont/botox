@@ -12,7 +12,6 @@ function EC2CustomerGateway(name) {
 
 EC2CustomerGateway.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The customer gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
  *

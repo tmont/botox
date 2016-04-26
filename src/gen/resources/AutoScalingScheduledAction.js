@@ -12,7 +12,6 @@ function AutoScalingScheduledAction(name) {
 
 AutoScalingScheduledAction.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The name or ARN of the Auto Scaling group.
  *

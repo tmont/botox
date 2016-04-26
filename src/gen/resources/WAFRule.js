@@ -12,7 +12,6 @@ function WAFRule(name) {
 
 WAFRule.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A friendly name or description for the metrics of the rule.
  *

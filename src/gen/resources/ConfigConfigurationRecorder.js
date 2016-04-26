@@ -12,7 +12,6 @@ function ConfigConfigurationRecorder(name) {
 
 ConfigConfigurationRecorder.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A name for the configuration recorder. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the configuration recorder name. For more information, see Name Type.
  *

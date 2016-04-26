@@ -12,7 +12,6 @@ function EC2NetworkAcl(name) {
 
 EC2NetworkAcl.prototype = Object.create(Resource.prototype);
 
-
 /**
  * An arbitrary set of tags (key–value pairs) for this ACL.
  *

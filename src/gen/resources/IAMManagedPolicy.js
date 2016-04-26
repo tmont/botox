@@ -12,7 +12,6 @@ function IAMManagedPolicy(name) {
 
 IAMManagedPolicy.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A description of the policy. For example, you can describe the permissions that are defined in the policy.
  *

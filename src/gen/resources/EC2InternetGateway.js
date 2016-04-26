@@ -12,7 +12,6 @@ function EC2InternetGateway(name) {
 
 EC2InternetGateway.prototype = Object.create(Resource.prototype);
 
-
 /**
  * An arbitrary set of tags (key–value pairs) for this resource.
  *

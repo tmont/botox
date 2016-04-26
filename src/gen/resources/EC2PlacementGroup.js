@@ -12,7 +12,6 @@ function EC2PlacementGroup(name) {
 
 EC2PlacementGroup.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The placement strategy, which relates to the instance types that can be added to the placement group. For example, for the cluster strategy, you can cluster C4 instance types but not T2 instance types. For valid values, see CreatePlacementGroup in the Amazon EC2 API Reference. By default, AWS CloudFormation sets the value of this property to cluster.
  *

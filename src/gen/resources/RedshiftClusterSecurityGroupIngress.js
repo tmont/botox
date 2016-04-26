@@ -12,7 +12,6 @@ function RedshiftClusterSecurityGroupIngress(name) {
 
 RedshiftClusterSecurityGroupIngress.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The name of the Amazon Redshift security group that will be associated with the ingress rule.
  *

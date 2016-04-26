@@ -12,7 +12,6 @@ function OpsWorksStack(name) {
 
 OpsWorksStack.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The AWS OpsWorks agent version that you want to use. The agent communicates with the service and handles tasks such as initiating Chef runs in response to lifecycle events. For valid values, see the AgentVersion parameter for the CreateStack action in the AWS OpsWorks API Reference.
  *

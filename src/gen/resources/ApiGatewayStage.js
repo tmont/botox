@@ -12,7 +12,6 @@ function ApiGatewayStage(name) {
 
 ApiGatewayStage.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Indicates whether cache clustering is enabled for the stage.
  *

@@ -12,7 +12,6 @@ function GameLiftFleet(name) {
 
 GameLiftFleet.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The unique identifier for the build that you want to use with this fleet.
  *

@@ -12,7 +12,6 @@ function EC2VPNConnectionRoute(name) {
 
 EC2VPNConnectionRoute.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The CIDR block that is associated with the local subnet of the customer network.
  *

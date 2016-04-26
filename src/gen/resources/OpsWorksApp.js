@@ -12,7 +12,6 @@ function OpsWorksApp(name) {
 
 OpsWorksApp.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Contains the information required to retrieve an app from a repository.
  *

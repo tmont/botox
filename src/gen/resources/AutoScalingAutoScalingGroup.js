@@ -1,4 +1,6 @@
 var Resource = require('../../resource');
+var CreationPolicy = require('../../attr/creation-policy');
+var UpdatePolicy = require('../../attr/update-policy');
 
 /**
  * AWS::AutoScaling::AutoScalingGroup - The AWS::AutoScaling::AutoScalingGroup type creates an Auto Scaling group.
@@ -11,7 +13,6 @@ function AutoScalingAutoScalingGroup(name) {
 }
 
 AutoScalingAutoScalingGroup.prototype = Object.create(Resource.prototype);
-
 
 /**
  * Contains a list of availability zones for the group.
@@ -219,6 +220,24 @@ AutoScalingAutoScalingGroup.prototype.terminationPolicies = function(value) {
  */
 AutoScalingAutoScalingGroup.prototype.vpcZoneIdentifier = function(value) {
 	return this.set('VPCZoneIdentifier', value);
+};
+
+/**
+ * Sets a CreationPolicy for this resource
+ * @param {CreationPolicy} creationPolicy
+ * @returns {AutoScalingAutoScalingGroup}
+ */
+AutoScalingAutoScalingGroup.prototype.creationPolicy = function(creationPolicy) {
+	return this.setResourceAttribute('CreationPolicy', creationPolicy);
+};
+
+/**
+ * Sets an UpdatePolicy for this resource
+ * @param {UpdatePolicy} updatePolicy
+ * @returns {AutoScalingAutoScalingGroup}
+ */
+AutoScalingAutoScalingGroup.prototype.updatePolicy = function(updatePolicy) {
+	return this.setResourceAttribute('UpdatePolicy', updatePolicy);
 };
 
 module.exports = AutoScalingAutoScalingGroup;

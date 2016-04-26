@@ -12,7 +12,6 @@ function EC2VPCEndpoint(name) {
 
 EC2VPCEndpoint.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A policy to attach to the endpoint that controls access to the service. The policy must be valid JSON. The default policy allows full access to the AWS service. For more information, see Controlling Access to Services in the Amazon VPC User Guide.
  *

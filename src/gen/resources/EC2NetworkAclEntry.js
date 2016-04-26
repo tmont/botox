@@ -12,7 +12,6 @@ function EC2NetworkAclEntry(name) {
 
 EC2NetworkAclEntry.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The CIDR range to allow or deny, in CIDR notation (e.g., 172.16.0.0/24).
  *

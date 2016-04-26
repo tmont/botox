@@ -12,7 +12,6 @@ function RDSDBClusterParameterGroup(name) {
 
 RDSDBClusterParameterGroup.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A friendly description for this DB cluster parameter group.
  *

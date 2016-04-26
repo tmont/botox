@@ -12,7 +12,6 @@ function ApiGatewayClientCertificate(name) {
 
 ApiGatewayClientCertificate.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A description of the client certificate.
  *

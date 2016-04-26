@@ -12,7 +12,6 @@ function Route53HostedZone(name) {
 
 Route53HostedZone.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A complex type that contains an optional comment about your hosted zone.
  *

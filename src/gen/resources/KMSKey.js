@@ -12,7 +12,6 @@ function KMSKey(name) {
 
 KMSKey.prototype = Object.create(Resource.prototype);
 
-
 /**
  * A description of the key. Use a description that helps your users decide whether the key is appropriate for a particular task.
  *

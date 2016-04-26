@@ -12,7 +12,6 @@ function EFSFileSystem(name) {
 
 EFSFileSystem.prototype = Object.create(Resource.prototype);
 
-
 /**
  * Tags to associate with the file system.
  *

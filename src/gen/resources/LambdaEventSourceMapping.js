@@ -12,7 +12,6 @@ function LambdaEventSourceMapping(name) {
 
 LambdaEventSourceMapping.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The largest number of records that Lambda retrieves from your event source when invoking your function. Your function receives an event with all the retrieved records. For the default and valid values, see CreateEventSourceMapping in the AWS Lambda Developer Guide.
  *

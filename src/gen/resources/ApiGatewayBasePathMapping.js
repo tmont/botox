@@ -12,7 +12,6 @@ function ApiGatewayBasePathMapping(name) {
 
 ApiGatewayBasePathMapping.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The base path name that callers of the API must provide in the URL after the domain name.
  *

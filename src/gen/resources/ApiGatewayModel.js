@@ -12,7 +12,6 @@ function ApiGatewayModel(name) {
 
 ApiGatewayModel.prototype = Object.create(Resource.prototype);
 
-
 /**
  * The content type for the model.
  *
