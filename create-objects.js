@@ -180,11 +180,15 @@ module.exports = ${className};
 			Parameter: 1,
 			Output: 1,
 			Condition: 1,
+			CreationPolicy: 1,
+			UpdatePolicy: 1,
 
 			template: 1,
 			parameter: 1,
 			output: 1,
 			condition: 1,
+			creationPolicy: 1,
+			updatePolicy: 1,
 
 			join: 1,
 			base64: 1,
