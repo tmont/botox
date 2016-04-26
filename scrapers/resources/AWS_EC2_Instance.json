@@ -3,8 +3,16 @@
   "namespace": "AWS",
   "category": "EC2",
   "name": "Instance",
-  "description": "The AWS::EC2::Instance type creates an Amazon EC2 instance.",
+  "description": "The AWS::EC2::Instance resource creates an EC2 instance.",
   "properties": [
+    {
+      "name": "Affinity",
+      "description": "Indicates whether Amazon Elastic Compute Cloud (Amazon EC2) always associates the instance with a dedicated host. If you want Amazon EC2 to always restart the instance (if it was stopped) onto the same host on which it was launched, specify host. If you want Amazon EC2 to restart the instance on any available host, but to try to launch the instance onto the last host it ran on (on a best-effort basis), specify default.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
     {
       "name": "AvailabilityZone",
       "description": "Specifies the name of the Availability Zone in which the instance is located.",
@@ -36,6 +44,14 @@
       "required": false,
       "type": "Boolean",
       "update": "Some interruptions for Amazon EBS-backed instances"
+    },
+    {
+      "name": "HostId",
+      "description": "If you specify host for the Affinity property, the ID of a dedicated host that the instance is associated with. If you don't specify an ID, Amazon EC2 launches the instance onto any available, compatible dedicated host in your account. This type of launch is called an untargeted launch. Note that for untargeted launches, you must have a compatible, dedicated host available to successfully launch instances.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
     },
     {
       "name": "IamInstanceProfile",
@@ -175,11 +191,11 @@
     },
     {
       "name": "Tenancy",
-      "description": "The tenancy of the instance that you want to launch. This value can be either \"default\" or \"dedicated\". An instance that has a tenancy value of \"dedicated\" runs on single-tenant hardware and can be launched only into a VPC. For more information, see Using EC2 Dedicated Instances Within Your VPC in the Amazon VPC User Guide.",
+      "description": "The tenancy of the instance that you want to launch, such as default, dedicated, or host. If you specify a tenancy value of dedicated or host, you must launch the instance in a VPC. For more information, see Dedicated Instances in the Amazon VPC User Guide.",
       "typeDescription": "String",
       "required": false,
       "type": "String",
-      "update": "Replacement"
+      "update": "No interruption if this property was set to dedicated and you change it to host or vice versa."
     },
     {
       "name": "UserData",

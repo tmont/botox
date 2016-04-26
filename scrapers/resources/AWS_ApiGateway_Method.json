@@ -17,7 +17,7 @@
       "name": "AuthorizationType",
       "description": "The method's authorization type.",
       "typeDescription": "String",
-      "required": false,
+      "required": true,
       "type": "String",
       "update": "No interruption"
     },
@@ -73,7 +73,7 @@
       "name": "ResourceId",
       "description": "The ID of an API Gateway resource.",
       "typeDescription": "String",
-      "required": false,
+      "required": true,
       "type": "String",
       "update": "No interruption"
     },
@@ -81,7 +81,7 @@
       "name": "RestApiId",
       "description": "The ID of the RestApi resource in which API Gateway creates the method.",
       "typeDescription": "String",
-      "required": false,
+      "required": true,
       "type": "String",
       "update": "No interruption"
     }

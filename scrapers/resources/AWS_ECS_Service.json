@@ -14,6 +14,14 @@
       "update": "Replacement"
     },
     {
+      "name": "DeploymentConfiguration",
+      "description": "Configures how many tasks run during a deployment.",
+      "typeDescription": "Amazon EC2 Container Service Service DeploymentConfiguration",
+      "required": false,
+      "type": "EC2ContainerServiceServiceDeploymentConfiguration",
+      "update": "No interruption"
+    },
+    {
       "name": "DesiredCount",
       "description": "The number of simultaneous tasks, which you specify by using the TaskDefinition property, that you want to run on the cluster.",
       "typeDescription": "String",

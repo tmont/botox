@@ -181,6 +181,14 @@
     {
       "name": "ConfigurationEndpoint.Port",
       "description": "The port number of the configuration endpoint for the Memcached cache cluster."
+    },
+    {
+      "name": "RedisEndpoint.Address",
+      "description": "The DNS address of the configuration endpoint for the Redis cache cluster."
+    },
+    {
+      "name": "RedisEndpoint.Port",
+      "description": "The port number of the configuration endpoint for the Redis cache cluster."
     }
   ],
   "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html"

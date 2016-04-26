@@ -1,0 +1,28 @@
+{
+  "name": "EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit",
+  "description": "Ulimit is a property of the Amazon EC2 Container Service TaskDefinition ContainerDefinitions property that specifies resource limits for an Amazon EC2 Container Service (Amazon ECS) container.",
+  "properties": [
+    {
+      "name": "HardLimit",
+      "description": "The hard limit for the ulimit type.",
+      "typeDescription": "Integer",
+      "required": true,
+      "type": "Number"
+    },
+    {
+      "name": "Name",
+      "description": "The type of ulimit. For valid values, see the name content for the Ulimit data type in the Amazon EC2 Container Service API Reference.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "SoftLimit",
+      "description": "The soft limit for the ulimit type.",
+      "typeDescription": "Integer",
+      "required": true,
+      "type": "Number"
+    }
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-ulimit.html"
+}

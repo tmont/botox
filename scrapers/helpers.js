@@ -87,6 +87,7 @@ const typeMatchers = [
 			case 'ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups':
 			case 'AutoScalingNotificationConfigurations':
 			case 'EC2InstanceSsmAssociations':
+			case 'ConfigConfigRuleSourceSourceDetails':
 				break;
 			case 'routetableIDs':
 				//handle "List of route table IDs" from
@@ -141,6 +142,13 @@ const typeMatchers = [
 
 			//handle AssumeRolePolicyDocument from
 			//http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html
+			return 'Object';
+		}
+
+		return null;
+	},
+	(type) => {
+		if (/^Key-value pairs/.test(type)) {
 			return 'Object';
 		}
 

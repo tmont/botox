@@ -1,7 +1,7 @@
 var Resource = require('../../resource');
 
 /**
- * AWS::EC2::Instance - The AWS::EC2::Instance type creates an Amazon EC2 instance.
+ * AWS::EC2::Instance - The AWS::EC2::Instance resource creates an EC2 instance.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html}
  * @constructor
  * @param {String} name Name of the resource
@@ -73,6 +73,19 @@ Object.defineProperty(EC2Instance.prototype, 'attr', {
 });
 
 /**
+ * Indicates whether Amazon Elastic Compute Cloud (Amazon EC2) always associates the instance with a dedicated host. If you want Amazon EC2 to always restart the instance (if it was stopped) onto the same host on which it was launched, specify host. If you want Amazon EC2 to restart the instance on any available host, but to try to launch the instance onto the last host it ran on (on a best-effort basis), specify default.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EC2Instance}
+ */
+EC2Instance.prototype.affinity = function(value) {
+	return this.set('Affinity', value);
+};
+
+/**
  * Specifies the name of the Availability Zone in which the instance is located.
  *
  * Required: false
@@ -122,6 +135,19 @@ EC2Instance.prototype.disableApiTermination = function(value) {
  */
 EC2Instance.prototype.ebsOptimized = function(value) {
 	return this.set('EbsOptimized', value);
+};
+
+/**
+ * If you specify host for the Affinity property, the ID of a dedicated host that the instance is associated with. If you don't specify an ID, Amazon EC2 launches the instance onto any available, compatible dedicated host in your account. This type of launch is called an untargeted launch. Note that for untargeted launches, you must have a compatible, dedicated host available to successfully launch instances.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EC2Instance}
+ */
+EC2Instance.prototype.hostId = function(value) {
+	return this.set('HostId', value);
 };
 
 /**
@@ -346,10 +372,10 @@ EC2Instance.prototype.tags = function(value) {
 };
 
 /**
- * The tenancy of the instance that you want to launch. This value can be either "default" or "dedicated". An instance that has a tenancy value of "dedicated" runs on single-tenant hardware and can be launched only into a VPC. For more information, see Using EC2 Dedicated Instances Within Your VPC in the Amazon VPC User Guide.
+ * The tenancy of the instance that you want to launch, such as default, dedicated, or host. If you specify a tenancy value of dedicated or host, you must launch the instance in a VPC. For more information, see Dedicated Instances in the Amazon VPC User Guide.
  *
  * Required: false
- * Update requires: Replacement
+ * Update requires: No interruption if this property was set to dedicated and you change it to host or vice versa.
  *
  * @param {String|Attribute|Reference|Join} value
  * @return {EC2Instance}

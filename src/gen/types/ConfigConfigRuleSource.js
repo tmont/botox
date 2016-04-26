@@ -30,7 +30,7 @@ ConfigConfigRuleSource.prototype = {
 	 *
 	 * Required: false
 	 *
-	 * @param {ConfigConfigRuleSourceSourceDetails} value
+	 * @param {ConfigConfigRuleSourceSourceDetails[]} value
 	 * @return {ConfigConfigRuleSource}
 	 */
 	sourceDetails: function(value) {

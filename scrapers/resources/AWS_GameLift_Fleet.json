@@ -54,6 +54,22 @@
       "update": "Replacement"
     },
     {
+      "name": "MaxSize",
+      "description": "The maximum number of EC2 instances that you want to allow in this fleet. By default, AWS CloudFormation, sets this property to 1.",
+      "typeDescription": "Integer",
+      "required": false,
+      "type": "Number",
+      "update": "No interruption"
+    },
+    {
+      "name": "MinSize",
+      "description": "The minimum number of EC2 instances that you want to allow in this fleet. By default, AWS CloudFormation, sets this property to 0.",
+      "typeDescription": "Integer",
+      "required": false,
+      "type": "Number",
+      "update": "No interruption"
+    },
+    {
       "name": "Name",
       "description": "An identifier to associate with this fleet. Fleet names don't need to be unique.",
       "typeDescription": "String",

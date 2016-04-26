@@ -17,6 +17,8 @@ ElastiCacheCacheCluster.prototype = Object.create(Resource.prototype);
  * @typedef {Object} ElastiCacheCacheClusterAttributeMap
  * @property {Attribute} configurationEndpointAddress The DNS address of the configuration endpoint for the Memcached cache cluster.
  * @property {Attribute} configurationEndpointPort The port number of the configuration endpoint for the Memcached cache cluster.
+ * @property {Attribute} redisEndpointAddress The DNS address of the configuration endpoint for the Redis cache cluster.
+ * @property {Attribute} redisEndpointPort The port number of the configuration endpoint for the Redis cache cluster.
  */
 Object.defineProperty(ElastiCacheCacheCluster.prototype, 'attr', {
 	/**
@@ -40,6 +42,22 @@ Object.defineProperty(ElastiCacheCacheCluster.prototype, 'attr', {
 			 */
 			get configurationEndpointPort() {
 				return createAttribute('ConfigurationEndpoint.Port');
+			},
+
+			/**
+			 * The DNS address of the configuration endpoint for the Redis cache cluster.
+			 * @return {Attribute}
+			 */
+			get redisEndpointAddress() {
+				return createAttribute('RedisEndpoint.Address');
+			},
+
+			/**
+			 * The port number of the configuration endpoint for the Redis cache cluster.
+			 * @return {Attribute}
+			 */
+			get redisEndpointPort() {
+				return createAttribute('RedisEndpoint.Port');
 			}
 		};
 	}

@@ -1,6 +1,6 @@
 {
   "name": "EC2ContainerServiceTaskDefinitionContainerDefinitions",
-  "description": "ContainerDefinitions is a property of the AWS::ECS::TaskDefinition resource that describes the configuration of a container. The container definitions are passed to the Docker daemon.",
+  "description": "ContainerDefinitions is a property of the AWS::ECS::TaskDefinition resource that describes the configuration of an Amazon EC2 Container Service (Amazon ECS) container. The container definitions are passed to the Docker daemon.",
   "properties": [
     {
       "name": "Command",
@@ -11,10 +11,45 @@
     },
     {
       "name": "Cpu",
-      "description": "The minimum number of CPU units to reserve for the container. Containers share unallocated CPU units with other containers on the instance by using the same ratio as their allocated CPU units.",
+      "description": "The minimum number of CPU units to reserve for the container. Containers share unallocated CPU units with other containers on the instance by using the same ratio as their allocated CPU units. For more information, see the cpu content for the ContainerDefinition data type in the Amazon EC2 Container Service API Reference.",
       "typeDescription": "Integer",
       "required": false,
       "type": "Number"
+    },
+    {
+      "name": "DisableNetworking",
+      "description": "Indicates whether networking is disabled within the container.",
+      "typeDescription": "Boolean",
+      "required": false,
+      "type": "Boolean"
+    },
+    {
+      "name": "DnsSearchDomains",
+      "description": "A list of DNS search domains that are provided to the container. The domain names that the DNS logic looks up when a process attempts to access a bare unqualified hostname.",
+      "typeDescription": "List of strings",
+      "required": false,
+      "type": "string[]"
+    },
+    {
+      "name": "DnsServers",
+      "description": "A list of DNS servers that Amazon ECS provides to the container.",
+      "typeDescription": "List of strings",
+      "required": false,
+      "type": "string[]"
+    },
+    {
+      "name": "DockerLabels",
+      "description": "A key-value map of labels for the container.",
+      "typeDescription": "Key-value pairs, with the name of the label as the key and the label value as the value.",
+      "required": false,
+      "type": "Object"
+    },
+    {
+      "name": "DockerSecurityOptions",
+      "description": "A list of custom labels for SELinux and AppArmor multi-level security systems. For more information, see the dockerSecurityOptions content for the ContainerDefinition data type in the Amazon EC2 Container Service API Reference.",
+      "typeDescription": "List of strings",
+      "required": false,
+      "type": "string[]"
     },
     {
       "name": "EntryPoint",
@@ -32,10 +67,24 @@
     },
     {
       "name": "Essential",
-      "description": "Indicates whether the task stops if this container fails. If you specify true and the container fails, all other containers in the task stop. If you specify false and the container fails, none of the other containers in the task are affected. This value is true by default.",
+      "description": "Indicates whether the task stops if this container fails. If you specify true and the container fails, all other containers in the task stop. If you specify false and the container fails, none of the other containers in the task is affected. This value is true by default.",
       "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
+    },
+    {
+      "name": "ExtraHosts",
+      "description": "A list of hostnames and IP address mappings to append to the /etc/hosts file on the container.",
+      "typeDescription": "List of Amazon EC2 Container Service TaskDefinition ContainerDefinitions HostEntry",
+      "required": false,
+      "type": "EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry[]"
+    },
+    {
+      "name": "Hostname",
+      "description": "The name that Docker will use for the container's hostname.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String"
     },
     {
       "name": "Image",
@@ -52,8 +101,15 @@
       "type": "string[]"
     },
     {
+      "name": "LogConfiguration",
+      "description": "Configures a custom log driver for the container. For more information, see the logConfiguration content for the ContainerDefinition data type in the Amazon EC2 Container Service API Reference.",
+      "typeDescription": "Amazon EC2 Container Service TaskDefinition ContainerDefinitions LogConfiguration",
+      "required": false,
+      "type": "EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration"
+    },
+    {
       "name": "Memory",
-      "description": "The number of MiB of memory to reserve for the container. If your container attempts to exceed the allocated memory, the container is killed.",
+      "description": "The number of MiB of memory to reserve for the container. If your container attempts to exceed the allocated memory, the container is terminated.",
       "typeDescription": "Integer",
       "required": true,
       "type": "Number"
@@ -80,11 +136,46 @@
       "type": "EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings[]"
     },
     {
+      "name": "Privileged",
+      "description": "Indicates whether the container is given full access to the host container instance.",
+      "typeDescription": "Boolean",
+      "required": false,
+      "type": "Boolean"
+    },
+    {
+      "name": "ReadonlyRootFilesystem",
+      "description": "Indicates whether the container's root file system is mounted as read only.",
+      "typeDescription": "Boolean",
+      "required": false,
+      "type": "Boolean"
+    },
+    {
+      "name": "Ulimits",
+      "description": "A list of ulimits to set in the container. The ulimits set constraints on how much resources a container can consume so that it doesn't deplete all available resources on the host.",
+      "typeDescription": "List of Amazon EC2 Container Service TaskDefinition ContainerDefinitions Ulimit",
+      "required": false,
+      "type": "EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit[]"
+    },
+    {
+      "name": "User",
+      "description": "The user name to use inside the container.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String"
+    },
+    {
       "name": "VolumesFrom",
-      "description": "Data volumes to mount from another container.",
+      "description": "The data volumes to mount from another container.",
       "typeDescription": "List of Amazon EC2 Container Service TaskDefinition ContainerDefinitions VolumesFrom",
       "required": false,
       "type": "EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom[]"
+    },
+    {
+      "name": "WorkingDirectory",
+      "description": "The working directory in the container in which to run commands.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String"
     }
   ],
   "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html"

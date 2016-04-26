@@ -66,6 +66,7 @@ module.exports = {
 		DHCPOptions: require('./EC2DHCPOptions.js'),
 		EIP: require('./EC2EIP.js'),
 		EIPAssociation: require('./EC2EIPAssociation.js'),
+		Host: require('./EC2Host.js'),
 		Instance: require('./EC2Instance.js'),
 		InternetGateway: require('./EC2InternetGateway.js'),
 		NatGateway: require('./EC2NatGateway.js'),

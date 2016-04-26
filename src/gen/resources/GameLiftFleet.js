@@ -92,6 +92,32 @@ GameLiftFleet.prototype.logPaths = function(value) {
 };
 
 /**
+ * The maximum number of EC2 instances that you want to allow in this fleet. By default, AWS CloudFormation, sets this property to 1.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Number|Attribute|Reference} value
+ * @return {GameLiftFleet}
+ */
+GameLiftFleet.prototype.maxSize = function(value) {
+	return this.set('MaxSize', value);
+};
+
+/**
+ * The minimum number of EC2 instances that you want to allow in this fleet. By default, AWS CloudFormation, sets this property to 0.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Number|Attribute|Reference} value
+ * @return {GameLiftFleet}
+ */
+GameLiftFleet.prototype.minSize = function(value) {
+	return this.set('MinSize', value);
+};
+
+/**
  * An identifier to associate with this fleet. Fleet names don't need to be unique.
  *
  * Required: true

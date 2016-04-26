@@ -732,6 +732,16 @@ module.exports = {
 	},
 
 	/**
+	 * The AWS::EC2::Host resource allocates a fully dedicated physical server for launching EC2 instances. Because the host is fully dedicated for your use, it can help you address compliance requirements and reduce costs by allowing you to use your existing server-bound software licenses. For more information, see Dedicated Hosts in the Amazon EC2 User Guide for Linux Instances.
+	 *
+	 * @param {String} name Name of the resource
+	 * @return {EC2Host}
+	 */
+	host: function(name) {
+		return new Resources.EC2.Host(name);
+	},
+
+	/**
 	 * The AWS::Route53::HostedZone resource creates a hosted zone, which can contain a collection of record sets for a domain. You cannot create a hosted zone for a top-level domain (TLD). For more information, see POST CreateHostedZone or POST CreateHostedZone (Private) in the Amazon Route 53 API Reference.
 	 *
 	 * @param {String} name Name of the resource
@@ -752,7 +762,7 @@ module.exports = {
 	},
 
 	/**
-	 * The AWS::EC2::Instance type creates an Amazon EC2 instance.
+	 * The AWS::EC2::Instance resource creates an EC2 instance.
 	 *
 	 * @param {String} name Name of the resource
 	 * @return {EC2Instance}

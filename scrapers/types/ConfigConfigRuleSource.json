@@ -12,9 +12,9 @@
     {
       "name": "SourceDetails",
       "description": "Provides the source and type of event that triggers AWS Config to evaluate your AWS resources.",
-      "typeDescription": "AWS Config ConfigRule Source SourceDetails",
+      "typeDescription": "List of AWS Config ConfigRule Source SourceDetails",
       "required": false,
-      "type": "ConfigConfigRuleSourceSourceDetails"
+      "type": "ConfigConfigRuleSourceSourceDetails[]"
     },
     {
       "name": "SourceIdentifier",

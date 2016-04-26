@@ -1,0 +1,35 @@
+{
+  "fullName": "AWS::EC2::Host",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "Host",
+  "description": "The AWS::EC2::Host resource allocates a fully dedicated physical server for launching EC2 instances. Because the host is fully dedicated for your use, it can help you address compliance requirements and reduce costs by allowing you to use your existing server-bound software licenses. For more information, see Dedicated Hosts in the Amazon EC2 User Guide for Linux Instances.",
+  "properties": [
+    {
+      "name": "AutoPlacement",
+      "description": "Indicates if the host accepts EC2 instances with only matching configurations or if instances must also specify the host ID. Instances that don't specify a host ID can't launch onto a host with AutoPlacement set to off. By default, AWS CloudFormation sets this property to on. For more information, see Understanding Instance Placement and Host Affinity in the Amazon EC2 User Guide for Linux Instances.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "AvailabilityZone",
+      "description": "The Availability Zone (AZ) in which to launch the dedicated host.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "InstanceType",
+      "description": "The instance type that the dedicated host accepts. Only instances of this type can be launched onto the host. For more information, see Supported Instance Types in the Amazon EC2 User Guide for Linux Instances.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": [],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html"
+}

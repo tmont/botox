@@ -29,7 +29,7 @@ ApiGatewayMethod.prototype.apiKeyRequired = function(value) {
 /**
  * The method's authorization type.
  *
- * Required: false
+ * Required: true
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
@@ -120,7 +120,7 @@ ApiGatewayMethod.prototype.requestParameters = function(value) {
 /**
  * The ID of an API Gateway resource.
  *
- * Required: false
+ * Required: true
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
@@ -133,7 +133,7 @@ ApiGatewayMethod.prototype.resourceId = function(value) {
 /**
  * The ID of the RestApi resource in which API Gateway creates the method.
  *
- * Required: false
+ * Required: true
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value

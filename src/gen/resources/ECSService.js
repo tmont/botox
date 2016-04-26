@@ -27,6 +27,19 @@ ECSService.prototype.cluster = function(value) {
 };
 
 /**
+ * Configures how many tasks run during a deployment.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {EC2ContainerServiceServiceDeploymentConfiguration|Attribute|Reference} value Amazon EC2 Container Service Service DeploymentConfiguration
+ * @return {ECSService}
+ */
+ECSService.prototype.deploymentConfiguration = function(value) {
+	return this.set('DeploymentConfiguration', value);
+};
+
+/**
  * The number of simultaneous tasks, which you specify by using the TaskDefinition property, that you want to run on the cluster.
  *
  * Required: true
