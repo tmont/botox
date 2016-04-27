@@ -9,33 +9,30 @@ function CloudFormationResourceTagsType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CloudFormationResourceTagsType, PropertyType);
+CloudFormationResourceTagsType.prototype = Object.create(PropertyType.prototype);
 
-CloudFormationResourceTagsType.prototype = {
-	
-	/**
-	 * The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CloudFormationResourceTagsType}
-	 */
-	key: function(value) {
-		return this.set('Key', value);
-	},
+/**
+ * The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CloudFormationResourceTagsType}
+ */
+CloudFormationResourceTagsType.prototype.key = function(value) {
+	return this.set('Key', value);
+};
 
-	/**
-	 * The value for the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CloudFormationResourceTagsType}
-	 */
-	value: function(value) {
-		return this.set('Value', value);
-	}
+/**
+ * The value for the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CloudFormationResourceTagsType}
+ */
+CloudFormationResourceTagsType.prototype.value = function(value) {
+	return this.set('Value', value);
 };
 
 module.exports = CloudFormationResourceTagsType;

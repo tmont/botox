@@ -9,33 +9,30 @@ function CloudWatchMetricDimensionPropertyType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CloudWatchMetricDimensionPropertyType, PropertyType);
+CloudWatchMetricDimensionPropertyType.prototype = Object.create(PropertyType.prototype);
 
-CloudWatchMetricDimensionPropertyType.prototype = {
-	
-	/**
-	 * The name of the dimension, from 1–255 characters in length.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CloudWatchMetricDimensionPropertyType}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * The name of the dimension, from 1–255 characters in length.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CloudWatchMetricDimensionPropertyType}
+ */
+CloudWatchMetricDimensionPropertyType.prototype.name = function(value) {
+	return this.set('Name', value);
+};
 
-	/**
-	 * The value representing the dimension measurement, from 1–255 characters in length.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CloudWatchMetricDimensionPropertyType}
-	 */
-	value: function(value) {
-		return this.set('Value', value);
-	}
+/**
+ * The value representing the dimension measurement, from 1–255 characters in length.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CloudWatchMetricDimensionPropertyType}
+ */
+CloudWatchMetricDimensionPropertyType.prototype.value = function(value) {
+	return this.set('Value', value);
 };
 
 module.exports = CloudWatchMetricDimensionPropertyType;

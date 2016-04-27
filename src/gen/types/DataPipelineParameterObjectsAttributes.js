@@ -9,33 +9,30 @@ function DataPipelineParameterObjectsAttributes() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(DataPipelineParameterObjectsAttributes, PropertyType);
+DataPipelineParameterObjectsAttributes.prototype = Object.create(PropertyType.prototype);
 
-DataPipelineParameterObjectsAttributes.prototype = {
-	
-	/**
-	 * Specifies the name of a parameter attribute. To view parameter attributes, see Creating a Pipeline Using Parameterized Templates in the AWS Data Pipeline Developer Guide.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {DataPipelineParameterObjectsAttributes}
-	 */
-	key: function(value) {
-		return this.set('Key', value);
-	},
+/**
+ * Specifies the name of a parameter attribute. To view parameter attributes, see Creating a Pipeline Using Parameterized Templates in the AWS Data Pipeline Developer Guide.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {DataPipelineParameterObjectsAttributes}
+ */
+DataPipelineParameterObjectsAttributes.prototype.key = function(value) {
+	return this.set('Key', value);
+};
 
-	/**
-	 * A parameter attribute value.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {DataPipelineParameterObjectsAttributes}
-	 */
-	stringValue: function(value) {
-		return this.set('StringValue', value);
-	}
+/**
+ * A parameter attribute value.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {DataPipelineParameterObjectsAttributes}
+ */
+DataPipelineParameterObjectsAttributes.prototype.stringValue = function(value) {
+	return this.set('StringValue', value);
 };
 
 module.exports = DataPipelineParameterObjectsAttributes;

@@ -9,33 +9,30 @@ function ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificati
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsPlacement, PropertyType);
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsPlacement.prototype = Object.create(PropertyType.prototype);
 
-ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsPlacement.prototype = {
-	
-	/**
-	 * The Availability Zone (AZ) of the placement group.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsPlacement}
-	 */
-	availabilityZone: function(value) {
-		return this.set('AvailabilityZone', value);
-	},
+/**
+ * The Availability Zone (AZ) of the placement group.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsPlacement}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsPlacement.prototype.availabilityZone = function(value) {
+	return this.set('AvailabilityZone', value);
+};
 
-	/**
-	 * The name of the placement group (for cluster instances).
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsPlacement}
-	 */
-	groupName: function(value) {
-		return this.set('GroupName', value);
-	}
+/**
+ * The name of the placement group (for cluster instances).
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsPlacement}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsPlacement.prototype.groupName = function(value) {
+	return this.set('GroupName', value);
 };
 
 module.exports = ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsPlacement;

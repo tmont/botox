@@ -9,33 +9,30 @@ function CloudFrontDistributionConfigRestrictionsGeoRestriction() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CloudFrontDistributionConfigRestrictionsGeoRestriction, PropertyType);
+CloudFrontDistributionConfigRestrictionsGeoRestriction.prototype = Object.create(PropertyType.prototype);
 
-CloudFrontDistributionConfigRestrictionsGeoRestriction.prototype = {
-	
-	/**
-	 * The two-letter, uppercase country code for a country that you want to include in your blacklist or whitelist.
-	 *
-	 * Required: false
-	 *
-	 * @param {string[]} value
-	 * @return {CloudFrontDistributionConfigRestrictionsGeoRestriction}
-	 */
-	locations: function(value) {
-		return this.set('Locations', value);
-	},
+/**
+ * The two-letter, uppercase country code for a country that you want to include in your blacklist or whitelist.
+ *
+ * Required: false
+ *
+ * @param {string[]} value
+ * @return {CloudFrontDistributionConfigRestrictionsGeoRestriction}
+ */
+CloudFrontDistributionConfigRestrictionsGeoRestriction.prototype.locations = function(value) {
+	return this.set('Locations', value);
+};
 
-	/**
-	 * The method to restrict distribution of your content:
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CloudFrontDistributionConfigRestrictionsGeoRestriction}
-	 */
-	restrictionType: function(value) {
-		return this.set('RestrictionType', value);
-	}
+/**
+ * The method to restrict distribution of your content:
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CloudFrontDistributionConfigRestrictionsGeoRestriction}
+ */
+CloudFrontDistributionConfigRestrictionsGeoRestriction.prototype.restrictionType = function(value) {
+	return this.set('RestrictionType', value);
 };
 
 module.exports = CloudFrontDistributionConfigRestrictionsGeoRestriction;

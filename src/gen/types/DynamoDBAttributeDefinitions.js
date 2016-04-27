@@ -9,33 +9,30 @@ function DynamoDBAttributeDefinitions() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(DynamoDBAttributeDefinitions, PropertyType);
+DynamoDBAttributeDefinitions.prototype = Object.create(PropertyType.prototype);
 
-DynamoDBAttributeDefinitions.prototype = {
-	
-	/**
-	 * The name of an attribute. Attribute names can be 1 – 255 characters long and have no character restrictions.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {DynamoDBAttributeDefinitions}
-	 */
-	attributeName: function(value) {
-		return this.set('AttributeName', value);
-	},
+/**
+ * The name of an attribute. Attribute names can be 1 – 255 characters long and have no character restrictions.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {DynamoDBAttributeDefinitions}
+ */
+DynamoDBAttributeDefinitions.prototype.attributeName = function(value) {
+	return this.set('AttributeName', value);
+};
 
-	/**
-	 * The data type for the attribute. You can specify S for string data, N for numeric data, or B for binary data.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {DynamoDBAttributeDefinitions}
-	 */
-	attributeType: function(value) {
-		return this.set('AttributeType', value);
-	}
+/**
+ * The data type for the attribute. You can specify S for string data, N for numeric data, or B for binary data.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {DynamoDBAttributeDefinitions}
+ */
+DynamoDBAttributeDefinitions.prototype.attributeType = function(value) {
+	return this.set('AttributeType', value);
 };
 
 module.exports = DynamoDBAttributeDefinitions;

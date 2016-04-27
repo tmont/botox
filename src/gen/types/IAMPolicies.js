@@ -9,33 +9,30 @@ function IAMPolicies() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(IAMPolicies, PropertyType);
+IAMPolicies.prototype = Object.create(PropertyType.prototype);
 
-IAMPolicies.prototype = {
-	
-	/**
-	 * A policy document that describes what actions are allowed on which resources.
-	 *
-	 * Required: true
-	 *
-	 * @param {Object} value
-	 * @return {IAMPolicies}
-	 */
-	policyDocument: function(value) {
-		return this.set('PolicyDocument', value);
-	},
+/**
+ * A policy document that describes what actions are allowed on which resources.
+ *
+ * Required: true
+ *
+ * @param {Object} value
+ * @return {IAMPolicies}
+ */
+IAMPolicies.prototype.policyDocument = function(value) {
+	return this.set('PolicyDocument', value);
+};
 
-	/**
-	 * The name of the policy.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {IAMPolicies}
-	 */
-	policyName: function(value) {
-		return this.set('PolicyName', value);
-	}
+/**
+ * The name of the policy.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {IAMPolicies}
+ */
+IAMPolicies.prototype.policyName = function(value) {
+	return this.set('PolicyName', value);
 };
 
 module.exports = IAMPolicies;

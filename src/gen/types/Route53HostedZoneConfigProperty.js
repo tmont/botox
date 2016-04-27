@@ -9,21 +9,18 @@ function Route53HostedZoneConfigProperty() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(Route53HostedZoneConfigProperty, PropertyType);
+Route53HostedZoneConfigProperty.prototype = Object.create(PropertyType.prototype);
 
-Route53HostedZoneConfigProperty.prototype = {
-	
-	/**
-	 * Any comments that you want to include about the hosted zone.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {Route53HostedZoneConfigProperty}
-	 */
-	comment: function(value) {
-		return this.set('Comment', value);
-	}
+/**
+ * Any comments that you want to include about the hosted zone.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {Route53HostedZoneConfigProperty}
+ */
+Route53HostedZoneConfigProperty.prototype.comment = function(value) {
+	return this.set('Comment', value);
 };
 
 module.exports = Route53HostedZoneConfigProperty;

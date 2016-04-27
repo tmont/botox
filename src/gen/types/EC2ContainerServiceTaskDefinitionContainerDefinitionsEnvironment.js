@@ -9,33 +9,30 @@ function EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment, PropertyType);
+EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment.prototype = Object.create(PropertyType.prototype);
 
-EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment.prototype = {
-	
-	/**
-	 * The name of the environment variable.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * The name of the environment variable.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment}
+ */
+EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment.prototype.name = function(value) {
+	return this.set('Name', value);
+};
 
-	/**
-	 * The value of the environment variable.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment}
-	 */
-	value: function(value) {
-		return this.set('Value', value);
-	}
+/**
+ * The value of the environment variable.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment}
+ */
+EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment.prototype.value = function(value) {
+	return this.set('Value', value);
 };
 
 module.exports = EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment;

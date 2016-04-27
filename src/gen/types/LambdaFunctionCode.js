@@ -9,57 +9,54 @@ function LambdaFunctionCode() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(LambdaFunctionCode, PropertyType);
+LambdaFunctionCode.prototype = Object.create(PropertyType.prototype);
 
-LambdaFunctionCode.prototype = {
-	
-	/**
-	 * The name of the S3 bucket that contains the source code of your Lambda function. The S3 bucket must be in the same region as the stack.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {LambdaFunctionCode}
-	 */
-	s3Bucket: function(value) {
-		return this.set('S3Bucket', value);
-	},
+/**
+ * The name of the S3 bucket that contains the source code of your Lambda function. The S3 bucket must be in the same region as the stack.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {LambdaFunctionCode}
+ */
+LambdaFunctionCode.prototype.s3Bucket = function(value) {
+	return this.set('S3Bucket', value);
+};
 
-	/**
-	 * The location and name of the .zip file that contains your source code. If you specify this property, you must also specify the S3Bucket property.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {LambdaFunctionCode}
-	 */
-	s3Key: function(value) {
-		return this.set('S3Key', value);
-	},
+/**
+ * The location and name of the .zip file that contains your source code. If you specify this property, you must also specify the S3Bucket property.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {LambdaFunctionCode}
+ */
+LambdaFunctionCode.prototype.s3Key = function(value) {
+	return this.set('S3Key', value);
+};
 
-	/**
-	 * If you have S3 versioning enabled, the version ID of the.zip file that contains your source code. You can specify this property only if you specify the S3Bucket and S3Key properties.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {LambdaFunctionCode}
-	 */
-	s3ObjectVersion: function(value) {
-		return this.set('S3ObjectVersion', value);
-	},
+/**
+ * If you have S3 versioning enabled, the version ID of the.zip file that contains your source code. You can specify this property only if you specify the S3Bucket and S3Key properties.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {LambdaFunctionCode}
+ */
+LambdaFunctionCode.prototype.s3ObjectVersion = function(value) {
+	return this.set('S3ObjectVersion', value);
+};
 
-	/**
-	 * For nodejs and python2.7 runtime environments, the source code of your Lambda function. You can't use this property with other runtime environments.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {LambdaFunctionCode}
-	 */
-	zipFile: function(value) {
-		return this.set('ZipFile', value);
-	}
+/**
+ * For nodejs and python2.7 runtime environments, the source code of your Lambda function. You can't use this property with other runtime environments.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {LambdaFunctionCode}
+ */
+LambdaFunctionCode.prototype.zipFile = function(value) {
+	return this.set('ZipFile', value);
 };
 
 module.exports = LambdaFunctionCode;

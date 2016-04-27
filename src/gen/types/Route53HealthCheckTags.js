@@ -9,33 +9,30 @@ function Route53HealthCheckTags() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(Route53HealthCheckTags, PropertyType);
+Route53HealthCheckTags.prototype = Object.create(PropertyType.prototype);
 
-Route53HealthCheckTags.prototype = {
-	
-	/**
-	 * The key name of the tag.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {Route53HealthCheckTags}
-	 */
-	key: function(value) {
-		return this.set('Key', value);
-	},
+/**
+ * The key name of the tag.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {Route53HealthCheckTags}
+ */
+Route53HealthCheckTags.prototype.key = function(value) {
+	return this.set('Key', value);
+};
 
-	/**
-	 * The value for the tag.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {Route53HealthCheckTags}
-	 */
-	value: function(value) {
-		return this.set('Value', value);
-	}
+/**
+ * The value for the tag.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {Route53HealthCheckTags}
+ */
+Route53HealthCheckTags.prototype.value = function(value) {
+	return this.set('Value', value);
 };
 
 module.exports = Route53HealthCheckTags;

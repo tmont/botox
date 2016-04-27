@@ -9,21 +9,18 @@ function ElasticLoadBalancingConnectionSettings() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticLoadBalancingConnectionSettings, PropertyType);
+ElasticLoadBalancingConnectionSettings.prototype = Object.create(PropertyType.prototype);
 
-ElasticLoadBalancingConnectionSettings.prototype = {
-	
-	/**
-	 * The time (in seconds) that a connection to the load balancer can remain idle, which means no data is sent over the connection. After the specified time, the load balancer closes the connection.
-	 *
-	 * Required: true
-	 *
-	 * @param {Number} value
-	 * @return {ElasticLoadBalancingConnectionSettings}
-	 */
-	idleTimeout: function(value) {
-		return this.set('IdleTimeout', value);
-	}
+/**
+ * The time (in seconds) that a connection to the load balancer can remain idle, which means no data is sent over the connection. After the specified time, the load balancer closes the connection.
+ *
+ * Required: true
+ *
+ * @param {Number} value
+ * @return {ElasticLoadBalancingConnectionSettings}
+ */
+ElasticLoadBalancingConnectionSettings.prototype.idleTimeout = function(value) {
+	return this.set('IdleTimeout', value);
 };
 
 module.exports = ElasticLoadBalancingConnectionSettings;

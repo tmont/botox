@@ -9,45 +9,42 @@ function CloudWatchLogsMetricFilterMetricTransformationProperty() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CloudWatchLogsMetricFilterMetricTransformationProperty, PropertyType);
+CloudWatchLogsMetricFilterMetricTransformationProperty.prototype = Object.create(PropertyType.prototype);
 
-CloudWatchLogsMetricFilterMetricTransformationProperty.prototype = {
-	
-	/**
-	 * The name of the CloudWatch metric to which the log information will be published.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CloudWatchLogsMetricFilterMetricTransformationProperty}
-	 */
-	metricName: function(value) {
-		return this.set('MetricName', value);
-	},
+/**
+ * The name of the CloudWatch metric to which the log information will be published.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CloudWatchLogsMetricFilterMetricTransformationProperty}
+ */
+CloudWatchLogsMetricFilterMetricTransformationProperty.prototype.metricName = function(value) {
+	return this.set('MetricName', value);
+};
 
-	/**
-	 * The destination namespace of the CloudWatch metric. Namespaces are containers for metrics. For example, you can add related metrics in the same namespace.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CloudWatchLogsMetricFilterMetricTransformationProperty}
-	 */
-	metricNamespace: function(value) {
-		return this.set('MetricNamespace', value);
-	},
+/**
+ * The destination namespace of the CloudWatch metric. Namespaces are containers for metrics. For example, you can add related metrics in the same namespace.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CloudWatchLogsMetricFilterMetricTransformationProperty}
+ */
+CloudWatchLogsMetricFilterMetricTransformationProperty.prototype.metricNamespace = function(value) {
+	return this.set('MetricNamespace', value);
+};
 
-	/**
-	 * The value that is published to the CloudWatch metric. For example, if you're counting the occurrences of a particular term like Error, specify 1 for the metric value. If you're counting the number of bytes transferred, reference the value that is in the log event by using $ followed by the name of the field that you specified in the filter pattern, such as $size.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CloudWatchLogsMetricFilterMetricTransformationProperty}
-	 */
-	metricValue: function(value) {
-		return this.set('MetricValue', value);
-	}
+/**
+ * The value that is published to the CloudWatch metric. For example, if you're counting the occurrences of a particular term like Error, specify 1 for the metric value. If you're counting the number of bytes transferred, reference the value that is in the log event by using $ followed by the name of the field that you specified in the filter pattern, such as $size.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CloudWatchLogsMetricFilterMetricTransformationProperty}
+ */
+CloudWatchLogsMetricFilterMetricTransformationProperty.prototype.metricValue = function(value) {
+	return this.set('MetricValue', value);
 };
 
 module.exports = CloudWatchLogsMetricFilterMetricTransformationProperty;

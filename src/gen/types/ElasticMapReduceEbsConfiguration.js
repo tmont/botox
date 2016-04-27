@@ -9,33 +9,30 @@ function ElasticMapReduceEbsConfiguration() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticMapReduceEbsConfiguration, PropertyType);
+ElasticMapReduceEbsConfiguration.prototype = Object.create(PropertyType.prototype);
 
-ElasticMapReduceEbsConfiguration.prototype = {
-	
-	/**
-	 * Configures the block storage devices that are associated with your EMR instances.
-	 *
-	 * Required: false
-	 *
-	 * @param {ElasticMapReduceEbsConfiguration[]} value
-	 * @return {ElasticMapReduceEbsConfiguration}
-	 */
-	ebsBlockDeviceConfig: function(value) {
-		return this.set('EbsBlockDeviceConfig', value);
-	},
+/**
+ * Configures the block storage devices that are associated with your EMR instances.
+ *
+ * Required: false
+ *
+ * @param {ElasticMapReduceEbsConfiguration[]} value
+ * @return {ElasticMapReduceEbsConfiguration}
+ */
+ElasticMapReduceEbsConfiguration.prototype.ebsBlockDeviceConfig = function(value) {
+	return this.set('EbsBlockDeviceConfig', value);
+};
 
-	/**
-	 * Indicates whether the instances are optimized for Amazon EBS I/O. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance. For more information about fees and supported instance types, see EBS-Optimized Instances in the Amazon EC2 User Guide for Linux Instances.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {ElasticMapReduceEbsConfiguration}
-	 */
-	ebsOptimized: function(value) {
-		return this.set('EbsOptimized', value);
-	}
+/**
+ * Indicates whether the instances are optimized for Amazon EBS I/O. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance. For more information about fees and supported instance types, see EBS-Optimized Instances in the Amazon EC2 User Guide for Linux Instances.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {ElasticMapReduceEbsConfiguration}
+ */
+ElasticMapReduceEbsConfiguration.prototype.ebsOptimized = function(value) {
+	return this.set('EbsOptimized', value);
 };
 
 module.exports = ElasticMapReduceEbsConfiguration;

@@ -9,33 +9,30 @@ function RDSOptionGroupOptionConfigurationsOptionSettings() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(RDSOptionGroupOptionConfigurationsOptionSettings, PropertyType);
+RDSOptionGroupOptionConfigurationsOptionSettings.prototype = Object.create(PropertyType.prototype);
 
-RDSOptionGroupOptionConfigurationsOptionSettings.prototype = {
-	
-	/**
-	 * The name of the option setting that you want to specify.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {RDSOptionGroupOptionConfigurationsOptionSettings}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * The name of the option setting that you want to specify.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {RDSOptionGroupOptionConfigurationsOptionSettings}
+ */
+RDSOptionGroupOptionConfigurationsOptionSettings.prototype.name = function(value) {
+	return this.set('Name', value);
+};
 
-	/**
-	 * The value of the option setting.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {RDSOptionGroupOptionConfigurationsOptionSettings}
-	 */
-	value: function(value) {
-		return this.set('Value', value);
-	}
+/**
+ * The value of the option setting.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {RDSOptionGroupOptionConfigurationsOptionSettings}
+ */
+RDSOptionGroupOptionConfigurationsOptionSettings.prototype.value = function(value) {
+	return this.set('Value', value);
 };
 
 module.exports = RDSOptionGroupOptionConfigurationsOptionSettings;

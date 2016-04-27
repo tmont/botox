@@ -9,21 +9,18 @@ function GameLiftBuildStorageLocation() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(GameLiftBuildStorageLocation, PropertyType);
+GameLiftBuildStorageLocation.prototype = Object.create(PropertyType.prototype);
 
-GameLiftBuildStorageLocation.prototype = {
-	
-	/**
-	 * The S3 bucket where the GameLift build package files are stored.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {GameLiftBuildStorageLocation}
-	 */
-	bucket: function(value) {
-		return this.set('Bucket', value);
-	}
+/**
+ * The S3 bucket where the GameLift build package files are stored.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {GameLiftBuildStorageLocation}
+ */
+GameLiftBuildStorageLocation.prototype.bucket = function(value) {
+	return this.set('Bucket', value);
 };
 
 module.exports = GameLiftBuildStorageLocation;

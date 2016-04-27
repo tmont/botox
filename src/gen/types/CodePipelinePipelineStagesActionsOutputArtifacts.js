@@ -9,21 +9,18 @@ function CodePipelinePipelineStagesActionsOutputArtifacts() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CodePipelinePipelineStagesActionsOutputArtifacts, PropertyType);
+CodePipelinePipelineStagesActionsOutputArtifacts.prototype = Object.create(PropertyType.prototype);
 
-CodePipelinePipelineStagesActionsOutputArtifacts.prototype = {
-	
-	/**
-	 * The name of the artifact that is the result of an AWS CodePipeline action, such as My App. Output artifact names must be unique within a pipeline.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CodePipelinePipelineStagesActionsOutputArtifacts}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	}
+/**
+ * The name of the artifact that is the result of an AWS CodePipeline action, such as My App. Output artifact names must be unique within a pipeline.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CodePipelinePipelineStagesActionsOutputArtifacts}
+ */
+CodePipelinePipelineStagesActionsOutputArtifacts.prototype.name = function(value) {
+	return this.set('Name', value);
 };
 
 module.exports = CodePipelinePipelineStagesActionsOutputArtifacts;

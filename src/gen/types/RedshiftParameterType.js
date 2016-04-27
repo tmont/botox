@@ -9,33 +9,30 @@ function RedshiftParameterType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(RedshiftParameterType, PropertyType);
+RedshiftParameterType.prototype = Object.create(PropertyType.prototype);
 
-RedshiftParameterType.prototype = {
-	
-	/**
-	 * The name of the parameter.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {RedshiftParameterType}
-	 */
-	parameterName: function(value) {
-		return this.set('ParameterName', value);
-	},
+/**
+ * The name of the parameter.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {RedshiftParameterType}
+ */
+RedshiftParameterType.prototype.parameterName = function(value) {
+	return this.set('ParameterName', value);
+};
 
-	/**
-	 * The value of the parameter.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {RedshiftParameterType}
-	 */
-	parameterValue: function(value) {
-		return this.set('ParameterValue', value);
-	}
+/**
+ * The value of the parameter.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {RedshiftParameterType}
+ */
+RedshiftParameterType.prototype.parameterValue = function(value) {
+	return this.set('ParameterValue', value);
 };
 
 module.exports = RedshiftParameterType;

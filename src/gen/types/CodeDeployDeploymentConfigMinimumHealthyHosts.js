@@ -9,33 +9,30 @@ function CodeDeployDeploymentConfigMinimumHealthyHosts() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CodeDeployDeploymentConfigMinimumHealthyHosts, PropertyType);
+CodeDeployDeploymentConfigMinimumHealthyHosts.prototype = Object.create(PropertyType.prototype);
 
-CodeDeployDeploymentConfigMinimumHealthyHosts.prototype = {
-	
-	/**
-	 * The type of count to use, such as an absolute value or a percentage of the total number of instances in the deployment. For valid values, see MinimumHealthyHosts in the AWS CodeDeploy API Reference.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {CodeDeployDeploymentConfigMinimumHealthyHosts}
-	 */
-	type: function(value) {
-		return this.set('Type', value);
-	},
+/**
+ * The type of count to use, such as an absolute value or a percentage of the total number of instances in the deployment. For valid values, see MinimumHealthyHosts in the AWS CodeDeploy API Reference.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {CodeDeployDeploymentConfigMinimumHealthyHosts}
+ */
+CodeDeployDeploymentConfigMinimumHealthyHosts.prototype.type = function(value) {
+	return this.set('Type', value);
+};
 
-	/**
-	 * The minimum number of healthy instances.
-	 *
-	 * Required: false
-	 *
-	 * @param {Number} value
-	 * @return {CodeDeployDeploymentConfigMinimumHealthyHosts}
-	 */
-	value: function(value) {
-		return this.set('Value', value);
-	}
+/**
+ * The minimum number of healthy instances.
+ *
+ * Required: false
+ *
+ * @param {Number} value
+ * @return {CodeDeployDeploymentConfigMinimumHealthyHosts}
+ */
+CodeDeployDeploymentConfigMinimumHealthyHosts.prototype.value = function(value) {
+	return this.set('Value', value);
 };
 
 module.exports = CodeDeployDeploymentConfigMinimumHealthyHosts;

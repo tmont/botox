@@ -9,33 +9,30 @@ function S3NotificationConfigurationConfigFilterS3KeyRules() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(S3NotificationConfigurationConfigFilterS3KeyRules, PropertyType);
+S3NotificationConfigurationConfigFilterS3KeyRules.prototype = Object.create(PropertyType.prototype);
 
-S3NotificationConfigurationConfigFilterS3KeyRules.prototype = {
-	
-	/**
-	 * Whether the filter matches the prefix or suffix of object key names. For valid values, see the Name request element of the PUT Bucket notification action in the Amazon Simple Storage Service API Reference.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {S3NotificationConfigurationConfigFilterS3KeyRules}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * Whether the filter matches the prefix or suffix of object key names. For valid values, see the Name request element of the PUT Bucket notification action in the Amazon Simple Storage Service API Reference.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {S3NotificationConfigurationConfigFilterS3KeyRules}
+ */
+S3NotificationConfigurationConfigFilterS3KeyRules.prototype.name = function(value) {
+	return this.set('Name', value);
+};
 
-	/**
-	 * The value that the filter searches for in object key names.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {S3NotificationConfigurationConfigFilterS3KeyRules}
-	 */
-	value: function(value) {
-		return this.set('Value', value);
-	}
+/**
+ * The value that the filter searches for in object key names.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {S3NotificationConfigurationConfigFilterS3KeyRules}
+ */
+S3NotificationConfigurationConfigFilterS3KeyRules.prototype.value = function(value) {
+	return this.set('Value', value);
 };
 
 module.exports = S3NotificationConfigurationConfigFilterS3KeyRules;

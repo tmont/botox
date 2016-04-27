@@ -9,33 +9,30 @@ function EC2InstanceSsmAssociationsAssociationParameters() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(EC2InstanceSsmAssociationsAssociationParameters, PropertyType);
+EC2InstanceSsmAssociationsAssociationParameters.prototype = Object.create(PropertyType.prototype);
 
-EC2InstanceSsmAssociationsAssociationParameters.prototype = {
-	
-	/**
-	 * The name of an input parameter that is in the associated SSM document.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2InstanceSsmAssociationsAssociationParameters}
-	 */
-	key: function(value) {
-		return this.set('Key', value);
-	},
+/**
+ * The name of an input parameter that is in the associated SSM document.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2InstanceSsmAssociationsAssociationParameters}
+ */
+EC2InstanceSsmAssociationsAssociationParameters.prototype.key = function(value) {
+	return this.set('Key', value);
+};
 
-	/**
-	 * The value of an input parameter.
-	 *
-	 * Required: true
-	 *
-	 * @param {string[]} value
-	 * @return {EC2InstanceSsmAssociationsAssociationParameters}
-	 */
-	value: function(value) {
-		return this.set('Value', value);
-	}
+/**
+ * The value of an input parameter.
+ *
+ * Required: true
+ *
+ * @param {string[]} value
+ * @return {EC2InstanceSsmAssociationsAssociationParameters}
+ */
+EC2InstanceSsmAssociationsAssociationParameters.prototype.value = function(value) {
+	return this.set('Value', value);
 };
 
 module.exports = EC2InstanceSsmAssociationsAssociationParameters;

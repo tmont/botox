@@ -3,7 +3,7 @@ var TemplateItemTrait = require('./template-item-trait');
 /**
  * Represents an Condition in CloudFormation
  * @param {String} name
- * @param {If|And|Equals|Not|Or} [conditional]
+ * @param {If|And|Equals|Not|Or} conditional
  * @constructor
  * @implements TemplateItemTrait
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/conditions-section-structure.html}
@@ -11,6 +11,9 @@ var TemplateItemTrait = require('./template-item-trait');
 function Condition(name, conditional) {
 	if (!name || typeof(name) !== 'string') {
 		throw new Error('name must be a non-empty string');
+	}
+	if (!conditional) {
+		throw new Error('conditional is required');
 	}
 
 	Object.defineProperty(this, 'name', {
@@ -22,7 +25,7 @@ function Condition(name, conditional) {
 
 Condition.prototype = {
 	toJSON: function() {
-		return this.conditional;
+		return this.conditional.toJSON();
 	}
 };
 

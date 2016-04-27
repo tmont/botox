@@ -9,21 +9,18 @@ function GameLiftAliasRoutingStrategy() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(GameLiftAliasRoutingStrategy, PropertyType);
+GameLiftAliasRoutingStrategy.prototype = Object.create(PropertyType.prototype);
 
-GameLiftAliasRoutingStrategy.prototype = {
-	
-	/**
-	 * A unique identifier of a GameLift fleet to associate with the alias.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {GameLiftAliasRoutingStrategy}
-	 */
-	fleetId: function(value) {
-		return this.set('FleetId', value);
-	}
+/**
+ * A unique identifier of a GameLift fleet to associate with the alias.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {GameLiftAliasRoutingStrategy}
+ */
+GameLiftAliasRoutingStrategy.prototype.fleetId = function(value) {
+	return this.set('FleetId', value);
 };
 
 module.exports = GameLiftAliasRoutingStrategy;

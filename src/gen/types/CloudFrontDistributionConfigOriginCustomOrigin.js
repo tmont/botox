@@ -9,45 +9,42 @@ function CloudFrontDistributionConfigOriginCustomOrigin() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CloudFrontDistributionConfigOriginCustomOrigin, PropertyType);
+CloudFrontDistributionConfigOriginCustomOrigin.prototype = Object.create(PropertyType.prototype);
 
-CloudFrontDistributionConfigOriginCustomOrigin.prototype = {
-	
-	/**
-	 * The HTTP port the custom origin listens on.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {CloudFrontDistributionConfigOriginCustomOrigin}
-	 */
-	httpPort: function(value) {
-		return this.set('HTTPPort', value);
-	},
+/**
+ * The HTTP port the custom origin listens on.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {CloudFrontDistributionConfigOriginCustomOrigin}
+ */
+CloudFrontDistributionConfigOriginCustomOrigin.prototype.httpPort = function(value) {
+	return this.set('HTTPPort', value);
+};
 
-	/**
-	 * The HTTPS port the custom origin listens on.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {CloudFrontDistributionConfigOriginCustomOrigin}
-	 */
-	httpsPort: function(value) {
-		return this.set('HTTPSPort', value);
-	},
+/**
+ * The HTTPS port the custom origin listens on.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {CloudFrontDistributionConfigOriginCustomOrigin}
+ */
+CloudFrontDistributionConfigOriginCustomOrigin.prototype.httpsPort = function(value) {
+	return this.set('HTTPSPort', value);
+};
 
-	/**
-	 * The origin protocol policy to apply to your origin.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CloudFrontDistributionConfigOriginCustomOrigin}
-	 */
-	originProtocolPolicy: function(value) {
-		return this.set('OriginProtocolPolicy', value);
-	}
+/**
+ * The origin protocol policy to apply to your origin.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CloudFrontDistributionConfigOriginCustomOrigin}
+ */
+CloudFrontDistributionConfigOriginCustomOrigin.prototype.originProtocolPolicy = function(value) {
+	return this.set('OriginProtocolPolicy', value);
 };
 
 module.exports = CloudFrontDistributionConfigOriginCustomOrigin;

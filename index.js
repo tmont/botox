@@ -84,6 +84,11 @@ module.exports = {
 		return new Functions.FindInMap(mapName, topLevelKey, secondLevelKey);
 	},
 
+	/**
+	 * Creates a new GetAZs function
+	 * @param {String|Reference|FindInMap} [region]
+	 * @returns {GetAZs}
+	 */
 	getAZs: function(region) {
 		return new Functions.GetAZs(region);
 	},
@@ -92,15 +97,83 @@ module.exports = {
 		return new Functions.Join(things, delimiter);
 	},
 
+	/**
+	 * Creates an "Or" conditional function
+	 * @param conditions Between 2 and 10 conditional functions
+	 * @returns Or
+	 */
+	or: function(conditions) {
+		if (Array.isArray(conditions)) {
+			return new Functions.Or(conditions);
+		}
+		return new Functions.Or([].slice.call(arguments));
+	},
+	/**
+	 * Creates an "And" conditional function
+	 * @param {...*} conditions Between 2 and 10 conditional functions
+	 * @returns And
+	 */
+	and: function(conditions) {
+		return new Functions.And(conditions);
+	},
+	/**
+	 * Creates an "If" conditional function
+	 * @param {Condition} condition
+	 * @param trueValue
+	 * @param falseValue
+	 * @returns If
+	 */
+	$if: function(condition, trueValue, falseValue) {
+		return new Functions.If(condition, trueValue, falseValue);
+	},
+	/**
+	 * Creates a "Not" conditional function
+	 * @param {Condition} condition
+	 * @returns {Not}
+	 */
+	not: function(condition) {
+		return new Functions.Not(condition);
+	},
+	/**
+	 * Creates an "Equals" conditional function
+	 * @param lhs
+	 * @param rhs
+	 * @returns {Equals}
+	 */
+	equals: function(lhs, rhs) {
+		return new Functions.Equals(lhs, rhs);
+	},
+
+	/**
+	 * Creates a new template
+	 * @param {String} description
+	 * @returns {Template}
+	 */
 	template: function(description) {
 		return new Template(description);
 	},
+	/**
+	 * Creates a new template output
+	 * @param {String} name
+	 * @returns {Output}
+	 */
 	output: function(name) {
 		return new Output(name);
 	},
+	/**
+	 * Creates a new template parameter
+	 * @param {String} name
+	 * @returns {Parameter}
+	 */
 	parameter: function(name) {
 		return new Parameter(name);
 	},
+	/**
+	 * Creates a new template condition
+	 * @param {String} name
+	 * @param {If|And|Or|Equals|Not} conditional
+	 * @returns {Condition}
+	 */
 	condition: function(name, conditional) {
 		return new Condition(name, conditional);
 	},

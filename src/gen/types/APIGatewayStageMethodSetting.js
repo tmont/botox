@@ -9,129 +9,126 @@ function APIGatewayStageMethodSetting() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(APIGatewayStageMethodSetting, PropertyType);
+APIGatewayStageMethodSetting.prototype = Object.create(PropertyType.prototype);
 
-APIGatewayStageMethodSetting.prototype = {
-	
-	/**
-	 * Indicates whether the cached responses are encrypted.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {APIGatewayStageMethodSetting}
-	 */
-	cacheDataEncrypted: function(value) {
-		return this.set('CacheDataEncrypted', value);
-	},
+/**
+ * Indicates whether the cached responses are encrypted.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {APIGatewayStageMethodSetting}
+ */
+APIGatewayStageMethodSetting.prototype.cacheDataEncrypted = function(value) {
+	return this.set('CacheDataEncrypted', value);
+};
 
-	/**
-	 * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
-	 *
-	 * Required: false
-	 *
-	 * @param {Number} value
-	 * @return {APIGatewayStageMethodSetting}
-	 */
-	cacheTtlInSeconds: function(value) {
-		return this.set('CacheTtlInSeconds', value);
-	},
+/**
+ * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+ *
+ * Required: false
+ *
+ * @param {Number} value
+ * @return {APIGatewayStageMethodSetting}
+ */
+APIGatewayStageMethodSetting.prototype.cacheTtlInSeconds = function(value) {
+	return this.set('CacheTtlInSeconds', value);
+};
 
-	/**
-	 * Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {APIGatewayStageMethodSetting}
-	 */
-	cachingEnabled: function(value) {
-		return this.set('CachingEnabled', value);
-	},
+/**
+ * Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {APIGatewayStageMethodSetting}
+ */
+APIGatewayStageMethodSetting.prototype.cachingEnabled = function(value) {
+	return this.set('CachingEnabled', value);
+};
 
-	/**
-	 * Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {APIGatewayStageMethodSetting}
-	 */
-	dataTraceEnabled: function(value) {
-		return this.set('DataTraceEnabled', value);
-	},
+/**
+ * Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {APIGatewayStageMethodSetting}
+ */
+APIGatewayStageMethodSetting.prototype.dataTraceEnabled = function(value) {
+	return this.set('DataTraceEnabled', value);
+};
 
-	/**
-	 * The HTTP method.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {APIGatewayStageMethodSetting}
-	 */
-	httpMethod: function(value) {
-		return this.set('HttpMethod', value);
-	},
+/**
+ * The HTTP method.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {APIGatewayStageMethodSetting}
+ */
+APIGatewayStageMethodSetting.prototype.httpMethod = function(value) {
+	return this.set('HttpMethod', value);
+};
 
-	/**
-	 * The logging level for this method.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {APIGatewayStageMethodSetting}
-	 */
-	loggingLevel: function(value) {
-		return this.set('LoggingLevel', value);
-	},
+/**
+ * The logging level for this method.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {APIGatewayStageMethodSetting}
+ */
+APIGatewayStageMethodSetting.prototype.loggingLevel = function(value) {
+	return this.set('LoggingLevel', value);
+};
 
-	/**
-	 * Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {APIGatewayStageMethodSetting}
-	 */
-	metricsEnabled: function(value) {
-		return this.set('MetricsEnabled', value);
-	},
+/**
+ * Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {APIGatewayStageMethodSetting}
+ */
+APIGatewayStageMethodSetting.prototype.metricsEnabled = function(value) {
+	return this.set('MetricsEnabled', value);
+};
 
-	/**
-	 * The resource path for this method.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {APIGatewayStageMethodSetting}
-	 */
-	resourcePath: function(value) {
-		return this.set('ResourcePath', value);
-	},
+/**
+ * The resource path for this method.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {APIGatewayStageMethodSetting}
+ */
+APIGatewayStageMethodSetting.prototype.resourcePath = function(value) {
+	return this.set('ResourcePath', value);
+};
 
-	/**
-	 * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
-	 *
-	 * Required: false
-	 *
-	 * @param {Number} value
-	 * @return {APIGatewayStageMethodSetting}
-	 */
-	throttlingBurstLimit: function(value) {
-		return this.set('ThrottlingBurstLimit', value);
-	},
+/**
+ * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+ *
+ * Required: false
+ *
+ * @param {Number} value
+ * @return {APIGatewayStageMethodSetting}
+ */
+APIGatewayStageMethodSetting.prototype.throttlingBurstLimit = function(value) {
+	return this.set('ThrottlingBurstLimit', value);
+};
 
-	/**
-	 * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
-	 *
-	 * Required: false
-	 *
-	 * @param {Number} value
-	 * @return {APIGatewayStageMethodSetting}
-	 */
-	throttlingRateLimit: function(value) {
-		return this.set('ThrottlingRateLimit', value);
-	}
+/**
+ * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+ *
+ * Required: false
+ *
+ * @param {Number} value
+ * @return {APIGatewayStageMethodSetting}
+ */
+APIGatewayStageMethodSetting.prototype.throttlingRateLimit = function(value) {
+	return this.set('ThrottlingRateLimit', value);
 };
 
 module.exports = APIGatewayStageMethodSetting;

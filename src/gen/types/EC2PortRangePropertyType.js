@@ -9,10 +9,6 @@ function EC2PortRangePropertyType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(EC2PortRangePropertyType, PropertyType);
-
-EC2PortRangePropertyType.prototype = {
-	
-};
+EC2PortRangePropertyType.prototype = Object.create(PropertyType.prototype);
 
 module.exports = EC2PortRangePropertyType;

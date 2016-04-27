@@ -9,33 +9,30 @@ function CloudFormationInterfaceParameterGroup() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CloudFormationInterfaceParameterGroup, PropertyType);
+CloudFormationInterfaceParameterGroup.prototype = Object.create(PropertyType.prototype);
 
-CloudFormationInterfaceParameterGroup.prototype = {
-	
-	/**
-	 * A name for the parameter group.
-	 *
-	 * Required: false
-	 *
-	 * @param {CloudFormationInterfaceLabel} value
-	 * @return {CloudFormationInterfaceParameterGroup}
-	 */
-	label: function(value) {
-		return this.set('Label', value);
-	},
+/**
+ * A name for the parameter group.
+ *
+ * Required: false
+ *
+ * @param {CloudFormationInterfaceLabel} value
+ * @return {CloudFormationInterfaceParameterGroup}
+ */
+CloudFormationInterfaceParameterGroup.prototype.label = function(value) {
+	return this.set('Label', value);
+};
 
-	/**
-	 * A list of case-sensitive parameter logical IDs to include in the group. Parameters must already be defined in the Parameters section of the template. A parameter can be included in only one parameter group.
-	 *
-	 * Required: false
-	 *
-	 * @param {string[]} value
-	 * @return {CloudFormationInterfaceParameterGroup}
-	 */
-	parameters: function(value) {
-		return this.set('Parameters', value);
-	}
+/**
+ * A list of case-sensitive parameter logical IDs to include in the group. Parameters must already be defined in the Parameters section of the template. A parameter can be included in only one parameter group.
+ *
+ * Required: false
+ *
+ * @param {string[]} value
+ * @return {CloudFormationInterfaceParameterGroup}
+ */
+CloudFormationInterfaceParameterGroup.prototype.parameters = function(value) {
+	return this.set('Parameters', value);
 };
 
 module.exports = CloudFormationInterfaceParameterGroup;

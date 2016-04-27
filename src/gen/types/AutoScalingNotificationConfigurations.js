@@ -9,33 +9,30 @@ function AutoScalingNotificationConfigurations() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(AutoScalingNotificationConfigurations, PropertyType);
+AutoScalingNotificationConfigurations.prototype = Object.create(PropertyType.prototype);
 
-AutoScalingNotificationConfigurations.prototype = {
-	
-	/**
-	 * A list of event types that trigger a notification. Event types can include any of the following types: autoscaling:EC2_INSTANCE_LAUNCH, autoscaling:EC2_INSTANCE_LAUNCH_ERROR, autoscaling:EC2_INSTANCE_TERMINATE, autoscaling:EC2_INSTANCE_TERMINATE_ERROR, and autoscaling:TEST_NOTIFICATION. For more information about event types, see DescribeAutoScalingNotificationTypes in the Auto Scaling API Reference.
-	 *
-	 * Required: true
-	 *
-	 * @param {string[]} value
-	 * @return {AutoScalingNotificationConfigurations}
-	 */
-	notificationTypes: function(value) {
-		return this.set('NotificationTypes', value);
-	},
+/**
+ * A list of event types that trigger a notification. Event types can include any of the following types: autoscaling:EC2_INSTANCE_LAUNCH, autoscaling:EC2_INSTANCE_LAUNCH_ERROR, autoscaling:EC2_INSTANCE_TERMINATE, autoscaling:EC2_INSTANCE_TERMINATE_ERROR, and autoscaling:TEST_NOTIFICATION. For more information about event types, see DescribeAutoScalingNotificationTypes in the Auto Scaling API Reference.
+ *
+ * Required: true
+ *
+ * @param {string[]} value
+ * @return {AutoScalingNotificationConfigurations}
+ */
+AutoScalingNotificationConfigurations.prototype.notificationTypes = function(value) {
+	return this.set('NotificationTypes', value);
+};
 
-	/**
-	 * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {AutoScalingNotificationConfigurations}
-	 */
-	topicARN: function(value) {
-		return this.set('TopicARN', value);
-	}
+/**
+ * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {AutoScalingNotificationConfigurations}
+ */
+AutoScalingNotificationConfigurations.prototype.topicARN = function(value) {
+	return this.set('TopicARN', value);
 };
 
 module.exports = AutoScalingNotificationConfigurations;

@@ -9,33 +9,30 @@ function CodePipelineCustomActionTypeArtifactDetails() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CodePipelineCustomActionTypeArtifactDetails, PropertyType);
+CodePipelineCustomActionTypeArtifactDetails.prototype = Object.create(PropertyType.prototype);
 
-CodePipelineCustomActionTypeArtifactDetails.prototype = {
-	
-	/**
-	 * The maximum number of artifacts allowed for the action type.
-	 *
-	 * Required: true
-	 *
-	 * @param {Number} value
-	 * @return {CodePipelineCustomActionTypeArtifactDetails}
-	 */
-	maximumCount: function(value) {
-		return this.set('MaximumCount', value);
-	},
+/**
+ * The maximum number of artifacts allowed for the action type.
+ *
+ * Required: true
+ *
+ * @param {Number} value
+ * @return {CodePipelineCustomActionTypeArtifactDetails}
+ */
+CodePipelineCustomActionTypeArtifactDetails.prototype.maximumCount = function(value) {
+	return this.set('MaximumCount', value);
+};
 
-	/**
-	 * The minimum number of artifacts allowed for the action type.
-	 *
-	 * Required: true
-	 *
-	 * @param {Number} value
-	 * @return {CodePipelineCustomActionTypeArtifactDetails}
-	 */
-	minimumCount: function(value) {
-		return this.set('MinimumCount', value);
-	}
+/**
+ * The minimum number of artifacts allowed for the action type.
+ *
+ * Required: true
+ *
+ * @param {Number} value
+ * @return {CodePipelineCustomActionTypeArtifactDetails}
+ */
+CodePipelineCustomActionTypeArtifactDetails.prototype.minimumCount = function(value) {
+	return this.set('MinimumCount', value);
 };
 
 module.exports = CodePipelineCustomActionTypeArtifactDetails;

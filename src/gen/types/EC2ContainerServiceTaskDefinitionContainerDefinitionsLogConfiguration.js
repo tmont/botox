@@ -9,33 +9,30 @@ function EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration()
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration, PropertyType);
+EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration.prototype = Object.create(PropertyType.prototype);
 
-EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration.prototype = {
-	
-	/**
-	 * The log driver to use for the container. This parameter requires that your container instance uses Docker Remote API Version 1.18 or greater. For more information, see the logDriver content for the LogConfiguration data type in the Amazon EC2 Container Service API Reference.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration}
-	 */
-	logDriver: function(value) {
-		return this.set('LogDriver', value);
-	},
+/**
+ * The log driver to use for the container. This parameter requires that your container instance uses Docker Remote API Version 1.18 or greater. For more information, see the logDriver content for the LogConfiguration data type in the Amazon EC2 Container Service API Reference.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration}
+ */
+EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration.prototype.logDriver = function(value) {
+	return this.set('LogDriver', value);
+};
 
-	/**
-	 * The configuration options to send to the log driver. This parameter requires that your container instance uses Docker Remote API Version 1.18 or greater.
-	 *
-	 * Required: false
-	 *
-	 * @param {Object} value
-	 * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration}
-	 */
-	options: function(value) {
-		return this.set('Options', value);
-	}
+/**
+ * The configuration options to send to the log driver. This parameter requires that your container instance uses Docker Remote API Version 1.18 or greater.
+ *
+ * Required: false
+ *
+ * @param {Object} value
+ * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration}
+ */
+EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration.prototype.options = function(value) {
+	return this.set('Options', value);
 };
 
 module.exports = EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration;

@@ -9,33 +9,30 @@ function CloudFrontForwardedValuesCookies() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CloudFrontForwardedValuesCookies, PropertyType);
+CloudFrontForwardedValuesCookies.prototype = Object.create(PropertyType.prototype);
 
-CloudFrontForwardedValuesCookies.prototype = {
-	
-	/**
-	 * The cookies to forward to the origin of the cache behavior. You can specify none, all, or whitelist.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CloudFrontForwardedValuesCookies}
-	 */
-	forward: function(value) {
-		return this.set('Forward', value);
-	},
+/**
+ * The cookies to forward to the origin of the cache behavior. You can specify none, all, or whitelist.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CloudFrontForwardedValuesCookies}
+ */
+CloudFrontForwardedValuesCookies.prototype.forward = function(value) {
+	return this.set('Forward', value);
+};
 
-	/**
-	 * The names of cookies to forward to the origin for the cache behavior.
-	 *
-	 * Required: false
-	 *
-	 * @param {string[]} value
-	 * @return {CloudFrontForwardedValuesCookies}
-	 */
-	whitelistedNames: function(value) {
-		return this.set('WhitelistedNames', value);
-	}
+/**
+ * The names of cookies to forward to the origin for the cache behavior.
+ *
+ * Required: false
+ *
+ * @param {string[]} value
+ * @return {CloudFrontForwardedValuesCookies}
+ */
+CloudFrontForwardedValuesCookies.prototype.whitelistedNames = function(value) {
+	return this.set('WhitelistedNames', value);
 };
 
 module.exports = CloudFrontForwardedValuesCookies;

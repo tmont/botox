@@ -9,57 +9,54 @@ function ConfigConfigRuleScope() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ConfigConfigRuleScope, PropertyType);
+ConfigConfigRuleScope.prototype = Object.create(PropertyType.prototype);
 
-ConfigConfigRuleScope.prototype = {
-	
-	/**
-	 * The ID of an AWS resource that you want AWS Config to evaluate against a rule. If you specify an ID, you must also specify a resource type for the ComplianceResourceTypes property.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {ConfigConfigRuleScope}
-	 */
-	complianceResourceId: function(value) {
-		return this.set('ComplianceResourceId', value);
-	},
+/**
+ * The ID of an AWS resource that you want AWS Config to evaluate against a rule. If you specify an ID, you must also specify a resource type for the ComplianceResourceTypes property.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {ConfigConfigRuleScope}
+ */
+ConfigConfigRuleScope.prototype.complianceResourceId = function(value) {
+	return this.set('ComplianceResourceId', value);
+};
 
-	/**
-	 * The types of AWS resources that you want AWS Config to evaluate against the rule. If you specify the ComplianceResourceId property, specify only one resource type.
-	 *
-	 * Required: false
-	 *
-	 * @param {string[]} value
-	 * @return {ConfigConfigRuleScope}
-	 */
-	complianceResourceTypes: function(value) {
-		return this.set('ComplianceResourceTypes', value);
-	},
+/**
+ * The types of AWS resources that you want AWS Config to evaluate against the rule. If you specify the ComplianceResourceId property, specify only one resource type.
+ *
+ * Required: false
+ *
+ * @param {string[]} value
+ * @return {ConfigConfigRuleScope}
+ */
+ConfigConfigRuleScope.prototype.complianceResourceTypes = function(value) {
+	return this.set('ComplianceResourceTypes', value);
+};
 
-	/**
-	 * The tag key that is applied to the AWS resources that you want AWS Config to evaluate against the rule.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {ConfigConfigRuleScope}
-	 */
-	tagKey: function(value) {
-		return this.set('TagKey', value);
-	},
+/**
+ * The tag key that is applied to the AWS resources that you want AWS Config to evaluate against the rule.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {ConfigConfigRuleScope}
+ */
+ConfigConfigRuleScope.prototype.tagKey = function(value) {
+	return this.set('TagKey', value);
+};
 
-	/**
-	 * The tag value that is applied to the AWS resources that you want AWS Config to evaluate against the rule.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {ConfigConfigRuleScope}
-	 */
-	tagValue: function(value) {
-		return this.set('TagValue', value);
-	}
+/**
+ * The tag value that is applied to the AWS resources that you want AWS Config to evaluate against the rule.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {ConfigConfigRuleScope}
+ */
+ConfigConfigRuleScope.prototype.tagValue = function(value) {
+	return this.set('TagValue', value);
 };
 
 module.exports = ConfigConfigRuleScope;

@@ -9,33 +9,30 @@ function CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation, PropertyType);
+CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation.prototype = Object.create(PropertyType.prototype);
 
-CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation.prototype = {
-	
-	/**
-	 * The SHA1 commit ID of the GitHub commit to use as your application revision.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation}
-	 */
-	commitId: function(value) {
-		return this.set('CommitId', value);
-	},
+/**
+ * The SHA1 commit ID of the GitHub commit to use as your application revision.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation}
+ */
+CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation.prototype.commitId = function(value) {
+	return this.set('CommitId', value);
+};
 
-	/**
-	 * The GitHub account and repository name that includes the application revision. Specify the value as account/repository_name.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation}
-	 */
-	repository: function(value) {
-		return this.set('Repository', value);
-	}
+/**
+ * The GitHub account and repository name that includes the application revision. Specify the value as account/repository_name.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation}
+ */
+CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation.prototype.repository = function(value) {
+	return this.set('Repository', value);
 };
 
 module.exports = CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation;

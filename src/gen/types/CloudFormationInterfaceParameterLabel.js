@@ -9,21 +9,18 @@ function CloudFormationInterfaceParameterLabel() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CloudFormationInterfaceParameterLabel, PropertyType);
+CloudFormationInterfaceParameterLabel.prototype = Object.create(PropertyType.prototype);
 
-CloudFormationInterfaceParameterLabel.prototype = {
-	
-	/**
-	 * A label for a parameter. The label defines a friendly name or description that the AWS CloudFormation console shows on the Specify Parameters page when a stack is created or updated. The ParameterLogicalID key must be the case-sensitive logical ID of a valid parameter that has been declared in the Parameters section of the template.
-	 *
-	 * Required: false
-	 *
-	 * @param {CloudFormationInterfaceLabel} value
-	 * @return {CloudFormationInterfaceParameterLabel}
-	 */
-	parameterLogicalID: function(value) {
-		return this.set('ParameterLogicalID', value);
-	}
+/**
+ * A label for a parameter. The label defines a friendly name or description that the AWS CloudFormation console shows on the Specify Parameters page when a stack is created or updated. The ParameterLogicalID key must be the case-sensitive logical ID of a valid parameter that has been declared in the Parameters section of the template.
+ *
+ * Required: false
+ *
+ * @param {CloudFormationInterfaceLabel} value
+ * @return {CloudFormationInterfaceParameterLabel}
+ */
+CloudFormationInterfaceParameterLabel.prototype.parameterLogicalID = function(value) {
+	return this.set('ParameterLogicalID', value);
 };
 
 module.exports = CloudFormationInterfaceParameterLabel;

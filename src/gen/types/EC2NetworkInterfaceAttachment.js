@@ -9,33 +9,30 @@ function EC2NetworkInterfaceAttachment() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(EC2NetworkInterfaceAttachment, PropertyType);
+EC2NetworkInterfaceAttachment.prototype = Object.create(PropertyType.prototype);
 
-EC2NetworkInterfaceAttachment.prototype = {
-	
-	/**
-	 * The ID of the network interface attachment.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2NetworkInterfaceAttachment}
-	 */
-	attachmentID: function(value) {
-		return this.set('AttachmentID', value);
-	},
+/**
+ * The ID of the network interface attachment.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2NetworkInterfaceAttachment}
+ */
+EC2NetworkInterfaceAttachment.prototype.attachmentID = function(value) {
+	return this.set('AttachmentID', value);
+};
 
-	/**
-	 * The ID of the instance attached to the network interface.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2NetworkInterfaceAttachment}
-	 */
-	instanceID: function(value) {
-		return this.set('InstanceID', value);
-	}
+/**
+ * The ID of the instance attached to the network interface.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2NetworkInterfaceAttachment}
+ */
+EC2NetworkInterfaceAttachment.prototype.instanceID = function(value) {
+	return this.set('InstanceID', value);
 };
 
 module.exports = EC2NetworkInterfaceAttachment;

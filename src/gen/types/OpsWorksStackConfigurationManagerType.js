@@ -9,33 +9,30 @@ function OpsWorksStackConfigurationManagerType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(OpsWorksStackConfigurationManagerType, PropertyType);
+OpsWorksStackConfigurationManagerType.prototype = Object.create(PropertyType.prototype);
 
-OpsWorksStackConfigurationManagerType.prototype = {
-	
-	/**
-	 * The name of the configuration manager.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksStackConfigurationManagerType}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * The name of the configuration manager.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {OpsWorksStackConfigurationManagerType}
+ */
+OpsWorksStackConfigurationManagerType.prototype.name = function(value) {
+	return this.set('Name', value);
+};
 
-	/**
-	 * The Chef version.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksStackConfigurationManagerType}
-	 */
-	version: function(value) {
-		return this.set('Version', value);
-	}
+/**
+ * The Chef version.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {OpsWorksStackConfigurationManagerType}
+ */
+OpsWorksStackConfigurationManagerType.prototype.version = function(value) {
+	return this.set('Version', value);
 };
 
 module.exports = OpsWorksStackConfigurationManagerType;

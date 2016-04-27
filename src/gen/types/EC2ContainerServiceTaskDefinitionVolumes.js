@@ -9,33 +9,30 @@ function EC2ContainerServiceTaskDefinitionVolumes() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(EC2ContainerServiceTaskDefinitionVolumes, PropertyType);
+EC2ContainerServiceTaskDefinitionVolumes.prototype = Object.create(PropertyType.prototype);
 
-EC2ContainerServiceTaskDefinitionVolumes.prototype = {
-	
-	/**
-	 * The name of the volume. To specify mount points in your container definitions, use the value of this property.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2ContainerServiceTaskDefinitionVolumes}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * The name of the volume. To specify mount points in your container definitions, use the value of this property.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2ContainerServiceTaskDefinitionVolumes}
+ */
+EC2ContainerServiceTaskDefinitionVolumes.prototype.name = function(value) {
+	return this.set('Name', value);
+};
 
-	/**
-	 * Determines whether your data volume persists on the host container instance and at the location where it is stored.
-	 *
-	 * Required: false
-	 *
-	 * @param {EC2ContainerServiceTaskDefinitionVolumesHost} value
-	 * @return {EC2ContainerServiceTaskDefinitionVolumes}
-	 */
-	host: function(value) {
-		return this.set('Host', value);
-	}
+/**
+ * Determines whether your data volume persists on the host container instance and at the location where it is stored.
+ *
+ * Required: false
+ *
+ * @param {EC2ContainerServiceTaskDefinitionVolumesHost} value
+ * @return {EC2ContainerServiceTaskDefinitionVolumes}
+ */
+EC2ContainerServiceTaskDefinitionVolumes.prototype.host = function(value) {
+	return this.set('Host', value);
 };
 
 module.exports = EC2ContainerServiceTaskDefinitionVolumes;

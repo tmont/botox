@@ -9,10 +9,6 @@ function CloudFormationStackParametersPropertyType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CloudFormationStackParametersPropertyType, PropertyType);
-
-CloudFormationStackParametersPropertyType.prototype = {
-	
-};
+CloudFormationStackParametersPropertyType.prototype = Object.create(PropertyType.prototype);
 
 module.exports = CloudFormationStackParametersPropertyType;

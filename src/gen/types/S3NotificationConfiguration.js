@@ -9,45 +9,42 @@ function S3NotificationConfiguration() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(S3NotificationConfiguration, PropertyType);
+S3NotificationConfiguration.prototype = Object.create(PropertyType.prototype);
 
-S3NotificationConfiguration.prototype = {
-	
-	/**
-	 * The AWS Lambda functions to invoke and the events for which to invoke the functions.
-	 *
-	 * Required: false
-	 *
-	 * @param {SimpleStorageServiceNotificationConfigurationLambdaConfigurations} value
-	 * @return {S3NotificationConfiguration}
-	 */
-	lambdaConfigurations: function(value) {
-		return this.set('LambdaConfigurations', value);
-	},
+/**
+ * The AWS Lambda functions to invoke and the events for which to invoke the functions.
+ *
+ * Required: false
+ *
+ * @param {SimpleStorageServiceNotificationConfigurationLambdaConfigurations} value
+ * @return {S3NotificationConfiguration}
+ */
+S3NotificationConfiguration.prototype.lambdaConfigurations = function(value) {
+	return this.set('LambdaConfigurations', value);
+};
 
-	/**
-	 * The Amazon Simple Queue Service queues to publish messages to and the events for which to publish messages.
-	 *
-	 * Required: false
-	 *
-	 * @param {SimpleStorageServiceNotificationConfigurationQueueConfigurations} value
-	 * @return {S3NotificationConfiguration}
-	 */
-	queueConfigurations: function(value) {
-		return this.set('QueueConfigurations', value);
-	},
+/**
+ * The Amazon Simple Queue Service queues to publish messages to and the events for which to publish messages.
+ *
+ * Required: false
+ *
+ * @param {SimpleStorageServiceNotificationConfigurationQueueConfigurations} value
+ * @return {S3NotificationConfiguration}
+ */
+S3NotificationConfiguration.prototype.queueConfigurations = function(value) {
+	return this.set('QueueConfigurations', value);
+};
 
-	/**
-	 * The topic to which notifications are sent and the events for which notification are generated.
-	 *
-	 * Required: false
-	 *
-	 * @param {S3NotificationConfigurationTopicConfigurations} value
-	 * @return {S3NotificationConfiguration}
-	 */
-	topicConfigurations: function(value) {
-		return this.set('TopicConfigurations', value);
-	}
+/**
+ * The topic to which notifications are sent and the events for which notification are generated.
+ *
+ * Required: false
+ *
+ * @param {S3NotificationConfigurationTopicConfigurations} value
+ * @return {S3NotificationConfiguration}
+ */
+S3NotificationConfiguration.prototype.topicConfigurations = function(value) {
+	return this.set('TopicConfigurations', value);
 };
 
 module.exports = S3NotificationConfiguration;

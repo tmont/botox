@@ -9,33 +9,30 @@ function EC2MountPointPropertyType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(EC2MountPointPropertyType, PropertyType);
+EC2MountPointPropertyType.prototype = Object.create(PropertyType.prototype);
 
-EC2MountPointPropertyType.prototype = {
-	
-	/**
-	 * How the device is exposed to the instance (such as /dev/sdh, or xvdh).
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2MountPointPropertyType}
-	 */
-	device: function(value) {
-		return this.set('Device', value);
-	},
+/**
+ * How the device is exposed to the instance (such as /dev/sdh, or xvdh).
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2MountPointPropertyType}
+ */
+EC2MountPointPropertyType.prototype.device = function(value) {
+	return this.set('Device', value);
+};
 
-	/**
-	 * The ID of the Amazon EBS volume. The volume and instance must be within the same Availability Zone and the instance must be running.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2MountPointPropertyType}
-	 */
-	volumeId: function(value) {
-		return this.set('VolumeId', value);
-	}
+/**
+ * The ID of the Amazon EBS volume. The volume and instance must be within the same Availability Zone and the instance must be running.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2MountPointPropertyType}
+ */
+EC2MountPointPropertyType.prototype.volumeId = function(value) {
+	return this.set('VolumeId', value);
 };
 
 module.exports = EC2MountPointPropertyType;

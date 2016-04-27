@@ -9,45 +9,42 @@ function CodeDeployDeploymentGroupOnPremisesInstanceTagFilters() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CodeDeployDeploymentGroupOnPremisesInstanceTagFilters, PropertyType);
+CodeDeployDeploymentGroupOnPremisesInstanceTagFilters.prototype = Object.create(PropertyType.prototype);
 
-CodeDeployDeploymentGroupOnPremisesInstanceTagFilters.prototype = {
-	
-	/**
-	 * Filter on-premises instances with this key.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {CodeDeployDeploymentGroupOnPremisesInstanceTagFilters}
-	 */
-	key: function(value) {
-		return this.set('Key', value);
-	},
+/**
+ * Filter on-premises instances with this key.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {CodeDeployDeploymentGroupOnPremisesInstanceTagFilters}
+ */
+CodeDeployDeploymentGroupOnPremisesInstanceTagFilters.prototype.key = function(value) {
+	return this.set('Key', value);
+};
 
-	/**
-	 * The filter type. For example, you can filter on-premises instances by the key, tag value, or both. For valid values, see EC2TagFilter in the AWS CodeDeploy API Reference.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {CodeDeployDeploymentGroupOnPremisesInstanceTagFilters}
-	 */
-	type: function(value) {
-		return this.set('Type', value);
-	},
+/**
+ * The filter type. For example, you can filter on-premises instances by the key, tag value, or both. For valid values, see EC2TagFilter in the AWS CodeDeploy API Reference.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {CodeDeployDeploymentGroupOnPremisesInstanceTagFilters}
+ */
+CodeDeployDeploymentGroupOnPremisesInstanceTagFilters.prototype.type = function(value) {
+	return this.set('Type', value);
+};
 
-	/**
-	 * Filter on-premises instances with this tag value.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {CodeDeployDeploymentGroupOnPremisesInstanceTagFilters}
-	 */
-	value: function(value) {
-		return this.set('Value', value);
-	}
+/**
+ * Filter on-premises instances with this tag value.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {CodeDeployDeploymentGroupOnPremisesInstanceTagFilters}
+ */
+CodeDeployDeploymentGroupOnPremisesInstanceTagFilters.prototype.value = function(value) {
+	return this.set('Value', value);
 };
 
 module.exports = CodeDeployDeploymentGroupOnPremisesInstanceTagFilters;

@@ -9,33 +9,30 @@ function DataPipelinePipelinePipelineTags() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(DataPipelinePipelinePipelineTags, PropertyType);
+DataPipelinePipelinePipelineTags.prototype = Object.create(PropertyType.prototype);
 
-DataPipelinePipelinePipelineTags.prototype = {
-	
-	/**
-	 * The key name of a tag.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {DataPipelinePipelinePipelineTags}
-	 */
-	key: function(value) {
-		return this.set('Key', value);
-	},
+/**
+ * The key name of a tag.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {DataPipelinePipelinePipelineTags}
+ */
+DataPipelinePipelinePipelineTags.prototype.key = function(value) {
+	return this.set('Key', value);
+};
 
-	/**
-	 * The value to associate with the key name.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {DataPipelinePipelinePipelineTags}
-	 */
-	value: function(value) {
-		return this.set('Value', value);
-	}
+/**
+ * The value to associate with the key name.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {DataPipelinePipelinePipelineTags}
+ */
+DataPipelinePipelinePipelineTags.prototype.value = function(value) {
+	return this.set('Value', value);
 };
 
 module.exports = DataPipelinePipelinePipelineTags;

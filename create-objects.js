@@ -235,6 +235,12 @@ module.exports = ${className};
 			findInMap: 1,
 			getAZs: 1,
 
+			and: 1,
+			or: 1,
+			equals: 1,
+			not: 1,
+			$if: 1,
+
 			region: 1,
 			accountId: 1,
 			notificationARNs: 1,
@@ -319,22 +325,21 @@ function createTypes(next) {
 		function createType(file, next) {
 			const json = require(file);
 			const className = json.name;
-			//console.log(`  generating ${className}`);
 
 			const methods = json.properties.map((prop) => {
 				return `
-	/**
-	 * ${prop.description}
-	 *
-	 * Required: ${prop.required}
-	 *
-	 * @param {${prop.type}} value
-	 * @return {${className}}
-	 */
-	${camelize(prop.name)}: function(value) {
-		return this.set('${prop.name}', value);
-	}`;
-			}).join(',\n');
+/**
+ * ${prop.description}
+ *
+ * Required: ${prop.required}
+ *
+ * @param {${prop.type}} value
+ * @return {${className}}
+ */
+${className}.prototype.${camelize(prop.name)} = function(value) {
+	return this.set('${prop.name}', value);
+};`;
+			}).join('\n');
 
 			const code = `var PropertyType = require('../../property-type');
 
@@ -347,17 +352,15 @@ function ${className}() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(${className}, PropertyType);
+${className}.prototype = Object.create(PropertyType.prototype);
 
-${className}.prototype = {
-	${methods}
-};
+${methods}
 
 module.exports = ${className};
-`;
+`.replace(/\n{3,}/g, '\n\n');
 
 			const targetFile = path.join(objDir, className + '.js');
-			typeMap.push({ file: targetFile, obj: json, name: json.name });
+			typeMap.push({ file: targetFile, obj: json, name: json.name, className: className });
 			fs.writeFile(targetFile, code, next);
 		}
 
@@ -370,13 +373,16 @@ module.exports = ${className};
 		const indexFile = path.join(__dirname, 'src', 'gen', 'types', 'index.js');
 		const typeProps = typeMap.sort().map((type) => {
 			const file = '.' + type.file.substring(path.dirname(indexFile).length);
-			return `${type.name}: require('${file}')`;
+			return `
+	/**
+	 * ${type.obj.description}
+	 */
+	${type.name}: require('${file}')`;
 		}).join(',\n\t');
 
 		const code = `module.exports = {
 	${typeProps}
-};
-`;
+};`;
 
 		console.log(`  writing to ${indexFile}`);
 		fs.writeFile(indexFile, code, next);

@@ -9,33 +9,30 @@ function SNSSubscriptionPropertyType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(SNSSubscriptionPropertyType, PropertyType);
+SNSSubscriptionPropertyType.prototype = Object.create(PropertyType.prototype);
 
-SNSSubscriptionPropertyType.prototype = {
-	
-	/**
-	 * The subscription's endpoint (format depends on the protocol). For more information, see the Subscribe Endpoint parameter in the Amazon Simple Notification Service API Reference.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {SNSSubscriptionPropertyType}
-	 */
-	endpoint: function(value) {
-		return this.set('Endpoint', value);
-	},
+/**
+ * The subscription's endpoint (format depends on the protocol). For more information, see the Subscribe Endpoint parameter in the Amazon Simple Notification Service API Reference.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {SNSSubscriptionPropertyType}
+ */
+SNSSubscriptionPropertyType.prototype.endpoint = function(value) {
+	return this.set('Endpoint', value);
+};
 
-	/**
-	 * The subscription's protocol. For more information, see the Subscribe Protocol parameter in the Amazon Simple Notification Service API Reference.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {SNSSubscriptionPropertyType}
-	 */
-	protocol: function(value) {
-		return this.set('Protocol', value);
-	}
+/**
+ * The subscription's protocol. For more information, see the Subscribe Protocol parameter in the Amazon Simple Notification Service API Reference.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {SNSSubscriptionPropertyType}
+ */
+SNSSubscriptionPropertyType.prototype.protocol = function(value) {
+	return this.set('Protocol', value);
 };
 
 module.exports = SNSSubscriptionPropertyType;

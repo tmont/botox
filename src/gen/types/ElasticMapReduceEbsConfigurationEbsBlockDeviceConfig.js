@@ -9,33 +9,30 @@ function ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig, PropertyType);
+ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig.prototype = Object.create(PropertyType.prototype);
 
-ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig.prototype = {
-	
-	/**
-	 * The settings for the Amazon EBS volumes.
-	 *
-	 * Required: true
-	 *
-	 * @param {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification} value
-	 * @return {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig}
-	 */
-	volumeSpecification: function(value) {
-		return this.set('VolumeSpecification', value);
-	},
+/**
+ * The settings for the Amazon EBS volumes.
+ *
+ * Required: true
+ *
+ * @param {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification} value
+ * @return {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig}
+ */
+ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig.prototype.volumeSpecification = function(value) {
+	return this.set('VolumeSpecification', value);
+};
 
-	/**
-	 * The number of Amazon EBS volumes that you want to create for each instance in the EMR cluster or instance group.
-	 *
-	 * Required: false
-	 *
-	 * @param {Number} value
-	 * @return {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig}
-	 */
-	volumesPerInstance: function(value) {
-		return this.set('VolumesPerInstance', value);
-	}
+/**
+ * The number of Amazon EBS volumes that you want to create for each instance in the EMR cluster or instance group.
+ *
+ * Required: false
+ *
+ * @param {Number} value
+ * @return {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig}
+ */
+ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig.prototype.volumesPerInstance = function(value) {
+	return this.set('VolumesPerInstance', value);
 };
 
 module.exports = ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig;

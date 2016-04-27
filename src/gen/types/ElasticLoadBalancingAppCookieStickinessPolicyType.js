@@ -9,33 +9,30 @@ function ElasticLoadBalancingAppCookieStickinessPolicyType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticLoadBalancingAppCookieStickinessPolicyType, PropertyType);
+ElasticLoadBalancingAppCookieStickinessPolicyType.prototype = Object.create(PropertyType.prototype);
 
-ElasticLoadBalancingAppCookieStickinessPolicyType.prototype = {
-	
-	/**
-	 * Name of the application cookie used for stickiness.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ElasticLoadBalancingAppCookieStickinessPolicyType}
-	 */
-	cookieName: function(value) {
-		return this.set('CookieName', value);
-	},
+/**
+ * Name of the application cookie used for stickiness.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ElasticLoadBalancingAppCookieStickinessPolicyType}
+ */
+ElasticLoadBalancingAppCookieStickinessPolicyType.prototype.cookieName = function(value) {
+	return this.set('CookieName', value);
+};
 
-	/**
-	 * The name of the policy being created. The name must be unique within the set of policies for this Load Balancer.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ElasticLoadBalancingAppCookieStickinessPolicyType}
-	 */
-	policyName: function(value) {
-		return this.set('PolicyName', value);
-	}
+/**
+ * The name of the policy being created. The name must be unique within the set of policies for this Load Balancer.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ElasticLoadBalancingAppCookieStickinessPolicyType}
+ */
+ElasticLoadBalancingAppCookieStickinessPolicyType.prototype.policyName = function(value) {
+	return this.set('PolicyName', value);
 };
 
 module.exports = ElasticLoadBalancingAppCookieStickinessPolicyType;

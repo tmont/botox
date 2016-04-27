@@ -9,10 +9,6 @@ function NameType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(NameType, PropertyType);
-
-NameType.prototype = {
-	
-};
+NameType.prototype = Object.create(PropertyType.prototype);
 
 module.exports = NameType;

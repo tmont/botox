@@ -9,45 +9,42 @@ function ElasticBeanstalkOptionSettingsPropertyType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticBeanstalkOptionSettingsPropertyType, PropertyType);
+ElasticBeanstalkOptionSettingsPropertyType.prototype = Object.create(PropertyType.prototype);
 
-ElasticBeanstalkOptionSettingsPropertyType.prototype = {
-	
-	/**
-	 * A unique namespace identifying the option's associated AWS resource. For a list of namespaces that you can use, see Configuration Options in the AWS Elastic Beanstalk Developer Guide.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ElasticBeanstalkOptionSettingsPropertyType}
-	 */
-	namespace: function(value) {
-		return this.set('Namespace', value);
-	},
+/**
+ * A unique namespace identifying the option's associated AWS resource. For a list of namespaces that you can use, see Configuration Options in the AWS Elastic Beanstalk Developer Guide.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ElasticBeanstalkOptionSettingsPropertyType}
+ */
+ElasticBeanstalkOptionSettingsPropertyType.prototype.namespace = function(value) {
+	return this.set('Namespace', value);
+};
 
-	/**
-	 * The name of the configuration option. For a list of options that you can use, see Configuration Options in the AWS Elastic Beanstalk Developer Guide.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ElasticBeanstalkOptionSettingsPropertyType}
-	 */
-	optionName: function(value) {
-		return this.set('OptionName', value);
-	},
+/**
+ * The name of the configuration option. For a list of options that you can use, see Configuration Options in the AWS Elastic Beanstalk Developer Guide.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ElasticBeanstalkOptionSettingsPropertyType}
+ */
+ElasticBeanstalkOptionSettingsPropertyType.prototype.optionName = function(value) {
+	return this.set('OptionName', value);
+};
 
-	/**
-	 * The value of the setting.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ElasticBeanstalkOptionSettingsPropertyType}
-	 */
-	value: function(value) {
-		return this.set('Value', value);
-	}
+/**
+ * The value of the setting.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ElasticBeanstalkOptionSettingsPropertyType}
+ */
+ElasticBeanstalkOptionSettingsPropertyType.prototype.value = function(value) {
+	return this.set('Value', value);
 };
 
 module.exports = ElasticBeanstalkOptionSettingsPropertyType;

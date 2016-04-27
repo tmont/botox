@@ -9,33 +9,30 @@ function EC2NetworkInterfaceGroupItem() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(EC2NetworkInterfaceGroupItem, PropertyType);
+EC2NetworkInterfaceGroupItem.prototype = Object.create(PropertyType.prototype);
 
-EC2NetworkInterfaceGroupItem.prototype = {
-	
-	/**
-	 * ID of the security group.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2NetworkInterfaceGroupItem}
-	 */
-	key: function(value) {
-		return this.set('Key', value);
-	},
+/**
+ * ID of the security group.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2NetworkInterfaceGroupItem}
+ */
+EC2NetworkInterfaceGroupItem.prototype.key = function(value) {
+	return this.set('Key', value);
+};
 
-	/**
-	 * Name of the security group.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2NetworkInterfaceGroupItem}
-	 */
-	value: function(value) {
-		return this.set('Value', value);
-	}
+/**
+ * Name of the security group.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2NetworkInterfaceGroupItem}
+ */
+EC2NetworkInterfaceGroupItem.prototype.value = function(value) {
+	return this.set('Value', value);
 };
 
 module.exports = EC2NetworkInterfaceGroupItem;

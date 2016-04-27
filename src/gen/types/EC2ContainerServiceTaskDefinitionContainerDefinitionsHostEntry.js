@@ -9,33 +9,30 @@ function EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry, PropertyType);
+EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry.prototype = Object.create(PropertyType.prototype);
 
-EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry.prototype = {
-	
-	/**
-	 * The hostname to use in the /etc/hosts file.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry}
-	 */
-	hostname: function(value) {
-		return this.set('Hostname', value);
-	},
+/**
+ * The hostname to use in the /etc/hosts file.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry}
+ */
+EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry.prototype.hostname = function(value) {
+	return this.set('Hostname', value);
+};
 
-	/**
-	 * The IP address to use in the /etc/hosts file.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry}
-	 */
-	ipAddress: function(value) {
-		return this.set('IpAddress', value);
-	}
+/**
+ * The IP address to use in the /etc/hosts file.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry}
+ */
+EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry.prototype.ipAddress = function(value) {
+	return this.set('IpAddress', value);
 };
 
 module.exports = EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry;

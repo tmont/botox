@@ -9,45 +9,42 @@ function CodePipelinePipelineStages() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CodePipelinePipelineStages, PropertyType);
+CodePipelinePipelineStages.prototype = Object.create(PropertyType.prototype);
 
-CodePipelinePipelineStages.prototype = {
-	
-	/**
-	 * The actions to include in this stage.
-	 *
-	 * Required: true
-	 *
-	 * @param {CodePipelinePipelineStagesActions[]} value
-	 * @return {CodePipelinePipelineStages}
-	 */
-	actions: function(value) {
-		return this.set('Actions', value);
-	},
+/**
+ * The actions to include in this stage.
+ *
+ * Required: true
+ *
+ * @param {CodePipelinePipelineStagesActions[]} value
+ * @return {CodePipelinePipelineStages}
+ */
+CodePipelinePipelineStages.prototype.actions = function(value) {
+	return this.set('Actions', value);
+};
 
-	/**
-	 * The gates included in a stage.
-	 *
-	 * Required: false
-	 *
-	 * @param {CodePipelinePipelineStagesBlockers[]} value
-	 * @return {CodePipelinePipelineStages}
-	 */
-	blockers: function(value) {
-		return this.set('Blockers', value);
-	},
+/**
+ * The gates included in a stage.
+ *
+ * Required: false
+ *
+ * @param {CodePipelinePipelineStagesBlockers[]} value
+ * @return {CodePipelinePipelineStages}
+ */
+CodePipelinePipelineStages.prototype.blockers = function(value) {
+	return this.set('Blockers', value);
+};
 
-	/**
-	 * A name for this stage.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CodePipelinePipelineStages}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	}
+/**
+ * A name for this stage.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CodePipelinePipelineStages}
+ */
+CodePipelinePipelineStages.prototype.name = function(value) {
+	return this.set('Name', value);
 };
 
 module.exports = CodePipelinePipelineStages;

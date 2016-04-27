@@ -9,21 +9,18 @@ function ConfigDeliveryChannelConfigSnapshotDeliveryProperties() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ConfigDeliveryChannelConfigSnapshotDeliveryProperties, PropertyType);
+ConfigDeliveryChannelConfigSnapshotDeliveryProperties.prototype = Object.create(PropertyType.prototype);
 
-ConfigDeliveryChannelConfigSnapshotDeliveryProperties.prototype = {
-	
-	/**
-	 * The frequency with which AWS Config delivers configuration snapshots. For valid values, see ConfigSnapshotDeliveryProperties in the AWS Config API Reference.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {ConfigDeliveryChannelConfigSnapshotDeliveryProperties}
-	 */
-	deliveryFrequency: function(value) {
-		return this.set('DeliveryFrequency', value);
-	}
+/**
+ * The frequency with which AWS Config delivers configuration snapshots. For valid values, see ConfigSnapshotDeliveryProperties in the AWS Config API Reference.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {ConfigDeliveryChannelConfigSnapshotDeliveryProperties}
+ */
+ConfigDeliveryChannelConfigSnapshotDeliveryProperties.prototype.deliveryFrequency = function(value) {
+	return this.set('DeliveryFrequency', value);
 };
 
 module.exports = ConfigDeliveryChannelConfigSnapshotDeliveryProperties;

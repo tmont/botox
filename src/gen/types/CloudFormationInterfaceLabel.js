@@ -9,21 +9,18 @@ function CloudFormationInterfaceLabel() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CloudFormationInterfaceLabel, PropertyType);
+CloudFormationInterfaceLabel.prototype = Object.create(PropertyType.prototype);
 
-CloudFormationInterfaceLabel.prototype = {
-	
-	/**
-	 * The default label that the AWS CloudFormation console uses to name a parameter group or parameter.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {CloudFormationInterfaceLabel}
-	 */
-	default: function(value) {
-		return this.set('default', value);
-	}
+/**
+ * The default label that the AWS CloudFormation console uses to name a parameter group or parameter.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {CloudFormationInterfaceLabel}
+ */
+CloudFormationInterfaceLabel.prototype.default = function(value) {
+	return this.set('default', value);
 };
 
 module.exports = CloudFormationInterfaceLabel;

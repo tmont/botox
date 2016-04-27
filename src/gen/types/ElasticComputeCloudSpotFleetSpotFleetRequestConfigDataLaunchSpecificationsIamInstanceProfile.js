@@ -9,21 +9,18 @@ function ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificati
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIamInstanceProfile, PropertyType);
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIamInstanceProfile.prototype = Object.create(PropertyType.prototype);
 
-ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIamInstanceProfile.prototype = {
-	
-	/**
-	 * The Amazon Resource Name (ARN) of the instance profile to associate with the instances. The instance profile contains the IAM role that is associated with the instances.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIamInstanceProfile}
-	 */
-	arn: function(value) {
-		return this.set('Arn', value);
-	}
+/**
+ * The Amazon Resource Name (ARN) of the instance profile to associate with the instances. The instance profile contains the IAM role that is associated with the instances.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIamInstanceProfile}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIamInstanceProfile.prototype.arn = function(value) {
+	return this.set('Arn', value);
 };
 
 module.exports = ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIamInstanceProfile;

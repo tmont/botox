@@ -9,57 +9,54 @@ function EC2NetworkInterfaceAssociation() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(EC2NetworkInterfaceAssociation, PropertyType);
+EC2NetworkInterfaceAssociation.prototype = Object.create(PropertyType.prototype);
 
-EC2NetworkInterfaceAssociation.prototype = {
-	
-	/**
-	 * The ID of the network interface attachment.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2NetworkInterfaceAssociation}
-	 */
-	attachmentID: function(value) {
-		return this.set('AttachmentID', value);
-	},
+/**
+ * The ID of the network interface attachment.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2NetworkInterfaceAssociation}
+ */
+EC2NetworkInterfaceAssociation.prototype.attachmentID = function(value) {
+	return this.set('AttachmentID', value);
+};
 
-	/**
-	 * The ID of the instance attached to the network interface.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2NetworkInterfaceAssociation}
-	 */
-	instanceID: function(value) {
-		return this.set('InstanceID', value);
-	},
+/**
+ * The ID of the instance attached to the network interface.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2NetworkInterfaceAssociation}
+ */
+EC2NetworkInterfaceAssociation.prototype.instanceID = function(value) {
+	return this.set('InstanceID', value);
+};
 
-	/**
-	 * The address of the Elastic IP address bound to the network interface.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2NetworkInterfaceAssociation}
-	 */
-	publicIp: function(value) {
-		return this.set('PublicIp', value);
-	},
+/**
+ * The address of the Elastic IP address bound to the network interface.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2NetworkInterfaceAssociation}
+ */
+EC2NetworkInterfaceAssociation.prototype.publicIp = function(value) {
+	return this.set('PublicIp', value);
+};
 
-	/**
-	 * The ID of the Elastic IP address owner.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2NetworkInterfaceAssociation}
-	 */
-	ipOwnerId: function(value) {
-		return this.set('IpOwnerId', value);
-	}
+/**
+ * The ID of the Elastic IP address owner.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2NetworkInterfaceAssociation}
+ */
+EC2NetworkInterfaceAssociation.prototype.ipOwnerId = function(value) {
+	return this.set('IpOwnerId', value);
 };
 
 module.exports = EC2NetworkInterfaceAssociation;

@@ -9,69 +9,66 @@ function S3WebsiteConfigurationRoutingRulesRedirectRuleProperty() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(S3WebsiteConfigurationRoutingRulesRedirectRuleProperty, PropertyType);
+S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype = Object.create(PropertyType.prototype);
 
-S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype = {
-	
-	/**
-	 * Name of the host where requests are redirected.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
-	 */
-	hostName: function(value) {
-		return this.set('HostName', value);
-	},
+/**
+ * Name of the host where requests are redirected.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
+ */
+S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype.hostName = function(value) {
+	return this.set('HostName', value);
+};
 
-	/**
-	 * The HTTP redirect code to use on the response.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
-	 */
-	httpRedirectCode: function(value) {
-		return this.set('HttpRedirectCode', value);
-	},
+/**
+ * The HTTP redirect code to use on the response.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
+ */
+S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype.httpRedirectCode = function(value) {
+	return this.set('HttpRedirectCode', value);
+};
 
-	/**
-	 * The protocol to use in the redirect request.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
-	 */
-	protocol: function(value) {
-		return this.set('Protocol', value);
-	},
+/**
+ * The protocol to use in the redirect request.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
+ */
+S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype.protocol = function(value) {
+	return this.set('Protocol', value);
+};
 
-	/**
-	 * The object key prefix to use in the redirect request. For example, to redirect requests for all pages with the prefix docs/ (objects in the docs/ folder) to the documents/ prefix, you can set the KeyPrefixEquals property in routing condition property to docs/, and set the ReplaceKeyPrefixWith property to documents/.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
-	 */
-	replaceKeyPrefixWith: function(value) {
-		return this.set('ReplaceKeyPrefixWith', value);
-	},
+/**
+ * The object key prefix to use in the redirect request. For example, to redirect requests for all pages with the prefix docs/ (objects in the docs/ folder) to the documents/ prefix, you can set the KeyPrefixEquals property in routing condition property to docs/, and set the ReplaceKeyPrefixWith property to documents/.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
+ */
+S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype.replaceKeyPrefixWith = function(value) {
+	return this.set('ReplaceKeyPrefixWith', value);
+};
 
-	/**
-	 * The specific object key to use in the redirect request. For example, redirect request to error.html.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
-	 */
-	replaceKeyWith: function(value) {
-		return this.set('ReplaceKeyWith', value);
-	}
+/**
+ * The specific object key to use in the redirect request. For example, redirect request to error.html.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
+ */
+S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype.replaceKeyWith = function(value) {
+	return this.set('ReplaceKeyWith', value);
 };
 
 module.exports = S3WebsiteConfigurationRoutingRulesRedirectRuleProperty;

@@ -9,21 +9,18 @@ function S3NotificationConfigurationConfigFilter() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(S3NotificationConfigurationConfigFilter, PropertyType);
+S3NotificationConfigurationConfigFilter.prototype = Object.create(PropertyType.prototype);
 
-S3NotificationConfigurationConfigFilter.prototype = {
-	
-	/**
-	 * Amazon S3 filtering rules that describe for which object key names to send notifications.
-	 *
-	 * Required: true
-	 *
-	 * @param {S3NotificationConfigurationConfigFilterS3Key} value
-	 * @return {S3NotificationConfigurationConfigFilter}
-	 */
-	s3Key: function(value) {
-		return this.set('S3Key', value);
-	}
+/**
+ * Amazon S3 filtering rules that describe for which object key names to send notifications.
+ *
+ * Required: true
+ *
+ * @param {S3NotificationConfigurationConfigFilterS3Key} value
+ * @return {S3NotificationConfigurationConfigFilter}
+ */
+S3NotificationConfigurationConfigFilter.prototype.s3Key = function(value) {
+	return this.set('S3Key', value);
 };
 
 module.exports = S3NotificationConfigurationConfigFilter;

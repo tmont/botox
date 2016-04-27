@@ -9,33 +9,30 @@ function ElasticBeanstalkSourceBundlePropertyType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticBeanstalkSourceBundlePropertyType, PropertyType);
+ElasticBeanstalkSourceBundlePropertyType.prototype = Object.create(PropertyType.prototype);
 
-ElasticBeanstalkSourceBundlePropertyType.prototype = {
-	
-	/**
-	 * The Amazon S3 bucket where the data is located.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ElasticBeanstalkSourceBundlePropertyType}
-	 */
-	s3Bucket: function(value) {
-		return this.set('S3Bucket', value);
-	},
+/**
+ * The Amazon S3 bucket where the data is located.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ElasticBeanstalkSourceBundlePropertyType}
+ */
+ElasticBeanstalkSourceBundlePropertyType.prototype.s3Bucket = function(value) {
+	return this.set('S3Bucket', value);
+};
 
-	/**
-	 * The Amazon S3 key where the data is located.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ElasticBeanstalkSourceBundlePropertyType}
-	 */
-	s3Key: function(value) {
-		return this.set('S3Key', value);
-	}
+/**
+ * The Amazon S3 key where the data is located.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ElasticBeanstalkSourceBundlePropertyType}
+ */
+ElasticBeanstalkSourceBundlePropertyType.prototype.s3Key = function(value) {
+	return this.set('S3Key', value);
 };
 
 module.exports = ElasticBeanstalkSourceBundlePropertyType;

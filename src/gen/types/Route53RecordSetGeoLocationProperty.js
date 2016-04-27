@@ -9,45 +9,42 @@ function Route53RecordSetGeoLocationProperty() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(Route53RecordSetGeoLocationProperty, PropertyType);
+Route53RecordSetGeoLocationProperty.prototype = Object.create(PropertyType.prototype);
 
-Route53RecordSetGeoLocationProperty.prototype = {
-	
-	/**
-	 * All DNS queries from the continent that you specified are routed to this resource record set. If you specify this property, omit the CountryCode and SubdivisionCode properties.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {Route53RecordSetGeoLocationProperty}
-	 */
-	continentCode: function(value) {
-		return this.set('ContinentCode', value);
-	},
+/**
+ * All DNS queries from the continent that you specified are routed to this resource record set. If you specify this property, omit the CountryCode and SubdivisionCode properties.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {Route53RecordSetGeoLocationProperty}
+ */
+Route53RecordSetGeoLocationProperty.prototype.continentCode = function(value) {
+	return this.set('ContinentCode', value);
+};
 
-	/**
-	 * All DNS queries from the country that you specified are routed to this resource record set. If you specify this property, omit the ContinentCode property.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {Route53RecordSetGeoLocationProperty}
-	 */
-	countryCode: function(value) {
-		return this.set('CountryCode', value);
-	},
+/**
+ * All DNS queries from the country that you specified are routed to this resource record set. If you specify this property, omit the ContinentCode property.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {Route53RecordSetGeoLocationProperty}
+ */
+Route53RecordSetGeoLocationProperty.prototype.countryCode = function(value) {
+	return this.set('CountryCode', value);
+};
 
-	/**
-	 * If you specified US for the country code, you can specify a state in the United States. All DNS queries from the state that you specified are routed to this resource record set. If you specify this property, you must specify US for the CountryCode and omit the ContinentCode property.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {Route53RecordSetGeoLocationProperty}
-	 */
-	subdivisionCode: function(value) {
-		return this.set('SubdivisionCode', value);
-	}
+/**
+ * If you specified US for the country code, you can specify a state in the United States. All DNS queries from the state that you specified are routed to this resource record set. If you specify this property, you must specify US for the CountryCode and omit the ContinentCode property.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {Route53RecordSetGeoLocationProperty}
+ */
+Route53RecordSetGeoLocationProperty.prototype.subdivisionCode = function(value) {
+	return this.set('SubdivisionCode', value);
 };
 
 module.exports = Route53RecordSetGeoLocationProperty;

@@ -9,33 +9,30 @@ function ConfigConfigRuleSourceSourceDetails() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ConfigConfigRuleSourceSourceDetails, PropertyType);
+ConfigConfigRuleSourceSourceDetails.prototype = Object.create(PropertyType.prototype);
 
-ConfigConfigRuleSourceSourceDetails.prototype = {
-	
-	/**
-	 * The source, such as an AWS service, that generate events, triggering AWS Config to evaluate your AWS resources. For valid values, see the SourceDetail data type in the AWS Config API Reference.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ConfigConfigRuleSourceSourceDetails}
-	 */
-	eventSource: function(value) {
-		return this.set('EventSource', value);
-	},
+/**
+ * The source, such as an AWS service, that generate events, triggering AWS Config to evaluate your AWS resources. For valid values, see the SourceDetail data type in the AWS Config API Reference.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ConfigConfigRuleSourceSourceDetails}
+ */
+ConfigConfigRuleSourceSourceDetails.prototype.eventSource = function(value) {
+	return this.set('EventSource', value);
+};
 
-	/**
-	 * The type of Amazon Simple Notification Service (Amazon SNS) message that triggers AWS Config to run an evaluation.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ConfigConfigRuleSourceSourceDetails}
-	 */
-	messageType: function(value) {
-		return this.set('MessageType', value);
-	}
+/**
+ * The type of Amazon Simple Notification Service (Amazon SNS) message that triggers AWS Config to run an evaluation.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ConfigConfigRuleSourceSourceDetails}
+ */
+ConfigConfigRuleSourceSourceDetails.prototype.messageType = function(value) {
+	return this.set('MessageType', value);
 };
 
 module.exports = ConfigConfigRuleSourceSourceDetails;

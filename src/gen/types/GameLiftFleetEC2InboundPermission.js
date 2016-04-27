@@ -9,21 +9,18 @@ function GameLiftFleetEC2InboundPermission() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(GameLiftFleetEC2InboundPermission, PropertyType);
+GameLiftFleetEC2InboundPermission.prototype = Object.create(PropertyType.prototype);
 
-GameLiftFleetEC2InboundPermission.prototype = {
-	
-	/**
-	 * The starting value for a range of allowed port numbers. This value must be lower than the ToPort value.
-	 *
-	 * Required: true
-	 *
-	 * @param {Number} value
-	 * @return {GameLiftFleetEC2InboundPermission}
-	 */
-	fromPort: function(value) {
-		return this.set('FromPort', value);
-	}
+/**
+ * The starting value for a range of allowed port numbers. This value must be lower than the ToPort value.
+ *
+ * Required: true
+ *
+ * @param {Number} value
+ * @return {GameLiftFleetEC2InboundPermission}
+ */
+GameLiftFleetEC2InboundPermission.prototype.fromPort = function(value) {
+	return this.set('FromPort', value);
 };
 
 module.exports = GameLiftFleetEC2InboundPermission;

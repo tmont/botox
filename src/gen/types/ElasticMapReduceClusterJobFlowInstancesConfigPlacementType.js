@@ -9,21 +9,18 @@ function ElasticMapReduceClusterJobFlowInstancesConfigPlacementType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticMapReduceClusterJobFlowInstancesConfigPlacementType, PropertyType);
+ElasticMapReduceClusterJobFlowInstancesConfigPlacementType.prototype = Object.create(PropertyType.prototype);
 
-ElasticMapReduceClusterJobFlowInstancesConfigPlacementType.prototype = {
-	
-	/**
-	 * The Amazon Elastic Compute Cloud (Amazon EC2) AZ for the job flow. For more information, see http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html in the Amazon EC2 User Guide for Linux Instances.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ElasticMapReduceClusterJobFlowInstancesConfigPlacementType}
-	 */
-	availabilityZone: function(value) {
-		return this.set('AvailabilityZone', value);
-	}
+/**
+ * The Amazon Elastic Compute Cloud (Amazon EC2) AZ for the job flow. For more information, see http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html in the Amazon EC2 User Guide for Linux Instances.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ElasticMapReduceClusterJobFlowInstancesConfigPlacementType}
+ */
+ElasticMapReduceClusterJobFlowInstancesConfigPlacementType.prototype.availabilityZone = function(value) {
+	return this.set('AvailabilityZone', value);
 };
 
 module.exports = ElasticMapReduceClusterJobFlowInstancesConfigPlacementType;

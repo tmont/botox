@@ -9,33 +9,30 @@ function DirectoryServiceSimpleADVpcSettings() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(DirectoryServiceSimpleADVpcSettings, PropertyType);
+DirectoryServiceSimpleADVpcSettings.prototype = Object.create(PropertyType.prototype);
 
-DirectoryServiceSimpleADVpcSettings.prototype = {
-	
-	/**
-	 * A list of two subnet IDs for the directory servers. Each subnet must be in different Availability Zones (AZ). AWS Directory Service creates a directory server and a DNS server in each subnet.
-	 *
-	 * Required: true
-	 *
-	 * @param {string[]} value
-	 * @return {DirectoryServiceSimpleADVpcSettings}
-	 */
-	subnetIds: function(value) {
-		return this.set('SubnetIds', value);
-	},
+/**
+ * A list of two subnet IDs for the directory servers. Each subnet must be in different Availability Zones (AZ). AWS Directory Service creates a directory server and a DNS server in each subnet.
+ *
+ * Required: true
+ *
+ * @param {string[]} value
+ * @return {DirectoryServiceSimpleADVpcSettings}
+ */
+DirectoryServiceSimpleADVpcSettings.prototype.subnetIds = function(value) {
+	return this.set('SubnetIds', value);
+};
 
-	/**
-	 * The VPC ID in which to create the Simple AD directory.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {DirectoryServiceSimpleADVpcSettings}
-	 */
-	vpcId: function(value) {
-		return this.set('VpcId', value);
-	}
+/**
+ * The VPC ID in which to create the Simple AD directory.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {DirectoryServiceSimpleADVpcSettings}
+ */
+DirectoryServiceSimpleADVpcSettings.prototype.vpcId = function(value) {
+	return this.set('VpcId', value);
 };
 
 module.exports = DirectoryServiceSimpleADVpcSettings;

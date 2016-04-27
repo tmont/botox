@@ -1,3 +1,9 @@
+var TemplateItemTrait = require('./template-item-trait');
+
+/**
+ * @implements TemplateItemTrait
+ * @constructor
+ */
 function PropertyType() {
 	Object.defineProperty(this, 'data', {
 		value: {}
@@ -12,11 +18,9 @@ PropertyType.prototype = {
 
 	toJSON: function() {
 		return this.data;
-	},
-
-	toString: function() {
-		return JSON.stringify(this, null, '  ');
 	}
 };
+
+Object.assign(PropertyType.prototype, TemplateItemTrait.prototype);
 
 module.exports = PropertyType;

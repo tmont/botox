@@ -9,33 +9,30 @@ function LambdaFunctionVPCConfig() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(LambdaFunctionVPCConfig, PropertyType);
+LambdaFunctionVPCConfig.prototype = Object.create(PropertyType.prototype);
 
-LambdaFunctionVPCConfig.prototype = {
-	
-	/**
-	 * A list of one or more security groups IDs in the VPC that includes the resources to which your Lambda function requires access.
-	 *
-	 * Required: true
-	 *
-	 * @param {string[]} value
-	 * @return {LambdaFunctionVPCConfig}
-	 */
-	securityGroupIds: function(value) {
-		return this.set('SecurityGroupIds', value);
-	},
+/**
+ * A list of one or more security groups IDs in the VPC that includes the resources to which your Lambda function requires access.
+ *
+ * Required: true
+ *
+ * @param {string[]} value
+ * @return {LambdaFunctionVPCConfig}
+ */
+LambdaFunctionVPCConfig.prototype.securityGroupIds = function(value) {
+	return this.set('SecurityGroupIds', value);
+};
 
-	/**
-	 * A list of one or more subnet IDs in the VPC that includes the resources to which your Lambda function requires access.
-	 *
-	 * Required: true
-	 *
-	 * @param {string[]} value
-	 * @return {LambdaFunctionVPCConfig}
-	 */
-	subnetIds: function(value) {
-		return this.set('SubnetIds', value);
-	}
+/**
+ * A list of one or more subnet IDs in the VPC that includes the resources to which your Lambda function requires access.
+ *
+ * Required: true
+ *
+ * @param {string[]} value
+ * @return {LambdaFunctionVPCConfig}
+ */
+LambdaFunctionVPCConfig.prototype.subnetIds = function(value) {
+	return this.set('SubnetIds', value);
 };
 
 module.exports = LambdaFunctionVPCConfig;

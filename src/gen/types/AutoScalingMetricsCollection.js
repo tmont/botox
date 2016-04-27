@@ -9,33 +9,30 @@ function AutoScalingMetricsCollection() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(AutoScalingMetricsCollection, PropertyType);
+AutoScalingMetricsCollection.prototype = Object.create(PropertyType.prototype);
 
-AutoScalingMetricsCollection.prototype = {
-	
-	/**
-	 * The frequency at which Auto Scaling sends aggregated data to CloudWatch. For example, you can specify 1Minute to send aggregated data to CloudWatch every minute.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {AutoScalingMetricsCollection}
-	 */
-	granularity: function(value) {
-		return this.set('Granularity', value);
-	},
+/**
+ * The frequency at which Auto Scaling sends aggregated data to CloudWatch. For example, you can specify 1Minute to send aggregated data to CloudWatch every minute.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {AutoScalingMetricsCollection}
+ */
+AutoScalingMetricsCollection.prototype.granularity = function(value) {
+	return this.set('Granularity', value);
+};
 
-	/**
-	 * The list of metrics to collect. If you don't specify any metrics, all metrics are enabled.
-	 *
-	 * Required: false
-	 *
-	 * @param {string[]} value
-	 * @return {AutoScalingMetricsCollection}
-	 */
-	metrics: function(value) {
-		return this.set('Metrics', value);
-	}
+/**
+ * The list of metrics to collect. If you don't specify any metrics, all metrics are enabled.
+ *
+ * Required: false
+ *
+ * @param {string[]} value
+ * @return {AutoScalingMetricsCollection}
+ */
+AutoScalingMetricsCollection.prototype.metrics = function(value) {
+	return this.set('Metrics', value);
 };
 
 module.exports = AutoScalingMetricsCollection;

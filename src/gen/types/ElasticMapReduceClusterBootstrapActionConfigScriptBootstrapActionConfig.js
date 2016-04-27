@@ -9,33 +9,30 @@ function ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig, PropertyType);
+ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig.prototype = Object.create(PropertyType.prototype);
 
-ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig.prototype = {
-	
-	/**
-	 * A list of command line arguments to pass to the bootstrap action script.
-	 *
-	 * Required: false
-	 *
-	 * @param {string[]} value
-	 * @return {ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig}
-	 */
-	args: function(value) {
-		return this.set('Args', value);
-	},
+/**
+ * A list of command line arguments to pass to the bootstrap action script.
+ *
+ * Required: false
+ *
+ * @param {string[]} value
+ * @return {ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig}
+ */
+ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig.prototype.args = function(value) {
+	return this.set('Args', value);
+};
 
-	/**
-	 * The location of the script that Amazon EMR runs during a bootstrap action. Specify a location in an S3 bucket or your local file system.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig}
-	 */
-	path: function(value) {
-		return this.set('Path', value);
-	}
+/**
+ * The location of the script that Amazon EMR runs during a bootstrap action. Specify a location in an S3 bucket or your local file system.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig}
+ */
+ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig.prototype.path = function(value) {
+	return this.set('Path', value);
 };
 
 module.exports = ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig;

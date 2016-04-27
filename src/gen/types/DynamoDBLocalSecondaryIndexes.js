@@ -9,45 +9,42 @@ function DynamoDBLocalSecondaryIndexes() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(DynamoDBLocalSecondaryIndexes, PropertyType);
+DynamoDBLocalSecondaryIndexes.prototype = Object.create(PropertyType.prototype);
 
-DynamoDBLocalSecondaryIndexes.prototype = {
-	
-	/**
-	 * The name of the local secondary index. The index name can be 3 – 255 characters long and have no character restrictions.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {DynamoDBLocalSecondaryIndexes}
-	 */
-	indexName: function(value) {
-		return this.set('IndexName', value);
-	},
+/**
+ * The name of the local secondary index. The index name can be 3 – 255 characters long and have no character restrictions.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {DynamoDBLocalSecondaryIndexes}
+ */
+DynamoDBLocalSecondaryIndexes.prototype.indexName = function(value) {
+	return this.set('IndexName', value);
+};
 
-	/**
-	 * The complete index key schema for the local secondary index, which consists of one or more pairs of attribute names and key types. For local secondary indexes, the hash key must be the same as that of the source table.
-	 *
-	 * Required: true
-	 *
-	 * @param {DynamoDBKeySchema} value
-	 * @return {DynamoDBLocalSecondaryIndexes}
-	 */
-	keySchema: function(value) {
-		return this.set('KeySchema', value);
-	},
+/**
+ * The complete index key schema for the local secondary index, which consists of one or more pairs of attribute names and key types. For local secondary indexes, the hash key must be the same as that of the source table.
+ *
+ * Required: true
+ *
+ * @param {DynamoDBKeySchema} value
+ * @return {DynamoDBLocalSecondaryIndexes}
+ */
+DynamoDBLocalSecondaryIndexes.prototype.keySchema = function(value) {
+	return this.set('KeySchema', value);
+};
 
-	/**
-	 * Attributes that are copied (projected) from the source table into the index. These attributes are additions to the primary key attributes and index key attributes, which are automatically projected.
-	 *
-	 * Required: true
-	 *
-	 * @param {DynamoDBProjectionObject} value
-	 * @return {DynamoDBLocalSecondaryIndexes}
-	 */
-	projection: function(value) {
-		return this.set('Projection', value);
-	}
+/**
+ * Attributes that are copied (projected) from the source table into the index. These attributes are additions to the primary key attributes and index key attributes, which are automatically projected.
+ *
+ * Required: true
+ *
+ * @param {DynamoDBProjectionObject} value
+ * @return {DynamoDBLocalSecondaryIndexes}
+ */
+DynamoDBLocalSecondaryIndexes.prototype.projection = function(value) {
+	return this.set('Projection', value);
 };
 
 module.exports = DynamoDBLocalSecondaryIndexes;

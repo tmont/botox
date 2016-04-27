@@ -9,10 +9,6 @@ function EC2ICMPPropertyType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(EC2ICMPPropertyType, PropertyType);
-
-EC2ICMPPropertyType.prototype = {
-	
-};
+EC2ICMPPropertyType.prototype = Object.create(PropertyType.prototype);
 
 module.exports = EC2ICMPPropertyType;

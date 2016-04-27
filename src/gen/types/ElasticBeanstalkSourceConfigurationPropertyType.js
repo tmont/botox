@@ -9,33 +9,30 @@ function ElasticBeanstalkSourceConfigurationPropertyType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticBeanstalkSourceConfigurationPropertyType, PropertyType);
+ElasticBeanstalkSourceConfigurationPropertyType.prototype = Object.create(PropertyType.prototype);
 
-ElasticBeanstalkSourceConfigurationPropertyType.prototype = {
-	
-	/**
-	 * The name of the Elastic Beanstalk application that contains the configuration template that you want to use.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ElasticBeanstalkSourceConfigurationPropertyType}
-	 */
-	applicationName: function(value) {
-		return this.set('ApplicationName', value);
-	},
+/**
+ * The name of the Elastic Beanstalk application that contains the configuration template that you want to use.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ElasticBeanstalkSourceConfigurationPropertyType}
+ */
+ElasticBeanstalkSourceConfigurationPropertyType.prototype.applicationName = function(value) {
+	return this.set('ApplicationName', value);
+};
 
-	/**
-	 * The name of the configuration template.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ElasticBeanstalkSourceConfigurationPropertyType}
-	 */
-	templateName: function(value) {
-		return this.set('TemplateName', value);
-	}
+/**
+ * The name of the configuration template.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ElasticBeanstalkSourceConfigurationPropertyType}
+ */
+ElasticBeanstalkSourceConfigurationPropertyType.prototype.templateName = function(value) {
+	return this.set('TemplateName', value);
 };
 
 module.exports = ElasticBeanstalkSourceConfigurationPropertyType;

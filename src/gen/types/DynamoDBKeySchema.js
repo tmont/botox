@@ -9,33 +9,30 @@ function DynamoDBKeySchema() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(DynamoDBKeySchema, PropertyType);
+DynamoDBKeySchema.prototype = Object.create(PropertyType.prototype);
 
-DynamoDBKeySchema.prototype = {
-	
-	/**
-	 * The attribute name that is used as the primary key for this table. Primary key element names can be 1 – 255 characters long and have no character restrictions.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {DynamoDBKeySchema}
-	 */
-	attributeName: function(value) {
-		return this.set('AttributeName', value);
-	},
+/**
+ * The attribute name that is used as the primary key for this table. Primary key element names can be 1 – 255 characters long and have no character restrictions.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {DynamoDBKeySchema}
+ */
+DynamoDBKeySchema.prototype.attributeName = function(value) {
+	return this.set('AttributeName', value);
+};
 
-	/**
-	 * Represents the attribute data, consisting of the data type and the attribute value itself. You can specify HASH or RANGE.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {DynamoDBKeySchema}
-	 */
-	keyType: function(value) {
-		return this.set('KeyType', value);
-	}
+/**
+ * Represents the attribute data, consisting of the data type and the attribute value itself. You can specify HASH or RANGE.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {DynamoDBKeySchema}
+ */
+DynamoDBKeySchema.prototype.keyType = function(value) {
+	return this.set('KeyType', value);
 };
 
 module.exports = DynamoDBKeySchema;

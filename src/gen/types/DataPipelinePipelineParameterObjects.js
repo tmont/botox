@@ -9,33 +9,30 @@ function DataPipelinePipelineParameterObjects() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(DataPipelinePipelineParameterObjects, PropertyType);
+DataPipelinePipelineParameterObjects.prototype = Object.create(PropertyType.prototype);
 
-DataPipelinePipelineParameterObjects.prototype = {
-	
-	/**
-	 * Key-value pairs that define the attributes of the parameter object.
-	 *
-	 * Required: true
-	 *
-	 * @param {DataPipelineParameterObjectsAttributes} value
-	 * @return {DataPipelinePipelineParameterObjects}
-	 */
-	attributes: function(value) {
-		return this.set('Attributes', value);
-	},
+/**
+ * Key-value pairs that define the attributes of the parameter object.
+ *
+ * Required: true
+ *
+ * @param {DataPipelineParameterObjectsAttributes} value
+ * @return {DataPipelinePipelineParameterObjects}
+ */
+DataPipelinePipelineParameterObjects.prototype.attributes = function(value) {
+	return this.set('Attributes', value);
+};
 
-	/**
-	 * The identifier of the parameter object.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {DataPipelinePipelineParameterObjects}
-	 */
-	id: function(value) {
-		return this.set('Id', value);
-	}
+/**
+ * The identifier of the parameter object.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {DataPipelinePipelineParameterObjects}
+ */
+DataPipelinePipelineParameterObjects.prototype.id = function(value) {
+	return this.set('Id', value);
 };
 
 module.exports = DataPipelinePipelineParameterObjects;

@@ -9,21 +9,18 @@ function S3LifecycleConfiguration() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(S3LifecycleConfiguration, PropertyType);
+S3LifecycleConfiguration.prototype = Object.create(PropertyType.prototype);
 
-S3LifecycleConfiguration.prototype = {
-	
-	/**
-	 * A lifecycle rule for individual objects in an S3 bucket.
-	 *
-	 * Required: true
-	 *
-	 * @param {S3LifecycleRule} value
-	 * @return {S3LifecycleConfiguration}
-	 */
-	rules: function(value) {
-		return this.set('Rules', value);
-	}
+/**
+ * A lifecycle rule for individual objects in an S3 bucket.
+ *
+ * Required: true
+ *
+ * @param {S3LifecycleRule} value
+ * @return {S3LifecycleConfiguration}
+ */
+S3LifecycleConfiguration.prototype.rules = function(value) {
+	return this.set('Rules', value);
 };
 
 module.exports = S3LifecycleConfiguration;

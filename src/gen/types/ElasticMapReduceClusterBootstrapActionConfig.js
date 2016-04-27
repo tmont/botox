@@ -9,33 +9,30 @@ function ElasticMapReduceClusterBootstrapActionConfig() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticMapReduceClusterBootstrapActionConfig, PropertyType);
+ElasticMapReduceClusterBootstrapActionConfig.prototype = Object.create(PropertyType.prototype);
 
-ElasticMapReduceClusterBootstrapActionConfig.prototype = {
-	
-	/**
-	 * The name of the bootstrap action to add to your cluster.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ElasticMapReduceClusterBootstrapActionConfig}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * The name of the bootstrap action to add to your cluster.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ElasticMapReduceClusterBootstrapActionConfig}
+ */
+ElasticMapReduceClusterBootstrapActionConfig.prototype.name = function(value) {
+	return this.set('Name', value);
+};
 
-	/**
-	 * The script that the bootstrap action runs.
-	 *
-	 * Required: true
-	 *
-	 * @param {ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig} value
-	 * @return {ElasticMapReduceClusterBootstrapActionConfig}
-	 */
-	scriptBootstrapAction: function(value) {
-		return this.set('ScriptBootstrapAction', value);
-	}
+/**
+ * The script that the bootstrap action runs.
+ *
+ * Required: true
+ *
+ * @param {ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig} value
+ * @return {ElasticMapReduceClusterBootstrapActionConfig}
+ */
+ElasticMapReduceClusterBootstrapActionConfig.prototype.scriptBootstrapAction = function(value) {
+	return this.set('ScriptBootstrapAction', value);
 };
 
 module.exports = ElasticMapReduceClusterBootstrapActionConfig;

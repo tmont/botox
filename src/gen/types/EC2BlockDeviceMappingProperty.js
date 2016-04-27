@@ -9,57 +9,54 @@ function EC2BlockDeviceMappingProperty() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(EC2BlockDeviceMappingProperty, PropertyType);
+EC2BlockDeviceMappingProperty.prototype = Object.create(PropertyType.prototype);
 
-EC2BlockDeviceMappingProperty.prototype = {
-	
-	/**
-	 * The name of the device within Amazon EC2.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {EC2BlockDeviceMappingProperty}
-	 */
-	deviceName: function(value) {
-		return this.set('DeviceName', value);
-	},
+/**
+ * The name of the device within Amazon EC2.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {EC2BlockDeviceMappingProperty}
+ */
+EC2BlockDeviceMappingProperty.prototype.deviceName = function(value) {
+	return this.set('DeviceName', value);
+};
 
-	/**
-	 * Required: Conditional You can specify either VirtualName or Ebs, but not both.
-	 *
-	 * Required: false
-	 *
-	 * @param {ElasticBlockStoreBlockDeviceProperty} value
-	 * @return {EC2BlockDeviceMappingProperty}
-	 */
-	ebs: function(value) {
-		return this.set('Ebs', value);
-	},
+/**
+ * Required: Conditional You can specify either VirtualName or Ebs, but not both.
+ *
+ * Required: false
+ *
+ * @param {ElasticBlockStoreBlockDeviceProperty} value
+ * @return {EC2BlockDeviceMappingProperty}
+ */
+EC2BlockDeviceMappingProperty.prototype.ebs = function(value) {
+	return this.set('Ebs', value);
+};
 
-	/**
-	 * This property can be used to unmap a defined device.
-	 *
-	 * Required: false
-	 *
-	 * @param {Object} value
-	 * @return {EC2BlockDeviceMappingProperty}
-	 */
-	noDevice: function(value) {
-		return this.set('NoDevice', value);
-	},
+/**
+ * This property can be used to unmap a defined device.
+ *
+ * Required: false
+ *
+ * @param {Object} value
+ * @return {EC2BlockDeviceMappingProperty}
+ */
+EC2BlockDeviceMappingProperty.prototype.noDevice = function(value) {
+	return this.set('NoDevice', value);
+};
 
-	/**
-	 * The name of the virtual device. The name must be in the form ephemeralX where X is a number starting from zero (0); for example, ephemeral0.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {EC2BlockDeviceMappingProperty}
-	 */
-	virtualName: function(value) {
-		return this.set('VirtualName', value);
-	}
+/**
+ * The name of the virtual device. The name must be in the form ephemeralX where X is a number starting from zero (0); for example, ephemeral0.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {EC2BlockDeviceMappingProperty}
+ */
+EC2BlockDeviceMappingProperty.prototype.virtualName = function(value) {
+	return this.set('VirtualName', value);
 };
 
 module.exports = EC2BlockDeviceMappingProperty;

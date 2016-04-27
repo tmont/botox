@@ -9,33 +9,30 @@ function ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificati
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses, PropertyType);
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses.prototype = Object.create(PropertyType.prototype);
 
-ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses.prototype = {
-	
-	/**
-	 * Indicates whether the private IP address is the primary private IP address. You can designate only one IP address as primary.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses}
-	 */
-	primary: function(value) {
-		return this.set('Primary', value);
-	},
+/**
+ * Indicates whether the private IP address is the primary private IP address. You can designate only one IP address as primary.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses.prototype.primary = function(value) {
+	return this.set('Primary', value);
+};
 
-	/**
-	 * The private IP address.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses}
-	 */
-	privateIpAddress: function(value) {
-		return this.set('PrivateIpAddress', value);
-	}
+/**
+ * The private IP address.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses.prototype.privateIpAddress = function(value) {
+	return this.set('PrivateIpAddress', value);
 };
 
 module.exports = ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses;

@@ -9,45 +9,42 @@ function DataPipelinePipelineObjects() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(DataPipelinePipelineObjects, PropertyType);
+DataPipelinePipelineObjects.prototype = Object.create(PropertyType.prototype);
 
-DataPipelinePipelineObjects.prototype = {
-	
-	/**
-	 * Key-value pairs that define the properties of the object.
-	 *
-	 * Required: true
-	 *
-	 * @param {DataPipelineDataPipelineObjectFields} value
-	 * @return {DataPipelinePipelineObjects}
-	 */
-	fields: function(value) {
-		return this.set('Fields', value);
-	},
+/**
+ * Key-value pairs that define the properties of the object.
+ *
+ * Required: true
+ *
+ * @param {DataPipelineDataPipelineObjectFields} value
+ * @return {DataPipelinePipelineObjects}
+ */
+DataPipelinePipelineObjects.prototype.fields = function(value) {
+	return this.set('Fields', value);
+};
 
-	/**
-	 * Identifier of the object.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {DataPipelinePipelineObjects}
-	 */
-	id: function(value) {
-		return this.set('Id', value);
-	},
+/**
+ * Identifier of the object.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {DataPipelinePipelineObjects}
+ */
+DataPipelinePipelineObjects.prototype.id = function(value) {
+	return this.set('Id', value);
+};
 
-	/**
-	 * Name of the object.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {DataPipelinePipelineObjects}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	}
+/**
+ * Name of the object.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {DataPipelinePipelineObjects}
+ */
+DataPipelinePipelineObjects.prototype.name = function(value) {
+	return this.set('Name', value);
 };
 
 module.exports = DataPipelinePipelineObjects;

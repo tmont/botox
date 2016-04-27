@@ -9,33 +9,30 @@ function S3LifecycleRuleNoncurrentVersionTransition() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(S3LifecycleRuleNoncurrentVersionTransition, PropertyType);
+S3LifecycleRuleNoncurrentVersionTransition.prototype = Object.create(PropertyType.prototype);
 
-S3LifecycleRuleNoncurrentVersionTransition.prototype = {
-	
-	/**
-	 * The storage class to which you want the object to transition, such as GLACIER. For valid values, see the StorageClass request element of the PUT Bucket lifecycle action in the Amazon Simple Storage Service API Reference.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {S3LifecycleRuleNoncurrentVersionTransition}
-	 */
-	storageClass: function(value) {
-		return this.set('StorageClass', value);
-	},
+/**
+ * The storage class to which you want the object to transition, such as GLACIER. For valid values, see the StorageClass request element of the PUT Bucket lifecycle action in the Amazon Simple Storage Service API Reference.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {S3LifecycleRuleNoncurrentVersionTransition}
+ */
+S3LifecycleRuleNoncurrentVersionTransition.prototype.storageClass = function(value) {
+	return this.set('StorageClass', value);
+};
 
-	/**
-	 * The number of days between the time that a new version of the object is uploaded to the bucket and when old versions of the object are transitioned to the specified storage class.
-	 *
-	 * Required: true
-	 *
-	 * @param {Number} value
-	 * @return {S3LifecycleRuleNoncurrentVersionTransition}
-	 */
-	transitionInDays: function(value) {
-		return this.set('TransitionInDays', value);
-	}
+/**
+ * The number of days between the time that a new version of the object is uploaded to the bucket and when old versions of the object are transitioned to the specified storage class.
+ *
+ * Required: true
+ *
+ * @param {Number} value
+ * @return {S3LifecycleRuleNoncurrentVersionTransition}
+ */
+S3LifecycleRuleNoncurrentVersionTransition.prototype.transitionInDays = function(value) {
+	return this.set('TransitionInDays', value);
 };
 
 module.exports = S3LifecycleRuleNoncurrentVersionTransition;

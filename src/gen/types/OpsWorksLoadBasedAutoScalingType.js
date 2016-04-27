@@ -9,45 +9,42 @@ function OpsWorksLoadBasedAutoScalingType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(OpsWorksLoadBasedAutoScalingType, PropertyType);
+OpsWorksLoadBasedAutoScalingType.prototype = Object.create(PropertyType.prototype);
 
-OpsWorksLoadBasedAutoScalingType.prototype = {
-	
-	/**
-	 * The threshold below which the instances are scaled down (stopped). If the load falls below this threshold for a specified amount of time, AWS OpsWorks stops a specified number of instances.
-	 *
-	 * Required: false
-	 *
-	 * @param {OpsWorksAutoScalingThresholdsType} value
-	 * @return {OpsWorksLoadBasedAutoScalingType}
-	 */
-	downScaling: function(value) {
-		return this.set('DownScaling', value);
-	},
+/**
+ * The threshold below which the instances are scaled down (stopped). If the load falls below this threshold for a specified amount of time, AWS OpsWorks stops a specified number of instances.
+ *
+ * Required: false
+ *
+ * @param {OpsWorksAutoScalingThresholdsType} value
+ * @return {OpsWorksLoadBasedAutoScalingType}
+ */
+OpsWorksLoadBasedAutoScalingType.prototype.downScaling = function(value) {
+	return this.set('DownScaling', value);
+};
 
-	/**
-	 * Whether to enable automatic load-based scaling for the layer.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {OpsWorksLoadBasedAutoScalingType}
-	 */
-	enable: function(value) {
-		return this.set('Enable', value);
-	},
+/**
+ * Whether to enable automatic load-based scaling for the layer.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {OpsWorksLoadBasedAutoScalingType}
+ */
+OpsWorksLoadBasedAutoScalingType.prototype.enable = function(value) {
+	return this.set('Enable', value);
+};
 
-	/**
-	 * The threshold above which the instances are scaled up (added). If the load exceeds this thresholds for a specified amount of time, AWS OpsWorks starts a specified number of instances.
-	 *
-	 * Required: false
-	 *
-	 * @param {OpsWorksAutoScalingThresholdsType} value
-	 * @return {OpsWorksLoadBasedAutoScalingType}
-	 */
-	upScaling: function(value) {
-		return this.set('UpScaling', value);
-	}
+/**
+ * The threshold above which the instances are scaled up (added). If the load exceeds this thresholds for a specified amount of time, AWS OpsWorks starts a specified number of instances.
+ *
+ * Required: false
+ *
+ * @param {OpsWorksAutoScalingThresholdsType} value
+ * @return {OpsWorksLoadBasedAutoScalingType}
+ */
+OpsWorksLoadBasedAutoScalingType.prototype.upScaling = function(value) {
+	return this.set('UpScaling', value);
 };
 
 module.exports = OpsWorksLoadBasedAutoScalingType;

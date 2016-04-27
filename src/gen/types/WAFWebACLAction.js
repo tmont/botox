@@ -9,21 +9,18 @@ function WAFWebACLAction() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(WAFWebACLAction, PropertyType);
+WAFWebACLAction.prototype = Object.create(PropertyType.prototype);
 
-WAFWebACLAction.prototype = {
-	
-	/**
-	 * For actions that are associated with a rule, the action that AWS WAF takes when a web request matches all conditions in a rule.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {WAFWebACLAction}
-	 */
-	type: function(value) {
-		return this.set('Type', value);
-	}
+/**
+ * For actions that are associated with a rule, the action that AWS WAF takes when a web request matches all conditions in a rule.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {WAFWebACLAction}
+ */
+WAFWebACLAction.prototype.type = function(value) {
+	return this.set('Type', value);
 };
 
 module.exports = WAFWebACLAction;

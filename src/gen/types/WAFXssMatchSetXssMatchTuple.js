@@ -9,33 +9,30 @@ function WAFXssMatchSetXssMatchTuple() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(WAFXssMatchSetXssMatchTuple, PropertyType);
+WAFXssMatchSetXssMatchTuple.prototype = Object.create(PropertyType.prototype);
 
-WAFXssMatchSetXssMatchTuple.prototype = {
-	
-	/**
-	 * The part of a web request that you want AWS WAF to search, such as a specific header or a query string.
-	 *
-	 * Required: true
-	 *
-	 * @param {WAFXssMatchSetXssMatchTupleFieldToMatch} value
-	 * @return {WAFXssMatchSetXssMatchTuple}
-	 */
-	fieldToMatch: function(value) {
-		return this.set('FieldToMatch', value);
-	},
+/**
+ * The part of a web request that you want AWS WAF to search, such as a specific header or a query string.
+ *
+ * Required: true
+ *
+ * @param {WAFXssMatchSetXssMatchTupleFieldToMatch} value
+ * @return {WAFXssMatchSetXssMatchTuple}
+ */
+WAFXssMatchSetXssMatchTuple.prototype.fieldToMatch = function(value) {
+	return this.set('FieldToMatch', value);
+};
 
-	/**
-	 * Specifies how AWS WAF processes the FieldToMatch property before inspecting a request for a match. Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF. If you specify a transformation, AWS WAF transforms theFieldToMatch parameter before inspecting a web request for a match.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {WAFXssMatchSetXssMatchTuple}
-	 */
-	textTransformation: function(value) {
-		return this.set('TextTransformation', value);
-	}
+/**
+ * Specifies how AWS WAF processes the FieldToMatch property before inspecting a request for a match. Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF. If you specify a transformation, AWS WAF transforms theFieldToMatch parameter before inspecting a web request for a match.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {WAFXssMatchSetXssMatchTuple}
+ */
+WAFXssMatchSetXssMatchTuple.prototype.textTransformation = function(value) {
+	return this.set('TextTransformation', value);
 };
 
 module.exports = WAFXssMatchSetXssMatchTuple;

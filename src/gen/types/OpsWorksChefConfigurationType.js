@@ -9,33 +9,30 @@ function OpsWorksChefConfigurationType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(OpsWorksChefConfigurationType, PropertyType);
+OpsWorksChefConfigurationType.prototype = Object.create(PropertyType.prototype);
 
-OpsWorksChefConfigurationType.prototype = {
-	
-	/**
-	 * The Berkshelf version.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksChefConfigurationType}
-	 */
-	berkshelfVersion: function(value) {
-		return this.set('BerkshelfVersion', value);
-	},
+/**
+ * The Berkshelf version.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {OpsWorksChefConfigurationType}
+ */
+OpsWorksChefConfigurationType.prototype.berkshelfVersion = function(value) {
+	return this.set('BerkshelfVersion', value);
+};
 
-	/**
-	 * Whether to enable Berkshelf.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {OpsWorksChefConfigurationType}
-	 */
-	manageBerkshelf: function(value) {
-		return this.set('ManageBerkshelf', value);
-	}
+/**
+ * Whether to enable Berkshelf.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {OpsWorksChefConfigurationType}
+ */
+OpsWorksChefConfigurationType.prototype.manageBerkshelf = function(value) {
+	return this.set('ManageBerkshelf', value);
 };
 
 module.exports = OpsWorksChefConfigurationType;

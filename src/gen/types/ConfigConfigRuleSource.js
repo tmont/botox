@@ -9,45 +9,42 @@ function ConfigConfigRuleSource() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ConfigConfigRuleSource, PropertyType);
+ConfigConfigRuleSource.prototype = Object.create(PropertyType.prototype);
 
-ConfigConfigRuleSource.prototype = {
-	
-	/**
-	 * Indicates who owns and manages the AWS Config rule. For valid values, see the Source data type in the AWS Config API Reference.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ConfigConfigRuleSource}
-	 */
-	owner: function(value) {
-		return this.set('Owner', value);
-	},
+/**
+ * Indicates who owns and manages the AWS Config rule. For valid values, see the Source data type in the AWS Config API Reference.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ConfigConfigRuleSource}
+ */
+ConfigConfigRuleSource.prototype.owner = function(value) {
+	return this.set('Owner', value);
+};
 
-	/**
-	 * Provides the source and type of event that triggers AWS Config to evaluate your AWS resources.
-	 *
-	 * Required: false
-	 *
-	 * @param {ConfigConfigRuleSourceSourceDetails[]} value
-	 * @return {ConfigConfigRuleSource}
-	 */
-	sourceDetails: function(value) {
-		return this.set('SourceDetails', value);
-	},
+/**
+ * Provides the source and type of event that triggers AWS Config to evaluate your AWS resources.
+ *
+ * Required: false
+ *
+ * @param {ConfigConfigRuleSourceSourceDetails[]} value
+ * @return {ConfigConfigRuleSource}
+ */
+ConfigConfigRuleSource.prototype.sourceDetails = function(value) {
+	return this.set('SourceDetails', value);
+};
 
-	/**
-	 * For AWS managed rules, the identifier of the rule. For a list of identifiers, see AWS Managed Rules in the AWS Config Developer Guide.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {ConfigConfigRuleSource}
-	 */
-	sourceIdentifier: function(value) {
-		return this.set('SourceIdentifier', value);
-	}
+/**
+ * For AWS managed rules, the identifier of the rule. For a list of identifiers, see AWS Managed Rules in the AWS Config Developer Guide.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {ConfigConfigRuleSource}
+ */
+ConfigConfigRuleSource.prototype.sourceIdentifier = function(value) {
+	return this.set('SourceIdentifier', value);
 };
 
 module.exports = ConfigConfigRuleSource;

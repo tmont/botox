@@ -9,117 +9,114 @@ function ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificati
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces, PropertyType);
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype = Object.create(PropertyType.prototype);
 
-ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype = {
-	
-	/**
-	 * Indicates whether monitoring is enabled for the instances.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
-	 */
-	associatePublicIpAddress: function(value) {
-		return this.set('AssociatePublicIpAddress', value);
-	},
+/**
+ * Indicates whether monitoring is enabled for the instances.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.associatePublicIpAddress = function(value) {
+	return this.set('AssociatePublicIpAddress', value);
+};
 
-	/**
-	 * Indicates whether to delete the network interface when the instance terminates.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
-	 */
-	deleteOnTermination: function(value) {
-		return this.set('DeleteOnTermination', value);
-	},
+/**
+ * Indicates whether to delete the network interface when the instance terminates.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.deleteOnTermination = function(value) {
+	return this.set('DeleteOnTermination', value);
+};
 
-	/**
-	 * The description of this network interface.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
-	 */
-	description: function(value) {
-		return this.set('Description', value);
-	},
+/**
+ * The description of this network interface.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.description = function(value) {
+	return this.set('Description', value);
+};
 
-	/**
-	 * The network interface's position in the attachment order.
-	 *
-	 * Required: true
-	 *
-	 * @param {Number} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
-	 */
-	deviceIndex: function(value) {
-		return this.set('DeviceIndex', value);
-	},
+/**
+ * The network interface's position in the attachment order.
+ *
+ * Required: true
+ *
+ * @param {Number} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.deviceIndex = function(value) {
+	return this.set('DeviceIndex', value);
+};
 
-	/**
-	 * A list of security group IDs to associate with this network interface.
-	 *
-	 * Required: false
-	 *
-	 * @param {string[]} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
-	 */
-	groups: function(value) {
-		return this.set('Groups', value);
-	},
+/**
+ * A list of security group IDs to associate with this network interface.
+ *
+ * Required: false
+ *
+ * @param {string[]} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.groups = function(value) {
+	return this.set('Groups', value);
+};
 
-	/**
-	 * A network interface ID.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
-	 */
-	networkInterfaceId: function(value) {
-		return this.set('NetworkInterfaceId', value);
-	},
+/**
+ * A network interface ID.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.networkInterfaceId = function(value) {
+	return this.set('NetworkInterfaceId', value);
+};
 
-	/**
-	 * One or more private IP addresses to assign to the network interface. You can designate only one private IP address as primary.
-	 *
-	 * Required: false
-	 *
-	 * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses[]} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
-	 */
-	privateIpAddresses: function(value) {
-		return this.set('PrivateIpAddresses', value);
-	},
+/**
+ * One or more private IP addresses to assign to the network interface. You can designate only one private IP address as primary.
+ *
+ * Required: false
+ *
+ * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses[]} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.privateIpAddresses = function(value) {
+	return this.set('PrivateIpAddresses', value);
+};
 
-	/**
-	 * The number of secondary private IP addresses that Amazon Elastic Compute Cloud (Amazon EC2) automatically assigns to the network interface.
-	 *
-	 * Required: false
-	 *
-	 * @param {Number} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
-	 */
-	secondaryPrivateIpAddressCount: function(value) {
-		return this.set('SecondaryPrivateIpAddressCount', value);
-	},
+/**
+ * The number of secondary private IP addresses that Amazon Elastic Compute Cloud (Amazon EC2) automatically assigns to the network interface.
+ *
+ * Required: false
+ *
+ * @param {Number} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.secondaryPrivateIpAddressCount = function(value) {
+	return this.set('SecondaryPrivateIpAddressCount', value);
+};
 
-	/**
-	 * The ID of the subnet to associate with the network interface.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
-	 */
-	subnetId: function(value) {
-		return this.set('SubnetId', value);
-	}
+/**
+ * The ID of the subnet to associate with the network interface.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.subnetId = function(value) {
+	return this.set('SubnetId', value);
 };
 
 module.exports = ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces;

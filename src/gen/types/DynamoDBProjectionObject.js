@@ -9,33 +9,30 @@ function DynamoDBProjectionObject() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(DynamoDBProjectionObject, PropertyType);
+DynamoDBProjectionObject.prototype = Object.create(PropertyType.prototype);
 
-DynamoDBProjectionObject.prototype = {
-	
-	/**
-	 * The non-key attribute names that are projected into the index.
-	 *
-	 * Required: false
-	 *
-	 * @param {string[]} value
-	 * @return {DynamoDBProjectionObject}
-	 */
-	nonKeyAttributes: function(value) {
-		return this.set('NonKeyAttributes', value);
-	},
+/**
+ * The non-key attribute names that are projected into the index.
+ *
+ * Required: false
+ *
+ * @param {string[]} value
+ * @return {DynamoDBProjectionObject}
+ */
+DynamoDBProjectionObject.prototype.nonKeyAttributes = function(value) {
+	return this.set('NonKeyAttributes', value);
+};
 
-	/**
-	 * The set of attributes that are projected into the index:
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {DynamoDBProjectionObject}
-	 */
-	projectionType: function(value) {
-		return this.set('ProjectionType', value);
-	}
+/**
+ * The set of attributes that are projected into the index:
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {DynamoDBProjectionObject}
+ */
+DynamoDBProjectionObject.prototype.projectionType = function(value) {
+	return this.set('ProjectionType', value);
 };
 
 module.exports = DynamoDBProjectionObject;

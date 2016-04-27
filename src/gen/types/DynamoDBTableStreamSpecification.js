@@ -9,21 +9,18 @@ function DynamoDBTableStreamSpecification() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(DynamoDBTableStreamSpecification, PropertyType);
+DynamoDBTableStreamSpecification.prototype = Object.create(PropertyType.prototype);
 
-DynamoDBTableStreamSpecification.prototype = {
-	
-	/**
-	 * Determines the information that the stream captures when an item in the table is modified. For valid values, see StreamSpecification in the Amazon DynamoDB API Reference.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {DynamoDBTableStreamSpecification}
-	 */
-	streamViewType: function(value) {
-		return this.set('StreamViewType', value);
-	}
+/**
+ * Determines the information that the stream captures when an item in the table is modified. For valid values, see StreamSpecification in the Amazon DynamoDB API Reference.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {DynamoDBTableStreamSpecification}
+ */
+DynamoDBTableStreamSpecification.prototype.streamViewType = function(value) {
+	return this.set('StreamViewType', value);
 };
 
 module.exports = DynamoDBTableStreamSpecification;

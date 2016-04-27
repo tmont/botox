@@ -9,33 +9,30 @@ function DynamoDBProvisionedThroughput() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(DynamoDBProvisionedThroughput, PropertyType);
+DynamoDBProvisionedThroughput.prototype = Object.create(PropertyType.prototype);
 
-DynamoDBProvisionedThroughput.prototype = {
-	
-	/**
-	 * Sets the desired minimum number of consistent reads of items (up to 1KB in size) per second for the specified table before Amazon DynamoDB balances the load.
-	 *
-	 * Required: true
-	 *
-	 * @param {Number} value
-	 * @return {DynamoDBProvisionedThroughput}
-	 */
-	readCapacityUnits: function(value) {
-		return this.set('ReadCapacityUnits', value);
-	},
+/**
+ * Sets the desired minimum number of consistent reads of items (up to 1KB in size) per second for the specified table before Amazon DynamoDB balances the load.
+ *
+ * Required: true
+ *
+ * @param {Number} value
+ * @return {DynamoDBProvisionedThroughput}
+ */
+DynamoDBProvisionedThroughput.prototype.readCapacityUnits = function(value) {
+	return this.set('ReadCapacityUnits', value);
+};
 
-	/**
-	 * Sets the desired minimum number of consistent writes of items (up to 1KB in size) per second for the specified table before Amazon DynamoDB balances the load.
-	 *
-	 * Required: true
-	 *
-	 * @param {Number} value
-	 * @return {DynamoDBProvisionedThroughput}
-	 */
-	writeCapacityUnits: function(value) {
-		return this.set('WriteCapacityUnits', value);
-	}
+/**
+ * Sets the desired minimum number of consistent writes of items (up to 1KB in size) per second for the specified table before Amazon DynamoDB balances the load.
+ *
+ * Required: true
+ *
+ * @param {Number} value
+ * @return {DynamoDBProvisionedThroughput}
+ */
+DynamoDBProvisionedThroughput.prototype.writeCapacityUnits = function(value) {
+	return this.set('WriteCapacityUnits', value);
 };
 
 module.exports = DynamoDBProvisionedThroughput;

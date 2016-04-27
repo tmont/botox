@@ -9,33 +9,30 @@ function CodePipelinePipelineDisableInboundStageTransitions() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CodePipelinePipelineDisableInboundStageTransitions, PropertyType);
+CodePipelinePipelineDisableInboundStageTransitions.prototype = Object.create(PropertyType.prototype);
 
-CodePipelinePipelineDisableInboundStageTransitions.prototype = {
-	
-	/**
-	 * An explanation of why the transition between two stages of a pipeline was disabled.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CodePipelinePipelineDisableInboundStageTransitions}
-	 */
-	reason: function(value) {
-		return this.set('Reason', value);
-	},
+/**
+ * An explanation of why the transition between two stages of a pipeline was disabled.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CodePipelinePipelineDisableInboundStageTransitions}
+ */
+CodePipelinePipelineDisableInboundStageTransitions.prototype.reason = function(value) {
+	return this.set('Reason', value);
+};
 
-	/**
-	 * The name of the stage to which transitions are disabled.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CodePipelinePipelineDisableInboundStageTransitions}
-	 */
-	stageName: function(value) {
-		return this.set('StageName', value);
-	}
+/**
+ * The name of the stage to which transitions are disabled.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CodePipelinePipelineDisableInboundStageTransitions}
+ */
+CodePipelinePipelineDisableInboundStageTransitions.prototype.stageName = function(value) {
+	return this.set('StageName', value);
 };
 
 module.exports = CodePipelinePipelineDisableInboundStageTransitions;

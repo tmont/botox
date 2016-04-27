@@ -9,33 +9,30 @@ function WAFSqlInjectionMatchSetSqlInjectionMatchTuples() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(WAFSqlInjectionMatchSetSqlInjectionMatchTuples, PropertyType);
+WAFSqlInjectionMatchSetSqlInjectionMatchTuples.prototype = Object.create(PropertyType.prototype);
 
-WAFSqlInjectionMatchSetSqlInjectionMatchTuples.prototype = {
-	
-	/**
-	 * The part of a web request that you want AWS WAF to search, such as a specific header or a query string.
-	 *
-	 * Required: true
-	 *
-	 * @param {WAFByteMatchSetByteMatchTuplesFieldToMatch} value
-	 * @return {WAFSqlInjectionMatchSetSqlInjectionMatchTuples}
-	 */
-	fieldToMatch: function(value) {
-		return this.set('FieldToMatch', value);
-	},
+/**
+ * The part of a web request that you want AWS WAF to search, such as a specific header or a query string.
+ *
+ * Required: true
+ *
+ * @param {WAFByteMatchSetByteMatchTuplesFieldToMatch} value
+ * @return {WAFSqlInjectionMatchSetSqlInjectionMatchTuples}
+ */
+WAFSqlInjectionMatchSetSqlInjectionMatchTuples.prototype.fieldToMatch = function(value) {
+	return this.set('FieldToMatch', value);
+};
 
-	/**
-	 * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF. If you specify a transformation, AWS WAF transforms the target string value before inspecting a web request for a match. For valid values, see the TextTransformation content for the SqlInjectionMatchTuple data type in the AWS WAF API Reference.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {WAFSqlInjectionMatchSetSqlInjectionMatchTuples}
-	 */
-	textTransformation: function(value) {
-		return this.set('TextTransformation', value);
-	}
+/**
+ * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF. If you specify a transformation, AWS WAF transforms the target string value before inspecting a web request for a match. For valid values, see the TextTransformation content for the SqlInjectionMatchTuple data type in the AWS WAF API Reference.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {WAFSqlInjectionMatchSetSqlInjectionMatchTuples}
+ */
+WAFSqlInjectionMatchSetSqlInjectionMatchTuples.prototype.textTransformation = function(value) {
+	return this.set('TextTransformation', value);
 };
 
 module.exports = WAFSqlInjectionMatchSetSqlInjectionMatchTuples;

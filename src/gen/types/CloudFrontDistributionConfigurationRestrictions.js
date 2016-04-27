@@ -9,21 +9,18 @@ function CloudFrontDistributionConfigurationRestrictions() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CloudFrontDistributionConfigurationRestrictions, PropertyType);
+CloudFrontDistributionConfigurationRestrictions.prototype = Object.create(PropertyType.prototype);
 
-CloudFrontDistributionConfigurationRestrictions.prototype = {
-	
-	/**
-	 * The countries in which viewers are able to access your content.
-	 *
-	 * Required: true
-	 *
-	 * @param {CloudFrontDistributionConfigRestrictionsGeoRestriction} value
-	 * @return {CloudFrontDistributionConfigurationRestrictions}
-	 */
-	geoRestriction: function(value) {
-		return this.set('GeoRestriction', value);
-	}
+/**
+ * The countries in which viewers are able to access your content.
+ *
+ * Required: true
+ *
+ * @param {CloudFrontDistributionConfigRestrictionsGeoRestriction} value
+ * @return {CloudFrontDistributionConfigurationRestrictions}
+ */
+CloudFrontDistributionConfigurationRestrictions.prototype.geoRestriction = function(value) {
+	return this.set('GeoRestriction', value);
 };
 
 module.exports = CloudFrontDistributionConfigurationRestrictions;

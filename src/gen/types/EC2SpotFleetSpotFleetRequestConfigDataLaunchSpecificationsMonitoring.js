@@ -9,21 +9,18 @@ function EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring() 
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring, PropertyType);
+EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring.prototype = Object.create(PropertyType.prototype);
 
-EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring.prototype = {
-	
-	/**
-	 * Indicates whether monitoring is enabled for the instances.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring}
-	 */
-	enabled: function(value) {
-		return this.set('Enabled', value);
-	}
+/**
+ * Indicates whether monitoring is enabled for the instances.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring}
+ */
+EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring.prototype.enabled = function(value) {
+	return this.set('Enabled', value);
 };
 
 module.exports = EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring;

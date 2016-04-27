@@ -9,21 +9,18 @@ function CodePipelinePipelineStagesActionsInputArtifacts() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CodePipelinePipelineStagesActionsInputArtifacts, PropertyType);
+CodePipelinePipelineStagesActionsInputArtifacts.prototype = Object.create(PropertyType.prototype);
 
-CodePipelinePipelineStagesActionsInputArtifacts.prototype = {
-	
-	/**
-	 * The name of the artifact that the AWS CodePipeline action works on, such as My App.The input artifact of an action must match the output artifact from any preceding action.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CodePipelinePipelineStagesActionsInputArtifacts}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	}
+/**
+ * The name of the artifact that the AWS CodePipeline action works on, such as My App.The input artifact of an action must match the output artifact from any preceding action.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CodePipelinePipelineStagesActionsInputArtifacts}
+ */
+CodePipelinePipelineStagesActionsInputArtifacts.prototype.name = function(value) {
+	return this.set('Name', value);
 };
 
 module.exports = CodePipelinePipelineStagesActionsInputArtifacts;

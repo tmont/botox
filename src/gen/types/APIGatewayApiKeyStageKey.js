@@ -9,33 +9,30 @@ function APIGatewayApiKeyStageKey() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(APIGatewayApiKeyStageKey, PropertyType);
+APIGatewayApiKeyStageKey.prototype = Object.create(PropertyType.prototype);
 
-APIGatewayApiKeyStageKey.prototype = {
-	
-	/**
-	 * The ID of a RestApi resource that includes the stage with which you want to associate the API key.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {APIGatewayApiKeyStageKey}
-	 */
-	restApiId: function(value) {
-		return this.set('RestApiId', value);
-	},
+/**
+ * The ID of a RestApi resource that includes the stage with which you want to associate the API key.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {APIGatewayApiKeyStageKey}
+ */
+APIGatewayApiKeyStageKey.prototype.restApiId = function(value) {
+	return this.set('RestApiId', value);
+};
 
-	/**
-	 * The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {APIGatewayApiKeyStageKey}
-	 */
-	stageName: function(value) {
-		return this.set('StageName', value);
-	}
+/**
+ * The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {APIGatewayApiKeyStageKey}
+ */
+APIGatewayApiKeyStageKey.prototype.stageName = function(value) {
+	return this.set('StageName', value);
 };
 
 module.exports = APIGatewayApiKeyStageKey;

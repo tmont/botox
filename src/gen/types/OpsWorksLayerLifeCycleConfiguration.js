@@ -9,21 +9,18 @@ function OpsWorksLayerLifeCycleConfiguration() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(OpsWorksLayerLifeCycleConfiguration, PropertyType);
+OpsWorksLayerLifeCycleConfiguration.prototype = Object.create(PropertyType.prototype);
 
-OpsWorksLayerLifeCycleConfiguration.prototype = {
-	
-	/**
-	 * Specifies the shutdown event configuration for a layer.
-	 *
-	 * Required: false
-	 *
-	 * @param {OpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration} value
-	 * @return {OpsWorksLayerLifeCycleConfiguration}
-	 */
-	shutdownEventConfiguration: function(value) {
-		return this.set('ShutdownEventConfiguration', value);
-	}
+/**
+ * Specifies the shutdown event configuration for a layer.
+ *
+ * Required: false
+ *
+ * @param {OpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration} value
+ * @return {OpsWorksLayerLifeCycleConfiguration}
+ */
+OpsWorksLayerLifeCycleConfiguration.prototype.shutdownEventConfiguration = function(value) {
+	return this.set('ShutdownEventConfiguration', value);
 };
 
 module.exports = OpsWorksLayerLifeCycleConfiguration;

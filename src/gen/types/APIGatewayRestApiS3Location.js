@@ -9,57 +9,54 @@ function APIGatewayRestApiS3Location() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(APIGatewayRestApiS3Location, PropertyType);
+APIGatewayRestApiS3Location.prototype = Object.create(PropertyType.prototype);
 
-APIGatewayRestApiS3Location.prototype = {
-	
-	/**
-	 * The name of the S3 bucket where the Swagger file is stored.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {APIGatewayRestApiS3Location}
-	 */
-	bucket: function(value) {
-		return this.set('Bucket', value);
-	},
+/**
+ * The name of the S3 bucket where the Swagger file is stored.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {APIGatewayRestApiS3Location}
+ */
+APIGatewayRestApiS3Location.prototype.bucket = function(value) {
+	return this.set('Bucket', value);
+};
 
-	/**
-	 * The Amazon S3 ETag (a file checksum) of the Swagger file. If you don't specify a value, API Gateway skips ETag validation of your Swagger file.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {APIGatewayRestApiS3Location}
-	 */
-	eTag: function(value) {
-		return this.set('ETag', value);
-	},
+/**
+ * The Amazon S3 ETag (a file checksum) of the Swagger file. If you don't specify a value, API Gateway skips ETag validation of your Swagger file.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {APIGatewayRestApiS3Location}
+ */
+APIGatewayRestApiS3Location.prototype.eTag = function(value) {
+	return this.set('ETag', value);
+};
 
-	/**
-	 * The file name of the application revision (Amazon S3 object name).
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {APIGatewayRestApiS3Location}
-	 */
-	key: function(value) {
-		return this.set('Key', value);
-	},
+/**
+ * The file name of the application revision (Amazon S3 object name).
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {APIGatewayRestApiS3Location}
+ */
+APIGatewayRestApiS3Location.prototype.key = function(value) {
+	return this.set('Key', value);
+};
 
-	/**
-	 * For versioning-enabled buckets, a specific version of the Swagger file.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {APIGatewayRestApiS3Location}
-	 */
-	version: function(value) {
-		return this.set('Version', value);
-	}
+/**
+ * For versioning-enabled buckets, a specific version of the Swagger file.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {APIGatewayRestApiS3Location}
+ */
+APIGatewayRestApiS3Location.prototype.version = function(value) {
+	return this.set('Version', value);
 };
 
 module.exports = APIGatewayRestApiS3Location;

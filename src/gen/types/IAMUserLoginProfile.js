@@ -9,33 +9,30 @@ function IAMUserLoginProfile() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(IAMUserLoginProfile, PropertyType);
+IAMUserLoginProfile.prototype = Object.create(PropertyType.prototype);
 
-IAMUserLoginProfile.prototype = {
-	
-	/**
-	 * The password for the user.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {IAMUserLoginProfile}
-	 */
-	password: function(value) {
-		return this.set('Password', value);
-	},
+/**
+ * The password for the user.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {IAMUserLoginProfile}
+ */
+IAMUserLoginProfile.prototype.password = function(value) {
+	return this.set('Password', value);
+};
 
-	/**
-	 * Specifies whether the user is required to set a new password the next time the user logs in to the AWS Management Console.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {IAMUserLoginProfile}
-	 */
-	passwordResetRequired: function(value) {
-		return this.set('PasswordResetRequired', value);
-	}
+/**
+ * Specifies whether the user is required to set a new password the next time the user logs in to the AWS Management Console.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {IAMUserLoginProfile}
+ */
+IAMUserLoginProfile.prototype.passwordResetRequired = function(value) {
+	return this.set('PasswordResetRequired', value);
 };
 
 module.exports = IAMUserLoginProfile;

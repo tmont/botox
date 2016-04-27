@@ -9,57 +9,54 @@ function ElasticMapReduceClusterApplication() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticMapReduceClusterApplication, PropertyType);
+ElasticMapReduceClusterApplication.prototype = Object.create(PropertyType.prototype);
 
-ElasticMapReduceClusterApplication.prototype = {
-	
-	/**
-	 * Metadata about third-party applications that third-party vendors use for testing purposes.
-	 *
-	 * Required: false
-	 *
-	 * @param {Object} value
-	 * @return {ElasticMapReduceClusterApplication}
-	 */
-	additionalInfo: function(value) {
-		return this.set('AdditionalInfo', value);
-	},
+/**
+ * Metadata about third-party applications that third-party vendors use for testing purposes.
+ *
+ * Required: false
+ *
+ * @param {Object} value
+ * @return {ElasticMapReduceClusterApplication}
+ */
+ElasticMapReduceClusterApplication.prototype.additionalInfo = function(value) {
+	return this.set('AdditionalInfo', value);
+};
 
-	/**
-	 * Arguments that Amazon EMR passes to the application.
-	 *
-	 * Required: false
-	 *
-	 * @param {string[]} value
-	 * @return {ElasticMapReduceClusterApplication}
-	 */
-	args: function(value) {
-		return this.set('Args', value);
-	},
+/**
+ * Arguments that Amazon EMR passes to the application.
+ *
+ * Required: false
+ *
+ * @param {string[]} value
+ * @return {ElasticMapReduceClusterApplication}
+ */
+ElasticMapReduceClusterApplication.prototype.args = function(value) {
+	return this.set('Args', value);
+};
 
-	/**
-	 * The name of the application to add to your cluster, such as Hadoop or Hive. For valid values, see the Applications parameter in the Amazon Elastic MapReduce API Reference.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {ElasticMapReduceClusterApplication}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * The name of the application to add to your cluster, such as Hadoop or Hive. For valid values, see the Applications parameter in the Amazon Elastic MapReduce API Reference.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {ElasticMapReduceClusterApplication}
+ */
+ElasticMapReduceClusterApplication.prototype.name = function(value) {
+	return this.set('Name', value);
+};
 
-	/**
-	 * The version of the application.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {ElasticMapReduceClusterApplication}
-	 */
-	version: function(value) {
-		return this.set('Version', value);
-	}
+/**
+ * The version of the application.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {ElasticMapReduceClusterApplication}
+ */
+ElasticMapReduceClusterApplication.prototype.version = function(value) {
+	return this.set('Version', value);
 };
 
 module.exports = ElasticMapReduceClusterApplication;

@@ -9,45 +9,42 @@ function CodeDeployDeploymentGroupDeploymentRevision() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CodeDeployDeploymentGroupDeploymentRevision, PropertyType);
+CodeDeployDeploymentGroupDeploymentRevision.prototype = Object.create(PropertyType.prototype);
 
-CodeDeployDeploymentGroupDeploymentRevision.prototype = {
-	
-	/**
-	 * If your application revision is stored in GitHub, information about the location where it is stored.
-	 *
-	 * Required: false
-	 *
-	 * @param {CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation} value
-	 * @return {CodeDeployDeploymentGroupDeploymentRevision}
-	 */
-	gitHubLocation: function(value) {
-		return this.set('GitHubLocation', value);
-	},
+/**
+ * If your application revision is stored in GitHub, information about the location where it is stored.
+ *
+ * Required: false
+ *
+ * @param {CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation} value
+ * @return {CodeDeployDeploymentGroupDeploymentRevision}
+ */
+CodeDeployDeploymentGroupDeploymentRevision.prototype.gitHubLocation = function(value) {
+	return this.set('GitHubLocation', value);
+};
 
-	/**
-	 * The application revision's location, such as in an S3 bucket or GitHub repository. For valid values, see RevisionLocation in the AWS CodeDeploy API Reference.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {CodeDeployDeploymentGroupDeploymentRevision}
-	 */
-	revisionType: function(value) {
-		return this.set('RevisionType', value);
-	},
+/**
+ * The application revision's location, such as in an S3 bucket or GitHub repository. For valid values, see RevisionLocation in the AWS CodeDeploy API Reference.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {CodeDeployDeploymentGroupDeploymentRevision}
+ */
+CodeDeployDeploymentGroupDeploymentRevision.prototype.revisionType = function(value) {
+	return this.set('RevisionType', value);
+};
 
-	/**
-	 * If the application revision is stored in an S3 bucket, information about the location.
-	 *
-	 * Required: false
-	 *
-	 * @param {CodeDeployDeploymentGroupDeploymentRevisionS3Location} value
-	 * @return {CodeDeployDeploymentGroupDeploymentRevision}
-	 */
-	s3Location: function(value) {
-		return this.set('S3Location', value);
-	}
+/**
+ * If the application revision is stored in an S3 bucket, information about the location.
+ *
+ * Required: false
+ *
+ * @param {CodeDeployDeploymentGroupDeploymentRevisionS3Location} value
+ * @return {CodeDeployDeploymentGroupDeploymentRevision}
+ */
+CodeDeployDeploymentGroupDeploymentRevision.prototype.s3Location = function(value) {
+	return this.set('S3Location', value);
 };
 
 module.exports = CodeDeployDeploymentGroupDeploymentRevision;

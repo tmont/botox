@@ -9,81 +9,78 @@ function CloudFormationAutoScalingEBSBlockDevicePropertyType() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CloudFormationAutoScalingEBSBlockDevicePropertyType, PropertyType);
+CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype = Object.create(PropertyType.prototype);
 
-CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype = {
-	
-	/**
-	 * Indicates whether to delete the volume when the instance is terminated. By default, Auto Scaling uses true.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
-	 */
-	deleteOnTermination: function(value) {
-		return this.set('DeleteOnTermination', value);
-	},
+/**
+ * Indicates whether to delete the volume when the instance is terminated. By default, Auto Scaling uses true.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
+ */
+CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.deleteOnTermination = function(value) {
+	return this.set('DeleteOnTermination', value);
+};
 
-	/**
-	 * Indicates whether the volume is encrypted. Encrypted EBS volumes must be attached to instances that support Amazon EBS encryption. Volumes that you create from encrypted snapshots are automatically encrypted. You cannot create an encrypted volume from an unencrypted snapshot or an unencrypted volume from an encrypted snapshot.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
-	 */
-	encrypted: function(value) {
-		return this.set('Encrypted', value);
-	},
+/**
+ * Indicates whether the volume is encrypted. Encrypted EBS volumes must be attached to instances that support Amazon EBS encryption. Volumes that you create from encrypted snapshots are automatically encrypted. You cannot create an encrypted volume from an unencrypted snapshot or an unencrypted volume from an encrypted snapshot.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
+ */
+CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.encrypted = function(value) {
+	return this.set('Encrypted', value);
+};
 
-	/**
-	 * The number of I/O operations per second (IOPS) that the volume supports. The maximum ratio of IOPS to volume size is 30.
-	 *
-	 * Required: false
-	 *
-	 * @param {Number} value
-	 * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
-	 */
-	iops: function(value) {
-		return this.set('Iops', value);
-	},
+/**
+ * The number of I/O operations per second (IOPS) that the volume supports. The maximum ratio of IOPS to volume size is 30.
+ *
+ * Required: false
+ *
+ * @param {Number} value
+ * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
+ */
+CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.iops = function(value) {
+	return this.set('Iops', value);
+};
 
-	/**
-	 * The snapshot ID of the volume to use.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
-	 */
-	snapshotId: function(value) {
-		return this.set('SnapshotId', value);
-	},
+/**
+ * The snapshot ID of the volume to use.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
+ */
+CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.snapshotId = function(value) {
+	return this.set('SnapshotId', value);
+};
 
-	/**
-	 * The volume size, in Gibibytes (GiB). This can be a number from 1 – 1024. If the volume type is EBS optimized, the minimum value is 10. For more information about specifying the volume type, see EbsOptimized in AWS::AutoScaling::LaunchConfiguration.
-	 *
-	 * Required: false
-	 *
-	 * @param {Number} value
-	 * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
-	 */
-	volumeSize: function(value) {
-		return this.set('VolumeSize', value);
-	},
+/**
+ * The volume size, in Gibibytes (GiB). This can be a number from 1 – 1024. If the volume type is EBS optimized, the minimum value is 10. For more information about specifying the volume type, see EbsOptimized in AWS::AutoScaling::LaunchConfiguration.
+ *
+ * Required: false
+ *
+ * @param {Number} value
+ * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
+ */
+CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.volumeSize = function(value) {
+	return this.set('VolumeSize', value);
+};
 
-	/**
-	 * The volume type. By default, Auto Scaling uses the standard volume type. For more information, see Ebs in the Auto Scaling API Reference.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
-	 */
-	volumeType: function(value) {
-		return this.set('VolumeType', value);
-	}
+/**
+ * The volume type. By default, Auto Scaling uses the standard volume type. For more information, see Ebs in the Auto Scaling API Reference.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
+ */
+CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.volumeType = function(value) {
+	return this.set('VolumeType', value);
 };
 
 module.exports = CloudFormationAutoScalingEBSBlockDevicePropertyType;

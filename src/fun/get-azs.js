@@ -4,14 +4,10 @@ var TemplateItemTrait = require('../template-item-trait');
  * Returns an array that lists Availability Zones for a specified region
  * @constructor
  * @implements TemplateItemTrait
- * @param {String|Attribute|Join|Reference} region The name of the region for which you want to get the Availability Zones.
+ * @param {String|Attribute|Join|Reference} [region] The name of the region for which you want to get the Availability Zones.
  */
 function GetAZs(region) {
-	if (!region) {
-		throw new Error('region is required');
-	}
-
-	this.region = region;
+	this.region = region || '';
 }
 
 Object.assign(GetAZs.prototype, TemplateItemTrait.prototype, {

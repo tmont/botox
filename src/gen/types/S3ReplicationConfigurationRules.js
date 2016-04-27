@@ -9,57 +9,54 @@ function S3ReplicationConfigurationRules() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(S3ReplicationConfigurationRules, PropertyType);
+S3ReplicationConfigurationRules.prototype = Object.create(PropertyType.prototype);
 
-S3ReplicationConfigurationRules.prototype = {
-	
-	/**
-	 * Defines the destination where Amazon S3 stores replicated objects.
-	 *
-	 * Required: true
-	 *
-	 * @param {S3ReplicationConfigurationRulesDestination} value
-	 * @return {S3ReplicationConfigurationRules}
-	 */
-	destination: function(value) {
-		return this.set('Destination', value);
-	},
+/**
+ * Defines the destination where Amazon S3 stores replicated objects.
+ *
+ * Required: true
+ *
+ * @param {S3ReplicationConfigurationRulesDestination} value
+ * @return {S3ReplicationConfigurationRules}
+ */
+S3ReplicationConfigurationRules.prototype.destination = function(value) {
+	return this.set('Destination', value);
+};
 
-	/**
-	 * A unique identifier for the rule. If you don't specify a value, AWS CloudFormation generates a random ID.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {S3ReplicationConfigurationRules}
-	 */
-	id: function(value) {
-		return this.set('Id', value);
-	},
+/**
+ * A unique identifier for the rule. If you don't specify a value, AWS CloudFormation generates a random ID.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {S3ReplicationConfigurationRules}
+ */
+S3ReplicationConfigurationRules.prototype.id = function(value) {
+	return this.set('Id', value);
+};
 
-	/**
-	 * An object prefix. This rule applies to all Amazon S3 objects with this prefix. To specify all objects in an S3 bucket, specify an empty string.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {S3ReplicationConfigurationRules}
-	 */
-	prefix: function(value) {
-		return this.set('Prefix', value);
-	},
+/**
+ * An object prefix. This rule applies to all Amazon S3 objects with this prefix. To specify all objects in an S3 bucket, specify an empty string.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {S3ReplicationConfigurationRules}
+ */
+S3ReplicationConfigurationRules.prototype.prefix = function(value) {
+	return this.set('Prefix', value);
+};
 
-	/**
-	 * Whether the rule is enabled. For valid values, see the Status element of the PUT Bucket replication action in the Amazon Simple Storage Service API Reference.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {S3ReplicationConfigurationRules}
-	 */
-	status: function(value) {
-		return this.set('Status', value);
-	}
+/**
+ * Whether the rule is enabled. For valid values, see the Status element of the PUT Bucket replication action in the Amazon Simple Storage Service API Reference.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {S3ReplicationConfigurationRules}
+ */
+S3ReplicationConfigurationRules.prototype.status = function(value) {
+	return this.set('Status', value);
 };
 
 module.exports = S3ReplicationConfigurationRules;

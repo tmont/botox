@@ -9,69 +9,66 @@ function CodeDeployDeploymentGroupDeploymentRevisionS3Location() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CodeDeployDeploymentGroupDeploymentRevisionS3Location, PropertyType);
+CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype = Object.create(PropertyType.prototype);
 
-CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype = {
-	
-	/**
-	 * The name of the S3 bucket where the application revision is stored.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
-	 */
-	bucket: function(value) {
-		return this.set('Bucket', value);
-	},
+/**
+ * The name of the S3 bucket where the application revision is stored.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
+ */
+CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype.bucket = function(value) {
+	return this.set('Bucket', value);
+};
 
-	/**
-	 * The file type of the application revision, such as tar, tgz, or zip. For valid values, see S3Location in the AWS CodeDeploy API Reference.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
-	 */
-	bundleType: function(value) {
-		return this.set('BundleType', value);
-	},
+/**
+ * The file type of the application revision, such as tar, tgz, or zip. For valid values, see S3Location in the AWS CodeDeploy API Reference.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
+ */
+CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype.bundleType = function(value) {
+	return this.set('BundleType', value);
+};
 
-	/**
-	 * The Amazon S3 ETag (a file checksum) of the application revision. If you don't specify a value, AWS CodeDeploy skips the ETag validation of your application revision.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
-	 */
-	eTag: function(value) {
-		return this.set('ETag', value);
-	},
+/**
+ * The Amazon S3 ETag (a file checksum) of the application revision. If you don't specify a value, AWS CodeDeploy skips the ETag validation of your application revision.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
+ */
+CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype.eTag = function(value) {
+	return this.set('ETag', value);
+};
 
-	/**
-	 * The file name of the application revision (Amazon S3 object name).
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
-	 */
-	key: function(value) {
-		return this.set('Key', value);
-	},
+/**
+ * The file name of the application revision (Amazon S3 object name).
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
+ */
+CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype.key = function(value) {
+	return this.set('Key', value);
+};
 
-	/**
-	 * For versioning-enabled buckets, a specific version of the application revision.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
-	 */
-	version: function(value) {
-		return this.set('Version', value);
-	}
+/**
+ * For versioning-enabled buckets, a specific version of the application revision.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
+ */
+CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype.version = function(value) {
+	return this.set('Version', value);
 };
 
 module.exports = CodeDeployDeploymentGroupDeploymentRevisionS3Location;

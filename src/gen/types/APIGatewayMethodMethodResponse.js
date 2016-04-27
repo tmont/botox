@@ -9,45 +9,42 @@ function APIGatewayMethodMethodResponse() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(APIGatewayMethodMethodResponse, PropertyType);
+APIGatewayMethodMethodResponse.prototype = Object.create(PropertyType.prototype);
 
-APIGatewayMethodMethodResponse.prototype = {
-	
-	/**
-	 * The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
-	 *
-	 * Required: false
-	 *
-	 * @param {key[]} value
-	 * @return {APIGatewayMethodMethodResponse}
-	 */
-	responseModels: function(value) {
-		return this.set('ResponseModels', value);
-	},
+/**
+ * The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
+ *
+ * Required: false
+ *
+ * @param {key[]} value
+ * @return {APIGatewayMethodMethodResponse}
+ */
+APIGatewayMethodMethodResponse.prototype.responseModels = function(value) {
+	return this.set('ResponseModels', value);
+};
 
-	/**
-	 * Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value. Specify the destination using the following pattern: method.response.header.name, where the name is a valid, unique header name. The Boolean specifies whether a parameter is required.
-	 *
-	 * Required: false
-	 *
-	 * @param {key[]} value
-	 * @return {APIGatewayMethodMethodResponse}
-	 */
-	responseParameters: function(value) {
-		return this.set('ResponseParameters', value);
-	},
+/**
+ * Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value. Specify the destination using the following pattern: method.response.header.name, where the name is a valid, unique header name. The Boolean specifies whether a parameter is required.
+ *
+ * Required: false
+ *
+ * @param {key[]} value
+ * @return {APIGatewayMethodMethodResponse}
+ */
+APIGatewayMethodMethodResponse.prototype.responseParameters = function(value) {
+	return this.set('ResponseParameters', value);
+};
 
-	/**
-	 * The method response's status code, which you map to an IntegrationResponse.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {APIGatewayMethodMethodResponse}
-	 */
-	statusCode: function(value) {
-		return this.set('StatusCode', value);
-	}
+/**
+ * The method response's status code, which you map to an IntegrationResponse.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {APIGatewayMethodMethodResponse}
+ */
+APIGatewayMethodMethodResponse.prototype.statusCode = function(value) {
+	return this.set('StatusCode', value);
 };
 
 module.exports = APIGatewayMethodMethodResponse;

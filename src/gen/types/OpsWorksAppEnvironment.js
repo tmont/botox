@@ -9,45 +9,42 @@ function OpsWorksAppEnvironment() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(OpsWorksAppEnvironment, PropertyType);
+OpsWorksAppEnvironment.prototype = Object.create(PropertyType.prototype);
 
-OpsWorksAppEnvironment.prototype = {
-	
-	/**
-	 * The name of the environment variable, which can consist of up to 64 characters. You can use upper and lowercase letters, numbers, and underscores (_), but the name must start with a letter or underscore.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksAppEnvironment}
-	 */
-	key: function(value) {
-		return this.set('Key', value);
-	},
+/**
+ * The name of the environment variable, which can consist of up to 64 characters. You can use upper and lowercase letters, numbers, and underscores (_), but the name must start with a letter or underscore.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {OpsWorksAppEnvironment}
+ */
+OpsWorksAppEnvironment.prototype.key = function(value) {
+	return this.set('Key', value);
+};
 
-	/**
-	 * Indicates whether the value of the environment variable is concealed, such as with a DescribeApps response. To conceal an environment variable's value, set the value to true.
-	 *
-	 * Required: false
-	 *
-	 * @param {Boolean} value
-	 * @return {OpsWorksAppEnvironment}
-	 */
-	secure: function(value) {
-		return this.set('Secure', value);
-	},
+/**
+ * Indicates whether the value of the environment variable is concealed, such as with a DescribeApps response. To conceal an environment variable's value, set the value to true.
+ *
+ * Required: false
+ *
+ * @param {Boolean} value
+ * @return {OpsWorksAppEnvironment}
+ */
+OpsWorksAppEnvironment.prototype.secure = function(value) {
+	return this.set('Secure', value);
+};
 
-	/**
-	 * The value of the environment variable, which can be empty. You can specify a value of up to 256 characters.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {OpsWorksAppEnvironment}
-	 */
-	value: function(value) {
-		return this.set('Value', value);
-	}
+/**
+ * The value of the environment variable, which can be empty. You can specify a value of up to 256 characters.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {OpsWorksAppEnvironment}
+ */
+OpsWorksAppEnvironment.prototype.value = function(value) {
+	return this.set('Value', value);
 };
 
 module.exports = OpsWorksAppEnvironment;

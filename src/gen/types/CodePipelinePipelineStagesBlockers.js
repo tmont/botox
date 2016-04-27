@@ -9,33 +9,30 @@ function CodePipelinePipelineStagesBlockers() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CodePipelinePipelineStagesBlockers, PropertyType);
+CodePipelinePipelineStagesBlockers.prototype = Object.create(PropertyType.prototype);
 
-CodePipelinePipelineStagesBlockers.prototype = {
-	
-	/**
-	 * The name of the gate declaration.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CodePipelinePipelineStagesBlockers}
-	 */
-	name: function(value) {
-		return this.set('Name', value);
-	},
+/**
+ * The name of the gate declaration.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CodePipelinePipelineStagesBlockers}
+ */
+CodePipelinePipelineStagesBlockers.prototype.name = function(value) {
+	return this.set('Name', value);
+};
 
-	/**
-	 * The type of gate declaration. For valid values, see BlockerDeclaration in the AWS CodePipeline API Reference.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {CodePipelinePipelineStagesBlockers}
-	 */
-	type: function(value) {
-		return this.set('Type', value);
-	}
+/**
+ * The type of gate declaration. For valid values, see BlockerDeclaration in the AWS CodePipeline API Reference.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {CodePipelinePipelineStagesBlockers}
+ */
+CodePipelinePipelineStagesBlockers.prototype.type = function(value) {
+	return this.set('Type', value);
 };
 
 module.exports = CodePipelinePipelineStagesBlockers;

@@ -9,21 +9,18 @@ function S3CorsConfiguration() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(S3CorsConfiguration, PropertyType);
+S3CorsConfiguration.prototype = Object.create(PropertyType.prototype);
 
-S3CorsConfiguration.prototype = {
-	
-	/**
-	 * A set of origins and methods that you allow.
-	 *
-	 * Required: true
-	 *
-	 * @param {S3CorsConfigurationRule} value
-	 * @return {S3CorsConfiguration}
-	 */
-	corsRules: function(value) {
-		return this.set('CorsRules', value);
-	}
+/**
+ * A set of origins and methods that you allow.
+ *
+ * Required: true
+ *
+ * @param {S3CorsConfigurationRule} value
+ * @return {S3CorsConfiguration}
+ */
+S3CorsConfiguration.prototype.corsRules = function(value) {
+	return this.set('CorsRules', value);
 };
 
 module.exports = S3CorsConfiguration;

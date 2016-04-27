@@ -156,8 +156,13 @@ describe('Functions', () => {
 	});
 
 	describe('GetAZs', () => {
-		it('should blow up if no region is given', () => {
-			expect(() => { new GetAZs(); }).to.throwError(/^region is required$/);
+		it('should allow empty region', () => {
+			const getAZs = new GetAZs();
+			const json = getAZs.getTemplateJson();
+
+			expect(json).to.eql({
+				'Fn::GetAZs': ''
+			});
 		});
 
 		it('should generate JSON from string', () => {
@@ -244,7 +249,7 @@ describe('Functions', () => {
 			});
 
 			it('should generate JSON from Condition object', () => {
-				const condition = new Condition('foo');
+				const condition = new Condition('foo', new Equals('foo', 'bar'));
 				const not = new Not(condition);
 				const json = not.getTemplateJson();
 
@@ -262,14 +267,14 @@ describe('Functions', () => {
 				expect(() => { new If({}); }).to.throwError(/^condition must be an instance of Condition$/);
 			});
 			it('should blow up if not trueValue is given', () => {
-				expect(() => { new If(new Condition('foo')); }).to.throwError(/^trueValue is required$/);
+				expect(() => { new If(new Condition('foo', new Equals('foo', 'bar'))); }).to.throwError(/^trueValue is required$/);
 			});
 			it('should blow up if not falseValue is given', () => {
-				expect(() => { new If(new Condition('foo'), 'foo'); }).to.throwError(/^falseValue is required$/);
+				expect(() => { new If(new Condition('foo', new Equals('foo', 'bar')), 'foo'); }).to.throwError(/^falseValue is required$/);
 			});
 
 			it('should generate JSON', () => {
-				const funIf = new If(new Condition('foo'), 'bar', 'baz');
+				const funIf = new If(new Condition('foo', new Equals('foo', 'bar')), 'bar', 'baz');
 				const json = funIf.getTemplateJson();
 
 				expect(json).to.eql({
@@ -304,7 +309,7 @@ describe('Functions', () => {
 				});
 
 				it('should generate JSON from Condition objects and functions', () => {
-					const condition = new Condition('foo');
+					const condition = new Condition('foo', new Equals('foo', 'bar'));
 					const equals = new ctor([condition, new Equals('bar', 'baz')]);
 					const json = equals.getTemplateJson();
 

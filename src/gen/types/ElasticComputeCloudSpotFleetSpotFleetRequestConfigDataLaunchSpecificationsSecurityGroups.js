@@ -9,21 +9,18 @@ function ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificati
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups, PropertyType);
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups.prototype = Object.create(PropertyType.prototype);
 
-ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups.prototype = {
-	
-	/**
-	 * The ID of a security group.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups}
-	 */
-	groupId: function(value) {
-		return this.set('GroupId', value);
-	}
+/**
+ * The ID of a security group.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups}
+ */
+ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups.prototype.groupId = function(value) {
+	return this.set('GroupId', value);
 };
 
 module.exports = ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups;

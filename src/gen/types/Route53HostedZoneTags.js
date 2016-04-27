@@ -9,33 +9,30 @@ function Route53HostedZoneTags() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(Route53HostedZoneTags, PropertyType);
+Route53HostedZoneTags.prototype = Object.create(PropertyType.prototype);
 
-Route53HostedZoneTags.prototype = {
-	
-	/**
-	 * The key name of the tag.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {Route53HostedZoneTags}
-	 */
-	key: function(value) {
-		return this.set('Key', value);
-	},
+/**
+ * The key name of the tag.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {Route53HostedZoneTags}
+ */
+Route53HostedZoneTags.prototype.key = function(value) {
+	return this.set('Key', value);
+};
 
-	/**
-	 * The value for the tag.
-	 *
-	 * Required: true
-	 *
-	 * @param {String} value
-	 * @return {Route53HostedZoneTags}
-	 */
-	value: function(value) {
-		return this.set('Value', value);
-	}
+/**
+ * The value for the tag.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {Route53HostedZoneTags}
+ */
+Route53HostedZoneTags.prototype.value = function(value) {
+	return this.set('Value', value);
 };
 
 module.exports = Route53HostedZoneTags;

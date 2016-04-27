@@ -9,21 +9,18 @@ function CloudFrontDistributionConfigOriginS3Origin() {
 	PropertyType.call(this);
 }
 
-Object.setPrototypeOf(CloudFrontDistributionConfigOriginS3Origin, PropertyType);
+CloudFrontDistributionConfigOriginS3Origin.prototype = Object.create(PropertyType.prototype);
 
-CloudFrontDistributionConfigOriginS3Origin.prototype = {
-	
-	/**
-	 * The CloudFront origin access identity to associate with the origin. This is used to configure the origin so that end users can access objects in an Amazon S3 bucket through CloudFront only.
-	 *
-	 * Required: false
-	 *
-	 * @param {String} value
-	 * @return {CloudFrontDistributionConfigOriginS3Origin}
-	 */
-	originAccessIdentity: function(value) {
-		return this.set('OriginAccessIdentity', value);
-	}
+/**
+ * The CloudFront origin access identity to associate with the origin. This is used to configure the origin so that end users can access objects in an Amazon S3 bucket through CloudFront only.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {CloudFrontDistributionConfigOriginS3Origin}
+ */
+CloudFrontDistributionConfigOriginS3Origin.prototype.originAccessIdentity = function(value) {
+	return this.set('OriginAccessIdentity', value);
 };
 
 module.exports = CloudFrontDistributionConfigOriginS3Origin;
