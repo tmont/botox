@@ -25,19 +25,12 @@ describe('Template', () => {
 	});
 
 	it('should generate complicated template', () => {
-		const template = botox.template(
-			'Similar template to the one at ' +
-			'https://s3-us-west-1.amazonaws.com/cloudformation-templates-us-west-1/LAMP_Multi_AZ.template'
-		);
-
 		const keyName = botox.parameter('KeyName')
 			.description('Name of an existing EC2 KeyPair to enable SSH access to the instances')
 			.type('AWS::EC2::KeyPair::KeyName')
 			.constraintDescription('must be the name of an existing EC2 KeyPair.');
 
-		template.parameter(keyName);
-
-		const region = new botox.fun.Reference('AWS::Region');
+		const region = botox.region;
 
 		const isEc2Vpc = botox.condition('Is-EC2-VPC', botox.or(
 			botox.equals(region, 'eu-central-1'),
@@ -46,7 +39,6 @@ describe('Template', () => {
 		));
 
 		const isEc2Classic = botox.condition('Is-EC2-Classic', botox.not(isEc2Vpc));
-		template.condition(isEc2Vpc).condition(isEc2Classic);
 
 		const lb = botox.loadBalancer('ElasticLoadBalancer')
 			.crossZone(true)
@@ -71,13 +63,17 @@ describe('Template', () => {
 				.timeout('5')
 			);
 
-		template.resource(lb);
+		const template = botox.template('Test template')
+			.parameter(keyName)
+			.condition(isEc2Vpc)
+			.condition(isEc2Classic)
+			.resource(lb);
 
 		const json = template.getTemplateJson();
 
 		expect(json).to.eql({
 			AWSTemplateFormatVersion: '2010-09-09',
-			Description: 'Similar template to the one at https://s3-us-west-1.amazonaws.com/cloudformation-templates-us-west-1/LAMP_Multi_AZ.template',
+			Description: 'Test template',
 			Parameters: {
 				"KeyName": {
 					"Description": "Name of an existing EC2 KeyPair to enable SSH access to the instances",
