@@ -52,18 +52,18 @@ describe('Template', () => {
 			.crossZone(true)
 			.availabilityZones(botox.getAZs())
 			.lbCookieStickinessPolicy([
-				new botox.types.ElasticLoadBalancingLBCookieStickinessPolicyType()
+				botox.elasticLoadBalancingLBCookieStickinessPolicyType()
 					.policyName('CookieBasedPolicy')
 					.cookieExpirationPeriod('30')
 			])
 			.listeners([
-				new botox.types.ElasticLoadBalancingListenerPropertyType()
+				botox.elasticLoadBalancingListenerPropertyType()
 					.loadBalancerPort('80')
 					.instancePort('80')
 					.protocol('HTTP')
 					.policyNames([ 'CookieBasedPolicy' ])
 			])
-			.healthCheck(new botox.types.ElasticLoadBalancingHealthCheckType()
+			.healthCheck(botox.elasticLoadBalancingHealthCheckType()
 				.target('HTTP:80/')
 				.healthyThreshold('2')
 				.unhealthyThreshold('5')
@@ -72,7 +72,6 @@ describe('Template', () => {
 			);
 
 		template.resource(lb);
-
 
 		const json = template.getTemplateJson();
 

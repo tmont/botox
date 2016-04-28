@@ -6,6 +6,44 @@ const async = require('async');
 const inflection = require('inflection');
 
 const context = {};
+const sugarCache = {
+	resources: 1,
+	types: 1,
+	fun: 1,
+
+	Template: 1,
+	Parameter: 1,
+	Output: 1,
+	Condition: 1,
+	CreationPolicy: 1,
+	UpdatePolicy: 1,
+
+	template: 1,
+	parameter: 1,
+	output: 1,
+	condition: 1,
+	creationPolicy: 1,
+	updatePolicy: 1,
+
+	join: 1,
+	base64: 1,
+	select: 1,
+	findInMap: 1,
+	getAZs: 1,
+
+	and: 1,
+	or: 1,
+	equals: 1,
+	not: 1,
+	$if: 1,
+
+	region: 1,
+	accountId: 1,
+	notificationARNs: 1,
+	noValue: 1,
+	stackId: 1,
+	stackName: 1
+};
 
 function camelize(str) {
 	return str.replace(/^[A-Z]+/, (match) => {
@@ -14,6 +52,38 @@ function camelize(str) {
 		}
 
 		return match.substring(0, match.length - 1).toLowerCase() + match.charAt(match.length - 1);
+	});
+}
+
+function addSugarToIndex(things, type, trailingComma, callback) {
+	console.log(` generating ${type} syntax sugar index`);
+
+	const indexFile = path.join(__dirname, 'index.js');
+	const params = type === 'resource' ? 'name' : '';
+	const paramComment = params ? '\t * @param {String} name\n' : '';
+	const code = things.map((thing) => {
+		return `
+	/**
+	 * ${thing.description}
+${paramComment}\t * @return {${thing.className}}
+	 */
+	${thing.prop}: function(${params}) {
+		return new ${thing.jsClassName}(${params});
+	}`;
+	}).join(',\n') + (trailingComma ? ',' : '');
+
+	fs.readFile(indexFile, {encoding: 'utf8'}, (err, contents) => {
+		if (err) {
+			next(err);
+			return;
+		}
+
+		const regex = new RegExp(`(//@@start ${type} sugar)[\\s\\S]+(//@@end ${type} sugar)`);
+		contents = contents.replace(regex, (_, start, end) => {
+			return start + '\n' + code + '\n\t' + end;
+		});
+
+		fs.writeFile(indexFile, contents, callback);
 	});
 }
 
@@ -208,55 +278,14 @@ module.exports = ${className};
 	}
 
 	function createSyntaxSugarIndex(next) {
-		console.log(' generating syntax sugar index');
-
-		const cache = {
-			resources: 1,
-			types: 1,
-			fun: 1,
-
-			Template: 1,
-			Parameter: 1,
-			Output: 1,
-			Condition: 1,
-			CreationPolicy: 1,
-			UpdatePolicy: 1,
-
-			template: 1,
-			parameter: 1,
-			output: 1,
-			condition: 1,
-			creationPolicy: 1,
-			updatePolicy: 1,
-
-			join: 1,
-			base64: 1,
-			select: 1,
-			findInMap: 1,
-			getAZs: 1,
-
-			and: 1,
-			or: 1,
-			equals: 1,
-			not: 1,
-			$if: 1,
-
-			region: 1,
-			accountId: 1,
-			notificationARNs: 1,
-			noValue: 1,
-			stackId: 1,
-			stackName: 1
-		};
-
 		const resources = context.resources
 			.map((resource) => {
 				let prop = camelize(resource.obj.name);
-				if (cache[prop]) {
+				if (sugarCache[prop]) {
 					prop = camelize(resource.obj.category + resource.obj.name);
 				}
 
-				cache[prop] = 1;
+				sugarCache[prop] = 1;
 
 				return {
 					file: resource.file,
@@ -264,39 +293,14 @@ module.exports = ${className};
 					prop: prop,
 					fullName: resource.obj.fullName,
 					className: resource.obj.category + resource.obj.name,
-					jsClassName: resource.obj.category + '.' +  resource.obj.name
+					jsClassName: 'Resources.' + resource.obj.category + '.' + resource.obj.name
 				};
 			})
 			.sort((a, b) => {
 				return a.prop.localeCompare(b.prop);
 			});
 
-		const indexFile = path.join(__dirname, 'index.js');
-		const code = resources.map((resource) => {
-			return `
-	/**
-	 * ${resource.description}
-	 *
-	 * @param {String} name Name of the resource
-	 * @return {${resource.className}}
-	 */
-	${resource.prop}: function(name) {
-		return new Resources.${resource.jsClassName}(name);
-	}`;
-		}).join(',\n');
-
-		fs.readFile(indexFile, { encoding: 'utf8' }, (err, contents) => {
-			if (err) {
-				next(err);
-				return;
-			}
-
-			contents = contents.replace(/(\/\/@@start sugar)[\s\S]+(\/\/@@end sugar)/, (_, start, end) => {
-				return start + '\n' + code + '\n\t' + end;
-			});
-
-			fs.writeFile(indexFile, contents, next);
-		});
+		addSugarToIndex(resources, 'resource', true, next);
 	}
 
 	async.waterfall([ readFiles, createClasses, createIndex, createSyntaxSugarIndex ], next);
@@ -369,15 +373,14 @@ module.exports = ${className};
 
 	function createIndex(next) {
 		console.log(' creating index');
-		const typeMap = context.typeMap;
+		const typeMap = context.typeMap.sort((a, b) => {
+			return a.name.localeCompare(b.name);
+		});
+
 		const indexFile = path.join(__dirname, 'src', 'gen', 'types', 'index.js');
-		const typeProps = typeMap.sort().map((type) => {
+		const typeProps = typeMap.map((type) => {
 			const file = '.' + type.file.substring(path.dirname(indexFile).length);
-			return `
-	/**
-	 * ${type.obj.description}
-	 */
-	${type.name}: require('${file}')`;
+			return `${type.name}: require('${file}')`;
 		}).join(',\n\t');
 
 		const code = `module.exports = {
@@ -388,7 +391,27 @@ module.exports = ${className};
 		fs.writeFile(indexFile, code, next);
 	}
 
-	async.waterfall([readFiles, createClasses, createIndex], next);
+	function createSyntaxSugarIndex(next) {
+		const types = context.typeMap
+			.map((type) => {
+				let prop = camelize(type.name);
+				sugarCache[prop] = 1;
+
+				return {
+					description: type.obj.description,
+					prop: prop,
+					className: type.className,
+					jsClassName: 'Types.' + type.className
+				};
+			})
+			.sort((a, b) => {
+				return a.prop.localeCompare(b.prop);
+			});
+
+		addSugarToIndex(types, 'type', false, next);
+	}
+
+	async.waterfall([ readFiles, createClasses, createIndex, createSyntaxSugarIndex ], next);
 }
 
 async.series([ createResources, createTypes ], (err) => {
