@@ -1,0 +1,64 @@
+{
+  "name": "UpdatePolicy",
+  "description": "You can use the UpdatePolicy attribute to specify how AWS CloudFormation handles updates to the AWS::AutoScaling::AutoScalingGroup resource.",
+  "properties": [
+    {
+      "name": "MaxBatchSize",
+      "description": "The maximum number of instances that are terminated at a given time.",
+      "typeDescription": "Integer",
+      "required": false,
+      "type": "Number",
+      "propertyType": "AutoScalingRollingUpdate"
+    },
+    {
+      "name": "MinInstancesInService",
+      "description": "The minimum number of instances that must be in service within the Auto Scaling group while obsolete instances are being terminated.",
+      "typeDescription": "Integer",
+      "required": false,
+      "type": "Number",
+      "propertyType": "AutoScalingRollingUpdate"
+    },
+    {
+      "name": "MinSuccessfulInstancesPercent",
+      "description": "The percentage of instances in an Auto Scaling rolling update that must signal success for an update to succeed. You can specify a value from 0 to 100. AWS CloudFormation rounds to the nearest tenth of a percent. For example, if you update five instances with a minimum successful percentage of 50, three instances must signal success.",
+      "typeDescription": "Integer",
+      "required": false,
+      "type": "Number",
+      "propertyType": "AutoScalingRollingUpdate"
+    },
+    {
+      "name": "PauseTime",
+      "description": "The amount of time to pause after AWS CloudFormation makes a change to a batch of instances, such as when you scale up the number of instances in an Auto Scaling group. Use the pause time to give your instances time to bootstrap software applications.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String",
+      "propertyType": "AutoScalingRollingUpdate"
+    },
+    {
+      "name": "SuspendProcesses",
+      "description": "The Auto Scaling processes to suspend during a stack update. Suspending processes is useful when you don't want Auto Scaling to potentially interfere with a stack update. For example, you can suspend process so that no alarms are triggered during an update. For valid values, see SuspendProcesses in the Auto Scaling API Reference.",
+      "typeDescription": "List of Auto Scaling processes",
+      "required": false,
+      "type": "String[]",
+      "propertyType": "AutoScalingRollingUpdate"
+    },
+    {
+      "name": "WaitOnResourceSignals",
+      "description": "Indicates whether the Auto Scaling group waits on signals during an update. AWS CloudFormation suspends the update of an Auto Scaling group after any new Amazon EC2 instances are launched into the group. AWS CloudFormation must receive a signal from each new instance within the specified pause time before AWS CloudFormation continues the update. You can use the cfn-signal helper script or SignalResource API to signal the Auto Scaling group. This property is useful when you want to ensure instances have completed installing and configuring applications before the Auto Scaling group update proceeds.",
+      "typeDescription": "Boolean",
+      "required": false,
+      "type": "Boolean",
+      "propertyType": "AutoScalingRollingUpdate"
+    },
+    {
+      "name": "IgnoreUnmodifiedGroupSizeProperties",
+      "description": "During a stack update, indicates whether AWS CloudFormation ignores any group size property differences between your current Auto Scaling group and the Auto Scaling group that is described in the AWS::AutoScaling::AutoScalingGroup resource of your template. However, if you modified any group size property values in your template, AWS CloudFormation will always use the modified values and update your Auto Scaling group.",
+      "typeDescription": "Boolean",
+      "required": false,
+      "type": "Boolean",
+      "propertyType": "AutoScalingScheduledAction"
+    }
+  ],
+  "attributes": [],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html"
+}

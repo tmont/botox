@@ -1,5 +1,4 @@
 var Resource = require('../../resource');
-var CreationPolicy = require('../../attr/creation-policy');
 
 /**
  * AWS::CloudFormation::WaitCondition - Important

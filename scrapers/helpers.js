@@ -94,6 +94,11 @@ const typeMatchers = [
 				//http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html
 				newType = 'String';
 				break;
+			case 'AutoScalingprocesses':
+				//handle "List of Auto Scaling processes" from
+				//http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html
+				newType = 'String';
+				break;
 			default:
 				newType = inflection.singularize(newType);
 				break;
@@ -316,11 +321,15 @@ module.exports = {
 		const desc = normalize($body.find('p').first().text());
 
 		const properties = $body
-			.find('.variablelist')
-			.first()
-			.find('> dl > dt')
+			.find('h2.title')
+			.filter((i, el) => {
+				return /Properties/.test($(el).text());
+			})
+			.closest('.section')
+			.find('.variablelist > dl > dt')
 			.map((i, el) => {
 				const $el = $(el);
+				const propertyType = (/(.+) Properties/.exec($el.closest('.section').find('h2.title').text()) || [])[1];
 				const $dd = $(el).next('dd');
 				let desc = normalize($dd.find('p').first().text());
 				let typeDesc = '';
@@ -376,7 +385,8 @@ module.exports = {
 					typeDescription: typeDesc,
 					required: /^yes/i.test(required),
 					type: getRealType(type),
-					update: update
+					update: update,
+					propertyType: propertyType || null
 				};
 			})
 			.get();

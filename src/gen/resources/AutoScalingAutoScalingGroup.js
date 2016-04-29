@@ -1,6 +1,4 @@
 var Resource = require('../../resource');
-var CreationPolicy = require('../../attr/creation-policy');
-var UpdatePolicy = require('../../attr/update-policy');
 
 /**
  * AWS::AutoScaling::AutoScalingGroup - The AWS::AutoScaling::AutoScalingGroup type creates an Auto Scaling group.

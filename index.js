@@ -1,12 +1,11 @@
 var Template = require('./src/template');
 var Resources = require('./src/gen/resources');
+var Attributes = require('./src/gen/attributes');
 var Types = require('./src/gen/types');
 var Functions = require('./src/fun');
 var Parameter = require('./src/parameter');
 var Output = require('./src/output');
 var Condition = require('./src/condition');
-var CreationPolicy = require('./src/attr/creation-policy');
-var UpdatePolicy = require('./src/attr/update-policy');
 var Reference = Functions.Reference;
 
 var pseudoParams = {
@@ -19,16 +18,6 @@ var pseudoParams = {
 };
 
 module.exports = {
-	resources: Resources,
-	types: Types,
-	fun: Functions,
-	Template: Template,
-	Parameter: Parameter,
-	Output: Output,
-	Condition: Condition,
-	CreationPolicy: CreationPolicy,
-	UpdatePolicy: UpdatePolicy,
-
 	/**
 	 * Returns a string representing the AWS Region in which the encompassing resource is being created, such as us-west-2.
 	 * @returns {Reference}
@@ -176,20 +165,6 @@ module.exports = {
 	 */
 	condition: function(name, conditional) {
 		return new Condition(name, conditional);
-	},
-	/**
-	 * You associate the CreationPolicy attribute with a resource to prevent its status from reaching create complete until AWS CloudFormation receives a specified number of success signals or the timeout period is exceeded. To signal a resource, you can use the cfn-signal helper script or SignalResource API. AWS CloudFormation publishes valid signals to the stack events so that you track the number of signals sent.
-	 * @returns {CreationPolicy}
-	 */
-	creationPolicy: function() {
-		return new CreationPolicy();
-	},
-	/**
-	 * You can use the UpdatePolicy attribute to specify how AWS CloudFormation handles updates to the AWS::AutoScaling::AutoScalingGroup resource.
-	 * @returns {UpdatePolicy}
-	 */
-	updatePolicy: function() {
-		return new UpdatePolicy();
 	},
 
 	//@@start resource sugar
@@ -3230,6 +3205,25 @@ module.exports = {
 	 */
 	wafXssMatchSetXssMatchTupleFieldToMatch: function() {
 		return new Types.WAFXssMatchSetXssMatchTupleFieldToMatch();
-	}
+	},
 	//@@end type sugar
+
+	//@@start attr sugar
+
+	/**
+	 * You associate the CreationPolicy attribute with a resource to prevent its status from reaching create complete until AWS CloudFormation receives a specified number of success signals or the timeout period is exceeded. To signal a resource, you can use the cfn-signal helper script or SignalResource API. AWS CloudFormation publishes valid signals to the stack events so that you track the number of signals sent.
+	 * @return {CreationPolicy}
+	 */
+	creationPolicy: function() {
+		return new Attributes.CreationPolicy();
+	},
+
+	/**
+	 * You can use the UpdatePolicy attribute to specify how AWS CloudFormation handles updates to the AWS::AutoScaling::AutoScalingGroup resource.
+	 * @return {UpdatePolicy}
+	 */
+	updatePolicy: function() {
+		return new Attributes.UpdatePolicy();
+	}
+	//@@end attr sugar
 };

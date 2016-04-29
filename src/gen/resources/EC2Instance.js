@@ -1,5 +1,4 @@
 var Resource = require('../../resource');
-var CreationPolicy = require('../../attr/creation-policy');
 
 /**
  * AWS::EC2::Instance - The AWS::EC2::Instance resource creates an EC2 instance.

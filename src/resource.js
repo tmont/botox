@@ -74,7 +74,7 @@ Resource.prototype = {
 	 * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html}
 	 */
 	metadata: function(json) {
-		return this.setResourceAttribute('Metadata', json)
+		return this.setResourceAttribute('Metadata', json);
 	},
 
 	set: function(key, value) {

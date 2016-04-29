@@ -7,23 +7,10 @@ const inflection = require('inflection');
 
 const context = {};
 const sugarCache = {
-	resources: 1,
-	types: 1,
-	fun: 1,
-
-	Template: 1,
-	Parameter: 1,
-	Output: 1,
-	Condition: 1,
-	CreationPolicy: 1,
-	UpdatePolicy: 1,
-
 	template: 1,
 	parameter: 1,
 	output: 1,
 	condition: 1,
-	creationPolicy: 1,
-	updatePolicy: 1,
 
 	join: 1,
 	base64: 1,
@@ -188,11 +175,6 @@ Object.defineProperty(${propertyPrefix}, 'attr', {
 				'AWS::AutoScaling::AutoScalingGroup': 1
 			}[json.fullName];
 
-			const creationPolicyRequire = !needsCreationPolicy ? '' :
-				'var CreationPolicy = require(\'../../attr/creation-policy\');';
-			const updatePolicyRequired = !needsUpdatePolicy ? '' :
-				'var UpdatePolicy = require(\'../../attr/update-policy\');';
-
 			const creationPolicyMethod = !needsCreationPolicy ? '' : `
 /**
  * Sets a CreationPolicy for this resource
@@ -214,8 +196,6 @@ ${className}.prototype.updatePolicy = function(updatePolicy) {
 };`;
 
 			const code = `var Resource = require('../../resource');
-${creationPolicyRequire}
-${updatePolicyRequired}
 
 /**
  * ${json.fullName} - ${json.description}
@@ -408,14 +388,127 @@ module.exports = ${className};
 				return a.prop.localeCompare(b.prop);
 			});
 
-		addSugarToIndex(types, 'type', false, next);
+		addSugarToIndex(types, 'type', true, next);
 	}
 
 	async.waterfall([ readFiles, createClasses, createIndex, createSyntaxSugarIndex ], next);
 }
 
-async.series([ createResources, createTypes ], (err) => {
+function createAttributes(next) {
+	console.log('creating resource attributes...');
+	function readFiles(next) {
+		const dir = path.join(__dirname, 'scrapers', 'attributes');
+		console.log(` reading files in ${dir}`);
+		fs.readdir(dir, (err, files) => {
+			files = (files || []).map((file) => {
+				return path.join(dir, file);
+			});
+
+			console.log(`  found ${files.length} files`);
+			next(err, files);
+		});
+	}
+
+	function createClasses(files, next) {
+		console.log(` generating classes from ${files.length} files`);
+		const attrMap = context.attrMap = [];
+		const objDir = path.join(__dirname, 'src', 'gen', 'attributes');
+
+		function createAttribute(file, next) {
+			const json = require(file);
+			const className = json.name;
+
+			const methods = json.properties.map((prop) => {
+				return `
+/**
+ * ${prop.description}
+ *
+ * Required: ${prop.required}
+ *
+ * @param {${prop.type}} value
+ * @return {${className}}
+ */
+${className}.prototype.${camelize(prop.name)} = function(value) {
+	return this.set('${prop.propertyType}', '${prop.name}', value);
+};`;
+			}).join('\n');
+
+			const code = `var ResourceAttribute = require('../../resource-attribute');
+
+/**
+ * ${json.description}
+ * @see {@link ${json.referenceUrl}}
+ * @constructor
+ */
+function ${className}() {
+	ResourceAttribute.call(this);
+}
+
+${className}.prototype = Object.create(ResourceAttribute.prototype);
+
+${methods}
+
+module.exports = ${className};
+`.replace(/\n{3,}/g, '\n\n');
+
+			const targetFile = path.join(objDir, className + '.js');
+			attrMap.push({file: targetFile, obj: json, name: json.name, className: className});
+			fs.writeFile(targetFile, code, next);
+		}
+
+		async.each(files, createAttribute, next);
+	}
+
+	function createIndex(next) {
+		console.log(' creating index');
+		const attrMap = context.attrMap.sort((a, b) => {
+			return a.name.localeCompare(b.name);
+		});
+
+		const indexFile = path.join(__dirname, 'src', 'gen', 'attributes', 'index.js');
+		const typeProps = attrMap.map((attr) => {
+			const file = '.' + attr.file.substring(path.dirname(indexFile).length);
+			return `${attr.name}: require('${file}')`;
+		}).join(',\n\t');
+
+		const code = `module.exports = {
+	${typeProps}
+};`;
+
+		console.log(`  writing to ${indexFile}`);
+		fs.writeFile(indexFile, code, next);
+	}
+
+	function createSyntaxSugarIndex(next) {
+		const attrs = context.attrMap
+			.map((attr) => {
+				let prop = camelize(attr.name);
+				if (sugarCache[prop]) {
+					throw new Error(`Sugar syntax property already exists for ${prop} (${attr.name})`);
+				}
+
+				sugarCache[prop] = 1;
+
+				return {
+					description: attr.obj.description,
+					prop: prop,
+					className: attr.className,
+					jsClassName: 'Attributes.' + attr.className
+				};
+			})
+			.sort((a, b) => {
+				return a.prop.localeCompare(b.prop);
+			});
+
+		addSugarToIndex(attrs, 'attr', false, next);
+	}
+
+	async.waterfall([readFiles, createClasses, createIndex, createSyntaxSugarIndex], next);
+}
+
+async.series([ createResources, createTypes, createAttributes ], (err) => {
 	console.log('all done!');
 	err && console.error(err);
+	err && err.stack && console.error(err.stack);
 	process.exit(err ? 1 : 0);
 });

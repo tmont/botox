@@ -1,14 +1,14 @@
 const expect = require('expect.js');
 const botox = require('../');
-const Output = botox.Output;
+const Reference = require('../src/fun/reference');
 
 describe('Output', () => {
 	it('should blow up if no name is given', () => {
-		expect(() => { new Output(); }).to.throwError(/^name must be a non-empty string$/);
+		expect(() => { botox.output(); }).to.throwError(/^name must be a non-empty string$/);
 	});
 
 	it('should set description', () => {
-		const output = new Output('foo');
+		const output = botox.output('foo');
 		output.description('foo');
 		const json = output.getTemplateJson();
 
@@ -20,13 +20,13 @@ describe('Output', () => {
 
 	it('should blow up if description is longer than 4KB', () => {
 		const desc = 'x'.repeat(4097);
-		expect(() => { new Output('foo').description(desc); })
+		expect(() => { botox.output('foo').description(desc); })
 			.to
 			.throwError(/^Output description must be less than 4K in length$/);
 	});
 
 	it('should set value to string', () => {
-		const output = new Output('foo');
+		const output = botox.output('foo');
 		output.value('foo');
 		const json = output.getTemplateJson();
 
@@ -37,8 +37,8 @@ describe('Output', () => {
 	});
 
 	it('should set value to reference', () => {
-		const output = new Output('foo');
-		const ref = new botox.fun.Reference({ name: 'bar' });
+		const output = botox.output('foo');
+		const ref = new Reference({ name: 'bar' });
 		output.value(ref);
 		const json = output.getTemplateJson();
 
