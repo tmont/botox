@@ -8,6 +8,20 @@
       "typeDescription": "String",
       "required": true,
       "type": "String"
+    },
+    {
+      "name": "Key",
+      "description": "The prefix (folder name) where the GameLift build package files are located.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "RoleArn",
+      "description": "An AWS Identity and Access Management (IAM) role Amazon Resource Name (ARN) that GameLift can assume to retrieve the build package files from Amazon Simple Storage Service (Amazon S3).",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String"
     }
   ],
   "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html"

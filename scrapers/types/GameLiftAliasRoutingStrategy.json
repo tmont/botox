@@ -8,6 +8,20 @@
       "typeDescription": "String",
       "required": false,
       "type": "String"
+    },
+    {
+      "name": "Message",
+      "description": "A text message that GameLift displays for the Terminal routing type.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "Type",
+      "description": "The type of routing strategy. For the SIMPLE type, traffic is routed to an active GameLift fleet. For the Terminal type, GameLift returns an exception with the message that you specified in the Message property.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String"
     }
   ],
   "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html"

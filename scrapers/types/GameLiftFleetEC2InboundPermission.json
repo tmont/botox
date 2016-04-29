@@ -8,6 +8,27 @@
       "typeDescription": "Integer",
       "required": true,
       "type": "Number"
+    },
+    {
+      "name": "IpRange",
+      "description": "The range of allowed IP addresses in CIDR notation.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "Protocol",
+      "description": "The network communication protocol that is used by the fleet. For valid values, see the IpPermission data type in the Amazon GameLift API Reference.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "ToPort",
+      "description": "The ending value for a range of allowed port numbers. This value must be higher than the FromPort value.",
+      "typeDescription": "Integer",
+      "required": true,
+      "type": "Number"
     }
   ],
   "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ec2inboundpermission.html"

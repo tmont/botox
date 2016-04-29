@@ -62,4 +62,69 @@ ApiGatewayRestApi.prototype.bodyS3Location = function(value) {
 	return this.set('BodyS3Location', value);
 };
 
+/**
+ * The ID of the API Gateway RestApi resource that you want to clone.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ApiGatewayRestApi}
+ */
+ApiGatewayRestApi.prototype.cloneFrom = function(value) {
+	return this.set('CloneFrom', value);
+};
+
+/**
+ * A description of the purpose of this API Gateway RestApi resource.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ApiGatewayRestApi}
+ */
+ApiGatewayRestApi.prototype.description = function(value) {
+	return this.set('Description', value);
+};
+
+/**
+ * If a warning occurs while API Gateway is creating the RestApi resource, indicates whether to roll back the resource.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {Boolean|Attribute|Reference} value
+ * @return {ApiGatewayRestApi}
+ */
+ApiGatewayRestApi.prototype.failOnWarnings = function(value) {
+	return this.set('FailOnWarnings', value);
+};
+
+/**
+ * A name for the API Gateway RestApi resource.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {ApiGatewayRestApi}
+ */
+ApiGatewayRestApi.prototype.name = function(value) {
+	return this.set('Name', value);
+};
+
+/**
+ * Custom header parameters for the request.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {string[]|Attribute|Reference} value
+ * @return {ApiGatewayRestApi}
+ */
+ApiGatewayRestApi.prototype.parameters = function(value) {
+	return this.set('Parameters', value);
+};
+
 module.exports = ApiGatewayRestApi;

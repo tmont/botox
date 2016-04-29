@@ -323,10 +323,10 @@ module.exports = {
 		const properties = $body
 			.find('h2.title')
 			.filter((i, el) => {
-				return /Properties/.test($(el).text());
+				return /Properties|Members|Parameters/i.test($(el).text());
 			})
 			.closest('.section')
-			.find('.variablelist > dl > dt')
+			.find('> .variablelist > dl > dt')
 			.map((i, el) => {
 				const $el = $(el);
 				const propertyType = (/(.+) Properties/.exec($el.closest('.section').find('h2.title').text()) || [])[1];
@@ -379,15 +379,20 @@ module.exports = {
 					desc += extraName[2];
 				}
 
-				return {
+				const result = {
 					name: name,
 					description: desc,
 					typeDescription: typeDesc,
 					required: /^yes/i.test(required),
 					type: getRealType(type),
-					update: update,
-					propertyType: propertyType || null
+					update: update
 				};
+
+				if (propertyType) {
+					result.propertyType = propertyType;
+				}
+
+				return result;
 			})
 			.get();
 

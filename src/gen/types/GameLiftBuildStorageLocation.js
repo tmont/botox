@@ -23,4 +23,28 @@ GameLiftBuildStorageLocation.prototype.bucket = function(value) {
 	return this.set('Bucket', value);
 };
 
+/**
+ * The prefix (folder name) where the GameLift build package files are located.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {GameLiftBuildStorageLocation}
+ */
+GameLiftBuildStorageLocation.prototype.key = function(value) {
+	return this.set('Key', value);
+};
+
+/**
+ * An AWS Identity and Access Management (IAM) role Amazon Resource Name (ARN) that GameLift can assume to retrieve the build package files from Amazon Simple Storage Service (Amazon S3).
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {GameLiftBuildStorageLocation}
+ */
+GameLiftBuildStorageLocation.prototype.roleArn = function(value) {
+	return this.set('RoleArn', value);
+};
+
 module.exports = GameLiftBuildStorageLocation;

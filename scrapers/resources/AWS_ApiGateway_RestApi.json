@@ -20,6 +20,46 @@
       "required": false,
       "type": "APIGatewayRestApiS3Location",
       "update": "No interruption"
+    },
+    {
+      "name": "CloneFrom",
+      "description": "The ID of the API Gateway RestApi resource that you want to clone.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Description",
+      "description": "A description of the purpose of this API Gateway RestApi resource.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "FailOnWarnings",
+      "description": "If a warning occurs while API Gateway is creating the RestApi resource, indicates whether to roll back the resource.",
+      "typeDescription": "Boolean",
+      "required": false,
+      "type": "Boolean",
+      "update": "No interruption"
+    },
+    {
+      "name": "Name",
+      "description": "A name for the API Gateway RestApi resource.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Parameters",
+      "description": "Custom header parameters for the request.",
+      "typeDescription": "List of strings",
+      "required": false,
+      "type": "string[]",
+      "update": "No interruption"
     }
   ],
   "attributes": [

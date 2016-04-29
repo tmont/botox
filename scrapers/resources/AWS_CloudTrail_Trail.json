@@ -28,6 +28,70 @@
       "required": false,
       "type": "Boolean",
       "update": "No interruption"
+    },
+    {
+      "name": "IncludeGlobalServiceEvents",
+      "description": "Indicates whether the trail is publishing events from global services, such as IAM, to the log files. By default, AWS CloudFormation sets this value to false.",
+      "typeDescription": "Boolean",
+      "required": false,
+      "type": "Boolean",
+      "update": "No interruption"
+    },
+    {
+      "name": "IsLogging",
+      "description": "Indicates whether the CloudTrail trail is currently logging AWS API calls.",
+      "typeDescription": "Boolean",
+      "required": true,
+      "type": "Boolean",
+      "update": "No interruption"
+    },
+    {
+      "name": "IsMultiRegionTrail",
+      "description": "Indicates whether the CloudTrail trail is created in the region in which you create the stack (false) or in all regions (true). By default, AWS CloudFormation sets this value to false. For more information, see How Does CloudTrail Behave Regionally and Globally? in the AWS CloudTrail User Guide.",
+      "typeDescription": "Boolean",
+      "required": false,
+      "type": "Boolean",
+      "update": "No interruption"
+    },
+    {
+      "name": "KMSKeyId",
+      "description": "The AWS Key Management Service (AWS KMS) key ID that you want to use to encrypt CloudTrail logs. You can specify an alias name (prefixed with alias/), an alias ARN, a key ARN, or a globally unique identifier.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "S3BucketName",
+      "description": "The name of the Amazon S3 bucket where CloudTrail publishes log files.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "S3KeyPrefix",
+      "description": "An Amazon S3 object key prefix that precedes the name of all log files.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "SnsTopicName",
+      "description": "The name of an Amazon SNS topic that is notified when new log files are published.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
+    },
+    {
+      "name": "Tags",
+      "description": "An arbitrary set of tags (key–value pairs) for this trail.",
+      "typeDescription": "AWS CloudFormation Resource Tags",
+      "required": false,
+      "type": "CloudFormationResourceTagsType[]",
+      "update": "No interruption."
     }
   ],
   "attributes": [],

@@ -90,4 +90,17 @@ EC2Route.prototype.routeTableId = function(value) {
 	return this.set('RouteTableId', value);
 };
 
+/**
+ * The ID of a VPC peering connection.
+ *
+ * Required: false
+ * Update requires: No interruption
+ *
+ * @param {String|Attribute|Reference|Join} value
+ * @return {EC2Route}
+ */
+EC2Route.prototype.vpcPeeringConnectionId = function(value) {
+	return this.set('VpcPeeringConnectionId', value);
+};
+
 module.exports = EC2Route;

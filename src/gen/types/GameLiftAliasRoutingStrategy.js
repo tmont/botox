@@ -23,4 +23,28 @@ GameLiftAliasRoutingStrategy.prototype.fleetId = function(value) {
 	return this.set('FleetId', value);
 };
 
+/**
+ * A text message that GameLift displays for the Terminal routing type.
+ *
+ * Required: false
+ *
+ * @param {String} value
+ * @return {GameLiftAliasRoutingStrategy}
+ */
+GameLiftAliasRoutingStrategy.prototype.message = function(value) {
+	return this.set('Message', value);
+};
+
+/**
+ * The type of routing strategy. For the SIMPLE type, traffic is routed to an active GameLift fleet. For the Terminal type, GameLift returns an exception with the message that you specified in the Message property.
+ *
+ * Required: true
+ *
+ * @param {String} value
+ * @return {GameLiftAliasRoutingStrategy}
+ */
+GameLiftAliasRoutingStrategy.prototype.type = function(value) {
+	return this.set('Type', value);
+};
+
 module.exports = GameLiftAliasRoutingStrategy;

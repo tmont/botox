@@ -52,6 +52,14 @@
       "required": true,
       "type": "String",
       "update": "Replacement"
+    },
+    {
+      "name": "VpcPeeringConnectionId",
+      "description": "The ID of a VPC peering connection.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String",
+      "update": "No interruption"
     }
   ],
   "attributes": [],
