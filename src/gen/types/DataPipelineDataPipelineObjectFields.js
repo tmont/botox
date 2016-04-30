@@ -17,7 +17,7 @@ DataPipelineDataPipelineObjectFields.prototype = Object.create(PropertyType.prot
  * Required: true
  *
  * @param {String} value
- * @return {DataPipelineDataPipelineObjectFields}
+ * @returns {DataPipelineDataPipelineObjectFields}
  */
 DataPipelineDataPipelineObjectFields.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -29,7 +29,7 @@ DataPipelineDataPipelineObjectFields.prototype.key = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {DataPipelineDataPipelineObjectFields}
+ * @returns {DataPipelineDataPipelineObjectFields}
  */
 DataPipelineDataPipelineObjectFields.prototype.refValue = function(value) {
 	return this.set('RefValue', value);
@@ -41,7 +41,7 @@ DataPipelineDataPipelineObjectFields.prototype.refValue = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {DataPipelineDataPipelineObjectFields}
+ * @returns {DataPipelineDataPipelineObjectFields}
  */
 DataPipelineDataPipelineObjectFields.prototype.stringValue = function(value) {
 	return this.set('StringValue', value);

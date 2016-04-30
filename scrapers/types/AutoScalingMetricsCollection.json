@@ -14,7 +14,7 @@
       "description": "The list of metrics to collect. If you don't specify any metrics, all metrics are enabled.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     }
   ],
   "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html"

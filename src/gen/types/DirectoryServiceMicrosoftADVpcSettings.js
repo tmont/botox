@@ -16,8 +16,8 @@ DirectoryServiceMicrosoftADVpcSettings.prototype = Object.create(PropertyType.pr
  *
  * Required: true
  *
- * @param {string[]} value
- * @return {DirectoryServiceMicrosoftADVpcSettings}
+ * @param {String[]} value
+ * @returns {DirectoryServiceMicrosoftADVpcSettings}
  */
 DirectoryServiceMicrosoftADVpcSettings.prototype.subnetIds = function(value) {
 	return this.set('SubnetIds', value);
@@ -29,7 +29,7 @@ DirectoryServiceMicrosoftADVpcSettings.prototype.subnetIds = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {DirectoryServiceMicrosoftADVpcSettings}
+ * @returns {DirectoryServiceMicrosoftADVpcSettings}
  */
 DirectoryServiceMicrosoftADVpcSettings.prototype.vpcId = function(value) {
 	return this.set('VpcId', value);

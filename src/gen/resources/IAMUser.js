@@ -19,15 +19,15 @@ IAMUser.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(IAMUser.prototype, 'attr', {
 	/**
-	 * @return {IAMUserAttributeMap}
+	 * @returns {IAMUserAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * Returns the Amazon Resource Name (ARN) for the specified AWS::IAM::User resource. For example: arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get arn() {
 				return createAttribute('Arn');
@@ -42,8 +42,8 @@ Object.defineProperty(IAMUser.prototype, 'attr', {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {IAMUser}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {IAMUser}
  */
 IAMUser.prototype.groups = function(value) {
 	return this.set('Groups', value);
@@ -56,7 +56,7 @@ IAMUser.prototype.groups = function(value) {
  * Update requires: No interruption
  *
  * @param {IAMUserLoginProfile|Attribute|Reference} value IAM User LoginProfile
- * @return {IAMUser}
+ * @returns {IAMUser}
  */
 IAMUser.prototype.loginProfile = function(value) {
 	return this.set('LoginProfile', value);
@@ -68,8 +68,8 @@ IAMUser.prototype.loginProfile = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {IAMUser}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {IAMUser}
  */
 IAMUser.prototype.managedPolicyArns = function(value) {
 	return this.set('ManagedPolicyArns', value);
@@ -82,7 +82,7 @@ IAMUser.prototype.managedPolicyArns = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {IAMUser}
+ * @returns {IAMUser}
  */
 IAMUser.prototype.path = function(value) {
 	return this.set('Path', value);
@@ -95,7 +95,7 @@ IAMUser.prototype.path = function(value) {
  * Update requires: No interruption
  *
  * @param {IAMPolicy[]|Attribute|Reference} value
- * @return {IAMUser}
+ * @returns {IAMUser}
  */
 IAMUser.prototype.policies = function(value) {
 	return this.set('Policies', value);

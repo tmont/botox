@@ -17,7 +17,7 @@ Route53HostedZoneTags.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {Route53HostedZoneTags}
+ * @returns {Route53HostedZoneTags}
  */
 Route53HostedZoneTags.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -29,7 +29,7 @@ Route53HostedZoneTags.prototype.key = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {Route53HostedZoneTags}
+ * @returns {Route53HostedZoneTags}
  */
 Route53HostedZoneTags.prototype.value = function(value) {
 	return this.set('Value', value);

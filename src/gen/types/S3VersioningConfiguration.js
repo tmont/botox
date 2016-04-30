@@ -17,7 +17,7 @@ S3VersioningConfiguration.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {S3VersioningConfiguration}
+ * @returns {S3VersioningConfiguration}
  */
 S3VersioningConfiguration.prototype.status = function(value) {
 	return this.set('Status', value);

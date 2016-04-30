@@ -19,7 +19,7 @@ EC2VPCGatewayAttachment.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPCGatewayAttachment}
+ * @returns {EC2VPCGatewayAttachment}
  */
 EC2VPCGatewayAttachment.prototype.internetGatewayId = function(value) {
 	return this.set('InternetGatewayId', value);
@@ -32,7 +32,7 @@ EC2VPCGatewayAttachment.prototype.internetGatewayId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPCGatewayAttachment}
+ * @returns {EC2VPCGatewayAttachment}
  */
 EC2VPCGatewayAttachment.prototype.vpcId = function(value) {
 	return this.set('VpcId', value);
@@ -45,7 +45,7 @@ EC2VPCGatewayAttachment.prototype.vpcId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPCGatewayAttachment}
+ * @returns {EC2VPCGatewayAttachment}
  */
 EC2VPCGatewayAttachment.prototype.vpnGatewayId = function(value) {
 	return this.set('VpnGatewayId', value);

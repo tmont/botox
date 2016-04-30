@@ -19,7 +19,7 @@ WAFIPSet.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {WAFIPSetIPSetDescriptors[]|Attribute|Reference} value List of AWS WAF IPSet IPSetDescriptors
- * @return {WAFIPSet}
+ * @returns {WAFIPSet}
  */
 WAFIPSet.prototype.ipSetDescriptors = function(value) {
 	return this.set('IPSetDescriptors', value);
@@ -32,7 +32,7 @@ WAFIPSet.prototype.ipSetDescriptors = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {WAFIPSet}
+ * @returns {WAFIPSet}
  */
 WAFIPSet.prototype.name = function(value) {
 	return this.set('Name', value);

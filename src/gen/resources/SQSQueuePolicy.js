@@ -19,7 +19,7 @@ SQSQueuePolicy.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {Object|Attribute|Reference} value
- * @return {SQSQueuePolicy}
+ * @returns {SQSQueuePolicy}
  */
 SQSQueuePolicy.prototype.policyDocument = function(value) {
 	return this.set('PolicyDocument', value);
@@ -31,8 +31,8 @@ SQSQueuePolicy.prototype.policyDocument = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {SQSQueuePolicy}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {SQSQueuePolicy}
  */
 SQSQueuePolicy.prototype.queues = function(value) {
 	return this.set('Queues', value);

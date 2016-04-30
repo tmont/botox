@@ -17,7 +17,7 @@ CloudFormationInterfaceParameterLabel.prototype = Object.create(PropertyType.pro
  * Required: false
  *
  * @param {CloudFormationInterfaceLabel} value
- * @return {CloudFormationInterfaceParameterLabel}
+ * @returns {CloudFormationInterfaceParameterLabel}
  */
 CloudFormationInterfaceParameterLabel.prototype.parameterLogicalID = function(value) {
 	return this.set('ParameterLogicalID', value);

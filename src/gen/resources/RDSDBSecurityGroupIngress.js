@@ -19,7 +19,7 @@ RDSDBSecurityGroupIngress.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBSecurityGroupIngress}
+ * @returns {RDSDBSecurityGroupIngress}
  */
 RDSDBSecurityGroupIngress.prototype.cidrip = function(value) {
 	return this.set('CIDRIP', value);
@@ -32,7 +32,7 @@ RDSDBSecurityGroupIngress.prototype.cidrip = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBSecurityGroupIngress}
+ * @returns {RDSDBSecurityGroupIngress}
  */
 RDSDBSecurityGroupIngress.prototype.dbSecurityGroupName = function(value) {
 	return this.set('DBSecurityGroupName', value);
@@ -45,7 +45,7 @@ RDSDBSecurityGroupIngress.prototype.dbSecurityGroupName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBSecurityGroupIngress}
+ * @returns {RDSDBSecurityGroupIngress}
  */
 RDSDBSecurityGroupIngress.prototype.eC2SecurityGroupId = function(value) {
 	return this.set('EC2SecurityGroupId', value);
@@ -58,7 +58,7 @@ RDSDBSecurityGroupIngress.prototype.eC2SecurityGroupId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBSecurityGroupIngress}
+ * @returns {RDSDBSecurityGroupIngress}
  */
 RDSDBSecurityGroupIngress.prototype.eC2SecurityGroupName = function(value) {
 	return this.set('EC2SecurityGroupName', value);
@@ -71,7 +71,7 @@ RDSDBSecurityGroupIngress.prototype.eC2SecurityGroupName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBSecurityGroupIngress}
+ * @returns {RDSDBSecurityGroupIngress}
  */
 RDSDBSecurityGroupIngress.prototype.eC2SecurityGroupOwnerId = function(value) {
 	return this.set('EC2SecurityGroupOwnerId', value);

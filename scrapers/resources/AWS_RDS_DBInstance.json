@@ -98,7 +98,7 @@
       "description": "A list of the DB security groups to assign to the Amazon RDS instance. The list can include both the name of existing DB security groups or references to AWS::RDS::DBSecurityGroup resources created in the template.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {
@@ -258,7 +258,7 @@
       "description": "A list of the VPC security groups to assign to the Amazon RDS instance. The list can include both the physical IDs of existing VPC security groups or references to AWS::EC2::SecurityGroup resources created in the template.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption."
     }
   ],

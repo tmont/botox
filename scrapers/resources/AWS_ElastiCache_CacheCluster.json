@@ -42,7 +42,7 @@
       "description": "A list of cache security group names that are associated with this cache cluster. If your cache cluster is in a VPC, specify the VpcSecurityGroupIds property instead.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {
@@ -114,7 +114,7 @@
       "description": "For Memcached cache clusters, the list of Availability Zones in which cache nodes are created. The number of Availability Zones listed must equal the number of cache nodes. For example, if you want to create three nodes in two different Availability Zones, you can specify [\"us-east-1a\", \"us-east-1a\", \"us-east-1b\"], which would create two nodes in us-east-1a and one node in us-east-1b.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "PreferredMaintenanceWindow",
@@ -129,7 +129,7 @@
       "description": "The ARN of the snapshot file that you want to use to seed a new Redis cache cluster. If you manage a Redis instance outside of Amazon ElastiCache, you can create a new cache cluster in ElastiCache by using a snapshot file that is stored in an Amazon S3 bucket.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "Replacement"
     },
     {
@@ -169,7 +169,7 @@
       "description": "A list of VPC security group IDs. If your cache cluster isn't in a VPC, specify the CacheSecurityGroupNames property instead.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     }
   ],

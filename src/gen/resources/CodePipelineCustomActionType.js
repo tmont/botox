@@ -19,7 +19,7 @@ CodePipelineCustomActionType.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CodePipelineCustomActionType}
+ * @returns {CodePipelineCustomActionType}
  */
 CodePipelineCustomActionType.prototype.category = function(value) {
 	return this.set('Category', value);
@@ -32,7 +32,7 @@ CodePipelineCustomActionType.prototype.category = function(value) {
  * Update requires: Replacement
  *
  * @param {CodePipelineCustomActionTypeConfigurationProperties[]|Attribute|Reference} value List of AWS CodePipeline CustomActionType ConfigurationProperties
- * @return {CodePipelineCustomActionType}
+ * @returns {CodePipelineCustomActionType}
  */
 CodePipelineCustomActionType.prototype.configurationProperties = function(value) {
 	return this.set('ConfigurationProperties', value);
@@ -45,7 +45,7 @@ CodePipelineCustomActionType.prototype.configurationProperties = function(value)
  * Update requires: Replacement
  *
  * @param {CodePipelineCustomActionTypeArtifactDetails|Attribute|Reference} value AWS CodePipeline CustomActionType ArtifactDetails
- * @return {CodePipelineCustomActionType}
+ * @returns {CodePipelineCustomActionType}
  */
 CodePipelineCustomActionType.prototype.inputArtifactDetails = function(value) {
 	return this.set('InputArtifactDetails', value);
@@ -58,7 +58,7 @@ CodePipelineCustomActionType.prototype.inputArtifactDetails = function(value) {
  * Update requires: Replacement
  *
  * @param {CodePipelineCustomActionTypeArtifactDetails|Attribute|Reference} value AWS CodePipeline CustomActionType ArtifactDetails
- * @return {CodePipelineCustomActionType}
+ * @returns {CodePipelineCustomActionType}
  */
 CodePipelineCustomActionType.prototype.outputArtifactDetails = function(value) {
 	return this.set('OutputArtifactDetails', value);
@@ -71,7 +71,7 @@ CodePipelineCustomActionType.prototype.outputArtifactDetails = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CodePipelineCustomActionType}
+ * @returns {CodePipelineCustomActionType}
  */
 CodePipelineCustomActionType.prototype.provider = function(value) {
 	return this.set('Provider', value);
@@ -84,7 +84,7 @@ CodePipelineCustomActionType.prototype.provider = function(value) {
  * Update requires: Replacement
  *
  * @param {CodePipelineCustomActionTypeSettings|Attribute|Reference} value AWS CodePipeline CustomActionType Settings
- * @return {CodePipelineCustomActionType}
+ * @returns {CodePipelineCustomActionType}
  */
 CodePipelineCustomActionType.prototype.settings = function(value) {
 	return this.set('Settings', value);
@@ -97,7 +97,7 @@ CodePipelineCustomActionType.prototype.settings = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CodePipelineCustomActionType}
+ * @returns {CodePipelineCustomActionType}
  */
 CodePipelineCustomActionType.prototype.version = function(value) {
 	return this.set('Version', value);

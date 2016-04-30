@@ -20,15 +20,15 @@ S3Bucket.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(S3Bucket.prototype, 'attr', {
 	/**
-	 * @return {S3BucketAttributeMap}
+	 * @returns {S3BucketAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * Returns the DNS name of the specified bucket.Example: mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get domainName() {
 				return createAttribute('DomainName');
@@ -36,7 +36,7 @@ Object.defineProperty(S3Bucket.prototype, 'attr', {
 
 			/**
 			 * Amazon S3 website endpoint for the specified bucket.Example: http://mystack-mybucket-kdwwxmddtr2g.s3-website-us-east-1.amazonaws.com/
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get websiteURL() {
 				return createAttribute('WebsiteURL');
@@ -52,7 +52,7 @@ Object.defineProperty(S3Bucket.prototype, 'attr', {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {S3Bucket}
+ * @returns {S3Bucket}
  */
 S3Bucket.prototype.accessControl = function(value) {
 	return this.set('AccessControl', value);
@@ -65,7 +65,7 @@ S3Bucket.prototype.accessControl = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {S3Bucket}
+ * @returns {S3Bucket}
  */
 S3Bucket.prototype.bucketName = function(value) {
 	return this.set('BucketName', value);
@@ -78,7 +78,7 @@ S3Bucket.prototype.bucketName = function(value) {
  * Update requires: No interruption
  *
  * @param {S3CorsConfiguration|Attribute|Reference} value Amazon S3 Cors Configuration
- * @return {S3Bucket}
+ * @returns {S3Bucket}
  */
 S3Bucket.prototype.corsConfiguration = function(value) {
 	return this.set('CorsConfiguration', value);
@@ -91,7 +91,7 @@ S3Bucket.prototype.corsConfiguration = function(value) {
  * Update requires: No interruption
  *
  * @param {S3LifecycleConfiguration|Attribute|Reference} value Amazon S3 Lifecycle Configuration
- * @return {S3Bucket}
+ * @returns {S3Bucket}
  */
 S3Bucket.prototype.lifecycleConfiguration = function(value) {
 	return this.set('LifecycleConfiguration', value);
@@ -104,7 +104,7 @@ S3Bucket.prototype.lifecycleConfiguration = function(value) {
  * Update requires: No interruption
  *
  * @param {S3LoggingConfiguration|Attribute|Reference} value Amazon S3 Logging Configuration
- * @return {S3Bucket}
+ * @returns {S3Bucket}
  */
 S3Bucket.prototype.loggingConfiguration = function(value) {
 	return this.set('LoggingConfiguration', value);
@@ -117,7 +117,7 @@ S3Bucket.prototype.loggingConfiguration = function(value) {
  * Update requires: No interruption
  *
  * @param {S3NotificationConfiguration|Attribute|Reference} value Amazon S3 NotificationConfiguration
- * @return {S3Bucket}
+ * @returns {S3Bucket}
  */
 S3Bucket.prototype.notificationConfiguration = function(value) {
 	return this.set('NotificationConfiguration', value);
@@ -130,7 +130,7 @@ S3Bucket.prototype.notificationConfiguration = function(value) {
  * Update requires: No interruption
  *
  * @param {S3ReplicationConfiguration|Attribute|Reference} value Amazon S3 ReplicationConfiguration
- * @return {S3Bucket}
+ * @returns {S3Bucket}
  */
 S3Bucket.prototype.replicationConfiguration = function(value) {
 	return this.set('ReplicationConfiguration', value);
@@ -143,7 +143,7 @@ S3Bucket.prototype.replicationConfiguration = function(value) {
  * Update requires: No interruption
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {S3Bucket}
+ * @returns {S3Bucket}
  */
 S3Bucket.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -156,7 +156,7 @@ S3Bucket.prototype.tags = function(value) {
  * Update requires: No interruption
  *
  * @param {S3VersioningConfiguration|Attribute|Reference} value Amazon S3 Versioning Configuration
- * @return {S3Bucket}
+ * @returns {S3Bucket}
  */
 S3Bucket.prototype.versioningConfiguration = function(value) {
 	return this.set('VersioningConfiguration', value);
@@ -169,7 +169,7 @@ S3Bucket.prototype.versioningConfiguration = function(value) {
  * Update requires: No interruption
  *
  * @param {S3WebsiteConfigurationProperty|Attribute|Reference} value Website Configuration Type
- * @return {S3Bucket}
+ * @returns {S3Bucket}
  */
 S3Bucket.prototype.websiteConfiguration = function(value) {
 	return this.set('WebsiteConfiguration', value);

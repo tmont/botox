@@ -18,7 +18,7 @@
       "description": "A list of event categories that you want to subscribe to for a given source type. If you don't specify this property, you are notified about all event categories.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {
@@ -34,7 +34,7 @@
       "description": "A list of identifiers for which Amazon RDS provides notification events.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {

@@ -17,7 +17,7 @@ ElasticLoadBalancingHealthCheckType.prototype = Object.create(PropertyType.proto
  * Required: true
  *
  * @param {String} value
- * @return {ElasticLoadBalancingHealthCheckType}
+ * @returns {ElasticLoadBalancingHealthCheckType}
  */
 ElasticLoadBalancingHealthCheckType.prototype.healthyThreshold = function(value) {
 	return this.set('HealthyThreshold', value);
@@ -29,7 +29,7 @@ ElasticLoadBalancingHealthCheckType.prototype.healthyThreshold = function(value)
  * Required: true
  *
  * @param {String} value
- * @return {ElasticLoadBalancingHealthCheckType}
+ * @returns {ElasticLoadBalancingHealthCheckType}
  */
 ElasticLoadBalancingHealthCheckType.prototype.interval = function(value) {
 	return this.set('Interval', value);
@@ -41,7 +41,7 @@ ElasticLoadBalancingHealthCheckType.prototype.interval = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {ElasticLoadBalancingHealthCheckType}
+ * @returns {ElasticLoadBalancingHealthCheckType}
  */
 ElasticLoadBalancingHealthCheckType.prototype.target = function(value) {
 	return this.set('Target', value);
@@ -53,7 +53,7 @@ ElasticLoadBalancingHealthCheckType.prototype.target = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {ElasticLoadBalancingHealthCheckType}
+ * @returns {ElasticLoadBalancingHealthCheckType}
  */
 ElasticLoadBalancingHealthCheckType.prototype.timeout = function(value) {
 	return this.set('Timeout', value);
@@ -65,7 +65,7 @@ ElasticLoadBalancingHealthCheckType.prototype.timeout = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {ElasticLoadBalancingHealthCheckType}
+ * @returns {ElasticLoadBalancingHealthCheckType}
  */
 ElasticLoadBalancingHealthCheckType.prototype.unhealthyThreshold = function(value) {
 	return this.set('UnhealthyThreshold', value);

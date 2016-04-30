@@ -16,8 +16,8 @@ S3CorsConfigurationRule.prototype = Object.create(PropertyType.prototype);
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {S3CorsConfigurationRule}
+ * @param {String[]} value
+ * @returns {S3CorsConfigurationRule}
  */
 S3CorsConfigurationRule.prototype.allowedHeaders = function(value) {
 	return this.set('AllowedHeaders', value);
@@ -28,8 +28,8 @@ S3CorsConfigurationRule.prototype.allowedHeaders = function(value) {
  *
  * Required: true
  *
- * @param {string[]} value
- * @return {S3CorsConfigurationRule}
+ * @param {String[]} value
+ * @returns {S3CorsConfigurationRule}
  */
 S3CorsConfigurationRule.prototype.allowedMethods = function(value) {
 	return this.set('AllowedMethods', value);
@@ -40,8 +40,8 @@ S3CorsConfigurationRule.prototype.allowedMethods = function(value) {
  *
  * Required: true
  *
- * @param {string[]} value
- * @return {S3CorsConfigurationRule}
+ * @param {String[]} value
+ * @returns {S3CorsConfigurationRule}
  */
 S3CorsConfigurationRule.prototype.allowedOrigins = function(value) {
 	return this.set('AllowedOrigins', value);
@@ -52,8 +52,8 @@ S3CorsConfigurationRule.prototype.allowedOrigins = function(value) {
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {S3CorsConfigurationRule}
+ * @param {String[]} value
+ * @returns {S3CorsConfigurationRule}
  */
 S3CorsConfigurationRule.prototype.exposedHeaders = function(value) {
 	return this.set('ExposedHeaders', value);
@@ -65,7 +65,7 @@ S3CorsConfigurationRule.prototype.exposedHeaders = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {S3CorsConfigurationRule}
+ * @returns {S3CorsConfigurationRule}
  */
 S3CorsConfigurationRule.prototype.id = function(value) {
 	return this.set('Id', value);
@@ -77,7 +77,7 @@ S3CorsConfigurationRule.prototype.id = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {S3CorsConfigurationRule}
+ * @returns {S3CorsConfigurationRule}
  */
 S3CorsConfigurationRule.prototype.maxAge = function(value) {
 	return this.set('MaxAge', value);

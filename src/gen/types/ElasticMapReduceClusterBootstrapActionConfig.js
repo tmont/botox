@@ -17,7 +17,7 @@ ElasticMapReduceClusterBootstrapActionConfig.prototype = Object.create(PropertyT
  * Required: true
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterBootstrapActionConfig}
+ * @returns {ElasticMapReduceClusterBootstrapActionConfig}
  */
 ElasticMapReduceClusterBootstrapActionConfig.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -29,7 +29,7 @@ ElasticMapReduceClusterBootstrapActionConfig.prototype.name = function(value) {
  * Required: true
  *
  * @param {ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig} value
- * @return {ElasticMapReduceClusterBootstrapActionConfig}
+ * @returns {ElasticMapReduceClusterBootstrapActionConfig}
  */
 ElasticMapReduceClusterBootstrapActionConfig.prototype.scriptBootstrapAction = function(value) {
 	return this.set('ScriptBootstrapAction', value);

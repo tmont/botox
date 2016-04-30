@@ -19,7 +19,7 @@ EC2SecurityGroupIngress.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SecurityGroupIngress}
+ * @returns {EC2SecurityGroupIngress}
  */
 EC2SecurityGroupIngress.prototype.cidrIp = function(value) {
 	return this.set('CidrIp', value);
@@ -32,7 +32,7 @@ EC2SecurityGroupIngress.prototype.cidrIp = function(value) {
  * Update requires: Replacement
  *
  * @param {Number|Attribute|Reference} value
- * @return {EC2SecurityGroupIngress}
+ * @returns {EC2SecurityGroupIngress}
  */
 EC2SecurityGroupIngress.prototype.fromPort = function(value) {
 	return this.set('FromPort', value);
@@ -45,7 +45,7 @@ EC2SecurityGroupIngress.prototype.fromPort = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SecurityGroupIngress}
+ * @returns {EC2SecurityGroupIngress}
  */
 EC2SecurityGroupIngress.prototype.groupId = function(value) {
 	return this.set('GroupId', value);
@@ -58,7 +58,7 @@ EC2SecurityGroupIngress.prototype.groupId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SecurityGroupIngress}
+ * @returns {EC2SecurityGroupIngress}
  */
 EC2SecurityGroupIngress.prototype.groupName = function(value) {
 	return this.set('GroupName', value);
@@ -71,7 +71,7 @@ EC2SecurityGroupIngress.prototype.groupName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SecurityGroupIngress}
+ * @returns {EC2SecurityGroupIngress}
  */
 EC2SecurityGroupIngress.prototype.ipProtocol = function(value) {
 	return this.set('IpProtocol', value);
@@ -84,7 +84,7 @@ EC2SecurityGroupIngress.prototype.ipProtocol = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SecurityGroupIngress}
+ * @returns {EC2SecurityGroupIngress}
  */
 EC2SecurityGroupIngress.prototype.sourceSecurityGroupId = function(value) {
 	return this.set('SourceSecurityGroupId', value);
@@ -97,7 +97,7 @@ EC2SecurityGroupIngress.prototype.sourceSecurityGroupId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SecurityGroupIngress}
+ * @returns {EC2SecurityGroupIngress}
  */
 EC2SecurityGroupIngress.prototype.sourceSecurityGroupName = function(value) {
 	return this.set('SourceSecurityGroupName', value);
@@ -110,7 +110,7 @@ EC2SecurityGroupIngress.prototype.sourceSecurityGroupName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SecurityGroupIngress}
+ * @returns {EC2SecurityGroupIngress}
  */
 EC2SecurityGroupIngress.prototype.sourceSecurityGroupOwnerId = function(value) {
 	return this.set('SourceSecurityGroupOwnerId', value);
@@ -123,7 +123,7 @@ EC2SecurityGroupIngress.prototype.sourceSecurityGroupOwnerId = function(value) {
  * Update requires: Replacement
  *
  * @param {Number|Attribute|Reference} value
- * @return {EC2SecurityGroupIngress}
+ * @returns {EC2SecurityGroupIngress}
  */
 EC2SecurityGroupIngress.prototype.toPort = function(value) {
 	return this.set('ToPort', value);

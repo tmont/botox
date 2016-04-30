@@ -7,7 +7,7 @@
       "description": "CNAMEs (alternate domain names), if any, for the distribution.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "CacheBehaviors",

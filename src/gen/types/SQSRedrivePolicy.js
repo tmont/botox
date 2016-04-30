@@ -17,7 +17,7 @@ SQSRedrivePolicy.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {String} value
- * @return {SQSRedrivePolicy}
+ * @returns {SQSRedrivePolicy}
  */
 SQSRedrivePolicy.prototype.deadLetterTargetArn = function(value) {
 	return this.set('deadLetterTargetArn', value);
@@ -29,7 +29,7 @@ SQSRedrivePolicy.prototype.deadLetterTargetArn = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {SQSRedrivePolicy}
+ * @returns {SQSRedrivePolicy}
  */
 SQSRedrivePolicy.prototype.maxReceiveCount = function(value) {
 	return this.set('maxReceiveCount', value);

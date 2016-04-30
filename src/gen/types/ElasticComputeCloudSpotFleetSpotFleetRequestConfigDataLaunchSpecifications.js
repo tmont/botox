@@ -17,7 +17,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: false
  *
  * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings[]} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.blockDeviceMappings = function(value) {
 	return this.set('BlockDeviceMappings', value);
@@ -29,7 +29,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: false
  *
  * @param {Boolean} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.ebsOptimized = function(value) {
 	return this.set('EbsOptimized', value);
@@ -41,7 +41,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: false
  *
  * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsIamInstanceProfile} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.iamInstanceProfile = function(value) {
 	return this.set('IamInstanceProfile', value);
@@ -53,7 +53,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: true
  *
  * @param {String} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.imageId = function(value) {
 	return this.set('ImageId', value);
@@ -65,7 +65,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: true
  *
  * @param {String} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.instanceType = function(value) {
 	return this.set('InstanceType', value);
@@ -77,7 +77,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: false
  *
  * @param {String} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.kernelId = function(value) {
 	return this.set('KernelId', value);
@@ -89,7 +89,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: false
  *
  * @param {String} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.keyName = function(value) {
 	return this.set('KeyName', value);
@@ -101,7 +101,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: false
  *
  * @param {EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.monitoring = function(value) {
 	return this.set('Monitoring', value);
@@ -113,7 +113,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: false
  *
  * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces[]} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.networkInterfaces = function(value) {
 	return this.set('NetworkInterfaces', value);
@@ -125,7 +125,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: false
  *
  * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsPlacement} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.placement = function(value) {
 	return this.set('Placement', value);
@@ -137,7 +137,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: false
  *
  * @param {String} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.ramdiskId = function(value) {
 	return this.set('RamdiskId', value);
@@ -149,7 +149,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: false
  *
  * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsSecurityGroups[]} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.securityGroups = function(value) {
 	return this.set('SecurityGroups', value);
@@ -161,7 +161,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: false
  *
  * @param {String} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.subnetId = function(value) {
 	return this.set('SubnetId', value);
@@ -173,7 +173,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: false
  *
  * @param {String} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.userData = function(value) {
 	return this.set('UserData', value);
@@ -185,7 +185,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.proto
  * Required: false
  *
  * @param {Number} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications.prototype.weightedCapacity = function(value) {
 	return this.set('WeightedCapacity', value);

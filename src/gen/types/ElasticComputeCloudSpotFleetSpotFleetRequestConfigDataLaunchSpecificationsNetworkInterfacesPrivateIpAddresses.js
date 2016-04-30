@@ -17,7 +17,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetwor
  * Required: false
  *
  * @param {Boolean} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses.prototype.primary = function(value) {
 	return this.set('Primary', value);
@@ -29,7 +29,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetwor
  * Required: true
  *
  * @param {String} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses.prototype.privateIpAddress = function(value) {
 	return this.set('PrivateIpAddress', value);

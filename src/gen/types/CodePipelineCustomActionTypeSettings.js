@@ -17,7 +17,7 @@ CodePipelineCustomActionTypeSettings.prototype = Object.create(PropertyType.prot
  * Required: false
  *
  * @param {String} value
- * @return {CodePipelineCustomActionTypeSettings}
+ * @returns {CodePipelineCustomActionTypeSettings}
  */
 CodePipelineCustomActionTypeSettings.prototype.entityUrlTemplate = function(value) {
 	return this.set('EntityUrlTemplate', value);
@@ -29,7 +29,7 @@ CodePipelineCustomActionTypeSettings.prototype.entityUrlTemplate = function(valu
  * Required: false
  *
  * @param {String} value
- * @return {CodePipelineCustomActionTypeSettings}
+ * @returns {CodePipelineCustomActionTypeSettings}
  */
 CodePipelineCustomActionTypeSettings.prototype.executionUrlTemplate = function(value) {
 	return this.set('ExecutionUrlTemplate', value);
@@ -41,7 +41,7 @@ CodePipelineCustomActionTypeSettings.prototype.executionUrlTemplate = function(v
  * Required: false
  *
  * @param {String} value
- * @return {CodePipelineCustomActionTypeSettings}
+ * @returns {CodePipelineCustomActionTypeSettings}
  */
 CodePipelineCustomActionTypeSettings.prototype.revisionUrlTemplate = function(value) {
 	return this.set('RevisionUrlTemplate', value);
@@ -53,7 +53,7 @@ CodePipelineCustomActionTypeSettings.prototype.revisionUrlTemplate = function(va
  * Required: false
  *
  * @param {String} value
- * @return {CodePipelineCustomActionTypeSettings}
+ * @returns {CodePipelineCustomActionTypeSettings}
  */
 CodePipelineCustomActionTypeSettings.prototype.thirdPartyConfigurationUrl = function(value) {
 	return this.set('ThirdPartyConfigurationUrl', value);

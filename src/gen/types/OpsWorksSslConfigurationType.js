@@ -17,7 +17,7 @@ OpsWorksSslConfigurationType.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {OpsWorksSslConfigurationType}
+ * @returns {OpsWorksSslConfigurationType}
  */
 OpsWorksSslConfigurationType.prototype.certificate = function(value) {
 	return this.set('Certificate', value);
@@ -29,7 +29,7 @@ OpsWorksSslConfigurationType.prototype.certificate = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {OpsWorksSslConfigurationType}
+ * @returns {OpsWorksSslConfigurationType}
  */
 OpsWorksSslConfigurationType.prototype.chain = function(value) {
 	return this.set('Chain', value);
@@ -41,7 +41,7 @@ OpsWorksSslConfigurationType.prototype.chain = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {OpsWorksSslConfigurationType}
+ * @returns {OpsWorksSslConfigurationType}
  */
 OpsWorksSslConfigurationType.prototype.privateKey = function(value) {
 	return this.set('PrivateKey', value);

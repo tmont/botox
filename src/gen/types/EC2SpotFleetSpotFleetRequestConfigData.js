@@ -17,7 +17,7 @@ EC2SpotFleetSpotFleetRequestConfigData.prototype = Object.create(PropertyType.pr
  * Required: false
  *
  * @param {String} value
- * @return {EC2SpotFleetSpotFleetRequestConfigData}
+ * @returns {EC2SpotFleetSpotFleetRequestConfigData}
  */
 EC2SpotFleetSpotFleetRequestConfigData.prototype.allocationStrategy = function(value) {
 	return this.set('AllocationStrategy', value);
@@ -29,7 +29,7 @@ EC2SpotFleetSpotFleetRequestConfigData.prototype.allocationStrategy = function(v
  * Required: false
  *
  * @param {String} value
- * @return {EC2SpotFleetSpotFleetRequestConfigData}
+ * @returns {EC2SpotFleetSpotFleetRequestConfigData}
  */
 EC2SpotFleetSpotFleetRequestConfigData.prototype.excessCapacityTerminationPolicy = function(value) {
 	return this.set('ExcessCapacityTerminationPolicy', value);
@@ -41,7 +41,7 @@ EC2SpotFleetSpotFleetRequestConfigData.prototype.excessCapacityTerminationPolicy
  * Required: true
  *
  * @param {String} value
- * @return {EC2SpotFleetSpotFleetRequestConfigData}
+ * @returns {EC2SpotFleetSpotFleetRequestConfigData}
  */
 EC2SpotFleetSpotFleetRequestConfigData.prototype.iamFleetRole = function(value) {
 	return this.set('IamFleetRole', value);
@@ -53,7 +53,7 @@ EC2SpotFleetSpotFleetRequestConfigData.prototype.iamFleetRole = function(value) 
  * Required: true
  *
  * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecifications[]} value
- * @return {EC2SpotFleetSpotFleetRequestConfigData}
+ * @returns {EC2SpotFleetSpotFleetRequestConfigData}
  */
 EC2SpotFleetSpotFleetRequestConfigData.prototype.launchSpecifications = function(value) {
 	return this.set('LaunchSpecifications', value);
@@ -65,7 +65,7 @@ EC2SpotFleetSpotFleetRequestConfigData.prototype.launchSpecifications = function
  * Required: true
  *
  * @param {String} value
- * @return {EC2SpotFleetSpotFleetRequestConfigData}
+ * @returns {EC2SpotFleetSpotFleetRequestConfigData}
  */
 EC2SpotFleetSpotFleetRequestConfigData.prototype.spotPrice = function(value) {
 	return this.set('SpotPrice', value);
@@ -77,7 +77,7 @@ EC2SpotFleetSpotFleetRequestConfigData.prototype.spotPrice = function(value) {
  * Required: true
  *
  * @param {Number} value
- * @return {EC2SpotFleetSpotFleetRequestConfigData}
+ * @returns {EC2SpotFleetSpotFleetRequestConfigData}
  */
 EC2SpotFleetSpotFleetRequestConfigData.prototype.targetCapacity = function(value) {
 	return this.set('TargetCapacity', value);
@@ -89,7 +89,7 @@ EC2SpotFleetSpotFleetRequestConfigData.prototype.targetCapacity = function(value
  * Required: false
  *
  * @param {Boolean} value
- * @return {EC2SpotFleetSpotFleetRequestConfigData}
+ * @returns {EC2SpotFleetSpotFleetRequestConfigData}
  */
 EC2SpotFleetSpotFleetRequestConfigData.prototype.terminateInstancesWithExpiration = function(value) {
 	return this.set('TerminateInstancesWithExpiration', value);
@@ -101,7 +101,7 @@ EC2SpotFleetSpotFleetRequestConfigData.prototype.terminateInstancesWithExpiratio
  * Required: false
  *
  * @param {String} value
- * @return {EC2SpotFleetSpotFleetRequestConfigData}
+ * @returns {EC2SpotFleetSpotFleetRequestConfigData}
  */
 EC2SpotFleetSpotFleetRequestConfigData.prototype.validFrom = function(value) {
 	return this.set('ValidFrom', value);
@@ -113,7 +113,7 @@ EC2SpotFleetSpotFleetRequestConfigData.prototype.validFrom = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {EC2SpotFleetSpotFleetRequestConfigData}
+ * @returns {EC2SpotFleetSpotFleetRequestConfigData}
  */
 EC2SpotFleetSpotFleetRequestConfigData.prototype.validUntil = function(value) {
 	return this.set('ValidUntil', value);

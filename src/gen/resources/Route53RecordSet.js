@@ -19,7 +19,7 @@ Route53RecordSet.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {Route53AliasTargetProperty|Attribute|Reference} value
- * @return {Route53RecordSet}
+ * @returns {Route53RecordSet}
  */
 Route53RecordSet.prototype.aliasTarget = function(value) {
 	return this.set('AliasTarget', value);
@@ -32,46 +32,46 @@ Route53RecordSet.prototype.aliasTarget = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {Route53RecordSet}
+ * @returns {Route53RecordSet}
  */
 Route53RecordSet.prototype.comment = function(value) {
 	return this.set('Comment', value);
 };
 
 /**
- * Designates the record set as a PRIMARY or SECONDARY failover record set. When you have more than one resource performing the same function, you can configure Amazon Route 53 to check the health of your resources and use only health resources to respond to DNS queries. You cannot create nonfailover resource record sets that have the same Name and Type property values as failover resource record sets. For more information, see the Failover element in the Amazon Route 53 API Reference.
+ * Designates the record set as a PRIMARY or SECONDARY failover record set. When you have more than one resource performing the same function, you can configure Amazon Route 53 to check the health of your resources and use only health resources to respond to DNS queries. You cannot create nonfailover resource record sets that have the same Name and Type property values as failover resource record sets. For more information, see the Failover element in the Amazon Route 53 API Reference.
  *
  * Required: false
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {Route53RecordSet}
+ * @returns {Route53RecordSet}
  */
 Route53RecordSet.prototype.failover = function(value) {
 	return this.set('Failover', value);
 };
 
 /**
- * Describes how Amazon Route 53 responds to DNS queries based on the geographic origin of the query.
+ * Describes how Amazon Route 53 responds to DNS queries based on the geographic origin of the query.
  *
  * Required: false
  * Update requires: No interruption
  *
- * @param {Route53RecordSetGeoLocationProperty|Attribute|Reference} value Amazon Route 53 Record Set GeoLocation Property
- * @return {Route53RecordSet}
+ * @param {Route53RecordSetGeoLocationProperty|Attribute|Reference} value Amazon Route 53 Record Set GeoLocation Property
+ * @returns {Route53RecordSet}
  */
 Route53RecordSet.prototype.geoLocation = function(value) {
 	return this.set('GeoLocation', value);
 };
 
 /**
- * The health check ID that you want to apply to this record set. Amazon Route 53 returns this resource record set in response to a DNS query only while record set is healthy.
+ * The health check ID that you want to apply to this record set. Amazon Route 53 returns this resource record set in response to a DNS query only while record set is healthy.
  *
  * Required: false
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {Route53RecordSet}
+ * @returns {Route53RecordSet}
  */
 Route53RecordSet.prototype.healthCheckId = function(value) {
 	return this.set('HealthCheckId', value);
@@ -84,7 +84,7 @@ Route53RecordSet.prototype.healthCheckId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {Route53RecordSet}
+ * @returns {Route53RecordSet}
  */
 Route53RecordSet.prototype.hostedZoneId = function(value) {
 	return this.set('HostedZoneId', value);
@@ -97,7 +97,7 @@ Route53RecordSet.prototype.hostedZoneId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {Route53RecordSet}
+ * @returns {Route53RecordSet}
  */
 Route53RecordSet.prototype.hostedZoneName = function(value) {
 	return this.set('HostedZoneName', value);
@@ -110,7 +110,7 @@ Route53RecordSet.prototype.hostedZoneName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {Route53RecordSet}
+ * @returns {Route53RecordSet}
  */
 Route53RecordSet.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -122,21 +122,21 @@ Route53RecordSet.prototype.name = function(value) {
  * Required: false
  * Update requires: undefined
  *
- * @param {|Attribute|Reference} value
- * @return {Route53RecordSet}
+ * @param {Attribute|Reference} value
+ * @returns {Route53RecordSet}
  */
 Route53RecordSet.prototype.region = function(value) {
 	return this.set('Region', value);
 };
 
 /**
- * List of resource records to add. Each record should be in the format appropriate for the record type specified by the Type property. For information about different record types and their record formats, see Appendix: Domain Name Format in the Amazon Route 53 Developer Guide.
+ * List of resource records to add. Each record should be in the format appropriate for the record type specified by the Type property. For information about different record types and their record formats, see Appendix: Domain Name Format in the Amazon Route 53 Developer Guide.
  *
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {Route53RecordSet}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {Route53RecordSet}
  */
 Route53RecordSet.prototype.resourceRecords = function(value) {
 	return this.set('ResourceRecords', value);
@@ -149,7 +149,7 @@ Route53RecordSet.prototype.resourceRecords = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {Route53RecordSet}
+ * @returns {Route53RecordSet}
  */
 Route53RecordSet.prototype.setIdentifier = function(value) {
 	return this.set('SetIdentifier', value);
@@ -162,7 +162,7 @@ Route53RecordSet.prototype.setIdentifier = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {Route53RecordSet}
+ * @returns {Route53RecordSet}
  */
 Route53RecordSet.prototype.ttl = function(value) {
 	return this.set('TTL', value);
@@ -175,7 +175,7 @@ Route53RecordSet.prototype.ttl = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {Route53RecordSet}
+ * @returns {Route53RecordSet}
  */
 Route53RecordSet.prototype.type = function(value) {
 	return this.set('Type', value);
@@ -188,7 +188,7 @@ Route53RecordSet.prototype.type = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value Number. Weight expects integer values.
- * @return {Route53RecordSet}
+ * @returns {Route53RecordSet}
  */
 Route53RecordSet.prototype.weight = function(value) {
 	return this.set('Weight', value);

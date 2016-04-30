@@ -17,7 +17,7 @@ APIGatewayMethodMethodResponse.prototype = Object.create(PropertyType.prototype)
  * Required: false
  *
  * @param {key[]} value
- * @return {APIGatewayMethodMethodResponse}
+ * @returns {APIGatewayMethodMethodResponse}
  */
 APIGatewayMethodMethodResponse.prototype.responseModels = function(value) {
 	return this.set('ResponseModels', value);
@@ -29,7 +29,7 @@ APIGatewayMethodMethodResponse.prototype.responseModels = function(value) {
  * Required: false
  *
  * @param {key[]} value
- * @return {APIGatewayMethodMethodResponse}
+ * @returns {APIGatewayMethodMethodResponse}
  */
 APIGatewayMethodMethodResponse.prototype.responseParameters = function(value) {
 	return this.set('ResponseParameters', value);
@@ -41,7 +41,7 @@ APIGatewayMethodMethodResponse.prototype.responseParameters = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayMethodMethodResponse}
+ * @returns {APIGatewayMethodMethodResponse}
  */
 APIGatewayMethodMethodResponse.prototype.statusCode = function(value) {
 	return this.set('StatusCode', value);

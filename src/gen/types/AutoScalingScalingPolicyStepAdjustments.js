@@ -17,7 +17,7 @@ AutoScalingScalingPolicyStepAdjustments.prototype = Object.create(PropertyType.p
  * Required: false
  *
  * @param {Number} value
- * @return {AutoScalingScalingPolicyStepAdjustments}
+ * @returns {AutoScalingScalingPolicyStepAdjustments}
  */
 AutoScalingScalingPolicyStepAdjustments.prototype.metricIntervalLowerBound = function(value) {
 	return this.set('MetricIntervalLowerBound', value);
@@ -29,7 +29,7 @@ AutoScalingScalingPolicyStepAdjustments.prototype.metricIntervalLowerBound = fun
  * Required: false
  *
  * @param {Number} value
- * @return {AutoScalingScalingPolicyStepAdjustments}
+ * @returns {AutoScalingScalingPolicyStepAdjustments}
  */
 AutoScalingScalingPolicyStepAdjustments.prototype.metricIntervalUpperBound = function(value) {
 	return this.set('MetricIntervalUpperBound', value);
@@ -41,7 +41,7 @@ AutoScalingScalingPolicyStepAdjustments.prototype.metricIntervalUpperBound = fun
  * Required: true
  *
  * @param {Number} value
- * @return {AutoScalingScalingPolicyStepAdjustments}
+ * @returns {AutoScalingScalingPolicyStepAdjustments}
  */
 AutoScalingScalingPolicyStepAdjustments.prototype.scalingAdjustment = function(value) {
 	return this.set('ScalingAdjustment', value);

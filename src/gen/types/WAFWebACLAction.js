@@ -17,7 +17,7 @@ WAFWebACLAction.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {WAFWebACLAction}
+ * @returns {WAFWebACLAction}
  */
 WAFWebACLAction.prototype.type = function(value) {
 	return this.set('Type', value);

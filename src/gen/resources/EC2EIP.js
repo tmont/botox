@@ -19,15 +19,15 @@ EC2EIP.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(EC2EIP.prototype, 'attr', {
 	/**
-	 * @return {EC2EIPAttributeMap}
+	 * @returns {EC2EIPAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The ID that AWS assigns to represent the allocation of the address for use with Amazon VPC. This is returned only for VPC elastic IP addresses. Example return value: eipalloc-5723d13e
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get allocationId() {
 				return createAttribute('AllocationId');
@@ -43,7 +43,7 @@ Object.defineProperty(EC2EIP.prototype, 'attr', {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2EIP}
+ * @returns {EC2EIP}
  */
 EC2EIP.prototype.instanceId = function(value) {
 	return this.set('InstanceId', value);
@@ -56,7 +56,7 @@ EC2EIP.prototype.instanceId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2EIP}
+ * @returns {EC2EIP}
  */
 EC2EIP.prototype.domain = function(value) {
 	return this.set('Domain', value);

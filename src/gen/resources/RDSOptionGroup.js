@@ -19,7 +19,7 @@ RDSOptionGroup.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSOptionGroup}
+ * @returns {RDSOptionGroup}
  */
 RDSOptionGroup.prototype.engineName = function(value) {
 	return this.set('EngineName', value);
@@ -32,7 +32,7 @@ RDSOptionGroup.prototype.engineName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSOptionGroup}
+ * @returns {RDSOptionGroup}
  */
 RDSOptionGroup.prototype.majorEngineVersion = function(value) {
 	return this.set('MajorEngineVersion', value);
@@ -45,7 +45,7 @@ RDSOptionGroup.prototype.majorEngineVersion = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSOptionGroup}
+ * @returns {RDSOptionGroup}
  */
 RDSOptionGroup.prototype.optionGroupDescription = function(value) {
 	return this.set('OptionGroupDescription', value);
@@ -58,7 +58,7 @@ RDSOptionGroup.prototype.optionGroupDescription = function(value) {
  * Update requires: Replacement
  *
  * @param {RDSOptionGroupOptionConfigurations|Attribute|Reference} value Amazon RDS OptionGroup OptionConfigurations
- * @return {RDSOptionGroup}
+ * @returns {RDSOptionGroup}
  */
 RDSOptionGroup.prototype.optionConfigurations = function(value) {
 	return this.set('OptionConfigurations', value);
@@ -71,7 +71,7 @@ RDSOptionGroup.prototype.optionConfigurations = function(value) {
  * Update requires: No interruption
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {RDSOptionGroup}
+ * @returns {RDSOptionGroup}
  */
 RDSOptionGroup.prototype.tags = function(value) {
 	return this.set('Tags', value);

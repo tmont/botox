@@ -19,15 +19,15 @@ SNSTopic.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(SNSTopic.prototype, 'attr', {
 	/**
-	 * @return {SNSTopicAttributeMap}
+	 * @returns {SNSTopicAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * Returns the name for an Amazon SNS topic.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get topicName() {
 				return createAttribute('TopicName');
@@ -43,7 +43,7 @@ Object.defineProperty(SNSTopic.prototype, 'attr', {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {SNSTopic}
+ * @returns {SNSTopic}
  */
 SNSTopic.prototype.displayName = function(value) {
 	return this.set('DisplayName', value);
@@ -56,7 +56,7 @@ SNSTopic.prototype.displayName = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {SNSSubscriptionPropertyType[]|Attribute|Reference} value List of SNS Subscriptions
- * @return {SNSTopic}
+ * @returns {SNSTopic}
  */
 SNSTopic.prototype.subscription = function(value) {
 	return this.set('Subscription', value);
@@ -69,7 +69,7 @@ SNSTopic.prototype.subscription = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {SNSTopic}
+ * @returns {SNSTopic}
  */
 SNSTopic.prototype.topicName = function(value) {
 	return this.set('TopicName', value);

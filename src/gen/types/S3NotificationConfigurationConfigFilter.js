@@ -17,7 +17,7 @@ S3NotificationConfigurationConfigFilter.prototype = Object.create(PropertyType.p
  * Required: true
  *
  * @param {S3NotificationConfigurationConfigFilterS3Key} value
- * @return {S3NotificationConfigurationConfigFilter}
+ * @returns {S3NotificationConfigurationConfigFilter}
  */
 S3NotificationConfigurationConfigFilter.prototype.s3Key = function(value) {
 	return this.set('S3Key', value);

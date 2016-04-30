@@ -17,7 +17,7 @@ ElasticFileSystemFileSystemFileSystemTags.prototype = Object.create(PropertyType
  * Required: false
  *
  * @param {String} value
- * @return {ElasticFileSystemFileSystemFileSystemTags}
+ * @returns {ElasticFileSystemFileSystemFileSystemTags}
  */
 ElasticFileSystemFileSystemFileSystemTags.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -29,7 +29,7 @@ ElasticFileSystemFileSystemFileSystemTags.prototype.key = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {ElasticFileSystemFileSystemFileSystemTags}
+ * @returns {ElasticFileSystemFileSystemFileSystemTags}
  */
 ElasticFileSystemFileSystemFileSystemTags.prototype.value = function(value) {
 	return this.set('Value', value);

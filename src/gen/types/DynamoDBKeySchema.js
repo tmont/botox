@@ -17,7 +17,7 @@ DynamoDBKeySchema.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {DynamoDBKeySchema}
+ * @returns {DynamoDBKeySchema}
  */
 DynamoDBKeySchema.prototype.attributeName = function(value) {
 	return this.set('AttributeName', value);
@@ -29,7 +29,7 @@ DynamoDBKeySchema.prototype.attributeName = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {DynamoDBKeySchema}
+ * @returns {DynamoDBKeySchema}
  */
 DynamoDBKeySchema.prototype.keyType = function(value) {
 	return this.set('KeyType', value);

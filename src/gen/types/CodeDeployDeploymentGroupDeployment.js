@@ -17,7 +17,7 @@ CodeDeployDeploymentGroupDeployment.prototype = Object.create(PropertyType.proto
  * Required: false
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupDeployment}
+ * @returns {CodeDeployDeploymentGroupDeployment}
  */
 CodeDeployDeploymentGroupDeployment.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -29,7 +29,7 @@ CodeDeployDeploymentGroupDeployment.prototype.description = function(value) {
  * Required: false
  *
  * @param {Boolean} value
- * @return {CodeDeployDeploymentGroupDeployment}
+ * @returns {CodeDeployDeploymentGroupDeployment}
  */
 CodeDeployDeploymentGroupDeployment.prototype.ignoreApplicationStopFailures = function(value) {
 	return this.set('IgnoreApplicationStopFailures', value);
@@ -41,7 +41,7 @@ CodeDeployDeploymentGroupDeployment.prototype.ignoreApplicationStopFailures = fu
  * Required: true
  *
  * @param {CodeDeployDeploymentGroupDeploymentRevision} value
- * @return {CodeDeployDeploymentGroupDeployment}
+ * @returns {CodeDeployDeploymentGroupDeployment}
  */
 CodeDeployDeploymentGroupDeployment.prototype.revision = function(value) {
 	return this.set('Revision', value);

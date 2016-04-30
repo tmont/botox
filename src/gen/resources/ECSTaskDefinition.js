@@ -19,7 +19,7 @@ ECSTaskDefinition.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {EC2ContainerServiceTaskDefinitionContainerDefinitions[]|Attribute|Reference} value List of Amazon EC2 Container Service TaskDefinition ContainerDefinitions
- * @return {ECSTaskDefinition}
+ * @returns {ECSTaskDefinition}
  */
 ECSTaskDefinition.prototype.containerDefinitions = function(value) {
 	return this.set('ContainerDefinitions', value);
@@ -32,7 +32,7 @@ ECSTaskDefinition.prototype.containerDefinitions = function(value) {
  * Update requires: Replacement
  *
  * @param {EC2ContainerServiceTaskDefinitionVolumes[]|Attribute|Reference} value List of Amazon EC2 Container Service TaskDefinition Volumes
- * @return {ECSTaskDefinition}
+ * @returns {ECSTaskDefinition}
  */
 ECSTaskDefinition.prototype.volumes = function(value) {
 	return this.set('Volumes', value);

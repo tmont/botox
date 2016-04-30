@@ -19,15 +19,15 @@ EC2Subnet.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(EC2Subnet.prototype, 'attr', {
 	/**
-	 * @return {EC2SubnetAttributeMap}
+	 * @returns {EC2SubnetAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * Returns the availability zone (for example, "us-east-1a") of this subnet.Example: { "Fn::GetAtt" : [ "mySubnet", "AvailabilityZone" ] }
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get availabilityZone() {
 				return createAttribute('AvailabilityZone');
@@ -43,7 +43,7 @@ Object.defineProperty(EC2Subnet.prototype, 'attr', {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Subnet}
+ * @returns {EC2Subnet}
  */
 EC2Subnet.prototype.availabilityZone = function(value) {
 	return this.set('AvailabilityZone', value);
@@ -56,7 +56,7 @@ EC2Subnet.prototype.availabilityZone = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Subnet}
+ * @returns {EC2Subnet}
  */
 EC2Subnet.prototype.cidrBlock = function(value) {
 	return this.set('CidrBlock', value);
@@ -69,7 +69,7 @@ EC2Subnet.prototype.cidrBlock = function(value) {
  * Update requires: No interruption.
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {EC2Subnet}
+ * @returns {EC2Subnet}
  */
 EC2Subnet.prototype.mapPublicIpOnLaunch = function(value) {
 	return this.set('MapPublicIpOnLaunch', value);
@@ -82,7 +82,7 @@ EC2Subnet.prototype.mapPublicIpOnLaunch = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {EC2Subnet}
+ * @returns {EC2Subnet}
  */
 EC2Subnet.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -95,7 +95,7 @@ EC2Subnet.prototype.tags = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Subnet}
+ * @returns {EC2Subnet}
  */
 EC2Subnet.prototype.vpcId = function(value) {
 	return this.set('VpcId', value);

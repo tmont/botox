@@ -17,7 +17,7 @@ S3CorsConfiguration.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {S3CorsConfigurationRule} value
- * @return {S3CorsConfiguration}
+ * @returns {S3CorsConfiguration}
  */
 S3CorsConfiguration.prototype.corsRules = function(value) {
 	return this.set('CorsRules', value);

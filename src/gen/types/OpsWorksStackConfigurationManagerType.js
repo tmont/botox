@@ -17,7 +17,7 @@ OpsWorksStackConfigurationManagerType.prototype = Object.create(PropertyType.pro
  * Required: false
  *
  * @param {String} value
- * @return {OpsWorksStackConfigurationManagerType}
+ * @returns {OpsWorksStackConfigurationManagerType}
  */
 OpsWorksStackConfigurationManagerType.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -29,7 +29,7 @@ OpsWorksStackConfigurationManagerType.prototype.name = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {OpsWorksStackConfigurationManagerType}
+ * @returns {OpsWorksStackConfigurationManagerType}
  */
 OpsWorksStackConfigurationManagerType.prototype.version = function(value) {
 	return this.set('Version', value);

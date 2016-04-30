@@ -17,7 +17,7 @@ CloudFrontForwardedValues.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {CloudFrontForwardedValuesCookies} value
- * @return {CloudFrontForwardedValues}
+ * @returns {CloudFrontForwardedValues}
  */
 CloudFrontForwardedValues.prototype.cookies = function(value) {
 	return this.set('Cookies', value);
@@ -28,8 +28,8 @@ CloudFrontForwardedValues.prototype.cookies = function(value) {
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {CloudFrontForwardedValues}
+ * @param {String[]} value
+ * @returns {CloudFrontForwardedValues}
  */
 CloudFrontForwardedValues.prototype.headers = function(value) {
 	return this.set('Headers', value);
@@ -41,7 +41,7 @@ CloudFrontForwardedValues.prototype.headers = function(value) {
  * Required: true
  *
  * @param {Boolean} value
- * @return {CloudFrontForwardedValues}
+ * @returns {CloudFrontForwardedValues}
  */
 CloudFrontForwardedValues.prototype.queryString = function(value) {
 	return this.set('QueryString', value);

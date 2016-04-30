@@ -17,7 +17,7 @@ CloudFormationInterfaceLabel.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {String} value
- * @return {CloudFormationInterfaceLabel}
+ * @returns {CloudFormationInterfaceLabel}
  */
 CloudFormationInterfaceLabel.prototype.default = function(value) {
 	return this.set('default', value);

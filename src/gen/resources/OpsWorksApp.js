@@ -19,7 +19,7 @@ OpsWorksApp.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {OpsWorksSourceType|Attribute|Reference} value AWS OpsWorks Source Type
- * @return {OpsWorksApp}
+ * @returns {OpsWorksApp}
  */
 OpsWorksApp.prototype.appSource = function(value) {
 	return this.set('AppSource', value);
@@ -32,7 +32,7 @@ OpsWorksApp.prototype.appSource = function(value) {
  * Update requires: No interruption
  *
  * @param {key[]|Attribute|Reference} value A list of key-value pairs
- * @return {OpsWorksApp}
+ * @returns {OpsWorksApp}
  */
 OpsWorksApp.prototype.attributes = function(value) {
 	return this.set('Attributes', value);
@@ -45,7 +45,7 @@ OpsWorksApp.prototype.attributes = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksApp}
+ * @returns {OpsWorksApp}
  */
 OpsWorksApp.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -57,8 +57,8 @@ OpsWorksApp.prototype.description = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {OpsWorksApp}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {OpsWorksApp}
  */
 OpsWorksApp.prototype.domains = function(value) {
 	return this.set('Domains', value);
@@ -71,7 +71,7 @@ OpsWorksApp.prototype.domains = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {OpsWorksApp}
+ * @returns {OpsWorksApp}
  */
 OpsWorksApp.prototype.enableSsl = function(value) {
 	return this.set('EnableSsl', value);
@@ -84,7 +84,7 @@ OpsWorksApp.prototype.enableSsl = function(value) {
  * Update requires: No interruption
  *
  * @param {OpsWorksAppEnvironment[]|Attribute|Reference} value List of AWS OpsWorks App Environment
- * @return {OpsWorksApp}
+ * @returns {OpsWorksApp}
  */
 OpsWorksApp.prototype.environment = function(value) {
 	return this.set('Environment', value);
@@ -97,7 +97,7 @@ OpsWorksApp.prototype.environment = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksApp}
+ * @returns {OpsWorksApp}
  */
 OpsWorksApp.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -110,7 +110,7 @@ OpsWorksApp.prototype.name = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksApp}
+ * @returns {OpsWorksApp}
  */
 OpsWorksApp.prototype.shortname = function(value) {
 	return this.set('Shortname', value);
@@ -123,7 +123,7 @@ OpsWorksApp.prototype.shortname = function(value) {
  * Update requires: No interruption
  *
  * @param {OpsWorksSslConfigurationType|Attribute|Reference} value AWS OpsWorks SslConfiguration Type
- * @return {OpsWorksApp}
+ * @returns {OpsWorksApp}
  */
 OpsWorksApp.prototype.sslConfiguration = function(value) {
 	return this.set('SslConfiguration', value);
@@ -136,7 +136,7 @@ OpsWorksApp.prototype.sslConfiguration = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksApp}
+ * @returns {OpsWorksApp}
  */
 OpsWorksApp.prototype.stackId = function(value) {
 	return this.set('StackId', value);
@@ -149,7 +149,7 @@ OpsWorksApp.prototype.stackId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksApp}
+ * @returns {OpsWorksApp}
  */
 OpsWorksApp.prototype.type = function(value) {
 	return this.set('Type', value);

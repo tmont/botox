@@ -14,7 +14,7 @@
       "description": "Specifies the headers that you want Amazon CloudFront to forward to the origin for this cache behavior (whitelisted headers). For the headers that you specify, Amazon CloudFront also caches separate versions of a specified object that is based on the header values in viewer requests.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "QueryString",

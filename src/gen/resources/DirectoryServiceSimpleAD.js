@@ -20,15 +20,15 @@ DirectoryServiceSimpleAD.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(DirectoryServiceSimpleAD.prototype, 'attr', {
 	/**
-	 * @return {DirectoryServiceSimpleADAttributeMap}
+	 * @returns {DirectoryServiceSimpleADAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The alias for a directory. For example: d-12373a053a or alias4-mydirectory-12345abcgmzsk (if you have the CreateAlias property set to true).
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get alias() {
 				return createAttribute('Alias');
@@ -36,7 +36,7 @@ Object.defineProperty(DirectoryServiceSimpleAD.prototype, 'attr', {
 
 			/**
 			 * The IP addresses of the DNS servers for the directory, such as [ "172.31.3.154", "172.31.63.203" ].
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get dnsIpAddresses() {
 				return createAttribute('DnsIpAddresses');
@@ -52,7 +52,7 @@ Object.defineProperty(DirectoryServiceSimpleAD.prototype, 'attr', {
  * Update requires: Replacement
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {DirectoryServiceSimpleAD}
+ * @returns {DirectoryServiceSimpleAD}
  */
 DirectoryServiceSimpleAD.prototype.createAlias = function(value) {
 	return this.set('CreateAlias', value);
@@ -65,7 +65,7 @@ DirectoryServiceSimpleAD.prototype.createAlias = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {DirectoryServiceSimpleAD}
+ * @returns {DirectoryServiceSimpleAD}
  */
 DirectoryServiceSimpleAD.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -78,7 +78,7 @@ DirectoryServiceSimpleAD.prototype.description = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {DirectoryServiceSimpleAD}
+ * @returns {DirectoryServiceSimpleAD}
  */
 DirectoryServiceSimpleAD.prototype.enableSso = function(value) {
 	return this.set('EnableSso', value);
@@ -91,7 +91,7 @@ DirectoryServiceSimpleAD.prototype.enableSso = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {DirectoryServiceSimpleAD}
+ * @returns {DirectoryServiceSimpleAD}
  */
 DirectoryServiceSimpleAD.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -104,7 +104,7 @@ DirectoryServiceSimpleAD.prototype.name = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {DirectoryServiceSimpleAD}
+ * @returns {DirectoryServiceSimpleAD}
  */
 DirectoryServiceSimpleAD.prototype.password = function(value) {
 	return this.set('Password', value);
@@ -117,7 +117,7 @@ DirectoryServiceSimpleAD.prototype.password = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {DirectoryServiceSimpleAD}
+ * @returns {DirectoryServiceSimpleAD}
  */
 DirectoryServiceSimpleAD.prototype.shortName = function(value) {
 	return this.set('ShortName', value);
@@ -130,7 +130,7 @@ DirectoryServiceSimpleAD.prototype.shortName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {DirectoryServiceSimpleAD}
+ * @returns {DirectoryServiceSimpleAD}
  */
 DirectoryServiceSimpleAD.prototype.size = function(value) {
 	return this.set('Size', value);
@@ -143,7 +143,7 @@ DirectoryServiceSimpleAD.prototype.size = function(value) {
  * Update requires: Replacement
  *
  * @param {DirectoryServiceSimpleADVpcSettings|Attribute|Reference} value AWS Directory Service SimpleAD VpcSettings
- * @return {DirectoryServiceSimpleAD}
+ * @returns {DirectoryServiceSimpleAD}
  */
 DirectoryServiceSimpleAD.prototype.vpcSettings = function(value) {
 	return this.set('VpcSettings', value);

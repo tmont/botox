@@ -16,8 +16,8 @@ LambdaFunctionVPCConfig.prototype = Object.create(PropertyType.prototype);
  *
  * Required: true
  *
- * @param {string[]} value
- * @return {LambdaFunctionVPCConfig}
+ * @param {String[]} value
+ * @returns {LambdaFunctionVPCConfig}
  */
 LambdaFunctionVPCConfig.prototype.securityGroupIds = function(value) {
 	return this.set('SecurityGroupIds', value);
@@ -28,8 +28,8 @@ LambdaFunctionVPCConfig.prototype.securityGroupIds = function(value) {
  *
  * Required: true
  *
- * @param {string[]} value
- * @return {LambdaFunctionVPCConfig}
+ * @param {String[]} value
+ * @returns {LambdaFunctionVPCConfig}
  */
 LambdaFunctionVPCConfig.prototype.subnetIds = function(value) {
 	return this.set('SubnetIds', value);

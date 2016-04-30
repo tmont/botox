@@ -17,7 +17,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration.prototype 
  * Required: true
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration.prototype.logDriver = function(value) {
 	return this.set('LogDriver', value);
@@ -29,7 +29,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration.prototype.
  * Required: false
  *
  * @param {Object} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration.prototype.options = function(value) {
 	return this.set('Options', value);

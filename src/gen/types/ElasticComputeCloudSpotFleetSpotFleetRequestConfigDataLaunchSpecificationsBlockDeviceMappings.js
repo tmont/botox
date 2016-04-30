@@ -17,7 +17,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockD
  * Required: true
  *
  * @param {String} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings.prototype.deviceName = function(value) {
 	return this.set('DeviceName', value);
@@ -29,7 +29,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockD
  * Required: false
  *
  * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappingsEbs} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings.prototype.ebs = function(value) {
 	return this.set('Ebs', value);
@@ -41,7 +41,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockD
  * Required: false
  *
  * @param {Boolean} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings.prototype.noDevice = function(value) {
 	return this.set('NoDevice', value);
@@ -53,7 +53,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockD
  * Required: false
  *
  * @param {String} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsBlockDeviceMappings.prototype.virtualName = function(value) {
 	return this.set('VirtualName', value);

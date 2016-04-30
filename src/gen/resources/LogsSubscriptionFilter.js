@@ -19,7 +19,7 @@ LogsSubscriptionFilter.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LogsSubscriptionFilter}
+ * @returns {LogsSubscriptionFilter}
  */
 LogsSubscriptionFilter.prototype.destinationArn = function(value) {
 	return this.set('DestinationArn', value);
@@ -32,7 +32,7 @@ LogsSubscriptionFilter.prototype.destinationArn = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LogsSubscriptionFilter}
+ * @returns {LogsSubscriptionFilter}
  */
 LogsSubscriptionFilter.prototype.filterPattern = function(value) {
 	return this.set('FilterPattern', value);
@@ -45,7 +45,7 @@ LogsSubscriptionFilter.prototype.filterPattern = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LogsSubscriptionFilter}
+ * @returns {LogsSubscriptionFilter}
  */
 LogsSubscriptionFilter.prototype.logGroupName = function(value) {
 	return this.set('LogGroupName', value);
@@ -58,7 +58,7 @@ LogsSubscriptionFilter.prototype.logGroupName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LogsSubscriptionFilter}
+ * @returns {LogsSubscriptionFilter}
  */
 LogsSubscriptionFilter.prototype.roleArn = function(value) {
 	return this.set('RoleArn', value);

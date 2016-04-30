@@ -19,7 +19,7 @@ WorkSpacesWorkspace.prototype = Object.create(Resource.prototype);
  * Update requires: Updates are not supported.. To update this property, you must also update another property that triggers a replacement, such as the UserName property.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {WorkSpacesWorkspace}
+ * @returns {WorkSpacesWorkspace}
  */
 WorkSpacesWorkspace.prototype.bundleId = function(value) {
 	return this.set('BundleId', value);
@@ -32,7 +32,7 @@ WorkSpacesWorkspace.prototype.bundleId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {WorkSpacesWorkspace}
+ * @returns {WorkSpacesWorkspace}
  */
 WorkSpacesWorkspace.prototype.directoryId = function(value) {
 	return this.set('DirectoryId', value);
@@ -45,7 +45,7 @@ WorkSpacesWorkspace.prototype.directoryId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {WorkSpacesWorkspace}
+ * @returns {WorkSpacesWorkspace}
  */
 WorkSpacesWorkspace.prototype.userName = function(value) {
 	return this.set('UserName', value);
@@ -58,7 +58,7 @@ WorkSpacesWorkspace.prototype.userName = function(value) {
  * Update requires: Updates are not supported.. To update this property, you must also update another property that triggers a replacement, such as the UserName property.
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {WorkSpacesWorkspace}
+ * @returns {WorkSpacesWorkspace}
  */
 WorkSpacesWorkspace.prototype.rootVolumeEncryptionEnabled = function(value) {
 	return this.set('RootVolumeEncryptionEnabled', value);
@@ -71,7 +71,7 @@ WorkSpacesWorkspace.prototype.rootVolumeEncryptionEnabled = function(value) {
  * Update requires: Updates are not supported.. To update this property, you must also update another property that triggers a replacement, such as the UserName property.
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {WorkSpacesWorkspace}
+ * @returns {WorkSpacesWorkspace}
  */
 WorkSpacesWorkspace.prototype.userVolumeEncryptionEnabled = function(value) {
 	return this.set('UserVolumeEncryptionEnabled', value);
@@ -84,7 +84,7 @@ WorkSpacesWorkspace.prototype.userVolumeEncryptionEnabled = function(value) {
  * Update requires: Updates are not supported.. To update this property, you must also update another property that triggers a replacement, such as the UserName property.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {WorkSpacesWorkspace}
+ * @returns {WorkSpacesWorkspace}
  */
 WorkSpacesWorkspace.prototype.volumeEncryptionKey = function(value) {
 	return this.set('VolumeEncryptionKey', value);

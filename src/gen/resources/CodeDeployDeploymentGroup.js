@@ -19,7 +19,7 @@ CodeDeployDeploymentGroup.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CodeDeployDeploymentGroup}
+ * @returns {CodeDeployDeploymentGroup}
  */
 CodeDeployDeploymentGroup.prototype.applicationName = function(value) {
 	return this.set('ApplicationName', value);
@@ -31,8 +31,8 @@ CodeDeployDeploymentGroup.prototype.applicationName = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {CodeDeployDeploymentGroup}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {CodeDeployDeploymentGroup}
  */
 CodeDeployDeploymentGroup.prototype.autoScalingGroups = function(value) {
 	return this.set('AutoScalingGroups', value);
@@ -45,7 +45,7 @@ CodeDeployDeploymentGroup.prototype.autoScalingGroups = function(value) {
  * Update requires: No interruption
  *
  * @param {CodeDeployDeploymentGroupDeployment|Attribute|Reference} value AWS CodeDeploy DeploymentGroup Deployment
- * @return {CodeDeployDeploymentGroup}
+ * @returns {CodeDeployDeploymentGroup}
  */
 CodeDeployDeploymentGroup.prototype.deployment = function(value) {
 	return this.set('Deployment', value);
@@ -58,7 +58,7 @@ CodeDeployDeploymentGroup.prototype.deployment = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CodeDeployDeploymentGroup}
+ * @returns {CodeDeployDeploymentGroup}
  */
 CodeDeployDeploymentGroup.prototype.deploymentConfigName = function(value) {
 	return this.set('DeploymentConfigName', value);
@@ -71,7 +71,7 @@ CodeDeployDeploymentGroup.prototype.deploymentConfigName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CodeDeployDeploymentGroup}
+ * @returns {CodeDeployDeploymentGroup}
  */
 CodeDeployDeploymentGroup.prototype.deploymentGroupName = function(value) {
 	return this.set('DeploymentGroupName', value);
@@ -84,7 +84,7 @@ CodeDeployDeploymentGroup.prototype.deploymentGroupName = function(value) {
  * Update requires: No interruption
  *
  * @param {CodeDeployDeploymentGroupEc2TagFilters|Attribute|Reference} value AWS CodeDeploy DeploymentGroup Ec2TagFilters
- * @return {CodeDeployDeploymentGroup}
+ * @returns {CodeDeployDeploymentGroup}
  */
 CodeDeployDeploymentGroup.prototype.ec2TagFilters = function(value) {
 	return this.set('Ec2TagFilters', value);
@@ -97,7 +97,7 @@ CodeDeployDeploymentGroup.prototype.ec2TagFilters = function(value) {
  * Update requires: No interruption
  *
  * @param {CodeDeployDeploymentGroupOnPremisesInstanceTagFilters|Attribute|Reference} value AWS CodeDeploy DeploymentGroup OnPremisesInstanceTagFilters
- * @return {CodeDeployDeploymentGroup}
+ * @returns {CodeDeployDeploymentGroup}
  */
 CodeDeployDeploymentGroup.prototype.onPremisesInstanceTagFilters = function(value) {
 	return this.set('OnPremisesInstanceTagFilters', value);
@@ -110,7 +110,7 @@ CodeDeployDeploymentGroup.prototype.onPremisesInstanceTagFilters = function(valu
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CodeDeployDeploymentGroup}
+ * @returns {CodeDeployDeploymentGroup}
  */
 CodeDeployDeploymentGroup.prototype.serviceRoleArn = function(value) {
 	return this.set('ServiceRoleArn', value);

@@ -1,6 +1,6 @@
 {
   "name": "Route53RecordSetGeoLocationProperty",
-  "description": "The GeoLocation property is part of the AWS::Route53::RecordSet resource that describes how Amazon Route 53 responds to DNS queries based on the geographic location of the query.",
+  "description": "The GeoLocation property is part of the AWS::Route53::RecordSet resource that describes how Amazon Route 53 responds to DNS queries based on the geographic location of the query.",
   "properties": [
     {
       "name": "ContinentCode",

@@ -19,7 +19,7 @@ ApiGatewayMethod.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {ApiGatewayMethod}
+ * @returns {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.apiKeyRequired = function(value) {
 	return this.set('ApiKeyRequired', value);
@@ -32,7 +32,7 @@ ApiGatewayMethod.prototype.apiKeyRequired = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayMethod}
+ * @returns {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.authorizationType = function(value) {
 	return this.set('AuthorizationType', value);
@@ -45,7 +45,7 @@ ApiGatewayMethod.prototype.authorizationType = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayMethod}
+ * @returns {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.authorizerId = function(value) {
 	return this.set('AuthorizerId', value);
@@ -58,7 +58,7 @@ ApiGatewayMethod.prototype.authorizerId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayMethod}
+ * @returns {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.httpMethod = function(value) {
 	return this.set('HttpMethod', value);
@@ -71,7 +71,7 @@ ApiGatewayMethod.prototype.httpMethod = function(value) {
  * Update requires: No interruption
  *
  * @param {APIGatewayMethodIntegration|Attribute|Reference} value Amazon API Gateway Method Integration
- * @return {ApiGatewayMethod}
+ * @returns {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.integration = function(value) {
 	return this.set('Integration', value);
@@ -84,7 +84,7 @@ ApiGatewayMethod.prototype.integration = function(value) {
  * Update requires: No interruption
  *
  * @param {APIGatewayMethodMethodResponse[]|Attribute|Reference} value List of Amazon API Gateway Method MethodResponse
- * @return {ApiGatewayMethod}
+ * @returns {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.methodResponses = function(value) {
 	return this.set('MethodResponses', value);
@@ -97,7 +97,7 @@ ApiGatewayMethod.prototype.methodResponses = function(value) {
  * Update requires: No interruption
  *
  * @param {key[]|Attribute|Reference} value List of key-value pairs
- * @return {ApiGatewayMethod}
+ * @returns {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.requestModels = function(value) {
 	return this.set('RequestModels', value);
@@ -110,7 +110,7 @@ ApiGatewayMethod.prototype.requestModels = function(value) {
  * Update requires: No interruption
  *
  * @param {key[]|Attribute|Reference} value List of key-value pairs
- * @return {ApiGatewayMethod}
+ * @returns {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.requestParameters = function(value) {
 	return this.set('RequestParameters', value);
@@ -123,7 +123,7 @@ ApiGatewayMethod.prototype.requestParameters = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayMethod}
+ * @returns {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.resourceId = function(value) {
 	return this.set('ResourceId', value);
@@ -136,7 +136,7 @@ ApiGatewayMethod.prototype.resourceId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayMethod}
+ * @returns {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.restApiId = function(value) {
 	return this.set('RestApiId', value);

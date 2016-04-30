@@ -19,15 +19,15 @@ CloudFrontDistribution.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(CloudFrontDistribution.prototype, 'attr', {
 	/**
-	 * @return {CloudFrontDistributionAttributeMap}
+	 * @returns {CloudFrontDistributionAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * Returns: The domain name of the resource. For example: d2fadu0nynjpfn.cloudfront.net.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get domainName() {
 				return createAttribute('DomainName');
@@ -43,7 +43,7 @@ Object.defineProperty(CloudFrontDistribution.prototype, 'attr', {
  * Update requires: No interruption
  *
  * @param {CloudFrontDistributionConfig|Attribute|Reference} value DistributionConfig type
- * @return {CloudFrontDistribution}
+ * @returns {CloudFrontDistribution}
  */
 CloudFrontDistribution.prototype.distributionConfig = function(value) {
 	return this.set('DistributionConfig', value);

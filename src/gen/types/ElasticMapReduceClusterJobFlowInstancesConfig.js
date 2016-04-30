@@ -16,8 +16,8 @@ ElasticMapReduceClusterJobFlowInstancesConfig.prototype = Object.create(Property
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfig}
+ * @param {String[]} value
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfig.prototype.additionalMasterSecurityGroups = function(value) {
 	return this.set('AdditionalMasterSecurityGroups', value);
@@ -28,8 +28,8 @@ ElasticMapReduceClusterJobFlowInstancesConfig.prototype.additionalMasterSecurity
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfig}
+ * @param {String[]} value
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfig.prototype.additionalSlaveSecurityGroups = function(value) {
 	return this.set('AdditionalSlaveSecurityGroups', value);
@@ -41,7 +41,7 @@ ElasticMapReduceClusterJobFlowInstancesConfig.prototype.additionalSlaveSecurityG
  * Required: true
  *
  * @param {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfig.prototype.coreInstanceGroup = function(value) {
 	return this.set('CoreInstanceGroup', value);
@@ -53,7 +53,7 @@ ElasticMapReduceClusterJobFlowInstancesConfig.prototype.coreInstanceGroup = func
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfig.prototype.ec2KeyName = function(value) {
 	return this.set('Ec2KeyName', value);
@@ -65,7 +65,7 @@ ElasticMapReduceClusterJobFlowInstancesConfig.prototype.ec2KeyName = function(va
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfig.prototype.ec2SubnetId = function(value) {
 	return this.set('Ec2SubnetId', value);
@@ -77,7 +77,7 @@ ElasticMapReduceClusterJobFlowInstancesConfig.prototype.ec2SubnetId = function(v
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfig.prototype.emrManagedMasterSecurityGroup = function(value) {
 	return this.set('EmrManagedMasterSecurityGroup', value);
@@ -89,7 +89,7 @@ ElasticMapReduceClusterJobFlowInstancesConfig.prototype.emrManagedMasterSecurity
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfig.prototype.emrManagedSlaveSecurityGroup = function(value) {
 	return this.set('EmrManagedSlaveSecurityGroup', value);
@@ -101,7 +101,7 @@ ElasticMapReduceClusterJobFlowInstancesConfig.prototype.emrManagedSlaveSecurityG
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfig.prototype.hadoopVersion = function(value) {
 	return this.set('HadoopVersion', value);
@@ -113,7 +113,7 @@ ElasticMapReduceClusterJobFlowInstancesConfig.prototype.hadoopVersion = function
  * Required: true
  *
  * @param {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfig.prototype.masterInstanceGroup = function(value) {
 	return this.set('MasterInstanceGroup', value);
@@ -125,7 +125,7 @@ ElasticMapReduceClusterJobFlowInstancesConfig.prototype.masterInstanceGroup = fu
  * Required: false
  *
  * @param {ElasticMapReduceClusterJobFlowInstancesConfigPlacementType} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfig.prototype.placement = function(value) {
 	return this.set('Placement', value);
@@ -137,7 +137,7 @@ ElasticMapReduceClusterJobFlowInstancesConfig.prototype.placement = function(val
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfig.prototype.serviceAccessSecurityGroup = function(value) {
 	return this.set('ServiceAccessSecurityGroup', value);
@@ -149,7 +149,7 @@ ElasticMapReduceClusterJobFlowInstancesConfig.prototype.serviceAccessSecurityGro
  * Required: false
  *
  * @param {Boolean} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfig.prototype.terminationProtected = function(value) {
 	return this.set('TerminationProtected', value);

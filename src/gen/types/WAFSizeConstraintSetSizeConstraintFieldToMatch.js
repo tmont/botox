@@ -17,7 +17,7 @@ WAFSizeConstraintSetSizeConstraintFieldToMatch.prototype = Object.create(Propert
  * Required: false
  *
  * @param {String} value
- * @return {WAFSizeConstraintSetSizeConstraintFieldToMatch}
+ * @returns {WAFSizeConstraintSetSizeConstraintFieldToMatch}
  */
 WAFSizeConstraintSetSizeConstraintFieldToMatch.prototype.data = function(value) {
 	return this.set('Data', value);
@@ -29,7 +29,7 @@ WAFSizeConstraintSetSizeConstraintFieldToMatch.prototype.data = function(value) 
  * Required: true
  *
  * @param {String} value
- * @return {WAFSizeConstraintSetSizeConstraintFieldToMatch}
+ * @returns {WAFSizeConstraintSetSizeConstraintFieldToMatch}
  */
 WAFSizeConstraintSetSizeConstraintFieldToMatch.prototype.type = function(value) {
 	return this.set('Type', value);

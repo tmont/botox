@@ -19,7 +19,7 @@ ApiGatewayDeployment.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayDeployment}
+ * @returns {ApiGatewayDeployment}
  */
 ApiGatewayDeployment.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -32,7 +32,7 @@ ApiGatewayDeployment.prototype.description = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayDeployment}
+ * @returns {ApiGatewayDeployment}
  */
 ApiGatewayDeployment.prototype.restApiId = function(value) {
 	return this.set('RestApiId', value);
@@ -45,7 +45,7 @@ ApiGatewayDeployment.prototype.restApiId = function(value) {
  * Update requires: No interruption
  *
  * @param {APIGatewayDeploymentStageDescription|Attribute|Reference} value Amazon API Gateway Deployment StageDescription
- * @return {ApiGatewayDeployment}
+ * @returns {ApiGatewayDeployment}
  */
 ApiGatewayDeployment.prototype.stageDescription = function(value) {
 	return this.set('StageDescription', value);
@@ -58,7 +58,7 @@ ApiGatewayDeployment.prototype.stageDescription = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayDeployment}
+ * @returns {ApiGatewayDeployment}
  */
 ApiGatewayDeployment.prototype.stageName = function(value) {
 	return this.set('StageName', value);

@@ -19,7 +19,7 @@ CodeDeployDeploymentConfig.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CodeDeployDeploymentConfig}
+ * @returns {CodeDeployDeploymentConfig}
  */
 CodeDeployDeploymentConfig.prototype.deploymentConfigName = function(value) {
 	return this.set('DeploymentConfigName', value);
@@ -32,7 +32,7 @@ CodeDeployDeploymentConfig.prototype.deploymentConfigName = function(value) {
  * Update requires: Replacement
  *
  * @param {CodeDeployDeploymentConfigMinimumHealthyHosts|Attribute|Reference} value AWS CodeDeploy DeploymentConfig MinimumHealthyHosts
- * @return {CodeDeployDeploymentConfig}
+ * @returns {CodeDeployDeploymentConfig}
  */
 CodeDeployDeploymentConfig.prototype.minimumHealthyHosts = function(value) {
 	return this.set('MinimumHealthyHosts', value);

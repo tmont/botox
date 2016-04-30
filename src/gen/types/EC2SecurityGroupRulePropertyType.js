@@ -17,7 +17,7 @@ EC2SecurityGroupRulePropertyType.prototype = Object.create(PropertyType.prototyp
  * Required: false
  *
  * @param {String} value
- * @return {EC2SecurityGroupRulePropertyType}
+ * @returns {EC2SecurityGroupRulePropertyType}
  */
 EC2SecurityGroupRulePropertyType.prototype.cidrIp = function(value) {
 	return this.set('CidrIp', value);
@@ -29,7 +29,7 @@ EC2SecurityGroupRulePropertyType.prototype.cidrIp = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {EC2SecurityGroupRulePropertyType}
+ * @returns {EC2SecurityGroupRulePropertyType}
  */
 EC2SecurityGroupRulePropertyType.prototype.destinationSecurityGroupId = function(value) {
 	return this.set('DestinationSecurityGroupId', value);
@@ -41,7 +41,7 @@ EC2SecurityGroupRulePropertyType.prototype.destinationSecurityGroupId = function
  * Required: false
  *
  * @param {Number} value
- * @return {EC2SecurityGroupRulePropertyType}
+ * @returns {EC2SecurityGroupRulePropertyType}
  */
 EC2SecurityGroupRulePropertyType.prototype.fromPort = function(value) {
 	return this.set('FromPort', value);
@@ -53,7 +53,7 @@ EC2SecurityGroupRulePropertyType.prototype.fromPort = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {EC2SecurityGroupRulePropertyType}
+ * @returns {EC2SecurityGroupRulePropertyType}
  */
 EC2SecurityGroupRulePropertyType.prototype.ipProtocol = function(value) {
 	return this.set('IpProtocol', value);
@@ -65,7 +65,7 @@ EC2SecurityGroupRulePropertyType.prototype.ipProtocol = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {EC2SecurityGroupRulePropertyType}
+ * @returns {EC2SecurityGroupRulePropertyType}
  */
 EC2SecurityGroupRulePropertyType.prototype.sourceSecurityGroupId = function(value) {
 	return this.set('SourceSecurityGroupId', value);
@@ -77,7 +77,7 @@ EC2SecurityGroupRulePropertyType.prototype.sourceSecurityGroupId = function(valu
  * Required: false
  *
  * @param {String} value
- * @return {EC2SecurityGroupRulePropertyType}
+ * @returns {EC2SecurityGroupRulePropertyType}
  */
 EC2SecurityGroupRulePropertyType.prototype.sourceSecurityGroupName = function(value) {
 	return this.set('SourceSecurityGroupName', value);
@@ -89,7 +89,7 @@ EC2SecurityGroupRulePropertyType.prototype.sourceSecurityGroupName = function(va
  * Required: false
  *
  * @param {String} value
- * @return {EC2SecurityGroupRulePropertyType}
+ * @returns {EC2SecurityGroupRulePropertyType}
  */
 EC2SecurityGroupRulePropertyType.prototype.sourceSecurityGroupOwnerId = function(value) {
 	return this.set('SourceSecurityGroupOwnerId', value);
@@ -101,7 +101,7 @@ EC2SecurityGroupRulePropertyType.prototype.sourceSecurityGroupOwnerId = function
  * Required: false
  *
  * @param {Number} value
- * @return {EC2SecurityGroupRulePropertyType}
+ * @returns {EC2SecurityGroupRulePropertyType}
  */
 EC2SecurityGroupRulePropertyType.prototype.toPort = function(value) {
 	return this.set('ToPort', value);

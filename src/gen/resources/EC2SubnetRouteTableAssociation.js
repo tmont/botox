@@ -19,7 +19,7 @@ EC2SubnetRouteTableAssociation.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption. However, the physical ID changes when the route table ID is changed.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SubnetRouteTableAssociation}
+ * @returns {EC2SubnetRouteTableAssociation}
  */
 EC2SubnetRouteTableAssociation.prototype.routeTableId = function(value) {
 	return this.set('RouteTableId', value);
@@ -32,7 +32,7 @@ EC2SubnetRouteTableAssociation.prototype.routeTableId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SubnetRouteTableAssociation}
+ * @returns {EC2SubnetRouteTableAssociation}
  */
 EC2SubnetRouteTableAssociation.prototype.subnetId = function(value) {
 	return this.set('SubnetId', value);

@@ -19,15 +19,15 @@ CloudFormationWaitCondition.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(CloudFormationWaitCondition.prototype, 'attr', {
 	/**
-	 * @return {CloudFormationWaitConditionAttributeMap}
+	 * @returns {CloudFormationWaitConditionAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * Returns: A JSON object that contains the UniqueId and Data values from the wait condition signal(s) for the specified wait condition. For more information about wait condition signals, see Wait Condition Signal JSON Format.Example return value for a wait condition with 2 signals: { "Signal1" : "Step 1 complete." , "Signal2" : "Step 2 complete." }
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get data() {
 				return createAttribute('Data');
@@ -43,7 +43,7 @@ Object.defineProperty(CloudFormationWaitCondition.prototype, 'attr', {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudFormationWaitCondition}
+ * @returns {CloudFormationWaitCondition}
  */
 CloudFormationWaitCondition.prototype.count = function(value) {
 	return this.set('Count', value);
@@ -56,7 +56,7 @@ CloudFormationWaitCondition.prototype.count = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudFormationWaitCondition}
+ * @returns {CloudFormationWaitCondition}
  */
 CloudFormationWaitCondition.prototype.handle = function(value) {
 	return this.set('Handle', value);
@@ -69,7 +69,7 @@ CloudFormationWaitCondition.prototype.handle = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudFormationWaitCondition}
+ * @returns {CloudFormationWaitCondition}
  */
 CloudFormationWaitCondition.prototype.timeout = function(value) {
 	return this.set('Timeout', value);

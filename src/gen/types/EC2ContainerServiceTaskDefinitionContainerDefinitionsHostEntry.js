@@ -17,7 +17,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry.prototype = Objec
  * Required: true
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry.prototype.hostname = function(value) {
 	return this.set('Hostname', value);
@@ -29,7 +29,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry.prototype.hostnam
  * Required: true
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry.prototype.ipAddress = function(value) {
 	return this.set('IpAddress', value);

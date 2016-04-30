@@ -17,7 +17,7 @@ CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype = Object.create(
  * Required: true
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
+ * @returns {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
  */
 CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype.bucket = function(value) {
 	return this.set('Bucket', value);
@@ -29,7 +29,7 @@ CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype.bucket = functio
  * Required: true
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
+ * @returns {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
  */
 CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype.bundleType = function(value) {
 	return this.set('BundleType', value);
@@ -41,7 +41,7 @@ CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype.bundleType = fun
  * Required: false
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
+ * @returns {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
  */
 CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype.eTag = function(value) {
 	return this.set('ETag', value);
@@ -53,7 +53,7 @@ CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype.eTag = function(
  * Required: true
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
+ * @returns {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
  */
 CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -65,7 +65,7 @@ CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype.key = function(v
  * Required: false
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
+ * @returns {CodeDeployDeploymentGroupDeploymentRevisionS3Location}
  */
 CodeDeployDeploymentGroupDeploymentRevisionS3Location.prototype.version = function(value) {
 	return this.set('Version', value);

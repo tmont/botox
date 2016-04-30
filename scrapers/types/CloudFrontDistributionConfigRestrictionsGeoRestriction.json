@@ -7,7 +7,7 @@
       "description": "The two-letter, uppercase country code for a country that you want to include in your blacklist or whitelist.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "RestrictionType",

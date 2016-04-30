@@ -19,15 +19,15 @@ IAMAccessKey.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(IAMAccessKey.prototype, 'attr', {
 	/**
-	 * @return {IAMAccessKeyAttributeMap}
+	 * @returns {IAMAccessKeyAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * Returns the secret access key for the specified AWS::IAM::AccessKey resource. For example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get secretAccessKey() {
 				return createAttribute('SecretAccessKey');
@@ -43,7 +43,7 @@ Object.defineProperty(IAMAccessKey.prototype, 'attr', {
  * Update requires: Replacement
  *
  * @param {Number|Attribute|Reference} value
- * @return {IAMAccessKey}
+ * @returns {IAMAccessKey}
  */
 IAMAccessKey.prototype.serial = function(value) {
 	return this.set('Serial', value);
@@ -56,7 +56,7 @@ IAMAccessKey.prototype.serial = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {IAMAccessKey}
+ * @returns {IAMAccessKey}
  */
 IAMAccessKey.prototype.status = function(value) {
 	return this.set('Status', value);
@@ -69,7 +69,7 @@ IAMAccessKey.prototype.status = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {IAMAccessKey}
+ * @returns {IAMAccessKey}
  */
 IAMAccessKey.prototype.userName = function(value) {
 	return this.set('UserName', value);

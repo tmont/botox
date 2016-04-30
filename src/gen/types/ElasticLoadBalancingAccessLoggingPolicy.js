@@ -17,7 +17,7 @@ ElasticLoadBalancingAccessLoggingPolicy.prototype = Object.create(PropertyType.p
  * Required: false
  *
  * @param {Number} value
- * @return {ElasticLoadBalancingAccessLoggingPolicy}
+ * @returns {ElasticLoadBalancingAccessLoggingPolicy}
  */
 ElasticLoadBalancingAccessLoggingPolicy.prototype.emitInterval = function(value) {
 	return this.set('EmitInterval', value);
@@ -29,7 +29,7 @@ ElasticLoadBalancingAccessLoggingPolicy.prototype.emitInterval = function(value)
  * Required: true
  *
  * @param {Boolean} value
- * @return {ElasticLoadBalancingAccessLoggingPolicy}
+ * @returns {ElasticLoadBalancingAccessLoggingPolicy}
  */
 ElasticLoadBalancingAccessLoggingPolicy.prototype.enabled = function(value) {
 	return this.set('Enabled', value);
@@ -41,7 +41,7 @@ ElasticLoadBalancingAccessLoggingPolicy.prototype.enabled = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {ElasticLoadBalancingAccessLoggingPolicy}
+ * @returns {ElasticLoadBalancingAccessLoggingPolicy}
  */
 ElasticLoadBalancingAccessLoggingPolicy.prototype.s3BucketName = function(value) {
 	return this.set('S3BucketName', value);
@@ -53,7 +53,7 @@ ElasticLoadBalancingAccessLoggingPolicy.prototype.s3BucketName = function(value)
  * Required: false
  *
  * @param {String} value
- * @return {ElasticLoadBalancingAccessLoggingPolicy}
+ * @returns {ElasticLoadBalancingAccessLoggingPolicy}
  */
 ElasticLoadBalancingAccessLoggingPolicy.prototype.s3BucketPrefix = function(value) {
 	return this.set('S3BucketPrefix', value);

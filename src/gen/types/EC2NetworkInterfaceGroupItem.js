@@ -17,7 +17,7 @@ EC2NetworkInterfaceGroupItem.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {EC2NetworkInterfaceGroupItem}
+ * @returns {EC2NetworkInterfaceGroupItem}
  */
 EC2NetworkInterfaceGroupItem.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -29,7 +29,7 @@ EC2NetworkInterfaceGroupItem.prototype.key = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {EC2NetworkInterfaceGroupItem}
+ * @returns {EC2NetworkInterfaceGroupItem}
  */
 EC2NetworkInterfaceGroupItem.prototype.value = function(value) {
 	return this.set('Value', value);

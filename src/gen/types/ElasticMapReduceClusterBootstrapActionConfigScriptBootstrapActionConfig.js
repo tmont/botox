@@ -16,8 +16,8 @@ ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig.prototyp
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig}
+ * @param {String[]} value
+ * @returns {ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig}
  */
 ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig.prototype.args = function(value) {
 	return this.set('Args', value);
@@ -29,7 +29,7 @@ ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig.prototyp
  * Required: true
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig}
+ * @returns {ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig}
  */
 ElasticMapReduceClusterBootstrapActionConfigScriptBootstrapActionConfig.prototype.path = function(value) {
 	return this.set('Path', value);

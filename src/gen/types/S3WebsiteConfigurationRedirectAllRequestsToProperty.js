@@ -17,7 +17,7 @@ S3WebsiteConfigurationRedirectAllRequestsToProperty.prototype = Object.create(Pr
  * Required: true
  *
  * @param {String} value
- * @return {S3WebsiteConfigurationRedirectAllRequestsToProperty}
+ * @returns {S3WebsiteConfigurationRedirectAllRequestsToProperty}
  */
 S3WebsiteConfigurationRedirectAllRequestsToProperty.prototype.hostName = function(value) {
 	return this.set('HostName', value);
@@ -29,7 +29,7 @@ S3WebsiteConfigurationRedirectAllRequestsToProperty.prototype.hostName = functio
  * Required: false
  *
  * @param {String} value
- * @return {S3WebsiteConfigurationRedirectAllRequestsToProperty}
+ * @returns {S3WebsiteConfigurationRedirectAllRequestsToProperty}
  */
 S3WebsiteConfigurationRedirectAllRequestsToProperty.prototype.protocol = function(value) {
 	return this.set('Protocol', value);

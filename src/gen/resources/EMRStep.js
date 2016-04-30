@@ -19,7 +19,7 @@ EMRStep.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EMRStep}
+ * @returns {EMRStep}
  */
 EMRStep.prototype.actionOnFailure = function(value) {
 	return this.set('ActionOnFailure', value);
@@ -32,7 +32,7 @@ EMRStep.prototype.actionOnFailure = function(value) {
  * Update requires: Replacement
  *
  * @param {ElasticMapReduceStepHadoopJarStepConfig|Attribute|Reference} value Amazon Elastic MapReduce Step HadoopJarStepConfig
- * @return {EMRStep}
+ * @returns {EMRStep}
  */
 EMRStep.prototype.hadoopJarStep = function(value) {
 	return this.set('HadoopJarStep', value);
@@ -45,7 +45,7 @@ EMRStep.prototype.hadoopJarStep = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EMRStep}
+ * @returns {EMRStep}
  */
 EMRStep.prototype.jobFlowId = function(value) {
 	return this.set('JobFlowId', value);
@@ -58,7 +58,7 @@ EMRStep.prototype.jobFlowId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EMRStep}
+ * @returns {EMRStep}
  */
 EMRStep.prototype.name = function(value) {
 	return this.set('Name', value);

@@ -19,7 +19,7 @@ LambdaEventSourceMapping.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {LambdaEventSourceMapping}
+ * @returns {LambdaEventSourceMapping}
  */
 LambdaEventSourceMapping.prototype.batchSize = function(value) {
 	return this.set('BatchSize', value);
@@ -32,7 +32,7 @@ LambdaEventSourceMapping.prototype.batchSize = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {LambdaEventSourceMapping}
+ * @returns {LambdaEventSourceMapping}
  */
 LambdaEventSourceMapping.prototype.enabled = function(value) {
 	return this.set('Enabled', value);
@@ -45,7 +45,7 @@ LambdaEventSourceMapping.prototype.enabled = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaEventSourceMapping}
+ * @returns {LambdaEventSourceMapping}
  */
 LambdaEventSourceMapping.prototype.eventSourceArn = function(value) {
 	return this.set('EventSourceArn', value);
@@ -58,7 +58,7 @@ LambdaEventSourceMapping.prototype.eventSourceArn = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaEventSourceMapping}
+ * @returns {LambdaEventSourceMapping}
  */
 LambdaEventSourceMapping.prototype.functionName = function(value) {
 	return this.set('FunctionName', value);
@@ -71,7 +71,7 @@ LambdaEventSourceMapping.prototype.functionName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaEventSourceMapping}
+ * @returns {LambdaEventSourceMapping}
  */
 LambdaEventSourceMapping.prototype.startingPosition = function(value) {
 	return this.set('StartingPosition', value);

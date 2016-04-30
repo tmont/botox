@@ -19,7 +19,7 @@ AutoScalingLaunchConfiguration.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.associatePublicIpAddress = function(value) {
 	return this.set('AssociatePublicIpAddress', value);
@@ -32,7 +32,7 @@ AutoScalingLaunchConfiguration.prototype.associatePublicIpAddress = function(val
  * Update requires: Replacement
  *
  * @param {CloudFormationAutoScalingBlockDeviceMappingPropertyType[]|Attribute|Reference} value A list of BlockDeviceMappings.
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.blockDeviceMappings = function(value) {
 	return this.set('BlockDeviceMappings', value);
@@ -45,7 +45,7 @@ AutoScalingLaunchConfiguration.prototype.blockDeviceMappings = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.classicLinkVPCId = function(value) {
 	return this.set('ClassicLinkVPCId', value);
@@ -57,8 +57,8 @@ AutoScalingLaunchConfiguration.prototype.classicLinkVPCId = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {string[]|Attribute|Reference} value
- * @return {AutoScalingLaunchConfiguration}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.classicLinkVPCSecurityGroups = function(value) {
 	return this.set('ClassicLinkVPCSecurityGroups', value);
@@ -71,7 +71,7 @@ AutoScalingLaunchConfiguration.prototype.classicLinkVPCSecurityGroups = function
  * Update requires: Replacement
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.ebsOptimized = function(value) {
 	return this.set('EbsOptimized', value);
@@ -84,7 +84,7 @@ AutoScalingLaunchConfiguration.prototype.ebsOptimized = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value String (1–1600 chars)
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.iamInstanceProfile = function(value) {
 	return this.set('IamInstanceProfile', value);
@@ -97,7 +97,7 @@ AutoScalingLaunchConfiguration.prototype.iamInstanceProfile = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.imageId = function(value) {
 	return this.set('ImageId', value);
@@ -110,7 +110,7 @@ AutoScalingLaunchConfiguration.prototype.imageId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.instanceId = function(value) {
 	return this.set('InstanceId', value);
@@ -123,7 +123,7 @@ AutoScalingLaunchConfiguration.prototype.instanceId = function(value) {
  * Update requires: Replacement
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.instanceMonitoring = function(value) {
 	return this.set('InstanceMonitoring', value);
@@ -136,7 +136,7 @@ AutoScalingLaunchConfiguration.prototype.instanceMonitoring = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.instanceType = function(value) {
 	return this.set('InstanceType', value);
@@ -149,7 +149,7 @@ AutoScalingLaunchConfiguration.prototype.instanceType = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.kernelId = function(value) {
 	return this.set('KernelId', value);
@@ -162,7 +162,7 @@ AutoScalingLaunchConfiguration.prototype.kernelId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.keyName = function(value) {
 	return this.set('KeyName', value);
@@ -175,7 +175,7 @@ AutoScalingLaunchConfiguration.prototype.keyName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.placementTenancy = function(value) {
 	return this.set('PlacementTenancy', value);
@@ -188,7 +188,7 @@ AutoScalingLaunchConfiguration.prototype.placementTenancy = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.ramDiskId = function(value) {
 	return this.set('RamDiskId', value);
@@ -201,7 +201,7 @@ AutoScalingLaunchConfiguration.prototype.ramDiskId = function(value) {
  * Update requires: Replacement
  *
  * @param {String[]|Attribute|Reference} value A list of EC2 security groups.
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.securityGroups = function(value) {
 	return this.set('SecurityGroups', value);
@@ -214,7 +214,7 @@ AutoScalingLaunchConfiguration.prototype.securityGroups = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.spotPrice = function(value) {
 	return this.set('SpotPrice', value);
@@ -227,7 +227,7 @@ AutoScalingLaunchConfiguration.prototype.spotPrice = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLaunchConfiguration}
+ * @returns {AutoScalingLaunchConfiguration}
  */
 AutoScalingLaunchConfiguration.prototype.userData = function(value) {
 	return this.set('UserData', value);

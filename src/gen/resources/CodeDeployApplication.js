@@ -19,7 +19,7 @@ CodeDeployApplication.prototype = Object.create(Resource.prototype);
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CodeDeployApplication}
+ * @returns {CodeDeployApplication}
  */
 CodeDeployApplication.prototype.applicationName = function(value) {
 	return this.set('ApplicationName', value);

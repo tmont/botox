@@ -19,7 +19,7 @@ GameLiftAlias.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {GameLiftAlias}
+ * @returns {GameLiftAlias}
  */
 GameLiftAlias.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -32,7 +32,7 @@ GameLiftAlias.prototype.description = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {GameLiftAlias}
+ * @returns {GameLiftAlias}
  */
 GameLiftAlias.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -45,7 +45,7 @@ GameLiftAlias.prototype.name = function(value) {
  * Update requires: No interruption
  *
  * @param {GameLiftAliasRoutingStrategy|Attribute|Reference} value Amazon GameLift Alias RoutingStrategy
- * @return {GameLiftAlias}
+ * @returns {GameLiftAlias}
  */
 GameLiftAlias.prototype.routingStrategy = function(value) {
 	return this.set('RoutingStrategy', value);

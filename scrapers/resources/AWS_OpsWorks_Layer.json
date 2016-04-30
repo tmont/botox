@@ -50,7 +50,7 @@
       "description": "Custom security group IDs for this layer.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {
@@ -98,7 +98,7 @@
       "description": "The packages for this layer.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {

@@ -17,7 +17,7 @@ ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification.prototyp
  * Required: false
  *
  * @param {Number} value
- * @return {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification}
+ * @returns {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification}
  */
 ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification.prototype.iops = function(value) {
 	return this.set('Iops', value);
@@ -29,7 +29,7 @@ ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification.prototyp
  * Required: true
  *
  * @param {Number} value
- * @return {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification}
+ * @returns {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification}
  */
 ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification.prototype.sizeInGB = function(value) {
 	return this.set('SizeInGB', value);
@@ -41,7 +41,7 @@ ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification.prototyp
  * Required: true
  *
  * @param {String} value
- * @return {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification}
+ * @returns {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification}
  */
 ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification.prototype.volumeType = function(value) {
 	return this.set('VolumeType', value);

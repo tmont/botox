@@ -19,7 +19,7 @@ EC2VPNConnection.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPNConnection}
+ * @returns {EC2VPNConnection}
  */
 EC2VPNConnection.prototype.type = function(value) {
 	return this.set('Type', value);
@@ -32,7 +32,7 @@ EC2VPNConnection.prototype.type = function(value) {
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPNConnection}
+ * @returns {EC2VPNConnection}
  */
 EC2VPNConnection.prototype.customerGatewayId = function(value) {
 	return this.set('CustomerGatewayId', value);
@@ -45,7 +45,7 @@ EC2VPNConnection.prototype.customerGatewayId = function(value) {
  * Update requires: Replacement
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {EC2VPNConnection}
+ * @returns {EC2VPNConnection}
  */
 EC2VPNConnection.prototype.staticRoutesOnly = function(value) {
 	return this.set('StaticRoutesOnly', value);
@@ -58,7 +58,7 @@ EC2VPNConnection.prototype.staticRoutesOnly = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags.
- * @return {EC2VPNConnection}
+ * @returns {EC2VPNConnection}
  */
 EC2VPNConnection.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -71,7 +71,7 @@ EC2VPNConnection.prototype.tags = function(value) {
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPNConnection}
+ * @returns {EC2VPNConnection}
  */
 EC2VPNConnection.prototype.vpnGatewayId = function(value) {
 	return this.set('VpnGatewayId', value);

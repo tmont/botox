@@ -17,7 +17,7 @@ GameLiftFleetEC2InboundPermission.prototype = Object.create(PropertyType.prototy
  * Required: true
  *
  * @param {Number} value
- * @return {GameLiftFleetEC2InboundPermission}
+ * @returns {GameLiftFleetEC2InboundPermission}
  */
 GameLiftFleetEC2InboundPermission.prototype.fromPort = function(value) {
 	return this.set('FromPort', value);
@@ -29,7 +29,7 @@ GameLiftFleetEC2InboundPermission.prototype.fromPort = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {GameLiftFleetEC2InboundPermission}
+ * @returns {GameLiftFleetEC2InboundPermission}
  */
 GameLiftFleetEC2InboundPermission.prototype.ipRange = function(value) {
 	return this.set('IpRange', value);
@@ -41,7 +41,7 @@ GameLiftFleetEC2InboundPermission.prototype.ipRange = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {GameLiftFleetEC2InboundPermission}
+ * @returns {GameLiftFleetEC2InboundPermission}
  */
 GameLiftFleetEC2InboundPermission.prototype.protocol = function(value) {
 	return this.set('Protocol', value);
@@ -53,7 +53,7 @@ GameLiftFleetEC2InboundPermission.prototype.protocol = function(value) {
  * Required: true
  *
  * @param {Number} value
- * @return {GameLiftFleetEC2InboundPermission}
+ * @returns {GameLiftFleetEC2InboundPermission}
  */
 GameLiftFleetEC2InboundPermission.prototype.toPort = function(value) {
 	return this.set('ToPort', value);

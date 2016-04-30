@@ -19,7 +19,7 @@ EC2VPNConnectionRoute.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPNConnectionRoute}
+ * @returns {EC2VPNConnectionRoute}
  */
 EC2VPNConnectionRoute.prototype.destinationCidrBlock = function(value) {
 	return this.set('DestinationCidrBlock', value);
@@ -32,7 +32,7 @@ EC2VPNConnectionRoute.prototype.destinationCidrBlock = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPNConnectionRoute}
+ * @returns {EC2VPNConnectionRoute}
  */
 EC2VPNConnectionRoute.prototype.vpnConnectionId = function(value) {
 	return this.set('VpnConnectionId', value);

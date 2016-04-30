@@ -17,7 +17,7 @@ ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype = Obj
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype.bidPrice = function(value) {
 	return this.set('BidPrice', value);
@@ -29,7 +29,7 @@ ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype.bidPr
  * Required: false
  *
  * @param {ElasticMapReduceClusterConfiguration[]} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype.configurations = function(value) {
 	return this.set('Configurations', value);
@@ -41,7 +41,7 @@ ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype.confi
  * Required: true
  *
  * @param {Number} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype.instanceCount = function(value) {
 	return this.set('InstanceCount', value);
@@ -53,7 +53,7 @@ ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype.insta
  * Required: true
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype.instanceType = function(value) {
 	return this.set('InstanceType', value);
@@ -65,7 +65,7 @@ ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype.insta
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype.market = function(value) {
 	return this.set('Market', value);
@@ -77,7 +77,7 @@ ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype.marke
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig}
  */
 ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype.name = function(value) {
 	return this.set('Name', value);

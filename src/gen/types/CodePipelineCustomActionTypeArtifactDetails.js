@@ -17,7 +17,7 @@ CodePipelineCustomActionTypeArtifactDetails.prototype = Object.create(PropertyTy
  * Required: true
  *
  * @param {Number} value
- * @return {CodePipelineCustomActionTypeArtifactDetails}
+ * @returns {CodePipelineCustomActionTypeArtifactDetails}
  */
 CodePipelineCustomActionTypeArtifactDetails.prototype.maximumCount = function(value) {
 	return this.set('MaximumCount', value);
@@ -29,7 +29,7 @@ CodePipelineCustomActionTypeArtifactDetails.prototype.maximumCount = function(va
  * Required: true
  *
  * @param {Number} value
- * @return {CodePipelineCustomActionTypeArtifactDetails}
+ * @returns {CodePipelineCustomActionTypeArtifactDetails}
  */
 CodePipelineCustomActionTypeArtifactDetails.prototype.minimumCount = function(value) {
 	return this.set('MinimumCount', value);

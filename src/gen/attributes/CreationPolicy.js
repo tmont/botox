@@ -17,7 +17,7 @@ CreationPolicy.prototype = Object.create(ResourceAttribute.prototype);
  * Required: false
  *
  * @param {Number} value
- * @return {CreationPolicy}
+ * @returns {CreationPolicy}
  */
 CreationPolicy.prototype.count = function(value) {
 	return this.set('ResourceSignal', 'Count', value);
@@ -29,7 +29,7 @@ CreationPolicy.prototype.count = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {CreationPolicy}
+ * @returns {CreationPolicy}
  */
 CreationPolicy.prototype.timeout = function(value) {
 	return this.set('ResourceSignal', 'Timeout', value);

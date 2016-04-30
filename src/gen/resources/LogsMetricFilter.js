@@ -18,8 +18,8 @@ LogsMetricFilter.prototype = Object.create(Resource.prototype);
  * Required: true
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {LogsMetricFilter}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {LogsMetricFilter}
  */
 LogsMetricFilter.prototype.filterPattern = function(value) {
 	return this.set('FilterPattern', value);
@@ -32,7 +32,7 @@ LogsMetricFilter.prototype.filterPattern = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LogsMetricFilter}
+ * @returns {LogsMetricFilter}
  */
 LogsMetricFilter.prototype.logGroupName = function(value) {
 	return this.set('LogGroupName', value);
@@ -45,7 +45,7 @@ LogsMetricFilter.prototype.logGroupName = function(value) {
  * Update requires: No interruption
  *
  * @param {CloudWatchLogsMetricFilterMetricTransformationProperty[]|Attribute|Reference} value A list of CloudWatch Logs MetricFilter MetricTransformation Property
- * @return {LogsMetricFilter}
+ * @returns {LogsMetricFilter}
  */
 LogsMetricFilter.prototype.metricTransformations = function(value) {
 	return this.set('MetricTransformations', value);

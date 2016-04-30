@@ -17,7 +17,7 @@ DataPipelinePipelineParameterValues.prototype = Object.create(PropertyType.proto
  * Required: true
  *
  * @param {String} value
- * @return {DataPipelinePipelineParameterValues}
+ * @returns {DataPipelinePipelineParameterValues}
  */
 DataPipelinePipelineParameterValues.prototype.id = function(value) {
 	return this.set('Id', value);
@@ -29,7 +29,7 @@ DataPipelinePipelineParameterValues.prototype.id = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {DataPipelinePipelineParameterValues}
+ * @returns {DataPipelinePipelineParameterValues}
  */
 DataPipelinePipelineParameterValues.prototype.stringValue = function(value) {
 	return this.set('StringValue', value);

@@ -17,7 +17,7 @@ WAFSizeConstraintSetSizeConstraint.prototype = Object.create(PropertyType.protot
  * Required: true
  *
  * @param {String} value
- * @return {WAFSizeConstraintSetSizeConstraint}
+ * @returns {WAFSizeConstraintSetSizeConstraint}
  */
 WAFSizeConstraintSetSizeConstraint.prototype.comparisonOperator = function(value) {
 	return this.set('ComparisonOperator', value);
@@ -29,7 +29,7 @@ WAFSizeConstraintSetSizeConstraint.prototype.comparisonOperator = function(value
  * Required: true
  *
  * @param {WAFSizeConstraintSetSizeConstraintFieldToMatch} value
- * @return {WAFSizeConstraintSetSizeConstraint}
+ * @returns {WAFSizeConstraintSetSizeConstraint}
  */
 WAFSizeConstraintSetSizeConstraint.prototype.fieldToMatch = function(value) {
 	return this.set('FieldToMatch', value);
@@ -41,7 +41,7 @@ WAFSizeConstraintSetSizeConstraint.prototype.fieldToMatch = function(value) {
  * Required: true
  *
  * @param {Number} value
- * @return {WAFSizeConstraintSetSizeConstraint}
+ * @returns {WAFSizeConstraintSetSizeConstraint}
  */
 WAFSizeConstraintSetSizeConstraint.prototype.size = function(value) {
 	return this.set('Size', value);
@@ -53,7 +53,7 @@ WAFSizeConstraintSetSizeConstraint.prototype.size = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {WAFSizeConstraintSetSizeConstraint}
+ * @returns {WAFSizeConstraintSetSizeConstraint}
  */
 WAFSizeConstraintSetSizeConstraint.prototype.textTransformation = function(value) {
 	return this.set('TextTransformation', value);

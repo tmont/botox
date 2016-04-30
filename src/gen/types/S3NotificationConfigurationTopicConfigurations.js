@@ -17,7 +17,7 @@ S3NotificationConfigurationTopicConfigurations.prototype = Object.create(Propert
  * Required: true
  *
  * @param {String} value
- * @return {S3NotificationConfigurationTopicConfigurations}
+ * @returns {S3NotificationConfigurationTopicConfigurations}
  */
 S3NotificationConfigurationTopicConfigurations.prototype.event = function(value) {
 	return this.set('Event', value);
@@ -29,7 +29,7 @@ S3NotificationConfigurationTopicConfigurations.prototype.event = function(value)
  * Required: false
  *
  * @param {S3NotificationConfigurationConfigFilter} value
- * @return {S3NotificationConfigurationTopicConfigurations}
+ * @returns {S3NotificationConfigurationTopicConfigurations}
  */
 S3NotificationConfigurationTopicConfigurations.prototype.filter = function(value) {
 	return this.set('Filter', value);
@@ -41,7 +41,7 @@ S3NotificationConfigurationTopicConfigurations.prototype.filter = function(value
  * Required: true
  *
  * @param {String} value
- * @return {S3NotificationConfigurationTopicConfigurations}
+ * @returns {S3NotificationConfigurationTopicConfigurations}
  */
 S3NotificationConfigurationTopicConfigurations.prototype.topic = function(value) {
 	return this.set('Topic', value);

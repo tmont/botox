@@ -17,7 +17,7 @@ ElasticsearchServiceDomainElasticsearchClusterConfig.prototype = Object.create(P
  * Required: false
  *
  * @param {Number} value
- * @return {ElasticsearchServiceDomainElasticsearchClusterConfig}
+ * @returns {ElasticsearchServiceDomainElasticsearchClusterConfig}
  */
 ElasticsearchServiceDomainElasticsearchClusterConfig.prototype.dedicatedMasterCount = function(value) {
 	return this.set('DedicatedMasterCount', value);
@@ -29,7 +29,7 @@ ElasticsearchServiceDomainElasticsearchClusterConfig.prototype.dedicatedMasterCo
  * Required: false
  *
  * @param {Boolean} value
- * @return {ElasticsearchServiceDomainElasticsearchClusterConfig}
+ * @returns {ElasticsearchServiceDomainElasticsearchClusterConfig}
  */
 ElasticsearchServiceDomainElasticsearchClusterConfig.prototype.dedicatedMasterEnabled = function(value) {
 	return this.set('DedicatedMasterEnabled', value);
@@ -41,7 +41,7 @@ ElasticsearchServiceDomainElasticsearchClusterConfig.prototype.dedicatedMasterEn
  * Required: false
  *
  * @param {String} value
- * @return {ElasticsearchServiceDomainElasticsearchClusterConfig}
+ * @returns {ElasticsearchServiceDomainElasticsearchClusterConfig}
  */
 ElasticsearchServiceDomainElasticsearchClusterConfig.prototype.dedicatedMasterType = function(value) {
 	return this.set('DedicatedMasterType', value);
@@ -53,7 +53,7 @@ ElasticsearchServiceDomainElasticsearchClusterConfig.prototype.dedicatedMasterTy
  * Required: false
  *
  * @param {Number} value
- * @return {ElasticsearchServiceDomainElasticsearchClusterConfig}
+ * @returns {ElasticsearchServiceDomainElasticsearchClusterConfig}
  */
 ElasticsearchServiceDomainElasticsearchClusterConfig.prototype.instanceCount = function(value) {
 	return this.set('InstanceCount', value);
@@ -65,7 +65,7 @@ ElasticsearchServiceDomainElasticsearchClusterConfig.prototype.instanceCount = f
  * Required: false
  *
  * @param {String} value
- * @return {ElasticsearchServiceDomainElasticsearchClusterConfig}
+ * @returns {ElasticsearchServiceDomainElasticsearchClusterConfig}
  */
 ElasticsearchServiceDomainElasticsearchClusterConfig.prototype.instanceType = function(value) {
 	return this.set('InstanceType', value);
@@ -77,7 +77,7 @@ ElasticsearchServiceDomainElasticsearchClusterConfig.prototype.instanceType = fu
  * Required: false
  *
  * @param {Boolean} value
- * @return {ElasticsearchServiceDomainElasticsearchClusterConfig}
+ * @returns {ElasticsearchServiceDomainElasticsearchClusterConfig}
  */
 ElasticsearchServiceDomainElasticsearchClusterConfig.prototype.zoneAwarenessEnabled = function(value) {
 	return this.set('ZoneAwarenessEnabled', value);

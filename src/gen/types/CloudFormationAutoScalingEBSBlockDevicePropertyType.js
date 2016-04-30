@@ -17,7 +17,7 @@ CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype = Object.create(Pr
  * Required: false
  *
  * @param {Boolean} value
- * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
+ * @returns {CloudFormationAutoScalingEBSBlockDevicePropertyType}
  */
 CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.deleteOnTermination = function(value) {
 	return this.set('DeleteOnTermination', value);
@@ -29,7 +29,7 @@ CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.deleteOnTerminatio
  * Required: false
  *
  * @param {Boolean} value
- * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
+ * @returns {CloudFormationAutoScalingEBSBlockDevicePropertyType}
  */
 CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.encrypted = function(value) {
 	return this.set('Encrypted', value);
@@ -41,7 +41,7 @@ CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.encrypted = functi
  * Required: false
  *
  * @param {Number} value
- * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
+ * @returns {CloudFormationAutoScalingEBSBlockDevicePropertyType}
  */
 CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.iops = function(value) {
 	return this.set('Iops', value);
@@ -53,7 +53,7 @@ CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.iops = function(va
  * Required: false
  *
  * @param {String} value
- * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
+ * @returns {CloudFormationAutoScalingEBSBlockDevicePropertyType}
  */
 CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.snapshotId = function(value) {
 	return this.set('SnapshotId', value);
@@ -65,7 +65,7 @@ CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.snapshotId = funct
  * Required: false
  *
  * @param {Number} value
- * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
+ * @returns {CloudFormationAutoScalingEBSBlockDevicePropertyType}
  */
 CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.volumeSize = function(value) {
 	return this.set('VolumeSize', value);
@@ -77,7 +77,7 @@ CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.volumeSize = funct
  * Required: false
  *
  * @param {String} value
- * @return {CloudFormationAutoScalingEBSBlockDevicePropertyType}
+ * @returns {CloudFormationAutoScalingEBSBlockDevicePropertyType}
  */
 CloudFormationAutoScalingEBSBlockDevicePropertyType.prototype.volumeType = function(value) {
 	return this.set('VolumeType', value);

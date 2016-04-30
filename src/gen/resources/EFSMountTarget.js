@@ -19,7 +19,7 @@ EFSMountTarget.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement. Before updating this property, stop EC2 instances that are using this mount target, and then restart them after the update is complete. This allows the instances to unmount the file system before the mount target is replaced. If you don't stop and restart them, instances or applications that are using those mounts might be disrupted when the mount target is deleted (uncommitted writes might be lost).
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EFSMountTarget}
+ * @returns {EFSMountTarget}
  */
 EFSMountTarget.prototype.fileSystemId = function(value) {
 	return this.set('FileSystemId', value);
@@ -32,7 +32,7 @@ EFSMountTarget.prototype.fileSystemId = function(value) {
  * Update requires: Replacement. Before updating this property, stop EC2 instances that are using this mount target, and then restart them after the update is complete. This allows the instances to unmount the file system before the mount target is replaced. If you don't stop and restart them, instances or applications that are using those mounts might be disrupted when the mount target is deleted (uncommitted writes might be lost).
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EFSMountTarget}
+ * @returns {EFSMountTarget}
  */
 EFSMountTarget.prototype.ipAddress = function(value) {
 	return this.set('IpAddress', value);
@@ -44,8 +44,8 @@ EFSMountTarget.prototype.ipAddress = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {EFSMountTarget}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {EFSMountTarget}
  */
 EFSMountTarget.prototype.securityGroups = function(value) {
 	return this.set('SecurityGroups', value);
@@ -58,7 +58,7 @@ EFSMountTarget.prototype.securityGroups = function(value) {
  * Update requires: Replacement. Before updating this property, stop EC2 instances that are using this mount target and then restart them after the update is complete. That way the instances can unmount the file system before the mount target is replaced. If you don't stop and restart them, instances or applications that are using those mounts might be disrupted when the mount target is deleted (uncommitted writes might be lost).
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EFSMountTarget}
+ * @returns {EFSMountTarget}
  */
 EFSMountTarget.prototype.subnetId = function(value) {
 	return this.set('SubnetId', value);

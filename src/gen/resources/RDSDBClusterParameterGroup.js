@@ -19,7 +19,7 @@ RDSDBClusterParameterGroup.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBClusterParameterGroup}
+ * @returns {RDSDBClusterParameterGroup}
  */
 RDSDBClusterParameterGroup.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -32,7 +32,7 @@ RDSDBClusterParameterGroup.prototype.description = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBClusterParameterGroup}
+ * @returns {RDSDBClusterParameterGroup}
  */
 RDSDBClusterParameterGroup.prototype.family = function(value) {
 	return this.set('Family', value);
@@ -45,7 +45,7 @@ RDSDBClusterParameterGroup.prototype.family = function(value) {
  * Update requires: No interruption or some interruptions, depending on the parameters that you update.
  *
  * @param {Object|Attribute|Reference} value A JSON object consisting of string key-value pairs, as shown in the following example:
- * @return {RDSDBClusterParameterGroup}
+ * @returns {RDSDBClusterParameterGroup}
  */
 RDSDBClusterParameterGroup.prototype.parameters = function(value) {
 	return this.set('Parameters', value);
@@ -58,7 +58,7 @@ RDSDBClusterParameterGroup.prototype.parameters = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value A list of resource tags
- * @return {RDSDBClusterParameterGroup}
+ * @returns {RDSDBClusterParameterGroup}
  */
 RDSDBClusterParameterGroup.prototype.tags = function(value) {
 	return this.set('Tags', value);

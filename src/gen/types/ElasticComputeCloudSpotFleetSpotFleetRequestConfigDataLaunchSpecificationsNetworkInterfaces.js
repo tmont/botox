@@ -17,7 +17,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetwor
  * Required: false
  *
  * @param {Boolean} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.associatePublicIpAddress = function(value) {
 	return this.set('AssociatePublicIpAddress', value);
@@ -29,7 +29,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetwor
  * Required: false
  *
  * @param {Boolean} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.deleteOnTermination = function(value) {
 	return this.set('DeleteOnTermination', value);
@@ -41,7 +41,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetwor
  * Required: false
  *
  * @param {String} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -53,7 +53,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetwor
  * Required: true
  *
  * @param {Number} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.deviceIndex = function(value) {
 	return this.set('DeviceIndex', value);
@@ -64,8 +64,8 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetwor
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ * @param {String[]} value
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.groups = function(value) {
 	return this.set('Groups', value);
@@ -77,7 +77,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetwor
  * Required: false
  *
  * @param {String} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.networkInterfaceId = function(value) {
 	return this.set('NetworkInterfaceId', value);
@@ -89,7 +89,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetwor
  * Required: false
  *
  * @param {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfacesPrivateIpAddresses[]} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.privateIpAddresses = function(value) {
 	return this.set('PrivateIpAddresses', value);
@@ -101,7 +101,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetwor
  * Required: false
  *
  * @param {Number} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.secondaryPrivateIpAddressCount = function(value) {
 	return this.set('SecondaryPrivateIpAddressCount', value);
@@ -113,7 +113,7 @@ ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetwor
  * Required: false
  *
  * @param {String} value
- * @return {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
+ * @returns {ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces}
  */
 ElasticComputeCloudSpotFleetSpotFleetRequestConfigDataLaunchSpecificationsNetworkInterfaces.prototype.subnetId = function(value) {
 	return this.set('SubnetId', value);

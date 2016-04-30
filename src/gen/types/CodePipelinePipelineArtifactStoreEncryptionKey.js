@@ -17,7 +17,7 @@ CodePipelinePipelineArtifactStoreEncryptionKey.prototype = Object.create(Propert
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineArtifactStoreEncryptionKey}
+ * @returns {CodePipelinePipelineArtifactStoreEncryptionKey}
  */
 CodePipelinePipelineArtifactStoreEncryptionKey.prototype.id = function(value) {
 	return this.set('Id', value);
@@ -29,7 +29,7 @@ CodePipelinePipelineArtifactStoreEncryptionKey.prototype.id = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineArtifactStoreEncryptionKey}
+ * @returns {CodePipelinePipelineArtifactStoreEncryptionKey}
  */
 CodePipelinePipelineArtifactStoreEncryptionKey.prototype.type = function(value) {
 	return this.set('Type', value);

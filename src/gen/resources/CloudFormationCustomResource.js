@@ -19,7 +19,7 @@ CloudFormationCustomResource.prototype = Object.create(Resource.prototype);
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudFormationCustomResource}
+ * @returns {CloudFormationCustomResource}
  */
 CloudFormationCustomResource.prototype.serviceToken = function(value) {
 	return this.set('ServiceToken', value);

@@ -19,15 +19,15 @@ LambdaVersion.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(LambdaVersion.prototype, 'attr', {
 	/**
-	 * @return {LambdaVersionAttributeMap}
+	 * @returns {LambdaVersionAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The published version of a Lambda version, such as 1.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get version() {
 				return createAttribute('Version');
@@ -43,7 +43,7 @@ Object.defineProperty(LambdaVersion.prototype, 'attr', {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaVersion}
+ * @returns {LambdaVersion}
  */
 LambdaVersion.prototype.codeSha256 = function(value) {
 	return this.set('CodeSha256', value);
@@ -56,7 +56,7 @@ LambdaVersion.prototype.codeSha256 = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaVersion}
+ * @returns {LambdaVersion}
  */
 LambdaVersion.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -69,7 +69,7 @@ LambdaVersion.prototype.description = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaVersion}
+ * @returns {LambdaVersion}
  */
 LambdaVersion.prototype.functionName = function(value) {
 	return this.set('FunctionName', value);

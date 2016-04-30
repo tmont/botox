@@ -19,7 +19,7 @@ RDSDBParameterGroup.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBParameterGroup}
+ * @returns {RDSDBParameterGroup}
  */
 RDSDBParameterGroup.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -32,7 +32,7 @@ RDSDBParameterGroup.prototype.description = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBParameterGroup}
+ * @returns {RDSDBParameterGroup}
  */
 RDSDBParameterGroup.prototype.family = function(value) {
 	return this.set('Family', value);
@@ -45,7 +45,7 @@ RDSDBParameterGroup.prototype.family = function(value) {
  * Update requires: No interruption or Some interruptions
  *
  * @param {Object|Attribute|Reference} value A JSON object consisting of string key-value pairs, as shown in the following example:
- * @return {RDSDBParameterGroup}
+ * @returns {RDSDBParameterGroup}
  */
 RDSDBParameterGroup.prototype.parameters = function(value) {
 	return this.set('Parameters', value);
@@ -58,7 +58,7 @@ RDSDBParameterGroup.prototype.parameters = function(value) {
  * Update requires: No interruption
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value A list of resource tags.
- * @return {RDSDBParameterGroup}
+ * @returns {RDSDBParameterGroup}
  */
 RDSDBParameterGroup.prototype.tags = function(value) {
 	return this.set('Tags', value);

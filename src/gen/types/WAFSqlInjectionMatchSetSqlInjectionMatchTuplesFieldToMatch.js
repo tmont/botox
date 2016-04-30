@@ -17,7 +17,7 @@ WAFSqlInjectionMatchSetSqlInjectionMatchTuplesFieldToMatch.prototype = Object.cr
  * Required: false
  *
  * @param {String} value
- * @return {WAFSqlInjectionMatchSetSqlInjectionMatchTuplesFieldToMatch}
+ * @returns {WAFSqlInjectionMatchSetSqlInjectionMatchTuplesFieldToMatch}
  */
 WAFSqlInjectionMatchSetSqlInjectionMatchTuplesFieldToMatch.prototype.data = function(value) {
 	return this.set('Data', value);
@@ -29,7 +29,7 @@ WAFSqlInjectionMatchSetSqlInjectionMatchTuplesFieldToMatch.prototype.data = func
  * Required: true
  *
  * @param {String} value
- * @return {WAFSqlInjectionMatchSetSqlInjectionMatchTuplesFieldToMatch}
+ * @returns {WAFSqlInjectionMatchSetSqlInjectionMatchTuplesFieldToMatch}
  */
 WAFSqlInjectionMatchSetSqlInjectionMatchTuplesFieldToMatch.prototype.type = function(value) {
 	return this.set('Type', value);

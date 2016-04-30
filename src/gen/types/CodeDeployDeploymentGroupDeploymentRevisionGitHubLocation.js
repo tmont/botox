@@ -17,7 +17,7 @@ CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation.prototype = Object.cre
  * Required: true
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation}
+ * @returns {CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation}
  */
 CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation.prototype.commitId = function(value) {
 	return this.set('CommitId', value);
@@ -29,7 +29,7 @@ CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation.prototype.commitId = f
  * Required: true
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation}
+ * @returns {CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation}
  */
 CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation.prototype.repository = function(value) {
 	return this.set('Repository', value);

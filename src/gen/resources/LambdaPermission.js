@@ -19,7 +19,7 @@ LambdaPermission.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaPermission}
+ * @returns {LambdaPermission}
  */
 LambdaPermission.prototype.action = function(value) {
 	return this.set('Action', value);
@@ -32,7 +32,7 @@ LambdaPermission.prototype.action = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaPermission}
+ * @returns {LambdaPermission}
  */
 LambdaPermission.prototype.functionName = function(value) {
 	return this.set('FunctionName', value);
@@ -45,7 +45,7 @@ LambdaPermission.prototype.functionName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaPermission}
+ * @returns {LambdaPermission}
  */
 LambdaPermission.prototype.principal = function(value) {
 	return this.set('Principal', value);
@@ -58,7 +58,7 @@ LambdaPermission.prototype.principal = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaPermission}
+ * @returns {LambdaPermission}
  */
 LambdaPermission.prototype.sourceAccount = function(value) {
 	return this.set('SourceAccount', value);
@@ -71,7 +71,7 @@ LambdaPermission.prototype.sourceAccount = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaPermission}
+ * @returns {LambdaPermission}
  */
 LambdaPermission.prototype.sourceArn = function(value) {
 	return this.set('SourceArn', value);

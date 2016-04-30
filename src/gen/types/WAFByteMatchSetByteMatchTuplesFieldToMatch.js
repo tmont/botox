@@ -17,7 +17,7 @@ WAFByteMatchSetByteMatchTuplesFieldToMatch.prototype = Object.create(PropertyTyp
  * Required: false
  *
  * @param {String} value
- * @return {WAFByteMatchSetByteMatchTuplesFieldToMatch}
+ * @returns {WAFByteMatchSetByteMatchTuplesFieldToMatch}
  */
 WAFByteMatchSetByteMatchTuplesFieldToMatch.prototype.data = function(value) {
 	return this.set('Data', value);
@@ -29,7 +29,7 @@ WAFByteMatchSetByteMatchTuplesFieldToMatch.prototype.data = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {WAFByteMatchSetByteMatchTuplesFieldToMatch}
+ * @returns {WAFByteMatchSetByteMatchTuplesFieldToMatch}
  */
 WAFByteMatchSetByteMatchTuplesFieldToMatch.prototype.type = function(value) {
 	return this.set('Type', value);

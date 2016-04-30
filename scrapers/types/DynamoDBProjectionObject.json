@@ -7,7 +7,7 @@
       "description": "The non-key attribute names that are projected into the index.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "ProjectionType",

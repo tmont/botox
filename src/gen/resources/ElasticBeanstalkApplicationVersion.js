@@ -19,7 +19,7 @@ ElasticBeanstalkApplicationVersion.prototype = Object.create(Resource.prototype)
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkApplicationVersion}
+ * @returns {ElasticBeanstalkApplicationVersion}
  */
 ElasticBeanstalkApplicationVersion.prototype.applicationName = function(value) {
 	return this.set('ApplicationName', value);
@@ -32,7 +32,7 @@ ElasticBeanstalkApplicationVersion.prototype.applicationName = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkApplicationVersion}
+ * @returns {ElasticBeanstalkApplicationVersion}
  */
 ElasticBeanstalkApplicationVersion.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -45,7 +45,7 @@ ElasticBeanstalkApplicationVersion.prototype.description = function(value) {
  * Update requires: Replacement
  *
  * @param {ElasticBeanstalkSourceBundlePropertyType|Attribute|Reference} value
- * @return {ElasticBeanstalkApplicationVersion}
+ * @returns {ElasticBeanstalkApplicationVersion}
  */
 ElasticBeanstalkApplicationVersion.prototype.sourceBundle = function(value) {
 	return this.set('SourceBundle', value);

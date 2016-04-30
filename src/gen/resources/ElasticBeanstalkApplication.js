@@ -19,7 +19,7 @@ ElasticBeanstalkApplication.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkApplication}
+ * @returns {ElasticBeanstalkApplication}
  */
 ElasticBeanstalkApplication.prototype.applicationName = function(value) {
 	return this.set('ApplicationName', value);
@@ -32,7 +32,7 @@ ElasticBeanstalkApplication.prototype.applicationName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkApplication}
+ * @returns {ElasticBeanstalkApplication}
  */
 ElasticBeanstalkApplication.prototype.description = function(value) {
 	return this.set('Description', value);

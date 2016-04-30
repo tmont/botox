@@ -17,7 +17,7 @@ S3WebsiteConfigurationProperty.prototype = Object.create(PropertyType.prototype)
  * Required: false
  *
  * @param {String} value
- * @return {S3WebsiteConfigurationProperty}
+ * @returns {S3WebsiteConfigurationProperty}
  */
 S3WebsiteConfigurationProperty.prototype.errorDocument = function(value) {
 	return this.set('ErrorDocument', value);
@@ -29,7 +29,7 @@ S3WebsiteConfigurationProperty.prototype.errorDocument = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {S3WebsiteConfigurationProperty}
+ * @returns {S3WebsiteConfigurationProperty}
  */
 S3WebsiteConfigurationProperty.prototype.indexDocument = function(value) {
 	return this.set('IndexDocument', value);
@@ -41,7 +41,7 @@ S3WebsiteConfigurationProperty.prototype.indexDocument = function(value) {
  * Required: false
  *
  * @param {S3WebsiteConfigurationRedirectAllRequestsToProperty} value
- * @return {S3WebsiteConfigurationProperty}
+ * @returns {S3WebsiteConfigurationProperty}
  */
 S3WebsiteConfigurationProperty.prototype.redirectAllRequestsTo = function(value) {
 	return this.set('RedirectAllRequestsTo', value);
@@ -53,7 +53,7 @@ S3WebsiteConfigurationProperty.prototype.redirectAllRequestsTo = function(value)
  * Required: false
  *
  * @param {S3WebsiteConfigurationRoutingRulesProperty[]} value
- * @return {S3WebsiteConfigurationProperty}
+ * @returns {S3WebsiteConfigurationProperty}
  */
 S3WebsiteConfigurationProperty.prototype.routingRules = function(value) {
 	return this.set('RoutingRules', value);

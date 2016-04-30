@@ -17,7 +17,7 @@ CloudFrontLogging.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {CloudFrontLogging}
+ * @returns {CloudFrontLogging}
  */
 CloudFrontLogging.prototype.bucket = function(value) {
 	return this.set('Bucket', value);
@@ -29,7 +29,7 @@ CloudFrontLogging.prototype.bucket = function(value) {
  * Required: false
  *
  * @param {Boolean} value
- * @return {CloudFrontLogging}
+ * @returns {CloudFrontLogging}
  */
 CloudFrontLogging.prototype.includeCookies = function(value) {
 	return this.set('IncludeCookies', value);
@@ -41,7 +41,7 @@ CloudFrontLogging.prototype.includeCookies = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {CloudFrontLogging}
+ * @returns {CloudFrontLogging}
  */
 CloudFrontLogging.prototype.prefix = function(value) {
 	return this.set('Prefix', value);

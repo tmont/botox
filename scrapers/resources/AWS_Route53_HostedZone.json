@@ -3,12 +3,12 @@
   "namespace": "AWS",
   "category": "Route53",
   "name": "HostedZone",
-  "description": "The AWS::Route53::HostedZone resource creates a hosted zone, which can contain a collection of record sets for a domain. You cannot create a hosted zone for a top-level domain (TLD). For more information, see POST CreateHostedZone or POST CreateHostedZone (Private) in the Amazon Route 53 API Reference.",
+  "description": "The AWS::Route53::HostedZone resource creates a hosted zone, which can contain a collection of record sets for a domain. You cannot create a hosted zone for a top-level domain (TLD). For more information, see POST CreateHostedZone or POST CreateHostedZone (Private) in the Amazon Route 53 API Reference.",
   "properties": [
     {
       "name": "HostedZoneConfig",
       "description": "A complex type that contains an optional comment about your hosted zone.",
-      "typeDescription": "Amazon Route 53 HostedZoneConfig Property",
+      "typeDescription": "Amazon Route 53 HostedZoneConfig Property",
       "required": false,
       "type": "Route53HostedZoneConfigProperty",
       "update": "No interruption"
@@ -16,7 +16,7 @@
     {
       "name": "HostedZoneTags",
       "description": "An arbitrary set of tags (key–value pairs) for this hosted zone.",
-      "typeDescription": "List of Amazon Route 53 HostedZoneTags",
+      "typeDescription": "List of Amazon Route 53 HostedZoneTags",
       "required": false,
       "type": "Route53HostedZoneTags[]",
       "update": "No interruption"
@@ -32,7 +32,7 @@
     {
       "name": "VPCs",
       "description": "One or more VPCs that you want to associate with this hosted zone. When you specify this property, AWS CloudFormation creates a private hosted zone.",
-      "typeDescription": "List of Amazon Route 53 HostedZoneVPCs",
+      "typeDescription": "List of Amazon Route 53 HostedZoneVPCs",
       "required": false,
       "type": "Route53HostedZoneVPCs[]"
     }

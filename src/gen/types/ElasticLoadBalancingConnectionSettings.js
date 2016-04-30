@@ -17,7 +17,7 @@ ElasticLoadBalancingConnectionSettings.prototype = Object.create(PropertyType.pr
  * Required: true
  *
  * @param {Number} value
- * @return {ElasticLoadBalancingConnectionSettings}
+ * @returns {ElasticLoadBalancingConnectionSettings}
  */
 ElasticLoadBalancingConnectionSettings.prototype.idleTimeout = function(value) {
 	return this.set('IdleTimeout', value);

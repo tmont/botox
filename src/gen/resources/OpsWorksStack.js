@@ -19,7 +19,7 @@ OpsWorksStack.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.agentVersion = function(value) {
 	return this.set('AgentVersion', value);
@@ -32,7 +32,7 @@ OpsWorksStack.prototype.agentVersion = function(value) {
  * Update requires: No interruption
  *
  * @param {key[]|Attribute|Reference} value A list of key-value pairs
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.attributes = function(value) {
 	return this.set('Attributes', value);
@@ -45,7 +45,7 @@ OpsWorksStack.prototype.attributes = function(value) {
  * Update requires: No interruption
  *
  * @param {OpsWorksChefConfigurationType|Attribute|Reference} value AWS OpsWorks ChefConfiguration Type
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.chefConfiguration = function(value) {
 	return this.set('ChefConfiguration', value);
@@ -58,7 +58,7 @@ OpsWorksStack.prototype.chefConfiguration = function(value) {
  * Update requires: No interruption
  *
  * @param {OpsWorksStackConfigurationManagerType|Attribute|Reference} value AWS OpsWorks StackConfigurationManager Type
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.configurationManager = function(value) {
 	return this.set('ConfigurationManager', value);
@@ -71,7 +71,7 @@ OpsWorksStack.prototype.configurationManager = function(value) {
  * Update requires: No interruption
  *
  * @param {OpsWorksSourceType|Attribute|Reference} value AWS OpsWorks Source Type
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.customCookbooksSource = function(value) {
 	return this.set('CustomCookbooksSource', value);
@@ -84,7 +84,7 @@ OpsWorksStack.prototype.customCookbooksSource = function(value) {
  * Update requires: No interruption
  *
  * @param {Object|Attribute|Reference} value
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.customJson = function(value) {
 	return this.set('CustomJson', value);
@@ -97,7 +97,7 @@ OpsWorksStack.prototype.customJson = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.defaultAvailabilityZone = function(value) {
 	return this.set('DefaultAvailabilityZone', value);
@@ -110,7 +110,7 @@ OpsWorksStack.prototype.defaultAvailabilityZone = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.defaultInstanceProfileArn = function(value) {
 	return this.set('DefaultInstanceProfileArn', value);
@@ -123,7 +123,7 @@ OpsWorksStack.prototype.defaultInstanceProfileArn = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.defaultOs = function(value) {
 	return this.set('DefaultOs', value);
@@ -136,7 +136,7 @@ OpsWorksStack.prototype.defaultOs = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.defaultRootDeviceType = function(value) {
 	return this.set('DefaultRootDeviceType', value);
@@ -149,7 +149,7 @@ OpsWorksStack.prototype.defaultRootDeviceType = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.defaultSshKeyName = function(value) {
 	return this.set('DefaultSshKeyName', value);
@@ -162,7 +162,7 @@ OpsWorksStack.prototype.defaultSshKeyName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.defaultSubnetId = function(value) {
 	return this.set('DefaultSubnetId', value);
@@ -175,7 +175,7 @@ OpsWorksStack.prototype.defaultSubnetId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.hostnameTheme = function(value) {
 	return this.set('HostnameTheme', value);
@@ -188,7 +188,7 @@ OpsWorksStack.prototype.hostnameTheme = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -201,7 +201,7 @@ OpsWorksStack.prototype.name = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.serviceRoleArn = function(value) {
 	return this.set('ServiceRoleArn', value);
@@ -214,7 +214,7 @@ OpsWorksStack.prototype.serviceRoleArn = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.useCustomCookbooks = function(value) {
 	return this.set('UseCustomCookbooks', value);
@@ -227,7 +227,7 @@ OpsWorksStack.prototype.useCustomCookbooks = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.useOpsworksSecurityGroups = function(value) {
 	return this.set('UseOpsworksSecurityGroups', value);
@@ -240,7 +240,7 @@ OpsWorksStack.prototype.useOpsworksSecurityGroups = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksStack}
+ * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.vpcId = function(value) {
 	return this.set('VpcId', value);

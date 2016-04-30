@@ -26,7 +26,7 @@
       "description": "A maximum of five VPC security group IDs that are in the same VPC as the subnet that is specified in the SubnetId property. For more information about security groups and mount targets, see Security in the Amazon Elastic File System User Guide.",
       "typeDescription": "List of strings",
       "required": true,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {

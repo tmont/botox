@@ -19,7 +19,7 @@ EC2VolumeAttachment.prototype = Object.create(Resource.prototype);
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VolumeAttachment}
+ * @returns {EC2VolumeAttachment}
  */
 EC2VolumeAttachment.prototype.device = function(value) {
 	return this.set('Device', value);
@@ -32,7 +32,7 @@ EC2VolumeAttachment.prototype.device = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VolumeAttachment}
+ * @returns {EC2VolumeAttachment}
  */
 EC2VolumeAttachment.prototype.instanceId = function(value) {
 	return this.set('InstanceId', value);
@@ -45,7 +45,7 @@ EC2VolumeAttachment.prototype.instanceId = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VolumeAttachment}
+ * @returns {EC2VolumeAttachment}
  */
 EC2VolumeAttachment.prototype.volumeId = function(value) {
 	return this.set('VolumeId', value);

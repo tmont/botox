@@ -17,7 +17,7 @@ EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring.prototype =
  * Required: false
  *
  * @param {Boolean} value
- * @return {EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring}
+ * @returns {EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring}
  */
 EC2SpotFleetSpotFleetRequestConfigDataLaunchSpecificationsMonitoring.prototype.enabled = function(value) {
 	return this.set('Enabled', value);

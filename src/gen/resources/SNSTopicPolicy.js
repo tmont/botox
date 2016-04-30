@@ -19,7 +19,7 @@ SNSTopicPolicy.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {Object|Attribute|Reference} value
- * @return {SNSTopicPolicy}
+ * @returns {SNSTopicPolicy}
  */
 SNSTopicPolicy.prototype.policyDocument = function(value) {
 	return this.set('PolicyDocument', value);
@@ -32,7 +32,7 @@ SNSTopicPolicy.prototype.policyDocument = function(value) {
  * Update requires: No interruption
  *
  * @param {String[]|Attribute|Reference} value A list of Amazon SNS topics ARNs
- * @return {SNSTopicPolicy}
+ * @returns {SNSTopicPolicy}
  */
 SNSTopicPolicy.prototype.topics = function(value) {
 	return this.set('Topics', value);

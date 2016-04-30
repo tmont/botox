@@ -17,7 +17,7 @@ APIGatewayStageMethodSetting.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {Boolean} value
- * @return {APIGatewayStageMethodSetting}
+ * @returns {APIGatewayStageMethodSetting}
  */
 APIGatewayStageMethodSetting.prototype.cacheDataEncrypted = function(value) {
 	return this.set('CacheDataEncrypted', value);
@@ -29,7 +29,7 @@ APIGatewayStageMethodSetting.prototype.cacheDataEncrypted = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {APIGatewayStageMethodSetting}
+ * @returns {APIGatewayStageMethodSetting}
  */
 APIGatewayStageMethodSetting.prototype.cacheTtlInSeconds = function(value) {
 	return this.set('CacheTtlInSeconds', value);
@@ -41,7 +41,7 @@ APIGatewayStageMethodSetting.prototype.cacheTtlInSeconds = function(value) {
  * Required: false
  *
  * @param {Boolean} value
- * @return {APIGatewayStageMethodSetting}
+ * @returns {APIGatewayStageMethodSetting}
  */
 APIGatewayStageMethodSetting.prototype.cachingEnabled = function(value) {
 	return this.set('CachingEnabled', value);
@@ -53,7 +53,7 @@ APIGatewayStageMethodSetting.prototype.cachingEnabled = function(value) {
  * Required: false
  *
  * @param {Boolean} value
- * @return {APIGatewayStageMethodSetting}
+ * @returns {APIGatewayStageMethodSetting}
  */
 APIGatewayStageMethodSetting.prototype.dataTraceEnabled = function(value) {
 	return this.set('DataTraceEnabled', value);
@@ -65,7 +65,7 @@ APIGatewayStageMethodSetting.prototype.dataTraceEnabled = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayStageMethodSetting}
+ * @returns {APIGatewayStageMethodSetting}
  */
 APIGatewayStageMethodSetting.prototype.httpMethod = function(value) {
 	return this.set('HttpMethod', value);
@@ -77,7 +77,7 @@ APIGatewayStageMethodSetting.prototype.httpMethod = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayStageMethodSetting}
+ * @returns {APIGatewayStageMethodSetting}
  */
 APIGatewayStageMethodSetting.prototype.loggingLevel = function(value) {
 	return this.set('LoggingLevel', value);
@@ -89,7 +89,7 @@ APIGatewayStageMethodSetting.prototype.loggingLevel = function(value) {
  * Required: false
  *
  * @param {Boolean} value
- * @return {APIGatewayStageMethodSetting}
+ * @returns {APIGatewayStageMethodSetting}
  */
 APIGatewayStageMethodSetting.prototype.metricsEnabled = function(value) {
 	return this.set('MetricsEnabled', value);
@@ -101,7 +101,7 @@ APIGatewayStageMethodSetting.prototype.metricsEnabled = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayStageMethodSetting}
+ * @returns {APIGatewayStageMethodSetting}
  */
 APIGatewayStageMethodSetting.prototype.resourcePath = function(value) {
 	return this.set('ResourcePath', value);
@@ -113,7 +113,7 @@ APIGatewayStageMethodSetting.prototype.resourcePath = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {APIGatewayStageMethodSetting}
+ * @returns {APIGatewayStageMethodSetting}
  */
 APIGatewayStageMethodSetting.prototype.throttlingBurstLimit = function(value) {
 	return this.set('ThrottlingBurstLimit', value);
@@ -125,7 +125,7 @@ APIGatewayStageMethodSetting.prototype.throttlingBurstLimit = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {APIGatewayStageMethodSetting}
+ * @returns {APIGatewayStageMethodSetting}
  */
 APIGatewayStageMethodSetting.prototype.throttlingRateLimit = function(value) {
 	return this.set('ThrottlingRateLimit', value);

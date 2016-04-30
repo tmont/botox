@@ -19,7 +19,7 @@ ElastiCacheParameterGroup.prototype = Object.create(Resource.prototype);
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheParameterGroup}
+ * @returns {ElastiCacheParameterGroup}
  */
 ElastiCacheParameterGroup.prototype.cacheParameterGroupFamily = function(value) {
 	return this.set('CacheParameterGroupFamily', value);
@@ -32,7 +32,7 @@ ElastiCacheParameterGroup.prototype.cacheParameterGroupFamily = function(value) 
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheParameterGroup}
+ * @returns {ElastiCacheParameterGroup}
  */
 ElastiCacheParameterGroup.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -45,7 +45,7 @@ ElastiCacheParameterGroup.prototype.description = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {Object|Attribute|Reference} value
- * @return {ElastiCacheParameterGroup}
+ * @returns {ElastiCacheParameterGroup}
  */
 ElastiCacheParameterGroup.prototype.properties = function(value) {
 	return this.set('Properties', value);

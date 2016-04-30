@@ -19,7 +19,7 @@ WAFRule.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {WAFRule}
+ * @returns {WAFRule}
  */
 WAFRule.prototype.metricName = function(value) {
 	return this.set('MetricName', value);
@@ -32,7 +32,7 @@ WAFRule.prototype.metricName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {WAFRule}
+ * @returns {WAFRule}
  */
 WAFRule.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -45,7 +45,7 @@ WAFRule.prototype.name = function(value) {
  * Update requires: No interruption
  *
  * @param {WAFRulePredicates[]|Attribute|Reference} value List of AWS WAF Rule Predicates
- * @return {WAFRule}
+ * @returns {WAFRule}
  */
 WAFRule.prototype.predicates = function(value) {
 	return this.set('Predicates', value);

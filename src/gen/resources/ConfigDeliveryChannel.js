@@ -19,7 +19,7 @@ ConfigDeliveryChannel.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {ConfigDeliveryChannelConfigSnapshotDeliveryProperties|Attribute|Reference} value AWS Config DeliveryChannel ConfigSnapshotDeliveryProperties
- * @return {ConfigDeliveryChannel}
+ * @returns {ConfigDeliveryChannel}
  */
 ConfigDeliveryChannel.prototype.configSnapshotDeliveryProperties = function(value) {
 	return this.set('ConfigSnapshotDeliveryProperties', value);
@@ -32,7 +32,7 @@ ConfigDeliveryChannel.prototype.configSnapshotDeliveryProperties = function(valu
  * Update requires: Updates are not supported.. To change the name, you must run two separate updates. Delete this resource in the first update and then recreate it with a new name in the second update.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ConfigDeliveryChannel}
+ * @returns {ConfigDeliveryChannel}
  */
 ConfigDeliveryChannel.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -45,7 +45,7 @@ ConfigDeliveryChannel.prototype.name = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ConfigDeliveryChannel}
+ * @returns {ConfigDeliveryChannel}
  */
 ConfigDeliveryChannel.prototype.s3BucketName = function(value) {
 	return this.set('S3BucketName', value);
@@ -58,7 +58,7 @@ ConfigDeliveryChannel.prototype.s3BucketName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ConfigDeliveryChannel}
+ * @returns {ConfigDeliveryChannel}
  */
 ConfigDeliveryChannel.prototype.s3KeyPrefix = function(value) {
 	return this.set('S3KeyPrefix', value);
@@ -71,7 +71,7 @@ ConfigDeliveryChannel.prototype.s3KeyPrefix = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ConfigDeliveryChannel}
+ * @returns {ConfigDeliveryChannel}
  */
 ConfigDeliveryChannel.prototype.snsTopicARN = function(value) {
 	return this.set('SnsTopicARN', value);

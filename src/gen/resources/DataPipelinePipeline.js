@@ -19,7 +19,7 @@ DataPipelinePipeline.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {DataPipelinePipeline}
+ * @returns {DataPipelinePipeline}
  */
 DataPipelinePipeline.prototype.activate = function(value) {
 	return this.set('Activate', value);
@@ -32,7 +32,7 @@ DataPipelinePipeline.prototype.activate = function(value) {
  * Update requires: Replacement.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {DataPipelinePipeline}
+ * @returns {DataPipelinePipeline}
  */
 DataPipelinePipeline.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -45,7 +45,7 @@ DataPipelinePipeline.prototype.description = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {DataPipelinePipeline}
+ * @returns {DataPipelinePipeline}
  */
 DataPipelinePipeline.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -58,7 +58,7 @@ DataPipelinePipeline.prototype.name = function(value) {
  * Update requires: No interruption
  *
  * @param {DataPipelinePipelineParameterObjects|Attribute|Reference} value AWS Data Pipeline Pipeline ParameterObjects
- * @return {DataPipelinePipeline}
+ * @returns {DataPipelinePipeline}
  */
 DataPipelinePipeline.prototype.parameterObjects = function(value) {
 	return this.set('ParameterObjects', value);
@@ -71,7 +71,7 @@ DataPipelinePipeline.prototype.parameterObjects = function(value) {
  * Update requires: No interruption
  *
  * @param {DataPipelinePipelineParameterValues|Attribute|Reference} value AWS Data Pipeline Pipeline ParameterValues
- * @return {DataPipelinePipeline}
+ * @returns {DataPipelinePipeline}
  */
 DataPipelinePipeline.prototype.parameterValues = function(value) {
 	return this.set('ParameterValues', value);
@@ -84,7 +84,7 @@ DataPipelinePipeline.prototype.parameterValues = function(value) {
  * Update requires: Some interruptions. Not all objects, fields, and values can be updated. Restrictions on what can be updated are documented in Editing Your Pipelines in the AWS Data Pipeline Developer Guide.
  *
  * @param {DataPipelinePipelineObjects[]|Attribute|Reference} value A list of AWS Data Pipeline PipelineObjects
- * @return {DataPipelinePipeline}
+ * @returns {DataPipelinePipeline}
  */
 DataPipelinePipeline.prototype.pipelineObjects = function(value) {
 	return this.set('PipelineObjects', value);
@@ -97,7 +97,7 @@ DataPipelinePipeline.prototype.pipelineObjects = function(value) {
  * Update requires: No interruption
  *
  * @param {DataPipelinePipelinePipelineTags|Attribute|Reference} value AWS Data Pipeline Pipeline PipelineTags
- * @return {DataPipelinePipeline}
+ * @returns {DataPipelinePipeline}
  */
 DataPipelinePipeline.prototype.pipelineTags = function(value) {
 	return this.set('PipelineTags', value);

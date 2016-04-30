@@ -19,7 +19,7 @@ EC2Route.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Route}
+ * @returns {EC2Route}
  */
 EC2Route.prototype.destinationCidrBlock = function(value) {
 	return this.set('DestinationCidrBlock', value);
@@ -32,7 +32,7 @@ EC2Route.prototype.destinationCidrBlock = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Route}
+ * @returns {EC2Route}
  */
 EC2Route.prototype.gatewayId = function(value) {
 	return this.set('GatewayId', value);
@@ -45,7 +45,7 @@ EC2Route.prototype.gatewayId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Route}
+ * @returns {EC2Route}
  */
 EC2Route.prototype.instanceId = function(value) {
 	return this.set('InstanceId', value);
@@ -58,7 +58,7 @@ EC2Route.prototype.instanceId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Route}
+ * @returns {EC2Route}
  */
 EC2Route.prototype.natGatewayId = function(value) {
 	return this.set('NatGatewayId', value);
@@ -71,7 +71,7 @@ EC2Route.prototype.natGatewayId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Route}
+ * @returns {EC2Route}
  */
 EC2Route.prototype.networkInterfaceId = function(value) {
 	return this.set('NetworkInterfaceId', value);
@@ -84,7 +84,7 @@ EC2Route.prototype.networkInterfaceId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Route}
+ * @returns {EC2Route}
  */
 EC2Route.prototype.routeTableId = function(value) {
 	return this.set('RouteTableId', value);
@@ -97,7 +97,7 @@ EC2Route.prototype.routeTableId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Route}
+ * @returns {EC2Route}
  */
 EC2Route.prototype.vpcPeeringConnectionId = function(value) {
 	return this.set('VpcPeeringConnectionId', value);

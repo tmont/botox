@@ -17,7 +17,7 @@ CloudFrontDistributionConfigurationViewerCertificate.prototype = Object.create(P
  * Required: false
  *
  * @param {Boolean} value
- * @return {CloudFrontDistributionConfigurationViewerCertificate}
+ * @returns {CloudFrontDistributionConfigurationViewerCertificate}
  */
 CloudFrontDistributionConfigurationViewerCertificate.prototype.cloudFrontDefaultCertificate = function(value) {
 	return this.set('CloudFrontDefaultCertificate', value);
@@ -29,7 +29,7 @@ CloudFrontDistributionConfigurationViewerCertificate.prototype.cloudFrontDefault
  * Required: false
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigurationViewerCertificate}
+ * @returns {CloudFrontDistributionConfigurationViewerCertificate}
  */
 CloudFrontDistributionConfigurationViewerCertificate.prototype.iamCertificateId = function(value) {
 	return this.set('IamCertificateId', value);
@@ -41,7 +41,7 @@ CloudFrontDistributionConfigurationViewerCertificate.prototype.iamCertificateId 
  * Required: false
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigurationViewerCertificate}
+ * @returns {CloudFrontDistributionConfigurationViewerCertificate}
  */
 CloudFrontDistributionConfigurationViewerCertificate.prototype.minimumProtocolVersion = function(value) {
 	return this.set('MinimumProtocolVersion', value);
@@ -53,7 +53,7 @@ CloudFrontDistributionConfigurationViewerCertificate.prototype.minimumProtocolVe
  * Required: false
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigurationViewerCertificate}
+ * @returns {CloudFrontDistributionConfigurationViewerCertificate}
  */
 CloudFrontDistributionConfigurationViewerCertificate.prototype.sslSupportMethod = function(value) {
 	return this.set('SslSupportMethod', value);

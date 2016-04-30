@@ -17,7 +17,7 @@ OpsWorksAppEnvironment.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {OpsWorksAppEnvironment}
+ * @returns {OpsWorksAppEnvironment}
  */
 OpsWorksAppEnvironment.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -29,7 +29,7 @@ OpsWorksAppEnvironment.prototype.key = function(value) {
  * Required: false
  *
  * @param {Boolean} value
- * @return {OpsWorksAppEnvironment}
+ * @returns {OpsWorksAppEnvironment}
  */
 OpsWorksAppEnvironment.prototype.secure = function(value) {
 	return this.set('Secure', value);
@@ -41,7 +41,7 @@ OpsWorksAppEnvironment.prototype.secure = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {OpsWorksAppEnvironment}
+ * @returns {OpsWorksAppEnvironment}
  */
 OpsWorksAppEnvironment.prototype.value = function(value) {
 	return this.set('Value', value);

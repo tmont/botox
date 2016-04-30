@@ -19,7 +19,7 @@ EC2VPCPeeringConnection.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPCPeeringConnection}
+ * @returns {EC2VPCPeeringConnection}
  */
 EC2VPCPeeringConnection.prototype.peerVpcId = function(value) {
 	return this.set('PeerVpcId', value);
@@ -32,7 +32,7 @@ EC2VPCPeeringConnection.prototype.peerVpcId = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {EC2VPCPeeringConnection}
+ * @returns {EC2VPCPeeringConnection}
  */
 EC2VPCPeeringConnection.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -45,7 +45,7 @@ EC2VPCPeeringConnection.prototype.tags = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPCPeeringConnection}
+ * @returns {EC2VPCPeeringConnection}
  */
 EC2VPCPeeringConnection.prototype.vpcId = function(value) {
 	return this.set('VpcId', value);

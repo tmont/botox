@@ -58,7 +58,7 @@
       "description": "Custom header parameters for the request.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     }
   ],

@@ -10,7 +10,7 @@
       "description": "One or more managed policy ARNs to attach to this group.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {

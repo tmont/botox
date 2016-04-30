@@ -17,7 +17,7 @@ AutoScalingTagsPropertyType.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {AutoScalingTagsPropertyType}
+ * @returns {AutoScalingTagsPropertyType}
  */
 AutoScalingTagsPropertyType.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -29,7 +29,7 @@ AutoScalingTagsPropertyType.prototype.key = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {AutoScalingTagsPropertyType}
+ * @returns {AutoScalingTagsPropertyType}
  */
 AutoScalingTagsPropertyType.prototype.value = function(value) {
 	return this.set('Value', value);
@@ -41,7 +41,7 @@ AutoScalingTagsPropertyType.prototype.value = function(value) {
  * Required: true
  *
  * @param {Boolean} value
- * @return {AutoScalingTagsPropertyType}
+ * @returns {AutoScalingTagsPropertyType}
  */
 AutoScalingTagsPropertyType.prototype.propagateAtLaunch = function(value) {
 	return this.set('PropagateAtLaunch', value);

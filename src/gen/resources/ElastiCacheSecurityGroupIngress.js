@@ -19,7 +19,7 @@ ElastiCacheSecurityGroupIngress.prototype = Object.create(Resource.prototype);
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheSecurityGroupIngress}
+ * @returns {ElastiCacheSecurityGroupIngress}
  */
 ElastiCacheSecurityGroupIngress.prototype.cacheSecurityGroupName = function(value) {
 	return this.set('CacheSecurityGroupName', value);
@@ -32,7 +32,7 @@ ElastiCacheSecurityGroupIngress.prototype.cacheSecurityGroupName = function(valu
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheSecurityGroupIngress}
+ * @returns {ElastiCacheSecurityGroupIngress}
  */
 ElastiCacheSecurityGroupIngress.prototype.eC2SecurityGroupName = function(value) {
 	return this.set('EC2SecurityGroupName', value);
@@ -45,7 +45,7 @@ ElastiCacheSecurityGroupIngress.prototype.eC2SecurityGroupName = function(value)
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheSecurityGroupIngress}
+ * @returns {ElastiCacheSecurityGroupIngress}
  */
 ElastiCacheSecurityGroupIngress.prototype.eC2SecurityGroupOwnerId = function(value) {
 	return this.set('EC2SecurityGroupOwnerId', value);

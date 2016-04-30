@@ -17,7 +17,7 @@ S3NotificationConfigurationConfigFilterS3KeyRules.prototype = Object.create(Prop
  * Required: true
  *
  * @param {String} value
- * @return {S3NotificationConfigurationConfigFilterS3KeyRules}
+ * @returns {S3NotificationConfigurationConfigFilterS3KeyRules}
  */
 S3NotificationConfigurationConfigFilterS3KeyRules.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -29,7 +29,7 @@ S3NotificationConfigurationConfigFilterS3KeyRules.prototype.name = function(valu
  * Required: true
  *
  * @param {String} value
- * @return {S3NotificationConfigurationConfigFilterS3KeyRules}
+ * @returns {S3NotificationConfigurationConfigFilterS3KeyRules}
  */
 S3NotificationConfigurationConfigFilterS3KeyRules.prototype.value = function(value) {
 	return this.set('Value', value);

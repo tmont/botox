@@ -19,7 +19,7 @@ CloudFormationInterface.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {CloudFormationInterfaceParameterGroup|Attribute|Reference} value AWS CloudFormation Interface ParameterGroup
- * @return {CloudFormationInterface}
+ * @returns {CloudFormationInterface}
  */
 CloudFormationInterface.prototype.parameterGroups = function(value) {
 	return this.set('ParameterGroups', value);
@@ -32,7 +32,7 @@ CloudFormationInterface.prototype.parameterGroups = function(value) {
  * Update requires: No interruption
  *
  * @param {CloudFormationInterfaceParameterLabel|Attribute|Reference} value AWS CloudFormation Interface ParameterLabel
- * @return {CloudFormationInterface}
+ * @returns {CloudFormationInterface}
  */
 CloudFormationInterface.prototype.parameterLabels = function(value) {
 	return this.set('ParameterLabels', value);

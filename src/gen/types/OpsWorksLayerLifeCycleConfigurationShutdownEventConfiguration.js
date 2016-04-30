@@ -17,7 +17,7 @@ OpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration.prototype = Object
  * Required: false
  *
  * @param {Boolean} value
- * @return {OpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration}
+ * @returns {OpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration}
  */
 OpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration.prototype.delayUntilElbConnectionsDrained = function(value) {
 	return this.set('DelayUntilElbConnectionsDrained', value);
@@ -29,7 +29,7 @@ OpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration.prototype.delayUnt
  * Required: false
  *
  * @param {Number} value
- * @return {OpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration}
+ * @returns {OpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration}
  */
 OpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration.prototype.executionTimeout = function(value) {
 	return this.set('ExecutionTimeout', value);

@@ -19,7 +19,7 @@ WAFSqlInjectionMatchSet.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {WAFSqlInjectionMatchSet}
+ * @returns {WAFSqlInjectionMatchSet}
  */
 WAFSqlInjectionMatchSet.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -32,7 +32,7 @@ WAFSqlInjectionMatchSet.prototype.name = function(value) {
  * Update requires: No interruption
  *
  * @param {WAFSqlInjectionMatchSetSqlInjectionMatchTuples[]|Attribute|Reference} value List of AWS WAF SqlInjectionMatchSet SqlInjectionMatchTuples
- * @return {WAFSqlInjectionMatchSet}
+ * @returns {WAFSqlInjectionMatchSet}
  */
 WAFSqlInjectionMatchSet.prototype.sqlInjectionMatchTuples = function(value) {
 	return this.set('SqlInjectionMatchTuples', value);

@@ -19,7 +19,7 @@ ApiGatewayAccount.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayAccount}
+ * @returns {ApiGatewayAccount}
  */
 ApiGatewayAccount.prototype.cloudWatchRoleArn = function(value) {
 	return this.set('CloudWatchRoleArn', value);

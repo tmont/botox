@@ -19,7 +19,7 @@ EC2VPCEndpoint.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {Object|Attribute|Reference} value
- * @return {EC2VPCEndpoint}
+ * @returns {EC2VPCEndpoint}
  */
 EC2VPCEndpoint.prototype.policyDocument = function(value) {
 	return this.set('PolicyDocument', value);
@@ -31,8 +31,8 @@ EC2VPCEndpoint.prototype.policyDocument = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {EC2VPCEndpoint}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {EC2VPCEndpoint}
  */
 EC2VPCEndpoint.prototype.routeTableIds = function(value) {
 	return this.set('RouteTableIds', value);
@@ -45,7 +45,7 @@ EC2VPCEndpoint.prototype.routeTableIds = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPCEndpoint}
+ * @returns {EC2VPCEndpoint}
  */
 EC2VPCEndpoint.prototype.serviceName = function(value) {
 	return this.set('ServiceName', value);
@@ -58,7 +58,7 @@ EC2VPCEndpoint.prototype.serviceName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPCEndpoint}
+ * @returns {EC2VPCEndpoint}
  */
 EC2VPCEndpoint.prototype.vpcId = function(value) {
 	return this.set('VpcId', value);

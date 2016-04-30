@@ -19,7 +19,7 @@ RedshiftClusterSubnetGroup.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftClusterSubnetGroup}
+ * @returns {RedshiftClusterSubnetGroup}
  */
 RedshiftClusterSubnetGroup.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -31,8 +31,8 @@ RedshiftClusterSubnetGroup.prototype.description = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {RedshiftClusterSubnetGroup}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {RedshiftClusterSubnetGroup}
  */
 RedshiftClusterSubnetGroup.prototype.subnetIds = function(value) {
 	return this.set('SubnetIds', value);

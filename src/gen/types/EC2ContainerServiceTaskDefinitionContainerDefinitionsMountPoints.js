@@ -17,7 +17,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints.prototype = Obj
  * Required: true
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints.prototype.containerPath = function(value) {
 	return this.set('ContainerPath', value);
@@ -29,7 +29,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints.prototype.conta
  * Required: true
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints.prototype.sourceVolume = function(value) {
 	return this.set('SourceVolume', value);
@@ -41,7 +41,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints.prototype.sourc
  * Required: false
  *
  * @param {Boolean} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints.prototype.readOnly = function(value) {
 	return this.set('ReadOnly', value);

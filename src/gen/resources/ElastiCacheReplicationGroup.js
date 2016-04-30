@@ -24,15 +24,15 @@ ElastiCacheReplicationGroup.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(ElastiCacheReplicationGroup.prototype, 'attr', {
 	/**
-	 * @return {ElastiCacheReplicationGroupAttributeMap}
+	 * @returns {ElastiCacheReplicationGroupAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The DNS address of the primary read-write cache node.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get primaryEndPointAddress() {
 				return createAttribute('PrimaryEndPoint.Address');
@@ -40,7 +40,7 @@ Object.defineProperty(ElastiCacheReplicationGroup.prototype, 'attr', {
 
 			/**
 			 * The number of the port that the primary read-write cache engine is listening on.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get primaryEndPointPort() {
 				return createAttribute('PrimaryEndPoint.Port');
@@ -48,7 +48,7 @@ Object.defineProperty(ElastiCacheReplicationGroup.prototype, 'attr', {
 
 			/**
 			 * A string with a list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports attribute.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get readEndPointAddresses() {
 				return createAttribute('ReadEndPoint.Addresses');
@@ -56,7 +56,7 @@ Object.defineProperty(ElastiCacheReplicationGroup.prototype, 'attr', {
 
 			/**
 			 * A list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports.List attribute.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get readEndPointAddressesList() {
 				return createAttribute('ReadEndPoint.Addresses.List');
@@ -64,7 +64,7 @@ Object.defineProperty(ElastiCacheReplicationGroup.prototype, 'attr', {
 
 			/**
 			 * A string with a list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses attribute.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get readEndPointPorts() {
 				return createAttribute('ReadEndPoint.Ports');
@@ -72,7 +72,7 @@ Object.defineProperty(ElastiCacheReplicationGroup.prototype, 'attr', {
 
 			/**
 			 * A list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses.List attribute.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get readEndPointPortsList() {
 				return createAttribute('ReadEndPoint.Ports.List');
@@ -88,7 +88,7 @@ Object.defineProperty(ElastiCacheReplicationGroup.prototype, 'attr', {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {ElastiCacheReplicationGroup}
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.automaticFailoverEnabled = function(value) {
 	return this.set('AutomaticFailoverEnabled', value);
@@ -101,7 +101,7 @@ ElastiCacheReplicationGroup.prototype.automaticFailoverEnabled = function(value)
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {ElastiCacheReplicationGroup}
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.autoMinorVersionUpgrade = function(value) {
 	return this.set('AutoMinorVersionUpgrade', value);
@@ -114,7 +114,7 @@ ElastiCacheReplicationGroup.prototype.autoMinorVersionUpgrade = function(value) 
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheReplicationGroup}
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.cacheNodeType = function(value) {
 	return this.set('CacheNodeType', value);
@@ -127,7 +127,7 @@ ElastiCacheReplicationGroup.prototype.cacheNodeType = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheReplicationGroup}
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.cacheParameterGroupName = function(value) {
 	return this.set('CacheParameterGroupName', value);
@@ -139,8 +139,8 @@ ElastiCacheReplicationGroup.prototype.cacheParameterGroupName = function(value) 
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {ElastiCacheReplicationGroup}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.cacheSecurityGroupNames = function(value) {
 	return this.set('CacheSecurityGroupNames', value);
@@ -153,7 +153,7 @@ ElastiCacheReplicationGroup.prototype.cacheSecurityGroupNames = function(value) 
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheReplicationGroup}
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.cacheSubnetGroupName = function(value) {
 	return this.set('CacheSubnetGroupName', value);
@@ -166,7 +166,7 @@ ElastiCacheReplicationGroup.prototype.cacheSubnetGroupName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheReplicationGroup}
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.engine = function(value) {
 	return this.set('Engine', value);
@@ -179,7 +179,7 @@ ElastiCacheReplicationGroup.prototype.engine = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheReplicationGroup}
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.engineVersion = function(value) {
 	return this.set('EngineVersion', value);
@@ -192,7 +192,7 @@ ElastiCacheReplicationGroup.prototype.engineVersion = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheReplicationGroup}
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.notificationTopicArn = function(value) {
 	return this.set('NotificationTopicArn', value);
@@ -205,7 +205,7 @@ ElastiCacheReplicationGroup.prototype.notificationTopicArn = function(value) {
  * Update requires: Replacement
  *
  * @param {Number|Attribute|Reference} value
- * @return {ElastiCacheReplicationGroup}
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.numCacheClusters = function(value) {
 	return this.set('NumCacheClusters', value);
@@ -218,7 +218,7 @@ ElastiCacheReplicationGroup.prototype.numCacheClusters = function(value) {
  * Update requires: Replacement
  *
  * @param {Number|Attribute|Reference} value
- * @return {ElastiCacheReplicationGroup}
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.port = function(value) {
 	return this.set('Port', value);
@@ -230,8 +230,8 @@ ElastiCacheReplicationGroup.prototype.port = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {string[]|Attribute|Reference} value
- * @return {ElastiCacheReplicationGroup}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.preferredCacheClusterAZs = function(value) {
 	return this.set('PreferredCacheClusterAZs', value);
@@ -244,7 +244,7 @@ ElastiCacheReplicationGroup.prototype.preferredCacheClusterAZs = function(value)
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheReplicationGroup}
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.preferredMaintenanceWindow = function(value) {
 	return this.set('PreferredMaintenanceWindow', value);
@@ -257,7 +257,7 @@ ElastiCacheReplicationGroup.prototype.preferredMaintenanceWindow = function(valu
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheReplicationGroup}
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.replicationGroupDescription = function(value) {
 	return this.set('ReplicationGroupDescription', value);
@@ -269,8 +269,8 @@ ElastiCacheReplicationGroup.prototype.replicationGroupDescription = function(val
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {ElastiCacheReplicationGroup}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.securityGroupIds = function(value) {
 	return this.set('SecurityGroupIds', value);
@@ -282,8 +282,8 @@ ElastiCacheReplicationGroup.prototype.securityGroupIds = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {string[]|Attribute|Reference} value
- * @return {ElastiCacheReplicationGroup}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.snapshotArns = function(value) {
 	return this.set('SnapshotArns', value);
@@ -296,7 +296,7 @@ ElastiCacheReplicationGroup.prototype.snapshotArns = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {ElastiCacheReplicationGroup}
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.snapshotRetentionLimit = function(value) {
 	return this.set('SnapshotRetentionLimit', value);
@@ -309,7 +309,7 @@ ElastiCacheReplicationGroup.prototype.snapshotRetentionLimit = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheReplicationGroup}
+ * @returns {ElastiCacheReplicationGroup}
  */
 ElastiCacheReplicationGroup.prototype.snapshotWindow = function(value) {
 	return this.set('SnapshotWindow', value);

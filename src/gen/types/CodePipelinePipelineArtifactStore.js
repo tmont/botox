@@ -17,7 +17,7 @@ CodePipelinePipelineArtifactStore.prototype = Object.create(PropertyType.prototy
  * Required: false
  *
  * @param {CodePipelinePipelineArtifactStoreEncryptionKey} value
- * @return {CodePipelinePipelineArtifactStore}
+ * @returns {CodePipelinePipelineArtifactStore}
  */
 CodePipelinePipelineArtifactStore.prototype.encryptionKey = function(value) {
 	return this.set('EncryptionKey', value);
@@ -29,7 +29,7 @@ CodePipelinePipelineArtifactStore.prototype.encryptionKey = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineArtifactStore}
+ * @returns {CodePipelinePipelineArtifactStore}
  */
 CodePipelinePipelineArtifactStore.prototype.location = function(value) {
 	return this.set('Location', value);
@@ -41,7 +41,7 @@ CodePipelinePipelineArtifactStore.prototype.location = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineArtifactStore}
+ * @returns {CodePipelinePipelineArtifactStore}
  */
 CodePipelinePipelineArtifactStore.prototype.type = function(value) {
 	return this.set('Type', value);

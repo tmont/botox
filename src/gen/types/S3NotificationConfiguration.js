@@ -17,7 +17,7 @@ S3NotificationConfiguration.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {SimpleStorageServiceNotificationConfigurationLambdaConfigurations} value
- * @return {S3NotificationConfiguration}
+ * @returns {S3NotificationConfiguration}
  */
 S3NotificationConfiguration.prototype.lambdaConfigurations = function(value) {
 	return this.set('LambdaConfigurations', value);
@@ -29,7 +29,7 @@ S3NotificationConfiguration.prototype.lambdaConfigurations = function(value) {
  * Required: false
  *
  * @param {SimpleStorageServiceNotificationConfigurationQueueConfigurations} value
- * @return {S3NotificationConfiguration}
+ * @returns {S3NotificationConfiguration}
  */
 S3NotificationConfiguration.prototype.queueConfigurations = function(value) {
 	return this.set('QueueConfigurations', value);
@@ -41,7 +41,7 @@ S3NotificationConfiguration.prototype.queueConfigurations = function(value) {
  * Required: false
  *
  * @param {S3NotificationConfigurationTopicConfigurations} value
- * @return {S3NotificationConfiguration}
+ * @returns {S3NotificationConfiguration}
  */
 S3NotificationConfiguration.prototype.topicConfigurations = function(value) {
 	return this.set('TopicConfigurations', value);

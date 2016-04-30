@@ -17,7 +17,7 @@ ElasticBeanstalkSourceConfigurationPropertyType.prototype = Object.create(Proper
  * Required: true
  *
  * @param {String} value
- * @return {ElasticBeanstalkSourceConfigurationPropertyType}
+ * @returns {ElasticBeanstalkSourceConfigurationPropertyType}
  */
 ElasticBeanstalkSourceConfigurationPropertyType.prototype.applicationName = function(value) {
 	return this.set('ApplicationName', value);
@@ -29,7 +29,7 @@ ElasticBeanstalkSourceConfigurationPropertyType.prototype.applicationName = func
  * Required: true
  *
  * @param {String} value
- * @return {ElasticBeanstalkSourceConfigurationPropertyType}
+ * @returns {ElasticBeanstalkSourceConfigurationPropertyType}
  */
 ElasticBeanstalkSourceConfigurationPropertyType.prototype.templateName = function(value) {
 	return this.set('TemplateName', value);

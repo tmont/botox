@@ -17,7 +17,7 @@ S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty.prototype = Objec
  * Required: false
  *
  * @param {String} value
- * @return {S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty}
+ * @returns {S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty}
  */
 S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty.prototype.httpErrorCodeReturnedEquals = function(value) {
 	return this.set('HttpErrorCodeReturnedEquals', value);
@@ -29,7 +29,7 @@ S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty.prototype.httpErr
  * Required: false
  *
  * @param {String} value
- * @return {S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty}
+ * @returns {S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty}
  */
 S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty.prototype.keyPrefixEquals = function(value) {
 	return this.set('KeyPrefixEquals', value);

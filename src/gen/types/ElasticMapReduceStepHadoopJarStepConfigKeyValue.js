@@ -17,7 +17,7 @@ ElasticMapReduceStepHadoopJarStepConfigKeyValue.prototype = Object.create(Proper
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceStepHadoopJarStepConfigKeyValue}
+ * @returns {ElasticMapReduceStepHadoopJarStepConfigKeyValue}
  */
 ElasticMapReduceStepHadoopJarStepConfigKeyValue.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -29,7 +29,7 @@ ElasticMapReduceStepHadoopJarStepConfigKeyValue.prototype.key = function(value) 
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceStepHadoopJarStepConfigKeyValue}
+ * @returns {ElasticMapReduceStepHadoopJarStepConfigKeyValue}
  */
 ElasticMapReduceStepHadoopJarStepConfigKeyValue.prototype.value = function(value) {
 	return this.set('Value', value);

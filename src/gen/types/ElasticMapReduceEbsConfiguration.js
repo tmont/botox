@@ -17,7 +17,7 @@ ElasticMapReduceEbsConfiguration.prototype = Object.create(PropertyType.prototyp
  * Required: false
  *
  * @param {ElasticMapReduceEbsConfiguration[]} value
- * @return {ElasticMapReduceEbsConfiguration}
+ * @returns {ElasticMapReduceEbsConfiguration}
  */
 ElasticMapReduceEbsConfiguration.prototype.ebsBlockDeviceConfig = function(value) {
 	return this.set('EbsBlockDeviceConfig', value);
@@ -29,7 +29,7 @@ ElasticMapReduceEbsConfiguration.prototype.ebsBlockDeviceConfig = function(value
  * Required: false
  *
  * @param {Boolean} value
- * @return {ElasticMapReduceEbsConfiguration}
+ * @returns {ElasticMapReduceEbsConfiguration}
  */
 ElasticMapReduceEbsConfiguration.prototype.ebsOptimized = function(value) {
 	return this.set('EbsOptimized', value);

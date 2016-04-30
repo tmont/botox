@@ -17,7 +17,7 @@ CodePipelinePipelineStagesBlockers.prototype = Object.create(PropertyType.protot
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineStagesBlockers}
+ * @returns {CodePipelinePipelineStagesBlockers}
  */
 CodePipelinePipelineStagesBlockers.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -29,7 +29,7 @@ CodePipelinePipelineStagesBlockers.prototype.name = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineStagesBlockers}
+ * @returns {CodePipelinePipelineStagesBlockers}
  */
 CodePipelinePipelineStagesBlockers.prototype.type = function(value) {
 	return this.set('Type', value);

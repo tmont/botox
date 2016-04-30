@@ -17,7 +17,7 @@ CodePipelineCustomActionTypeConfigurationProperties.prototype = Object.create(Pr
  * Required: false
  *
  * @param {String} value
- * @return {CodePipelineCustomActionTypeConfigurationProperties}
+ * @returns {CodePipelineCustomActionTypeConfigurationProperties}
  */
 CodePipelineCustomActionTypeConfigurationProperties.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -29,7 +29,7 @@ CodePipelineCustomActionTypeConfigurationProperties.prototype.description = func
  * Required: true
  *
  * @param {Boolean} value
- * @return {CodePipelineCustomActionTypeConfigurationProperties}
+ * @returns {CodePipelineCustomActionTypeConfigurationProperties}
  */
 CodePipelineCustomActionTypeConfigurationProperties.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -41,7 +41,7 @@ CodePipelineCustomActionTypeConfigurationProperties.prototype.key = function(val
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelineCustomActionTypeConfigurationProperties}
+ * @returns {CodePipelineCustomActionTypeConfigurationProperties}
  */
 CodePipelineCustomActionTypeConfigurationProperties.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -53,7 +53,7 @@ CodePipelineCustomActionTypeConfigurationProperties.prototype.name = function(va
  * Required: false
  *
  * @param {Boolean} value
- * @return {CodePipelineCustomActionTypeConfigurationProperties}
+ * @returns {CodePipelineCustomActionTypeConfigurationProperties}
  */
 CodePipelineCustomActionTypeConfigurationProperties.prototype.queryable = function(value) {
 	return this.set('Queryable', value);
@@ -65,7 +65,7 @@ CodePipelineCustomActionTypeConfigurationProperties.prototype.queryable = functi
  * Required: true
  *
  * @param {Boolean} value
- * @return {CodePipelineCustomActionTypeConfigurationProperties}
+ * @returns {CodePipelineCustomActionTypeConfigurationProperties}
  */
 CodePipelineCustomActionTypeConfigurationProperties.prototype.required = function(value) {
 	return this.set('Required', value);
@@ -77,7 +77,7 @@ CodePipelineCustomActionTypeConfigurationProperties.prototype.required = functio
  * Required: true
  *
  * @param {Boolean} value
- * @return {CodePipelineCustomActionTypeConfigurationProperties}
+ * @returns {CodePipelineCustomActionTypeConfigurationProperties}
  */
 CodePipelineCustomActionTypeConfigurationProperties.prototype.secret = function(value) {
 	return this.set('Secret', value);
@@ -89,7 +89,7 @@ CodePipelineCustomActionTypeConfigurationProperties.prototype.secret = function(
  * Required: false
  *
  * @param {String} value
- * @return {CodePipelineCustomActionTypeConfigurationProperties}
+ * @returns {CodePipelineCustomActionTypeConfigurationProperties}
  */
 CodePipelineCustomActionTypeConfigurationProperties.prototype.type = function(value) {
 	return this.set('Type', value);

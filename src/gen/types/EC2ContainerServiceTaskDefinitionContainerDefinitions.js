@@ -16,8 +16,8 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype = Object.create(
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @param {String[]} value
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.command = function(value) {
 	return this.set('Command', value);
@@ -29,7 +29,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.command = functi
  * Required: false
  *
  * @param {Number} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.cpu = function(value) {
 	return this.set('Cpu', value);
@@ -41,7 +41,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.cpu = function(v
  * Required: false
  *
  * @param {Boolean} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.disableNetworking = function(value) {
 	return this.set('DisableNetworking', value);
@@ -52,8 +52,8 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.disableNetworkin
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @param {String[]} value
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.dnsSearchDomains = function(value) {
 	return this.set('DnsSearchDomains', value);
@@ -64,8 +64,8 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.dnsSearchDomains
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @param {String[]} value
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.dnsServers = function(value) {
 	return this.set('DnsServers', value);
@@ -77,7 +77,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.dnsServers = fun
  * Required: false
  *
  * @param {Object} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.dockerLabels = function(value) {
 	return this.set('DockerLabels', value);
@@ -88,8 +88,8 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.dockerLabels = f
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @param {String[]} value
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.dockerSecurityOptions = function(value) {
 	return this.set('DockerSecurityOptions', value);
@@ -100,8 +100,8 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.dockerSecurityOp
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @param {String[]} value
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.entryPoint = function(value) {
 	return this.set('EntryPoint', value);
@@ -113,7 +113,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.entryPoint = fun
  * Required: false
  *
  * @param {EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment[]} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.environment = function(value) {
 	return this.set('Environment', value);
@@ -125,7 +125,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.environment = fu
  * Required: false
  *
  * @param {Boolean} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.essential = function(value) {
 	return this.set('Essential', value);
@@ -137,7 +137,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.essential = func
  * Required: false
  *
  * @param {EC2ContainerServiceTaskDefinitionContainerDefinitionsHostEntry[]} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.extraHosts = function(value) {
 	return this.set('ExtraHosts', value);
@@ -149,7 +149,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.extraHosts = fun
  * Required: false
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.hostname = function(value) {
 	return this.set('Hostname', value);
@@ -161,7 +161,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.hostname = funct
  * Required: true
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.image = function(value) {
 	return this.set('Image', value);
@@ -172,8 +172,8 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.image = function
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @param {String[]} value
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.links = function(value) {
 	return this.set('Links', value);
@@ -185,7 +185,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.links = function
  * Required: false
  *
  * @param {EC2ContainerServiceTaskDefinitionContainerDefinitionsLogConfiguration} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.logConfiguration = function(value) {
 	return this.set('LogConfiguration', value);
@@ -197,7 +197,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.logConfiguration
  * Required: true
  *
  * @param {Number} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.memory = function(value) {
 	return this.set('Memory', value);
@@ -209,7 +209,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.memory = functio
  * Required: false
  *
  * @param {EC2ContainerServiceTaskDefinitionContainerDefinitionsMountPoints[]} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.mountPoints = function(value) {
 	return this.set('MountPoints', value);
@@ -221,7 +221,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.mountPoints = fu
  * Required: true
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -233,7 +233,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.name = function(
  * Required: false
  *
  * @param {EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings[]} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.portMappings = function(value) {
 	return this.set('PortMappings', value);
@@ -245,7 +245,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.portMappings = f
  * Required: false
  *
  * @param {Boolean} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.privileged = function(value) {
 	return this.set('Privileged', value);
@@ -257,7 +257,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.privileged = fun
  * Required: false
  *
  * @param {Boolean} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.readonlyRootFilesystem = function(value) {
 	return this.set('ReadonlyRootFilesystem', value);
@@ -269,7 +269,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.readonlyRootFile
  * Required: false
  *
  * @param {EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit[]} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.ulimits = function(value) {
 	return this.set('Ulimits', value);
@@ -281,7 +281,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.ulimits = functi
  * Required: false
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.user = function(value) {
 	return this.set('User', value);
@@ -293,7 +293,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.user = function(
  * Required: false
  *
  * @param {EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom[]} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.volumesFrom = function(value) {
 	return this.set('VolumesFrom', value);
@@ -305,7 +305,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.volumesFrom = fu
  * Required: false
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitions}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitions}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitions.prototype.workingDirectory = function(value) {
 	return this.set('WorkingDirectory', value);

@@ -19,15 +19,15 @@ IAMInstanceProfile.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(IAMInstanceProfile.prototype, 'attr', {
 	/**
-	 * @return {IAMInstanceProfileAttributeMap}
+	 * @returns {IAMInstanceProfileAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyProfile", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:instance-profile/MyProfile-ASDNSDLKJ”.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get arn() {
 				return createAttribute('Arn');
@@ -43,7 +43,7 @@ Object.defineProperty(IAMInstanceProfile.prototype, 'attr', {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {IAMInstanceProfile}
+ * @returns {IAMInstanceProfile}
  */
 IAMInstanceProfile.prototype.path = function(value) {
 	return this.set('Path', value);
@@ -56,7 +56,7 @@ IAMInstanceProfile.prototype.path = function(value) {
  * Update requires: No interruption
  *
  * @param {IAMRole[]|Attribute|Reference} value List of references to AWS::IAM::Roles. Currently, a maximum of one role can be assigned to an instance profile.
- * @return {IAMInstanceProfile}
+ * @returns {IAMInstanceProfile}
  */
 IAMInstanceProfile.prototype.roles = function(value) {
 	return this.set('Roles', value);

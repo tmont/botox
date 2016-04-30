@@ -17,7 +17,7 @@ ConfigConfigRuleSource.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {ConfigConfigRuleSource}
+ * @returns {ConfigConfigRuleSource}
  */
 ConfigConfigRuleSource.prototype.owner = function(value) {
 	return this.set('Owner', value);
@@ -29,7 +29,7 @@ ConfigConfigRuleSource.prototype.owner = function(value) {
  * Required: false
  *
  * @param {ConfigConfigRuleSourceSourceDetails[]} value
- * @return {ConfigConfigRuleSource}
+ * @returns {ConfigConfigRuleSource}
  */
 ConfigConfigRuleSource.prototype.sourceDetails = function(value) {
 	return this.set('SourceDetails', value);
@@ -41,7 +41,7 @@ ConfigConfigRuleSource.prototype.sourceDetails = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {ConfigConfigRuleSource}
+ * @returns {ConfigConfigRuleSource}
  */
 ConfigConfigRuleSource.prototype.sourceIdentifier = function(value) {
 	return this.set('SourceIdentifier', value);

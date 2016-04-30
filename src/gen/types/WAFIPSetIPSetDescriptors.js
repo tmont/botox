@@ -17,7 +17,7 @@ WAFIPSetIPSetDescriptors.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {WAFIPSetIPSetDescriptors}
+ * @returns {WAFIPSetIPSetDescriptors}
  */
 WAFIPSetIPSetDescriptors.prototype.type = function(value) {
 	return this.set('Type', value);
@@ -29,7 +29,7 @@ WAFIPSetIPSetDescriptors.prototype.type = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {WAFIPSetIPSetDescriptors}
+ * @returns {WAFIPSetIPSetDescriptors}
  */
 WAFIPSetIPSetDescriptors.prototype.value = function(value) {
 	return this.set('Value', value);

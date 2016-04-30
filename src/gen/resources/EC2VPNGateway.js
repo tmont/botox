@@ -19,7 +19,7 @@ EC2VPNGateway.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPNGateway}
+ * @returns {EC2VPNGateway}
  */
 EC2VPNGateway.prototype.type = function(value) {
 	return this.set('Type', value);
@@ -32,7 +32,7 @@ EC2VPNGateway.prototype.type = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {EC2VPNGateway}
+ * @returns {EC2VPNGateway}
  */
 EC2VPNGateway.prototype.tags = function(value) {
 	return this.set('Tags', value);

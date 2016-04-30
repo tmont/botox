@@ -17,7 +17,7 @@ OpsWorksSourceType.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {String} value
- * @return {OpsWorksSourceType}
+ * @returns {OpsWorksSourceType}
  */
 OpsWorksSourceType.prototype.password = function(value) {
 	return this.set('Password', value);
@@ -29,7 +29,7 @@ OpsWorksSourceType.prototype.password = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {OpsWorksSourceType}
+ * @returns {OpsWorksSourceType}
  */
 OpsWorksSourceType.prototype.revision = function(value) {
 	return this.set('Revision', value);
@@ -41,7 +41,7 @@ OpsWorksSourceType.prototype.revision = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {OpsWorksSourceType}
+ * @returns {OpsWorksSourceType}
  */
 OpsWorksSourceType.prototype.sshKey = function(value) {
 	return this.set('SshKey', value);
@@ -53,7 +53,7 @@ OpsWorksSourceType.prototype.sshKey = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {OpsWorksSourceType}
+ * @returns {OpsWorksSourceType}
  */
 OpsWorksSourceType.prototype.type = function(value) {
 	return this.set('Type', value);
@@ -65,7 +65,7 @@ OpsWorksSourceType.prototype.type = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {OpsWorksSourceType}
+ * @returns {OpsWorksSourceType}
  */
 OpsWorksSourceType.prototype.url = function(value) {
 	return this.set('Url', value);
@@ -77,7 +77,7 @@ OpsWorksSourceType.prototype.url = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {OpsWorksSourceType}
+ * @returns {OpsWorksSourceType}
  */
 OpsWorksSourceType.prototype.username = function(value) {
 	return this.set('Username', value);

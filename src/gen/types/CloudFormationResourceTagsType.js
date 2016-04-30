@@ -17,7 +17,7 @@ CloudFormationResourceTagsType.prototype = Object.create(PropertyType.prototype)
  * Required: true
  *
  * @param {String} value
- * @return {CloudFormationResourceTagsType}
+ * @returns {CloudFormationResourceTagsType}
  */
 CloudFormationResourceTagsType.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -29,7 +29,7 @@ CloudFormationResourceTagsType.prototype.key = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {CloudFormationResourceTagsType}
+ * @returns {CloudFormationResourceTagsType}
  */
 CloudFormationResourceTagsType.prototype.value = function(value) {
 	return this.set('Value', value);

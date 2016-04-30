@@ -18,7 +18,7 @@
       "description": "The URLs of the queues to which you want to add the policy. You can use the Ref function to specify an AWS::SQS::Queue resource.",
       "typeDescription": "List of strings",
       "required": true,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     }
   ],

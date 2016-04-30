@@ -16,8 +16,8 @@ DynamoDBProjectionObject.prototype = Object.create(PropertyType.prototype);
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {DynamoDBProjectionObject}
+ * @param {String[]} value
+ * @returns {DynamoDBProjectionObject}
  */
 DynamoDBProjectionObject.prototype.nonKeyAttributes = function(value) {
 	return this.set('NonKeyAttributes', value);
@@ -29,7 +29,7 @@ DynamoDBProjectionObject.prototype.nonKeyAttributes = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {DynamoDBProjectionObject}
+ * @returns {DynamoDBProjectionObject}
  */
 DynamoDBProjectionObject.prototype.projectionType = function(value) {
 	return this.set('ProjectionType', value);

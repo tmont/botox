@@ -17,7 +17,7 @@ ElasticMapReduceStepHadoopJarStepConfig.prototype = Object.create(PropertyType.p
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceStepHadoopJarStepConfig}
+ * @returns {ElasticMapReduceStepHadoopJarStepConfig}
  */
 ElasticMapReduceStepHadoopJarStepConfig.prototype.args = function(value) {
 	return this.set('Args', value);
@@ -29,7 +29,7 @@ ElasticMapReduceStepHadoopJarStepConfig.prototype.args = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {ElasticMapReduceStepHadoopJarStepConfig}
+ * @returns {ElasticMapReduceStepHadoopJarStepConfig}
  */
 ElasticMapReduceStepHadoopJarStepConfig.prototype.jar = function(value) {
 	return this.set('Jar', value);
@@ -41,7 +41,7 @@ ElasticMapReduceStepHadoopJarStepConfig.prototype.jar = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceStepHadoopJarStepConfig}
+ * @returns {ElasticMapReduceStepHadoopJarStepConfig}
  */
 ElasticMapReduceStepHadoopJarStepConfig.prototype.mainClass = function(value) {
 	return this.set('MainClass', value);
@@ -53,7 +53,7 @@ ElasticMapReduceStepHadoopJarStepConfig.prototype.mainClass = function(value) {
  * Required: false
  *
  * @param {ElasticMapReduceStepHadoopJarStepConfigKeyValue[]} value
- * @return {ElasticMapReduceStepHadoopJarStepConfig}
+ * @returns {ElasticMapReduceStepHadoopJarStepConfig}
  */
 ElasticMapReduceStepHadoopJarStepConfig.prototype.stepProperties = function(value) {
 	return this.set('StepProperties', value);

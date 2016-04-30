@@ -17,7 +17,7 @@ S3LifecycleConfiguration.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {S3LifecycleRule} value
- * @return {S3LifecycleConfiguration}
+ * @returns {S3LifecycleConfiguration}
  */
 S3LifecycleConfiguration.prototype.rules = function(value) {
 	return this.set('Rules', value);

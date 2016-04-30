@@ -17,7 +17,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings.prototype = Ob
  * Required: true
  *
  * @param {Number} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings.prototype.containerPort = function(value) {
 	return this.set('ContainerPort', value);
@@ -29,7 +29,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings.prototype.cont
  * Required: false
  *
  * @param {Number} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsPortMappings.prototype.hostPort = function(value) {
 	return this.set('HostPort', value);

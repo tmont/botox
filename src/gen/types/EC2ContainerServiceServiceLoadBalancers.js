@@ -17,7 +17,7 @@ EC2ContainerServiceServiceLoadBalancers.prototype = Object.create(PropertyType.p
  * Required: false
  *
  * @param {String} value
- * @return {EC2ContainerServiceServiceLoadBalancers}
+ * @returns {EC2ContainerServiceServiceLoadBalancers}
  */
 EC2ContainerServiceServiceLoadBalancers.prototype.containerName = function(value) {
 	return this.set('ContainerName', value);
@@ -29,7 +29,7 @@ EC2ContainerServiceServiceLoadBalancers.prototype.containerName = function(value
  * Required: true
  *
  * @param {Number} value
- * @return {EC2ContainerServiceServiceLoadBalancers}
+ * @returns {EC2ContainerServiceServiceLoadBalancers}
  */
 EC2ContainerServiceServiceLoadBalancers.prototype.containerPort = function(value) {
 	return this.set('ContainerPort', value);
@@ -41,7 +41,7 @@ EC2ContainerServiceServiceLoadBalancers.prototype.containerPort = function(value
  * Required: false
  *
  * @param {String} value
- * @return {EC2ContainerServiceServiceLoadBalancers}
+ * @returns {EC2ContainerServiceServiceLoadBalancers}
  */
 EC2ContainerServiceServiceLoadBalancers.prototype.loadBalancerName = function(value) {
 	return this.set('LoadBalancerName', value);

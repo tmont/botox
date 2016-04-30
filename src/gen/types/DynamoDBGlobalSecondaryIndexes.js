@@ -17,7 +17,7 @@ DynamoDBGlobalSecondaryIndexes.prototype = Object.create(PropertyType.prototype)
  * Required: true
  *
  * @param {String} value
- * @return {DynamoDBGlobalSecondaryIndexes}
+ * @returns {DynamoDBGlobalSecondaryIndexes}
  */
 DynamoDBGlobalSecondaryIndexes.prototype.indexName = function(value) {
 	return this.set('IndexName', value);
@@ -29,7 +29,7 @@ DynamoDBGlobalSecondaryIndexes.prototype.indexName = function(value) {
  * Required: true
  *
  * @param {DynamoDBKeySchema} value
- * @return {DynamoDBGlobalSecondaryIndexes}
+ * @returns {DynamoDBGlobalSecondaryIndexes}
  */
 DynamoDBGlobalSecondaryIndexes.prototype.keySchema = function(value) {
 	return this.set('KeySchema', value);
@@ -41,7 +41,7 @@ DynamoDBGlobalSecondaryIndexes.prototype.keySchema = function(value) {
  * Required: true
  *
  * @param {DynamoDBProjectionObject} value
- * @return {DynamoDBGlobalSecondaryIndexes}
+ * @returns {DynamoDBGlobalSecondaryIndexes}
  */
 DynamoDBGlobalSecondaryIndexes.prototype.projection = function(value) {
 	return this.set('Projection', value);
@@ -53,7 +53,7 @@ DynamoDBGlobalSecondaryIndexes.prototype.projection = function(value) {
  * Required: true
  *
  * @param {DynamoDBProvisionedThroughput} value
- * @return {DynamoDBGlobalSecondaryIndexes}
+ * @returns {DynamoDBGlobalSecondaryIndexes}
  */
 DynamoDBGlobalSecondaryIndexes.prototype.provisionedThroughput = function(value) {
 	return this.set('ProvisionedThroughput', value);

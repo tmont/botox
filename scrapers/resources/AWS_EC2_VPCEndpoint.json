@@ -18,7 +18,7 @@
       "description": "One or more route table IDs that are used by the VPC to reach the endpoint.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {

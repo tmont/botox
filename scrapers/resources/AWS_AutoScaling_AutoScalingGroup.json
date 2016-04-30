@@ -10,7 +10,7 @@
       "description": "Contains a list of availability zones for the group.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {
@@ -66,7 +66,7 @@
       "description": "A list of load balancers associated with this Auto Scaling group.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "Replacement"
     },
     {
@@ -122,7 +122,7 @@
       "description": "A policy or a list of policies that are used to select the instances to terminate. The policies are executed in the order that you list them.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {
@@ -130,7 +130,7 @@
       "description": "A list of subnet identifiers of Amazon Virtual Private Cloud (Amazon VPCs).",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "Some interruptions"
     }
   ],

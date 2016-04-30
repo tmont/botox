@@ -17,7 +17,7 @@ SNSSubscriptionPropertyType.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {SNSSubscriptionPropertyType}
+ * @returns {SNSSubscriptionPropertyType}
  */
 SNSSubscriptionPropertyType.prototype.endpoint = function(value) {
 	return this.set('Endpoint', value);
@@ -29,7 +29,7 @@ SNSSubscriptionPropertyType.prototype.endpoint = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {SNSSubscriptionPropertyType}
+ * @returns {SNSSubscriptionPropertyType}
  */
 SNSSubscriptionPropertyType.prototype.protocol = function(value) {
 	return this.set('Protocol', value);

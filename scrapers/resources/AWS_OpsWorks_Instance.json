@@ -66,7 +66,7 @@
       "description": "The IDs of the AWS OpsWorks layers to associate with this instance.",
       "typeDescription": "List of strings",
       "required": true,
-      "type": "string[]",
+      "type": "String[]",
       "update": "Some interruptions"
     },
     {

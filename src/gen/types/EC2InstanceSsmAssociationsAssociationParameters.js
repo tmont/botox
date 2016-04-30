@@ -17,7 +17,7 @@ EC2InstanceSsmAssociationsAssociationParameters.prototype = Object.create(Proper
  * Required: true
  *
  * @param {String} value
- * @return {EC2InstanceSsmAssociationsAssociationParameters}
+ * @returns {EC2InstanceSsmAssociationsAssociationParameters}
  */
 EC2InstanceSsmAssociationsAssociationParameters.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -28,8 +28,8 @@ EC2InstanceSsmAssociationsAssociationParameters.prototype.key = function(value) 
  *
  * Required: true
  *
- * @param {string[]} value
- * @return {EC2InstanceSsmAssociationsAssociationParameters}
+ * @param {String[]} value
+ * @returns {EC2InstanceSsmAssociationsAssociationParameters}
  */
 EC2InstanceSsmAssociationsAssociationParameters.prototype.value = function(value) {
 	return this.set('Value', value);

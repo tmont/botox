@@ -20,15 +20,15 @@ EC2NetworkInterface.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(EC2NetworkInterface.prototype, 'attr', {
 	/**
-	 * @return {EC2NetworkInterfaceAttributeMap}
+	 * @returns {EC2NetworkInterfaceAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * Returns the primary private IP address of the network interface. For example, 10.0.0.192.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get primaryPrivateIpAddress() {
 				return createAttribute('PrimaryPrivateIpAddress');
@@ -36,7 +36,7 @@ Object.defineProperty(EC2NetworkInterface.prototype, 'attr', {
 
 			/**
 			 * Returns the secondary private IP addresses of the network interface. For example, ["10.0.0.161", "10.0.0.162", "10.0.0.163"].
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get secondaryPrivateIpAddresses() {
 				return createAttribute('SecondaryPrivateIpAddresses');
@@ -52,7 +52,7 @@ Object.defineProperty(EC2NetworkInterface.prototype, 'attr', {
  * Update requires: No interruption.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2NetworkInterface}
+ * @returns {EC2NetworkInterface}
  */
 EC2NetworkInterface.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -64,8 +64,8 @@ EC2NetworkInterface.prototype.description = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {EC2NetworkInterface}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {EC2NetworkInterface}
  */
 EC2NetworkInterface.prototype.groupSet = function(value) {
 	return this.set('GroupSet', value);
@@ -78,7 +78,7 @@ EC2NetworkInterface.prototype.groupSet = function(value) {
  * Update requires: Replacement.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2NetworkInterface}
+ * @returns {EC2NetworkInterface}
  */
 EC2NetworkInterface.prototype.privateIpAddress = function(value) {
 	return this.set('PrivateIpAddress', value);
@@ -91,7 +91,7 @@ EC2NetworkInterface.prototype.privateIpAddress = function(value) {
  * Update requires: Replacement if you change the primary private IP address. If not, update requires No interruption.
  *
  * @param {EC2NetworkInterfacePrivateIPSpecification[]|Attribute|Reference} value list of PrivateIpAddressSpecification.
- * @return {EC2NetworkInterface}
+ * @returns {EC2NetworkInterface}
  */
 EC2NetworkInterface.prototype.privateIpAddresses = function(value) {
 	return this.set('PrivateIpAddresses', value);
@@ -104,7 +104,7 @@ EC2NetworkInterface.prototype.privateIpAddresses = function(value) {
  * Update requires: No interruption.
  *
  * @param {Number|Attribute|Reference} value
- * @return {EC2NetworkInterface}
+ * @returns {EC2NetworkInterface}
  */
 EC2NetworkInterface.prototype.secondaryPrivateIpAddressCount = function(value) {
 	return this.set('SecondaryPrivateIpAddressCount', value);
@@ -117,7 +117,7 @@ EC2NetworkInterface.prototype.secondaryPrivateIpAddressCount = function(value) {
  * Update requires: No interruption.
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {EC2NetworkInterface}
+ * @returns {EC2NetworkInterface}
  */
 EC2NetworkInterface.prototype.sourceDestCheck = function(value) {
 	return this.set('SourceDestCheck', value);
@@ -130,7 +130,7 @@ EC2NetworkInterface.prototype.sourceDestCheck = function(value) {
  * Update requires: Replacement.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2NetworkInterface}
+ * @returns {EC2NetworkInterface}
  */
 EC2NetworkInterface.prototype.subnetId = function(value) {
 	return this.set('SubnetId', value);
@@ -143,7 +143,7 @@ EC2NetworkInterface.prototype.subnetId = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {EC2NetworkInterface}
+ * @returns {EC2NetworkInterface}
  */
 EC2NetworkInterface.prototype.tags = function(value) {
 	return this.set('Tags', value);

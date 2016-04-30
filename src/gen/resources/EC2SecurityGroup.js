@@ -19,15 +19,15 @@ EC2SecurityGroup.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(EC2SecurityGroup.prototype, 'attr', {
 	/**
-	 * @return {EC2SecurityGroupAttributeMap}
+	 * @returns {EC2SecurityGroupAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The group ID of the specified security group, such as sg-94b3a1f6.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get groupId() {
 				return createAttribute('GroupId');
@@ -43,7 +43,7 @@ Object.defineProperty(EC2SecurityGroup.prototype, 'attr', {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SecurityGroup}
+ * @returns {EC2SecurityGroup}
  */
 EC2SecurityGroup.prototype.groupDescription = function(value) {
 	return this.set('GroupDescription', value);
@@ -56,7 +56,7 @@ EC2SecurityGroup.prototype.groupDescription = function(value) {
  * Update requires: No interruption
  *
  * @param {EC2SecurityGroupRulePropertyType[]|Attribute|Reference} value List of EC2 Security Group Rule
- * @return {EC2SecurityGroup}
+ * @returns {EC2SecurityGroup}
  */
 EC2SecurityGroup.prototype.securityGroupEgress = function(value) {
 	return this.set('SecurityGroupEgress', value);
@@ -69,7 +69,7 @@ EC2SecurityGroup.prototype.securityGroupEgress = function(value) {
  * Update requires: No interruption
  *
  * @param {EC2SecurityGroupRulePropertyType[]|Attribute|Reference} value List of EC2 Security Group Rule
- * @return {EC2SecurityGroup}
+ * @returns {EC2SecurityGroup}
  */
 EC2SecurityGroup.prototype.securityGroupIngress = function(value) {
 	return this.set('SecurityGroupIngress', value);
@@ -82,7 +82,7 @@ EC2SecurityGroup.prototype.securityGroupIngress = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags.
- * @return {EC2SecurityGroup}
+ * @returns {EC2SecurityGroup}
  */
 EC2SecurityGroup.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -95,7 +95,7 @@ EC2SecurityGroup.prototype.tags = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SecurityGroup}
+ * @returns {EC2SecurityGroup}
  */
 EC2SecurityGroup.prototype.vpcId = function(value) {
 	return this.set('VpcId', value);

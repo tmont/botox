@@ -17,7 +17,7 @@ CodePipelinePipelineStages.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {CodePipelinePipelineStagesActions[]} value
- * @return {CodePipelinePipelineStages}
+ * @returns {CodePipelinePipelineStages}
  */
 CodePipelinePipelineStages.prototype.actions = function(value) {
 	return this.set('Actions', value);
@@ -29,7 +29,7 @@ CodePipelinePipelineStages.prototype.actions = function(value) {
  * Required: false
  *
  * @param {CodePipelinePipelineStagesBlockers[]} value
- * @return {CodePipelinePipelineStages}
+ * @returns {CodePipelinePipelineStages}
  */
 CodePipelinePipelineStages.prototype.blockers = function(value) {
 	return this.set('Blockers', value);
@@ -41,7 +41,7 @@ CodePipelinePipelineStages.prototype.blockers = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineStages}
+ * @returns {CodePipelinePipelineStages}
  */
 CodePipelinePipelineStages.prototype.name = function(value) {
 	return this.set('Name', value);

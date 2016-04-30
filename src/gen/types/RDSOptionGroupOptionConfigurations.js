@@ -16,8 +16,8 @@ RDSOptionGroupOptionConfigurations.prototype = Object.create(PropertyType.protot
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {RDSOptionGroupOptionConfigurations}
+ * @param {String[]} value
+ * @returns {RDSOptionGroupOptionConfigurations}
  */
 RDSOptionGroupOptionConfigurations.prototype.dbSecurityGroupMemberships = function(value) {
 	return this.set('DBSecurityGroupMemberships', value);
@@ -29,7 +29,7 @@ RDSOptionGroupOptionConfigurations.prototype.dbSecurityGroupMemberships = functi
  * Required: true
  *
  * @param {String} value
- * @return {RDSOptionGroupOptionConfigurations}
+ * @returns {RDSOptionGroupOptionConfigurations}
  */
 RDSOptionGroupOptionConfigurations.prototype.optionName = function(value) {
 	return this.set('OptionName', value);
@@ -41,7 +41,7 @@ RDSOptionGroupOptionConfigurations.prototype.optionName = function(value) {
  * Required: false
  *
  * @param {RDSOptionGroupOptionConfigurationsOptionSettings} value
- * @return {RDSOptionGroupOptionConfigurations}
+ * @returns {RDSOptionGroupOptionConfigurations}
  */
 RDSOptionGroupOptionConfigurations.prototype.optionSettings = function(value) {
 	return this.set('OptionSettings', value);
@@ -53,7 +53,7 @@ RDSOptionGroupOptionConfigurations.prototype.optionSettings = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {RDSOptionGroupOptionConfigurations}
+ * @returns {RDSOptionGroupOptionConfigurations}
  */
 RDSOptionGroupOptionConfigurations.prototype.port = function(value) {
 	return this.set('Port', value);
@@ -64,8 +64,8 @@ RDSOptionGroupOptionConfigurations.prototype.port = function(value) {
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {RDSOptionGroupOptionConfigurations}
+ * @param {String[]} value
+ * @returns {RDSOptionGroupOptionConfigurations}
  */
 RDSOptionGroupOptionConfigurations.prototype.vpcSecurityGroupMemberships = function(value) {
 	return this.set('VpcSecurityGroupMemberships', value);

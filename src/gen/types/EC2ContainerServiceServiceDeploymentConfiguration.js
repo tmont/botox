@@ -17,7 +17,7 @@ EC2ContainerServiceServiceDeploymentConfiguration.prototype = Object.create(Prop
  * Required: false
  *
  * @param {Number} value
- * @return {EC2ContainerServiceServiceDeploymentConfiguration}
+ * @returns {EC2ContainerServiceServiceDeploymentConfiguration}
  */
 EC2ContainerServiceServiceDeploymentConfiguration.prototype.maximumPercent = function(value) {
 	return this.set('MaximumPercent', value);
@@ -29,7 +29,7 @@ EC2ContainerServiceServiceDeploymentConfiguration.prototype.maximumPercent = fun
  * Required: false
  *
  * @param {Number} value
- * @return {EC2ContainerServiceServiceDeploymentConfiguration}
+ * @returns {EC2ContainerServiceServiceDeploymentConfiguration}
  */
 EC2ContainerServiceServiceDeploymentConfiguration.prototype.minimumHealthyPercent = function(value) {
 	return this.set('MinimumHealthyPercent', value);

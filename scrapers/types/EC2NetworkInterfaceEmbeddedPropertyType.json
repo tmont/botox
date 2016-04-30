@@ -35,7 +35,7 @@
       "description": "A list of security group IDs associated with this network interface.",
       "typeDescription": "List of strings.",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "NetworkInterfaceId",

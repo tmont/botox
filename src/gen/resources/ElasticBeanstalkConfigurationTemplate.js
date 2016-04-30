@@ -19,7 +19,7 @@ ElasticBeanstalkConfigurationTemplate.prototype = Object.create(Resource.prototy
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkConfigurationTemplate}
+ * @returns {ElasticBeanstalkConfigurationTemplate}
  */
 ElasticBeanstalkConfigurationTemplate.prototype.applicationName = function(value) {
 	return this.set('ApplicationName', value);
@@ -32,7 +32,7 @@ ElasticBeanstalkConfigurationTemplate.prototype.applicationName = function(value
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkConfigurationTemplate}
+ * @returns {ElasticBeanstalkConfigurationTemplate}
  */
 ElasticBeanstalkConfigurationTemplate.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -45,7 +45,7 @@ ElasticBeanstalkConfigurationTemplate.prototype.description = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkConfigurationTemplate}
+ * @returns {ElasticBeanstalkConfigurationTemplate}
  */
 ElasticBeanstalkConfigurationTemplate.prototype.environmentId = function(value) {
 	return this.set('EnvironmentId', value);
@@ -58,7 +58,7 @@ ElasticBeanstalkConfigurationTemplate.prototype.environmentId = function(value) 
  * Update requires: Some interruptions
  *
  * @param {ElasticBeanstalkOptionSettingsPropertyType[]|Attribute|Reference} value A list of OptionSettings.
- * @return {ElasticBeanstalkConfigurationTemplate}
+ * @returns {ElasticBeanstalkConfigurationTemplate}
  */
 ElasticBeanstalkConfigurationTemplate.prototype.optionSettings = function(value) {
 	return this.set('OptionSettings', value);
@@ -71,7 +71,7 @@ ElasticBeanstalkConfigurationTemplate.prototype.optionSettings = function(value)
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkConfigurationTemplate}
+ * @returns {ElasticBeanstalkConfigurationTemplate}
  */
 ElasticBeanstalkConfigurationTemplate.prototype.solutionStackName = function(value) {
 	return this.set('SolutionStackName', value);
@@ -84,7 +84,7 @@ ElasticBeanstalkConfigurationTemplate.prototype.solutionStackName = function(val
  * Update requires: Replacement
  *
  * @param {ElasticBeanstalkSourceConfigurationPropertyType|Attribute|Reference} value Elastic Beanstalk SourceConfiguration Property Type
- * @return {ElasticBeanstalkConfigurationTemplate}
+ * @returns {ElasticBeanstalkConfigurationTemplate}
  */
 ElasticBeanstalkConfigurationTemplate.prototype.sourceConfiguration = function(value) {
 	return this.set('SourceConfiguration', value);

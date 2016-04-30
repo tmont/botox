@@ -17,7 +17,7 @@ EC2ContainerServiceTaskDefinitionVolumesHost.prototype = Object.create(PropertyT
  * Required: false
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionVolumesHost}
+ * @returns {EC2ContainerServiceTaskDefinitionVolumesHost}
  */
 EC2ContainerServiceTaskDefinitionVolumesHost.prototype.sourcePath = function(value) {
 	return this.set('SourcePath', value);

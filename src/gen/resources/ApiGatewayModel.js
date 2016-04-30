@@ -19,7 +19,7 @@ ApiGatewayModel.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayModel}
+ * @returns {ApiGatewayModel}
  */
 ApiGatewayModel.prototype.contentType = function(value) {
 	return this.set('ContentType', value);
@@ -32,7 +32,7 @@ ApiGatewayModel.prototype.contentType = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayModel}
+ * @returns {ApiGatewayModel}
  */
 ApiGatewayModel.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -45,7 +45,7 @@ ApiGatewayModel.prototype.description = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayModel}
+ * @returns {ApiGatewayModel}
  */
 ApiGatewayModel.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -58,7 +58,7 @@ ApiGatewayModel.prototype.name = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayModel}
+ * @returns {ApiGatewayModel}
  */
 ApiGatewayModel.prototype.restApiId = function(value) {
 	return this.set('RestApiId', value);
@@ -71,7 +71,7 @@ ApiGatewayModel.prototype.restApiId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayModel}
+ * @returns {ApiGatewayModel}
  */
 ApiGatewayModel.prototype.schema = function(value) {
 	return this.set('Schema', value);

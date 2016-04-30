@@ -17,7 +17,7 @@ LambdaFunctionCode.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {String} value
- * @return {LambdaFunctionCode}
+ * @returns {LambdaFunctionCode}
  */
 LambdaFunctionCode.prototype.s3Bucket = function(value) {
 	return this.set('S3Bucket', value);
@@ -29,7 +29,7 @@ LambdaFunctionCode.prototype.s3Bucket = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {LambdaFunctionCode}
+ * @returns {LambdaFunctionCode}
  */
 LambdaFunctionCode.prototype.s3Key = function(value) {
 	return this.set('S3Key', value);
@@ -41,7 +41,7 @@ LambdaFunctionCode.prototype.s3Key = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {LambdaFunctionCode}
+ * @returns {LambdaFunctionCode}
  */
 LambdaFunctionCode.prototype.s3ObjectVersion = function(value) {
 	return this.set('S3ObjectVersion', value);
@@ -53,7 +53,7 @@ LambdaFunctionCode.prototype.s3ObjectVersion = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {LambdaFunctionCode}
+ * @returns {LambdaFunctionCode}
  */
 LambdaFunctionCode.prototype.zipFile = function(value) {
 	return this.set('ZipFile', value);

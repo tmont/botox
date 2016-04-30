@@ -19,7 +19,7 @@ CloudFormationAuthentication.prototype = Object.create(Resource.prototype);
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudFormationAuthentication}
+ * @returns {CloudFormationAuthentication}
  */
 CloudFormationAuthentication.prototype.accessKeyId = function(value) {
 	return this.set('accessKeyId', value);
@@ -31,8 +31,8 @@ CloudFormationAuthentication.prototype.accessKeyId = function(value) {
  * Required: false
  * Update requires: undefined
  *
- * @param {string[]|Attribute|Reference} value
- * @return {CloudFormationAuthentication}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {CloudFormationAuthentication}
  */
 CloudFormationAuthentication.prototype.buckets = function(value) {
 	return this.set('buckets', value);
@@ -45,7 +45,7 @@ CloudFormationAuthentication.prototype.buckets = function(value) {
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudFormationAuthentication}
+ * @returns {CloudFormationAuthentication}
  */
 CloudFormationAuthentication.prototype.password = function(value) {
 	return this.set('password', value);
@@ -58,7 +58,7 @@ CloudFormationAuthentication.prototype.password = function(value) {
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudFormationAuthentication}
+ * @returns {CloudFormationAuthentication}
  */
 CloudFormationAuthentication.prototype.secretKey = function(value) {
 	return this.set('secretKey', value);
@@ -71,7 +71,7 @@ CloudFormationAuthentication.prototype.secretKey = function(value) {
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value String Valid values are "basic" or "S3"
- * @return {CloudFormationAuthentication}
+ * @returns {CloudFormationAuthentication}
  */
 CloudFormationAuthentication.prototype.type = function(value) {
 	return this.set('type', value);
@@ -83,8 +83,8 @@ CloudFormationAuthentication.prototype.type = function(value) {
  * Required: false
  * Update requires: undefined
  *
- * @param {string[]|Attribute|Reference} value
- * @return {CloudFormationAuthentication}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {CloudFormationAuthentication}
  */
 CloudFormationAuthentication.prototype.uris = function(value) {
 	return this.set('uris', value);
@@ -97,7 +97,7 @@ CloudFormationAuthentication.prototype.uris = function(value) {
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudFormationAuthentication}
+ * @returns {CloudFormationAuthentication}
  */
 CloudFormationAuthentication.prototype.username = function(value) {
 	return this.set('username', value);
@@ -110,7 +110,7 @@ CloudFormationAuthentication.prototype.username = function(value) {
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudFormationAuthentication}
+ * @returns {CloudFormationAuthentication}
  */
 CloudFormationAuthentication.prototype.roleName = function(value) {
 	return this.set('roleName', value);

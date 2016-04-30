@@ -17,7 +17,7 @@ CodeDeployDeploymentGroupOnPremisesInstanceTagFilters.prototype = Object.create(
  * Required: false
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupOnPremisesInstanceTagFilters}
+ * @returns {CodeDeployDeploymentGroupOnPremisesInstanceTagFilters}
  */
 CodeDeployDeploymentGroupOnPremisesInstanceTagFilters.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -29,7 +29,7 @@ CodeDeployDeploymentGroupOnPremisesInstanceTagFilters.prototype.key = function(v
  * Required: false
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupOnPremisesInstanceTagFilters}
+ * @returns {CodeDeployDeploymentGroupOnPremisesInstanceTagFilters}
  */
 CodeDeployDeploymentGroupOnPremisesInstanceTagFilters.prototype.type = function(value) {
 	return this.set('Type', value);
@@ -41,7 +41,7 @@ CodeDeployDeploymentGroupOnPremisesInstanceTagFilters.prototype.type = function(
  * Required: false
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupOnPremisesInstanceTagFilters}
+ * @returns {CodeDeployDeploymentGroupOnPremisesInstanceTagFilters}
  */
 CodeDeployDeploymentGroupOnPremisesInstanceTagFilters.prototype.value = function(value) {
 	return this.set('Value', value);

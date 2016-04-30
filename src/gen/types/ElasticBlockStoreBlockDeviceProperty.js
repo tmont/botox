@@ -17,7 +17,7 @@ ElasticBlockStoreBlockDeviceProperty.prototype = Object.create(PropertyType.prot
  * Required: false
  *
  * @param {Boolean} value
- * @return {ElasticBlockStoreBlockDeviceProperty}
+ * @returns {ElasticBlockStoreBlockDeviceProperty}
  */
 ElasticBlockStoreBlockDeviceProperty.prototype.deleteOnTermination = function(value) {
 	return this.set('DeleteOnTermination', value);
@@ -29,7 +29,7 @@ ElasticBlockStoreBlockDeviceProperty.prototype.deleteOnTermination = function(va
  * Required: false
  *
  * @param {Boolean} value
- * @return {ElasticBlockStoreBlockDeviceProperty}
+ * @returns {ElasticBlockStoreBlockDeviceProperty}
  */
 ElasticBlockStoreBlockDeviceProperty.prototype.encrypted = function(value) {
 	return this.set('Encrypted', value);
@@ -41,7 +41,7 @@ ElasticBlockStoreBlockDeviceProperty.prototype.encrypted = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {ElasticBlockStoreBlockDeviceProperty}
+ * @returns {ElasticBlockStoreBlockDeviceProperty}
  */
 ElasticBlockStoreBlockDeviceProperty.prototype.iops = function(value) {
 	return this.set('Iops', value);
@@ -53,7 +53,7 @@ ElasticBlockStoreBlockDeviceProperty.prototype.iops = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {ElasticBlockStoreBlockDeviceProperty}
+ * @returns {ElasticBlockStoreBlockDeviceProperty}
  */
 ElasticBlockStoreBlockDeviceProperty.prototype.snapshotId = function(value) {
 	return this.set('SnapshotId', value);
@@ -65,7 +65,7 @@ ElasticBlockStoreBlockDeviceProperty.prototype.snapshotId = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {ElasticBlockStoreBlockDeviceProperty}
+ * @returns {ElasticBlockStoreBlockDeviceProperty}
  */
 ElasticBlockStoreBlockDeviceProperty.prototype.volumeSize = function(value) {
 	return this.set('VolumeSize', value);
@@ -77,7 +77,7 @@ ElasticBlockStoreBlockDeviceProperty.prototype.volumeSize = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {ElasticBlockStoreBlockDeviceProperty}
+ * @returns {ElasticBlockStoreBlockDeviceProperty}
  */
 ElasticBlockStoreBlockDeviceProperty.prototype.volumeType = function(value) {
 	return this.set('VolumeType', value);

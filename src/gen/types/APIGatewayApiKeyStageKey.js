@@ -17,7 +17,7 @@ APIGatewayApiKeyStageKey.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayApiKeyStageKey}
+ * @returns {APIGatewayApiKeyStageKey}
  */
 APIGatewayApiKeyStageKey.prototype.restApiId = function(value) {
 	return this.set('RestApiId', value);
@@ -29,7 +29,7 @@ APIGatewayApiKeyStageKey.prototype.restApiId = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayApiKeyStageKey}
+ * @returns {APIGatewayApiKeyStageKey}
  */
 APIGatewayApiKeyStageKey.prototype.stageName = function(value) {
 	return this.set('StageName', value);

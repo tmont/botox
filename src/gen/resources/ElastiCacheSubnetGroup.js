@@ -19,7 +19,7 @@ ElastiCacheSubnetGroup.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheSubnetGroup}
+ * @returns {ElastiCacheSubnetGroup}
  */
 ElastiCacheSubnetGroup.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -32,7 +32,7 @@ ElastiCacheSubnetGroup.prototype.description = function(value) {
  * Update requires: No interruption
  *
  * @param {String[]|Attribute|Reference} value
- * @return {ElastiCacheSubnetGroup}
+ * @returns {ElastiCacheSubnetGroup}
  */
 ElastiCacheSubnetGroup.prototype.subnetIds = function(value) {
 	return this.set('SubnetIds', value);

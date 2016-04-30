@@ -17,7 +17,7 @@ S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype = Object.create
  * Required: false
  *
  * @param {String} value
- * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
+ * @returns {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
  */
 S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype.hostName = function(value) {
 	return this.set('HostName', value);
@@ -29,7 +29,7 @@ S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype.hostName = func
  * Required: false
  *
  * @param {String} value
- * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
+ * @returns {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
  */
 S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype.httpRedirectCode = function(value) {
 	return this.set('HttpRedirectCode', value);
@@ -41,7 +41,7 @@ S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype.httpRedirectCod
  * Required: false
  *
  * @param {String} value
- * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
+ * @returns {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
  */
 S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype.protocol = function(value) {
 	return this.set('Protocol', value);
@@ -53,7 +53,7 @@ S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype.protocol = func
  * Required: false
  *
  * @param {String} value
- * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
+ * @returns {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
  */
 S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype.replaceKeyPrefixWith = function(value) {
 	return this.set('ReplaceKeyPrefixWith', value);
@@ -65,7 +65,7 @@ S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype.replaceKeyPrefi
  * Required: false
  *
  * @param {String} value
- * @return {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
+ * @returns {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty}
  */
 S3WebsiteConfigurationRoutingRulesRedirectRuleProperty.prototype.replaceKeyWith = function(value) {
 	return this.set('ReplaceKeyWith', value);

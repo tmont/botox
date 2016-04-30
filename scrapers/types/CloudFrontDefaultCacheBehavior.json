@@ -7,14 +7,14 @@
       "description": "HTTP methods that CloudFront processes and forwards to your Amazon S3 bucket or your custom origin. In AWS CloudFormation templates, you can specify [\"HEAD\", \"GET\"], [\"GET\", \"HEAD\", \"OPTIONS\"], or [\"DELETE\", \"GET\", \"HEAD\", \"OPTIONS\", \"PATCH\", \"POST\", \"PUT\"]. If you don't specify a value, AWS CloudFormation specifies [\"HEAD\", \"GET\"].",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "CachedMethods",
       "description": "HTTP methods for which CloudFront caches responses. In AWS CloudFormation templates, you can specify [\"HEAD\", \"GET\"] or [\"GET\", \"HEAD\", \"OPTIONS\"]. If you don't specify a value, AWS CloudFormation specifies [\"HEAD\", \"GET\"].",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "Compress",
@@ -70,7 +70,7 @@
       "description": "A list of AWS accounts that can create signed URLs in order to access private content.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "ViewerProtocolPolicy",

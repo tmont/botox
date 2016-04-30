@@ -19,7 +19,7 @@ ECSService.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ECSService}
+ * @returns {ECSService}
  */
 ECSService.prototype.cluster = function(value) {
 	return this.set('Cluster', value);
@@ -32,7 +32,7 @@ ECSService.prototype.cluster = function(value) {
  * Update requires: No interruption
  *
  * @param {EC2ContainerServiceServiceDeploymentConfiguration|Attribute|Reference} value Amazon EC2 Container Service Service DeploymentConfiguration
- * @return {ECSService}
+ * @returns {ECSService}
  */
 ECSService.prototype.deploymentConfiguration = function(value) {
 	return this.set('DeploymentConfiguration', value);
@@ -45,7 +45,7 @@ ECSService.prototype.deploymentConfiguration = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ECSService}
+ * @returns {ECSService}
  */
 ECSService.prototype.desiredCount = function(value) {
 	return this.set('DesiredCount', value);
@@ -58,7 +58,7 @@ ECSService.prototype.desiredCount = function(value) {
  * Update requires: Replacement
  *
  * @param {EC2ContainerServiceServiceLoadBalancers[]|Attribute|Reference} value List of Amazon EC2 Container Service Service LoadBalancers
- * @return {ECSService}
+ * @returns {ECSService}
  */
 ECSService.prototype.loadBalancers = function(value) {
 	return this.set('LoadBalancers', value);
@@ -71,7 +71,7 @@ ECSService.prototype.loadBalancers = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ECSService}
+ * @returns {ECSService}
  */
 ECSService.prototype.role = function(value) {
 	return this.set('Role', value);
@@ -84,7 +84,7 @@ ECSService.prototype.role = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ECSService}
+ * @returns {ECSService}
  */
 ECSService.prototype.taskDefinition = function(value) {
 	return this.set('TaskDefinition', value);

@@ -19,15 +19,15 @@ CloudFormationStack.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(CloudFormationStack.prototype, 'attr', {
 	/**
-	 * @return {CloudFormationStackAttributeMap}
+	 * @returns {CloudFormationStackAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * Returns: The output value from the specified nested stack where NestedStackOutputName is the name of the output value.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get outputsNestedStackOutputName() {
 				return createAttribute('Outputs.NestedStackOutputName');
@@ -42,8 +42,8 @@ Object.defineProperty(CloudFormationStack.prototype, 'attr', {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {CloudFormationStack}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {CloudFormationStack}
  */
 CloudFormationStack.prototype.notificationARNs = function(value) {
 	return this.set('NotificationARNs', value);
@@ -56,7 +56,7 @@ CloudFormationStack.prototype.notificationARNs = function(value) {
  * Update requires: Whether an update causes interruptions depends on the resources that are being update. An update never causes a nested stack to be replaced.
  *
  * @param {CloudFormationStackParametersPropertyType|Attribute|Reference} value CloudFormation Stack Parameters Property Type
- * @return {CloudFormationStack}
+ * @returns {CloudFormationStack}
  */
 CloudFormationStack.prototype.parameters = function(value) {
 	return this.set('Parameters', value);
@@ -69,7 +69,7 @@ CloudFormationStack.prototype.parameters = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {CloudFormationStack}
+ * @returns {CloudFormationStack}
  */
 CloudFormationStack.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -82,7 +82,7 @@ CloudFormationStack.prototype.tags = function(value) {
  * Update requires: Whether an update causes interruptions depends on the resources that are being update. An update never causes a nested stack to be replaced.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudFormationStack}
+ * @returns {CloudFormationStack}
  */
 CloudFormationStack.prototype.templateURL = function(value) {
 	return this.set('TemplateURL', value);
@@ -95,7 +95,7 @@ CloudFormationStack.prototype.templateURL = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudFormationStack}
+ * @returns {CloudFormationStack}
  */
 CloudFormationStack.prototype.timeoutInMinutes = function(value) {
 	return this.set('TimeoutInMinutes', value);

@@ -181,6 +181,12 @@ function getRealType(type) {
 	let nakedType = type.replace(suffixRegex, '');
 
 	switch (nakedType) {
+		case 'string':
+			nakedType = 'String';
+			break;
+		case 'object':
+			nakedType = 'Object';
+			break;
 		case 'AutoScalingEBSBlockDevice':
 			nakedType = 'CloudFormationAutoScalingEBSBlockDevicePropertyType';
 			break;
@@ -311,7 +317,7 @@ module.exports = {
 
 	getPropertyInfo: function($, parseAttrs) {
 		function normalize(text) {
-			return (text || '').replace(/[\n\t]/g, ' ').replace(/\s{2,}/g, ' ').trim();
+			return (text || '').replace(/\s/g, ' ').replace(/\s{2,}/g, ' ').trim();
 		}
 
 		const $body = $('#main-col-body');

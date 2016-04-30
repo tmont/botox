@@ -21,15 +21,15 @@ EC2VPC.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(EC2VPC.prototype, 'attr', {
 	/**
-	 * @return {EC2VPCAttributeMap}
+	 * @returns {EC2VPCAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The set of IP addresses for the VPC. For example, 10.0.0.0/16.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get cidrBlock() {
 				return createAttribute('CidrBlock');
@@ -37,7 +37,7 @@ Object.defineProperty(EC2VPC.prototype, 'attr', {
 
 			/**
 			 * The default network ACL ID that is associated with the VPC. For example, acl-814dafe3.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get defaultNetworkAcl() {
 				return createAttribute('DefaultNetworkAcl');
@@ -45,7 +45,7 @@ Object.defineProperty(EC2VPC.prototype, 'attr', {
 
 			/**
 			 * The default security group ID that is associated with the VPC. For example, sg-b178e0d3.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get defaultSecurityGroup() {
 				return createAttribute('DefaultSecurityGroup');
@@ -61,7 +61,7 @@ Object.defineProperty(EC2VPC.prototype, 'attr', {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPC}
+ * @returns {EC2VPC}
  */
 EC2VPC.prototype.cidrBlock = function(value) {
 	return this.set('CidrBlock', value);
@@ -74,7 +74,7 @@ EC2VPC.prototype.cidrBlock = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {EC2VPC}
+ * @returns {EC2VPC}
  */
 EC2VPC.prototype.enableDnsSupport = function(value) {
 	return this.set('EnableDnsSupport', value);
@@ -87,7 +87,7 @@ EC2VPC.prototype.enableDnsSupport = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {EC2VPC}
+ * @returns {EC2VPC}
  */
 EC2VPC.prototype.enableDnsHostnames = function(value) {
 	return this.set('EnableDnsHostnames', value);
@@ -100,7 +100,7 @@ EC2VPC.prototype.enableDnsHostnames = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPC}
+ * @returns {EC2VPC}
  */
 EC2VPC.prototype.instanceTenancy = function(value) {
 	return this.set('InstanceTenancy', value);
@@ -113,7 +113,7 @@ EC2VPC.prototype.instanceTenancy = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {EC2VPC}
+ * @returns {EC2VPC}
  */
 EC2VPC.prototype.tags = function(value) {
 	return this.set('Tags', value);

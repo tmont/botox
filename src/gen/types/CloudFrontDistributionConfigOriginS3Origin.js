@@ -17,7 +17,7 @@ CloudFrontDistributionConfigOriginS3Origin.prototype = Object.create(PropertyTyp
  * Required: false
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigOriginS3Origin}
+ * @returns {CloudFrontDistributionConfigOriginS3Origin}
  */
 CloudFrontDistributionConfigOriginS3Origin.prototype.originAccessIdentity = function(value) {
 	return this.set('OriginAccessIdentity', value);

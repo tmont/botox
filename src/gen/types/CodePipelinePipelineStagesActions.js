@@ -17,7 +17,7 @@ CodePipelinePipelineStagesActions.prototype = Object.create(PropertyType.prototy
  * Required: true
  *
  * @param {CodePipelinePipelineStagesActionsActionTypeId} value
- * @return {CodePipelinePipelineStagesActions}
+ * @returns {CodePipelinePipelineStagesActions}
  */
 CodePipelinePipelineStagesActions.prototype.actionTypeId = function(value) {
 	return this.set('ActionTypeId', value);
@@ -29,7 +29,7 @@ CodePipelinePipelineStagesActions.prototype.actionTypeId = function(value) {
  * Required: false
  *
  * @param {Object} value
- * @return {CodePipelinePipelineStagesActions}
+ * @returns {CodePipelinePipelineStagesActions}
  */
 CodePipelinePipelineStagesActions.prototype.configuration = function(value) {
 	return this.set('Configuration', value);
@@ -41,7 +41,7 @@ CodePipelinePipelineStagesActions.prototype.configuration = function(value) {
  * Required: false
  *
  * @param {CodePipelinePipelineStagesActionsInputArtifacts[]} value
- * @return {CodePipelinePipelineStagesActions}
+ * @returns {CodePipelinePipelineStagesActions}
  */
 CodePipelinePipelineStagesActions.prototype.inputArtifacts = function(value) {
 	return this.set('InputArtifacts', value);
@@ -53,7 +53,7 @@ CodePipelinePipelineStagesActions.prototype.inputArtifacts = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineStagesActions}
+ * @returns {CodePipelinePipelineStagesActions}
  */
 CodePipelinePipelineStagesActions.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -65,7 +65,7 @@ CodePipelinePipelineStagesActions.prototype.name = function(value) {
  * Required: false
  *
  * @param {CodePipelinePipelineStagesActionsOutputArtifacts[]} value
- * @return {CodePipelinePipelineStagesActions}
+ * @returns {CodePipelinePipelineStagesActions}
  */
 CodePipelinePipelineStagesActions.prototype.outputArtifacts = function(value) {
 	return this.set('OutputArtifacts', value);
@@ -77,7 +77,7 @@ CodePipelinePipelineStagesActions.prototype.outputArtifacts = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {CodePipelinePipelineStagesActions}
+ * @returns {CodePipelinePipelineStagesActions}
  */
 CodePipelinePipelineStagesActions.prototype.roleArn = function(value) {
 	return this.set('RoleArn', value);
@@ -89,7 +89,7 @@ CodePipelinePipelineStagesActions.prototype.roleArn = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {CodePipelinePipelineStagesActions}
+ * @returns {CodePipelinePipelineStagesActions}
  */
 CodePipelinePipelineStagesActions.prototype.runOrder = function(value) {
 	return this.set('RunOrder', value);

@@ -19,7 +19,7 @@ RDSEventSubscription.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {RDSEventSubscription}
+ * @returns {RDSEventSubscription}
  */
 RDSEventSubscription.prototype.enabled = function(value) {
 	return this.set('Enabled', value);
@@ -31,8 +31,8 @@ RDSEventSubscription.prototype.enabled = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {RDSEventSubscription}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {RDSEventSubscription}
  */
 RDSEventSubscription.prototype.eventCategories = function(value) {
 	return this.set('EventCategories', value);
@@ -45,7 +45,7 @@ RDSEventSubscription.prototype.eventCategories = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSEventSubscription}
+ * @returns {RDSEventSubscription}
  */
 RDSEventSubscription.prototype.snsTopicArn = function(value) {
 	return this.set('SnsTopicArn', value);
@@ -57,8 +57,8 @@ RDSEventSubscription.prototype.snsTopicArn = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {RDSEventSubscription}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {RDSEventSubscription}
  */
 RDSEventSubscription.prototype.sourceIds = function(value) {
 	return this.set('SourceIds', value);
@@ -71,7 +71,7 @@ RDSEventSubscription.prototype.sourceIds = function(value) {
  * Update requires: Replacement if you're removing this property after it was previously specified. All other updates require no interruption.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSEventSubscription}
+ * @returns {RDSEventSubscription}
  */
 RDSEventSubscription.prototype.sourceType = function(value) {
 	return this.set('SourceType', value);

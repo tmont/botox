@@ -19,15 +19,15 @@ EMRCluster.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(EMRCluster.prototype, 'attr', {
 	/**
-	 * @return {EMRClusterAttributeMap}
+	 * @returns {EMRClusterAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The public DNS name of the master node (instance), such as ec2-12-123-123-123.us-west-2.compute.amazonaws.com.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get masterPublicDNS() {
 				return createAttribute('MasterPublicDNS');
@@ -43,7 +43,7 @@ Object.defineProperty(EMRCluster.prototype, 'attr', {
  * Update requires: Replacement
  *
  * @param {Object|Attribute|Reference} value
- * @return {EMRCluster}
+ * @returns {EMRCluster}
  */
 EMRCluster.prototype.additionalInfo = function(value) {
 	return this.set('AdditionalInfo', value);
@@ -56,7 +56,7 @@ EMRCluster.prototype.additionalInfo = function(value) {
  * Update requires: Replacement
  *
  * @param {ElasticMapReduceClusterApplication[]|Attribute|Reference} value List of Amazon Elastic MapReduce Cluster Application
- * @return {EMRCluster}
+ * @returns {EMRCluster}
  */
 EMRCluster.prototype.applications = function(value) {
 	return this.set('Applications', value);
@@ -69,7 +69,7 @@ EMRCluster.prototype.applications = function(value) {
  * Update requires: Replacement
  *
  * @param {ElasticMapReduceClusterBootstrapActionConfig[]|Attribute|Reference} value List of Amazon Elastic MapReduce Cluster BootstrapActionConfig
- * @return {EMRCluster}
+ * @returns {EMRCluster}
  */
 EMRCluster.prototype.bootstrapActions = function(value) {
 	return this.set('BootstrapActions', value);
@@ -82,7 +82,7 @@ EMRCluster.prototype.bootstrapActions = function(value) {
  * Update requires: Replacement
  *
  * @param {ElasticMapReduceClusterConfiguration[]|Attribute|Reference} value List of Amazon Elastic MapReduce Cluster Configuration
- * @return {EMRCluster}
+ * @returns {EMRCluster}
  */
 EMRCluster.prototype.configurations = function(value) {
 	return this.set('Configurations', value);
@@ -95,7 +95,7 @@ EMRCluster.prototype.configurations = function(value) {
  * Update requires: Replacement
  *
  * @param {ElasticMapReduceEbsConfiguration|Attribute|Reference} value Amazon Elastic MapReduce EbsConfiguration
- * @return {EMRCluster}
+ * @returns {EMRCluster}
  */
 EMRCluster.prototype.ebsConfiguration = function(value) {
 	return this.set('EbsConfiguration', value);
@@ -108,7 +108,7 @@ EMRCluster.prototype.ebsConfiguration = function(value) {
  * Update requires: Replacement
  *
  * @param {ElasticMapReduceClusterJobFlowInstancesConfig|Attribute|Reference} value Amazon Elastic MapReduce Cluster JobFlowInstancesConfig
- * @return {EMRCluster}
+ * @returns {EMRCluster}
  */
 EMRCluster.prototype.instances = function(value) {
 	return this.set('Instances', value);
@@ -121,7 +121,7 @@ EMRCluster.prototype.instances = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EMRCluster}
+ * @returns {EMRCluster}
  */
 EMRCluster.prototype.jobFlowRole = function(value) {
 	return this.set('JobFlowRole', value);
@@ -134,7 +134,7 @@ EMRCluster.prototype.jobFlowRole = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EMRCluster}
+ * @returns {EMRCluster}
  */
 EMRCluster.prototype.logUri = function(value) {
 	return this.set('LogUri', value);
@@ -147,7 +147,7 @@ EMRCluster.prototype.logUri = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EMRCluster}
+ * @returns {EMRCluster}
  */
 EMRCluster.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -160,7 +160,7 @@ EMRCluster.prototype.name = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EMRCluster}
+ * @returns {EMRCluster}
  */
 EMRCluster.prototype.releaseLabel = function(value) {
 	return this.set('ReleaseLabel', value);
@@ -173,7 +173,7 @@ EMRCluster.prototype.releaseLabel = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EMRCluster}
+ * @returns {EMRCluster}
  */
 EMRCluster.prototype.serviceRole = function(value) {
 	return this.set('ServiceRole', value);
@@ -186,7 +186,7 @@ EMRCluster.prototype.serviceRole = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {EMRCluster}
+ * @returns {EMRCluster}
  */
 EMRCluster.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -199,7 +199,7 @@ EMRCluster.prototype.tags = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {EMRCluster}
+ * @returns {EMRCluster}
  */
 EMRCluster.prototype.visibleToAllUsers = function(value) {
 	return this.set('VisibleToAllUsers', value);

@@ -19,7 +19,7 @@ CodePipelinePipeline.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {CodePipelinePipelineArtifactStore|Attribute|Reference} value AWS CodePipeline Pipeline ArtifactStore
- * @return {CodePipelinePipeline}
+ * @returns {CodePipelinePipeline}
  */
 CodePipelinePipeline.prototype.artifactStore = function(value) {
 	return this.set('ArtifactStore', value);
@@ -32,7 +32,7 @@ CodePipelinePipeline.prototype.artifactStore = function(value) {
  * Update requires: No interruption
  *
  * @param {CodePipelinePipelineDisableInboundStageTransitions[]|Attribute|Reference} value List of AWS CodePipeline Pipeline DisableInboundStageTransitions
- * @return {CodePipelinePipeline}
+ * @returns {CodePipelinePipeline}
  */
 CodePipelinePipeline.prototype.disableInboundStageTransitions = function(value) {
 	return this.set('DisableInboundStageTransitions', value);
@@ -45,7 +45,7 @@ CodePipelinePipeline.prototype.disableInboundStageTransitions = function(value) 
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CodePipelinePipeline}
+ * @returns {CodePipelinePipeline}
  */
 CodePipelinePipeline.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -58,7 +58,7 @@ CodePipelinePipeline.prototype.name = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {CodePipelinePipeline}
+ * @returns {CodePipelinePipeline}
  */
 CodePipelinePipeline.prototype.restartExecutionOnUpdate = function(value) {
 	return this.set('RestartExecutionOnUpdate', value);
@@ -71,7 +71,7 @@ CodePipelinePipeline.prototype.restartExecutionOnUpdate = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CodePipelinePipeline}
+ * @returns {CodePipelinePipeline}
  */
 CodePipelinePipeline.prototype.roleArn = function(value) {
 	return this.set('RoleArn', value);
@@ -84,7 +84,7 @@ CodePipelinePipeline.prototype.roleArn = function(value) {
  * Update requires: No interruption
  *
  * @param {CodePipelinePipelineStages|Attribute|Reference} value AWS CodePipeline Pipeline Stages
- * @return {CodePipelinePipeline}
+ * @returns {CodePipelinePipeline}
  */
 CodePipelinePipeline.prototype.stages = function(value) {
 	return this.set('Stages', value);

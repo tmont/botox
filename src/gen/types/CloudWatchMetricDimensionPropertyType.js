@@ -17,7 +17,7 @@ CloudWatchMetricDimensionPropertyType.prototype = Object.create(PropertyType.pro
  * Required: true
  *
  * @param {String} value
- * @return {CloudWatchMetricDimensionPropertyType}
+ * @returns {CloudWatchMetricDimensionPropertyType}
  */
 CloudWatchMetricDimensionPropertyType.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -29,7 +29,7 @@ CloudWatchMetricDimensionPropertyType.prototype.name = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {CloudWatchMetricDimensionPropertyType}
+ * @returns {CloudWatchMetricDimensionPropertyType}
  */
 CloudWatchMetricDimensionPropertyType.prototype.value = function(value) {
 	return this.set('Value', value);

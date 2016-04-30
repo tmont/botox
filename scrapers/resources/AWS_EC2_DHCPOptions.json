@@ -18,7 +18,7 @@
       "description": "The IP (IPv4) address of a domain name server. You can specify up to four addresses.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "Replacement"
     },
     {
@@ -26,7 +26,7 @@
       "description": "The IP address (IPv4) of a NetBIOS name server. You can specify up to four addresses.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "Replacement"
     },
     {
@@ -42,7 +42,7 @@
       "description": "The IP address (IPv4) of a Network Time Protocol (NTP) server. You can specify up to four addresses.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "Replacement"
     },
     {

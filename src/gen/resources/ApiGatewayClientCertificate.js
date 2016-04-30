@@ -19,7 +19,7 @@ ApiGatewayClientCertificate.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayClientCertificate}
+ * @returns {ApiGatewayClientCertificate}
  */
 ApiGatewayClientCertificate.prototype.description = function(value) {
 	return this.set('Description', value);

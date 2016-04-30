@@ -17,7 +17,7 @@ ConfigConfigurationRecorderRecordingGroup.prototype = Object.create(PropertyType
  * Required: false
  *
  * @param {Boolean} value
- * @return {ConfigConfigurationRecorderRecordingGroup}
+ * @returns {ConfigConfigurationRecorderRecordingGroup}
  */
 ConfigConfigurationRecorderRecordingGroup.prototype.allSupported = function(value) {
 	return this.set('AllSupported', value);
@@ -29,7 +29,7 @@ ConfigConfigurationRecorderRecordingGroup.prototype.allSupported = function(valu
  * Required: false
  *
  * @param {Boolean} value
- * @return {ConfigConfigurationRecorderRecordingGroup}
+ * @returns {ConfigConfigurationRecorderRecordingGroup}
  */
 ConfigConfigurationRecorderRecordingGroup.prototype.includeGlobalResourceTypes = function(value) {
 	return this.set('IncludeGlobalResourceTypes', value);
@@ -40,8 +40,8 @@ ConfigConfigurationRecorderRecordingGroup.prototype.includeGlobalResourceTypes =
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {ConfigConfigurationRecorderRecordingGroup}
+ * @param {String[]} value
+ * @returns {ConfigConfigurationRecorderRecordingGroup}
  */
 ConfigConfigurationRecorderRecordingGroup.prototype.resourceTypes = function(value) {
 	return this.set('ResourceTypes', value);

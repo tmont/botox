@@ -18,8 +18,8 @@ AutoScalingAutoScalingGroup.prototype = Object.create(Resource.prototype);
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {AutoScalingAutoScalingGroup}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.availabilityZones = function(value) {
 	return this.set('AvailabilityZones', value);
@@ -32,7 +32,7 @@ AutoScalingAutoScalingGroup.prototype.availabilityZones = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingAutoScalingGroup}
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.cooldown = function(value) {
 	return this.set('Cooldown', value);
@@ -45,7 +45,7 @@ AutoScalingAutoScalingGroup.prototype.cooldown = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingAutoScalingGroup}
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.desiredCapacity = function(value) {
 	return this.set('DesiredCapacity', value);
@@ -58,7 +58,7 @@ AutoScalingAutoScalingGroup.prototype.desiredCapacity = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {AutoScalingAutoScalingGroup}
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.healthCheckGracePeriod = function(value) {
 	return this.set('HealthCheckGracePeriod', value);
@@ -71,7 +71,7 @@ AutoScalingAutoScalingGroup.prototype.healthCheckGracePeriod = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingAutoScalingGroup}
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.healthCheckType = function(value) {
 	return this.set('HealthCheckType', value);
@@ -84,7 +84,7 @@ AutoScalingAutoScalingGroup.prototype.healthCheckType = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingAutoScalingGroup}
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.instanceId = function(value) {
 	return this.set('InstanceId', value);
@@ -97,7 +97,7 @@ AutoScalingAutoScalingGroup.prototype.instanceId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingAutoScalingGroup}
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.launchConfigurationName = function(value) {
 	return this.set('LaunchConfigurationName', value);
@@ -109,8 +109,8 @@ AutoScalingAutoScalingGroup.prototype.launchConfigurationName = function(value) 
  * Required: false
  * Update requires: Replacement
  *
- * @param {string[]|Attribute|Reference} value
- * @return {AutoScalingAutoScalingGroup}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.loadBalancerNames = function(value) {
 	return this.set('LoadBalancerNames', value);
@@ -123,7 +123,7 @@ AutoScalingAutoScalingGroup.prototype.loadBalancerNames = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingAutoScalingGroup}
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.maxSize = function(value) {
 	return this.set('MaxSize', value);
@@ -136,7 +136,7 @@ AutoScalingAutoScalingGroup.prototype.maxSize = function(value) {
  * Update requires: No interruption
  *
  * @param {AutoScalingMetricsCollection[]|Attribute|Reference} value A list of Auto Scaling MetricsCollection
- * @return {AutoScalingAutoScalingGroup}
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.metricsCollection = function(value) {
 	return this.set('MetricsCollection', value);
@@ -149,7 +149,7 @@ AutoScalingAutoScalingGroup.prototype.metricsCollection = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingAutoScalingGroup}
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.minSize = function(value) {
 	return this.set('MinSize', value);
@@ -162,7 +162,7 @@ AutoScalingAutoScalingGroup.prototype.minSize = function(value) {
  * Update requires: No interruption
  *
  * @param {AutoScalingNotificationConfigurations[]|Attribute|Reference} value List of Auto Scaling NotificationConfigurations
- * @return {AutoScalingAutoScalingGroup}
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.notificationConfigurations = function(value) {
 	return this.set('NotificationConfigurations', value);
@@ -175,7 +175,7 @@ AutoScalingAutoScalingGroup.prototype.notificationConfigurations = function(valu
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingAutoScalingGroup}
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.placementGroup = function(value) {
 	return this.set('PlacementGroup', value);
@@ -188,7 +188,7 @@ AutoScalingAutoScalingGroup.prototype.placementGroup = function(value) {
  * Update requires: No interruption
  *
  * @param {AutoScalingTagsPropertyType[]|Attribute|Reference} value List of Auto Scaling Tags
- * @return {AutoScalingAutoScalingGroup}
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -200,8 +200,8 @@ AutoScalingAutoScalingGroup.prototype.tags = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {AutoScalingAutoScalingGroup}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.terminationPolicies = function(value) {
 	return this.set('TerminationPolicies', value);
@@ -213,8 +213,8 @@ AutoScalingAutoScalingGroup.prototype.terminationPolicies = function(value) {
  * Required: false
  * Update requires: Some interruptions
  *
- * @param {string[]|Attribute|Reference} value
- * @return {AutoScalingAutoScalingGroup}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {AutoScalingAutoScalingGroup}
  */
 AutoScalingAutoScalingGroup.prototype.vpcZoneIdentifier = function(value) {
 	return this.set('VPCZoneIdentifier', value);

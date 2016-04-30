@@ -17,7 +17,7 @@ S3ReplicationConfigurationRulesDestination.prototype = Object.create(PropertyTyp
  * Required: true
  *
  * @param {String} value
- * @return {S3ReplicationConfigurationRulesDestination}
+ * @returns {S3ReplicationConfigurationRulesDestination}
  */
 S3ReplicationConfigurationRulesDestination.prototype.bucket = function(value) {
 	return this.set('Bucket', value);
@@ -29,7 +29,7 @@ S3ReplicationConfigurationRulesDestination.prototype.bucket = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {S3ReplicationConfigurationRulesDestination}
+ * @returns {S3ReplicationConfigurationRulesDestination}
  */
 S3ReplicationConfigurationRulesDestination.prototype.storageClass = function(value) {
 	return this.set('StorageClass', value);

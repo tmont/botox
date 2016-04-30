@@ -17,7 +17,7 @@ DynamoDBTableStreamSpecification.prototype = Object.create(PropertyType.prototyp
  * Required: true
  *
  * @param {String} value
- * @return {DynamoDBTableStreamSpecification}
+ * @returns {DynamoDBTableStreamSpecification}
  */
 DynamoDBTableStreamSpecification.prototype.streamViewType = function(value) {
 	return this.set('StreamViewType', value);

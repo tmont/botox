@@ -17,7 +17,7 @@ ElasticLoadBalancingLBCookieStickinessPolicyType.prototype = Object.create(Prope
  * Required: false
  *
  * @param {String} value
- * @return {ElasticLoadBalancingLBCookieStickinessPolicyType}
+ * @returns {ElasticLoadBalancingLBCookieStickinessPolicyType}
  */
 ElasticLoadBalancingLBCookieStickinessPolicyType.prototype.cookieExpirationPeriod = function(value) {
 	return this.set('CookieExpirationPeriod', value);
@@ -29,7 +29,7 @@ ElasticLoadBalancingLBCookieStickinessPolicyType.prototype.cookieExpirationPerio
  * Required: false
  *
  * @param {undefined} value
- * @return {ElasticLoadBalancingLBCookieStickinessPolicyType}
+ * @returns {ElasticLoadBalancingLBCookieStickinessPolicyType}
  */
 ElasticLoadBalancingLBCookieStickinessPolicyType.prototype.policyName = function(value) {
 	return this.set('PolicyName', value);

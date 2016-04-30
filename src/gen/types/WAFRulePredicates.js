@@ -17,7 +17,7 @@ WAFRulePredicates.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {WAFRulePredicates}
+ * @returns {WAFRulePredicates}
  */
 WAFRulePredicates.prototype.dataId = function(value) {
 	return this.set('DataId', value);
@@ -29,7 +29,7 @@ WAFRulePredicates.prototype.dataId = function(value) {
  * Required: true
  *
  * @param {Boolean} value
- * @return {WAFRulePredicates}
+ * @returns {WAFRulePredicates}
  */
 WAFRulePredicates.prototype.negated = function(value) {
 	return this.set('Negated', value);
@@ -41,7 +41,7 @@ WAFRulePredicates.prototype.negated = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {WAFRulePredicates}
+ * @returns {WAFRulePredicates}
  */
 WAFRulePredicates.prototype.type = function(value) {
 	return this.set('Type', value);

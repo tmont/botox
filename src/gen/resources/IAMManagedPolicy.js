@@ -19,7 +19,7 @@ IAMManagedPolicy.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {IAMManagedPolicy}
+ * @returns {IAMManagedPolicy}
  */
 IAMManagedPolicy.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -31,8 +31,8 @@ IAMManagedPolicy.prototype.description = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {IAMManagedPolicy}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {IAMManagedPolicy}
  */
 IAMManagedPolicy.prototype.groups = function(value) {
 	return this.set('Groups', value);
@@ -45,7 +45,7 @@ IAMManagedPolicy.prototype.groups = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {IAMManagedPolicy}
+ * @returns {IAMManagedPolicy}
  */
 IAMManagedPolicy.prototype.path = function(value) {
 	return this.set('Path', value);
@@ -58,7 +58,7 @@ IAMManagedPolicy.prototype.path = function(value) {
  * Update requires: No interruption
  *
  * @param {Object|Attribute|Reference} value
- * @return {IAMManagedPolicy}
+ * @returns {IAMManagedPolicy}
  */
 IAMManagedPolicy.prototype.policyDocument = function(value) {
 	return this.set('PolicyDocument', value);
@@ -70,8 +70,8 @@ IAMManagedPolicy.prototype.policyDocument = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {IAMManagedPolicy}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {IAMManagedPolicy}
  */
 IAMManagedPolicy.prototype.roles = function(value) {
 	return this.set('Roles', value);
@@ -83,8 +83,8 @@ IAMManagedPolicy.prototype.roles = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {IAMManagedPolicy}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {IAMManagedPolicy}
  */
 IAMManagedPolicy.prototype.users = function(value) {
 	return this.set('Users', value);

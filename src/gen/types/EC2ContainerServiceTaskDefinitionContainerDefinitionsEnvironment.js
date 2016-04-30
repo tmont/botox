@@ -17,7 +17,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment.prototype = Obj
  * Required: true
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -29,7 +29,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment.prototype.name 
  * Required: true
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsEnvironment.prototype.value = function(value) {
 	return this.set('Value', value);

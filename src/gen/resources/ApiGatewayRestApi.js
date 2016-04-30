@@ -19,15 +19,15 @@ ApiGatewayRestApi.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(ApiGatewayRestApi.prototype, 'attr', {
 	/**
-	 * @return {ApiGatewayRestApiAttributeMap}
+	 * @returns {ApiGatewayRestApiAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The root resource ID for a RestApi resource, such as a0bc123d4e.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get rootResourceId() {
 				return createAttribute('RootResourceId');
@@ -43,7 +43,7 @@ Object.defineProperty(ApiGatewayRestApi.prototype, 'attr', {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayRestApi}
+ * @returns {ApiGatewayRestApi}
  */
 ApiGatewayRestApi.prototype.body = function(value) {
 	return this.set('Body', value);
@@ -56,7 +56,7 @@ ApiGatewayRestApi.prototype.body = function(value) {
  * Update requires: No interruption
  *
  * @param {APIGatewayRestApiS3Location|Attribute|Reference} value Amazon API Gateway RestApi S3Location
- * @return {ApiGatewayRestApi}
+ * @returns {ApiGatewayRestApi}
  */
 ApiGatewayRestApi.prototype.bodyS3Location = function(value) {
 	return this.set('BodyS3Location', value);
@@ -69,7 +69,7 @@ ApiGatewayRestApi.prototype.bodyS3Location = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayRestApi}
+ * @returns {ApiGatewayRestApi}
  */
 ApiGatewayRestApi.prototype.cloneFrom = function(value) {
 	return this.set('CloneFrom', value);
@@ -82,7 +82,7 @@ ApiGatewayRestApi.prototype.cloneFrom = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayRestApi}
+ * @returns {ApiGatewayRestApi}
  */
 ApiGatewayRestApi.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -95,7 +95,7 @@ ApiGatewayRestApi.prototype.description = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {ApiGatewayRestApi}
+ * @returns {ApiGatewayRestApi}
  */
 ApiGatewayRestApi.prototype.failOnWarnings = function(value) {
 	return this.set('FailOnWarnings', value);
@@ -108,7 +108,7 @@ ApiGatewayRestApi.prototype.failOnWarnings = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayRestApi}
+ * @returns {ApiGatewayRestApi}
  */
 ApiGatewayRestApi.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -120,8 +120,8 @@ ApiGatewayRestApi.prototype.name = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {ApiGatewayRestApi}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {ApiGatewayRestApi}
  */
 ApiGatewayRestApi.prototype.parameters = function(value) {
 	return this.set('Parameters', value);

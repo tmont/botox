@@ -17,7 +17,7 @@ EC2NetworkInterfacePrivateIPSpecification.prototype = Object.create(PropertyType
  * Required: true
  *
  * @param {String} value
- * @return {EC2NetworkInterfacePrivateIPSpecification}
+ * @returns {EC2NetworkInterfacePrivateIPSpecification}
  */
 EC2NetworkInterfacePrivateIPSpecification.prototype.privateIpAddress = function(value) {
 	return this.set('PrivateIpAddress', value);
@@ -29,7 +29,7 @@ EC2NetworkInterfacePrivateIPSpecification.prototype.privateIpAddress = function(
  * Required: true
  *
  * @param {Boolean} value
- * @return {EC2NetworkInterfacePrivateIPSpecification}
+ * @returns {EC2NetworkInterfacePrivateIPSpecification}
  */
 EC2NetworkInterfacePrivateIPSpecification.prototype.primary = function(value) {
 	return this.set('Primary', value);

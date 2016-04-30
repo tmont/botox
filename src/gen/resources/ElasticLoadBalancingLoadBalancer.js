@@ -15,31 +15,31 @@ ElasticLoadBalancingLoadBalancer.prototype = Object.create(Resource.prototype);
 /**
  * AWS::ElasticLoadBalancing::LoadBalancer attribute map
  * @typedef {Object} ElasticLoadBalancingLoadBalancerAttributeMap
- * @property {Attribute} canonicalHostedZoneName The name of the Amazon Route 53 hosted zone that is associated with the load balancer.ImportantIf you specify internal for the Elastic Load Balancing scheme, use DNSName instead. For an internal scheme, the load balancer doesn't have a CanonicalHostedZoneName value.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
- * @property {Attribute} canonicalHostedZoneNameID The ID of the Amazon Route 53 hosted zone name that is associated with the load balancer.Example: Z3DZXE0Q79N41H
+ * @property {Attribute} canonicalHostedZoneName The name of the Amazon Route 53 hosted zone that is associated with the load balancer.ImportantIf you specify internal for the Elastic Load Balancing scheme, use DNSName instead. For an internal scheme, the load balancer doesn't have a CanonicalHostedZoneName value.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
+ * @property {Attribute} canonicalHostedZoneNameID The ID of the Amazon Route 53 hosted zone name that is associated with the load balancer.Example: Z3DZXE0Q79N41H
  * @property {Attribute} dnsName The DNS name for the load balancer.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
  * @property {Attribute} sourceSecurityGroupGroupName The security group that you can use as part of your inbound rules for your load balancer's back-end Amazon EC2 application instances.Example: amazon-elb
  * @property {Attribute} sourceSecurityGroupOwnerAlias The owner of the source security group.Example: amazon-elb-sg
  */
 Object.defineProperty(ElasticLoadBalancingLoadBalancer.prototype, 'attr', {
 	/**
-	 * @return {ElasticLoadBalancingLoadBalancerAttributeMap}
+	 * @returns {ElasticLoadBalancingLoadBalancerAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
-			 * The name of the Amazon Route 53 hosted zone that is associated with the load balancer.ImportantIf you specify internal for the Elastic Load Balancing scheme, use DNSName instead. For an internal scheme, the load balancer doesn't have a CanonicalHostedZoneName value.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
-			 * @return {Attribute}
+			 * The name of the Amazon Route 53 hosted zone that is associated with the load balancer.ImportantIf you specify internal for the Elastic Load Balancing scheme, use DNSName instead. For an internal scheme, the load balancer doesn't have a CanonicalHostedZoneName value.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
+			 * @returns {Attribute}
 			 */
 			get canonicalHostedZoneName() {
 				return createAttribute('CanonicalHostedZoneName');
 			},
 
 			/**
-			 * The ID of the Amazon Route 53 hosted zone name that is associated with the load balancer.Example: Z3DZXE0Q79N41H
-			 * @return {Attribute}
+			 * The ID of the Amazon Route 53 hosted zone name that is associated with the load balancer.Example: Z3DZXE0Q79N41H
+			 * @returns {Attribute}
 			 */
 			get canonicalHostedZoneNameID() {
 				return createAttribute('CanonicalHostedZoneNameID');
@@ -47,7 +47,7 @@ Object.defineProperty(ElasticLoadBalancingLoadBalancer.prototype, 'attr', {
 
 			/**
 			 * The DNS name for the load balancer.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get dnsName() {
 				return createAttribute('DNSName');
@@ -55,7 +55,7 @@ Object.defineProperty(ElasticLoadBalancingLoadBalancer.prototype, 'attr', {
 
 			/**
 			 * The security group that you can use as part of your inbound rules for your load balancer's back-end Amazon EC2 application instances.Example: amazon-elb
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get sourceSecurityGroupGroupName() {
 				return createAttribute('SourceSecurityGroup.GroupName');
@@ -63,7 +63,7 @@ Object.defineProperty(ElasticLoadBalancingLoadBalancer.prototype, 'attr', {
 
 			/**
 			 * The owner of the source security group.Example: amazon-elb-sg
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get sourceSecurityGroupOwnerAlias() {
 				return createAttribute('SourceSecurityGroup.OwnerAlias');
@@ -79,7 +79,7 @@ Object.defineProperty(ElasticLoadBalancingLoadBalancer.prototype, 'attr', {
  * Update requires: No interruption
  *
  * @param {ElasticLoadBalancingAccessLoggingPolicy|Attribute|Reference} value Elastic Load Balancing AccessLoggingPolicy
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.accessLoggingPolicy = function(value) {
 	return this.set('AccessLoggingPolicy', value);
@@ -92,7 +92,7 @@ ElasticLoadBalancingLoadBalancer.prototype.accessLoggingPolicy = function(value)
  * Update requires: No interruption
  *
  * @param {ElasticLoadBalancingAppCookieStickinessPolicyType[]|Attribute|Reference} value A list of AppCookieStickinessPolicy objects.
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.appCookieStickinessPolicy = function(value) {
 	return this.set('AppCookieStickinessPolicy', value);
@@ -104,8 +104,8 @@ ElasticLoadBalancingLoadBalancer.prototype.appCookieStickinessPolicy = function(
  * Required: false
  * Update requires: Replacement if you did not have an Availability Zone specified and you are adding one or if you are removing all Availability Zones. Otherwise, update requires no interruption.
  *
- * @param {string[]|Attribute|Reference} value
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.availabilityZones = function(value) {
 	return this.set('AvailabilityZones', value);
@@ -118,7 +118,7 @@ ElasticLoadBalancingLoadBalancer.prototype.availabilityZones = function(value) {
  * Update requires: No interruption
  *
  * @param {ElasticLoadBalancingConnectionDrainingPolicy|Attribute|Reference} value Elastic Load Balancing ConnectionDrainingPolicy
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.connectionDrainingPolicy = function(value) {
 	return this.set('ConnectionDrainingPolicy', value);
@@ -131,7 +131,7 @@ ElasticLoadBalancingLoadBalancer.prototype.connectionDrainingPolicy = function(v
  * Update requires: No interruption
  *
  * @param {ElasticLoadBalancingConnectionSettings|Attribute|Reference} value Elastic Load Balancing ConnectionSettings
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.connectionSettings = function(value) {
 	return this.set('ConnectionSettings', value);
@@ -144,7 +144,7 @@ ElasticLoadBalancingLoadBalancer.prototype.connectionSettings = function(value) 
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.crossZone = function(value) {
 	return this.set('CrossZone', value);
@@ -157,7 +157,7 @@ ElasticLoadBalancingLoadBalancer.prototype.crossZone = function(value) {
  * Update requires: Replacement if you did not have a health check specified and you are adding one or if you are removing a health check. Otherwise, update requires no interruption.
  *
  * @param {ElasticLoadBalancingHealthCheckType|Attribute|Reference} value ElasticLoadBalancing HealthCheck Type.
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.healthCheck = function(value) {
 	return this.set('HealthCheck', value);
@@ -169,8 +169,8 @@ ElasticLoadBalancingLoadBalancer.prototype.healthCheck = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.instances = function(value) {
 	return this.set('Instances', value);
@@ -183,7 +183,7 @@ ElasticLoadBalancingLoadBalancer.prototype.instances = function(value) {
  * Update requires: No interruption
  *
  * @param {ElasticLoadBalancingAppCookieStickinessPolicyType[]|Attribute|Reference} value A list of LBCookieStickinessPolicy objects.
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.lbCookieStickinessPolicy = function(value) {
 	return this.set('LBCookieStickinessPolicy', value);
@@ -196,7 +196,7 @@ ElasticLoadBalancingLoadBalancer.prototype.lbCookieStickinessPolicy = function(v
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.loadBalancerName = function(value) {
 	return this.set('LoadBalancerName', value);
@@ -209,7 +209,7 @@ ElasticLoadBalancingLoadBalancer.prototype.loadBalancerName = function(value) {
  * Update requires: No interruption
  *
  * @param {ElasticLoadBalancingListenerPropertyType[]|Attribute|Reference} value A list of ElasticLoadBalancing Listener Property Type objects.
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.listeners = function(value) {
 	return this.set('Listeners', value);
@@ -222,7 +222,7 @@ ElasticLoadBalancingLoadBalancer.prototype.listeners = function(value) {
  * Update requires: No interruption
  *
  * @param {ElasticLoadBalancingPolicyType[]|Attribute|Reference} value A list of ElasticLoadBalancing policy objects.
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.policies = function(value) {
 	return this.set('Policies', value);
@@ -235,7 +235,7 @@ ElasticLoadBalancingLoadBalancer.prototype.policies = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.scheme = function(value) {
 	return this.set('Scheme', value);
@@ -248,7 +248,7 @@ ElasticLoadBalancingLoadBalancer.prototype.scheme = function(value) {
  * Update requires: No interruption
  *
  * @param {String[]|Attribute|Reference} value A list of security groups assigned to your load balancer within your virtual private cloud (VPC).
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.securityGroups = function(value) {
 	return this.set('SecurityGroups', value);
@@ -260,8 +260,8 @@ ElasticLoadBalancingLoadBalancer.prototype.securityGroups = function(value) {
  * Required: false
  * Update requires: Replacement if you did not have an subnet specified and you are adding one or if you are removing all subnets. Otherwise, update requires no interruption. To update the load balancer to another subnet that is in the same Availability Zone, you must do two updates. You must first update the load balancer to use a subnet in different Availability Zone. After the update is complete, update the load balancer to use the new subnet that is in the original Availability Zone.
  *
- * @param {string[]|Attribute|Reference} value
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.subnets = function(value) {
 	return this.set('Subnets', value);
@@ -274,7 +274,7 @@ ElasticLoadBalancingLoadBalancer.prototype.subnets = function(value) {
  * Update requires: No interruption
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {ElasticLoadBalancingLoadBalancer}
+ * @returns {ElasticLoadBalancingLoadBalancer}
  */
 ElasticLoadBalancingLoadBalancer.prototype.tags = function(value) {
 	return this.set('Tags', value);

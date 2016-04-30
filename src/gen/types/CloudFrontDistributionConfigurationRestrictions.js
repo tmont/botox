@@ -17,7 +17,7 @@ CloudFrontDistributionConfigurationRestrictions.prototype = Object.create(Proper
  * Required: true
  *
  * @param {CloudFrontDistributionConfigRestrictionsGeoRestriction} value
- * @return {CloudFrontDistributionConfigurationRestrictions}
+ * @returns {CloudFrontDistributionConfigurationRestrictions}
  */
 CloudFrontDistributionConfigurationRestrictions.prototype.geoRestriction = function(value) {
 	return this.set('GeoRestriction', value);

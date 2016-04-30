@@ -17,7 +17,7 @@ S3LoggingConfiguration.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {String} value
- * @return {S3LoggingConfiguration}
+ * @returns {S3LoggingConfiguration}
  */
 S3LoggingConfiguration.prototype.destinationBucketName = function(value) {
 	return this.set('DestinationBucketName', value);
@@ -29,7 +29,7 @@ S3LoggingConfiguration.prototype.destinationBucketName = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {S3LoggingConfiguration}
+ * @returns {S3LoggingConfiguration}
  */
 S3LoggingConfiguration.prototype.logFilePrefix = function(value) {
 	return this.set('LogFilePrefix', value);

@@ -17,7 +17,7 @@ GameLiftBuildStorageLocation.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {GameLiftBuildStorageLocation}
+ * @returns {GameLiftBuildStorageLocation}
  */
 GameLiftBuildStorageLocation.prototype.bucket = function(value) {
 	return this.set('Bucket', value);
@@ -29,7 +29,7 @@ GameLiftBuildStorageLocation.prototype.bucket = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {GameLiftBuildStorageLocation}
+ * @returns {GameLiftBuildStorageLocation}
  */
 GameLiftBuildStorageLocation.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -41,7 +41,7 @@ GameLiftBuildStorageLocation.prototype.key = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {GameLiftBuildStorageLocation}
+ * @returns {GameLiftBuildStorageLocation}
  */
 GameLiftBuildStorageLocation.prototype.roleArn = function(value) {
 	return this.set('RoleArn', value);

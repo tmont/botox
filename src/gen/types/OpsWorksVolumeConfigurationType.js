@@ -17,7 +17,7 @@ OpsWorksVolumeConfigurationType.prototype = Object.create(PropertyType.prototype
  * Required: false
  *
  * @param {Number} value
- * @return {OpsWorksVolumeConfigurationType}
+ * @returns {OpsWorksVolumeConfigurationType}
  */
 OpsWorksVolumeConfigurationType.prototype.iops = function(value) {
 	return this.set('Iops', value);
@@ -29,7 +29,7 @@ OpsWorksVolumeConfigurationType.prototype.iops = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {OpsWorksVolumeConfigurationType}
+ * @returns {OpsWorksVolumeConfigurationType}
  */
 OpsWorksVolumeConfigurationType.prototype.mountPoint = function(value) {
 	return this.set('MountPoint', value);
@@ -41,7 +41,7 @@ OpsWorksVolumeConfigurationType.prototype.mountPoint = function(value) {
  * Required: true
  *
  * @param {Number} value
- * @return {OpsWorksVolumeConfigurationType}
+ * @returns {OpsWorksVolumeConfigurationType}
  */
 OpsWorksVolumeConfigurationType.prototype.numberOfDisks = function(value) {
 	return this.set('NumberOfDisks', value);
@@ -53,7 +53,7 @@ OpsWorksVolumeConfigurationType.prototype.numberOfDisks = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {OpsWorksVolumeConfigurationType}
+ * @returns {OpsWorksVolumeConfigurationType}
  */
 OpsWorksVolumeConfigurationType.prototype.raidLevel = function(value) {
 	return this.set('RaidLevel', value);
@@ -65,7 +65,7 @@ OpsWorksVolumeConfigurationType.prototype.raidLevel = function(value) {
  * Required: true
  *
  * @param {Number} value
- * @return {OpsWorksVolumeConfigurationType}
+ * @returns {OpsWorksVolumeConfigurationType}
  */
 OpsWorksVolumeConfigurationType.prototype.size = function(value) {
 	return this.set('Size', value);
@@ -77,7 +77,7 @@ OpsWorksVolumeConfigurationType.prototype.size = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {OpsWorksVolumeConfigurationType}
+ * @returns {OpsWorksVolumeConfigurationType}
  */
 OpsWorksVolumeConfigurationType.prototype.volumeType = function(value) {
 	return this.set('VolumeType', value);

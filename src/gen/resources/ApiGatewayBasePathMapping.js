@@ -19,7 +19,7 @@ ApiGatewayBasePathMapping.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayBasePathMapping}
+ * @returns {ApiGatewayBasePathMapping}
  */
 ApiGatewayBasePathMapping.prototype.basePath = function(value) {
 	return this.set('BasePath', value);
@@ -32,7 +32,7 @@ ApiGatewayBasePathMapping.prototype.basePath = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayBasePathMapping}
+ * @returns {ApiGatewayBasePathMapping}
  */
 ApiGatewayBasePathMapping.prototype.domainName = function(value) {
 	return this.set('DomainName', value);
@@ -45,7 +45,7 @@ ApiGatewayBasePathMapping.prototype.domainName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayBasePathMapping}
+ * @returns {ApiGatewayBasePathMapping}
  */
 ApiGatewayBasePathMapping.prototype.restApiId = function(value) {
 	return this.set('RestApiId', value);
@@ -58,7 +58,7 @@ ApiGatewayBasePathMapping.prototype.restApiId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayBasePathMapping}
+ * @returns {ApiGatewayBasePathMapping}
  */
 ApiGatewayBasePathMapping.prototype.stage = function(value) {
 	return this.set('Stage', value);

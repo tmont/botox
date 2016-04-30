@@ -17,7 +17,7 @@ ElasticLoadBalancingListenerPropertyType.prototype = Object.create(PropertyType.
  * Required: true
  *
  * @param {String} value
- * @return {ElasticLoadBalancingListenerPropertyType}
+ * @returns {ElasticLoadBalancingListenerPropertyType}
  */
 ElasticLoadBalancingListenerPropertyType.prototype.instancePort = function(value) {
 	return this.set('InstancePort', value);
@@ -29,7 +29,7 @@ ElasticLoadBalancingListenerPropertyType.prototype.instancePort = function(value
  * Required: false
  *
  * @param {String} value
- * @return {ElasticLoadBalancingListenerPropertyType}
+ * @returns {ElasticLoadBalancingListenerPropertyType}
  */
 ElasticLoadBalancingListenerPropertyType.prototype.instanceProtocol = function(value) {
 	return this.set('InstanceProtocol', value);
@@ -41,7 +41,7 @@ ElasticLoadBalancingListenerPropertyType.prototype.instanceProtocol = function(v
  * Required: true
  *
  * @param {String} value
- * @return {ElasticLoadBalancingListenerPropertyType}
+ * @returns {ElasticLoadBalancingListenerPropertyType}
  */
 ElasticLoadBalancingListenerPropertyType.prototype.loadBalancerPort = function(value) {
 	return this.set('LoadBalancerPort', value);
@@ -52,8 +52,8 @@ ElasticLoadBalancingListenerPropertyType.prototype.loadBalancerPort = function(v
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {ElasticLoadBalancingListenerPropertyType}
+ * @param {String[]} value
+ * @returns {ElasticLoadBalancingListenerPropertyType}
  */
 ElasticLoadBalancingListenerPropertyType.prototype.policyNames = function(value) {
 	return this.set('PolicyNames', value);
@@ -65,7 +65,7 @@ ElasticLoadBalancingListenerPropertyType.prototype.policyNames = function(value)
  * Required: true
  *
  * @param {String} value
- * @return {ElasticLoadBalancingListenerPropertyType}
+ * @returns {ElasticLoadBalancingListenerPropertyType}
  */
 ElasticLoadBalancingListenerPropertyType.prototype.protocol = function(value) {
 	return this.set('Protocol', value);
@@ -77,7 +77,7 @@ ElasticLoadBalancingListenerPropertyType.prototype.protocol = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {ElasticLoadBalancingListenerPropertyType}
+ * @returns {ElasticLoadBalancingListenerPropertyType}
  */
 ElasticLoadBalancingListenerPropertyType.prototype.sslCertificateId = function(value) {
 	return this.set('SSLCertificateId', value);

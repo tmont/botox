@@ -16,8 +16,8 @@ OpsWorksRecipesType.prototype = Object.create(PropertyType.prototype);
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {OpsWorksRecipesType}
+ * @param {String[]} value
+ * @returns {OpsWorksRecipesType}
  */
 OpsWorksRecipesType.prototype.configure = function(value) {
 	return this.set('Configure', value);
@@ -28,8 +28,8 @@ OpsWorksRecipesType.prototype.configure = function(value) {
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {OpsWorksRecipesType}
+ * @param {String[]} value
+ * @returns {OpsWorksRecipesType}
  */
 OpsWorksRecipesType.prototype.deploy = function(value) {
 	return this.set('Deploy', value);
@@ -40,8 +40,8 @@ OpsWorksRecipesType.prototype.deploy = function(value) {
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {OpsWorksRecipesType}
+ * @param {String[]} value
+ * @returns {OpsWorksRecipesType}
  */
 OpsWorksRecipesType.prototype.setup = function(value) {
 	return this.set('Setup', value);
@@ -52,8 +52,8 @@ OpsWorksRecipesType.prototype.setup = function(value) {
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {OpsWorksRecipesType}
+ * @param {String[]} value
+ * @returns {OpsWorksRecipesType}
  */
 OpsWorksRecipesType.prototype.shutdown = function(value) {
 	return this.set('Shutdown', value);
@@ -64,8 +64,8 @@ OpsWorksRecipesType.prototype.shutdown = function(value) {
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {OpsWorksRecipesType}
+ * @param {String[]} value
+ * @returns {OpsWorksRecipesType}
  */
 OpsWorksRecipesType.prototype.undeploy = function(value) {
 	return this.set('Undeploy', value);

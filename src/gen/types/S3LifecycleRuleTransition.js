@@ -17,7 +17,7 @@ S3LifecycleRuleTransition.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {S3LifecycleRuleTransition}
+ * @returns {S3LifecycleRuleTransition}
  */
 S3LifecycleRuleTransition.prototype.storageClass = function(value) {
 	return this.set('StorageClass', value);
@@ -29,7 +29,7 @@ S3LifecycleRuleTransition.prototype.storageClass = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {S3LifecycleRuleTransition}
+ * @returns {S3LifecycleRuleTransition}
  */
 S3LifecycleRuleTransition.prototype.transitionDate = function(value) {
 	return this.set('TransitionDate', value);
@@ -41,7 +41,7 @@ S3LifecycleRuleTransition.prototype.transitionDate = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {S3LifecycleRuleTransition}
+ * @returns {S3LifecycleRuleTransition}
  */
 S3LifecycleRuleTransition.prototype.transitionInDays = function(value) {
 	return this.set('TransitionInDays', value);

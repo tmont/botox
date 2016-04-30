@@ -19,7 +19,7 @@ EC2RouteTable.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2RouteTable}
+ * @returns {EC2RouteTable}
  */
 EC2RouteTable.prototype.vpcId = function(value) {
 	return this.set('VpcId', value);
@@ -32,7 +32,7 @@ EC2RouteTable.prototype.vpcId = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {EC2RouteTable}
+ * @returns {EC2RouteTable}
  */
 EC2RouteTable.prototype.tags = function(value) {
 	return this.set('Tags', value);

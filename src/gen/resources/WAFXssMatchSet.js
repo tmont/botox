@@ -19,7 +19,7 @@ WAFXssMatchSet.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {WAFXssMatchSet}
+ * @returns {WAFXssMatchSet}
  */
 WAFXssMatchSet.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -32,7 +32,7 @@ WAFXssMatchSet.prototype.name = function(value) {
  * Update requires: No interruption
  *
  * @param {WAFXssMatchSetXssMatchTuple[]|Attribute|Reference} value List of AWS WAF XssMatchSet XssMatchTuple
- * @return {WAFXssMatchSet}
+ * @returns {WAFXssMatchSet}
  */
 WAFXssMatchSet.prototype.xssMatchTuples = function(value) {
 	return this.set('XssMatchTuples', value);

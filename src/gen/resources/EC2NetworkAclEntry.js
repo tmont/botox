@@ -19,7 +19,7 @@ EC2NetworkAclEntry.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2NetworkAclEntry}
+ * @returns {EC2NetworkAclEntry}
  */
 EC2NetworkAclEntry.prototype.cidrBlock = function(value) {
 	return this.set('CidrBlock', value);
@@ -32,7 +32,7 @@ EC2NetworkAclEntry.prototype.cidrBlock = function(value) {
  * Update requires: Replacement.
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {EC2NetworkAclEntry}
+ * @returns {EC2NetworkAclEntry}
  */
 EC2NetworkAclEntry.prototype.egress = function(value) {
 	return this.set('Egress', value);
@@ -45,7 +45,7 @@ EC2NetworkAclEntry.prototype.egress = function(value) {
  * Update requires: No interruption
  *
  * @param {EC2ICMPPropertyType|Attribute|Reference} value EC2 ICMP Property Type
- * @return {EC2NetworkAclEntry}
+ * @returns {EC2NetworkAclEntry}
  */
 EC2NetworkAclEntry.prototype.icmp = function(value) {
 	return this.set('Icmp', value);
@@ -58,7 +58,7 @@ EC2NetworkAclEntry.prototype.icmp = function(value) {
  * Update requires: Replacement.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2NetworkAclEntry}
+ * @returns {EC2NetworkAclEntry}
  */
 EC2NetworkAclEntry.prototype.networkAclId = function(value) {
 	return this.set('NetworkAclId', value);
@@ -71,7 +71,7 @@ EC2NetworkAclEntry.prototype.networkAclId = function(value) {
  * Update requires: No interruption
  *
  * @param {EC2PortRangePropertyType|Attribute|Reference} value EC2 PortRange Property Type
- * @return {EC2NetworkAclEntry}
+ * @returns {EC2NetworkAclEntry}
  */
 EC2NetworkAclEntry.prototype.portRange = function(value) {
 	return this.set('PortRange', value);
@@ -84,7 +84,7 @@ EC2NetworkAclEntry.prototype.portRange = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {EC2NetworkAclEntry}
+ * @returns {EC2NetworkAclEntry}
  */
 EC2NetworkAclEntry.prototype.protocol = function(value) {
 	return this.set('Protocol', value);
@@ -97,7 +97,7 @@ EC2NetworkAclEntry.prototype.protocol = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2NetworkAclEntry}
+ * @returns {EC2NetworkAclEntry}
  */
 EC2NetworkAclEntry.prototype.ruleAction = function(value) {
 	return this.set('RuleAction', value);
@@ -110,7 +110,7 @@ EC2NetworkAclEntry.prototype.ruleAction = function(value) {
  * Update requires: Replacement.
  *
  * @param {Number|Attribute|Reference} value
- * @return {EC2NetworkAclEntry}
+ * @returns {EC2NetworkAclEntry}
  */
 EC2NetworkAclEntry.prototype.ruleNumber = function(value) {
 	return this.set('RuleNumber', value);

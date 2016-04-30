@@ -19,7 +19,7 @@ EC2PlacementGroup.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2PlacementGroup}
+ * @returns {EC2PlacementGroup}
  */
 EC2PlacementGroup.prototype.strategy = function(value) {
 	return this.set('Strategy', value);

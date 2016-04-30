@@ -17,7 +17,7 @@ Route53HealthCheckTags.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {Route53HealthCheckTags}
+ * @returns {Route53HealthCheckTags}
  */
 Route53HealthCheckTags.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -29,7 +29,7 @@ Route53HealthCheckTags.prototype.key = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {Route53HealthCheckTags}
+ * @returns {Route53HealthCheckTags}
  */
 Route53HealthCheckTags.prototype.value = function(value) {
 	return this.set('Value', value);

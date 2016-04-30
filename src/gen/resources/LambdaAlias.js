@@ -19,7 +19,7 @@ LambdaAlias.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaAlias}
+ * @returns {LambdaAlias}
  */
 LambdaAlias.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -32,7 +32,7 @@ LambdaAlias.prototype.description = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaAlias}
+ * @returns {LambdaAlias}
  */
 LambdaAlias.prototype.functionName = function(value) {
 	return this.set('FunctionName', value);
@@ -45,7 +45,7 @@ LambdaAlias.prototype.functionName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaAlias}
+ * @returns {LambdaAlias}
  */
 LambdaAlias.prototype.functionVersion = function(value) {
 	return this.set('FunctionVersion', value);
@@ -58,7 +58,7 @@ LambdaAlias.prototype.functionVersion = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaAlias}
+ * @returns {LambdaAlias}
  */
 LambdaAlias.prototype.name = function(value) {
 	return this.set('Name', value);

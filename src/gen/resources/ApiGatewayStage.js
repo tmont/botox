@@ -19,7 +19,7 @@ ApiGatewayStage.prototype = Object.create(Resource.prototype);
  * Update requires: undefined
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {ApiGatewayStage}
+ * @returns {ApiGatewayStage}
  */
 ApiGatewayStage.prototype.cacheClusterEnabled = function(value) {
 	return this.set('CacheClusterEnabled', value);
@@ -32,7 +32,7 @@ ApiGatewayStage.prototype.cacheClusterEnabled = function(value) {
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayStage}
+ * @returns {ApiGatewayStage}
  */
 ApiGatewayStage.prototype.cacheClusterSize = function(value) {
 	return this.set('CacheClusterSize', value);
@@ -45,7 +45,7 @@ ApiGatewayStage.prototype.cacheClusterSize = function(value) {
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayStage}
+ * @returns {ApiGatewayStage}
  */
 ApiGatewayStage.prototype.clientCertificateId = function(value) {
 	return this.set('ClientCertificateId', value);
@@ -58,7 +58,7 @@ ApiGatewayStage.prototype.clientCertificateId = function(value) {
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayStage}
+ * @returns {ApiGatewayStage}
  */
 ApiGatewayStage.prototype.deploymentId = function(value) {
 	return this.set('DeploymentId', value);
@@ -71,7 +71,7 @@ ApiGatewayStage.prototype.deploymentId = function(value) {
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayStage}
+ * @returns {ApiGatewayStage}
  */
 ApiGatewayStage.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -84,7 +84,7 @@ ApiGatewayStage.prototype.description = function(value) {
  * Update requires: undefined
  *
  * @param {APIGatewayStageMethodSetting|Attribute|Reference} value Amazon API Gateway Stage MethodSetting
- * @return {ApiGatewayStage}
+ * @returns {ApiGatewayStage}
  */
 ApiGatewayStage.prototype.methodSettings = function(value) {
 	return this.set('MethodSettings', value);
@@ -97,7 +97,7 @@ ApiGatewayStage.prototype.methodSettings = function(value) {
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayStage}
+ * @returns {ApiGatewayStage}
  */
 ApiGatewayStage.prototype.restApiId = function(value) {
 	return this.set('RestApiId', value);
@@ -110,7 +110,7 @@ ApiGatewayStage.prototype.restApiId = function(value) {
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayStage}
+ * @returns {ApiGatewayStage}
  */
 ApiGatewayStage.prototype.stageName = function(value) {
 	return this.set('StageName', value);
@@ -123,7 +123,7 @@ ApiGatewayStage.prototype.stageName = function(value) {
  * Update requires: undefined
  *
  * @param {key[]|Attribute|Reference} value List of key-value pairs
- * @return {ApiGatewayStage}
+ * @returns {ApiGatewayStage}
  */
 ApiGatewayStage.prototype.variables = function(value) {
 	return this.set('Variables', value);

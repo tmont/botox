@@ -17,7 +17,7 @@ RDSSecurityGroupRule.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {String} value
- * @return {RDSSecurityGroupRule}
+ * @returns {RDSSecurityGroupRule}
  */
 RDSSecurityGroupRule.prototype.cidrip = function(value) {
 	return this.set('CIDRIP', value);
@@ -29,7 +29,7 @@ RDSSecurityGroupRule.prototype.cidrip = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {RDSSecurityGroupRule}
+ * @returns {RDSSecurityGroupRule}
  */
 RDSSecurityGroupRule.prototype.eC2SecurityGroupId = function(value) {
 	return this.set('EC2SecurityGroupId', value);
@@ -41,7 +41,7 @@ RDSSecurityGroupRule.prototype.eC2SecurityGroupId = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {RDSSecurityGroupRule}
+ * @returns {RDSSecurityGroupRule}
  */
 RDSSecurityGroupRule.prototype.eC2SecurityGroupName = function(value) {
 	return this.set('EC2SecurityGroupName', value);
@@ -53,7 +53,7 @@ RDSSecurityGroupRule.prototype.eC2SecurityGroupName = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {RDSSecurityGroupRule}
+ * @returns {RDSSecurityGroupRule}
  */
 RDSSecurityGroupRule.prototype.eC2SecurityGroupOwnerId = function(value) {
 	return this.set('EC2SecurityGroupOwnerId', value);

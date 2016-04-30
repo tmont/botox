@@ -19,7 +19,7 @@ ApiGatewayResource.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayResource}
+ * @returns {ApiGatewayResource}
  */
 ApiGatewayResource.prototype.parentId = function(value) {
 	return this.set('ParentId', value);
@@ -32,7 +32,7 @@ ApiGatewayResource.prototype.parentId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayResource}
+ * @returns {ApiGatewayResource}
  */
 ApiGatewayResource.prototype.pathPart = function(value) {
 	return this.set('PathPart', value);
@@ -45,7 +45,7 @@ ApiGatewayResource.prototype.pathPart = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayResource}
+ * @returns {ApiGatewayResource}
  */
 ApiGatewayResource.prototype.restApiId = function(value) {
 	return this.set('RestApiId', value);

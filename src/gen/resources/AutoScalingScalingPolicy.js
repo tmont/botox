@@ -19,7 +19,7 @@ AutoScalingScalingPolicy.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingScalingPolicy}
+ * @returns {AutoScalingScalingPolicy}
  */
 AutoScalingScalingPolicy.prototype.adjustmentType = function(value) {
 	return this.set('AdjustmentType', value);
@@ -32,7 +32,7 @@ AutoScalingScalingPolicy.prototype.adjustmentType = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingScalingPolicy}
+ * @returns {AutoScalingScalingPolicy}
  */
 AutoScalingScalingPolicy.prototype.autoScalingGroupName = function(value) {
 	return this.set('AutoScalingGroupName', value);
@@ -45,7 +45,7 @@ AutoScalingScalingPolicy.prototype.autoScalingGroupName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingScalingPolicy}
+ * @returns {AutoScalingScalingPolicy}
  */
 AutoScalingScalingPolicy.prototype.cooldown = function(value) {
 	return this.set('Cooldown', value);
@@ -58,7 +58,7 @@ AutoScalingScalingPolicy.prototype.cooldown = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {AutoScalingScalingPolicy}
+ * @returns {AutoScalingScalingPolicy}
  */
 AutoScalingScalingPolicy.prototype.estimatedInstanceWarmup = function(value) {
 	return this.set('EstimatedInstanceWarmup', value);
@@ -71,7 +71,7 @@ AutoScalingScalingPolicy.prototype.estimatedInstanceWarmup = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingScalingPolicy}
+ * @returns {AutoScalingScalingPolicy}
  */
 AutoScalingScalingPolicy.prototype.metricAggregationType = function(value) {
 	return this.set('MetricAggregationType', value);
@@ -84,7 +84,7 @@ AutoScalingScalingPolicy.prototype.metricAggregationType = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {AutoScalingScalingPolicy}
+ * @returns {AutoScalingScalingPolicy}
  */
 AutoScalingScalingPolicy.prototype.minAdjustmentMagnitude = function(value) {
 	return this.set('MinAdjustmentMagnitude', value);
@@ -97,7 +97,7 @@ AutoScalingScalingPolicy.prototype.minAdjustmentMagnitude = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingScalingPolicy}
+ * @returns {AutoScalingScalingPolicy}
  */
 AutoScalingScalingPolicy.prototype.policyType = function(value) {
 	return this.set('PolicyType', value);
@@ -110,7 +110,7 @@ AutoScalingScalingPolicy.prototype.policyType = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {AutoScalingScalingPolicy}
+ * @returns {AutoScalingScalingPolicy}
  */
 AutoScalingScalingPolicy.prototype.scalingAdjustment = function(value) {
 	return this.set('ScalingAdjustment', value);
@@ -123,7 +123,7 @@ AutoScalingScalingPolicy.prototype.scalingAdjustment = function(value) {
  * Update requires: No interruption
  *
  * @param {AutoScalingScalingPolicyStepAdjustments[]|Attribute|Reference} value List of Auto Scaling ScalingPolicy StepAdjustments
- * @return {AutoScalingScalingPolicy}
+ * @returns {AutoScalingScalingPolicy}
  */
 AutoScalingScalingPolicy.prototype.stepAdjustments = function(value) {
 	return this.set('StepAdjustments', value);

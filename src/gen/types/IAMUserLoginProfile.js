@@ -17,7 +17,7 @@ IAMUserLoginProfile.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {IAMUserLoginProfile}
+ * @returns {IAMUserLoginProfile}
  */
 IAMUserLoginProfile.prototype.password = function(value) {
 	return this.set('Password', value);
@@ -29,7 +29,7 @@ IAMUserLoginProfile.prototype.password = function(value) {
  * Required: false
  *
  * @param {Boolean} value
- * @return {IAMUserLoginProfile}
+ * @returns {IAMUserLoginProfile}
  */
 IAMUserLoginProfile.prototype.passwordResetRequired = function(value) {
 	return this.set('PasswordResetRequired', value);

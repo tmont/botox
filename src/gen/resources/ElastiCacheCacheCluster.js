@@ -22,15 +22,15 @@ ElastiCacheCacheCluster.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(ElastiCacheCacheCluster.prototype, 'attr', {
 	/**
-	 * @return {ElastiCacheCacheClusterAttributeMap}
+	 * @returns {ElastiCacheCacheClusterAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The DNS address of the configuration endpoint for the Memcached cache cluster.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get configurationEndpointAddress() {
 				return createAttribute('ConfigurationEndpoint.Address');
@@ -38,7 +38,7 @@ Object.defineProperty(ElastiCacheCacheCluster.prototype, 'attr', {
 
 			/**
 			 * The port number of the configuration endpoint for the Memcached cache cluster.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get configurationEndpointPort() {
 				return createAttribute('ConfigurationEndpoint.Port');
@@ -46,7 +46,7 @@ Object.defineProperty(ElastiCacheCacheCluster.prototype, 'attr', {
 
 			/**
 			 * The DNS address of the configuration endpoint for the Redis cache cluster.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get redisEndpointAddress() {
 				return createAttribute('RedisEndpoint.Address');
@@ -54,7 +54,7 @@ Object.defineProperty(ElastiCacheCacheCluster.prototype, 'attr', {
 
 			/**
 			 * The port number of the configuration endpoint for the Redis cache cluster.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get redisEndpointPort() {
 				return createAttribute('RedisEndpoint.Port');
@@ -70,7 +70,7 @@ Object.defineProperty(ElastiCacheCacheCluster.prototype, 'attr', {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.autoMinorVersionUpgrade = function(value) {
 	return this.set('AutoMinorVersionUpgrade', value);
@@ -83,7 +83,7 @@ ElastiCacheCacheCluster.prototype.autoMinorVersionUpgrade = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.azMode = function(value) {
 	return this.set('AZMode', value);
@@ -96,7 +96,7 @@ ElastiCacheCacheCluster.prototype.azMode = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.cacheNodeType = function(value) {
 	return this.set('CacheNodeType', value);
@@ -109,7 +109,7 @@ ElastiCacheCacheCluster.prototype.cacheNodeType = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.cacheParameterGroupName = function(value) {
 	return this.set('CacheParameterGroupName', value);
@@ -121,8 +121,8 @@ ElastiCacheCacheCluster.prototype.cacheParameterGroupName = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {ElastiCacheCacheCluster}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.cacheSecurityGroupNames = function(value) {
 	return this.set('CacheSecurityGroupNames', value);
@@ -135,7 +135,7 @@ ElastiCacheCacheCluster.prototype.cacheSecurityGroupNames = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.cacheSubnetGroupName = function(value) {
 	return this.set('CacheSubnetGroupName', value);
@@ -148,7 +148,7 @@ ElastiCacheCacheCluster.prototype.cacheSubnetGroupName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.clusterName = function(value) {
 	return this.set('ClusterName', value);
@@ -161,7 +161,7 @@ ElastiCacheCacheCluster.prototype.clusterName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.engine = function(value) {
 	return this.set('Engine', value);
@@ -174,7 +174,7 @@ ElastiCacheCacheCluster.prototype.engine = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.engineVersion = function(value) {
 	return this.set('EngineVersion', value);
@@ -187,7 +187,7 @@ ElastiCacheCacheCluster.prototype.engineVersion = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.notificationTopicArn = function(value) {
 	return this.set('NotificationTopicArn', value);
@@ -200,7 +200,7 @@ ElastiCacheCacheCluster.prototype.notificationTopicArn = function(value) {
  * Update requires: No interruption. However, if the PreferredAvailabilityZone and PreferredAvailabilityZones properties were not previously specified and you don't specify any new values, an update requires replacement.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.numCacheNodes = function(value) {
 	return this.set('NumCacheNodes', value);
@@ -213,7 +213,7 @@ ElastiCacheCacheCluster.prototype.numCacheNodes = function(value) {
  * Update requires: Replacement
  *
  * @param {Number|Attribute|Reference} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.port = function(value) {
 	return this.set('Port', value);
@@ -226,7 +226,7 @@ ElastiCacheCacheCluster.prototype.port = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.preferredAvailabilityZone = function(value) {
 	return this.set('PreferredAvailabilityZone', value);
@@ -238,8 +238,8 @@ ElastiCacheCacheCluster.prototype.preferredAvailabilityZone = function(value) {
  * Required: false
  * Update requires: undefined
  *
- * @param {string[]|Attribute|Reference} value
- * @return {ElastiCacheCacheCluster}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.preferredAvailabilityZones = function(value) {
 	return this.set('PreferredAvailabilityZones', value);
@@ -252,7 +252,7 @@ ElastiCacheCacheCluster.prototype.preferredAvailabilityZones = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.preferredMaintenanceWindow = function(value) {
 	return this.set('PreferredMaintenanceWindow', value);
@@ -264,8 +264,8 @@ ElastiCacheCacheCluster.prototype.preferredMaintenanceWindow = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {string[]|Attribute|Reference} value
- * @return {ElastiCacheCacheCluster}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.snapshotArns = function(value) {
 	return this.set('SnapshotArns', value);
@@ -278,7 +278,7 @@ ElastiCacheCacheCluster.prototype.snapshotArns = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.snapshotName = function(value) {
 	return this.set('SnapshotName', value);
@@ -291,7 +291,7 @@ ElastiCacheCacheCluster.prototype.snapshotName = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.snapshotRetentionLimit = function(value) {
 	return this.set('SnapshotRetentionLimit', value);
@@ -304,7 +304,7 @@ ElastiCacheCacheCluster.prototype.snapshotRetentionLimit = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.snapshotWindow = function(value) {
 	return this.set('SnapshotWindow', value);
@@ -317,7 +317,7 @@ ElastiCacheCacheCluster.prototype.snapshotWindow = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {ElastiCacheCacheCluster}
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -329,8 +329,8 @@ ElastiCacheCacheCluster.prototype.tags = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {ElastiCacheCacheCluster}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {ElastiCacheCacheCluster}
  */
 ElastiCacheCacheCluster.prototype.vpcSecurityGroupIds = function(value) {
 	return this.set('VpcSecurityGroupIds', value);

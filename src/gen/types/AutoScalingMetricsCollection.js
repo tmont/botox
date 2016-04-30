@@ -17,7 +17,7 @@ AutoScalingMetricsCollection.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {AutoScalingMetricsCollection}
+ * @returns {AutoScalingMetricsCollection}
  */
 AutoScalingMetricsCollection.prototype.granularity = function(value) {
 	return this.set('Granularity', value);
@@ -28,8 +28,8 @@ AutoScalingMetricsCollection.prototype.granularity = function(value) {
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {AutoScalingMetricsCollection}
+ * @param {String[]} value
+ * @returns {AutoScalingMetricsCollection}
  */
 AutoScalingMetricsCollection.prototype.metrics = function(value) {
 	return this.set('Metrics', value);

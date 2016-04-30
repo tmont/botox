@@ -17,7 +17,7 @@ ElasticLoadBalancingConnectionDrainingPolicy.prototype = Object.create(PropertyT
  * Required: true
  *
  * @param {Boolean} value
- * @return {ElasticLoadBalancingConnectionDrainingPolicy}
+ * @returns {ElasticLoadBalancingConnectionDrainingPolicy}
  */
 ElasticLoadBalancingConnectionDrainingPolicy.prototype.enabled = function(value) {
 	return this.set('Enabled', value);
@@ -29,7 +29,7 @@ ElasticLoadBalancingConnectionDrainingPolicy.prototype.enabled = function(value)
  * Required: false
  *
  * @param {Number} value
- * @return {ElasticLoadBalancingConnectionDrainingPolicy}
+ * @returns {ElasticLoadBalancingConnectionDrainingPolicy}
  */
 ElasticLoadBalancingConnectionDrainingPolicy.prototype.timeout = function(value) {
 	return this.set('Timeout', value);

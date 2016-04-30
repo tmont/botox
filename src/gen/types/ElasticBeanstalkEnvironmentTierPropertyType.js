@@ -17,7 +17,7 @@ ElasticBeanstalkEnvironmentTierPropertyType.prototype = Object.create(PropertyTy
  * Required: false
  *
  * @param {String} value
- * @return {ElasticBeanstalkEnvironmentTierPropertyType}
+ * @returns {ElasticBeanstalkEnvironmentTierPropertyType}
  */
 ElasticBeanstalkEnvironmentTierPropertyType.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -29,7 +29,7 @@ ElasticBeanstalkEnvironmentTierPropertyType.prototype.name = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {ElasticBeanstalkEnvironmentTierPropertyType}
+ * @returns {ElasticBeanstalkEnvironmentTierPropertyType}
  */
 ElasticBeanstalkEnvironmentTierPropertyType.prototype.type = function(value) {
 	return this.set('Type', value);
@@ -41,7 +41,7 @@ ElasticBeanstalkEnvironmentTierPropertyType.prototype.type = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {ElasticBeanstalkEnvironmentTierPropertyType}
+ * @returns {ElasticBeanstalkEnvironmentTierPropertyType}
  */
 ElasticBeanstalkEnvironmentTierPropertyType.prototype.version = function(value) {
 	return this.set('Version', value);

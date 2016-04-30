@@ -17,7 +17,7 @@ CodePipelinePipelineStagesActionsActionTypeId.prototype = Object.create(Property
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineStagesActionsActionTypeId}
+ * @returns {CodePipelinePipelineStagesActionsActionTypeId}
  */
 CodePipelinePipelineStagesActionsActionTypeId.prototype.category = function(value) {
 	return this.set('Category', value);
@@ -29,7 +29,7 @@ CodePipelinePipelineStagesActionsActionTypeId.prototype.category = function(valu
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineStagesActionsActionTypeId}
+ * @returns {CodePipelinePipelineStagesActionsActionTypeId}
  */
 CodePipelinePipelineStagesActionsActionTypeId.prototype.owner = function(value) {
 	return this.set('Owner', value);
@@ -41,7 +41,7 @@ CodePipelinePipelineStagesActionsActionTypeId.prototype.owner = function(value) 
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineStagesActionsActionTypeId}
+ * @returns {CodePipelinePipelineStagesActionsActionTypeId}
  */
 CodePipelinePipelineStagesActionsActionTypeId.prototype.provider = function(value) {
 	return this.set('Provider', value);
@@ -53,7 +53,7 @@ CodePipelinePipelineStagesActionsActionTypeId.prototype.provider = function(valu
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineStagesActionsActionTypeId}
+ * @returns {CodePipelinePipelineStagesActionsActionTypeId}
  */
 CodePipelinePipelineStagesActionsActionTypeId.prototype.version = function(value) {
 	return this.set('Version', value);

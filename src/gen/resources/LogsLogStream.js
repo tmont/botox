@@ -19,7 +19,7 @@ LogsLogStream.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LogsLogStream}
+ * @returns {LogsLogStream}
  */
 LogsLogStream.prototype.logGroupName = function(value) {
 	return this.set('LogGroupName', value);
@@ -32,7 +32,7 @@ LogsLogStream.prototype.logGroupName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LogsLogStream}
+ * @returns {LogsLogStream}
  */
 LogsLogStream.prototype.logStreamName = function(value) {
 	return this.set('LogStreamName', value);

@@ -17,7 +17,7 @@ ElasticBeanstalkSourceBundlePropertyType.prototype = Object.create(PropertyType.
  * Required: true
  *
  * @param {String} value
- * @return {ElasticBeanstalkSourceBundlePropertyType}
+ * @returns {ElasticBeanstalkSourceBundlePropertyType}
  */
 ElasticBeanstalkSourceBundlePropertyType.prototype.s3Bucket = function(value) {
 	return this.set('S3Bucket', value);
@@ -29,7 +29,7 @@ ElasticBeanstalkSourceBundlePropertyType.prototype.s3Bucket = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {ElasticBeanstalkSourceBundlePropertyType}
+ * @returns {ElasticBeanstalkSourceBundlePropertyType}
  */
 ElasticBeanstalkSourceBundlePropertyType.prototype.s3Key = function(value) {
 	return this.set('S3Key', value);

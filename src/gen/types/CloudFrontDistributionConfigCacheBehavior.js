@@ -16,8 +16,8 @@ CloudFrontDistributionConfigCacheBehavior.prototype = Object.create(PropertyType
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {CloudFrontDistributionConfigCacheBehavior}
+ * @param {String[]} value
+ * @returns {CloudFrontDistributionConfigCacheBehavior}
  */
 CloudFrontDistributionConfigCacheBehavior.prototype.allowedMethods = function(value) {
 	return this.set('AllowedMethods', value);
@@ -28,8 +28,8 @@ CloudFrontDistributionConfigCacheBehavior.prototype.allowedMethods = function(va
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {CloudFrontDistributionConfigCacheBehavior}
+ * @param {String[]} value
+ * @returns {CloudFrontDistributionConfigCacheBehavior}
  */
 CloudFrontDistributionConfigCacheBehavior.prototype.cachedMethods = function(value) {
 	return this.set('CachedMethods', value);
@@ -41,7 +41,7 @@ CloudFrontDistributionConfigCacheBehavior.prototype.cachedMethods = function(val
  * Required: false
  *
  * @param {Boolean} value
- * @return {CloudFrontDistributionConfigCacheBehavior}
+ * @returns {CloudFrontDistributionConfigCacheBehavior}
  */
 CloudFrontDistributionConfigCacheBehavior.prototype.compress = function(value) {
 	return this.set('Compress', value);
@@ -53,7 +53,7 @@ CloudFrontDistributionConfigCacheBehavior.prototype.compress = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {CloudFrontDistributionConfigCacheBehavior}
+ * @returns {CloudFrontDistributionConfigCacheBehavior}
  */
 CloudFrontDistributionConfigCacheBehavior.prototype.defaultTTL = function(value) {
 	return this.set('DefaultTTL', value);
@@ -65,7 +65,7 @@ CloudFrontDistributionConfigCacheBehavior.prototype.defaultTTL = function(value)
  * Required: true
  *
  * @param {CloudFrontForwardedValues} value
- * @return {CloudFrontDistributionConfigCacheBehavior}
+ * @returns {CloudFrontDistributionConfigCacheBehavior}
  */
 CloudFrontDistributionConfigCacheBehavior.prototype.forwardedValues = function(value) {
 	return this.set('ForwardedValues', value);
@@ -77,7 +77,7 @@ CloudFrontDistributionConfigCacheBehavior.prototype.forwardedValues = function(v
  * Required: false
  *
  * @param {Number} value
- * @return {CloudFrontDistributionConfigCacheBehavior}
+ * @returns {CloudFrontDistributionConfigCacheBehavior}
  */
 CloudFrontDistributionConfigCacheBehavior.prototype.maxTTL = function(value) {
 	return this.set('MaxTTL', value);
@@ -89,7 +89,7 @@ CloudFrontDistributionConfigCacheBehavior.prototype.maxTTL = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {CloudFrontDistributionConfigCacheBehavior}
+ * @returns {CloudFrontDistributionConfigCacheBehavior}
  */
 CloudFrontDistributionConfigCacheBehavior.prototype.minTTL = function(value) {
 	return this.set('MinTTL', value);
@@ -101,7 +101,7 @@ CloudFrontDistributionConfigCacheBehavior.prototype.minTTL = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigCacheBehavior}
+ * @returns {CloudFrontDistributionConfigCacheBehavior}
  */
 CloudFrontDistributionConfigCacheBehavior.prototype.pathPattern = function(value) {
 	return this.set('PathPattern', value);
@@ -113,7 +113,7 @@ CloudFrontDistributionConfigCacheBehavior.prototype.pathPattern = function(value
  * Required: false
  *
  * @param {Boolean} value
- * @return {CloudFrontDistributionConfigCacheBehavior}
+ * @returns {CloudFrontDistributionConfigCacheBehavior}
  */
 CloudFrontDistributionConfigCacheBehavior.prototype.smoothStreaming = function(value) {
 	return this.set('SmoothStreaming', value);
@@ -125,7 +125,7 @@ CloudFrontDistributionConfigCacheBehavior.prototype.smoothStreaming = function(v
  * Required: true
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigCacheBehavior}
+ * @returns {CloudFrontDistributionConfigCacheBehavior}
  */
 CloudFrontDistributionConfigCacheBehavior.prototype.targetOriginId = function(value) {
 	return this.set('TargetOriginId', value);
@@ -136,8 +136,8 @@ CloudFrontDistributionConfigCacheBehavior.prototype.targetOriginId = function(va
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {CloudFrontDistributionConfigCacheBehavior}
+ * @param {String[]} value
+ * @returns {CloudFrontDistributionConfigCacheBehavior}
  */
 CloudFrontDistributionConfigCacheBehavior.prototype.trustedSigners = function(value) {
 	return this.set('TrustedSigners', value);
@@ -149,7 +149,7 @@ CloudFrontDistributionConfigCacheBehavior.prototype.trustedSigners = function(va
  * Required: true
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigCacheBehavior}
+ * @returns {CloudFrontDistributionConfigCacheBehavior}
  */
 CloudFrontDistributionConfigCacheBehavior.prototype.viewerProtocolPolicy = function(value) {
 	return this.set('ViewerProtocolPolicy', value);

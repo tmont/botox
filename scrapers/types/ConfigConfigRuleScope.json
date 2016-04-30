@@ -14,7 +14,7 @@
       "description": "The types of AWS resources that you want AWS Config to evaluate against the rule. If you specify the ComplianceResourceId property, specify only one resource type.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "TagKey",

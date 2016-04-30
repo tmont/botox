@@ -17,7 +17,7 @@ CodeDeployDeploymentGroupDeploymentRevision.prototype = Object.create(PropertyTy
  * Required: false
  *
  * @param {CodeDeployDeploymentGroupDeploymentRevisionGitHubLocation} value
- * @return {CodeDeployDeploymentGroupDeploymentRevision}
+ * @returns {CodeDeployDeploymentGroupDeploymentRevision}
  */
 CodeDeployDeploymentGroupDeploymentRevision.prototype.gitHubLocation = function(value) {
 	return this.set('GitHubLocation', value);
@@ -29,7 +29,7 @@ CodeDeployDeploymentGroupDeploymentRevision.prototype.gitHubLocation = function(
  * Required: false
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupDeploymentRevision}
+ * @returns {CodeDeployDeploymentGroupDeploymentRevision}
  */
 CodeDeployDeploymentGroupDeploymentRevision.prototype.revisionType = function(value) {
 	return this.set('RevisionType', value);
@@ -41,7 +41,7 @@ CodeDeployDeploymentGroupDeploymentRevision.prototype.revisionType = function(va
  * Required: false
  *
  * @param {CodeDeployDeploymentGroupDeploymentRevisionS3Location} value
- * @return {CodeDeployDeploymentGroupDeploymentRevision}
+ * @returns {CodeDeployDeploymentGroupDeploymentRevision}
  */
 CodeDeployDeploymentGroupDeploymentRevision.prototype.s3Location = function(value) {
 	return this.set('S3Location', value);

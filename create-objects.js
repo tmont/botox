@@ -52,7 +52,7 @@ function addSugarToIndex(things, type, trailingComma, callback) {
 		return `
 	/**
 	 * ${thing.description}
-${paramComment}\t * @return {${thing.className}}
+${paramComment}\t * @returns {${thing.className}}
 	 */
 	${thing.prop}: function(${params}) {
 		return new ${thing.jsClassName}(${params});
@@ -101,7 +101,7 @@ function createResources(next) {
 			const propertyPrefix = `${className}.prototype`;
 
 			const methods = json.properties.map((prop) => {
-				const types = [prop.type, 'Attribute', 'Reference'];
+				const types = [ prop.type, 'Attribute', 'Reference'].filter(Boolean);
 				if (prop.type === 'String') {
 					types.push('Join');
 				}
@@ -118,7 +118,7 @@ function createResources(next) {
  * Update requires: ${prop.update}
  *
  * @param {${types.join('|')}} value${typeDesc}
- * @return {${className}}
+ * @returns {${className}}
  */
 ${propertyPrefix}.${camelize(prop.name)} = function(value) {
 	return this.set('${prop.name}', value);
@@ -136,7 +136,7 @@ ${propertyPrefix}.${camelize(prop.name)} = function(value) {
 					return `
 			/**
 			 * ${attr.description}
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get ${propName}() {
 				return createAttribute('${attr.name}');
@@ -154,12 +154,12 @@ ${attrTypeDefs.join('\n')}
  */
 Object.defineProperty(${propertyPrefix}, 'attr', {
 	/**
-	 * @return {${className}AttributeMap}
+	 * @returns {${className}AttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			${attributes}
+${attributes}
 		};
 	}
 });`;
@@ -318,7 +318,7 @@ function createTypes(next) {
  * Required: ${prop.required}
  *
  * @param {${prop.type}} value
- * @return {${className}}
+ * @returns {${className}}
  */
 ${className}.prototype.${camelize(prop.name)} = function(value) {
 	return this.set('${prop.name}', value);
@@ -365,7 +365,8 @@ module.exports = ${className};
 
 		const code = `module.exports = {
 	${typeProps}
-};`;
+};
+`;
 
 		console.log(`  writing to ${indexFile}`);
 		fs.writeFile(indexFile, code, next);
@@ -426,7 +427,7 @@ function createAttributes(next) {
  * Required: ${prop.required}
  *
  * @param {${prop.type}} value
- * @return {${className}}
+ * @returns {${className}}
  */
 ${className}.prototype.${camelize(prop.name)} = function(value) {
 	return this.set('${prop.propertyType}', '${prop.name}', value);
@@ -473,7 +474,8 @@ module.exports = ${className};
 
 		const code = `module.exports = {
 	${typeProps}
-};`;
+};
+`;
 
 		console.log(`  writing to ${indexFile}`);
 		fs.writeFile(indexFile, code, next);

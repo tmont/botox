@@ -10,7 +10,7 @@
       "description": "A name of a group to which you want to add the user.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {
@@ -26,7 +26,7 @@
       "description": "One or more managed policy ARNs to attach to this user.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {

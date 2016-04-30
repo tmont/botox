@@ -17,7 +17,7 @@ OpsWorksChefConfigurationType.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {String} value
- * @return {OpsWorksChefConfigurationType}
+ * @returns {OpsWorksChefConfigurationType}
  */
 OpsWorksChefConfigurationType.prototype.berkshelfVersion = function(value) {
 	return this.set('BerkshelfVersion', value);
@@ -29,7 +29,7 @@ OpsWorksChefConfigurationType.prototype.berkshelfVersion = function(value) {
  * Required: false
  *
  * @param {Boolean} value
- * @return {OpsWorksChefConfigurationType}
+ * @returns {OpsWorksChefConfigurationType}
  */
 OpsWorksChefConfigurationType.prototype.manageBerkshelf = function(value) {
 	return this.set('ManageBerkshelf', value);

@@ -19,7 +19,7 @@ AutoScalingScheduledAction.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingScheduledAction}
+ * @returns {AutoScalingScheduledAction}
  */
 AutoScalingScheduledAction.prototype.autoScalingGroupName = function(value) {
 	return this.set('AutoScalingGroupName', value);
@@ -32,7 +32,7 @@ AutoScalingScheduledAction.prototype.autoScalingGroupName = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {AutoScalingScheduledAction}
+ * @returns {AutoScalingScheduledAction}
  */
 AutoScalingScheduledAction.prototype.desiredCapacity = function(value) {
 	return this.set('DesiredCapacity', value);
@@ -45,7 +45,7 @@ AutoScalingScheduledAction.prototype.desiredCapacity = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingScheduledAction}
+ * @returns {AutoScalingScheduledAction}
  */
 AutoScalingScheduledAction.prototype.endTime = function(value) {
 	return this.set('EndTime', value);
@@ -58,7 +58,7 @@ AutoScalingScheduledAction.prototype.endTime = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {AutoScalingScheduledAction}
+ * @returns {AutoScalingScheduledAction}
  */
 AutoScalingScheduledAction.prototype.maxSize = function(value) {
 	return this.set('MaxSize', value);
@@ -71,7 +71,7 @@ AutoScalingScheduledAction.prototype.maxSize = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {AutoScalingScheduledAction}
+ * @returns {AutoScalingScheduledAction}
  */
 AutoScalingScheduledAction.prototype.minSize = function(value) {
 	return this.set('MinSize', value);
@@ -84,7 +84,7 @@ AutoScalingScheduledAction.prototype.minSize = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingScheduledAction}
+ * @returns {AutoScalingScheduledAction}
  */
 AutoScalingScheduledAction.prototype.recurrence = function(value) {
 	return this.set('Recurrence', value);
@@ -97,7 +97,7 @@ AutoScalingScheduledAction.prototype.recurrence = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingScheduledAction}
+ * @returns {AutoScalingScheduledAction}
  */
 AutoScalingScheduledAction.prototype.startTime = function(value) {
 	return this.set('StartTime', value);

@@ -17,7 +17,7 @@ UpdatePolicy.prototype = Object.create(ResourceAttribute.prototype);
  * Required: false
  *
  * @param {Number} value
- * @return {UpdatePolicy}
+ * @returns {UpdatePolicy}
  */
 UpdatePolicy.prototype.maxBatchSize = function(value) {
 	return this.set('AutoScalingRollingUpdate', 'MaxBatchSize', value);
@@ -29,7 +29,7 @@ UpdatePolicy.prototype.maxBatchSize = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {UpdatePolicy}
+ * @returns {UpdatePolicy}
  */
 UpdatePolicy.prototype.minInstancesInService = function(value) {
 	return this.set('AutoScalingRollingUpdate', 'MinInstancesInService', value);
@@ -41,7 +41,7 @@ UpdatePolicy.prototype.minInstancesInService = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {UpdatePolicy}
+ * @returns {UpdatePolicy}
  */
 UpdatePolicy.prototype.minSuccessfulInstancesPercent = function(value) {
 	return this.set('AutoScalingRollingUpdate', 'MinSuccessfulInstancesPercent', value);
@@ -53,7 +53,7 @@ UpdatePolicy.prototype.minSuccessfulInstancesPercent = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {UpdatePolicy}
+ * @returns {UpdatePolicy}
  */
 UpdatePolicy.prototype.pauseTime = function(value) {
 	return this.set('AutoScalingRollingUpdate', 'PauseTime', value);
@@ -65,7 +65,7 @@ UpdatePolicy.prototype.pauseTime = function(value) {
  * Required: false
  *
  * @param {String[]} value
- * @return {UpdatePolicy}
+ * @returns {UpdatePolicy}
  */
 UpdatePolicy.prototype.suspendProcesses = function(value) {
 	return this.set('AutoScalingRollingUpdate', 'SuspendProcesses', value);
@@ -77,7 +77,7 @@ UpdatePolicy.prototype.suspendProcesses = function(value) {
  * Required: false
  *
  * @param {Boolean} value
- * @return {UpdatePolicy}
+ * @returns {UpdatePolicy}
  */
 UpdatePolicy.prototype.waitOnResourceSignals = function(value) {
 	return this.set('AutoScalingRollingUpdate', 'WaitOnResourceSignals', value);
@@ -89,7 +89,7 @@ UpdatePolicy.prototype.waitOnResourceSignals = function(value) {
  * Required: false
  *
  * @param {Boolean} value
- * @return {UpdatePolicy}
+ * @returns {UpdatePolicy}
  */
 UpdatePolicy.prototype.ignoreUnmodifiedGroupSizeProperties = function(value) {
 	return this.set('AutoScalingScheduledAction', 'IgnoreUnmodifiedGroupSizeProperties', value);

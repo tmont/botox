@@ -17,7 +17,7 @@ SimpleStorageServiceNotificationConfigurationLambdaConfigurations.prototype = Ob
  * Required: true
  *
  * @param {String} value
- * @return {SimpleStorageServiceNotificationConfigurationLambdaConfigurations}
+ * @returns {SimpleStorageServiceNotificationConfigurationLambdaConfigurations}
  */
 SimpleStorageServiceNotificationConfigurationLambdaConfigurations.prototype.event = function(value) {
 	return this.set('Event', value);
@@ -29,7 +29,7 @@ SimpleStorageServiceNotificationConfigurationLambdaConfigurations.prototype.even
  * Required: false
  *
  * @param {S3NotificationConfigurationConfigFilter} value
- * @return {SimpleStorageServiceNotificationConfigurationLambdaConfigurations}
+ * @returns {SimpleStorageServiceNotificationConfigurationLambdaConfigurations}
  */
 SimpleStorageServiceNotificationConfigurationLambdaConfigurations.prototype.filter = function(value) {
 	return this.set('Filter', value);
@@ -41,7 +41,7 @@ SimpleStorageServiceNotificationConfigurationLambdaConfigurations.prototype.filt
  * Required: true
  *
  * @param {String} value
- * @return {SimpleStorageServiceNotificationConfigurationLambdaConfigurations}
+ * @returns {SimpleStorageServiceNotificationConfigurationLambdaConfigurations}
  */
 SimpleStorageServiceNotificationConfigurationLambdaConfigurations.prototype.function = function(value) {
 	return this.set('Function', value);

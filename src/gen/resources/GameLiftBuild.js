@@ -19,7 +19,7 @@ GameLiftBuild.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {GameLiftBuild}
+ * @returns {GameLiftBuild}
  */
 GameLiftBuild.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -32,7 +32,7 @@ GameLiftBuild.prototype.name = function(value) {
  * Update requires: Replacement
  *
  * @param {GameLiftBuildStorageLocation|Attribute|Reference} value Amazon GameLift Build StorageLocation
- * @return {GameLiftBuild}
+ * @returns {GameLiftBuild}
  */
 GameLiftBuild.prototype.storageLocation = function(value) {
 	return this.set('StorageLocation', value);
@@ -45,7 +45,7 @@ GameLiftBuild.prototype.storageLocation = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {GameLiftBuild}
+ * @returns {GameLiftBuild}
  */
 GameLiftBuild.prototype.version = function(value) {
 	return this.set('Version', value);

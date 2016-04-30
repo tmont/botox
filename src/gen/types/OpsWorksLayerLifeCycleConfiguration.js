@@ -17,7 +17,7 @@ OpsWorksLayerLifeCycleConfiguration.prototype = Object.create(PropertyType.proto
  * Required: false
  *
  * @param {OpsWorksLayerLifeCycleConfigurationShutdownEventConfiguration} value
- * @return {OpsWorksLayerLifeCycleConfiguration}
+ * @returns {OpsWorksLayerLifeCycleConfiguration}
  */
 OpsWorksLayerLifeCycleConfiguration.prototype.shutdownEventConfiguration = function(value) {
 	return this.set('ShutdownEventConfiguration', value);

@@ -17,7 +17,7 @@ S3ReplicationConfiguration.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {S3ReplicationConfiguration}
+ * @returns {S3ReplicationConfiguration}
  */
 S3ReplicationConfiguration.prototype.role = function(value) {
 	return this.set('Role', value);
@@ -29,7 +29,7 @@ S3ReplicationConfiguration.prototype.role = function(value) {
  * Required: true
  *
  * @param {S3ReplicationConfigurationRules[]} value
- * @return {S3ReplicationConfiguration}
+ * @returns {S3ReplicationConfiguration}
  */
 S3ReplicationConfiguration.prototype.rules = function(value) {
 	return this.set('Rules', value);

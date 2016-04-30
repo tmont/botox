@@ -19,7 +19,7 @@ KMSKey.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {KMSKey}
+ * @returns {KMSKey}
  */
 KMSKey.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -32,7 +32,7 @@ KMSKey.prototype.description = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {KMSKey}
+ * @returns {KMSKey}
  */
 KMSKey.prototype.enabled = function(value) {
 	return this.set('Enabled', value);
@@ -45,7 +45,7 @@ KMSKey.prototype.enabled = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {KMSKey}
+ * @returns {KMSKey}
  */
 KMSKey.prototype.enableKeyRotation = function(value) {
 	return this.set('EnableKeyRotation', value);
@@ -58,7 +58,7 @@ KMSKey.prototype.enableKeyRotation = function(value) {
  * Update requires: No interruption
  *
  * @param {Object|Attribute|Reference} value
- * @return {KMSKey}
+ * @returns {KMSKey}
  */
 KMSKey.prototype.keyPolicy = function(value) {
 	return this.set('KeyPolicy', value);

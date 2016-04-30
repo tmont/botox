@@ -17,7 +17,7 @@ OpsWorksLoadBasedAutoScalingType.prototype = Object.create(PropertyType.prototyp
  * Required: false
  *
  * @param {OpsWorksAutoScalingThresholdsType} value
- * @return {OpsWorksLoadBasedAutoScalingType}
+ * @returns {OpsWorksLoadBasedAutoScalingType}
  */
 OpsWorksLoadBasedAutoScalingType.prototype.downScaling = function(value) {
 	return this.set('DownScaling', value);
@@ -29,7 +29,7 @@ OpsWorksLoadBasedAutoScalingType.prototype.downScaling = function(value) {
  * Required: false
  *
  * @param {Boolean} value
- * @return {OpsWorksLoadBasedAutoScalingType}
+ * @returns {OpsWorksLoadBasedAutoScalingType}
  */
 OpsWorksLoadBasedAutoScalingType.prototype.enable = function(value) {
 	return this.set('Enable', value);
@@ -41,7 +41,7 @@ OpsWorksLoadBasedAutoScalingType.prototype.enable = function(value) {
  * Required: false
  *
  * @param {OpsWorksAutoScalingThresholdsType} value
- * @return {OpsWorksLoadBasedAutoScalingType}
+ * @returns {OpsWorksLoadBasedAutoScalingType}
  */
 OpsWorksLoadBasedAutoScalingType.prototype.upScaling = function(value) {
 	return this.set('UpScaling', value);

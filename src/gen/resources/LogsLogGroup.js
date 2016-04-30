@@ -19,15 +19,15 @@ LogsLogGroup.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(LogsLogGroup.prototype, 'attr', {
 	/**
-	 * @return {LogsLogGroupAttributeMap}
+	 * @returns {LogsLogGroupAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The Amazon resource name (ARN) of the CloudWatch Logs log group, such as arn:aws:logs:us-east-1:123456789012:log-group:/mystack-testgroup-12ABC1AB12A1:*.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get arn() {
 				return createAttribute('Arn');
@@ -43,7 +43,7 @@ Object.defineProperty(LogsLogGroup.prototype, 'attr', {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {LogsLogGroup}
+ * @returns {LogsLogGroup}
  */
 LogsLogGroup.prototype.retentionInDays = function(value) {
 	return this.set('RetentionInDays', value);

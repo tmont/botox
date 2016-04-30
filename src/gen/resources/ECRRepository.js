@@ -19,7 +19,7 @@ ECRRepository.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ECRRepository}
+ * @returns {ECRRepository}
  */
 ECRRepository.prototype.repositoryName = function(value) {
 	return this.set('RepositoryName', value);
@@ -32,7 +32,7 @@ ECRRepository.prototype.repositoryName = function(value) {
  * Update requires: No interruption
  *
  * @param {Object|Attribute|Reference} value
- * @return {ECRRepository}
+ * @returns {ECRRepository}
  */
 ECRRepository.prototype.repositoryPolicyText = function(value) {
 	return this.set('RepositoryPolicyText', value);

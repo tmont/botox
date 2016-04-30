@@ -19,7 +19,7 @@ EC2Host.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Host}
+ * @returns {EC2Host}
  */
 EC2Host.prototype.autoPlacement = function(value) {
 	return this.set('AutoPlacement', value);
@@ -32,7 +32,7 @@ EC2Host.prototype.autoPlacement = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Host}
+ * @returns {EC2Host}
  */
 EC2Host.prototype.availabilityZone = function(value) {
 	return this.set('AvailabilityZone', value);
@@ -45,7 +45,7 @@ EC2Host.prototype.availabilityZone = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Host}
+ * @returns {EC2Host}
  */
 EC2Host.prototype.instanceType = function(value) {
 	return this.set('InstanceType', value);

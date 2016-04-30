@@ -17,7 +17,7 @@ CloudFrontDistributionConfigOrigin.prototype = Object.create(PropertyType.protot
  * Required: false
  *
  * @param {CloudFrontDistributionConfigOriginCustomOrigin} value
- * @return {CloudFrontDistributionConfigOrigin}
+ * @returns {CloudFrontDistributionConfigOrigin}
  */
 CloudFrontDistributionConfigOrigin.prototype.customOriginConfig = function(value) {
 	return this.set('CustomOriginConfig', value);
@@ -29,7 +29,7 @@ CloudFrontDistributionConfigOrigin.prototype.customOriginConfig = function(value
  * Required: true
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigOrigin}
+ * @returns {CloudFrontDistributionConfigOrigin}
  */
 CloudFrontDistributionConfigOrigin.prototype.domainName = function(value) {
 	return this.set('DomainName', value);
@@ -41,7 +41,7 @@ CloudFrontDistributionConfigOrigin.prototype.domainName = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigOrigin}
+ * @returns {CloudFrontDistributionConfigOrigin}
  */
 CloudFrontDistributionConfigOrigin.prototype.id = function(value) {
 	return this.set('Id', value);
@@ -53,7 +53,7 @@ CloudFrontDistributionConfigOrigin.prototype.id = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigOrigin}
+ * @returns {CloudFrontDistributionConfigOrigin}
  */
 CloudFrontDistributionConfigOrigin.prototype.originPath = function(value) {
 	return this.set('OriginPath', value);
@@ -65,7 +65,7 @@ CloudFrontDistributionConfigOrigin.prototype.originPath = function(value) {
  * Required: false
  *
  * @param {CloudFrontDistributionConfigOriginS3Origin} value
- * @return {CloudFrontDistributionConfigOrigin}
+ * @returns {CloudFrontDistributionConfigOrigin}
  */
 CloudFrontDistributionConfigOrigin.prototype.s3OriginConfig = function(value) {
 	return this.set('S3OriginConfig', value);

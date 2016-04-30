@@ -17,7 +17,7 @@ IAMPolicies.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {Object} value
- * @return {IAMPolicies}
+ * @returns {IAMPolicies}
  */
 IAMPolicies.prototype.policyDocument = function(value) {
 	return this.set('PolicyDocument', value);
@@ -29,7 +29,7 @@ IAMPolicies.prototype.policyDocument = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {IAMPolicies}
+ * @returns {IAMPolicies}
  */
 IAMPolicies.prototype.policyName = function(value) {
 	return this.set('PolicyName', value);

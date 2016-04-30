@@ -19,7 +19,7 @@ RDSDBCluster.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.availabilityZones = function(value) {
 	return this.set('AvailabilityZones', value);
@@ -32,7 +32,7 @@ RDSDBCluster.prototype.availabilityZones = function(value) {
  * Update requires: No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference.
  *
  * @param {Number|Attribute|Reference} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.backupRetentionPeriod = function(value) {
 	return this.set('BackupRetentionPeriod', value);
@@ -45,7 +45,7 @@ RDSDBCluster.prototype.backupRetentionPeriod = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.databaseName = function(value) {
 	return this.set('DatabaseName', value);
@@ -58,7 +58,7 @@ RDSDBCluster.prototype.databaseName = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.dbClusterParameterGroupName = function(value) {
 	return this.set('DBClusterParameterGroupName', value);
@@ -71,7 +71,7 @@ RDSDBCluster.prototype.dbClusterParameterGroupName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.dbSubnetGroupName = function(value) {
 	return this.set('DBSubnetGroupName', value);
@@ -84,7 +84,7 @@ RDSDBCluster.prototype.dbSubnetGroupName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.engine = function(value) {
 	return this.set('Engine', value);
@@ -97,7 +97,7 @@ RDSDBCluster.prototype.engine = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.engineVersion = function(value) {
 	return this.set('EngineVersion', value);
@@ -110,7 +110,7 @@ RDSDBCluster.prototype.engineVersion = function(value) {
  * Update requires: Replacement.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.kmsKeyId = function(value) {
 	return this.set('KmsKeyId', value);
@@ -123,7 +123,7 @@ RDSDBCluster.prototype.kmsKeyId = function(value) {
  * Update requires: Replacement.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.masterUsername = function(value) {
 	return this.set('MasterUsername', value);
@@ -136,7 +136,7 @@ RDSDBCluster.prototype.masterUsername = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.masterUserPassword = function(value) {
 	return this.set('MasterUserPassword', value);
@@ -149,7 +149,7 @@ RDSDBCluster.prototype.masterUserPassword = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.port = function(value) {
 	return this.set('Port', value);
@@ -162,7 +162,7 @@ RDSDBCluster.prototype.port = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.preferredBackupWindow = function(value) {
 	return this.set('PreferredBackupWindow', value);
@@ -175,7 +175,7 @@ RDSDBCluster.prototype.preferredBackupWindow = function(value) {
  * Update requires: No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.preferredMaintenanceWindow = function(value) {
 	return this.set('PreferredMaintenanceWindow', value);
@@ -188,7 +188,7 @@ RDSDBCluster.prototype.preferredMaintenanceWindow = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.snapshotIdentifier = function(value) {
 	return this.set('SnapshotIdentifier', value);
@@ -201,7 +201,7 @@ RDSDBCluster.prototype.snapshotIdentifier = function(value) {
  * Update requires: Replacement.
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.storageEncrypted = function(value) {
 	return this.set('StorageEncrypted', value);
@@ -214,7 +214,7 @@ RDSDBCluster.prototype.storageEncrypted = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value A list of resource tags
- * @return {RDSDBCluster}
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -226,8 +226,8 @@ RDSDBCluster.prototype.tags = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {RDSDBCluster}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {RDSDBCluster}
  */
 RDSDBCluster.prototype.vpcSecurityGroupIds = function(value) {
 	return this.set('VpcSecurityGroupIds', value);

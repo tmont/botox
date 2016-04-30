@@ -17,7 +17,7 @@ OpsWorksAutoScalingThresholdsType.prototype = Object.create(PropertyType.prototy
  * Required: false
  *
  * @param {Number} value
- * @return {OpsWorksAutoScalingThresholdsType}
+ * @returns {OpsWorksAutoScalingThresholdsType}
  */
 OpsWorksAutoScalingThresholdsType.prototype.cpuThreshold = function(value) {
 	return this.set('CpuThreshold', value);
@@ -29,7 +29,7 @@ OpsWorksAutoScalingThresholdsType.prototype.cpuThreshold = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {OpsWorksAutoScalingThresholdsType}
+ * @returns {OpsWorksAutoScalingThresholdsType}
  */
 OpsWorksAutoScalingThresholdsType.prototype.ignoreMetricsTime = function(value) {
 	return this.set('IgnoreMetricsTime', value);
@@ -41,7 +41,7 @@ OpsWorksAutoScalingThresholdsType.prototype.ignoreMetricsTime = function(value) 
  * Required: false
  *
  * @param {Number} value
- * @return {OpsWorksAutoScalingThresholdsType}
+ * @returns {OpsWorksAutoScalingThresholdsType}
  */
 OpsWorksAutoScalingThresholdsType.prototype.instanceCount = function(value) {
 	return this.set('InstanceCount', value);
@@ -53,7 +53,7 @@ OpsWorksAutoScalingThresholdsType.prototype.instanceCount = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {OpsWorksAutoScalingThresholdsType}
+ * @returns {OpsWorksAutoScalingThresholdsType}
  */
 OpsWorksAutoScalingThresholdsType.prototype.loadThreshold = function(value) {
 	return this.set('LoadThreshold', value);
@@ -65,7 +65,7 @@ OpsWorksAutoScalingThresholdsType.prototype.loadThreshold = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {OpsWorksAutoScalingThresholdsType}
+ * @returns {OpsWorksAutoScalingThresholdsType}
  */
 OpsWorksAutoScalingThresholdsType.prototype.memoryThreshold = function(value) {
 	return this.set('MemoryThreshold', value);
@@ -77,7 +77,7 @@ OpsWorksAutoScalingThresholdsType.prototype.memoryThreshold = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {OpsWorksAutoScalingThresholdsType}
+ * @returns {OpsWorksAutoScalingThresholdsType}
  */
 OpsWorksAutoScalingThresholdsType.prototype.thresholdsWaitTime = function(value) {
 	return this.set('ThresholdsWaitTime', value);

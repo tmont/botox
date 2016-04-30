@@ -17,7 +17,7 @@ S3ReplicationConfigurationRules.prototype = Object.create(PropertyType.prototype
  * Required: true
  *
  * @param {S3ReplicationConfigurationRulesDestination} value
- * @return {S3ReplicationConfigurationRules}
+ * @returns {S3ReplicationConfigurationRules}
  */
 S3ReplicationConfigurationRules.prototype.destination = function(value) {
 	return this.set('Destination', value);
@@ -29,7 +29,7 @@ S3ReplicationConfigurationRules.prototype.destination = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {S3ReplicationConfigurationRules}
+ * @returns {S3ReplicationConfigurationRules}
  */
 S3ReplicationConfigurationRules.prototype.id = function(value) {
 	return this.set('Id', value);
@@ -41,7 +41,7 @@ S3ReplicationConfigurationRules.prototype.id = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {S3ReplicationConfigurationRules}
+ * @returns {S3ReplicationConfigurationRules}
  */
 S3ReplicationConfigurationRules.prototype.prefix = function(value) {
 	return this.set('Prefix', value);
@@ -53,7 +53,7 @@ S3ReplicationConfigurationRules.prototype.prefix = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {S3ReplicationConfigurationRules}
+ * @returns {S3ReplicationConfigurationRules}
  */
 S3ReplicationConfigurationRules.prototype.status = function(value) {
 	return this.set('Status', value);

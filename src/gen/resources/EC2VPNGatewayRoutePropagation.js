@@ -19,7 +19,7 @@ EC2VPNGatewayRoutePropagation.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String[]|Attribute|Reference} value List of route table IDs
- * @return {EC2VPNGatewayRoutePropagation}
+ * @returns {EC2VPNGatewayRoutePropagation}
  */
 EC2VPNGatewayRoutePropagation.prototype.routeTableIds = function(value) {
 	return this.set('RouteTableIds', value);
@@ -32,7 +32,7 @@ EC2VPNGatewayRoutePropagation.prototype.routeTableIds = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPNGatewayRoutePropagation}
+ * @returns {EC2VPNGatewayRoutePropagation}
  */
 EC2VPNGatewayRoutePropagation.prototype.vpnGatewayId = function(value) {
 	return this.set('VpnGatewayId', value);

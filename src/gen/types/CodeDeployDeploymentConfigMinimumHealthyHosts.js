@@ -17,7 +17,7 @@ CodeDeployDeploymentConfigMinimumHealthyHosts.prototype = Object.create(Property
  * Required: false
  *
  * @param {String} value
- * @return {CodeDeployDeploymentConfigMinimumHealthyHosts}
+ * @returns {CodeDeployDeploymentConfigMinimumHealthyHosts}
  */
 CodeDeployDeploymentConfigMinimumHealthyHosts.prototype.type = function(value) {
 	return this.set('Type', value);
@@ -29,7 +29,7 @@ CodeDeployDeploymentConfigMinimumHealthyHosts.prototype.type = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {CodeDeployDeploymentConfigMinimumHealthyHosts}
+ * @returns {CodeDeployDeploymentConfigMinimumHealthyHosts}
  */
 CodeDeployDeploymentConfigMinimumHealthyHosts.prototype.value = function(value) {
 	return this.set('Value', value);

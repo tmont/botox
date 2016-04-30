@@ -17,7 +17,7 @@ ElasticMapReduceClusterJobFlowInstancesConfigPlacementType.prototype = Object.cr
  * Required: true
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterJobFlowInstancesConfigPlacementType}
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfigPlacementType}
  */
 ElasticMapReduceClusterJobFlowInstancesConfigPlacementType.prototype.availabilityZone = function(value) {
 	return this.set('AvailabilityZone', value);

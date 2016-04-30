@@ -19,7 +19,7 @@ ApiGatewayAuthorizer.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayAuthorizer}
+ * @returns {ApiGatewayAuthorizer}
  */
 ApiGatewayAuthorizer.prototype.authorizerCredentials = function(value) {
 	return this.set('AuthorizerCredentials', value);
@@ -32,7 +32,7 @@ ApiGatewayAuthorizer.prototype.authorizerCredentials = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {ApiGatewayAuthorizer}
+ * @returns {ApiGatewayAuthorizer}
  */
 ApiGatewayAuthorizer.prototype.authorizerResultTtlInSeconds = function(value) {
 	return this.set('AuthorizerResultTtlInSeconds', value);
@@ -45,7 +45,7 @@ ApiGatewayAuthorizer.prototype.authorizerResultTtlInSeconds = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayAuthorizer}
+ * @returns {ApiGatewayAuthorizer}
  */
 ApiGatewayAuthorizer.prototype.authorizerUri = function(value) {
 	return this.set('AuthorizerUri', value);
@@ -58,7 +58,7 @@ ApiGatewayAuthorizer.prototype.authorizerUri = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayAuthorizer}
+ * @returns {ApiGatewayAuthorizer}
  */
 ApiGatewayAuthorizer.prototype.identitySource = function(value) {
 	return this.set('IdentitySource', value);
@@ -71,7 +71,7 @@ ApiGatewayAuthorizer.prototype.identitySource = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayAuthorizer}
+ * @returns {ApiGatewayAuthorizer}
  */
 ApiGatewayAuthorizer.prototype.identityValidationExpression = function(value) {
 	return this.set('IdentityValidationExpression', value);
@@ -84,7 +84,7 @@ ApiGatewayAuthorizer.prototype.identityValidationExpression = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayAuthorizer}
+ * @returns {ApiGatewayAuthorizer}
  */
 ApiGatewayAuthorizer.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -97,7 +97,7 @@ ApiGatewayAuthorizer.prototype.name = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayAuthorizer}
+ * @returns {ApiGatewayAuthorizer}
  */
 ApiGatewayAuthorizer.prototype.restApiId = function(value) {
 	return this.set('RestApiId', value);
@@ -110,7 +110,7 @@ ApiGatewayAuthorizer.prototype.restApiId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayAuthorizer}
+ * @returns {ApiGatewayAuthorizer}
  */
 ApiGatewayAuthorizer.prototype.type = function(value) {
 	return this.set('Type', value);

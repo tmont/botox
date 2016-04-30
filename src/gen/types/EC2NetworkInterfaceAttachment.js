@@ -17,7 +17,7 @@ EC2NetworkInterfaceAttachment.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {EC2NetworkInterfaceAttachment}
+ * @returns {EC2NetworkInterfaceAttachment}
  */
 EC2NetworkInterfaceAttachment.prototype.attachmentID = function(value) {
 	return this.set('AttachmentID', value);
@@ -29,7 +29,7 @@ EC2NetworkInterfaceAttachment.prototype.attachmentID = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {EC2NetworkInterfaceAttachment}
+ * @returns {EC2NetworkInterfaceAttachment}
  */
 EC2NetworkInterfaceAttachment.prototype.instanceID = function(value) {
 	return this.set('InstanceID', value);

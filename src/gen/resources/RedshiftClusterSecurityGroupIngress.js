@@ -19,7 +19,7 @@ RedshiftClusterSecurityGroupIngress.prototype = Object.create(Resource.prototype
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftClusterSecurityGroupIngress}
+ * @returns {RedshiftClusterSecurityGroupIngress}
  */
 RedshiftClusterSecurityGroupIngress.prototype.clusterSecurityGroupName = function(value) {
 	return this.set('ClusterSecurityGroupName', value);
@@ -32,7 +32,7 @@ RedshiftClusterSecurityGroupIngress.prototype.clusterSecurityGroupName = functio
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftClusterSecurityGroupIngress}
+ * @returns {RedshiftClusterSecurityGroupIngress}
  */
 RedshiftClusterSecurityGroupIngress.prototype.cidrip = function(value) {
 	return this.set('CIDRIP', value);
@@ -45,7 +45,7 @@ RedshiftClusterSecurityGroupIngress.prototype.cidrip = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftClusterSecurityGroupIngress}
+ * @returns {RedshiftClusterSecurityGroupIngress}
  */
 RedshiftClusterSecurityGroupIngress.prototype.eC2SecurityGroupName = function(value) {
 	return this.set('EC2SecurityGroupName', value);
@@ -58,7 +58,7 @@ RedshiftClusterSecurityGroupIngress.prototype.eC2SecurityGroupName = function(va
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftClusterSecurityGroupIngress}
+ * @returns {RedshiftClusterSecurityGroupIngress}
  */
 RedshiftClusterSecurityGroupIngress.prototype.eC2SecurityGroupOwnerId = function(value) {
 	return this.set('EC2SecurityGroupOwnerId', value);

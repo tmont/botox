@@ -19,7 +19,7 @@ OpsWorksLayer.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {key[]|Attribute|Reference} value A list of key-value pairs
- * @return {OpsWorksLayer}
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.attributes = function(value) {
 	return this.set('Attributes', value);
@@ -32,7 +32,7 @@ OpsWorksLayer.prototype.attributes = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {OpsWorksLayer}
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.autoAssignElasticIps = function(value) {
 	return this.set('AutoAssignElasticIps', value);
@@ -45,7 +45,7 @@ OpsWorksLayer.prototype.autoAssignElasticIps = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {OpsWorksLayer}
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.autoAssignPublicIps = function(value) {
 	return this.set('AutoAssignPublicIps', value);
@@ -58,7 +58,7 @@ OpsWorksLayer.prototype.autoAssignPublicIps = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksLayer}
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.customInstanceProfileArn = function(value) {
 	return this.set('CustomInstanceProfileArn', value);
@@ -71,7 +71,7 @@ OpsWorksLayer.prototype.customInstanceProfileArn = function(value) {
  * Update requires: No interruption
  *
  * @param {OpsWorksRecipesType|Attribute|Reference} value AWS OpsWorks Recipes Type
- * @return {OpsWorksLayer}
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.customRecipes = function(value) {
 	return this.set('CustomRecipes', value);
@@ -83,8 +83,8 @@ OpsWorksLayer.prototype.customRecipes = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {OpsWorksLayer}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.customSecurityGroupIds = function(value) {
 	return this.set('CustomSecurityGroupIds', value);
@@ -97,7 +97,7 @@ OpsWorksLayer.prototype.customSecurityGroupIds = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {OpsWorksLayer}
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.enableAutoHealing = function(value) {
 	return this.set('EnableAutoHealing', value);
@@ -110,7 +110,7 @@ OpsWorksLayer.prototype.enableAutoHealing = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {OpsWorksLayer}
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.installUpdatesOnBoot = function(value) {
 	return this.set('InstallUpdatesOnBoot', value);
@@ -123,7 +123,7 @@ OpsWorksLayer.prototype.installUpdatesOnBoot = function(value) {
  * Update requires: No interruption
  *
  * @param {OpsWorksLayerLifeCycleConfiguration|Attribute|Reference} value AWS OpsWorks Layer LifeCycleConfiguration
- * @return {OpsWorksLayer}
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.lifecycleEventConfiguration = function(value) {
 	return this.set('LifecycleEventConfiguration', value);
@@ -136,7 +136,7 @@ OpsWorksLayer.prototype.lifecycleEventConfiguration = function(value) {
  * Update requires: No interruption
  *
  * @param {OpsWorksLoadBasedAutoScalingType|Attribute|Reference} value AWS OpsWorks LoadBasedAutoScaling Type
- * @return {OpsWorksLayer}
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.loadBasedAutoScaling = function(value) {
 	return this.set('LoadBasedAutoScaling', value);
@@ -149,7 +149,7 @@ OpsWorksLayer.prototype.loadBasedAutoScaling = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksLayer}
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -161,8 +161,8 @@ OpsWorksLayer.prototype.name = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {OpsWorksLayer}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.packages = function(value) {
 	return this.set('Packages', value);
@@ -175,7 +175,7 @@ OpsWorksLayer.prototype.packages = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksLayer}
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.shortname = function(value) {
 	return this.set('Shortname', value);
@@ -188,7 +188,7 @@ OpsWorksLayer.prototype.shortname = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksLayer}
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.stackId = function(value) {
 	return this.set('StackId', value);
@@ -201,7 +201,7 @@ OpsWorksLayer.prototype.stackId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksLayer}
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.type = function(value) {
 	return this.set('Type', value);
@@ -214,7 +214,7 @@ OpsWorksLayer.prototype.type = function(value) {
  * Update requires: Replacement
  *
  * @param {OpsWorksVolumeConfigurationType[]|Attribute|Reference} value A list of AWS OpsWorks VolumeConfiguration Type
- * @return {OpsWorksLayer}
+ * @returns {OpsWorksLayer}
  */
 OpsWorksLayer.prototype.volumeConfigurations = function(value) {
 	return this.set('VolumeConfigurations', value);

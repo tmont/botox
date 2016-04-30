@@ -17,7 +17,7 @@ WAFXssMatchSetXssMatchTuple.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {WAFXssMatchSetXssMatchTupleFieldToMatch} value
- * @return {WAFXssMatchSetXssMatchTuple}
+ * @returns {WAFXssMatchSetXssMatchTuple}
  */
 WAFXssMatchSetXssMatchTuple.prototype.fieldToMatch = function(value) {
 	return this.set('FieldToMatch', value);
@@ -29,7 +29,7 @@ WAFXssMatchSetXssMatchTuple.prototype.fieldToMatch = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {WAFXssMatchSetXssMatchTuple}
+ * @returns {WAFXssMatchSetXssMatchTuple}
  */
 WAFXssMatchSetXssMatchTuple.prototype.textTransformation = function(value) {
 	return this.set('TextTransformation', value);

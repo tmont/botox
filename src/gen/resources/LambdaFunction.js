@@ -19,15 +19,15 @@ LambdaFunction.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(LambdaFunction.prototype, 'attr', {
 	/**
-	 * @return {LambdaFunctionAttributeMap}
+	 * @returns {LambdaFunctionAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The ARN of the Lambda function, such as arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get arn() {
 				return createAttribute('Arn');
@@ -43,7 +43,7 @@ Object.defineProperty(LambdaFunction.prototype, 'attr', {
  * Update requires: No interruption
  *
  * @param {LambdaFunctionCode|Attribute|Reference} value AWS Lambda Function Code
- * @return {LambdaFunction}
+ * @returns {LambdaFunction}
  */
 LambdaFunction.prototype.code = function(value) {
 	return this.set('Code', value);
@@ -56,7 +56,7 @@ LambdaFunction.prototype.code = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaFunction}
+ * @returns {LambdaFunction}
  */
 LambdaFunction.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -69,7 +69,7 @@ LambdaFunction.prototype.description = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaFunction}
+ * @returns {LambdaFunction}
  */
 LambdaFunction.prototype.functionName = function(value) {
 	return this.set('FunctionName', value);
@@ -82,7 +82,7 @@ LambdaFunction.prototype.functionName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaFunction}
+ * @returns {LambdaFunction}
  */
 LambdaFunction.prototype.handler = function(value) {
 	return this.set('Handler', value);
@@ -95,7 +95,7 @@ LambdaFunction.prototype.handler = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {LambdaFunction}
+ * @returns {LambdaFunction}
  */
 LambdaFunction.prototype.memorySize = function(value) {
 	return this.set('MemorySize', value);
@@ -108,7 +108,7 @@ LambdaFunction.prototype.memorySize = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaFunction}
+ * @returns {LambdaFunction}
  */
 LambdaFunction.prototype.role = function(value) {
 	return this.set('Role', value);
@@ -121,7 +121,7 @@ LambdaFunction.prototype.role = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LambdaFunction}
+ * @returns {LambdaFunction}
  */
 LambdaFunction.prototype.runtime = function(value) {
 	return this.set('Runtime', value);
@@ -134,7 +134,7 @@ LambdaFunction.prototype.runtime = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {LambdaFunction}
+ * @returns {LambdaFunction}
  */
 LambdaFunction.prototype.timeout = function(value) {
 	return this.set('Timeout', value);
@@ -147,7 +147,7 @@ LambdaFunction.prototype.timeout = function(value) {
  * Update requires: No interruption
  *
  * @param {LambdaFunctionVPCConfig|Attribute|Reference} value AWS Lambda Function VPCConfig
- * @return {LambdaFunction}
+ * @returns {LambdaFunction}
  */
 LambdaFunction.prototype.vpcConfig = function(value) {
 	return this.set('VpcConfig', value);

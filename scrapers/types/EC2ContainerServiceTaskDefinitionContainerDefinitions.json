@@ -7,7 +7,7 @@
       "description": "The CMD value to pass to the container. For more information about the Docker CMD parameter, see https://docs.docker.com/reference/builder/#cmd.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "Cpu",
@@ -28,14 +28,14 @@
       "description": "A list of DNS search domains that are provided to the container. The domain names that the DNS logic looks up when a process attempts to access a bare unqualified hostname.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "DnsServers",
       "description": "A list of DNS servers that Amazon ECS provides to the container.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "DockerLabels",
@@ -49,14 +49,14 @@
       "description": "A list of custom labels for SELinux and AppArmor multi-level security systems. For more information, see the dockerSecurityOptions content for the ContainerDefinition data type in the Amazon EC2 Container Service API Reference.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "EntryPoint",
       "description": "The ENTRYPOINT value to pass to the container. For more information about the Docker ENTRYPOINT parameter, see https://docs.docker.com/reference/builder/#entrypoint.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "Environment",
@@ -98,7 +98,7 @@
       "description": "The name of another container to connect to. With links, containers can communicate with each other without using port mappings.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "LogConfiguration",

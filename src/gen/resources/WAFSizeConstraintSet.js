@@ -19,7 +19,7 @@ WAFSizeConstraintSet.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {WAFSizeConstraintSet}
+ * @returns {WAFSizeConstraintSet}
  */
 WAFSizeConstraintSet.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -32,7 +32,7 @@ WAFSizeConstraintSet.prototype.name = function(value) {
  * Update requires: No interruption
  *
  * @param {WAFSizeConstraintSetSizeConstraint[]|Attribute|Reference} value List of AWS WAF SizeConstraintSet SizeConstraint
- * @return {WAFSizeConstraintSet}
+ * @returns {WAFSizeConstraintSet}
  */
 WAFSizeConstraintSet.prototype.sizeConstraints = function(value) {
 	return this.set('SizeConstraints', value);

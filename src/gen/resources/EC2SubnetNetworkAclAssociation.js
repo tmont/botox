@@ -19,15 +19,15 @@ EC2SubnetNetworkAclAssociation.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(EC2SubnetNetworkAclAssociation.prototype, 'attr', {
 	/**
-	 * @return {EC2SubnetNetworkAclAssociationAttributeMap}
+	 * @returns {EC2SubnetNetworkAclAssociationAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * Returns the value of this object's SubnetId property.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get associationId() {
 				return createAttribute('AssociationId');
@@ -43,7 +43,7 @@ Object.defineProperty(EC2SubnetNetworkAclAssociation.prototype, 'attr', {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SubnetNetworkAclAssociation}
+ * @returns {EC2SubnetNetworkAclAssociation}
  */
 EC2SubnetNetworkAclAssociation.prototype.subnetId = function(value) {
 	return this.set('SubnetId', value);
@@ -56,7 +56,7 @@ EC2SubnetNetworkAclAssociation.prototype.subnetId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SubnetNetworkAclAssociation}
+ * @returns {EC2SubnetNetworkAclAssociation}
  */
 EC2SubnetNetworkAclAssociation.prototype.networkAclId = function(value) {
 	return this.set('NetworkAclId', value);

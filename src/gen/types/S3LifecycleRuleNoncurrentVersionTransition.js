@@ -17,7 +17,7 @@ S3LifecycleRuleNoncurrentVersionTransition.prototype = Object.create(PropertyTyp
  * Required: true
  *
  * @param {String} value
- * @return {S3LifecycleRuleNoncurrentVersionTransition}
+ * @returns {S3LifecycleRuleNoncurrentVersionTransition}
  */
 S3LifecycleRuleNoncurrentVersionTransition.prototype.storageClass = function(value) {
 	return this.set('StorageClass', value);
@@ -29,7 +29,7 @@ S3LifecycleRuleNoncurrentVersionTransition.prototype.storageClass = function(val
  * Required: true
  *
  * @param {Number} value
- * @return {S3LifecycleRuleNoncurrentVersionTransition}
+ * @returns {S3LifecycleRuleNoncurrentVersionTransition}
  */
 S3LifecycleRuleNoncurrentVersionTransition.prototype.transitionInDays = function(value) {
 	return this.set('TransitionInDays', value);

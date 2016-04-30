@@ -19,7 +19,7 @@ EC2CustomerGateway.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {Number|Attribute|Reference} value Number BgpAsn is always an integer value.
- * @return {EC2CustomerGateway}
+ * @returns {EC2CustomerGateway}
  */
 EC2CustomerGateway.prototype.bgpAsn = function(value) {
 	return this.set('BgpAsn', value);
@@ -32,7 +32,7 @@ EC2CustomerGateway.prototype.bgpAsn = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2CustomerGateway}
+ * @returns {EC2CustomerGateway}
  */
 EC2CustomerGateway.prototype.ipAddress = function(value) {
 	return this.set('IpAddress', value);
@@ -45,7 +45,7 @@ EC2CustomerGateway.prototype.ipAddress = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags.
- * @return {EC2CustomerGateway}
+ * @returns {EC2CustomerGateway}
  */
 EC2CustomerGateway.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -58,7 +58,7 @@ EC2CustomerGateway.prototype.tags = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2CustomerGateway}
+ * @returns {EC2CustomerGateway}
  */
 EC2CustomerGateway.prototype.type = function(value) {
 	return this.set('Type', value);

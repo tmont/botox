@@ -17,7 +17,7 @@ DynamoDBAttributeDefinitions.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {DynamoDBAttributeDefinitions}
+ * @returns {DynamoDBAttributeDefinitions}
  */
 DynamoDBAttributeDefinitions.prototype.attributeName = function(value) {
 	return this.set('AttributeName', value);
@@ -29,7 +29,7 @@ DynamoDBAttributeDefinitions.prototype.attributeName = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {DynamoDBAttributeDefinitions}
+ * @returns {DynamoDBAttributeDefinitions}
  */
 DynamoDBAttributeDefinitions.prototype.attributeType = function(value) {
 	return this.set('AttributeType', value);

@@ -19,7 +19,7 @@ ElastiCacheSecurityGroup.prototype = Object.create(Resource.prototype);
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElastiCacheSecurityGroup}
+ * @returns {ElastiCacheSecurityGroup}
  */
 ElastiCacheSecurityGroup.prototype.description = function(value) {
 	return this.set('Description', value);

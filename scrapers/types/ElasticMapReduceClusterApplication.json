@@ -14,7 +14,7 @@
       "description": "Arguments that Amazon EMR passes to the application.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "Name",

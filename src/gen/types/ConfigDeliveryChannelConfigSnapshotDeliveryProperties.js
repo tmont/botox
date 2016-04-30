@@ -17,7 +17,7 @@ ConfigDeliveryChannelConfigSnapshotDeliveryProperties.prototype = Object.create(
  * Required: false
  *
  * @param {String} value
- * @return {ConfigDeliveryChannelConfigSnapshotDeliveryProperties}
+ * @returns {ConfigDeliveryChannelConfigSnapshotDeliveryProperties}
  */
 ConfigDeliveryChannelConfigSnapshotDeliveryProperties.prototype.deliveryFrequency = function(value) {
 	return this.set('DeliveryFrequency', value);

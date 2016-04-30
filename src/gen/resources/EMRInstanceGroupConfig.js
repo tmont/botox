@@ -19,7 +19,7 @@ EMRInstanceGroupConfig.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EMRInstanceGroupConfig}
+ * @returns {EMRInstanceGroupConfig}
  */
 EMRInstanceGroupConfig.prototype.bidPrice = function(value) {
 	return this.set('BidPrice', value);
@@ -32,7 +32,7 @@ EMRInstanceGroupConfig.prototype.bidPrice = function(value) {
  * Update requires: Replacement
  *
  * @param {ElasticMapReduceClusterConfiguration[]|Attribute|Reference} value List of Amazon Elastic MapReduce Cluster Configuration
- * @return {EMRInstanceGroupConfig}
+ * @returns {EMRInstanceGroupConfig}
  */
 EMRInstanceGroupConfig.prototype.configurations = function(value) {
 	return this.set('Configurations', value);
@@ -45,7 +45,7 @@ EMRInstanceGroupConfig.prototype.configurations = function(value) {
  * Update requires: Replacement
  *
  * @param {ElasticMapReduceEbsConfiguration|Attribute|Reference} value Amazon Elastic MapReduce EbsConfiguration
- * @return {EMRInstanceGroupConfig}
+ * @returns {EMRInstanceGroupConfig}
  */
 EMRInstanceGroupConfig.prototype.ebsConfiguration = function(value) {
 	return this.set('EbsConfiguration', value);
@@ -58,7 +58,7 @@ EMRInstanceGroupConfig.prototype.ebsConfiguration = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {EMRInstanceGroupConfig}
+ * @returns {EMRInstanceGroupConfig}
  */
 EMRInstanceGroupConfig.prototype.instanceCount = function(value) {
 	return this.set('InstanceCount', value);
@@ -71,7 +71,7 @@ EMRInstanceGroupConfig.prototype.instanceCount = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EMRInstanceGroupConfig}
+ * @returns {EMRInstanceGroupConfig}
  */
 EMRInstanceGroupConfig.prototype.instanceRole = function(value) {
 	return this.set('InstanceRole', value);
@@ -84,7 +84,7 @@ EMRInstanceGroupConfig.prototype.instanceRole = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EMRInstanceGroupConfig}
+ * @returns {EMRInstanceGroupConfig}
  */
 EMRInstanceGroupConfig.prototype.instanceType = function(value) {
 	return this.set('InstanceType', value);
@@ -97,7 +97,7 @@ EMRInstanceGroupConfig.prototype.instanceType = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EMRInstanceGroupConfig}
+ * @returns {EMRInstanceGroupConfig}
  */
 EMRInstanceGroupConfig.prototype.jobFlowId = function(value) {
 	return this.set('JobFlowId', value);
@@ -110,7 +110,7 @@ EMRInstanceGroupConfig.prototype.jobFlowId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EMRInstanceGroupConfig}
+ * @returns {EMRInstanceGroupConfig}
  */
 EMRInstanceGroupConfig.prototype.market = function(value) {
 	return this.set('Market', value);
@@ -123,7 +123,7 @@ EMRInstanceGroupConfig.prototype.market = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EMRInstanceGroupConfig}
+ * @returns {EMRInstanceGroupConfig}
  */
 EMRInstanceGroupConfig.prototype.name = function(value) {
 	return this.set('Name', value);

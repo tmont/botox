@@ -19,7 +19,7 @@ RedshiftClusterSecurityGroup.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftClusterSecurityGroup}
+ * @returns {RedshiftClusterSecurityGroup}
  */
 RedshiftClusterSecurityGroup.prototype.description = function(value) {
 	return this.set('Description', value);

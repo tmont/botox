@@ -16,8 +16,8 @@ AutoScalingNotificationConfigurations.prototype = Object.create(PropertyType.pro
  *
  * Required: true
  *
- * @param {string[]} value
- * @return {AutoScalingNotificationConfigurations}
+ * @param {String[]} value
+ * @returns {AutoScalingNotificationConfigurations}
  */
 AutoScalingNotificationConfigurations.prototype.notificationTypes = function(value) {
 	return this.set('NotificationTypes', value);
@@ -29,7 +29,7 @@ AutoScalingNotificationConfigurations.prototype.notificationTypes = function(val
  * Required: true
  *
  * @param {String} value
- * @return {AutoScalingNotificationConfigurations}
+ * @returns {AutoScalingNotificationConfigurations}
  */
 AutoScalingNotificationConfigurations.prototype.topicARN = function(value) {
 	return this.set('TopicARN', value);

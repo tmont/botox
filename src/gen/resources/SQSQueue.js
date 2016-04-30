@@ -20,15 +20,15 @@ SQSQueue.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(SQSQueue.prototype, 'attr', {
 	/**
-	 * @return {SQSQueueAttributeMap}
+	 * @returns {SQSQueueAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * Returns the Amazon Resource Name (ARN) of the queue. For example: arn:aws:sqs:us-east-1:123456789012:mystack-myqueue-15PG5C2FC1CW8
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get arn() {
 				return createAttribute('Arn');
@@ -36,7 +36,7 @@ Object.defineProperty(SQSQueue.prototype, 'attr', {
 
 			/**
 			 * Returns the queue name. For example:mystack-myqueue-1VF9BKQH5BJVI
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get queueName() {
 				return createAttribute('QueueName');
@@ -52,7 +52,7 @@ Object.defineProperty(SQSQueue.prototype, 'attr', {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {SQSQueue}
+ * @returns {SQSQueue}
  */
 SQSQueue.prototype.delaySeconds = function(value) {
 	return this.set('DelaySeconds', value);
@@ -65,7 +65,7 @@ SQSQueue.prototype.delaySeconds = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {SQSQueue}
+ * @returns {SQSQueue}
  */
 SQSQueue.prototype.maximumMessageSize = function(value) {
 	return this.set('MaximumMessageSize', value);
@@ -78,7 +78,7 @@ SQSQueue.prototype.maximumMessageSize = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {SQSQueue}
+ * @returns {SQSQueue}
  */
 SQSQueue.prototype.messageRetentionPeriod = function(value) {
 	return this.set('MessageRetentionPeriod', value);
@@ -91,7 +91,7 @@ SQSQueue.prototype.messageRetentionPeriod = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {SQSQueue}
+ * @returns {SQSQueue}
  */
 SQSQueue.prototype.queueName = function(value) {
 	return this.set('QueueName', value);
@@ -104,7 +104,7 @@ SQSQueue.prototype.queueName = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {SQSQueue}
+ * @returns {SQSQueue}
  */
 SQSQueue.prototype.receiveMessageWaitTimeSeconds = function(value) {
 	return this.set('ReceiveMessageWaitTimeSeconds', value);
@@ -117,7 +117,7 @@ SQSQueue.prototype.receiveMessageWaitTimeSeconds = function(value) {
  * Update requires: No interruption
  *
  * @param {SQSRedrivePolicy|Attribute|Reference} value Amazon SQS RedrivePolicy
- * @return {SQSQueue}
+ * @returns {SQSQueue}
  */
 SQSQueue.prototype.redrivePolicy = function(value) {
 	return this.set('RedrivePolicy', value);
@@ -130,7 +130,7 @@ SQSQueue.prototype.redrivePolicy = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {SQSQueue}
+ * @returns {SQSQueue}
  */
 SQSQueue.prototype.visibilityTimeout = function(value) {
 	return this.set('VisibilityTimeout', value);

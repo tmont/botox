@@ -17,7 +17,7 @@ DynamoDBLocalSecondaryIndexes.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {DynamoDBLocalSecondaryIndexes}
+ * @returns {DynamoDBLocalSecondaryIndexes}
  */
 DynamoDBLocalSecondaryIndexes.prototype.indexName = function(value) {
 	return this.set('IndexName', value);
@@ -29,7 +29,7 @@ DynamoDBLocalSecondaryIndexes.prototype.indexName = function(value) {
  * Required: true
  *
  * @param {DynamoDBKeySchema} value
- * @return {DynamoDBLocalSecondaryIndexes}
+ * @returns {DynamoDBLocalSecondaryIndexes}
  */
 DynamoDBLocalSecondaryIndexes.prototype.keySchema = function(value) {
 	return this.set('KeySchema', value);
@@ -41,7 +41,7 @@ DynamoDBLocalSecondaryIndexes.prototype.keySchema = function(value) {
  * Required: true
  *
  * @param {DynamoDBProjectionObject} value
- * @return {DynamoDBLocalSecondaryIndexes}
+ * @returns {DynamoDBLocalSecondaryIndexes}
  */
 DynamoDBLocalSecondaryIndexes.prototype.projection = function(value) {
 	return this.set('Projection', value);

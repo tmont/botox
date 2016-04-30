@@ -15,6 +15,7 @@
 		"cheerio": "0.20.0",
 		"inflection": "1.10.0",
 		"mocha": "*",
-		"expect.js": "*"
+		"expect.js": "*",
+		"eslint": "2.8.0"
 	}
 }

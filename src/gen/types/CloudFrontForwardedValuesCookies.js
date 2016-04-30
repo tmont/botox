@@ -17,7 +17,7 @@ CloudFrontForwardedValuesCookies.prototype = Object.create(PropertyType.prototyp
  * Required: true
  *
  * @param {String} value
- * @return {CloudFrontForwardedValuesCookies}
+ * @returns {CloudFrontForwardedValuesCookies}
  */
 CloudFrontForwardedValuesCookies.prototype.forward = function(value) {
 	return this.set('Forward', value);
@@ -28,8 +28,8 @@ CloudFrontForwardedValuesCookies.prototype.forward = function(value) {
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {CloudFrontForwardedValuesCookies}
+ * @param {String[]} value
+ * @returns {CloudFrontForwardedValuesCookies}
  */
 CloudFrontForwardedValuesCookies.prototype.whitelistedNames = function(value) {
 	return this.set('WhitelistedNames', value);

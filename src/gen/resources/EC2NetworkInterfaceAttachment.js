@@ -19,7 +19,7 @@ EC2NetworkInterfaceAttachment.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {EC2NetworkInterfaceAttachment}
+ * @returns {EC2NetworkInterfaceAttachment}
  */
 EC2NetworkInterfaceAttachment.prototype.deleteOnTermination = function(value) {
 	return this.set('DeleteOnTermination', value);
@@ -32,7 +32,7 @@ EC2NetworkInterfaceAttachment.prototype.deleteOnTermination = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2NetworkInterfaceAttachment}
+ * @returns {EC2NetworkInterfaceAttachment}
  */
 EC2NetworkInterfaceAttachment.prototype.deviceIndex = function(value) {
 	return this.set('DeviceIndex', value);
@@ -45,7 +45,7 @@ EC2NetworkInterfaceAttachment.prototype.deviceIndex = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2NetworkInterfaceAttachment}
+ * @returns {EC2NetworkInterfaceAttachment}
  */
 EC2NetworkInterfaceAttachment.prototype.instanceId = function(value) {
 	return this.set('InstanceId', value);
@@ -58,7 +58,7 @@ EC2NetworkInterfaceAttachment.prototype.instanceId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2NetworkInterfaceAttachment}
+ * @returns {EC2NetworkInterfaceAttachment}
  */
 EC2NetworkInterfaceAttachment.prototype.networkInterfaceId = function(value) {
 	return this.set('NetworkInterfaceId', value);

@@ -17,7 +17,7 @@ EC2MountPointPropertyType.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {EC2MountPointPropertyType}
+ * @returns {EC2MountPointPropertyType}
  */
 EC2MountPointPropertyType.prototype.device = function(value) {
 	return this.set('Device', value);
@@ -29,7 +29,7 @@ EC2MountPointPropertyType.prototype.device = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {EC2MountPointPropertyType}
+ * @returns {EC2MountPointPropertyType}
  */
 EC2MountPointPropertyType.prototype.volumeId = function(value) {
 	return this.set('VolumeId', value);

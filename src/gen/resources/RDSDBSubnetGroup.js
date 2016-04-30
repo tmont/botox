@@ -19,7 +19,7 @@ RDSDBSubnetGroup.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBSubnetGroup}
+ * @returns {RDSDBSubnetGroup}
  */
 RDSDBSubnetGroup.prototype.dbSubnetGroupDescription = function(value) {
 	return this.set('DBSubnetGroupDescription', value);
@@ -31,8 +31,8 @@ RDSDBSubnetGroup.prototype.dbSubnetGroupDescription = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {RDSDBSubnetGroup}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {RDSDBSubnetGroup}
  */
 RDSDBSubnetGroup.prototype.subnetIds = function(value) {
 	return this.set('SubnetIds', value);
@@ -45,7 +45,7 @@ RDSDBSubnetGroup.prototype.subnetIds = function(value) {
  * Update requires: No interruption
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value A list of resource tags.
- * @return {RDSDBSubnetGroup}
+ * @returns {RDSDBSubnetGroup}
  */
 RDSDBSubnetGroup.prototype.tags = function(value) {
 	return this.set('Tags', value);

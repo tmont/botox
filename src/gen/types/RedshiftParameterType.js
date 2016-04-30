@@ -17,7 +17,7 @@ RedshiftParameterType.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {RedshiftParameterType}
+ * @returns {RedshiftParameterType}
  */
 RedshiftParameterType.prototype.parameterName = function(value) {
 	return this.set('ParameterName', value);
@@ -29,7 +29,7 @@ RedshiftParameterType.prototype.parameterName = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {RedshiftParameterType}
+ * @returns {RedshiftParameterType}
  */
 RedshiftParameterType.prototype.parameterValue = function(value) {
 	return this.set('ParameterValue', value);

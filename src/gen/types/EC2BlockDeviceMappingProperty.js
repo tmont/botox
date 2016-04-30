@@ -17,7 +17,7 @@ EC2BlockDeviceMappingProperty.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {EC2BlockDeviceMappingProperty}
+ * @returns {EC2BlockDeviceMappingProperty}
  */
 EC2BlockDeviceMappingProperty.prototype.deviceName = function(value) {
 	return this.set('DeviceName', value);
@@ -29,7 +29,7 @@ EC2BlockDeviceMappingProperty.prototype.deviceName = function(value) {
  * Required: false
  *
  * @param {ElasticBlockStoreBlockDeviceProperty} value
- * @return {EC2BlockDeviceMappingProperty}
+ * @returns {EC2BlockDeviceMappingProperty}
  */
 EC2BlockDeviceMappingProperty.prototype.ebs = function(value) {
 	return this.set('Ebs', value);
@@ -41,7 +41,7 @@ EC2BlockDeviceMappingProperty.prototype.ebs = function(value) {
  * Required: false
  *
  * @param {Object} value
- * @return {EC2BlockDeviceMappingProperty}
+ * @returns {EC2BlockDeviceMappingProperty}
  */
 EC2BlockDeviceMappingProperty.prototype.noDevice = function(value) {
 	return this.set('NoDevice', value);
@@ -53,7 +53,7 @@ EC2BlockDeviceMappingProperty.prototype.noDevice = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {EC2BlockDeviceMappingProperty}
+ * @returns {EC2BlockDeviceMappingProperty}
  */
 EC2BlockDeviceMappingProperty.prototype.virtualName = function(value) {
 	return this.set('VirtualName', value);

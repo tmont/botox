@@ -17,7 +17,7 @@ Route53HostedZoneConfigProperty.prototype = Object.create(PropertyType.prototype
  * Required: false
  *
  * @param {String} value
- * @return {Route53HostedZoneConfigProperty}
+ * @returns {Route53HostedZoneConfigProperty}
  */
 Route53HostedZoneConfigProperty.prototype.comment = function(value) {
 	return this.set('Comment', value);

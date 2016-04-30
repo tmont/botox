@@ -14,7 +14,7 @@
       "description": "The value of an input parameter.",
       "typeDescription": "List of strings",
       "required": true,
-      "type": "string[]"
+      "type": "String[]"
     }
   ],
   "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ssmassociations-associationparameters.html"

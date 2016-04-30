@@ -19,7 +19,7 @@ RDSDBSecurityGroup.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBSecurityGroup}
+ * @returns {RDSDBSecurityGroup}
  */
 RDSDBSecurityGroup.prototype.eC2VpcId = function(value) {
 	return this.set('EC2VpcId', value);
@@ -32,7 +32,7 @@ RDSDBSecurityGroup.prototype.eC2VpcId = function(value) {
  * Update requires: No interruption
  *
  * @param {RDSSecurityGroupRule[]|Attribute|Reference} value List of RDS Security Group Rules.
- * @return {RDSDBSecurityGroup}
+ * @returns {RDSDBSecurityGroup}
  */
 RDSDBSecurityGroup.prototype.dbSecurityGroupIngress = function(value) {
 	return this.set('DBSecurityGroupIngress', value);
@@ -45,7 +45,7 @@ RDSDBSecurityGroup.prototype.dbSecurityGroupIngress = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBSecurityGroup}
+ * @returns {RDSDBSecurityGroup}
  */
 RDSDBSecurityGroup.prototype.groupDescription = function(value) {
 	return this.set('GroupDescription', value);
@@ -58,7 +58,7 @@ RDSDBSecurityGroup.prototype.groupDescription = function(value) {
  * Update requires: No interruption
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value A list of resource tags.
- * @return {RDSDBSecurityGroup}
+ * @returns {RDSDBSecurityGroup}
  */
 RDSDBSecurityGroup.prototype.tags = function(value) {
 	return this.set('Tags', value);

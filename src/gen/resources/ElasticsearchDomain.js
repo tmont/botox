@@ -19,7 +19,7 @@ ElasticsearchDomain.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {Object|Attribute|Reference} value
- * @return {ElasticsearchDomain}
+ * @returns {ElasticsearchDomain}
  */
 ElasticsearchDomain.prototype.accessPolicies = function(value) {
 	return this.set('AccessPolicies', value);
@@ -32,7 +32,7 @@ ElasticsearchDomain.prototype.accessPolicies = function(value) {
  * Update requires: Replacement
  *
  * @param {Object|Attribute|Reference} value A JSON object consisting of a string key-value pair, such as:
- * @return {ElasticsearchDomain}
+ * @returns {ElasticsearchDomain}
  */
 ElasticsearchDomain.prototype.advancedOptions = function(value) {
 	return this.set('AdvancedOptions', value);
@@ -45,7 +45,7 @@ ElasticsearchDomain.prototype.advancedOptions = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticsearchDomain}
+ * @returns {ElasticsearchDomain}
  */
 ElasticsearchDomain.prototype.domainName = function(value) {
 	return this.set('DomainName', value);
@@ -58,7 +58,7 @@ ElasticsearchDomain.prototype.domainName = function(value) {
  * Update requires: No interruption
  *
  * @param {ElasticsearchServiceDomainEBSOptions|Attribute|Reference} value Amazon Elasticsearch Service Domain EBSOptions
- * @return {ElasticsearchDomain}
+ * @returns {ElasticsearchDomain}
  */
 ElasticsearchDomain.prototype.ebsOptions = function(value) {
 	return this.set('EBSOptions', value);
@@ -71,7 +71,7 @@ ElasticsearchDomain.prototype.ebsOptions = function(value) {
  * Update requires: No interruption
  *
  * @param {ElasticsearchServiceDomainElasticsearchClusterConfig|Attribute|Reference} value Amazon Elasticsearch Service Domain ElasticsearchClusterConfig
- * @return {ElasticsearchDomain}
+ * @returns {ElasticsearchDomain}
  */
 ElasticsearchDomain.prototype.elasticsearchClusterConfig = function(value) {
 	return this.set('ElasticsearchClusterConfig', value);
@@ -84,7 +84,7 @@ ElasticsearchDomain.prototype.elasticsearchClusterConfig = function(value) {
  * Update requires: No interruption
  *
  * @param {ElasticsearchServiceDomainSnapshotOptions|Attribute|Reference} value Amazon Elasticsearch Service Domain SnapshotOptions
- * @return {ElasticsearchDomain}
+ * @returns {ElasticsearchDomain}
  */
 ElasticsearchDomain.prototype.snapshotOptions = function(value) {
 	return this.set('SnapshotOptions', value);
@@ -97,7 +97,7 @@ ElasticsearchDomain.prototype.snapshotOptions = function(value) {
  * Update requires: No interruption
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {ElasticsearchDomain}
+ * @returns {ElasticsearchDomain}
  */
 ElasticsearchDomain.prototype.tags = function(value) {
 	return this.set('Tags', value);

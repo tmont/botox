@@ -19,7 +19,7 @@ OpsWorksElasticLoadBalancerAttachment.prototype = Object.create(Resource.prototy
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksElasticLoadBalancerAttachment}
+ * @returns {OpsWorksElasticLoadBalancerAttachment}
  */
 OpsWorksElasticLoadBalancerAttachment.prototype.elasticLoadBalancerName = function(value) {
 	return this.set('ElasticLoadBalancerName', value);
@@ -32,7 +32,7 @@ OpsWorksElasticLoadBalancerAttachment.prototype.elasticLoadBalancerName = functi
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksElasticLoadBalancerAttachment}
+ * @returns {OpsWorksElasticLoadBalancerAttachment}
  */
 OpsWorksElasticLoadBalancerAttachment.prototype.layerId = function(value) {
 	return this.set('LayerId', value);

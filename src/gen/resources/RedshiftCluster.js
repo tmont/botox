@@ -19,7 +19,7 @@ RedshiftCluster.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.allowVersionUpgrade = function(value) {
 	return this.set('AllowVersionUpgrade', value);
@@ -32,7 +32,7 @@ RedshiftCluster.prototype.allowVersionUpgrade = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.automatedSnapshotRetentionPeriod = function(value) {
 	return this.set('AutomatedSnapshotRetentionPeriod', value);
@@ -45,7 +45,7 @@ RedshiftCluster.prototype.automatedSnapshotRetentionPeriod = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.availabilityZone = function(value) {
 	return this.set('AvailabilityZone', value);
@@ -58,7 +58,7 @@ RedshiftCluster.prototype.availabilityZone = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.clusterParameterGroupName = function(value) {
 	return this.set('ClusterParameterGroupName', value);
@@ -70,8 +70,8 @@ RedshiftCluster.prototype.clusterParameterGroupName = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {RedshiftCluster}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.clusterSecurityGroups = function(value) {
 	return this.set('ClusterSecurityGroups', value);
@@ -84,7 +84,7 @@ RedshiftCluster.prototype.clusterSecurityGroups = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.clusterSubnetGroupName = function(value) {
 	return this.set('ClusterSubnetGroupName', value);
@@ -97,7 +97,7 @@ RedshiftCluster.prototype.clusterSubnetGroupName = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.clusterType = function(value) {
 	return this.set('ClusterType', value);
@@ -110,7 +110,7 @@ RedshiftCluster.prototype.clusterType = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.clusterVersion = function(value) {
 	return this.set('ClusterVersion', value);
@@ -123,7 +123,7 @@ RedshiftCluster.prototype.clusterVersion = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.dbName = function(value) {
 	return this.set('DBName', value);
@@ -136,7 +136,7 @@ RedshiftCluster.prototype.dbName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.elasticIp = function(value) {
 	return this.set('ElasticIp', value);
@@ -149,7 +149,7 @@ RedshiftCluster.prototype.elasticIp = function(value) {
  * Update requires: Replacement
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.encrypted = function(value) {
 	return this.set('Encrypted', value);
@@ -162,7 +162,7 @@ RedshiftCluster.prototype.encrypted = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.hsmClientCertificateIdentifier = function(value) {
 	return this.set('HsmClientCertificateIdentifier', value);
@@ -175,7 +175,7 @@ RedshiftCluster.prototype.hsmClientCertificateIdentifier = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.hsmConfigurationIdentifier = function(value) {
 	return this.set('HsmConfigurationIdentifier', value);
@@ -188,7 +188,7 @@ RedshiftCluster.prototype.hsmConfigurationIdentifier = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.kmsKeyId = function(value) {
 	return this.set('KmsKeyId', value);
@@ -201,7 +201,7 @@ RedshiftCluster.prototype.kmsKeyId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.masterUsername = function(value) {
 	return this.set('MasterUsername', value);
@@ -214,7 +214,7 @@ RedshiftCluster.prototype.masterUsername = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.masterUserPassword = function(value) {
 	return this.set('MasterUserPassword', value);
@@ -227,7 +227,7 @@ RedshiftCluster.prototype.masterUserPassword = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.nodeType = function(value) {
 	return this.set('NodeType', value);
@@ -240,7 +240,7 @@ RedshiftCluster.prototype.nodeType = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.numberOfNodes = function(value) {
 	return this.set('NumberOfNodes', value);
@@ -253,7 +253,7 @@ RedshiftCluster.prototype.numberOfNodes = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.ownerAccount = function(value) {
 	return this.set('OwnerAccount', value);
@@ -266,7 +266,7 @@ RedshiftCluster.prototype.ownerAccount = function(value) {
  * Update requires: Replacement
  *
  * @param {Number|Attribute|Reference} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.port = function(value) {
 	return this.set('Port', value);
@@ -279,7 +279,7 @@ RedshiftCluster.prototype.port = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.preferredMaintenanceWindow = function(value) {
 	return this.set('PreferredMaintenanceWindow', value);
@@ -292,7 +292,7 @@ RedshiftCluster.prototype.preferredMaintenanceWindow = function(value) {
  * Update requires: Replacement
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.publiclyAccessible = function(value) {
 	return this.set('PubliclyAccessible', value);
@@ -304,8 +304,8 @@ RedshiftCluster.prototype.publiclyAccessible = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {|Attribute|Reference} value
- * @return {RedshiftCluster}
+ * @param {Attribute|Reference} value
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.snapshotClusterIdentifier = function(value) {
 	return this.set('SnapshotClusterIdentifier', value);
@@ -318,7 +318,7 @@ RedshiftCluster.prototype.snapshotClusterIdentifier = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftCluster}
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.snapshotIdentifier = function(value) {
 	return this.set('SnapshotIdentifier', value);
@@ -330,8 +330,8 @@ RedshiftCluster.prototype.snapshotIdentifier = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {RedshiftCluster}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {RedshiftCluster}
  */
 RedshiftCluster.prototype.vpcSecurityGroupIds = function(value) {
 	return this.set('VpcSecurityGroupIds', value);

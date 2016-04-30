@@ -19,15 +19,15 @@ EventsRule.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(EventsRule.prototype, 'attr', {
 	/**
-	 * @return {EventsRuleAttributeMap}
+	 * @returns {EventsRuleAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-1:123456789012:rule/example.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get arn() {
 				return createAttribute('Arn');
@@ -43,7 +43,7 @@ Object.defineProperty(EventsRule.prototype, 'attr', {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EventsRule}
+ * @returns {EventsRule}
  */
 EventsRule.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -56,7 +56,7 @@ EventsRule.prototype.description = function(value) {
  * Update requires: No interruption
  *
  * @param {Object|Attribute|Reference} value
- * @return {EventsRule}
+ * @returns {EventsRule}
  */
 EventsRule.prototype.eventPattern = function(value) {
 	return this.set('EventPattern', value);
@@ -69,7 +69,7 @@ EventsRule.prototype.eventPattern = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EventsRule}
+ * @returns {EventsRule}
  */
 EventsRule.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -82,7 +82,7 @@ EventsRule.prototype.name = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EventsRule}
+ * @returns {EventsRule}
  */
 EventsRule.prototype.roleArn = function(value) {
 	return this.set('RoleArn', value);
@@ -94,8 +94,8 @@ EventsRule.prototype.roleArn = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {|Attribute|Reference} value
- * @return {EventsRule}
+ * @param {Attribute|Reference} value
+ * @returns {EventsRule}
  */
 EventsRule.prototype.scheduleExpression = function(value) {
 	return this.set('ScheduleExpression', value);
@@ -108,7 +108,7 @@ EventsRule.prototype.scheduleExpression = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EventsRule}
+ * @returns {EventsRule}
  */
 EventsRule.prototype.state = function(value) {
 	return this.set('State', value);
@@ -121,7 +121,7 @@ EventsRule.prototype.state = function(value) {
  * Update requires: No interruption
  *
  * @param {CloudWatchEventsRuleTarget[]|Attribute|Reference} value List of Amazon CloudWatch Events Rule Target
- * @return {EventsRule}
+ * @returns {EventsRule}
  */
 EventsRule.prototype.targets = function(value) {
 	return this.set('Targets', value);

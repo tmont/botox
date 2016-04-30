@@ -19,7 +19,7 @@ LogsDestination.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LogsDestination}
+ * @returns {LogsDestination}
  */
 LogsDestination.prototype.destinationName = function(value) {
 	return this.set('DestinationName', value);
@@ -32,7 +32,7 @@ LogsDestination.prototype.destinationName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LogsDestination}
+ * @returns {LogsDestination}
  */
 LogsDestination.prototype.destinationPolicy = function(value) {
 	return this.set('DestinationPolicy', value);
@@ -45,7 +45,7 @@ LogsDestination.prototype.destinationPolicy = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LogsDestination}
+ * @returns {LogsDestination}
  */
 LogsDestination.prototype.roleArn = function(value) {
 	return this.set('RoleArn', value);
@@ -58,7 +58,7 @@ LogsDestination.prototype.roleArn = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {LogsDestination}
+ * @returns {LogsDestination}
  */
 LogsDestination.prototype.targetArn = function(value) {
 	return this.set('TargetArn', value);

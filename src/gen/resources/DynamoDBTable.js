@@ -19,15 +19,15 @@ DynamoDBTable.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(DynamoDBTable.prototype, 'attr', {
 	/**
-	 * @return {DynamoDBTableAttributeMap}
+	 * @returns {DynamoDBTableAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The Amazon Resource Name (ARN) of the DynamoDB stream, such as arn:aws:dynamodb:us-east-1:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get streamArn() {
 				return createAttribute('StreamArn');
@@ -43,7 +43,7 @@ Object.defineProperty(DynamoDBTable.prototype, 'attr', {
  * Update requires: Replacement
  *
  * @param {DynamoDBAttributeDefinitions[]|Attribute|Reference} value List of DynamoDB Attribute Definitions
- * @return {DynamoDBTable}
+ * @returns {DynamoDBTable}
  */
 DynamoDBTable.prototype.attributeDefinitions = function(value) {
 	return this.set('AttributeDefinitions', value);
@@ -56,7 +56,7 @@ DynamoDBTable.prototype.attributeDefinitions = function(value) {
  * Update requires: Updates are not supported. with the following exceptions:
  *
  * @param {DynamoDBGlobalSecondaryIndexes[]|Attribute|Reference} value List of DynamoDB Global Secondary Indexes
- * @return {DynamoDBTable}
+ * @returns {DynamoDBTable}
  */
 DynamoDBTable.prototype.globalSecondaryIndexes = function(value) {
 	return this.set('GlobalSecondaryIndexes', value);
@@ -69,7 +69,7 @@ DynamoDBTable.prototype.globalSecondaryIndexes = function(value) {
  * Update requires: Replacement
  *
  * @param {DynamoDBKeySchema[]|Attribute|Reference} value List of DynamoDB Key Schema
- * @return {DynamoDBTable}
+ * @returns {DynamoDBTable}
  */
 DynamoDBTable.prototype.keySchema = function(value) {
 	return this.set('KeySchema', value);
@@ -82,7 +82,7 @@ DynamoDBTable.prototype.keySchema = function(value) {
  * Update requires: Replacement
  *
  * @param {DynamoDBLocalSecondaryIndexes[]|Attribute|Reference} value List of DynamoDB Local Secondary Indexes
- * @return {DynamoDBTable}
+ * @returns {DynamoDBTable}
  */
 DynamoDBTable.prototype.localSecondaryIndexes = function(value) {
 	return this.set('LocalSecondaryIndexes', value);
@@ -95,7 +95,7 @@ DynamoDBTable.prototype.localSecondaryIndexes = function(value) {
  * Update requires: No interruption
  *
  * @param {DynamoDBProvisionedThroughput|Attribute|Reference} value DynamoDB Provisioned Throughput
- * @return {DynamoDBTable}
+ * @returns {DynamoDBTable}
  */
 DynamoDBTable.prototype.provisionedThroughput = function(value) {
 	return this.set('ProvisionedThroughput', value);
@@ -108,7 +108,7 @@ DynamoDBTable.prototype.provisionedThroughput = function(value) {
  * Update requires: No interruption to the table; however, the stream is replaced.
  *
  * @param {DynamoDBTableStreamSpecification|Attribute|Reference} value DynamoDB Table StreamSpecification
- * @return {DynamoDBTable}
+ * @returns {DynamoDBTable}
  */
 DynamoDBTable.prototype.streamSpecification = function(value) {
 	return this.set('StreamSpecification', value);
@@ -121,7 +121,7 @@ DynamoDBTable.prototype.streamSpecification = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {DynamoDBTable}
+ * @returns {DynamoDBTable}
  */
 DynamoDBTable.prototype.tableName = function(value) {
 	return this.set('TableName', value);

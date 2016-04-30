@@ -19,7 +19,7 @@ RDSDBInstance.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.allocatedStorage = function(value) {
 	return this.set('AllocatedStorage', value);
@@ -32,7 +32,7 @@ RDSDBInstance.prototype.allocatedStorage = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.allowMajorVersionUpgrade = function(value) {
 	return this.set('AllowMajorVersionUpgrade', value);
@@ -45,7 +45,7 @@ RDSDBInstance.prototype.allowMajorVersionUpgrade = function(value) {
  * Update requires: No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference.
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.autoMinorVersionUpgrade = function(value) {
 	return this.set('AutoMinorVersionUpgrade', value);
@@ -58,7 +58,7 @@ RDSDBInstance.prototype.autoMinorVersionUpgrade = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.availabilityZone = function(value) {
 	return this.set('AvailabilityZone', value);
@@ -71,7 +71,7 @@ RDSDBInstance.prototype.availabilityZone = function(value) {
  * Update requires: No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.backupRetentionPeriod = function(value) {
 	return this.set('BackupRetentionPeriod', value);
@@ -84,7 +84,7 @@ RDSDBInstance.prototype.backupRetentionPeriod = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.characterSetName = function(value) {
 	return this.set('CharacterSetName', value);
@@ -97,7 +97,7 @@ RDSDBInstance.prototype.characterSetName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.dbClusterIdentifier = function(value) {
 	return this.set('DBClusterIdentifier', value);
@@ -110,7 +110,7 @@ RDSDBInstance.prototype.dbClusterIdentifier = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.dbInstanceClass = function(value) {
 	return this.set('DBInstanceClass', value);
@@ -123,7 +123,7 @@ RDSDBInstance.prototype.dbInstanceClass = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.dbInstanceIdentifier = function(value) {
 	return this.set('DBInstanceIdentifier', value);
@@ -136,7 +136,7 @@ RDSDBInstance.prototype.dbInstanceIdentifier = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.dbName = function(value) {
 	return this.set('DBName', value);
@@ -149,7 +149,7 @@ RDSDBInstance.prototype.dbName = function(value) {
  * Update requires: No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference. Also, if any of the data members of the referenced parameter group are changed during an update, the database instance may need to be restarted, causing some interruption.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.dbParameterGroupName = function(value) {
 	return this.set('DBParameterGroupName', value);
@@ -161,8 +161,8 @@ RDSDBInstance.prototype.dbParameterGroupName = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {RDSDBInstance}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.dbSecurityGroups = function(value) {
 	return this.set('DBSecurityGroups', value);
@@ -175,7 +175,7 @@ RDSDBInstance.prototype.dbSecurityGroups = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.dbSnapshotIdentifier = function(value) {
 	return this.set('DBSnapshotIdentifier', value);
@@ -188,7 +188,7 @@ RDSDBInstance.prototype.dbSnapshotIdentifier = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.dbSubnetGroupName = function(value) {
 	return this.set('DBSubnetGroupName', value);
@@ -201,7 +201,7 @@ RDSDBInstance.prototype.dbSubnetGroupName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.engine = function(value) {
 	return this.set('Engine', value);
@@ -214,7 +214,7 @@ RDSDBInstance.prototype.engine = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.engineVersion = function(value) {
 	return this.set('EngineVersion', value);
@@ -227,7 +227,7 @@ RDSDBInstance.prototype.engineVersion = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.iops = function(value) {
 	return this.set('Iops', value);
@@ -240,7 +240,7 @@ RDSDBInstance.prototype.iops = function(value) {
  * Update requires: Replacement.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.kmsKeyId = function(value) {
 	return this.set('KmsKeyId', value);
@@ -253,7 +253,7 @@ RDSDBInstance.prototype.kmsKeyId = function(value) {
  * Update requires: Replacement.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.licenseModel = function(value) {
 	return this.set('LicenseModel', value);
@@ -266,7 +266,7 @@ RDSDBInstance.prototype.licenseModel = function(value) {
  * Update requires: Replacement.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.masterUsername = function(value) {
 	return this.set('MasterUsername', value);
@@ -279,7 +279,7 @@ RDSDBInstance.prototype.masterUsername = function(value) {
  * Update requires: No interruption.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.masterUserPassword = function(value) {
 	return this.set('MasterUserPassword', value);
@@ -292,7 +292,7 @@ RDSDBInstance.prototype.masterUserPassword = function(value) {
  * Update requires: No interruption.
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.multiAZ = function(value) {
 	return this.set('MultiAZ', value);
@@ -305,7 +305,7 @@ RDSDBInstance.prototype.multiAZ = function(value) {
  * Update requires: No interruption.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.optionGroupName = function(value) {
 	return this.set('OptionGroupName', value);
@@ -318,7 +318,7 @@ RDSDBInstance.prototype.optionGroupName = function(value) {
  * Update requires: Replacement.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.port = function(value) {
 	return this.set('Port', value);
@@ -331,7 +331,7 @@ RDSDBInstance.prototype.port = function(value) {
  * Update requires: No interruption.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.preferredBackupWindow = function(value) {
 	return this.set('PreferredBackupWindow', value);
@@ -344,7 +344,7 @@ RDSDBInstance.prototype.preferredBackupWindow = function(value) {
  * Update requires: No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.preferredMaintenanceWindow = function(value) {
 	return this.set('PreferredMaintenanceWindow', value);
@@ -357,7 +357,7 @@ RDSDBInstance.prototype.preferredMaintenanceWindow = function(value) {
  * Update requires: Replacement.
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.publiclyAccessible = function(value) {
 	return this.set('PubliclyAccessible', value);
@@ -370,7 +370,7 @@ RDSDBInstance.prototype.publiclyAccessible = function(value) {
  * Update requires: Replacement.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.sourceDBInstanceIdentifier = function(value) {
 	return this.set('SourceDBInstanceIdentifier', value);
@@ -383,7 +383,7 @@ RDSDBInstance.prototype.sourceDBInstanceIdentifier = function(value) {
  * Update requires: Replacement.
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.storageEncrypted = function(value) {
 	return this.set('StorageEncrypted', value);
@@ -396,7 +396,7 @@ RDSDBInstance.prototype.storageEncrypted = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.storageType = function(value) {
 	return this.set('StorageType', value);
@@ -409,7 +409,7 @@ RDSDBInstance.prototype.storageType = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {RDSDBInstance}
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -421,8 +421,8 @@ RDSDBInstance.prototype.tags = function(value) {
  * Required: false
  * Update requires: No interruption.
  *
- * @param {string[]|Attribute|Reference} value
- * @return {RDSDBInstance}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {RDSDBInstance}
  */
 RDSDBInstance.prototype.vpcSecurityGroups = function(value) {
 	return this.set('VPCSecurityGroups', value);

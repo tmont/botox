@@ -17,7 +17,7 @@ ElasticMapReduceClusterApplication.prototype = Object.create(PropertyType.protot
  * Required: false
  *
  * @param {Object} value
- * @return {ElasticMapReduceClusterApplication}
+ * @returns {ElasticMapReduceClusterApplication}
  */
 ElasticMapReduceClusterApplication.prototype.additionalInfo = function(value) {
 	return this.set('AdditionalInfo', value);
@@ -28,8 +28,8 @@ ElasticMapReduceClusterApplication.prototype.additionalInfo = function(value) {
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {ElasticMapReduceClusterApplication}
+ * @param {String[]} value
+ * @returns {ElasticMapReduceClusterApplication}
  */
 ElasticMapReduceClusterApplication.prototype.args = function(value) {
 	return this.set('Args', value);
@@ -41,7 +41,7 @@ ElasticMapReduceClusterApplication.prototype.args = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterApplication}
+ * @returns {ElasticMapReduceClusterApplication}
  */
 ElasticMapReduceClusterApplication.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -53,7 +53,7 @@ ElasticMapReduceClusterApplication.prototype.name = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterApplication}
+ * @returns {ElasticMapReduceClusterApplication}
  */
 ElasticMapReduceClusterApplication.prototype.version = function(value) {
 	return this.set('Version', value);

@@ -17,7 +17,7 @@ ElasticsearchServiceDomainEBSOptions.prototype = Object.create(PropertyType.prot
  * Required: false
  *
  * @param {Boolean} value
- * @return {ElasticsearchServiceDomainEBSOptions}
+ * @returns {ElasticsearchServiceDomainEBSOptions}
  */
 ElasticsearchServiceDomainEBSOptions.prototype.ebsEnabled = function(value) {
 	return this.set('EBSEnabled', value);
@@ -29,7 +29,7 @@ ElasticsearchServiceDomainEBSOptions.prototype.ebsEnabled = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {ElasticsearchServiceDomainEBSOptions}
+ * @returns {ElasticsearchServiceDomainEBSOptions}
  */
 ElasticsearchServiceDomainEBSOptions.prototype.iops = function(value) {
 	return this.set('Iops', value);
@@ -41,7 +41,7 @@ ElasticsearchServiceDomainEBSOptions.prototype.iops = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {ElasticsearchServiceDomainEBSOptions}
+ * @returns {ElasticsearchServiceDomainEBSOptions}
  */
 ElasticsearchServiceDomainEBSOptions.prototype.volumeSize = function(value) {
 	return this.set('VolumeSize', value);
@@ -53,7 +53,7 @@ ElasticsearchServiceDomainEBSOptions.prototype.volumeSize = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {ElasticsearchServiceDomainEBSOptions}
+ * @returns {ElasticsearchServiceDomainEBSOptions}
  */
 ElasticsearchServiceDomainEBSOptions.prototype.volumeType = function(value) {
 	return this.set('VolumeType', value);

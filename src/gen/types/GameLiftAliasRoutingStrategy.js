@@ -17,7 +17,7 @@ GameLiftAliasRoutingStrategy.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {String} value
- * @return {GameLiftAliasRoutingStrategy}
+ * @returns {GameLiftAliasRoutingStrategy}
  */
 GameLiftAliasRoutingStrategy.prototype.fleetId = function(value) {
 	return this.set('FleetId', value);
@@ -29,7 +29,7 @@ GameLiftAliasRoutingStrategy.prototype.fleetId = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {GameLiftAliasRoutingStrategy}
+ * @returns {GameLiftAliasRoutingStrategy}
  */
 GameLiftAliasRoutingStrategy.prototype.message = function(value) {
 	return this.set('Message', value);
@@ -41,7 +41,7 @@ GameLiftAliasRoutingStrategy.prototype.message = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {GameLiftAliasRoutingStrategy}
+ * @returns {GameLiftAliasRoutingStrategy}
  */
 GameLiftAliasRoutingStrategy.prototype.type = function(value) {
 	return this.set('Type', value);

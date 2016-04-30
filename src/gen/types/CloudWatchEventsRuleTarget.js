@@ -17,7 +17,7 @@ CloudWatchEventsRuleTarget.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {CloudWatchEventsRuleTarget}
+ * @returns {CloudWatchEventsRuleTarget}
  */
 CloudWatchEventsRuleTarget.prototype.arn = function(value) {
 	return this.set('Arn', value);
@@ -29,7 +29,7 @@ CloudWatchEventsRuleTarget.prototype.arn = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {CloudWatchEventsRuleTarget}
+ * @returns {CloudWatchEventsRuleTarget}
  */
 CloudWatchEventsRuleTarget.prototype.id = function(value) {
 	return this.set('Id', value);
@@ -41,7 +41,7 @@ CloudWatchEventsRuleTarget.prototype.id = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {CloudWatchEventsRuleTarget}
+ * @returns {CloudWatchEventsRuleTarget}
  */
 CloudWatchEventsRuleTarget.prototype.input = function(value) {
 	return this.set('Input', value);
@@ -53,7 +53,7 @@ CloudWatchEventsRuleTarget.prototype.input = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {CloudWatchEventsRuleTarget}
+ * @returns {CloudWatchEventsRuleTarget}
  */
 CloudWatchEventsRuleTarget.prototype.inputPath = function(value) {
 	return this.set('InputPath', value);

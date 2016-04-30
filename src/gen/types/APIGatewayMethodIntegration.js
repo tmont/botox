@@ -16,8 +16,8 @@ APIGatewayMethodIntegration.prototype = Object.create(PropertyType.prototype);
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {APIGatewayMethodIntegration}
+ * @param {String[]} value
+ * @returns {APIGatewayMethodIntegration}
  */
 APIGatewayMethodIntegration.prototype.cacheKeyParameters = function(value) {
 	return this.set('CacheKeyParameters', value);
@@ -29,7 +29,7 @@ APIGatewayMethodIntegration.prototype.cacheKeyParameters = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayMethodIntegration}
+ * @returns {APIGatewayMethodIntegration}
  */
 APIGatewayMethodIntegration.prototype.cacheNamespace = function(value) {
 	return this.set('CacheNamespace', value);
@@ -41,7 +41,7 @@ APIGatewayMethodIntegration.prototype.cacheNamespace = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayMethodIntegration}
+ * @returns {APIGatewayMethodIntegration}
  */
 APIGatewayMethodIntegration.prototype.credentials = function(value) {
 	return this.set('Credentials', value);
@@ -53,7 +53,7 @@ APIGatewayMethodIntegration.prototype.credentials = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayMethodIntegration}
+ * @returns {APIGatewayMethodIntegration}
  */
 APIGatewayMethodIntegration.prototype.integrationHttpMethod = function(value) {
 	return this.set('IntegrationHttpMethod', value);
@@ -65,7 +65,7 @@ APIGatewayMethodIntegration.prototype.integrationHttpMethod = function(value) {
  * Required: false
  *
  * @param {APIGatewayMethodIntegrationIntegrationResponse[]} value
- * @return {APIGatewayMethodIntegration}
+ * @returns {APIGatewayMethodIntegration}
  */
 APIGatewayMethodIntegration.prototype.integrationResponses = function(value) {
 	return this.set('IntegrationResponses', value);
@@ -77,7 +77,7 @@ APIGatewayMethodIntegration.prototype.integrationResponses = function(value) {
  * Required: false
  *
  * @param {key[]} value
- * @return {APIGatewayMethodIntegration}
+ * @returns {APIGatewayMethodIntegration}
  */
 APIGatewayMethodIntegration.prototype.requestParameters = function(value) {
 	return this.set('RequestParameters', value);
@@ -89,7 +89,7 @@ APIGatewayMethodIntegration.prototype.requestParameters = function(value) {
  * Required: false
  *
  * @param {key[]} value
- * @return {APIGatewayMethodIntegration}
+ * @returns {APIGatewayMethodIntegration}
  */
 APIGatewayMethodIntegration.prototype.requestTemplates = function(value) {
 	return this.set('RequestTemplates', value);
@@ -101,7 +101,7 @@ APIGatewayMethodIntegration.prototype.requestTemplates = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayMethodIntegration}
+ * @returns {APIGatewayMethodIntegration}
  */
 APIGatewayMethodIntegration.prototype.type = function(value) {
 	return this.set('Type', value);
@@ -113,7 +113,7 @@ APIGatewayMethodIntegration.prototype.type = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayMethodIntegration}
+ * @returns {APIGatewayMethodIntegration}
  */
 APIGatewayMethodIntegration.prototype.uri = function(value) {
 	return this.set('Uri', value);

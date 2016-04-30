@@ -17,7 +17,7 @@ EC2NetworkInterfaceEmbeddedPropertyType.prototype = Object.create(PropertyType.p
  * Required: false
  *
  * @param {Boolean} value
- * @return {EC2NetworkInterfaceEmbeddedPropertyType}
+ * @returns {EC2NetworkInterfaceEmbeddedPropertyType}
  */
 EC2NetworkInterfaceEmbeddedPropertyType.prototype.associatePublicIpAddress = function(value) {
 	return this.set('AssociatePublicIpAddress', value);
@@ -29,7 +29,7 @@ EC2NetworkInterfaceEmbeddedPropertyType.prototype.associatePublicIpAddress = fun
  * Required: false
  *
  * @param {Boolean} value
- * @return {EC2NetworkInterfaceEmbeddedPropertyType}
+ * @returns {EC2NetworkInterfaceEmbeddedPropertyType}
  */
 EC2NetworkInterfaceEmbeddedPropertyType.prototype.deleteOnTermination = function(value) {
 	return this.set('DeleteOnTermination', value);
@@ -41,7 +41,7 @@ EC2NetworkInterfaceEmbeddedPropertyType.prototype.deleteOnTermination = function
  * Required: false
  *
  * @param {String} value
- * @return {EC2NetworkInterfaceEmbeddedPropertyType}
+ * @returns {EC2NetworkInterfaceEmbeddedPropertyType}
  */
 EC2NetworkInterfaceEmbeddedPropertyType.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -53,7 +53,7 @@ EC2NetworkInterfaceEmbeddedPropertyType.prototype.description = function(value) 
  * Required: true
  *
  * @param {String} value
- * @return {EC2NetworkInterfaceEmbeddedPropertyType}
+ * @returns {EC2NetworkInterfaceEmbeddedPropertyType}
  */
 EC2NetworkInterfaceEmbeddedPropertyType.prototype.deviceIndex = function(value) {
 	return this.set('DeviceIndex', value);
@@ -64,8 +64,8 @@ EC2NetworkInterfaceEmbeddedPropertyType.prototype.deviceIndex = function(value) 
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {EC2NetworkInterfaceEmbeddedPropertyType}
+ * @param {String[]} value
+ * @returns {EC2NetworkInterfaceEmbeddedPropertyType}
  */
 EC2NetworkInterfaceEmbeddedPropertyType.prototype.groupSet = function(value) {
 	return this.set('GroupSet', value);
@@ -77,7 +77,7 @@ EC2NetworkInterfaceEmbeddedPropertyType.prototype.groupSet = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {EC2NetworkInterfaceEmbeddedPropertyType}
+ * @returns {EC2NetworkInterfaceEmbeddedPropertyType}
  */
 EC2NetworkInterfaceEmbeddedPropertyType.prototype.networkInterfaceId = function(value) {
 	return this.set('NetworkInterfaceId', value);
@@ -89,7 +89,7 @@ EC2NetworkInterfaceEmbeddedPropertyType.prototype.networkInterfaceId = function(
  * Required: false
  *
  * @param {String} value
- * @return {EC2NetworkInterfaceEmbeddedPropertyType}
+ * @returns {EC2NetworkInterfaceEmbeddedPropertyType}
  */
 EC2NetworkInterfaceEmbeddedPropertyType.prototype.privateIpAddress = function(value) {
 	return this.set('PrivateIpAddress', value);
@@ -101,7 +101,7 @@ EC2NetworkInterfaceEmbeddedPropertyType.prototype.privateIpAddress = function(va
  * Required: false
  *
  * @param {EC2NetworkInterfacePrivateIPSpecification[]} value
- * @return {EC2NetworkInterfaceEmbeddedPropertyType}
+ * @returns {EC2NetworkInterfaceEmbeddedPropertyType}
  */
 EC2NetworkInterfaceEmbeddedPropertyType.prototype.privateIpAddresses = function(value) {
 	return this.set('PrivateIpAddresses', value);
@@ -113,7 +113,7 @@ EC2NetworkInterfaceEmbeddedPropertyType.prototype.privateIpAddresses = function(
  * Required: false
  *
  * @param {Number} value
- * @return {EC2NetworkInterfaceEmbeddedPropertyType}
+ * @returns {EC2NetworkInterfaceEmbeddedPropertyType}
  */
 EC2NetworkInterfaceEmbeddedPropertyType.prototype.secondaryPrivateIpAddressCount = function(value) {
 	return this.set('SecondaryPrivateIpAddressCount', value);
@@ -125,7 +125,7 @@ EC2NetworkInterfaceEmbeddedPropertyType.prototype.secondaryPrivateIpAddressCount
  * Required: false
  *
  * @param {String} value
- * @return {EC2NetworkInterfaceEmbeddedPropertyType}
+ * @returns {EC2NetworkInterfaceEmbeddedPropertyType}
  */
 EC2NetworkInterfaceEmbeddedPropertyType.prototype.subnetId = function(value) {
 	return this.set('SubnetId', value);

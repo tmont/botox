@@ -19,7 +19,7 @@ EC2EIPAssociation.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement if you also change the InstanceId or NetworkInterfaceId property. If not, update requires No interruption.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2EIPAssociation}
+ * @returns {EC2EIPAssociation}
  */
 EC2EIPAssociation.prototype.allocationId = function(value) {
 	return this.set('AllocationId', value);
@@ -32,7 +32,7 @@ EC2EIPAssociation.prototype.allocationId = function(value) {
  * Update requires: Replacement if you also change the InstanceId or NetworkInterfaceId property. If not, update requires No interruption.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2EIPAssociation}
+ * @returns {EC2EIPAssociation}
  */
 EC2EIPAssociation.prototype.eip = function(value) {
 	return this.set('EIP', value);
@@ -45,7 +45,7 @@ EC2EIPAssociation.prototype.eip = function(value) {
  * Update requires: Replacement if you also change the AllocationId or EIP property. If not, update requires No interruption.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2EIPAssociation}
+ * @returns {EC2EIPAssociation}
  */
 EC2EIPAssociation.prototype.instanceId = function(value) {
 	return this.set('InstanceId', value);
@@ -58,7 +58,7 @@ EC2EIPAssociation.prototype.instanceId = function(value) {
  * Update requires: Replacement if you also change the AllocationId or EIP property. If not, update requires No interruption.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2EIPAssociation}
+ * @returns {EC2EIPAssociation}
  */
 EC2EIPAssociation.prototype.networkInterfaceId = function(value) {
 	return this.set('NetworkInterfaceId', value);
@@ -71,7 +71,7 @@ EC2EIPAssociation.prototype.networkInterfaceId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2EIPAssociation}
+ * @returns {EC2EIPAssociation}
  */
 EC2EIPAssociation.prototype.privateIpAddress = function(value) {
 	return this.set('PrivateIpAddress', value);

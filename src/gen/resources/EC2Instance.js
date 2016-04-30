@@ -23,15 +23,15 @@ EC2Instance.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(EC2Instance.prototype, 'attr', {
 	/**
-	 * @return {EC2InstanceAttributeMap}
+	 * @returns {EC2InstanceAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The Availability Zone where the specified instance is launched. For example: us-east-1b.You can retrieve a list of all Availability Zones for a region by using the Fn::GetAZs intrinsic function.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get availabilityZone() {
 				return createAttribute('AvailabilityZone');
@@ -39,7 +39,7 @@ Object.defineProperty(EC2Instance.prototype, 'attr', {
 
 			/**
 			 * The private DNS name of the specified instance. For example: ip-10-24-34-0.ec2.internal.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get privateDnsName() {
 				return createAttribute('PrivateDnsName');
@@ -47,7 +47,7 @@ Object.defineProperty(EC2Instance.prototype, 'attr', {
 
 			/**
 			 * The private IP address of the specified instance. For example: 10.24.34.0.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get privateIp() {
 				return createAttribute('PrivateIp');
@@ -55,7 +55,7 @@ Object.defineProperty(EC2Instance.prototype, 'attr', {
 
 			/**
 			 * The public DNS name of the specified instance. For example: ec2-107-20-50-45.compute-1.amazonaws.com.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get publicDnsName() {
 				return createAttribute('PublicDnsName');
@@ -63,7 +63,7 @@ Object.defineProperty(EC2Instance.prototype, 'attr', {
 
 			/**
 			 * The public IP address of the specified instance. For example: 192.0.2.0.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get publicIp() {
 				return createAttribute('PublicIp');
@@ -79,7 +79,7 @@ Object.defineProperty(EC2Instance.prototype, 'attr', {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.affinity = function(value) {
 	return this.set('Affinity', value);
@@ -92,7 +92,7 @@ EC2Instance.prototype.affinity = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.availabilityZone = function(value) {
 	return this.set('AvailabilityZone', value);
@@ -105,7 +105,7 @@ EC2Instance.prototype.availabilityZone = function(value) {
  * Update requires: Replacement. If you change only the DeleteOnTermination property for one or more block devices, update requires No interruption.
  *
  * @param {EC2BlockDeviceMappingProperty[]|Attribute|Reference} value A list of Amazon EC2 Block Device Mapping Property.
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.blockDeviceMappings = function(value) {
 	return this.set('BlockDeviceMappings', value);
@@ -118,7 +118,7 @@ EC2Instance.prototype.blockDeviceMappings = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.disableApiTermination = function(value) {
 	return this.set('DisableApiTermination', value);
@@ -131,7 +131,7 @@ EC2Instance.prototype.disableApiTermination = function(value) {
  * Update requires: Some interruptions for Amazon EBS-backed instances
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.ebsOptimized = function(value) {
 	return this.set('EbsOptimized', value);
@@ -144,7 +144,7 @@ EC2Instance.prototype.ebsOptimized = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.hostId = function(value) {
 	return this.set('HostId', value);
@@ -157,7 +157,7 @@ EC2Instance.prototype.hostId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.iamInstanceProfile = function(value) {
 	return this.set('IamInstanceProfile', value);
@@ -170,7 +170,7 @@ EC2Instance.prototype.iamInstanceProfile = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.imageId = function(value) {
 	return this.set('ImageId', value);
@@ -183,7 +183,7 @@ EC2Instance.prototype.imageId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.instanceInitiatedShutdownBehavior = function(value) {
 	return this.set('InstanceInitiatedShutdownBehavior', value);
@@ -196,7 +196,7 @@ EC2Instance.prototype.instanceInitiatedShutdownBehavior = function(value) {
  * Update requires: Some interruptions for Amazon EBS-backed instances
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.instanceType = function(value) {
 	return this.set('InstanceType', value);
@@ -209,7 +209,7 @@ EC2Instance.prototype.instanceType = function(value) {
  * Update requires: Some interruptions for Amazon EBS-backed instances
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.kernelId = function(value) {
 	return this.set('KernelId', value);
@@ -222,7 +222,7 @@ EC2Instance.prototype.kernelId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.keyName = function(value) {
 	return this.set('KeyName', value);
@@ -235,7 +235,7 @@ EC2Instance.prototype.keyName = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.monitoring = function(value) {
 	return this.set('Monitoring', value);
@@ -248,7 +248,7 @@ EC2Instance.prototype.monitoring = function(value) {
  * Update requires: Replacement
  *
  * @param {EC2NetworkInterfaceEmbeddedPropertyType[]|Attribute|Reference} value A list of EC2 NetworkInterface Embedded Property Type
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.networkInterfaces = function(value) {
 	return this.set('NetworkInterfaces', value);
@@ -261,7 +261,7 @@ EC2Instance.prototype.networkInterfaces = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.placementGroupName = function(value) {
 	return this.set('PlacementGroupName', value);
@@ -274,7 +274,7 @@ EC2Instance.prototype.placementGroupName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.privateIpAddress = function(value) {
 	return this.set('PrivateIpAddress', value);
@@ -287,7 +287,7 @@ EC2Instance.prototype.privateIpAddress = function(value) {
  * Update requires: Some interruptions for Amazon EBS-backed instances
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.ramdiskId = function(value) {
 	return this.set('RamdiskId', value);
@@ -299,8 +299,8 @@ EC2Instance.prototype.ramdiskId = function(value) {
  * Required: false
  * Update requires: No interruption for instances that are in a VPC.
  *
- * @param {string[]|Attribute|Reference} value
- * @return {EC2Instance}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.securityGroupIds = function(value) {
 	return this.set('SecurityGroupIds', value);
@@ -312,8 +312,8 @@ EC2Instance.prototype.securityGroupIds = function(value) {
  * Required: false
  * Update requires: Replacement.
  *
- * @param {string[]|Attribute|Reference} value
- * @return {EC2Instance}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.securityGroups = function(value) {
 	return this.set('SecurityGroups', value);
@@ -326,7 +326,7 @@ EC2Instance.prototype.securityGroups = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.sourceDestCheck = function(value) {
 	return this.set('SourceDestCheck', value);
@@ -339,7 +339,7 @@ EC2Instance.prototype.sourceDestCheck = function(value) {
  * Update requires: No interruption
  *
  * @param {EC2InstanceSsmAssociations[]|Attribute|Reference} value List of Amazon EC2 Instance SsmAssociations.
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.ssmAssociations = function(value) {
 	return this.set('SsmAssociations', value);
@@ -352,7 +352,7 @@ EC2Instance.prototype.ssmAssociations = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.subnetId = function(value) {
 	return this.set('SubnetId', value);
@@ -365,7 +365,7 @@ EC2Instance.prototype.subnetId = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -378,7 +378,7 @@ EC2Instance.prototype.tags = function(value) {
  * Update requires: No interruption if this property was set to dedicated and you change it to host or vice versa.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.tenancy = function(value) {
 	return this.set('Tenancy', value);
@@ -391,7 +391,7 @@ EC2Instance.prototype.tenancy = function(value) {
  * Update requires: Some interruptions for Amazon EBS-backed instances.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.userData = function(value) {
 	return this.set('UserData', value);
@@ -404,7 +404,7 @@ EC2Instance.prototype.userData = function(value) {
  * Update requires: No interruption
  *
  * @param {EC2MountPointPropertyType[]|Attribute|Reference} value A list of EC2 MountPoints.
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.volumes = function(value) {
 	return this.set('Volumes', value);
@@ -417,7 +417,7 @@ EC2Instance.prototype.volumes = function(value) {
  * Update requires: Some interruptions for Amazon EBS-backed instances
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Instance}
+ * @returns {EC2Instance}
  */
 EC2Instance.prototype.additionalInfo = function(value) {
 	return this.set('AdditionalInfo', value);

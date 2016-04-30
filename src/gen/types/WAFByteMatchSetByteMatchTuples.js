@@ -17,7 +17,7 @@ WAFByteMatchSetByteMatchTuples.prototype = Object.create(PropertyType.prototype)
  * Required: true
  *
  * @param {WAFByteMatchSetByteMatchTuplesFieldToMatch} value
- * @return {WAFByteMatchSetByteMatchTuples}
+ * @returns {WAFByteMatchSetByteMatchTuples}
  */
 WAFByteMatchSetByteMatchTuples.prototype.fieldToMatch = function(value) {
 	return this.set('FieldToMatch', value);
@@ -29,7 +29,7 @@ WAFByteMatchSetByteMatchTuples.prototype.fieldToMatch = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {WAFByteMatchSetByteMatchTuples}
+ * @returns {WAFByteMatchSetByteMatchTuples}
  */
 WAFByteMatchSetByteMatchTuples.prototype.positionalConstraint = function(value) {
 	return this.set('PositionalConstraint', value);
@@ -41,7 +41,7 @@ WAFByteMatchSetByteMatchTuples.prototype.positionalConstraint = function(value) 
  * Required: false
  *
  * @param {String} value
- * @return {WAFByteMatchSetByteMatchTuples}
+ * @returns {WAFByteMatchSetByteMatchTuples}
  */
 WAFByteMatchSetByteMatchTuples.prototype.targetString = function(value) {
 	return this.set('TargetString', value);
@@ -53,7 +53,7 @@ WAFByteMatchSetByteMatchTuples.prototype.targetString = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {WAFByteMatchSetByteMatchTuples}
+ * @returns {WAFByteMatchSetByteMatchTuples}
  */
 WAFByteMatchSetByteMatchTuples.prototype.targetStringBase64 = function(value) {
 	return this.set('TargetStringBase64', value);
@@ -65,7 +65,7 @@ WAFByteMatchSetByteMatchTuples.prototype.targetStringBase64 = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {WAFByteMatchSetByteMatchTuples}
+ * @returns {WAFByteMatchSetByteMatchTuples}
  */
 WAFByteMatchSetByteMatchTuples.prototype.textTransformation = function(value) {
 	return this.set('TextTransformation', value);

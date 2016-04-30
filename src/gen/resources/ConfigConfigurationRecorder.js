@@ -19,7 +19,7 @@ ConfigConfigurationRecorder.prototype = Object.create(Resource.prototype);
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ConfigConfigurationRecorder}
+ * @returns {ConfigConfigurationRecorder}
  */
 ConfigConfigurationRecorder.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -32,7 +32,7 @@ ConfigConfigurationRecorder.prototype.name = function(value) {
  * Update requires: No interruption
  *
  * @param {ConfigConfigurationRecorderRecordingGroup|Attribute|Reference} value AWS Config ConfigurationRecorder RecordingGroup
- * @return {ConfigConfigurationRecorder}
+ * @returns {ConfigConfigurationRecorder}
  */
 ConfigConfigurationRecorder.prototype.recordingGroup = function(value) {
 	return this.set('RecordingGroup', value);
@@ -45,7 +45,7 @@ ConfigConfigurationRecorder.prototype.recordingGroup = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ConfigConfigurationRecorder}
+ * @returns {ConfigConfigurationRecorder}
  */
 ConfigConfigurationRecorder.prototype.roleARN = function(value) {
 	return this.set('RoleARN', value);

@@ -18,7 +18,7 @@
       "description": "The names of groups to attach to this policy.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {
@@ -42,7 +42,7 @@
       "description": "The names of roles to attach to this policy.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {
@@ -50,7 +50,7 @@
       "description": "The names of users to attach to this policy.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     }
   ],

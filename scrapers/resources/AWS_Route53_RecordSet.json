@@ -23,7 +23,7 @@
     },
     {
       "name": "Failover",
-      "description": "Designates the record set as a PRIMARY or SECONDARY failover record set. When you have more than one resource performing the same function, you can configure Amazon Route 53 to check the health of your resources and use only health resources to respond to DNS queries. You cannot create nonfailover resource record sets that have the same Name and Type property values as failover resource record sets. For more information, see the Failover element in the Amazon Route 53 API Reference.",
+      "description": "Designates the record set as a PRIMARY or SECONDARY failover record set. When you have more than one resource performing the same function, you can configure Amazon Route 53 to check the health of your resources and use only health resources to respond to DNS queries. You cannot create nonfailover resource record sets that have the same Name and Type property values as failover resource record sets. For more information, see the Failover element in the Amazon Route 53 API Reference.",
       "typeDescription": "String",
       "required": false,
       "type": "String",
@@ -31,15 +31,15 @@
     },
     {
       "name": "GeoLocation",
-      "description": "Describes how Amazon Route 53 responds to DNS queries based on the geographic origin of the query.",
-      "typeDescription": "Amazon Route 53 Record Set GeoLocation Property",
+      "description": "Describes how Amazon Route 53 responds to DNS queries based on the geographic origin of the query.",
+      "typeDescription": "Amazon Route 53 Record Set GeoLocation Property",
       "required": false,
       "type": "Route53RecordSetGeoLocationProperty",
       "update": "No interruption"
     },
     {
       "name": "HealthCheckId",
-      "description": "The health check ID that you want to apply to this record set. Amazon Route 53 returns this resource record set in response to a DNS query only while record set is healthy.",
+      "description": "The health check ID that you want to apply to this record set. Amazon Route 53 returns this resource record set in response to a DNS query only while record set is healthy.",
       "typeDescription": "String",
       "required": false,
       "type": "String",
@@ -77,10 +77,10 @@
     },
     {
       "name": "ResourceRecords",
-      "description": "List of resource records to add. Each record should be in the format appropriate for the record type specified by the Type property. For information about different record types and their record formats, see Appendix: Domain Name Format in the Amazon Route 53 Developer Guide.",
+      "description": "List of resource records to add. Each record should be in the format appropriate for the record type specified by the Type property. For information about different record types and their record formats, see Appendix: Domain Name Format in the Amazon Route 53 Developer Guide.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {

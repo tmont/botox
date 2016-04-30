@@ -17,7 +17,7 @@ CloudFrontDistributionConfigOriginCustomOrigin.prototype = Object.create(Propert
  * Required: false
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigOriginCustomOrigin}
+ * @returns {CloudFrontDistributionConfigOriginCustomOrigin}
  */
 CloudFrontDistributionConfigOriginCustomOrigin.prototype.httpPort = function(value) {
 	return this.set('HTTPPort', value);
@@ -29,7 +29,7 @@ CloudFrontDistributionConfigOriginCustomOrigin.prototype.httpPort = function(val
  * Required: false
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigOriginCustomOrigin}
+ * @returns {CloudFrontDistributionConfigOriginCustomOrigin}
  */
 CloudFrontDistributionConfigOriginCustomOrigin.prototype.httpsPort = function(value) {
 	return this.set('HTTPSPort', value);
@@ -41,7 +41,7 @@ CloudFrontDistributionConfigOriginCustomOrigin.prototype.httpsPort = function(va
  * Required: true
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigOriginCustomOrigin}
+ * @returns {CloudFrontDistributionConfigOriginCustomOrigin}
  */
 CloudFrontDistributionConfigOriginCustomOrigin.prototype.originProtocolPolicy = function(value) {
 	return this.set('OriginProtocolPolicy', value);

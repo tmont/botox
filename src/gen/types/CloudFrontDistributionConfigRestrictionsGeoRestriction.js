@@ -16,8 +16,8 @@ CloudFrontDistributionConfigRestrictionsGeoRestriction.prototype = Object.create
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {CloudFrontDistributionConfigRestrictionsGeoRestriction}
+ * @param {String[]} value
+ * @returns {CloudFrontDistributionConfigRestrictionsGeoRestriction}
  */
 CloudFrontDistributionConfigRestrictionsGeoRestriction.prototype.locations = function(value) {
 	return this.set('Locations', value);
@@ -29,7 +29,7 @@ CloudFrontDistributionConfigRestrictionsGeoRestriction.prototype.locations = fun
  * Required: true
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigRestrictionsGeoRestriction}
+ * @returns {CloudFrontDistributionConfigRestrictionsGeoRestriction}
  */
 CloudFrontDistributionConfigRestrictionsGeoRestriction.prototype.restrictionType = function(value) {
 	return this.set('RestrictionType', value);

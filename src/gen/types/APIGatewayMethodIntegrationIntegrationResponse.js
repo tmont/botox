@@ -17,7 +17,7 @@ APIGatewayMethodIntegrationIntegrationResponse.prototype = Object.create(Propert
  * Required: false
  *
  * @param {key[]} value
- * @return {APIGatewayMethodIntegrationIntegrationResponse}
+ * @returns {APIGatewayMethodIntegrationIntegrationResponse}
  */
 APIGatewayMethodIntegrationIntegrationResponse.prototype.responseParameters = function(value) {
 	return this.set('ResponseParameters', value);
@@ -29,7 +29,7 @@ APIGatewayMethodIntegrationIntegrationResponse.prototype.responseParameters = fu
  * Required: false
  *
  * @param {key[]} value
- * @return {APIGatewayMethodIntegrationIntegrationResponse}
+ * @returns {APIGatewayMethodIntegrationIntegrationResponse}
  */
 APIGatewayMethodIntegrationIntegrationResponse.prototype.responseTemplates = function(value) {
 	return this.set('ResponseTemplates', value);
@@ -41,7 +41,7 @@ APIGatewayMethodIntegrationIntegrationResponse.prototype.responseTemplates = fun
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayMethodIntegrationIntegrationResponse}
+ * @returns {APIGatewayMethodIntegrationIntegrationResponse}
  */
 APIGatewayMethodIntegrationIntegrationResponse.prototype.selectionPattern = function(value) {
 	return this.set('SelectionPattern', value);
@@ -53,7 +53,7 @@ APIGatewayMethodIntegrationIntegrationResponse.prototype.selectionPattern = func
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayMethodIntegrationIntegrationResponse}
+ * @returns {APIGatewayMethodIntegrationIntegrationResponse}
  */
 APIGatewayMethodIntegrationIntegrationResponse.prototype.statusCode = function(value) {
 	return this.set('StatusCode', value);

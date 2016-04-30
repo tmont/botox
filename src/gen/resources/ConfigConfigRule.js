@@ -21,15 +21,15 @@ ConfigConfigRule.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(ConfigConfigRule.prototype, 'attr', {
 	/**
-	 * @return {ConfigConfigRuleAttributeMap}
+	 * @returns {ConfigConfigRuleAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The Amazon Resource Name (ARN) of the AWS Config rule, such as arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get arn() {
 				return createAttribute('Arn');
@@ -37,7 +37,7 @@ Object.defineProperty(ConfigConfigRule.prototype, 'attr', {
 
 			/**
 			 * The compliance status of an AWS Config rule, such as COMPLIANT or NON_COMPLIANT.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get complianceType() {
 				return createAttribute('Compliance.Type');
@@ -45,7 +45,7 @@ Object.defineProperty(ConfigConfigRule.prototype, 'attr', {
 
 			/**
 			 * The ID of the AWS Config rule, such as config-rule-a1bzhi.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get configRuleId() {
 				return createAttribute('ConfigRuleId');
@@ -61,7 +61,7 @@ Object.defineProperty(ConfigConfigRule.prototype, 'attr', {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ConfigConfigRule}
+ * @returns {ConfigConfigRule}
  */
 ConfigConfigRule.prototype.configRuleName = function(value) {
 	return this.set('ConfigRuleName', value);
@@ -74,7 +74,7 @@ ConfigConfigRule.prototype.configRuleName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ConfigConfigRule}
+ * @returns {ConfigConfigRule}
  */
 ConfigConfigRule.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -87,7 +87,7 @@ ConfigConfigRule.prototype.description = function(value) {
  * Update requires: No interruption
  *
  * @param {Object|Attribute|Reference} value
- * @return {ConfigConfigRule}
+ * @returns {ConfigConfigRule}
  */
 ConfigConfigRule.prototype.inputParameters = function(value) {
 	return this.set('InputParameters', value);
@@ -100,7 +100,7 @@ ConfigConfigRule.prototype.inputParameters = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ConfigConfigRule}
+ * @returns {ConfigConfigRule}
  */
 ConfigConfigRule.prototype.maximumExecutionFrequency = function(value) {
 	return this.set('MaximumExecutionFrequency', value);
@@ -113,7 +113,7 @@ ConfigConfigRule.prototype.maximumExecutionFrequency = function(value) {
  * Update requires: No interruption
  *
  * @param {ConfigConfigRuleScope|Attribute|Reference} value AWS Config ConfigRule Scope
- * @return {ConfigConfigRule}
+ * @returns {ConfigConfigRule}
  */
 ConfigConfigRule.prototype.scope = function(value) {
 	return this.set('Scope', value);
@@ -126,7 +126,7 @@ ConfigConfigRule.prototype.scope = function(value) {
  * Update requires: No interruption
  *
  * @param {ConfigConfigRuleSource|Attribute|Reference} value AWS Config ConfigRule Source
- * @return {ConfigConfigRule}
+ * @returns {ConfigConfigRule}
  */
 ConfigConfigRule.prototype.source = function(value) {
 	return this.set('Source', value);

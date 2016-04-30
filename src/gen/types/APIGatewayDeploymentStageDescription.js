@@ -17,7 +17,7 @@ APIGatewayDeploymentStageDescription.prototype = Object.create(PropertyType.prot
  * Required: false
  *
  * @param {Boolean} value
- * @return {APIGatewayDeploymentStageDescription}
+ * @returns {APIGatewayDeploymentStageDescription}
  */
 APIGatewayDeploymentStageDescription.prototype.cacheClusterEnabled = function(value) {
 	return this.set('CacheClusterEnabled', value);
@@ -29,7 +29,7 @@ APIGatewayDeploymentStageDescription.prototype.cacheClusterEnabled = function(va
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayDeploymentStageDescription}
+ * @returns {APIGatewayDeploymentStageDescription}
  */
 APIGatewayDeploymentStageDescription.prototype.cacheClusterSize = function(value) {
 	return this.set('CacheClusterSize', value);
@@ -41,7 +41,7 @@ APIGatewayDeploymentStageDescription.prototype.cacheClusterSize = function(value
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayDeploymentStageDescription}
+ * @returns {APIGatewayDeploymentStageDescription}
  */
 APIGatewayDeploymentStageDescription.prototype.clientCertificateId = function(value) {
 	return this.set('ClientCertificateId', value);
@@ -53,7 +53,7 @@ APIGatewayDeploymentStageDescription.prototype.clientCertificateId = function(va
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayDeploymentStageDescription}
+ * @returns {APIGatewayDeploymentStageDescription}
  */
 APIGatewayDeploymentStageDescription.prototype.deploymentId = function(value) {
 	return this.set('DeploymentId', value);
@@ -65,7 +65,7 @@ APIGatewayDeploymentStageDescription.prototype.deploymentId = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayDeploymentStageDescription}
+ * @returns {APIGatewayDeploymentStageDescription}
  */
 APIGatewayDeploymentStageDescription.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -77,7 +77,7 @@ APIGatewayDeploymentStageDescription.prototype.description = function(value) {
  * Required: false
  *
  * @param {APIGatewayDeploymentStageDescriptionMethodSetting} value
- * @return {APIGatewayDeploymentStageDescription}
+ * @returns {APIGatewayDeploymentStageDescription}
  */
 APIGatewayDeploymentStageDescription.prototype.methodSettings = function(value) {
 	return this.set('MethodSettings', value);
@@ -89,7 +89,7 @@ APIGatewayDeploymentStageDescription.prototype.methodSettings = function(value) 
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayDeploymentStageDescription}
+ * @returns {APIGatewayDeploymentStageDescription}
  */
 APIGatewayDeploymentStageDescription.prototype.restApiId = function(value) {
 	return this.set('RestApiId', value);
@@ -101,7 +101,7 @@ APIGatewayDeploymentStageDescription.prototype.restApiId = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayDeploymentStageDescription}
+ * @returns {APIGatewayDeploymentStageDescription}
  */
 APIGatewayDeploymentStageDescription.prototype.stageName = function(value) {
 	return this.set('StageName', value);
@@ -113,7 +113,7 @@ APIGatewayDeploymentStageDescription.prototype.stageName = function(value) {
  * Required: false
  *
  * @param {key[]} value
- * @return {APIGatewayDeploymentStageDescription}
+ * @returns {APIGatewayDeploymentStageDescription}
  */
 APIGatewayDeploymentStageDescription.prototype.variables = function(value) {
 	return this.set('Variables', value);

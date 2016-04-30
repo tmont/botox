@@ -17,7 +17,7 @@ DynamoDBProvisionedThroughput.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {Number} value
- * @return {DynamoDBProvisionedThroughput}
+ * @returns {DynamoDBProvisionedThroughput}
  */
 DynamoDBProvisionedThroughput.prototype.readCapacityUnits = function(value) {
 	return this.set('ReadCapacityUnits', value);
@@ -29,7 +29,7 @@ DynamoDBProvisionedThroughput.prototype.readCapacityUnits = function(value) {
  * Required: true
  *
  * @param {Number} value
- * @return {DynamoDBProvisionedThroughput}
+ * @returns {DynamoDBProvisionedThroughput}
  */
 DynamoDBProvisionedThroughput.prototype.writeCapacityUnits = function(value) {
 	return this.set('WriteCapacityUnits', value);

@@ -19,7 +19,7 @@ EC2SecurityGroupEgress.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SecurityGroupEgress}
+ * @returns {EC2SecurityGroupEgress}
  */
 EC2SecurityGroupEgress.prototype.cidrIp = function(value) {
 	return this.set('CidrIp', value);
@@ -32,7 +32,7 @@ EC2SecurityGroupEgress.prototype.cidrIp = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SecurityGroupEgress}
+ * @returns {EC2SecurityGroupEgress}
  */
 EC2SecurityGroupEgress.prototype.destinationSecurityGroupId = function(value) {
 	return this.set('DestinationSecurityGroupId', value);
@@ -45,7 +45,7 @@ EC2SecurityGroupEgress.prototype.destinationSecurityGroupId = function(value) {
  * Update requires: Replacement
  *
  * @param {Number|Attribute|Reference} value
- * @return {EC2SecurityGroupEgress}
+ * @returns {EC2SecurityGroupEgress}
  */
 EC2SecurityGroupEgress.prototype.fromPort = function(value) {
 	return this.set('FromPort', value);
@@ -58,7 +58,7 @@ EC2SecurityGroupEgress.prototype.fromPort = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SecurityGroupEgress}
+ * @returns {EC2SecurityGroupEgress}
  */
 EC2SecurityGroupEgress.prototype.groupId = function(value) {
 	return this.set('GroupId', value);
@@ -71,7 +71,7 @@ EC2SecurityGroupEgress.prototype.groupId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2SecurityGroupEgress}
+ * @returns {EC2SecurityGroupEgress}
  */
 EC2SecurityGroupEgress.prototype.ipProtocol = function(value) {
 	return this.set('IpProtocol', value);
@@ -84,7 +84,7 @@ EC2SecurityGroupEgress.prototype.ipProtocol = function(value) {
  * Update requires: Replacement
  *
  * @param {Number|Attribute|Reference} value
- * @return {EC2SecurityGroupEgress}
+ * @returns {EC2SecurityGroupEgress}
  */
 EC2SecurityGroupEgress.prototype.toPort = function(value) {
 	return this.set('ToPort', value);

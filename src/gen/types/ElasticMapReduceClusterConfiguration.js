@@ -17,7 +17,7 @@ ElasticMapReduceClusterConfiguration.prototype = Object.create(PropertyType.prot
  * Required: false
  *
  * @param {String} value
- * @return {ElasticMapReduceClusterConfiguration}
+ * @returns {ElasticMapReduceClusterConfiguration}
  */
 ElasticMapReduceClusterConfiguration.prototype.classification = function(value) {
 	return this.set('Classification', value);
@@ -29,7 +29,7 @@ ElasticMapReduceClusterConfiguration.prototype.classification = function(value) 
  * Required: false
  *
  * @param {Object} value
- * @return {ElasticMapReduceClusterConfiguration}
+ * @returns {ElasticMapReduceClusterConfiguration}
  */
 ElasticMapReduceClusterConfiguration.prototype.configurationProperties = function(value) {
 	return this.set('ConfigurationProperties', value);
@@ -41,7 +41,7 @@ ElasticMapReduceClusterConfiguration.prototype.configurationProperties = functio
  * Required: false
  *
  * @param {ElasticMapReduceClusterConfiguration[]} value
- * @return {ElasticMapReduceClusterConfiguration}
+ * @returns {ElasticMapReduceClusterConfiguration}
  */
 ElasticMapReduceClusterConfiguration.prototype.configurations = function(value) {
 	return this.set('Configurations', value);

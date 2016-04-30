@@ -19,7 +19,7 @@ IAMUserToGroupAddition.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {IAMUserToGroupAddition}
+ * @returns {IAMUserToGroupAddition}
  */
 IAMUserToGroupAddition.prototype.groupName = function(value) {
 	return this.set('GroupName', value);
@@ -32,7 +32,7 @@ IAMUserToGroupAddition.prototype.groupName = function(value) {
  * Update requires: No interruption
  *
  * @param {user[]|Attribute|Reference} value
- * @return {IAMUserToGroupAddition}
+ * @returns {IAMUserToGroupAddition}
  */
 IAMUserToGroupAddition.prototype.users = function(value) {
 	return this.set('Users', value);

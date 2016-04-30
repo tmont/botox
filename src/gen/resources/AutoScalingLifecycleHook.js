@@ -19,7 +19,7 @@ AutoScalingLifecycleHook.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLifecycleHook}
+ * @returns {AutoScalingLifecycleHook}
  */
 AutoScalingLifecycleHook.prototype.autoScalingGroupName = function(value) {
 	return this.set('AutoScalingGroupName', value);
@@ -32,7 +32,7 @@ AutoScalingLifecycleHook.prototype.autoScalingGroupName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLifecycleHook}
+ * @returns {AutoScalingLifecycleHook}
  */
 AutoScalingLifecycleHook.prototype.defaultResult = function(value) {
 	return this.set('DefaultResult', value);
@@ -45,7 +45,7 @@ AutoScalingLifecycleHook.prototype.defaultResult = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {AutoScalingLifecycleHook}
+ * @returns {AutoScalingLifecycleHook}
  */
 AutoScalingLifecycleHook.prototype.heartbeatTimeout = function(value) {
 	return this.set('HeartbeatTimeout', value);
@@ -58,7 +58,7 @@ AutoScalingLifecycleHook.prototype.heartbeatTimeout = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLifecycleHook}
+ * @returns {AutoScalingLifecycleHook}
  */
 AutoScalingLifecycleHook.prototype.lifecycleTransition = function(value) {
 	return this.set('LifecycleTransition', value);
@@ -71,7 +71,7 @@ AutoScalingLifecycleHook.prototype.lifecycleTransition = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLifecycleHook}
+ * @returns {AutoScalingLifecycleHook}
  */
 AutoScalingLifecycleHook.prototype.notificationMetadata = function(value) {
 	return this.set('NotificationMetadata', value);
@@ -84,7 +84,7 @@ AutoScalingLifecycleHook.prototype.notificationMetadata = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLifecycleHook}
+ * @returns {AutoScalingLifecycleHook}
  */
 AutoScalingLifecycleHook.prototype.notificationTargetARN = function(value) {
 	return this.set('NotificationTargetARN', value);
@@ -97,7 +97,7 @@ AutoScalingLifecycleHook.prototype.notificationTargetARN = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {AutoScalingLifecycleHook}
+ * @returns {AutoScalingLifecycleHook}
  */
 AutoScalingLifecycleHook.prototype.roleARN = function(value) {
 	return this.set('RoleARN', value);

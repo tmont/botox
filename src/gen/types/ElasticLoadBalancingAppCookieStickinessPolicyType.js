@@ -17,7 +17,7 @@ ElasticLoadBalancingAppCookieStickinessPolicyType.prototype = Object.create(Prop
  * Required: true
  *
  * @param {String} value
- * @return {ElasticLoadBalancingAppCookieStickinessPolicyType}
+ * @returns {ElasticLoadBalancingAppCookieStickinessPolicyType}
  */
 ElasticLoadBalancingAppCookieStickinessPolicyType.prototype.cookieName = function(value) {
 	return this.set('CookieName', value);
@@ -29,7 +29,7 @@ ElasticLoadBalancingAppCookieStickinessPolicyType.prototype.cookieName = functio
  * Required: true
  *
  * @param {String} value
- * @return {ElasticLoadBalancingAppCookieStickinessPolicyType}
+ * @returns {ElasticLoadBalancingAppCookieStickinessPolicyType}
  */
 ElasticLoadBalancingAppCookieStickinessPolicyType.prototype.policyName = function(value) {
 	return this.set('PolicyName', value);

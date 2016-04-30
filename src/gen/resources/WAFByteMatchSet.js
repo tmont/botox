@@ -19,7 +19,7 @@ WAFByteMatchSet.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {WAFByteMatchSetByteMatchTuples[]|Attribute|Reference} value List of AWS WAF ByteMatchSet ByteMatchTuples
- * @return {WAFByteMatchSet}
+ * @returns {WAFByteMatchSet}
  */
 WAFByteMatchSet.prototype.byteMatchTuples = function(value) {
 	return this.set('ByteMatchTuples', value);
@@ -32,7 +32,7 @@ WAFByteMatchSet.prototype.byteMatchTuples = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {WAFByteMatchSet}
+ * @returns {WAFByteMatchSet}
  */
 WAFByteMatchSet.prototype.name = function(value) {
 	return this.set('Name', value);

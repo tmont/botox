@@ -19,7 +19,7 @@ ApiGatewayApiKey.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayApiKey}
+ * @returns {ApiGatewayApiKey}
  */
 ApiGatewayApiKey.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -32,7 +32,7 @@ ApiGatewayApiKey.prototype.description = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {ApiGatewayApiKey}
+ * @returns {ApiGatewayApiKey}
  */
 ApiGatewayApiKey.prototype.enabled = function(value) {
 	return this.set('Enabled', value);
@@ -45,7 +45,7 @@ ApiGatewayApiKey.prototype.enabled = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ApiGatewayApiKey}
+ * @returns {ApiGatewayApiKey}
  */
 ApiGatewayApiKey.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -58,7 +58,7 @@ ApiGatewayApiKey.prototype.name = function(value) {
  * Update requires: No interruption
  *
  * @param {APIGatewayApiKeyStageKey[]|Attribute|Reference} value List of Amazon API Gateway ApiKey StageKey
- * @return {ApiGatewayApiKey}
+ * @returns {ApiGatewayApiKey}
  */
 ApiGatewayApiKey.prototype.stageKeys = function(value) {
 	return this.set('StageKeys', value);

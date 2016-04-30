@@ -19,15 +19,15 @@ IAMGroup.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(IAMGroup.prototype, 'attr', {
 	/**
-	 * @return {IAMGroupAttributeMap}
+	 * @returns {IAMGroupAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * Returns the Amazon Resource Name (ARN) for the AWS::IAM::Group resource. For example: arn:aws:iam::123456789012:group/mystack-mygroup-1DZETITOWEKVO.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get arn() {
 				return createAttribute('Arn');
@@ -42,8 +42,8 @@ Object.defineProperty(IAMGroup.prototype, 'attr', {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {IAMGroup}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {IAMGroup}
  */
 IAMGroup.prototype.managedPolicyArns = function(value) {
 	return this.set('ManagedPolicyArns', value);
@@ -56,7 +56,7 @@ IAMGroup.prototype.managedPolicyArns = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {IAMGroup}
+ * @returns {IAMGroup}
  */
 IAMGroup.prototype.path = function(value) {
 	return this.set('Path', value);
@@ -69,7 +69,7 @@ IAMGroup.prototype.path = function(value) {
  * Update requires: No interruption
  *
  * @param {IAMPolicy[]|Attribute|Reference} value
- * @return {IAMGroup}
+ * @returns {IAMGroup}
  */
 IAMGroup.prototype.policies = function(value) {
 	return this.set('Policies', value);

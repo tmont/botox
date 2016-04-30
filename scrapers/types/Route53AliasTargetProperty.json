@@ -11,14 +11,14 @@
     },
     {
       "name": "EvaluateTargetHealth",
-      "description": "Whether Amazon Route 53 checks the health of the resource record sets in the alias target when responding to DNS queries. For more information about using this property, see EvaluateTargetHealth in the Amazon Route 53 API Reference.",
+      "description": "Whether Amazon Route 53 checks the health of the resource record sets in the alias target when responding to DNS queries. For more information about using this property, see EvaluateTargetHealth in the Amazon Route 53 API Reference.",
       "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
     },
     {
       "name": "HostedZoneId",
-      "description": "The hosted zone ID. For load balancers, use the canonical hosted zone ID of the load balancer. For Amazon S3, use the hosted zone ID for your bucket's website endpoint. For CloudFront, use Z2FDTNDATAQYW2. For examples, see Example: Creating Alias Resource Record Sets in the Amazon Route 53 API Reference.",
+      "description": "The hosted zone ID. For load balancers, use the canonical hosted zone ID of the load balancer. For Amazon S3, use the hosted zone ID for your bucket's website endpoint. For CloudFront, use Z2FDTNDATAQYW2. For examples, see Example: Creating Alias Resource Record Sets in the Amazon Route 53 API Reference.",
       "typeDescription": "String",
       "required": true,
       "type": "String"

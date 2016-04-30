@@ -17,7 +17,7 @@ EC2ContainerServiceTaskDefinitionVolumes.prototype = Object.create(PropertyType.
  * Required: true
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionVolumes}
+ * @returns {EC2ContainerServiceTaskDefinitionVolumes}
  */
 EC2ContainerServiceTaskDefinitionVolumes.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -29,7 +29,7 @@ EC2ContainerServiceTaskDefinitionVolumes.prototype.name = function(value) {
  * Required: false
  *
  * @param {EC2ContainerServiceTaskDefinitionVolumesHost} value
- * @return {EC2ContainerServiceTaskDefinitionVolumes}
+ * @returns {EC2ContainerServiceTaskDefinitionVolumes}
  */
 EC2ContainerServiceTaskDefinitionVolumes.prototype.host = function(value) {
 	return this.set('Host', value);

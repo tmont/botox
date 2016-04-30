@@ -17,7 +17,7 @@ CodePipelinePipelineDisableInboundStageTransitions.prototype = Object.create(Pro
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineDisableInboundStageTransitions}
+ * @returns {CodePipelinePipelineDisableInboundStageTransitions}
  */
 CodePipelinePipelineDisableInboundStageTransitions.prototype.reason = function(value) {
 	return this.set('Reason', value);
@@ -29,7 +29,7 @@ CodePipelinePipelineDisableInboundStageTransitions.prototype.reason = function(v
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineDisableInboundStageTransitions}
+ * @returns {CodePipelinePipelineDisableInboundStageTransitions}
  */
 CodePipelinePipelineDisableInboundStageTransitions.prototype.stageName = function(value) {
 	return this.set('StageName', value);

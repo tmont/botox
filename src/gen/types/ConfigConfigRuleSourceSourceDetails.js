@@ -17,7 +17,7 @@ ConfigConfigRuleSourceSourceDetails.prototype = Object.create(PropertyType.proto
  * Required: true
  *
  * @param {String} value
- * @return {ConfigConfigRuleSourceSourceDetails}
+ * @returns {ConfigConfigRuleSourceSourceDetails}
  */
 ConfigConfigRuleSourceSourceDetails.prototype.eventSource = function(value) {
 	return this.set('EventSource', value);
@@ -29,7 +29,7 @@ ConfigConfigRuleSourceSourceDetails.prototype.eventSource = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {ConfigConfigRuleSourceSourceDetails}
+ * @returns {ConfigConfigRuleSourceSourceDetails}
  */
 ConfigConfigRuleSourceSourceDetails.prototype.messageType = function(value) {
 	return this.set('MessageType', value);

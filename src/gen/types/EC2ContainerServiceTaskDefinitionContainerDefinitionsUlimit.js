@@ -17,7 +17,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit.prototype = Object.c
  * Required: true
  *
  * @param {Number} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit.prototype.hardLimit = function(value) {
 	return this.set('HardLimit', value);
@@ -29,7 +29,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit.prototype.hardLimit 
  * Required: false
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -41,7 +41,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit.prototype.name = fun
  * Required: true
  *
  * @param {Number} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsUlimit.prototype.softLimit = function(value) {
 	return this.set('SoftLimit', value);

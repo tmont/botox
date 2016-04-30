@@ -19,7 +19,7 @@ CloudTrailTrail.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudTrailTrail}
+ * @returns {CloudTrailTrail}
  */
 CloudTrailTrail.prototype.cloudWatchLogsLogGroupArn = function(value) {
 	return this.set('CloudWatchLogsLogGroupArn', value);
@@ -32,7 +32,7 @@ CloudTrailTrail.prototype.cloudWatchLogsLogGroupArn = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudTrailTrail}
+ * @returns {CloudTrailTrail}
  */
 CloudTrailTrail.prototype.cloudWatchLogsRoleArn = function(value) {
 	return this.set('CloudWatchLogsRoleArn', value);
@@ -45,7 +45,7 @@ CloudTrailTrail.prototype.cloudWatchLogsRoleArn = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {CloudTrailTrail}
+ * @returns {CloudTrailTrail}
  */
 CloudTrailTrail.prototype.enableLogFileValidation = function(value) {
 	return this.set('EnableLogFileValidation', value);
@@ -58,7 +58,7 @@ CloudTrailTrail.prototype.enableLogFileValidation = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {CloudTrailTrail}
+ * @returns {CloudTrailTrail}
  */
 CloudTrailTrail.prototype.includeGlobalServiceEvents = function(value) {
 	return this.set('IncludeGlobalServiceEvents', value);
@@ -71,7 +71,7 @@ CloudTrailTrail.prototype.includeGlobalServiceEvents = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {CloudTrailTrail}
+ * @returns {CloudTrailTrail}
  */
 CloudTrailTrail.prototype.isLogging = function(value) {
 	return this.set('IsLogging', value);
@@ -84,7 +84,7 @@ CloudTrailTrail.prototype.isLogging = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {CloudTrailTrail}
+ * @returns {CloudTrailTrail}
  */
 CloudTrailTrail.prototype.isMultiRegionTrail = function(value) {
 	return this.set('IsMultiRegionTrail', value);
@@ -97,7 +97,7 @@ CloudTrailTrail.prototype.isMultiRegionTrail = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudTrailTrail}
+ * @returns {CloudTrailTrail}
  */
 CloudTrailTrail.prototype.kmsKeyId = function(value) {
 	return this.set('KMSKeyId', value);
@@ -110,7 +110,7 @@ CloudTrailTrail.prototype.kmsKeyId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudTrailTrail}
+ * @returns {CloudTrailTrail}
  */
 CloudTrailTrail.prototype.s3BucketName = function(value) {
 	return this.set('S3BucketName', value);
@@ -123,7 +123,7 @@ CloudTrailTrail.prototype.s3BucketName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudTrailTrail}
+ * @returns {CloudTrailTrail}
  */
 CloudTrailTrail.prototype.s3KeyPrefix = function(value) {
 	return this.set('S3KeyPrefix', value);
@@ -136,7 +136,7 @@ CloudTrailTrail.prototype.s3KeyPrefix = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudTrailTrail}
+ * @returns {CloudTrailTrail}
  */
 CloudTrailTrail.prototype.snsTopicName = function(value) {
 	return this.set('SnsTopicName', value);
@@ -149,7 +149,7 @@ CloudTrailTrail.prototype.snsTopicName = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {CloudTrailTrail}
+ * @returns {CloudTrailTrail}
  */
 CloudTrailTrail.prototype.tags = function(value) {
 	return this.set('Tags', value);

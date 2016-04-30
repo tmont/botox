@@ -17,7 +17,7 @@ OpsWorksTimeBasedAutoScalingType.prototype = Object.create(PropertyType.prototyp
  * Required: false
  *
  * @param {Object} value
- * @return {OpsWorksTimeBasedAutoScalingType}
+ * @returns {OpsWorksTimeBasedAutoScalingType}
  */
 OpsWorksTimeBasedAutoScalingType.prototype.friday = function(value) {
 	return this.set('Friday', value);
@@ -29,7 +29,7 @@ OpsWorksTimeBasedAutoScalingType.prototype.friday = function(value) {
  * Required: false
  *
  * @param {Object} value
- * @return {OpsWorksTimeBasedAutoScalingType}
+ * @returns {OpsWorksTimeBasedAutoScalingType}
  */
 OpsWorksTimeBasedAutoScalingType.prototype.monday = function(value) {
 	return this.set('Monday', value);
@@ -41,7 +41,7 @@ OpsWorksTimeBasedAutoScalingType.prototype.monday = function(value) {
  * Required: false
  *
  * @param {Object} value
- * @return {OpsWorksTimeBasedAutoScalingType}
+ * @returns {OpsWorksTimeBasedAutoScalingType}
  */
 OpsWorksTimeBasedAutoScalingType.prototype.saturday = function(value) {
 	return this.set('Saturday', value);
@@ -53,7 +53,7 @@ OpsWorksTimeBasedAutoScalingType.prototype.saturday = function(value) {
  * Required: false
  *
  * @param {Object} value
- * @return {OpsWorksTimeBasedAutoScalingType}
+ * @returns {OpsWorksTimeBasedAutoScalingType}
  */
 OpsWorksTimeBasedAutoScalingType.prototype.sunday = function(value) {
 	return this.set('Sunday', value);
@@ -65,7 +65,7 @@ OpsWorksTimeBasedAutoScalingType.prototype.sunday = function(value) {
  * Required: false
  *
  * @param {Object} value
- * @return {OpsWorksTimeBasedAutoScalingType}
+ * @returns {OpsWorksTimeBasedAutoScalingType}
  */
 OpsWorksTimeBasedAutoScalingType.prototype.thursday = function(value) {
 	return this.set('Thursday', value);
@@ -77,7 +77,7 @@ OpsWorksTimeBasedAutoScalingType.prototype.thursday = function(value) {
  * Required: false
  *
  * @param {Object} value
- * @return {OpsWorksTimeBasedAutoScalingType}
+ * @returns {OpsWorksTimeBasedAutoScalingType}
  */
 OpsWorksTimeBasedAutoScalingType.prototype.tuesday = function(value) {
 	return this.set('Tuesday', value);
@@ -89,7 +89,7 @@ OpsWorksTimeBasedAutoScalingType.prototype.tuesday = function(value) {
  * Required: false
  *
  * @param {Object} value
- * @return {OpsWorksTimeBasedAutoScalingType}
+ * @returns {OpsWorksTimeBasedAutoScalingType}
  */
 OpsWorksTimeBasedAutoScalingType.prototype.wednesday = function(value) {
 	return this.set('Wednesday', value);

@@ -19,15 +19,15 @@ IAMRole.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(IAMRole.prototype, 'attr', {
 	/**
-	 * @return {IAMRoleAttributeMap}
+	 * @returns {IAMRoleAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyRole", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF”.
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get arn() {
 				return createAttribute('Arn');
@@ -43,7 +43,7 @@ Object.defineProperty(IAMRole.prototype, 'attr', {
  * Update requires: No interruption
  *
  * @param {Object|Attribute|Reference} value A JSON policy document.
- * @return {IAMRole}
+ * @returns {IAMRole}
  */
 IAMRole.prototype.assumeRolePolicyDocument = function(value) {
 	return this.set('AssumeRolePolicyDocument', value);
@@ -55,8 +55,8 @@ IAMRole.prototype.assumeRolePolicyDocument = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {IAMRole}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {IAMRole}
  */
 IAMRole.prototype.managedPolicyArns = function(value) {
 	return this.set('ManagedPolicyArns', value);
@@ -69,7 +69,7 @@ IAMRole.prototype.managedPolicyArns = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {IAMRole}
+ * @returns {IAMRole}
  */
 IAMRole.prototype.path = function(value) {
 	return this.set('Path', value);
@@ -82,7 +82,7 @@ IAMRole.prototype.path = function(value) {
  * Update requires: No interruption
  *
  * @param {IAMPolicy[]|Attribute|Reference} value
- * @return {IAMRole}
+ * @returns {IAMRole}
  */
 IAMRole.prototype.policies = function(value) {
 	return this.set('Policies', value);

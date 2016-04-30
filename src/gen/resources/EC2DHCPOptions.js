@@ -19,7 +19,7 @@ EC2DHCPOptions.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2DHCPOptions}
+ * @returns {EC2DHCPOptions}
  */
 EC2DHCPOptions.prototype.domainName = function(value) {
 	return this.set('DomainName', value);
@@ -31,8 +31,8 @@ EC2DHCPOptions.prototype.domainName = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {string[]|Attribute|Reference} value
- * @return {EC2DHCPOptions}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {EC2DHCPOptions}
  */
 EC2DHCPOptions.prototype.domainNameServers = function(value) {
 	return this.set('DomainNameServers', value);
@@ -44,8 +44,8 @@ EC2DHCPOptions.prototype.domainNameServers = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {string[]|Attribute|Reference} value
- * @return {EC2DHCPOptions}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {EC2DHCPOptions}
  */
 EC2DHCPOptions.prototype.netbiosNameServers = function(value) {
 	return this.set('NetbiosNameServers', value);
@@ -58,7 +58,7 @@ EC2DHCPOptions.prototype.netbiosNameServers = function(value) {
  * Update requires: Replacement
  *
  * @param {number[]|Attribute|Reference} value
- * @return {EC2DHCPOptions}
+ * @returns {EC2DHCPOptions}
  */
 EC2DHCPOptions.prototype.netbiosNodeType = function(value) {
 	return this.set('NetbiosNodeType', value);
@@ -70,8 +70,8 @@ EC2DHCPOptions.prototype.netbiosNodeType = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {string[]|Attribute|Reference} value
- * @return {EC2DHCPOptions}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {EC2DHCPOptions}
  */
 EC2DHCPOptions.prototype.ntpServers = function(value) {
 	return this.set('NtpServers', value);
@@ -84,7 +84,7 @@ EC2DHCPOptions.prototype.ntpServers = function(value) {
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {EC2DHCPOptions}
+ * @returns {EC2DHCPOptions}
  */
 EC2DHCPOptions.prototype.tags = function(value) {
 	return this.set('Tags', value);

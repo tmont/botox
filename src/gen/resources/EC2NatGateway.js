@@ -19,7 +19,7 @@ EC2NatGateway.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2NatGateway}
+ * @returns {EC2NatGateway}
  */
 EC2NatGateway.prototype.allocationId = function(value) {
 	return this.set('AllocationId', value);
@@ -32,7 +32,7 @@ EC2NatGateway.prototype.allocationId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2NatGateway}
+ * @returns {EC2NatGateway}
  */
 EC2NatGateway.prototype.subnetId = function(value) {
 	return this.set('SubnetId', value);

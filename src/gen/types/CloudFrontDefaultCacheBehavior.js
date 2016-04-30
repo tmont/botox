@@ -16,8 +16,8 @@ CloudFrontDefaultCacheBehavior.prototype = Object.create(PropertyType.prototype)
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {CloudFrontDefaultCacheBehavior}
+ * @param {String[]} value
+ * @returns {CloudFrontDefaultCacheBehavior}
  */
 CloudFrontDefaultCacheBehavior.prototype.allowedMethods = function(value) {
 	return this.set('AllowedMethods', value);
@@ -28,8 +28,8 @@ CloudFrontDefaultCacheBehavior.prototype.allowedMethods = function(value) {
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {CloudFrontDefaultCacheBehavior}
+ * @param {String[]} value
+ * @returns {CloudFrontDefaultCacheBehavior}
  */
 CloudFrontDefaultCacheBehavior.prototype.cachedMethods = function(value) {
 	return this.set('CachedMethods', value);
@@ -41,7 +41,7 @@ CloudFrontDefaultCacheBehavior.prototype.cachedMethods = function(value) {
  * Required: false
  *
  * @param {Boolean} value
- * @return {CloudFrontDefaultCacheBehavior}
+ * @returns {CloudFrontDefaultCacheBehavior}
  */
 CloudFrontDefaultCacheBehavior.prototype.compress = function(value) {
 	return this.set('Compress', value);
@@ -53,7 +53,7 @@ CloudFrontDefaultCacheBehavior.prototype.compress = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {CloudFrontDefaultCacheBehavior}
+ * @returns {CloudFrontDefaultCacheBehavior}
  */
 CloudFrontDefaultCacheBehavior.prototype.defaultTTL = function(value) {
 	return this.set('DefaultTTL', value);
@@ -65,7 +65,7 @@ CloudFrontDefaultCacheBehavior.prototype.defaultTTL = function(value) {
  * Required: true
  *
  * @param {CloudFrontForwardedValues} value
- * @return {CloudFrontDefaultCacheBehavior}
+ * @returns {CloudFrontDefaultCacheBehavior}
  */
 CloudFrontDefaultCacheBehavior.prototype.forwardedValues = function(value) {
 	return this.set('ForwardedValues', value);
@@ -77,7 +77,7 @@ CloudFrontDefaultCacheBehavior.prototype.forwardedValues = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {CloudFrontDefaultCacheBehavior}
+ * @returns {CloudFrontDefaultCacheBehavior}
  */
 CloudFrontDefaultCacheBehavior.prototype.maxTTL = function(value) {
 	return this.set('MaxTTL', value);
@@ -89,7 +89,7 @@ CloudFrontDefaultCacheBehavior.prototype.maxTTL = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {CloudFrontDefaultCacheBehavior}
+ * @returns {CloudFrontDefaultCacheBehavior}
  */
 CloudFrontDefaultCacheBehavior.prototype.minTTL = function(value) {
 	return this.set('MinTTL', value);
@@ -101,7 +101,7 @@ CloudFrontDefaultCacheBehavior.prototype.minTTL = function(value) {
  * Required: false
  *
  * @param {Boolean} value
- * @return {CloudFrontDefaultCacheBehavior}
+ * @returns {CloudFrontDefaultCacheBehavior}
  */
 CloudFrontDefaultCacheBehavior.prototype.smoothStreaming = function(value) {
 	return this.set('SmoothStreaming', value);
@@ -113,7 +113,7 @@ CloudFrontDefaultCacheBehavior.prototype.smoothStreaming = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {CloudFrontDefaultCacheBehavior}
+ * @returns {CloudFrontDefaultCacheBehavior}
  */
 CloudFrontDefaultCacheBehavior.prototype.targetOriginId = function(value) {
 	return this.set('TargetOriginId', value);
@@ -124,8 +124,8 @@ CloudFrontDefaultCacheBehavior.prototype.targetOriginId = function(value) {
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {CloudFrontDefaultCacheBehavior}
+ * @param {String[]} value
+ * @returns {CloudFrontDefaultCacheBehavior}
  */
 CloudFrontDefaultCacheBehavior.prototype.trustedSigners = function(value) {
 	return this.set('TrustedSigners', value);
@@ -137,7 +137,7 @@ CloudFrontDefaultCacheBehavior.prototype.trustedSigners = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {CloudFrontDefaultCacheBehavior}
+ * @returns {CloudFrontDefaultCacheBehavior}
  */
 CloudFrontDefaultCacheBehavior.prototype.viewerProtocolPolicy = function(value) {
 	return this.set('ViewerProtocolPolicy', value);

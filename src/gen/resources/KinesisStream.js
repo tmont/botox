@@ -19,7 +19,7 @@ KinesisStream.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {Number|Attribute|Reference} value
- * @return {KinesisStream}
+ * @returns {KinesisStream}
  */
 KinesisStream.prototype.shardCount = function(value) {
 	return this.set('ShardCount', value);
@@ -32,7 +32,7 @@ KinesisStream.prototype.shardCount = function(value) {
  * Update requires: No interruption
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {KinesisStream}
+ * @returns {KinesisStream}
  */
 KinesisStream.prototype.tags = function(value) {
 	return this.set('Tags', value);

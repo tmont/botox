@@ -19,7 +19,7 @@ S3BucketPolicy.prototype = Object.create(Resource.prototype);
  * Update requires: undefined
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {S3BucketPolicy}
+ * @returns {S3BucketPolicy}
  */
 S3BucketPolicy.prototype.bucket = function(value) {
 	return this.set('Bucket', value);
@@ -32,7 +32,7 @@ S3BucketPolicy.prototype.bucket = function(value) {
  * Update requires: No interruption
  *
  * @param {Object|Attribute|Reference} value
- * @return {S3BucketPolicy}
+ * @returns {S3BucketPolicy}
  */
 S3BucketPolicy.prototype.policyDocument = function(value) {
 	return this.set('PolicyDocument', value);

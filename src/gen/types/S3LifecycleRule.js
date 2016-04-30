@@ -17,7 +17,7 @@ S3LifecycleRule.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {String} value
- * @return {S3LifecycleRule}
+ * @returns {S3LifecycleRule}
  */
 S3LifecycleRule.prototype.expirationDate = function(value) {
 	return this.set('ExpirationDate', value);
@@ -29,7 +29,7 @@ S3LifecycleRule.prototype.expirationDate = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {S3LifecycleRule}
+ * @returns {S3LifecycleRule}
  */
 S3LifecycleRule.prototype.expirationInDays = function(value) {
 	return this.set('ExpirationInDays', value);
@@ -41,7 +41,7 @@ S3LifecycleRule.prototype.expirationInDays = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {S3LifecycleRule}
+ * @returns {S3LifecycleRule}
  */
 S3LifecycleRule.prototype.id = function(value) {
 	return this.set('Id', value);
@@ -53,7 +53,7 @@ S3LifecycleRule.prototype.id = function(value) {
  * Required: false
  *
  * @param {Number} value
- * @return {S3LifecycleRule}
+ * @returns {S3LifecycleRule}
  */
 S3LifecycleRule.prototype.noncurrentVersionExpirationInDays = function(value) {
 	return this.set('NoncurrentVersionExpirationInDays', value);
@@ -65,7 +65,7 @@ S3LifecycleRule.prototype.noncurrentVersionExpirationInDays = function(value) {
  * Required: false
  *
  * @param {S3LifecycleRuleNoncurrentVersionTransition} value
- * @return {S3LifecycleRule}
+ * @returns {S3LifecycleRule}
  */
 S3LifecycleRule.prototype.noncurrentVersionTransition = function(value) {
 	return this.set('NoncurrentVersionTransition', value);
@@ -77,7 +77,7 @@ S3LifecycleRule.prototype.noncurrentVersionTransition = function(value) {
  * Required: false
  *
  * @param {S3LifecycleRuleNoncurrentVersionTransition[]} value
- * @return {S3LifecycleRule}
+ * @returns {S3LifecycleRule}
  */
 S3LifecycleRule.prototype.noncurrentVersionTransitions = function(value) {
 	return this.set('NoncurrentVersionTransitions', value);
@@ -89,7 +89,7 @@ S3LifecycleRule.prototype.noncurrentVersionTransitions = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {S3LifecycleRule}
+ * @returns {S3LifecycleRule}
  */
 S3LifecycleRule.prototype.prefix = function(value) {
 	return this.set('Prefix', value);
@@ -101,7 +101,7 @@ S3LifecycleRule.prototype.prefix = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {S3LifecycleRule}
+ * @returns {S3LifecycleRule}
  */
 S3LifecycleRule.prototype.status = function(value) {
 	return this.set('Status', value);
@@ -113,7 +113,7 @@ S3LifecycleRule.prototype.status = function(value) {
  * Required: false
  *
  * @param {S3LifecycleRuleTransition} value
- * @return {S3LifecycleRule}
+ * @returns {S3LifecycleRule}
  */
 S3LifecycleRule.prototype.transition = function(value) {
 	return this.set('Transition', value);
@@ -125,7 +125,7 @@ S3LifecycleRule.prototype.transition = function(value) {
  * Required: false
  *
  * @param {S3LifecycleRuleTransition[]} value
- * @return {S3LifecycleRule}
+ * @returns {S3LifecycleRule}
  */
 S3LifecycleRule.prototype.transitions = function(value) {
 	return this.set('Transitions', value);

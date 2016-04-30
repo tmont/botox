@@ -19,7 +19,7 @@ SSMDocument.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {Object|Attribute|Reference} value
- * @return {SSMDocument}
+ * @returns {SSMDocument}
  */
 SSMDocument.prototype.content = function(value) {
 	return this.set('Content', value);

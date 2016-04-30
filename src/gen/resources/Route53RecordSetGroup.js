@@ -19,7 +19,7 @@ Route53RecordSetGroup.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {Route53RecordSetGroup}
+ * @returns {Route53RecordSetGroup}
  */
 Route53RecordSetGroup.prototype.comment = function(value) {
 	return this.set('Comment', value);
@@ -32,7 +32,7 @@ Route53RecordSetGroup.prototype.comment = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {Route53RecordSetGroup}
+ * @returns {Route53RecordSetGroup}
  */
 Route53RecordSetGroup.prototype.hostedZoneId = function(value) {
 	return this.set('HostedZoneId', value);
@@ -45,7 +45,7 @@ Route53RecordSetGroup.prototype.hostedZoneId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {Route53RecordSetGroup}
+ * @returns {Route53RecordSetGroup}
  */
 Route53RecordSetGroup.prototype.hostedZoneName = function(value) {
 	return this.set('HostedZoneName', value);
@@ -58,7 +58,7 @@ Route53RecordSetGroup.prototype.hostedZoneName = function(value) {
  * Update requires: No interruption
  *
  * @param {[]|Attribute|Reference} value : List of AWS::Route53::RecordSet objects, as shown in the following example:
- * @return {Route53RecordSetGroup}
+ * @returns {Route53RecordSetGroup}
  */
 Route53RecordSetGroup.prototype.recordSets = function(value) {
 	return this.set('RecordSets', value);

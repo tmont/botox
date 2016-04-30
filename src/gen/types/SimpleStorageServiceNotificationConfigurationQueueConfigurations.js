@@ -17,7 +17,7 @@ SimpleStorageServiceNotificationConfigurationQueueConfigurations.prototype = Obj
  * Required: true
  *
  * @param {String} value
- * @return {SimpleStorageServiceNotificationConfigurationQueueConfigurations}
+ * @returns {SimpleStorageServiceNotificationConfigurationQueueConfigurations}
  */
 SimpleStorageServiceNotificationConfigurationQueueConfigurations.prototype.event = function(value) {
 	return this.set('Event', value);
@@ -29,7 +29,7 @@ SimpleStorageServiceNotificationConfigurationQueueConfigurations.prototype.event
  * Required: false
  *
  * @param {S3NotificationConfigurationConfigFilter} value
- * @return {SimpleStorageServiceNotificationConfigurationQueueConfigurations}
+ * @returns {SimpleStorageServiceNotificationConfigurationQueueConfigurations}
  */
 SimpleStorageServiceNotificationConfigurationQueueConfigurations.prototype.filter = function(value) {
 	return this.set('Filter', value);
@@ -41,7 +41,7 @@ SimpleStorageServiceNotificationConfigurationQueueConfigurations.prototype.filte
  * Required: true
  *
  * @param {String} value
- * @return {SimpleStorageServiceNotificationConfigurationQueueConfigurations}
+ * @returns {SimpleStorageServiceNotificationConfigurationQueueConfigurations}
  */
 SimpleStorageServiceNotificationConfigurationQueueConfigurations.prototype.queue = function(value) {
 	return this.set('Queue', value);

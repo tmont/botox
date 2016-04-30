@@ -19,15 +19,15 @@ ElasticBeanstalkEnvironment.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(ElasticBeanstalkEnvironment.prototype, 'attr', {
 	/**
-	 * @return {ElasticBeanstalkEnvironmentAttributeMap}
+	 * @returns {ElasticBeanstalkEnvironmentAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The URL to the load balancer for this environment.Example:awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-1.elb.amazonaws.com
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get endpointURL() {
 				return createAttribute('EndpointURL');
@@ -43,7 +43,7 @@ Object.defineProperty(ElasticBeanstalkEnvironment.prototype, 'attr', {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkEnvironment}
+ * @returns {ElasticBeanstalkEnvironment}
  */
 ElasticBeanstalkEnvironment.prototype.applicationName = function(value) {
 	return this.set('ApplicationName', value);
@@ -56,7 +56,7 @@ ElasticBeanstalkEnvironment.prototype.applicationName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkEnvironment}
+ * @returns {ElasticBeanstalkEnvironment}
  */
 ElasticBeanstalkEnvironment.prototype.cnamePrefix = function(value) {
 	return this.set('CNAMEPrefix', value);
@@ -69,7 +69,7 @@ ElasticBeanstalkEnvironment.prototype.cnamePrefix = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkEnvironment}
+ * @returns {ElasticBeanstalkEnvironment}
  */
 ElasticBeanstalkEnvironment.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -82,7 +82,7 @@ ElasticBeanstalkEnvironment.prototype.description = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkEnvironment}
+ * @returns {ElasticBeanstalkEnvironment}
  */
 ElasticBeanstalkEnvironment.prototype.environmentName = function(value) {
 	return this.set('EnvironmentName', value);
@@ -95,7 +95,7 @@ ElasticBeanstalkEnvironment.prototype.environmentName = function(value) {
  * Update requires: Some interruptions
  *
  * @param {ElasticBeanstalkOptionSettingsPropertyType[]|Attribute|Reference} value A list of OptionSettings.
- * @return {ElasticBeanstalkEnvironment}
+ * @returns {ElasticBeanstalkEnvironment}
  */
 ElasticBeanstalkEnvironment.prototype.optionSettings = function(value) {
 	return this.set('OptionSettings', value);
@@ -108,7 +108,7 @@ ElasticBeanstalkEnvironment.prototype.optionSettings = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkEnvironment}
+ * @returns {ElasticBeanstalkEnvironment}
  */
 ElasticBeanstalkEnvironment.prototype.solutionStackName = function(value) {
 	return this.set('SolutionStackName', value);
@@ -121,7 +121,7 @@ ElasticBeanstalkEnvironment.prototype.solutionStackName = function(value) {
  * Update requires: You can update tags only if you update another property that requires that the environment be replaced, such as the ApplicationName property.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {ElasticBeanstalkEnvironment}
+ * @returns {ElasticBeanstalkEnvironment}
  */
 ElasticBeanstalkEnvironment.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -134,7 +134,7 @@ ElasticBeanstalkEnvironment.prototype.tags = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkEnvironment}
+ * @returns {ElasticBeanstalkEnvironment}
  */
 ElasticBeanstalkEnvironment.prototype.templateName = function(value) {
 	return this.set('TemplateName', value);
@@ -147,7 +147,7 @@ ElasticBeanstalkEnvironment.prototype.templateName = function(value) {
  * Update requires: See Elastic Beanstalk Environment Tier Property Type
  *
  * @param {ElasticBeanstalkEnvironmentTierPropertyType|Attribute|Reference} value Elastic Beanstalk Environment Tier Property Type
- * @return {ElasticBeanstalkEnvironment}
+ * @returns {ElasticBeanstalkEnvironment}
  */
 ElasticBeanstalkEnvironment.prototype.tier = function(value) {
 	return this.set('Tier', value);
@@ -160,7 +160,7 @@ ElasticBeanstalkEnvironment.prototype.tier = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {ElasticBeanstalkEnvironment}
+ * @returns {ElasticBeanstalkEnvironment}
  */
 ElasticBeanstalkEnvironment.prototype.versionLabel = function(value) {
 	return this.set('VersionLabel', value);

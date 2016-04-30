@@ -7,7 +7,7 @@
       "description": "A list of two subnet IDs for the directory servers. Each subnet must be in different Availability Zones (AZ). AWS Directory Service creates a directory server and a DNS server in each subnet.",
       "typeDescription": "List of strings",
       "required": true,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "VpcId",

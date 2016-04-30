@@ -19,7 +19,7 @@ RedshiftClusterParameterGroup.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftClusterParameterGroup}
+ * @returns {RedshiftClusterParameterGroup}
  */
 RedshiftClusterParameterGroup.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -32,7 +32,7 @@ RedshiftClusterParameterGroup.prototype.description = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {RedshiftClusterParameterGroup}
+ * @returns {RedshiftClusterParameterGroup}
  */
 RedshiftClusterParameterGroup.prototype.parameterGroupFamily = function(value) {
 	return this.set('ParameterGroupFamily', value);
@@ -45,7 +45,7 @@ RedshiftClusterParameterGroup.prototype.parameterGroupFamily = function(value) {
  * Update requires: No interruption
  *
  * @param {RedshiftParameterType|Attribute|Reference} value Amazon Redshift Parameter Type
- * @return {RedshiftClusterParameterGroup}
+ * @returns {RedshiftClusterParameterGroup}
  */
 RedshiftClusterParameterGroup.prototype.parameters = function(value) {
 	return this.set('Parameters', value);

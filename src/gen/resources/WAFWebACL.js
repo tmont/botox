@@ -19,7 +19,7 @@ WAFWebACL.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {WAFWebACLAction|Attribute|Reference} value AWS WAF WebACL Action
- * @return {WAFWebACL}
+ * @returns {WAFWebACL}
  */
 WAFWebACL.prototype.defaultAction = function(value) {
 	return this.set('DefaultAction', value);
@@ -32,7 +32,7 @@ WAFWebACL.prototype.defaultAction = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {WAFWebACL}
+ * @returns {WAFWebACL}
  */
 WAFWebACL.prototype.metricName = function(value) {
 	return this.set('MetricName', value);
@@ -45,7 +45,7 @@ WAFWebACL.prototype.metricName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {WAFWebACL}
+ * @returns {WAFWebACL}
  */
 WAFWebACL.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -58,7 +58,7 @@ WAFWebACL.prototype.name = function(value) {
  * Update requires: No interruption
  *
  * @param {WAFWebACLRules[]|Attribute|Reference} value List of AWS WAF WebACL Rules
- * @return {WAFWebACL}
+ * @returns {WAFWebACL}
  */
 WAFWebACL.prototype.rules = function(value) {
 	return this.set('Rules', value);

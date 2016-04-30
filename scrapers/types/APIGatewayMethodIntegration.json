@@ -7,7 +7,7 @@
       "description": "A list of request parameters whose values API Gateway will cache.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]"
+      "type": "String[]"
     },
     {
       "name": "CacheNamespace",

@@ -10,7 +10,7 @@
       "description": "The names of groups to which you want to add the policy.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {
@@ -34,7 +34,7 @@
       "description": "The names of AWS::IAM::Roles to attach to this policy.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {
@@ -42,7 +42,7 @@
       "description": "The names of users for whom you want to add the policy.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     }
   ],

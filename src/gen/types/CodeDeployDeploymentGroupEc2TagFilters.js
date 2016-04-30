@@ -17,7 +17,7 @@ CodeDeployDeploymentGroupEc2TagFilters.prototype = Object.create(PropertyType.pr
  * Required: false
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupEc2TagFilters}
+ * @returns {CodeDeployDeploymentGroupEc2TagFilters}
  */
 CodeDeployDeploymentGroupEc2TagFilters.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -29,7 +29,7 @@ CodeDeployDeploymentGroupEc2TagFilters.prototype.key = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupEc2TagFilters}
+ * @returns {CodeDeployDeploymentGroupEc2TagFilters}
  */
 CodeDeployDeploymentGroupEc2TagFilters.prototype.type = function(value) {
 	return this.set('Type', value);
@@ -41,7 +41,7 @@ CodeDeployDeploymentGroupEc2TagFilters.prototype.type = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {CodeDeployDeploymentGroupEc2TagFilters}
+ * @returns {CodeDeployDeploymentGroupEc2TagFilters}
  */
 CodeDeployDeploymentGroupEc2TagFilters.prototype.value = function(value) {
 	return this.set('Value', value);

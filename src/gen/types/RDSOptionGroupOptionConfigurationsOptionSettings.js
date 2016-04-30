@@ -17,7 +17,7 @@ RDSOptionGroupOptionConfigurationsOptionSettings.prototype = Object.create(Prope
  * Required: false
  *
  * @param {String} value
- * @return {RDSOptionGroupOptionConfigurationsOptionSettings}
+ * @returns {RDSOptionGroupOptionConfigurationsOptionSettings}
  */
 RDSOptionGroupOptionConfigurationsOptionSettings.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -29,7 +29,7 @@ RDSOptionGroupOptionConfigurationsOptionSettings.prototype.name = function(value
  * Required: false
  *
  * @param {String} value
- * @return {RDSOptionGroupOptionConfigurationsOptionSettings}
+ * @returns {RDSOptionGroupOptionConfigurationsOptionSettings}
  */
 RDSOptionGroupOptionConfigurationsOptionSettings.prototype.value = function(value) {
 	return this.set('Value', value);

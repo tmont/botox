@@ -17,7 +17,7 @@ ElasticBeanstalkOptionSettingsPropertyType.prototype = Object.create(PropertyTyp
  * Required: true
  *
  * @param {String} value
- * @return {ElasticBeanstalkOptionSettingsPropertyType}
+ * @returns {ElasticBeanstalkOptionSettingsPropertyType}
  */
 ElasticBeanstalkOptionSettingsPropertyType.prototype.namespace = function(value) {
 	return this.set('Namespace', value);
@@ -29,7 +29,7 @@ ElasticBeanstalkOptionSettingsPropertyType.prototype.namespace = function(value)
  * Required: true
  *
  * @param {String} value
- * @return {ElasticBeanstalkOptionSettingsPropertyType}
+ * @returns {ElasticBeanstalkOptionSettingsPropertyType}
  */
 ElasticBeanstalkOptionSettingsPropertyType.prototype.optionName = function(value) {
 	return this.set('OptionName', value);
@@ -41,7 +41,7 @@ ElasticBeanstalkOptionSettingsPropertyType.prototype.optionName = function(value
  * Required: true
  *
  * @param {String} value
- * @return {ElasticBeanstalkOptionSettingsPropertyType}
+ * @returns {ElasticBeanstalkOptionSettingsPropertyType}
  */
 ElasticBeanstalkOptionSettingsPropertyType.prototype.value = function(value) {
 	return this.set('Value', value);

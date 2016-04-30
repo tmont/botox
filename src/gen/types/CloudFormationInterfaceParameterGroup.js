@@ -17,7 +17,7 @@ CloudFormationInterfaceParameterGroup.prototype = Object.create(PropertyType.pro
  * Required: false
  *
  * @param {CloudFormationInterfaceLabel} value
- * @return {CloudFormationInterfaceParameterGroup}
+ * @returns {CloudFormationInterfaceParameterGroup}
  */
 CloudFormationInterfaceParameterGroup.prototype.label = function(value) {
 	return this.set('Label', value);
@@ -28,8 +28,8 @@ CloudFormationInterfaceParameterGroup.prototype.label = function(value) {
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {CloudFormationInterfaceParameterGroup}
+ * @param {String[]} value
+ * @returns {CloudFormationInterfaceParameterGroup}
  */
 CloudFormationInterfaceParameterGroup.prototype.parameters = function(value) {
 	return this.set('Parameters', value);

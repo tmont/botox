@@ -19,7 +19,7 @@ EC2NetworkAcl.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption.
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {EC2NetworkAcl}
+ * @returns {EC2NetworkAcl}
  */
 EC2NetworkAcl.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -32,7 +32,7 @@ EC2NetworkAcl.prototype.tags = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2NetworkAcl}
+ * @returns {EC2NetworkAcl}
  */
 EC2NetworkAcl.prototype.vpcId = function(value) {
 	return this.set('VpcId', value);

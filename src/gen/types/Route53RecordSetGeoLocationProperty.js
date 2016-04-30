@@ -1,7 +1,7 @@
 var PropertyType = require('../../property-type');
 
 /**
- * The GeoLocation property is part of the AWS::Route53::RecordSet resource that describes how Amazon Route 53 responds to DNS queries based on the geographic location of the query.
+ * The GeoLocation property is part of the AWS::Route53::RecordSet resource that describes how Amazon Route 53 responds to DNS queries based on the geographic location of the query.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html}
  * @constructor
  */
@@ -17,7 +17,7 @@ Route53RecordSetGeoLocationProperty.prototype = Object.create(PropertyType.proto
  * Required: false
  *
  * @param {String} value
- * @return {Route53RecordSetGeoLocationProperty}
+ * @returns {Route53RecordSetGeoLocationProperty}
  */
 Route53RecordSetGeoLocationProperty.prototype.continentCode = function(value) {
 	return this.set('ContinentCode', value);
@@ -29,7 +29,7 @@ Route53RecordSetGeoLocationProperty.prototype.continentCode = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {Route53RecordSetGeoLocationProperty}
+ * @returns {Route53RecordSetGeoLocationProperty}
  */
 Route53RecordSetGeoLocationProperty.prototype.countryCode = function(value) {
 	return this.set('CountryCode', value);
@@ -41,7 +41,7 @@ Route53RecordSetGeoLocationProperty.prototype.countryCode = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {Route53RecordSetGeoLocationProperty}
+ * @returns {Route53RecordSetGeoLocationProperty}
  */
 Route53RecordSetGeoLocationProperty.prototype.subdivisionCode = function(value) {
 	return this.set('SubdivisionCode', value);

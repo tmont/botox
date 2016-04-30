@@ -17,7 +17,7 @@ ElasticLoadBalancingPolicyType.prototype = Object.create(PropertyType.prototype)
  * Required: true
  *
  * @param {Object[]} value
- * @return {ElasticLoadBalancingPolicyType}
+ * @returns {ElasticLoadBalancingPolicyType}
  */
 ElasticLoadBalancingPolicyType.prototype.attributes = function(value) {
 	return this.set('Attributes', value);
@@ -29,7 +29,7 @@ ElasticLoadBalancingPolicyType.prototype.attributes = function(value) {
  * Required: false
  *
  * @param {String[]} value
- * @return {ElasticLoadBalancingPolicyType}
+ * @returns {ElasticLoadBalancingPolicyType}
  */
 ElasticLoadBalancingPolicyType.prototype.instancePorts = function(value) {
 	return this.set('InstancePorts', value);
@@ -41,7 +41,7 @@ ElasticLoadBalancingPolicyType.prototype.instancePorts = function(value) {
  * Required: false
  *
  * @param {String[]} value
- * @return {ElasticLoadBalancingPolicyType}
+ * @returns {ElasticLoadBalancingPolicyType}
  */
 ElasticLoadBalancingPolicyType.prototype.loadBalancerPorts = function(value) {
 	return this.set('LoadBalancerPorts', value);
@@ -53,7 +53,7 @@ ElasticLoadBalancingPolicyType.prototype.loadBalancerPorts = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {ElasticLoadBalancingPolicyType}
+ * @returns {ElasticLoadBalancingPolicyType}
  */
 ElasticLoadBalancingPolicyType.prototype.policyName = function(value) {
 	return this.set('PolicyName', value);
@@ -65,7 +65,7 @@ ElasticLoadBalancingPolicyType.prototype.policyName = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {ElasticLoadBalancingPolicyType}
+ * @returns {ElasticLoadBalancingPolicyType}
  */
 ElasticLoadBalancingPolicyType.prototype.policyType = function(value) {
 	return this.set('PolicyType', value);

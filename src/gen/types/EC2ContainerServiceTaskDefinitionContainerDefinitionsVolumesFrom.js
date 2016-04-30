@@ -17,7 +17,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom.prototype = Obj
  * Required: true
  *
  * @param {String} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom.prototype.sourceContainer = function(value) {
 	return this.set('SourceContainer', value);
@@ -29,7 +29,7 @@ EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom.prototype.sourc
  * Required: false
  *
  * @param {Boolean} value
- * @return {EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom}
+ * @returns {EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom}
  */
 EC2ContainerServiceTaskDefinitionContainerDefinitionsVolumesFrom.prototype.readOnly = function(value) {
 	return this.set('ReadOnly', value);

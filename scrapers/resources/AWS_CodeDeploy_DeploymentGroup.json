@@ -18,7 +18,7 @@
       "description": "A list of associated Auto Scaling groups that AWS CodeDeploy automatically deploys revisions to when new instances are created.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {

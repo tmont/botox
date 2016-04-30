@@ -17,7 +17,7 @@ APIGatewayRestApiS3Location.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayRestApiS3Location}
+ * @returns {APIGatewayRestApiS3Location}
  */
 APIGatewayRestApiS3Location.prototype.bucket = function(value) {
 	return this.set('Bucket', value);
@@ -29,7 +29,7 @@ APIGatewayRestApiS3Location.prototype.bucket = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayRestApiS3Location}
+ * @returns {APIGatewayRestApiS3Location}
  */
 APIGatewayRestApiS3Location.prototype.eTag = function(value) {
 	return this.set('ETag', value);
@@ -41,7 +41,7 @@ APIGatewayRestApiS3Location.prototype.eTag = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayRestApiS3Location}
+ * @returns {APIGatewayRestApiS3Location}
  */
 APIGatewayRestApiS3Location.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -53,7 +53,7 @@ APIGatewayRestApiS3Location.prototype.key = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {APIGatewayRestApiS3Location}
+ * @returns {APIGatewayRestApiS3Location}
  */
 APIGatewayRestApiS3Location.prototype.version = function(value) {
 	return this.set('Version', value);

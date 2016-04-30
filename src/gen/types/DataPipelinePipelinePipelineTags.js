@@ -17,7 +17,7 @@ DataPipelinePipelinePipelineTags.prototype = Object.create(PropertyType.prototyp
  * Required: true
  *
  * @param {String} value
- * @return {DataPipelinePipelinePipelineTags}
+ * @returns {DataPipelinePipelinePipelineTags}
  */
 DataPipelinePipelinePipelineTags.prototype.key = function(value) {
 	return this.set('Key', value);
@@ -29,7 +29,7 @@ DataPipelinePipelinePipelineTags.prototype.key = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {DataPipelinePipelinePipelineTags}
+ * @returns {DataPipelinePipelinePipelineTags}
  */
 DataPipelinePipelinePipelineTags.prototype.value = function(value) {
 	return this.set('Value', value);

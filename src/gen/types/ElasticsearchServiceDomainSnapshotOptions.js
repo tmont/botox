@@ -17,7 +17,7 @@ ElasticsearchServiceDomainSnapshotOptions.prototype = Object.create(PropertyType
  * Required: false
  *
  * @param {Number} value
- * @return {ElasticsearchServiceDomainSnapshotOptions}
+ * @returns {ElasticsearchServiceDomainSnapshotOptions}
  */
 ElasticsearchServiceDomainSnapshotOptions.prototype.automatedSnapshotStartHour = function(value) {
 	return this.set('AutomatedSnapshotStartHour', value);

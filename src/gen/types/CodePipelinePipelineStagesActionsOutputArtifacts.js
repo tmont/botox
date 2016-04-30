@@ -17,7 +17,7 @@ CodePipelinePipelineStagesActionsOutputArtifacts.prototype = Object.create(Prope
  * Required: true
  *
  * @param {String} value
- * @return {CodePipelinePipelineStagesActionsOutputArtifacts}
+ * @returns {CodePipelinePipelineStagesActionsOutputArtifacts}
  */
 CodePipelinePipelineStagesActionsOutputArtifacts.prototype.name = function(value) {
 	return this.set('Name', value);

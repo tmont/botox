@@ -17,7 +17,7 @@ Route53HostedZoneVPCs.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {String} value
- * @return {Route53HostedZoneVPCs}
+ * @returns {Route53HostedZoneVPCs}
  */
 Route53HostedZoneVPCs.prototype.vpcId = function(value) {
 	return this.set('VPCId', value);
@@ -29,7 +29,7 @@ Route53HostedZoneVPCs.prototype.vpcId = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {Route53HostedZoneVPCs}
+ * @returns {Route53HostedZoneVPCs}
  */
 Route53HostedZoneVPCs.prototype.vpcRegion = function(value) {
 	return this.set('VPCRegion', value);

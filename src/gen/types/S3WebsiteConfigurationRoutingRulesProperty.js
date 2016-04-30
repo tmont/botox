@@ -17,7 +17,7 @@ S3WebsiteConfigurationRoutingRulesProperty.prototype = Object.create(PropertyTyp
  * Required: true
  *
  * @param {S3WebsiteConfigurationRoutingRulesRedirectRuleProperty} value
- * @return {S3WebsiteConfigurationRoutingRulesProperty}
+ * @returns {S3WebsiteConfigurationRoutingRulesProperty}
  */
 S3WebsiteConfigurationRoutingRulesProperty.prototype.redirectRule = function(value) {
 	return this.set('RedirectRule', value);
@@ -29,7 +29,7 @@ S3WebsiteConfigurationRoutingRulesProperty.prototype.redirectRule = function(val
  * Required: false
  *
  * @param {S3WebsiteConfigurationRoutingRulesRoutingRuleConditionProperty} value
- * @return {S3WebsiteConfigurationRoutingRulesProperty}
+ * @returns {S3WebsiteConfigurationRoutingRulesProperty}
  */
 S3WebsiteConfigurationRoutingRulesProperty.prototype.routingRuleCondition = function(value) {
 	return this.set('RoutingRuleCondition', value);

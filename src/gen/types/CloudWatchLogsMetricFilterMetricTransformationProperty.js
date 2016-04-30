@@ -17,7 +17,7 @@ CloudWatchLogsMetricFilterMetricTransformationProperty.prototype = Object.create
  * Required: true
  *
  * @param {String} value
- * @return {CloudWatchLogsMetricFilterMetricTransformationProperty}
+ * @returns {CloudWatchLogsMetricFilterMetricTransformationProperty}
  */
 CloudWatchLogsMetricFilterMetricTransformationProperty.prototype.metricName = function(value) {
 	return this.set('MetricName', value);
@@ -29,7 +29,7 @@ CloudWatchLogsMetricFilterMetricTransformationProperty.prototype.metricName = fu
  * Required: true
  *
  * @param {String} value
- * @return {CloudWatchLogsMetricFilterMetricTransformationProperty}
+ * @returns {CloudWatchLogsMetricFilterMetricTransformationProperty}
  */
 CloudWatchLogsMetricFilterMetricTransformationProperty.prototype.metricNamespace = function(value) {
 	return this.set('MetricNamespace', value);
@@ -41,7 +41,7 @@ CloudWatchLogsMetricFilterMetricTransformationProperty.prototype.metricNamespace
  * Required: true
  *
  * @param {String} value
- * @return {CloudWatchLogsMetricFilterMetricTransformationProperty}
+ * @returns {CloudWatchLogsMetricFilterMetricTransformationProperty}
  */
 CloudWatchLogsMetricFilterMetricTransformationProperty.prototype.metricValue = function(value) {
 	return this.set('MetricValue', value);

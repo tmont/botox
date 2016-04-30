@@ -19,7 +19,7 @@ GameLiftFleet.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {GameLiftFleet}
+ * @returns {GameLiftFleet}
  */
 GameLiftFleet.prototype.buildId = function(value) {
 	return this.set('BuildId', value);
@@ -32,7 +32,7 @@ GameLiftFleet.prototype.buildId = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {GameLiftFleet}
+ * @returns {GameLiftFleet}
  */
 GameLiftFleet.prototype.description = function(value) {
 	return this.set('Description', value);
@@ -45,7 +45,7 @@ GameLiftFleet.prototype.description = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {GameLiftFleet}
+ * @returns {GameLiftFleet}
  */
 GameLiftFleet.prototype.desiredEC2Instances = function(value) {
 	return this.set('DesiredEC2Instances', value);
@@ -58,7 +58,7 @@ GameLiftFleet.prototype.desiredEC2Instances = function(value) {
  * Update requires: No interruption
  *
  * @param {GameLiftFleetEC2InboundPermission[]|Attribute|Reference} value List of Amazon GameLift Fleet EC2InboundPermission
- * @return {GameLiftFleet}
+ * @returns {GameLiftFleet}
  */
 GameLiftFleet.prototype.eC2InboundPermissions = function(value) {
 	return this.set('EC2InboundPermissions', value);
@@ -71,7 +71,7 @@ GameLiftFleet.prototype.eC2InboundPermissions = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {GameLiftFleet}
+ * @returns {GameLiftFleet}
  */
 GameLiftFleet.prototype.eC2InstanceType = function(value) {
 	return this.set('EC2InstanceType', value);
@@ -83,8 +83,8 @@ GameLiftFleet.prototype.eC2InstanceType = function(value) {
  * Required: false
  * Update requires: Replacement
  *
- * @param {string[]|Attribute|Reference} value
- * @return {GameLiftFleet}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {GameLiftFleet}
  */
 GameLiftFleet.prototype.logPaths = function(value) {
 	return this.set('LogPaths', value);
@@ -97,7 +97,7 @@ GameLiftFleet.prototype.logPaths = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {GameLiftFleet}
+ * @returns {GameLiftFleet}
  */
 GameLiftFleet.prototype.maxSize = function(value) {
 	return this.set('MaxSize', value);
@@ -110,7 +110,7 @@ GameLiftFleet.prototype.maxSize = function(value) {
  * Update requires: No interruption
  *
  * @param {Number|Attribute|Reference} value
- * @return {GameLiftFleet}
+ * @returns {GameLiftFleet}
  */
 GameLiftFleet.prototype.minSize = function(value) {
 	return this.set('MinSize', value);
@@ -123,7 +123,7 @@ GameLiftFleet.prototype.minSize = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {GameLiftFleet}
+ * @returns {GameLiftFleet}
  */
 GameLiftFleet.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -136,7 +136,7 @@ GameLiftFleet.prototype.name = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {GameLiftFleet}
+ * @returns {GameLiftFleet}
  */
 GameLiftFleet.prototype.serverLaunchParameters = function(value) {
 	return this.set('ServerLaunchParameters', value);
@@ -149,7 +149,7 @@ GameLiftFleet.prototype.serverLaunchParameters = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {GameLiftFleet}
+ * @returns {GameLiftFleet}
  */
 GameLiftFleet.prototype.serverLaunchPath = function(value) {
 	return this.set('ServerLaunchPath', value);

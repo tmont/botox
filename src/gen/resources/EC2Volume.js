@@ -19,7 +19,7 @@ EC2Volume.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {EC2Volume}
+ * @returns {EC2Volume}
  */
 EC2Volume.prototype.autoEnableIO = function(value) {
 	return this.set('AutoEnableIO', value);
@@ -32,7 +32,7 @@ EC2Volume.prototype.autoEnableIO = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Volume}
+ * @returns {EC2Volume}
  */
 EC2Volume.prototype.availabilityZone = function(value) {
 	return this.set('AvailabilityZone', value);
@@ -45,7 +45,7 @@ EC2Volume.prototype.availabilityZone = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {EC2Volume}
+ * @returns {EC2Volume}
  */
 EC2Volume.prototype.encrypted = function(value) {
 	return this.set('Encrypted', value);
@@ -58,7 +58,7 @@ EC2Volume.prototype.encrypted = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {Number|Attribute|Reference} value
- * @return {EC2Volume}
+ * @returns {EC2Volume}
  */
 EC2Volume.prototype.iops = function(value) {
 	return this.set('Iops', value);
@@ -71,7 +71,7 @@ EC2Volume.prototype.iops = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Volume}
+ * @returns {EC2Volume}
  */
 EC2Volume.prototype.kmsKeyId = function(value) {
 	return this.set('KmsKeyId', value);
@@ -84,7 +84,7 @@ EC2Volume.prototype.kmsKeyId = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Volume}
+ * @returns {EC2Volume}
  */
 EC2Volume.prototype.size = function(value) {
 	return this.set('Size', value);
@@ -97,7 +97,7 @@ EC2Volume.prototype.size = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Volume}
+ * @returns {EC2Volume}
  */
 EC2Volume.prototype.snapshotId = function(value) {
 	return this.set('SnapshotId', value);
@@ -110,7 +110,7 @@ EC2Volume.prototype.snapshotId = function(value) {
  * Update requires: No interruption
  *
  * @param {CloudFormationResourceTagsType[]|Attribute|Reference} value AWS CloudFormation Resource Tags
- * @return {EC2Volume}
+ * @returns {EC2Volume}
  */
 EC2Volume.prototype.tags = function(value) {
 	return this.set('Tags', value);
@@ -123,7 +123,7 @@ EC2Volume.prototype.tags = function(value) {
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2Volume}
+ * @returns {EC2Volume}
  */
 EC2Volume.prototype.volumeType = function(value) {
 	return this.set('VolumeType', value);

@@ -19,7 +19,7 @@ EC2SpotFleet.prototype = Object.create(Resource.prototype);
  * Update requires: Replacement
  *
  * @param {EC2SpotFleetSpotFleetRequestConfigData|Attribute|Reference} value Amazon EC2 SpotFleet SpotFleetRequestConfigData
- * @return {EC2SpotFleet}
+ * @returns {EC2SpotFleet}
  */
 EC2SpotFleet.prototype.spotFleetRequestConfigData = function(value) {
 	return this.set('SpotFleetRequestConfigData', value);

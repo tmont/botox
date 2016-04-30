@@ -17,7 +17,7 @@ DataPipelinePipelineObjects.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {DataPipelineDataPipelineObjectFields} value
- * @return {DataPipelinePipelineObjects}
+ * @returns {DataPipelinePipelineObjects}
  */
 DataPipelinePipelineObjects.prototype.fields = function(value) {
 	return this.set('Fields', value);
@@ -29,7 +29,7 @@ DataPipelinePipelineObjects.prototype.fields = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {DataPipelinePipelineObjects}
+ * @returns {DataPipelinePipelineObjects}
  */
 DataPipelinePipelineObjects.prototype.id = function(value) {
 	return this.set('Id', value);
@@ -41,7 +41,7 @@ DataPipelinePipelineObjects.prototype.id = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {DataPipelinePipelineObjects}
+ * @returns {DataPipelinePipelineObjects}
  */
 DataPipelinePipelineObjects.prototype.name = function(value) {
 	return this.set('Name', value);

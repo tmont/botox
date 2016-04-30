@@ -16,8 +16,8 @@ CloudFrontDistributionConfig.prototype = Object.create(PropertyType.prototype);
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {CloudFrontDistributionConfig}
+ * @param {String[]} value
+ * @returns {CloudFrontDistributionConfig}
  */
 CloudFrontDistributionConfig.prototype.aliases = function(value) {
 	return this.set('Aliases', value);
@@ -29,7 +29,7 @@ CloudFrontDistributionConfig.prototype.aliases = function(value) {
  * Required: false
  *
  * @param {CloudFrontDistributionConfigCacheBehavior[]} value
- * @return {CloudFrontDistributionConfig}
+ * @returns {CloudFrontDistributionConfig}
  */
 CloudFrontDistributionConfig.prototype.cacheBehaviors = function(value) {
 	return this.set('CacheBehaviors', value);
@@ -41,7 +41,7 @@ CloudFrontDistributionConfig.prototype.cacheBehaviors = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfig}
+ * @returns {CloudFrontDistributionConfig}
  */
 CloudFrontDistributionConfig.prototype.comment = function(value) {
 	return this.set('Comment', value);
@@ -53,7 +53,7 @@ CloudFrontDistributionConfig.prototype.comment = function(value) {
  * Required: false
  *
  * @param {undefined} value
- * @return {CloudFrontDistributionConfig}
+ * @returns {CloudFrontDistributionConfig}
  */
 CloudFrontDistributionConfig.prototype.customErrorResponses = function(value) {
 	return this.set('CustomErrorResponses', value);
@@ -65,7 +65,7 @@ CloudFrontDistributionConfig.prototype.customErrorResponses = function(value) {
  * Required: true
  *
  * @param {CloudFrontDefaultCacheBehavior} value
- * @return {CloudFrontDistributionConfig}
+ * @returns {CloudFrontDistributionConfig}
  */
 CloudFrontDistributionConfig.prototype.defaultCacheBehavior = function(value) {
 	return this.set('DefaultCacheBehavior', value);
@@ -77,7 +77,7 @@ CloudFrontDistributionConfig.prototype.defaultCacheBehavior = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfig}
+ * @returns {CloudFrontDistributionConfig}
  */
 CloudFrontDistributionConfig.prototype.defaultRootObject = function(value) {
 	return this.set('DefaultRootObject', value);
@@ -89,7 +89,7 @@ CloudFrontDistributionConfig.prototype.defaultRootObject = function(value) {
  * Required: true
  *
  * @param {Boolean} value
- * @return {CloudFrontDistributionConfig}
+ * @returns {CloudFrontDistributionConfig}
  */
 CloudFrontDistributionConfig.prototype.enabled = function(value) {
 	return this.set('Enabled', value);
@@ -101,7 +101,7 @@ CloudFrontDistributionConfig.prototype.enabled = function(value) {
  * Required: false
  *
  * @param {CloudFrontLogging} value
- * @return {CloudFrontDistributionConfig}
+ * @returns {CloudFrontDistributionConfig}
  */
 CloudFrontDistributionConfig.prototype.logging = function(value) {
 	return this.set('Logging', value);
@@ -113,7 +113,7 @@ CloudFrontDistributionConfig.prototype.logging = function(value) {
  * Required: true
  *
  * @param {CloudFrontDistributionConfigOrigin[]} value
- * @return {CloudFrontDistributionConfig}
+ * @returns {CloudFrontDistributionConfig}
  */
 CloudFrontDistributionConfig.prototype.origins = function(value) {
 	return this.set('Origins', value);
@@ -125,7 +125,7 @@ CloudFrontDistributionConfig.prototype.origins = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfig}
+ * @returns {CloudFrontDistributionConfig}
  */
 CloudFrontDistributionConfig.prototype.priceClass = function(value) {
 	return this.set('PriceClass', value);
@@ -137,7 +137,7 @@ CloudFrontDistributionConfig.prototype.priceClass = function(value) {
  * Required: false
  *
  * @param {CloudFrontDistributionConfigurationRestrictions} value
- * @return {CloudFrontDistributionConfig}
+ * @returns {CloudFrontDistributionConfig}
  */
 CloudFrontDistributionConfig.prototype.restrictions = function(value) {
 	return this.set('Restrictions', value);
@@ -149,7 +149,7 @@ CloudFrontDistributionConfig.prototype.restrictions = function(value) {
  * Required: false
  *
  * @param {CloudFrontDistributionConfigurationViewerCertificate} value
- * @return {CloudFrontDistributionConfig}
+ * @returns {CloudFrontDistributionConfig}
  */
 CloudFrontDistributionConfig.prototype.viewerCertificate = function(value) {
 	return this.set('ViewerCertificate', value);
@@ -161,7 +161,7 @@ CloudFrontDistributionConfig.prototype.viewerCertificate = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfig}
+ * @returns {CloudFrontDistributionConfig}
  */
 CloudFrontDistributionConfig.prototype.webACLId = function(value) {
 	return this.set('WebACLId', value);

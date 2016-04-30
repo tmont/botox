@@ -19,7 +19,7 @@ OpsWorksInstance.prototype = Object.create(Resource.prototype);
  * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksInstance}
+ * @returns {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.amiId = function(value) {
 	return this.set('AmiId', value);
@@ -32,7 +32,7 @@ OpsWorksInstance.prototype.amiId = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksInstance}
+ * @returns {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.architecture = function(value) {
 	return this.set('Architecture', value);
@@ -45,7 +45,7 @@ OpsWorksInstance.prototype.architecture = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksInstance}
+ * @returns {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.autoScalingType = function(value) {
 	return this.set('AutoScalingType', value);
@@ -58,7 +58,7 @@ OpsWorksInstance.prototype.autoScalingType = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksInstance}
+ * @returns {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.availabilityZone = function(value) {
 	return this.set('AvailabilityZone', value);
@@ -71,7 +71,7 @@ OpsWorksInstance.prototype.availabilityZone = function(value) {
  * Update requires: Replacement
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {OpsWorksInstance}
+ * @returns {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.ebsOptimized = function(value) {
 	return this.set('EbsOptimized', value);
@@ -84,7 +84,7 @@ OpsWorksInstance.prototype.ebsOptimized = function(value) {
  * Update requires: Some interruptions
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {OpsWorksInstance}
+ * @returns {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.installUpdatesOnBoot = function(value) {
 	return this.set('InstallUpdatesOnBoot', value);
@@ -97,7 +97,7 @@ OpsWorksInstance.prototype.installUpdatesOnBoot = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksInstance}
+ * @returns {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.instanceType = function(value) {
 	return this.set('InstanceType', value);
@@ -109,8 +109,8 @@ OpsWorksInstance.prototype.instanceType = function(value) {
  * Required: true
  * Update requires: Some interruptions
  *
- * @param {string[]|Attribute|Reference} value
- * @return {OpsWorksInstance}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.layerIds = function(value) {
 	return this.set('LayerIds', value);
@@ -123,7 +123,7 @@ OpsWorksInstance.prototype.layerIds = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksInstance}
+ * @returns {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.os = function(value) {
 	return this.set('Os', value);
@@ -136,7 +136,7 @@ OpsWorksInstance.prototype.os = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksInstance}
+ * @returns {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.rootDeviceType = function(value) {
 	return this.set('RootDeviceType', value);
@@ -149,7 +149,7 @@ OpsWorksInstance.prototype.rootDeviceType = function(value) {
  * Update requires: Some interruptions
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksInstance}
+ * @returns {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.sshKeyName = function(value) {
 	return this.set('SshKeyName', value);
@@ -162,7 +162,7 @@ OpsWorksInstance.prototype.sshKeyName = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksInstance}
+ * @returns {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.stackId = function(value) {
 	return this.set('StackId', value);
@@ -175,7 +175,7 @@ OpsWorksInstance.prototype.stackId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {OpsWorksInstance}
+ * @returns {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.subnetId = function(value) {
 	return this.set('SubnetId', value);
@@ -188,7 +188,7 @@ OpsWorksInstance.prototype.subnetId = function(value) {
  * Update requires: Replacement
  *
  * @param {OpsWorksTimeBasedAutoScalingType|Attribute|Reference} value AWS OpsWorks TimeBasedAutoScaling Type
- * @return {OpsWorksInstance}
+ * @returns {OpsWorksInstance}
  */
 OpsWorksInstance.prototype.timeBasedAutoScaling = function(value) {
 	return this.set('TimeBasedAutoScaling', value);

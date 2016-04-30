@@ -17,7 +17,7 @@ CloudFrontDistributionConfigCustomErrorResponse.prototype = Object.create(Proper
  * Required: false
  *
  * @param {Number} value
- * @return {CloudFrontDistributionConfigCustomErrorResponse}
+ * @returns {CloudFrontDistributionConfigCustomErrorResponse}
  */
 CloudFrontDistributionConfigCustomErrorResponse.prototype.errorCachingMinTTL = function(value) {
 	return this.set('ErrorCachingMinTTL', value);
@@ -29,7 +29,7 @@ CloudFrontDistributionConfigCustomErrorResponse.prototype.errorCachingMinTTL = f
  * Required: true
  *
  * @param {Number} value
- * @return {CloudFrontDistributionConfigCustomErrorResponse}
+ * @returns {CloudFrontDistributionConfigCustomErrorResponse}
  */
 CloudFrontDistributionConfigCustomErrorResponse.prototype.errorCode = function(value) {
 	return this.set('ErrorCode', value);
@@ -41,7 +41,7 @@ CloudFrontDistributionConfigCustomErrorResponse.prototype.errorCode = function(v
  * Required: false
  *
  * @param {Number} value
- * @return {CloudFrontDistributionConfigCustomErrorResponse}
+ * @returns {CloudFrontDistributionConfigCustomErrorResponse}
  */
 CloudFrontDistributionConfigCustomErrorResponse.prototype.responseCode = function(value) {
 	return this.set('ResponseCode', value);
@@ -53,7 +53,7 @@ CloudFrontDistributionConfigCustomErrorResponse.prototype.responseCode = functio
  * Required: false
  *
  * @param {String} value
- * @return {CloudFrontDistributionConfigCustomErrorResponse}
+ * @returns {CloudFrontDistributionConfigCustomErrorResponse}
  */
 CloudFrontDistributionConfigCustomErrorResponse.prototype.responsePagePath = function(value) {
 	return this.set('ResponsePagePath', value);

@@ -20,15 +20,15 @@ DirectoryServiceMicrosoftAD.prototype = Object.create(Resource.prototype);
  */
 Object.defineProperty(DirectoryServiceMicrosoftAD.prototype, 'attr', {
 	/**
-	 * @return {DirectoryServiceMicrosoftADAttributeMap}
+	 * @returns {DirectoryServiceMicrosoftADAttributeMap}
 	 */
 	get: function() {
 		var createAttribute = this.createAttribute.bind(this);
 		return {
-			
+
 			/**
 			 * The alias for a directory. For example: d-12373a053a or alias4-mydirectory-12345abcgmzsk (if you have the CreateAlias property set to true).
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get alias() {
 				return createAttribute('Alias');
@@ -36,7 +36,7 @@ Object.defineProperty(DirectoryServiceMicrosoftAD.prototype, 'attr', {
 
 			/**
 			 * The IP addresses of the DNS servers for the directory, such as [ "192.0.2.1", "192.0.2.2" ].
-			 * @return {Attribute}
+			 * @returns {Attribute}
 			 */
 			get dnsIpAddresses() {
 				return createAttribute('DnsIpAddresses');
@@ -52,7 +52,7 @@ Object.defineProperty(DirectoryServiceMicrosoftAD.prototype, 'attr', {
  * Update requires: Replacement
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {DirectoryServiceMicrosoftAD}
+ * @returns {DirectoryServiceMicrosoftAD}
  */
 DirectoryServiceMicrosoftAD.prototype.createAlias = function(value) {
 	return this.set('CreateAlias', value);
@@ -65,7 +65,7 @@ DirectoryServiceMicrosoftAD.prototype.createAlias = function(value) {
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {DirectoryServiceMicrosoftAD}
+ * @returns {DirectoryServiceMicrosoftAD}
  */
 DirectoryServiceMicrosoftAD.prototype.enableSso = function(value) {
 	return this.set('EnableSso', value);
@@ -78,7 +78,7 @@ DirectoryServiceMicrosoftAD.prototype.enableSso = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {DirectoryServiceMicrosoftAD}
+ * @returns {DirectoryServiceMicrosoftAD}
  */
 DirectoryServiceMicrosoftAD.prototype.name = function(value) {
 	return this.set('Name', value);
@@ -91,7 +91,7 @@ DirectoryServiceMicrosoftAD.prototype.name = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {DirectoryServiceMicrosoftAD}
+ * @returns {DirectoryServiceMicrosoftAD}
  */
 DirectoryServiceMicrosoftAD.prototype.password = function(value) {
 	return this.set('Password', value);
@@ -104,7 +104,7 @@ DirectoryServiceMicrosoftAD.prototype.password = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {DirectoryServiceMicrosoftAD}
+ * @returns {DirectoryServiceMicrosoftAD}
  */
 DirectoryServiceMicrosoftAD.prototype.shortName = function(value) {
 	return this.set('ShortName', value);
@@ -117,7 +117,7 @@ DirectoryServiceMicrosoftAD.prototype.shortName = function(value) {
  * Update requires: Replacement
  *
  * @param {DirectoryServiceMicrosoftADVpcSettings|Attribute|Reference} value AWS Directory Service MicrosoftAD VpcSettings
- * @return {DirectoryServiceMicrosoftAD}
+ * @returns {DirectoryServiceMicrosoftAD}
  */
 DirectoryServiceMicrosoftAD.prototype.vpcSettings = function(value) {
 	return this.set('VpcSettings', value);

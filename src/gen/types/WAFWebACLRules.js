@@ -17,7 +17,7 @@ WAFWebACLRules.prototype = Object.create(PropertyType.prototype);
  * Required: true
  *
  * @param {WAFWebACLAction} value
- * @return {WAFWebACLRules}
+ * @returns {WAFWebACLRules}
  */
 WAFWebACLRules.prototype.action = function(value) {
 	return this.set('Action', value);
@@ -29,7 +29,7 @@ WAFWebACLRules.prototype.action = function(value) {
  * Required: true
  *
  * @param {Number} value
- * @return {WAFWebACLRules}
+ * @returns {WAFWebACLRules}
  */
 WAFWebACLRules.prototype.priority = function(value) {
 	return this.set('Priority', value);
@@ -41,7 +41,7 @@ WAFWebACLRules.prototype.priority = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {WAFWebACLRules}
+ * @returns {WAFWebACLRules}
  */
 WAFWebACLRules.prototype.ruleId = function(value) {
 	return this.set('RuleId', value);

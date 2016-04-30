@@ -17,7 +17,7 @@ EC2NetworkInterfaceAssociation.prototype = Object.create(PropertyType.prototype)
  * Required: true
  *
  * @param {String} value
- * @return {EC2NetworkInterfaceAssociation}
+ * @returns {EC2NetworkInterfaceAssociation}
  */
 EC2NetworkInterfaceAssociation.prototype.attachmentID = function(value) {
 	return this.set('AttachmentID', value);
@@ -29,7 +29,7 @@ EC2NetworkInterfaceAssociation.prototype.attachmentID = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {EC2NetworkInterfaceAssociation}
+ * @returns {EC2NetworkInterfaceAssociation}
  */
 EC2NetworkInterfaceAssociation.prototype.instanceID = function(value) {
 	return this.set('InstanceID', value);
@@ -41,7 +41,7 @@ EC2NetworkInterfaceAssociation.prototype.instanceID = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {EC2NetworkInterfaceAssociation}
+ * @returns {EC2NetworkInterfaceAssociation}
  */
 EC2NetworkInterfaceAssociation.prototype.publicIp = function(value) {
 	return this.set('PublicIp', value);
@@ -53,7 +53,7 @@ EC2NetworkInterfaceAssociation.prototype.publicIp = function(value) {
  * Required: true
  *
  * @param {String} value
- * @return {EC2NetworkInterfaceAssociation}
+ * @returns {EC2NetworkInterfaceAssociation}
  */
 EC2NetworkInterfaceAssociation.prototype.ipOwnerId = function(value) {
 	return this.set('IpOwnerId', value);

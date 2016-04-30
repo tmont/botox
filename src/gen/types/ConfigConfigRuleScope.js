@@ -17,7 +17,7 @@ ConfigConfigRuleScope.prototype = Object.create(PropertyType.prototype);
  * Required: false
  *
  * @param {String} value
- * @return {ConfigConfigRuleScope}
+ * @returns {ConfigConfigRuleScope}
  */
 ConfigConfigRuleScope.prototype.complianceResourceId = function(value) {
 	return this.set('ComplianceResourceId', value);
@@ -28,8 +28,8 @@ ConfigConfigRuleScope.prototype.complianceResourceId = function(value) {
  *
  * Required: false
  *
- * @param {string[]} value
- * @return {ConfigConfigRuleScope}
+ * @param {String[]} value
+ * @returns {ConfigConfigRuleScope}
  */
 ConfigConfigRuleScope.prototype.complianceResourceTypes = function(value) {
 	return this.set('ComplianceResourceTypes', value);
@@ -41,7 +41,7 @@ ConfigConfigRuleScope.prototype.complianceResourceTypes = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {ConfigConfigRuleScope}
+ * @returns {ConfigConfigRuleScope}
  */
 ConfigConfigRuleScope.prototype.tagKey = function(value) {
 	return this.set('TagKey', value);
@@ -53,7 +53,7 @@ ConfigConfigRuleScope.prototype.tagKey = function(value) {
  * Required: false
  *
  * @param {String} value
- * @return {ConfigConfigRuleScope}
+ * @returns {ConfigConfigRuleScope}
  */
 ConfigConfigRuleScope.prototype.tagValue = function(value) {
 	return this.set('TagValue', value);

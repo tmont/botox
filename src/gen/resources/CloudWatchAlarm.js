@@ -19,7 +19,7 @@ CloudWatchAlarm.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
- * @return {CloudWatchAlarm}
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.actionsEnabled = function(value) {
 	return this.set('ActionsEnabled', value);
@@ -31,8 +31,8 @@ CloudWatchAlarm.prototype.actionsEnabled = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {CloudWatchAlarm}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.alarmActions = function(value) {
 	return this.set('AlarmActions', value);
@@ -45,7 +45,7 @@ CloudWatchAlarm.prototype.alarmActions = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudWatchAlarm}
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.alarmDescription = function(value) {
 	return this.set('AlarmDescription', value);
@@ -58,7 +58,7 @@ CloudWatchAlarm.prototype.alarmDescription = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudWatchAlarm}
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.alarmName = function(value) {
 	return this.set('AlarmName', value);
@@ -71,7 +71,7 @@ CloudWatchAlarm.prototype.alarmName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudWatchAlarm}
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.comparisonOperator = function(value) {
 	return this.set('ComparisonOperator', value);
@@ -84,7 +84,7 @@ CloudWatchAlarm.prototype.comparisonOperator = function(value) {
  * Update requires: No interruption
  *
  * @param {CloudWatchMetricDimensionPropertyType[]|Attribute|Reference} value List of Metric Dimension
- * @return {CloudWatchAlarm}
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.dimensions = function(value) {
 	return this.set('Dimensions', value);
@@ -97,7 +97,7 @@ CloudWatchAlarm.prototype.dimensions = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudWatchAlarm}
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.evaluationPeriods = function(value) {
 	return this.set('EvaluationPeriods', value);
@@ -109,8 +109,8 @@ CloudWatchAlarm.prototype.evaluationPeriods = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {CloudWatchAlarm}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.insufficientDataActions = function(value) {
 	return this.set('InsufficientDataActions', value);
@@ -123,7 +123,7 @@ CloudWatchAlarm.prototype.insufficientDataActions = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudWatchAlarm}
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.metricName = function(value) {
 	return this.set('MetricName', value);
@@ -136,7 +136,7 @@ CloudWatchAlarm.prototype.metricName = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudWatchAlarm}
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.namespace = function(value) {
 	return this.set('Namespace', value);
@@ -148,8 +148,8 @@ CloudWatchAlarm.prototype.namespace = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {CloudWatchAlarm}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.okActions = function(value) {
 	return this.set('OKActions', value);
@@ -162,7 +162,7 @@ CloudWatchAlarm.prototype.okActions = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudWatchAlarm}
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.period = function(value) {
 	return this.set('Period', value);
@@ -175,7 +175,7 @@ CloudWatchAlarm.prototype.period = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudWatchAlarm}
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.statistic = function(value) {
 	return this.set('Statistic', value);
@@ -188,7 +188,7 @@ CloudWatchAlarm.prototype.statistic = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudWatchAlarm}
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.threshold = function(value) {
 	return this.set('Threshold', value);
@@ -201,7 +201,7 @@ CloudWatchAlarm.prototype.threshold = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {CloudWatchAlarm}
+ * @returns {CloudWatchAlarm}
  */
 CloudWatchAlarm.prototype.unit = function(value) {
 	return this.set('Unit', value);

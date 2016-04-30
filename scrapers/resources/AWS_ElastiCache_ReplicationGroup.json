@@ -42,7 +42,7 @@
       "description": "A list of cache security group names to associate with this replication group. If you specify the SecurityGroupIds property, do not specify this property; you can specify only one.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {
@@ -98,7 +98,7 @@
       "description": "A list of Availability Zones (AZs) in which the cache clusters in this replication group are created.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "Replacement"
     },
     {
@@ -122,7 +122,7 @@
       "description": "A list of Amazon Virtual Private Cloud (Amazon VPC) security groups to associate with this replication group. Use this property only when you are creating a replication group in a VPC. If you specify the CacheSecurityGroupNames property, do not specify this property; you can specify only one.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "No interruption"
     },
     {
@@ -130,7 +130,7 @@
       "description": "A single-element string list that specifies an ARN of a Redis .rdb snapshot file that is stored in Amazon Simple Storage Service (Amazon S3). The snapshot file populates the node group. The Amazon S3 object name in the ARN cannot contain commas. For example, you can specify arn:aws:s3:::my_bucket/snapshot1.rdb.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "Replacement"
     },
     {

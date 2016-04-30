@@ -17,7 +17,7 @@ ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig.prototype = Object.create(P
  * Required: true
  *
  * @param {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification} value
- * @return {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig}
+ * @returns {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig}
  */
 ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig.prototype.volumeSpecification = function(value) {
 	return this.set('VolumeSpecification', value);
@@ -29,7 +29,7 @@ ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig.prototype.volumeSpecificati
  * Required: false
  *
  * @param {Number} value
- * @return {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig}
+ * @returns {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig}
  */
 ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig.prototype.volumesPerInstance = function(value) {
 	return this.set('VolumesPerInstance', value);

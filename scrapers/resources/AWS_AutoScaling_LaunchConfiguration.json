@@ -34,7 +34,7 @@
       "description": "The IDs of one or more security groups for the VPC that you specified in the ClassicLinkVPCId property.",
       "typeDescription": "List of strings",
       "required": false,
-      "type": "string[]",
+      "type": "String[]",
       "update": "Replacement"
     },
     {

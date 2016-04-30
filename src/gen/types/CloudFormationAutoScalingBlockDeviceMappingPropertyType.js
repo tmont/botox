@@ -17,7 +17,7 @@ CloudFormationAutoScalingBlockDeviceMappingPropertyType.prototype = Object.creat
  * Required: true
  *
  * @param {String} value
- * @return {CloudFormationAutoScalingBlockDeviceMappingPropertyType}
+ * @returns {CloudFormationAutoScalingBlockDeviceMappingPropertyType}
  */
 CloudFormationAutoScalingBlockDeviceMappingPropertyType.prototype.deviceName = function(value) {
 	return this.set('DeviceName', value);
@@ -29,7 +29,7 @@ CloudFormationAutoScalingBlockDeviceMappingPropertyType.prototype.deviceName = f
  * Required: false
  *
  * @param {CloudFormationAutoScalingEBSBlockDevicePropertyType} value
- * @return {CloudFormationAutoScalingBlockDeviceMappingPropertyType}
+ * @returns {CloudFormationAutoScalingBlockDeviceMappingPropertyType}
  */
 CloudFormationAutoScalingBlockDeviceMappingPropertyType.prototype.ebs = function(value) {
 	return this.set('Ebs', value);
@@ -41,7 +41,7 @@ CloudFormationAutoScalingBlockDeviceMappingPropertyType.prototype.ebs = function
  * Required: false
  *
  * @param {Boolean} value
- * @return {CloudFormationAutoScalingBlockDeviceMappingPropertyType}
+ * @returns {CloudFormationAutoScalingBlockDeviceMappingPropertyType}
  */
 CloudFormationAutoScalingBlockDeviceMappingPropertyType.prototype.noDevice = function(value) {
 	return this.set('NoDevice', value);
@@ -53,7 +53,7 @@ CloudFormationAutoScalingBlockDeviceMappingPropertyType.prototype.noDevice = fun
  * Required: false
  *
  * @param {String} value
- * @return {CloudFormationAutoScalingBlockDeviceMappingPropertyType}
+ * @returns {CloudFormationAutoScalingBlockDeviceMappingPropertyType}
  */
 CloudFormationAutoScalingBlockDeviceMappingPropertyType.prototype.virtualName = function(value) {
 	return this.set('VirtualName', value);

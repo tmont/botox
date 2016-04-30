@@ -19,7 +19,7 @@ EC2VPCDHCPOptionsAssociation.prototype = Object.create(Resource.prototype);
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPCDHCPOptionsAssociation}
+ * @returns {EC2VPCDHCPOptionsAssociation}
  */
 EC2VPCDHCPOptionsAssociation.prototype.dhcpOptionsId = function(value) {
 	return this.set('DhcpOptionsId', value);
@@ -32,7 +32,7 @@ EC2VPCDHCPOptionsAssociation.prototype.dhcpOptionsId = function(value) {
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {EC2VPCDHCPOptionsAssociation}
+ * @returns {EC2VPCDHCPOptionsAssociation}
  */
 EC2VPCDHCPOptionsAssociation.prototype.vpcId = function(value) {
 	return this.set('VpcId', value);

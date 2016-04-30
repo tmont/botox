@@ -18,8 +18,8 @@ IAMPolicy.prototype = Object.create(Resource.prototype);
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {IAMPolicy}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {IAMPolicy}
  */
 IAMPolicy.prototype.groups = function(value) {
 	return this.set('Groups', value);
@@ -32,7 +32,7 @@ IAMPolicy.prototype.groups = function(value) {
  * Update requires: No interruption
  *
  * @param {Object|Attribute|Reference} value
- * @return {IAMPolicy}
+ * @returns {IAMPolicy}
  */
 IAMPolicy.prototype.policyDocument = function(value) {
 	return this.set('PolicyDocument', value);
@@ -45,7 +45,7 @@ IAMPolicy.prototype.policyDocument = function(value) {
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
- * @return {IAMPolicy}
+ * @returns {IAMPolicy}
  */
 IAMPolicy.prototype.policyName = function(value) {
 	return this.set('PolicyName', value);
@@ -57,8 +57,8 @@ IAMPolicy.prototype.policyName = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {IAMPolicy}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {IAMPolicy}
  */
 IAMPolicy.prototype.roles = function(value) {
 	return this.set('Roles', value);
@@ -70,8 +70,8 @@ IAMPolicy.prototype.roles = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {string[]|Attribute|Reference} value
- * @return {IAMPolicy}
+ * @param {String[]|Attribute|Reference} value
+ * @returns {IAMPolicy}
  */
 IAMPolicy.prototype.users = function(value) {
 	return this.set('Users', value);
