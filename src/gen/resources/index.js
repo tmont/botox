@@ -22,7 +22,6 @@ module.exports = {
 	CloudFormation: {
 		Authentication: require('./CloudFormationAuthentication.js'),
 		CustomResource: require('./CloudFormationCustomResource.js'),
-		Init: require('./CloudFormationInit.js'),
 		Interface: require('./CloudFormationInterface.js'),
 		Stack: require('./CloudFormationStack.js'),
 		WaitCondition: require('./CloudFormationWaitCondition.js'),

@@ -737,15 +737,6 @@ module.exports = {
 	},
 
 	/**
-	 * Topics
-	 * @param {String} name
-	 * @returns {CloudFormationInit}
-	 */
-	init: function(name) {
-		return new Resources.CloudFormation.Init(name);
-	},
-
-	/**
 	 * The AWS::EC2::Instance resource creates an EC2 instance.
 	 * @param {String} name
 	 * @returns {EC2Instance}

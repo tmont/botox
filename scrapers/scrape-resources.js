@@ -23,6 +23,14 @@ function processReferenceLinks(urls, next) {
 
 		function writeData($, next) {
 			const data = helpers.getPropertyInfo($, true);
+
+			switch (data.fullName) {
+				case 'AWS::CloudFormation::Init':
+					//this isn't a resource, it's just documentation on something else
+					next();
+					return;
+			}
+
 			data.referenceUrl = url;
 
 			console.log(' detected ' + data.fullName + ' ' +
