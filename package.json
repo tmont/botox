@@ -16,6 +16,7 @@
 		"inflection": "1.10.0",
 		"mocha": "*",
 		"expect.js": "*",
-		"eslint": "2.8.0"
+		"eslint": "2.8.0",
+		"jsdoc": "3.4.0"
 	}
 }
