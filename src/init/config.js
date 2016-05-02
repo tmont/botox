@@ -1,5 +1,15 @@
+/**
+ * cfn-init configuration
+ * @param {String} [name] Key of the config object
+ * @constructor
+ * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html}
+ */
 function Config(name) {
-	this.name = name;
+	if (name === 'configSets') {
+		throw new Error('Cannot name a config "configSets"');
+	}
+
+	this.name = name || 'config';
 	this.commands = {};
 	this.files = {};
 	this.groups = {};
@@ -13,6 +23,7 @@ Config.prototype = {
 	/**
 	 * You can use the commands key to execute commands on the EC2 instance. The commands are processed in alphabetical order by name.
 	 * @param {Command} command
+	 * @returns {Config}
 	 */
 	command: function(command) {
 		this.commands[command.name] = command;
