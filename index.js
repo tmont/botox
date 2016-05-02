@@ -61,14 +61,32 @@ module.exports = {
 		return pseudoParams.stackName;
 	},
 
+	/**
+	 * Returns base64 representation of a string
+	 * @param {String|Join|Reference|FindInMap|Select} value
+	 * @returns {Base64}
+	 */
 	base64: function(value) {
 		return new Functions.Base64(value);
 	},
 
+	/**
+	 * Selects a single thing from an array of things
+	 * @param {Number} index
+	 * @param {Array|Reference} things
+	 * @returns {Select}
+	 */
 	select: function(index, things) {
 		return new Functions.Select(index, things);
 	},
 
+	/**
+	 * Gets an element from a mapping
+	 * @param {String|Reference|FindInMap|Select|Join} mapName
+	 * @param {String|Reference|FindInMap|Select|Join} topLevelKey
+	 * @param {String|Reference|FindInMap|Select|Join} secondLevelKey
+	 * @returns {FindInMap}
+	 */
 	findInMap: function(mapName, topLevelKey, secondLevelKey) {
 		return new Functions.FindInMap(mapName, topLevelKey, secondLevelKey);
 	},
@@ -82,6 +100,12 @@ module.exports = {
 		return new Functions.GetAZs(region);
 	},
 
+	/**
+	 * Joins some things together
+	 * @param {Array|FindInMap|Reference} things
+	 * @param {String} delimiter
+	 * @returns {Join}
+	 */
 	join: function(things, delimiter) {
 		return new Functions.Join(things, delimiter);
 	},
