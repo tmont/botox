@@ -1,7 +1,7 @@
 var TemplateItemTrait = require('../template-item-trait');
 
 /**
- * You can use the commands key to execute commands on the EC2 instance. The commands are processed in alphabetical order by name.
+ * You can use the files key to create files on the EC2 instance. The content can be either inline in the template or the content can be pulled from a URL. The files are written to disk in lexicographic order.
  * @param {String} filePath
  * @constructor
  * @implements TemplateItemTrait

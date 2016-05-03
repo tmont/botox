@@ -6,6 +6,8 @@ var Functions = require('./src/fun');
 var Parameter = require('./src/parameter');
 var Output = require('./src/output');
 var Condition = require('./src/condition');
+var CloudFormationInit = require('./src/cfn-init');
+var cfg = require('./src/init');
 var Reference = Functions.Reference;
 
 var pseudoParams = {
@@ -15,6 +17,33 @@ var pseudoParams = {
 	noValue: new Reference('AWS::NoValue'),
 	stackId: new Reference('AWS::StackId'),
 	stackName: new Reference('AWS::StackName')
+};
+
+/**
+ * Syntax sugar for AWS::CloudFormation::Init stuff
+ * @constructor
+ */
+function ConfigSugar() {
+
+}
+
+ConfigSugar.prototype = {
+	/**
+	 * Creates a cfn-init configuration
+	 * @param {String} [name]
+	 * @returns {Config}
+	 */
+	config: function(name) {
+		return new cfg.Config(name);
+	},
+	/**
+	 * You can use the files key to create files on the EC2 instance. The content can be either inline in the template or the content can be pulled from a URL. The files are written to disk in lexicographic order.
+	 * @param {String} filePath
+	 * @returns {File}
+	 */
+	file: function(filePath) {
+		return new cfg.File(filePath);
+	}
 };
 
 module.exports = {
@@ -189,6 +218,19 @@ module.exports = {
 	 */
 	condition: function(name, conditional) {
 		return new Condition(name, conditional);
+	},
+	/**
+	 * Creates new cfn-init configuration
+	 * @returns {CloudFormationInit}
+	 */
+	cfnInit: function() {
+		return new CloudFormationInit();
+	},
+	/**
+	 * @returns ConfigSugar
+	 */
+	get cfg() {
+		return new ConfigSugar();
 	},
 
 	//@@start resource sugar

@@ -1,3 +1,5 @@
+var TemplateItemTrait = require('../template-item-trait');
+
 /**
  * cfn-init configuration
  * @param {String} [name] Key of the config object
@@ -103,5 +105,7 @@ Config.prototype = {
 		return json;
 	}
 };
+
+Object.assign(Config.prototype, TemplateItemTrait.prototype);
 
 module.exports = Config;

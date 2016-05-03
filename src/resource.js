@@ -92,12 +92,17 @@ Resource.prototype = {
 	},
 
 	toJSON: function() {
-		var json = {
-			Type: this.$type,
-			Properties: this.$data
-		};
-
-		Object.assign(json, this.$attributes);
+		var json = {};
+		if (this.$type === 'AWS::CloudFormation::Authentication') {
+			//hardcoding this is probably not ideal, but i'm too lazy for anything else
+			json[this.$name] = this.$data;
+		} else {
+			json = {
+				Type: this.$type,
+				Properties: this.$data
+			};
+			Object.assign(json, this.$attributes);
+		}
 
 		return json;
 	}
