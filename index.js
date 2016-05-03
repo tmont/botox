@@ -43,6 +43,14 @@ ConfigSugar.prototype = {
 	 */
 	file: function(filePath) {
 		return new cfg.File(filePath);
+	},
+	/**
+	 * You can use the commands key to execute commands on the EC2 instance. The commands are processed in alphabetical order by name.
+	 * @param {String} name
+	 * @returns {Command}
+	 */
+	command: function(name) {
+		return new cfg.Command(name);
 	}
 };
 

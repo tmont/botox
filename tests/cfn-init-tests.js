@@ -57,5 +57,26 @@ describe('CloudFormationInit', () => {
 				}
 			});
 		});
+
+		it('should generate JSON for commands', () => {
+			const config = botox.cfg.config()
+				.command(botox.cfg.command('lol')
+					.command('echo hello world')
+					.ignoreErrors(true)
+					.test('test ! -f ~/hello')
+				);
+
+			const json = config.getTemplateJson();
+
+			expect(json).to.eql({
+				commands: {
+					lol: {
+						command: 'echo hello world',
+						ignoreErrors: true,
+						test: 'test ! -f ~/hello'
+					}
+				}
+			});
+		});
 	});
 });
