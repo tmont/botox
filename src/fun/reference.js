@@ -16,7 +16,7 @@ function Reference(object) {
 Reference.prototype = Object.create(TemplateItemTrait);
 Reference.prototype.toJSON = function() {
 	return {
-		Ref: this.ref.name ? this.ref.name : this.ref
+		Ref: this.ref.$name ? this.ref.$name : this.ref
 	};
 };
 

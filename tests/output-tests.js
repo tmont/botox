@@ -1,6 +1,7 @@
 const expect = require('expect.js');
 const botox = require('../');
 const Reference = require('../src/fun/reference');
+const Resource = require('../src/resource');
 
 describe('Output', () => {
 	it('should blow up if no name is given', () => {
@@ -38,7 +39,7 @@ describe('Output', () => {
 
 	it('should set value to reference', () => {
 		const output = botox.output('foo');
-		const ref = new Reference({ name: 'bar' });
+		const ref = new Reference(new Resource('bar', 'asdf'));
 		output.value(ref);
 		const json = output.getTemplateJson();
 

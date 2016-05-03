@@ -75,7 +75,7 @@ Template.prototype = {
 	 * @returns {Template}
 	 */
 	resource: function(resource) {
-		this.data.Resources[resource.name] = resource;
+		this.data.Resources[resource.$name] = resource;
 		return this;
 	},
 	/**

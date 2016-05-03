@@ -17,7 +17,7 @@ function Resource(name, type) {
 		throw new Error('type must be a non-empty string');
 	}
 
-	Object.defineProperty(this, 'data', {
+	Object.defineProperty(this, '$data', {
 		value: {}
 	});
 
@@ -25,15 +25,15 @@ function Resource(name, type) {
 		value: new Reference(this)
 	});
 
-	Object.defineProperty(this, 'name', {
+	Object.defineProperty(this, '$name', {
 		value: name
 	});
 
-	Object.defineProperty(this, 'type', {
+	Object.defineProperty(this, '$type', {
 		value: type
 	});
 
-	Object.defineProperty(this, 'attributes', {
+	Object.defineProperty(this, '$attributes', {
 		value: {}
 	});
 }
@@ -78,12 +78,12 @@ Resource.prototype = {
 	},
 
 	set: function(key, value) {
-		this.data[key] = value;
+		this.$data[key] = value;
 		return this;
 	},
 
 	setResourceAttribute: function(key, value) {
-		this.attributes[key] = value;
+		this.$attributes[key] = value;
 		return this;
 	},
 
@@ -93,11 +93,11 @@ Resource.prototype = {
 
 	toJSON: function() {
 		var json = {
-			Type: this.type,
-			Properties: this.data
+			Type: this.$type,
+			Properties: this.$data
 		};
 
-		Object.assign(json, this.attributes);
+		Object.assign(json, this.$attributes);
 
 		return json;
 	}

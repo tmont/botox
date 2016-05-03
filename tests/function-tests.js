@@ -175,7 +175,8 @@ describe('Functions', () => {
 		});
 
 		it('should generate JSON from ref', () => {
-			const ref = new Reference({ name: 'foo' });
+			const resource = new Resource('foo', 'type');
+			const ref = new Reference(resource);
 			const getAZs = new GetAZs(ref);
 			const json = getAZs.getTemplateJson();
 
@@ -204,8 +205,8 @@ describe('Functions', () => {
 		});
 
 		it('should generate JSON from ref', () => {
-			const ref1 = new Reference({ name: 'foo' });
-			const ref2 = new Reference({ name: 'bar' });
+			const ref1 = new Reference(new Resource('foo', 'asdf'));
+			const ref2 = new Reference(new Resource('bar', 'asdf'));
 			const select = new Select(ref1, ref2);
 			const json = select.getTemplateJson();
 

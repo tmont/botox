@@ -21,7 +21,7 @@ function Attribute(resource, attribute) {
 Object.assign(Attribute.prototype, TemplateItemTrait.prototype, {
 	toJSON: function() {
 		return {
-			'Fn::GetAtt': [ this.resource.name, this.attribute ]
+			'Fn::GetAtt': [ this.resource.$name, this.attribute ]
 		};
 	}
 });
