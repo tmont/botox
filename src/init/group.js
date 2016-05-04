@@ -20,7 +20,7 @@ Group.prototype = {
 	 *
 	 * If a group ID is specified, and the group already exists by name, the group creation will fail. If another group has the specified group ID, the OS may reject the group creation.
 	 * @param {String|Number|FindInMap|Reference} groupId
-	 * @returns {File}
+	 * @returns {Group}
 	 */
 	gid: function(groupId) {
 		return this.set('gid', groupId);

@@ -4,13 +4,13 @@ var TemplateItemTrait = require('../template-item-trait');
  * You can use the services key to define which services should be enabled or disabled when the instance is launched. On Linux systems, this key is supported by using sysvinit. On Windows systems, it is supported by using the Windows service manager.
  *
  * The services key also allows you to specify dependencies on sources, packages and files so that if a restart is needed due to files being installed, cfn-init will take care of the service restart. For example, if you download the Apache HTTP Server package, the package installation will automatically start the Apache HTTP Server during the stack creation process. However, if the Apache HTTP Server configuration is updated later in the stack creation process, the update won't take effect unless the Apache server is restarted. You can use the services key to ensure that the Apache HTTP service is restarted.
- * @param {String} name
+ * @param {String} serviceName
  * @constructor
  * @implements TemplateItemTrait
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html#aws-resource-init-services)
  */
-function Service(name) {
-	this.name = name;
+function Service(serviceName) {
+	this.name = serviceName;
 	this.data = {};
 }
 
@@ -25,7 +25,7 @@ Service.prototype = {
 	 * @returns {Service}
 	 */
 	ensureRunning: function(shouldBeRunning) {
-		return this.set('content', !!shouldBeRunning);
+		return this.set('ensureRunning', !!shouldBeRunning);
 	},
 	/**
 	 * Set to true to ensure that the service will be started automatically upon boot.

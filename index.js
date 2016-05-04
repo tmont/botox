@@ -51,6 +51,46 @@ ConfigSugar.prototype = {
 	 */
 	command: function(name) {
 		return new cfg.Command(name);
+	},
+	/**
+	 * You can use the groups key to create Linux/UNIX groups and to assign group IDs. The groups key is not supported for Windows systems.
+	 *
+	 * To create a group, add a new key-value pair that maps a new group name to an optional group ID. The groups key can contain one or more group names.
+	 * @param {String} groupName
+	 * @returns Group
+	 */
+	group: function(groupName) {
+		return new cfg.Group(groupName);
+	},
+	/**
+	 * You can use the users key to create Linux/UNIX users on the EC2 instance. The users key is not supported for Windows systems.
+	 *
+	 * Users are created as non-interactive system users with a shell of /sbin/nologin. This is by design and cannot be modified.
+	 * @param {String} name
+	 * @returns {User}
+	 */
+	user: function(name) {
+		return new cfg.User(name);
+	},
+	/**
+	 * You can use the packages key to download and install pre-packaged applications and components. On Windows systems, the packages key supports only the MSI installer.
+	 *
+	 * The cfn-init script currently supports the following package formats: apt, msi, python, rpm, rubygems, and yum. Packages are processed in the following order: rpm, yum/apt, and then rubygems and python. There is no ordering between rubygems and python, and packages within each package manager are not guaranteed to be installed in any order.
+	 * @param {String} type One of "apt", "msi", "python", "rpm", "rubygems" or "yum"
+	 * @returns {Package}
+	 */
+	package: function(type) {
+		return new cfg.Package(type);
+	},
+	/**
+	 * You can use the services key to define which services should be enabled or disabled when the instance is launched. On Linux systems, this key is supported by using sysvinit. On Windows systems, it is supported by using the Windows service manager.
+	 *
+	 * The services key also allows you to specify dependencies on sources, packages and files so that if a restart is needed due to files being installed, cfn-init will take care of the service restart. For example, if you download the Apache HTTP Server package, the package installation will automatically start the Apache HTTP Server during the stack creation process. However, if the Apache HTTP Server configuration is updated later in the stack creation process, the update won't take effect unless the Apache server is restarted. You can use the services key to ensure that the Apache HTTP service is restarted.
+	 * @param {String} serviceName
+	 * @returns {Service}
+	 */
+	service: function(serviceName) {
+		return new cfg.Service(serviceName);
 	}
 };
 

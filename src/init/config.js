@@ -60,11 +60,20 @@ Config.prototype = {
 	},
 	/**
 	 * You can use the services key to define which services should be enabled or disabled when the instance is launched. On Linux systems, this key is supported by using sysvinit. On Windows systems, it is supported by using the Windows service manager.
+	 * @param {String} type Either "sysvinit" or "windows"
 	 * @param {Service} service
 	 * @returns {Config}
 	 */
-	service: function(service) {
-		this.services[service.name] = service;
+	service: function(type, service) {
+		if (type !== 'sysvinit' && type !== 'windows') {
+			throw new Error('serviceType must be either "sysvinit" or "windows"');
+		}
+
+		if (!this.services[type]) {
+			this.services[type] = {};
+		}
+
+		this.services[type][service.name] = service;
 		return this;
 	},
 	/**
