@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::IAM::Role - Creates an AWS Identity and Access Management (IAM) role. An IAM role can be used to enable applications running on an Amazon EC2 instance to securely access your AWS resources.
@@ -11,30 +12,6 @@ function IAMRole(name) {
 }
 
 IAMRole.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::IAM::Role attribute map
- * @typedef {Object} IAMRoleAttributeMap
- * @property {Attribute} arn Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyRole", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF”.
- */
-Object.defineProperty(IAMRole.prototype, 'attr', {
-	/**
-	 * @returns {IAMRoleAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyRole", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF”.
-			 * @returns {Attribute}
-			 */
-			get arn() {
-				return createAttribute('Arn');
-			}
-		};
-	}
-});
 
 /**
  * The IAM assume role policy that is associated with this role.
@@ -86,6 +63,32 @@ IAMRole.prototype.path = function(value) {
  */
 IAMRole.prototype.policies = function(value) {
 	return this.set('Policies', value);
+};
+
+/**
+ * AWS::IAM::Role attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function IAMRoleAttributes(resource) {
+	this.resource = resource;
+}
+IAMRoleAttributes.prototype = {
+	/**
+	 * Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyRole", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:role/MyRole-AJJHDSKSDF”.
+	 * @type {Attribute}
+	 */
+	get arn() {
+		return new Attribute(this.resource, 'Arn');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::IAM::Role
+ * @returns {IAMRoleAttributes}
+ */
+IAMRole.prototype.attr = function() {
+	return new IAMRoleAttributes(this);
 };
 
 module.exports = IAMRole;

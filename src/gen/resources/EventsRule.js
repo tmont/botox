@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::Events::Rule - The AWS::Events::Rule resource creates a rule that matches incoming Amazon CloudWatch Events (CloudWatch Events) events and routes them to one or more targets for processing. For more information, see Using CloudWatch Events in the Amazon CloudWatch Developer Guide.
@@ -11,30 +12,6 @@ function EventsRule(name) {
 }
 
 EventsRule.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::Events::Rule attribute map
- * @typedef {Object} EventsRuleAttributeMap
- * @property {Attribute} arn The event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-1:123456789012:rule/example.
- */
-Object.defineProperty(EventsRule.prototype, 'attr', {
-	/**
-	 * @returns {EventsRuleAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * The event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-1:123456789012:rule/example.
-			 * @returns {Attribute}
-			 */
-			get arn() {
-				return createAttribute('Arn');
-			}
-		};
-	}
-});
 
 /**
  * A description of the rule's purpose.
@@ -125,6 +102,32 @@ EventsRule.prototype.state = function(value) {
  */
 EventsRule.prototype.targets = function(value) {
 	return this.set('Targets', value);
+};
+
+/**
+ * AWS::Events::Rule attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function EventsRuleAttributes(resource) {
+	this.resource = resource;
+}
+EventsRuleAttributes.prototype = {
+	/**
+	 * The event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-1:123456789012:rule/example.
+	 * @type {Attribute}
+	 */
+	get arn() {
+		return new Attribute(this.resource, 'Arn');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::Events::Rule
+ * @returns {EventsRuleAttributes}
+ */
+EventsRule.prototype.attr = function() {
+	return new EventsRuleAttributes(this);
 };
 
 module.exports = EventsRule;

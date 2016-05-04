@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::CloudFormation::Stack - The AWS::CloudFormation::Stack type nests a stack as a resource in a top-level template.
@@ -11,30 +12,6 @@ function CloudFormationStack(name) {
 }
 
 CloudFormationStack.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::CloudFormation::Stack attribute map
- * @typedef {Object} CloudFormationStackAttributeMap
- * @property {Attribute} outputsNestedStackOutputName Returns: The output value from the specified nested stack where NestedStackOutputName is the name of the output value.
- */
-Object.defineProperty(CloudFormationStack.prototype, 'attr', {
-	/**
-	 * @returns {CloudFormationStackAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * Returns: The output value from the specified nested stack where NestedStackOutputName is the name of the output value.
-			 * @returns {Attribute}
-			 */
-			get outputsNestedStackOutputName() {
-				return createAttribute('Outputs.NestedStackOutputName');
-			}
-		};
-	}
-});
 
 /**
  * A list of existing Amazon SNS topics where notifications about stack events are sent.
@@ -99,6 +76,32 @@ CloudFormationStack.prototype.templateURL = function(value) {
  */
 CloudFormationStack.prototype.timeoutInMinutes = function(value) {
 	return this.set('TimeoutInMinutes', value);
+};
+
+/**
+ * AWS::CloudFormation::Stack attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function CloudFormationStackAttributes(resource) {
+	this.resource = resource;
+}
+CloudFormationStackAttributes.prototype = {
+	/**
+	 * Returns: The output value from the specified nested stack where NestedStackOutputName is the name of the output value.
+	 * @type {Attribute}
+	 */
+	get outputsNestedStackOutputName() {
+		return new Attribute(this.resource, 'Outputs.NestedStackOutputName');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::CloudFormation::Stack
+ * @returns {CloudFormationStackAttributes}
+ */
+CloudFormationStack.prototype.attr = function() {
+	return new CloudFormationStackAttributes(this);
 };
 
 module.exports = CloudFormationStack;

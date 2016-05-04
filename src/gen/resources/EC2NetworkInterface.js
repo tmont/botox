@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::EC2::NetworkInterface - Describes a network interface in an Elastic Compute Cloud (EC2) instance for AWS CloudFormation. This is provided in a list in the NetworkInterfaces property of AWS::EC2::Instance.
@@ -11,39 +12,6 @@ function EC2NetworkInterface(name) {
 }
 
 EC2NetworkInterface.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::EC2::NetworkInterface attribute map
- * @typedef {Object} EC2NetworkInterfaceAttributeMap
- * @property {Attribute} primaryPrivateIpAddress Returns the primary private IP address of the network interface. For example, 10.0.0.192.
- * @property {Attribute} secondaryPrivateIpAddresses Returns the secondary private IP addresses of the network interface. For example, ["10.0.0.161", "10.0.0.162", "10.0.0.163"].
- */
-Object.defineProperty(EC2NetworkInterface.prototype, 'attr', {
-	/**
-	 * @returns {EC2NetworkInterfaceAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * Returns the primary private IP address of the network interface. For example, 10.0.0.192.
-			 * @returns {Attribute}
-			 */
-			get primaryPrivateIpAddress() {
-				return createAttribute('PrimaryPrivateIpAddress');
-			},
-
-			/**
-			 * Returns the secondary private IP addresses of the network interface. For example, ["10.0.0.161", "10.0.0.162", "10.0.0.163"].
-			 * @returns {Attribute}
-			 */
-			get secondaryPrivateIpAddresses() {
-				return createAttribute('SecondaryPrivateIpAddresses');
-			}
-		};
-	}
-});
 
 /**
  * The description of this network interface.
@@ -147,6 +115,40 @@ EC2NetworkInterface.prototype.subnetId = function(value) {
  */
 EC2NetworkInterface.prototype.tags = function(value) {
 	return this.set('Tags', value);
+};
+
+/**
+ * AWS::EC2::NetworkInterface attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function EC2NetworkInterfaceAttributes(resource) {
+	this.resource = resource;
+}
+EC2NetworkInterfaceAttributes.prototype = {
+	/**
+	 * Returns the primary private IP address of the network interface. For example, 10.0.0.192.
+	 * @type {Attribute}
+	 */
+	get primaryPrivateIpAddress() {
+		return new Attribute(this.resource, 'PrimaryPrivateIpAddress');
+	},
+
+	/**
+	 * Returns the secondary private IP addresses of the network interface. For example, ["10.0.0.161", "10.0.0.162", "10.0.0.163"].
+	 * @type {Attribute}
+	 */
+	get secondaryPrivateIpAddresses() {
+		return new Attribute(this.resource, 'SecondaryPrivateIpAddresses');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::EC2::NetworkInterface
+ * @returns {EC2NetworkInterfaceAttributes}
+ */
+EC2NetworkInterface.prototype.attr = function() {
+	return new EC2NetworkInterfaceAttributes(this);
 };
 
 module.exports = EC2NetworkInterface;

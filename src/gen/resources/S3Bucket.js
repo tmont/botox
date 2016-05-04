@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::S3::Bucket - The AWS::S3::Bucket type creates an Amazon S3 bucket.
@@ -11,39 +12,6 @@ function S3Bucket(name) {
 }
 
 S3Bucket.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::S3::Bucket attribute map
- * @typedef {Object} S3BucketAttributeMap
- * @property {Attribute} domainName Returns the DNS name of the specified bucket.Example: mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com
- * @property {Attribute} websiteURL Amazon S3 website endpoint for the specified bucket.Example: http://mystack-mybucket-kdwwxmddtr2g.s3-website-us-east-1.amazonaws.com/
- */
-Object.defineProperty(S3Bucket.prototype, 'attr', {
-	/**
-	 * @returns {S3BucketAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * Returns the DNS name of the specified bucket.Example: mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com
-			 * @returns {Attribute}
-			 */
-			get domainName() {
-				return createAttribute('DomainName');
-			},
-
-			/**
-			 * Amazon S3 website endpoint for the specified bucket.Example: http://mystack-mybucket-kdwwxmddtr2g.s3-website-us-east-1.amazonaws.com/
-			 * @returns {Attribute}
-			 */
-			get websiteURL() {
-				return createAttribute('WebsiteURL');
-			}
-		};
-	}
-});
 
 /**
  * A canned access control list (ACL) that grants predefined permissions to the bucket. For more information about canned ACLs, see Canned ACLs in the Amazon S3 documentation.
@@ -173,6 +141,40 @@ S3Bucket.prototype.versioningConfiguration = function(value) {
  */
 S3Bucket.prototype.websiteConfiguration = function(value) {
 	return this.set('WebsiteConfiguration', value);
+};
+
+/**
+ * AWS::S3::Bucket attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function S3BucketAttributes(resource) {
+	this.resource = resource;
+}
+S3BucketAttributes.prototype = {
+	/**
+	 * Returns the DNS name of the specified bucket.Example: mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com
+	 * @type {Attribute}
+	 */
+	get domainName() {
+		return new Attribute(this.resource, 'DomainName');
+	},
+
+	/**
+	 * Amazon S3 website endpoint for the specified bucket.Example: http://mystack-mybucket-kdwwxmddtr2g.s3-website-us-east-1.amazonaws.com/
+	 * @type {Attribute}
+	 */
+	get websiteURL() {
+		return new Attribute(this.resource, 'WebsiteURL');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::S3::Bucket
+ * @returns {S3BucketAttributes}
+ */
+S3Bucket.prototype.attr = function() {
+	return new S3BucketAttributes(this);
 };
 
 module.exports = S3Bucket;

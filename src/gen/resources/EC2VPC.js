@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::EC2::VPC - Creates a Virtual Private Cloud (VPC) with the CIDR block that you specify.
@@ -11,48 +12,6 @@ function EC2VPC(name) {
 }
 
 EC2VPC.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::EC2::VPC attribute map
- * @typedef {Object} EC2VPCAttributeMap
- * @property {Attribute} cidrBlock The set of IP addresses for the VPC. For example, 10.0.0.0/16.
- * @property {Attribute} defaultNetworkAcl The default network ACL ID that is associated with the VPC. For example, acl-814dafe3.
- * @property {Attribute} defaultSecurityGroup The default security group ID that is associated with the VPC. For example, sg-b178e0d3.
- */
-Object.defineProperty(EC2VPC.prototype, 'attr', {
-	/**
-	 * @returns {EC2VPCAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * The set of IP addresses for the VPC. For example, 10.0.0.0/16.
-			 * @returns {Attribute}
-			 */
-			get cidrBlock() {
-				return createAttribute('CidrBlock');
-			},
-
-			/**
-			 * The default network ACL ID that is associated with the VPC. For example, acl-814dafe3.
-			 * @returns {Attribute}
-			 */
-			get defaultNetworkAcl() {
-				return createAttribute('DefaultNetworkAcl');
-			},
-
-			/**
-			 * The default security group ID that is associated with the VPC. For example, sg-b178e0d3.
-			 * @returns {Attribute}
-			 */
-			get defaultSecurityGroup() {
-				return createAttribute('DefaultSecurityGroup');
-			}
-		};
-	}
-});
 
 /**
  * The CIDR block you want the VPC to cover. For example: "10.0.0.0/16".
@@ -117,6 +76,48 @@ EC2VPC.prototype.instanceTenancy = function(value) {
  */
 EC2VPC.prototype.tags = function(value) {
 	return this.set('Tags', value);
+};
+
+/**
+ * AWS::EC2::VPC attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function EC2VPCAttributes(resource) {
+	this.resource = resource;
+}
+EC2VPCAttributes.prototype = {
+	/**
+	 * The set of IP addresses for the VPC. For example, 10.0.0.0/16.
+	 * @type {Attribute}
+	 */
+	get cidrBlock() {
+		return new Attribute(this.resource, 'CidrBlock');
+	},
+
+	/**
+	 * The default network ACL ID that is associated with the VPC. For example, acl-814dafe3.
+	 * @type {Attribute}
+	 */
+	get defaultNetworkAcl() {
+		return new Attribute(this.resource, 'DefaultNetworkAcl');
+	},
+
+	/**
+	 * The default security group ID that is associated with the VPC. For example, sg-b178e0d3.
+	 * @type {Attribute}
+	 */
+	get defaultSecurityGroup() {
+		return new Attribute(this.resource, 'DefaultSecurityGroup');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::EC2::VPC
+ * @returns {EC2VPCAttributes}
+ */
+EC2VPC.prototype.attr = function() {
+	return new EC2VPCAttributes(this);
 };
 
 module.exports = EC2VPC;

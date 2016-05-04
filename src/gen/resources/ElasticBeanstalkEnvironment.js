@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::ElasticBeanstalk::Environment - Creates or updates an AWS Elastic Beanstalk environment.
@@ -11,30 +12,6 @@ function ElasticBeanstalkEnvironment(name) {
 }
 
 ElasticBeanstalkEnvironment.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::ElasticBeanstalk::Environment attribute map
- * @typedef {Object} ElasticBeanstalkEnvironmentAttributeMap
- * @property {Attribute} endpointURL The URL to the load balancer for this environment.Example:awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-1.elb.amazonaws.com
- */
-Object.defineProperty(ElasticBeanstalkEnvironment.prototype, 'attr', {
-	/**
-	 * @returns {ElasticBeanstalkEnvironmentAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * The URL to the load balancer for this environment.Example:awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-1.elb.amazonaws.com
-			 * @returns {Attribute}
-			 */
-			get endpointURL() {
-				return createAttribute('EndpointURL');
-			}
-		};
-	}
-});
 
 /**
  * The name of the application that is associated with this environment.
@@ -164,6 +141,32 @@ ElasticBeanstalkEnvironment.prototype.tier = function(value) {
  */
 ElasticBeanstalkEnvironment.prototype.versionLabel = function(value) {
 	return this.set('VersionLabel', value);
+};
+
+/**
+ * AWS::ElasticBeanstalk::Environment attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function ElasticBeanstalkEnvironmentAttributes(resource) {
+	this.resource = resource;
+}
+ElasticBeanstalkEnvironmentAttributes.prototype = {
+	/**
+	 * The URL to the load balancer for this environment.Example:awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-1.elb.amazonaws.com
+	 * @type {Attribute}
+	 */
+	get endpointURL() {
+		return new Attribute(this.resource, 'EndpointURL');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::ElasticBeanstalk::Environment
+ * @returns {ElasticBeanstalkEnvironmentAttributes}
+ */
+ElasticBeanstalkEnvironment.prototype.attr = function() {
+	return new ElasticBeanstalkEnvironmentAttributes(this);
 };
 
 module.exports = ElasticBeanstalkEnvironment;

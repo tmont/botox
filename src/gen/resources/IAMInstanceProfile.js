@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::IAM::InstanceProfile - Creates an AWS Identity and Access Management (IAM) Instance Profile that can be used with IAM Roles for EC2 Instances.
@@ -11,30 +12,6 @@ function IAMInstanceProfile(name) {
 }
 
 IAMInstanceProfile.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::IAM::InstanceProfile attribute map
- * @typedef {Object} IAMInstanceProfileAttributeMap
- * @property {Attribute} arn Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyProfile", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:instance-profile/MyProfile-ASDNSDLKJ”.
- */
-Object.defineProperty(IAMInstanceProfile.prototype, 'attr', {
-	/**
-	 * @returns {IAMInstanceProfileAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyProfile", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:instance-profile/MyProfile-ASDNSDLKJ”.
-			 * @returns {Attribute}
-			 */
-			get arn() {
-				return createAttribute('Arn');
-			}
-		};
-	}
-});
 
 /**
  * The path associated with this IAM instance profile. For information about IAM paths, see Friendly Names and Paths in the AWS Identity and Access Management User Guide.
@@ -60,6 +37,32 @@ IAMInstanceProfile.prototype.path = function(value) {
  */
 IAMInstanceProfile.prototype.roles = function(value) {
 	return this.set('Roles', value);
+};
+
+/**
+ * AWS::IAM::InstanceProfile attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function IAMInstanceProfileAttributes(resource) {
+	this.resource = resource;
+}
+IAMInstanceProfileAttributes.prototype = {
+	/**
+	 * Returns the Amazon Resource Name (ARN) for the instance profile. For example:{"Fn::GetAtt" : ["MyProfile", "Arn"] }This will return a value such as “arn:aws:iam::1234567890:instance-profile/MyProfile-ASDNSDLKJ”.
+	 * @type {Attribute}
+	 */
+	get arn() {
+		return new Attribute(this.resource, 'Arn');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::IAM::InstanceProfile
+ * @returns {IAMInstanceProfileAttributes}
+ */
+IAMInstanceProfile.prototype.attr = function() {
+	return new IAMInstanceProfileAttributes(this);
 };
 
 module.exports = IAMInstanceProfile;

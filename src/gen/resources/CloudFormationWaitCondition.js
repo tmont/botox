@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::CloudFormation::WaitCondition - Important
@@ -11,30 +12,6 @@ function CloudFormationWaitCondition(name) {
 }
 
 CloudFormationWaitCondition.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::CloudFormation::WaitCondition attribute map
- * @typedef {Object} CloudFormationWaitConditionAttributeMap
- * @property {Attribute} data Returns: A JSON object that contains the UniqueId and Data values from the wait condition signal(s) for the specified wait condition. For more information about wait condition signals, see Wait Condition Signal JSON Format.Example return value for a wait condition with 2 signals: { "Signal1" : "Step 1 complete." , "Signal2" : "Step 2 complete." }
- */
-Object.defineProperty(CloudFormationWaitCondition.prototype, 'attr', {
-	/**
-	 * @returns {CloudFormationWaitConditionAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * Returns: A JSON object that contains the UniqueId and Data values from the wait condition signal(s) for the specified wait condition. For more information about wait condition signals, see Wait Condition Signal JSON Format.Example return value for a wait condition with 2 signals: { "Signal1" : "Step 1 complete." , "Signal2" : "Step 2 complete." }
-			 * @returns {Attribute}
-			 */
-			get data() {
-				return createAttribute('Data');
-			}
-		};
-	}
-});
 
 /**
  * The number of success signals that AWS CloudFormation must receive before it continues the stack creation process. When the wait condition receives the requisite number of success signals, AWS CloudFormation resumes the creation of the stack. If the wait condition does not receive the specified number of success signals before the Timeout period expires, AWS CloudFormation assumes that the wait condition has failed and rolls the stack back.
@@ -82,6 +59,32 @@ CloudFormationWaitCondition.prototype.timeout = function(value) {
  */
 CloudFormationWaitCondition.prototype.creationPolicy = function(creationPolicy) {
 	return this.setResourceAttribute('CreationPolicy', creationPolicy);
+};
+
+/**
+ * AWS::CloudFormation::WaitCondition attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function CloudFormationWaitConditionAttributes(resource) {
+	this.resource = resource;
+}
+CloudFormationWaitConditionAttributes.prototype = {
+	/**
+	 * Returns: A JSON object that contains the UniqueId and Data values from the wait condition signal(s) for the specified wait condition. For more information about wait condition signals, see Wait Condition Signal JSON Format.Example return value for a wait condition with 2 signals: { "Signal1" : "Step 1 complete." , "Signal2" : "Step 2 complete." }
+	 * @type {Attribute}
+	 */
+	get data() {
+		return new Attribute(this.resource, 'Data');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::CloudFormation::WaitCondition
+ * @returns {CloudFormationWaitConditionAttributes}
+ */
+CloudFormationWaitCondition.prototype.attr = function() {
+	return new CloudFormationWaitConditionAttributes(this);
 };
 
 module.exports = CloudFormationWaitCondition;

@@ -16,7 +16,7 @@ describe('Resource', () => {
 
 	it('should get attribute', () => {
 		const other = new Instance('other');
-		const resource = new Instance('datInstance').imageId(other.attr.privateDnsName);
+		const resource = new Instance('datInstance').imageId(other.attr().privateDnsName);
 		const json = resource.getTemplateJson();
 
 		expect(json).to.eql({

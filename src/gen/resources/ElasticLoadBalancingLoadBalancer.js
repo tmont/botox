@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::ElasticLoadBalancing::LoadBalancer - The AWS::ElasticLoadBalancing::LoadBalancer type creates a LoadBalancer.
@@ -11,66 +12,6 @@ function ElasticLoadBalancingLoadBalancer(name) {
 }
 
 ElasticLoadBalancingLoadBalancer.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::ElasticLoadBalancing::LoadBalancer attribute map
- * @typedef {Object} ElasticLoadBalancingLoadBalancerAttributeMap
- * @property {Attribute} canonicalHostedZoneName The name of the Amazon Route 53 hosted zone that is associated with the load balancer.ImportantIf you specify internal for the Elastic Load Balancing scheme, use DNSName instead. For an internal scheme, the load balancer doesn't have a CanonicalHostedZoneName value.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
- * @property {Attribute} canonicalHostedZoneNameID The ID of the Amazon Route 53 hosted zone name that is associated with the load balancer.Example: Z3DZXE0Q79N41H
- * @property {Attribute} dnsName The DNS name for the load balancer.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
- * @property {Attribute} sourceSecurityGroupGroupName The security group that you can use as part of your inbound rules for your load balancer's back-end Amazon EC2 application instances.Example: amazon-elb
- * @property {Attribute} sourceSecurityGroupOwnerAlias The owner of the source security group.Example: amazon-elb-sg
- */
-Object.defineProperty(ElasticLoadBalancingLoadBalancer.prototype, 'attr', {
-	/**
-	 * @returns {ElasticLoadBalancingLoadBalancerAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * The name of the Amazon Route 53 hosted zone that is associated with the load balancer.ImportantIf you specify internal for the Elastic Load Balancing scheme, use DNSName instead. For an internal scheme, the load balancer doesn't have a CanonicalHostedZoneName value.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
-			 * @returns {Attribute}
-			 */
-			get canonicalHostedZoneName() {
-				return createAttribute('CanonicalHostedZoneName');
-			},
-
-			/**
-			 * The ID of the Amazon Route 53 hosted zone name that is associated with the load balancer.Example: Z3DZXE0Q79N41H
-			 * @returns {Attribute}
-			 */
-			get canonicalHostedZoneNameID() {
-				return createAttribute('CanonicalHostedZoneNameID');
-			},
-
-			/**
-			 * The DNS name for the load balancer.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
-			 * @returns {Attribute}
-			 */
-			get dnsName() {
-				return createAttribute('DNSName');
-			},
-
-			/**
-			 * The security group that you can use as part of your inbound rules for your load balancer's back-end Amazon EC2 application instances.Example: amazon-elb
-			 * @returns {Attribute}
-			 */
-			get sourceSecurityGroupGroupName() {
-				return createAttribute('SourceSecurityGroup.GroupName');
-			},
-
-			/**
-			 * The owner of the source security group.Example: amazon-elb-sg
-			 * @returns {Attribute}
-			 */
-			get sourceSecurityGroupOwnerAlias() {
-				return createAttribute('SourceSecurityGroup.OwnerAlias');
-			}
-		};
-	}
-});
 
 /**
  * Captures detailed information for all requests made to your load balancer, such as the time a request was received, client’s IP address, latencies, request path, and server responses.
@@ -278,6 +219,64 @@ ElasticLoadBalancingLoadBalancer.prototype.subnets = function(value) {
  */
 ElasticLoadBalancingLoadBalancer.prototype.tags = function(value) {
 	return this.set('Tags', value);
+};
+
+/**
+ * AWS::ElasticLoadBalancing::LoadBalancer attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function ElasticLoadBalancingLoadBalancerAttributes(resource) {
+	this.resource = resource;
+}
+ElasticLoadBalancingLoadBalancerAttributes.prototype = {
+	/**
+	 * The name of the Amazon Route 53 hosted zone that is associated with the load balancer.ImportantIf you specify internal for the Elastic Load Balancing scheme, use DNSName instead. For an internal scheme, the load balancer doesn't have a CanonicalHostedZoneName value.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
+	 * @type {Attribute}
+	 */
+	get canonicalHostedZoneName() {
+		return new Attribute(this.resource, 'CanonicalHostedZoneName');
+	},
+
+	/**
+	 * The ID of the Amazon Route 53 hosted zone name that is associated with the load balancer.Example: Z3DZXE0Q79N41H
+	 * @type {Attribute}
+	 */
+	get canonicalHostedZoneNameID() {
+		return new Attribute(this.resource, 'CanonicalHostedZoneNameID');
+	},
+
+	/**
+	 * The DNS name for the load balancer.Example: mystack-myelb-15HMABG9ZCN57-1013119603.us-east-1.elb.amazonaws.com
+	 * @type {Attribute}
+	 */
+	get dnsName() {
+		return new Attribute(this.resource, 'DNSName');
+	},
+
+	/**
+	 * The security group that you can use as part of your inbound rules for your load balancer's back-end Amazon EC2 application instances.Example: amazon-elb
+	 * @type {Attribute}
+	 */
+	get sourceSecurityGroupGroupName() {
+		return new Attribute(this.resource, 'SourceSecurityGroup.GroupName');
+	},
+
+	/**
+	 * The owner of the source security group.Example: amazon-elb-sg
+	 * @type {Attribute}
+	 */
+	get sourceSecurityGroupOwnerAlias() {
+		return new Attribute(this.resource, 'SourceSecurityGroup.OwnerAlias');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::ElasticLoadBalancing::LoadBalancer
+ * @returns {ElasticLoadBalancingLoadBalancerAttributes}
+ */
+ElasticLoadBalancingLoadBalancer.prototype.attr = function() {
+	return new ElasticLoadBalancingLoadBalancerAttributes(this);
 };
 
 module.exports = ElasticLoadBalancingLoadBalancer;

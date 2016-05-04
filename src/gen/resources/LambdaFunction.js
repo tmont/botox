@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::Lambda::Function - The AWS::Lambda::Function resource creates an AWS Lambda (Lambda) function that can run code in response to events. For more information, see CreateFunction in the AWS Lambda Developer Guide.
@@ -11,30 +12,6 @@ function LambdaFunction(name) {
 }
 
 LambdaFunction.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::Lambda::Function attribute map
- * @typedef {Object} LambdaFunctionAttributeMap
- * @property {Attribute} arn The ARN of the Lambda function, such as arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD.
- */
-Object.defineProperty(LambdaFunction.prototype, 'attr', {
-	/**
-	 * @returns {LambdaFunctionAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * The ARN of the Lambda function, such as arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD.
-			 * @returns {Attribute}
-			 */
-			get arn() {
-				return createAttribute('Arn');
-			}
-		};
-	}
-});
 
 /**
  * The source code of your Lambda function. You can point to a file in an Amazon Simple Storage Service (Amazon S3) bucket or specify your source code as inline text.
@@ -151,6 +128,32 @@ LambdaFunction.prototype.timeout = function(value) {
  */
 LambdaFunction.prototype.vpcConfig = function(value) {
 	return this.set('VpcConfig', value);
+};
+
+/**
+ * AWS::Lambda::Function attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function LambdaFunctionAttributes(resource) {
+	this.resource = resource;
+}
+LambdaFunctionAttributes.prototype = {
+	/**
+	 * The ARN of the Lambda function, such as arn:aws:lambda:us-west-2:123456789012:MyStack-AMILookUp-NT5EUXTNTXXD.
+	 * @type {Attribute}
+	 */
+	get arn() {
+		return new Attribute(this.resource, 'Arn');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::Lambda::Function
+ * @returns {LambdaFunctionAttributes}
+ */
+LambdaFunction.prototype.attr = function() {
+	return new LambdaFunctionAttributes(this);
 };
 
 module.exports = LambdaFunction;

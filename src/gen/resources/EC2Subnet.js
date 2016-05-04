@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::EC2::Subnet - Creates a subnet in an existing VPC.
@@ -11,30 +12,6 @@ function EC2Subnet(name) {
 }
 
 EC2Subnet.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::EC2::Subnet attribute map
- * @typedef {Object} EC2SubnetAttributeMap
- * @property {Attribute} availabilityZone Returns the availability zone (for example, "us-east-1a") of this subnet.Example: { "Fn::GetAtt" : [ "mySubnet", "AvailabilityZone" ] }
- */
-Object.defineProperty(EC2Subnet.prototype, 'attr', {
-	/**
-	 * @returns {EC2SubnetAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * Returns the availability zone (for example, "us-east-1a") of this subnet.Example: { "Fn::GetAtt" : [ "mySubnet", "AvailabilityZone" ] }
-			 * @returns {Attribute}
-			 */
-			get availabilityZone() {
-				return createAttribute('AvailabilityZone');
-			}
-		};
-	}
-});
 
 /**
  * The availability zone in which you want the subnet. Default: AWS selects a zone for you (recommended).
@@ -99,6 +76,32 @@ EC2Subnet.prototype.tags = function(value) {
  */
 EC2Subnet.prototype.vpcId = function(value) {
 	return this.set('VpcId', value);
+};
+
+/**
+ * AWS::EC2::Subnet attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function EC2SubnetAttributes(resource) {
+	this.resource = resource;
+}
+EC2SubnetAttributes.prototype = {
+	/**
+	 * Returns the availability zone (for example, "us-east-1a") of this subnet.Example: { "Fn::GetAtt" : [ "mySubnet", "AvailabilityZone" ] }
+	 * @type {Attribute}
+	 */
+	get availabilityZone() {
+		return new Attribute(this.resource, 'AvailabilityZone');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::EC2::Subnet
+ * @returns {EC2SubnetAttributes}
+ */
+EC2Subnet.prototype.attr = function() {
+	return new EC2SubnetAttributes(this);
 };
 
 module.exports = EC2Subnet;

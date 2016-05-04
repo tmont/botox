@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::EC2::SubnetNetworkAclAssociation - Associates a subnet with a network ACL.
@@ -11,30 +12,6 @@ function EC2SubnetNetworkAclAssociation(name) {
 }
 
 EC2SubnetNetworkAclAssociation.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::EC2::SubnetNetworkAclAssociation attribute map
- * @typedef {Object} EC2SubnetNetworkAclAssociationAttributeMap
- * @property {Attribute} associationId Returns the value of this object's SubnetId property.
- */
-Object.defineProperty(EC2SubnetNetworkAclAssociation.prototype, 'attr', {
-	/**
-	 * @returns {EC2SubnetNetworkAclAssociationAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * Returns the value of this object's SubnetId property.
-			 * @returns {Attribute}
-			 */
-			get associationId() {
-				return createAttribute('AssociationId');
-			}
-		};
-	}
-});
 
 /**
  * The ID representing the current association between the original network ACL and the subnet.
@@ -60,6 +37,32 @@ EC2SubnetNetworkAclAssociation.prototype.subnetId = function(value) {
  */
 EC2SubnetNetworkAclAssociation.prototype.networkAclId = function(value) {
 	return this.set('NetworkAclId', value);
+};
+
+/**
+ * AWS::EC2::SubnetNetworkAclAssociation attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function EC2SubnetNetworkAclAssociationAttributes(resource) {
+	this.resource = resource;
+}
+EC2SubnetNetworkAclAssociationAttributes.prototype = {
+	/**
+	 * Returns the value of this object's SubnetId property.
+	 * @type {Attribute}
+	 */
+	get associationId() {
+		return new Attribute(this.resource, 'AssociationId');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::EC2::SubnetNetworkAclAssociation
+ * @returns {EC2SubnetNetworkAclAssociationAttributes}
+ */
+EC2SubnetNetworkAclAssociation.prototype.attr = function() {
+	return new EC2SubnetNetworkAclAssociationAttributes(this);
 };
 
 module.exports = EC2SubnetNetworkAclAssociation;

@@ -39,7 +39,7 @@ function Resource(name, type) {
 }
 
 Resource.prototype = {
-	get attr() {
+	attr: function() {
 		throw new Error('This resource has no attributes');
 	},
 

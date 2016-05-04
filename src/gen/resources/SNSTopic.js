@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::SNS::Topic - The AWS::SNS::Topic type creates an Amazon SNS topic.
@@ -11,30 +12,6 @@ function SNSTopic(name) {
 }
 
 SNSTopic.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::SNS::Topic attribute map
- * @typedef {Object} SNSTopicAttributeMap
- * @property {Attribute} topicName Returns the name for an Amazon SNS topic.
- */
-Object.defineProperty(SNSTopic.prototype, 'attr', {
-	/**
-	 * @returns {SNSTopicAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * Returns the name for an Amazon SNS topic.
-			 * @returns {Attribute}
-			 */
-			get topicName() {
-				return createAttribute('TopicName');
-			}
-		};
-	}
-});
 
 /**
  * A developer-defined string that can be used to identify this SNS topic.
@@ -73,6 +50,32 @@ SNSTopic.prototype.subscription = function(value) {
  */
 SNSTopic.prototype.topicName = function(value) {
 	return this.set('TopicName', value);
+};
+
+/**
+ * AWS::SNS::Topic attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function SNSTopicAttributes(resource) {
+	this.resource = resource;
+}
+SNSTopicAttributes.prototype = {
+	/**
+	 * Returns the name for an Amazon SNS topic.
+	 * @type {Attribute}
+	 */
+	get topicName() {
+		return new Attribute(this.resource, 'TopicName');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::SNS::Topic
+ * @returns {SNSTopicAttributes}
+ */
+SNSTopic.prototype.attr = function() {
+	return new SNSTopicAttributes(this);
 };
 
 module.exports = SNSTopic;

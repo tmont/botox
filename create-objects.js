@@ -125,44 +125,47 @@ ${propertyPrefix}.${camelize(prop.name)} = function(value) {
 };`;
 			}).join('\n');
 
-			const attrTypeDefs = [];
 			const attributes = json.attributes
 				.sort((a, b) => {
 					return a.name.localeCompare(b.name);
 				})
 				.map((attr) => {
 					const propName = camelize(attr.name.replace(/\W/g, ''));
-					attrTypeDefs.push(` * @property {Attribute} ${propName} ${attr.description}`);
 					return `
-			/**
-			 * ${attr.description}
-			 * @returns {Attribute}
-			 */
-			get ${propName}() {
-				return createAttribute('${attr.name}');
-			}`;
+	/**
+	 * ${attr.description}
+	 * @type {Attribute}
+	 */
+	get ${propName}() {
+		return new Attribute(this.resource, '${attr.name}');
+	}`;
 				})
 				.join(',\n');
 
-			let attributeProp = '';
+			let attributeStuff = '';
 			if (attributes) {
-				attributeProp = `
+				attributeStuff = `
 /**
- * ${json.fullName} attribute map
- * @typedef {Object} ${className}AttributeMap
-${attrTypeDefs.join('\n')}
+ * ${json.fullName} attributes
+ * @constructor
+ * @param {Resource} resource
  */
-Object.defineProperty(${propertyPrefix}, 'attr', {
-	/**
-	 * @returns {${className}AttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-${attributes}
-		};
-	}
-});`;
+function ${className}Attributes(resource) {
+	this.resource = resource;
+}
+${className}Attributes.prototype = {
+	${attributes.trim()}
+};
+
+/**
+ * Gets attribute map for ${json.fullName}
+ * @returns {${className}Attributes}
+ */
+${className}.prototype.attr = function() {
+	return new ${className}Attributes(this);
+};
+
+`;
 			}
 
 			const needsCreationPolicy = {
@@ -195,7 +198,9 @@ ${className}.prototype.updatePolicy = function(updatePolicy) {
 	return this.setResourceAttribute('UpdatePolicy', updatePolicy);
 };`;
 
+			const attributeRequire = attributeStuff ? 'var Attribute = require(\'../../fun/attribute\');' : '';
 			const code = `var Resource = require('../../resource');
+${attributeRequire}
 
 /**
  * ${json.fullName} - ${json.description}
@@ -208,10 +213,10 @@ function ${className}(name) {
 }
 
 ${className}.prototype = Object.create(Resource.prototype);
-${attributeProp}
 ${methods}
 ${creationPolicyMethod}
 ${updatePolicyMethod}
+${attributeStuff}
 
 module.exports = ${className};
 `.replace(/\n{3,}/g, '\n\n');

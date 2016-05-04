@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::DirectoryService::SimpleAD - The AWS::DirectoryService::SimpleAD resource creates an AWS Directory Service Simple Active Directory (Simple AD) in AWS so that your directory users and groups can access the AWS Management Console and AWS applications using their existing credentials. Simple AD is a Microsoft Active Directory–compatible directory. For more information, see What Is AWS Directory Service? in the AWS Directory Service Administration Guide.
@@ -11,39 +12,6 @@ function DirectoryServiceSimpleAD(name) {
 }
 
 DirectoryServiceSimpleAD.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::DirectoryService::SimpleAD attribute map
- * @typedef {Object} DirectoryServiceSimpleADAttributeMap
- * @property {Attribute} alias The alias for a directory. For example: d-12373a053a or alias4-mydirectory-12345abcgmzsk (if you have the CreateAlias property set to true).
- * @property {Attribute} dnsIpAddresses The IP addresses of the DNS servers for the directory, such as [ "172.31.3.154", "172.31.63.203" ].
- */
-Object.defineProperty(DirectoryServiceSimpleAD.prototype, 'attr', {
-	/**
-	 * @returns {DirectoryServiceSimpleADAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * The alias for a directory. For example: d-12373a053a or alias4-mydirectory-12345abcgmzsk (if you have the CreateAlias property set to true).
-			 * @returns {Attribute}
-			 */
-			get alias() {
-				return createAttribute('Alias');
-			},
-
-			/**
-			 * The IP addresses of the DNS servers for the directory, such as [ "172.31.3.154", "172.31.63.203" ].
-			 * @returns {Attribute}
-			 */
-			get dnsIpAddresses() {
-				return createAttribute('DnsIpAddresses');
-			}
-		};
-	}
-});
 
 /**
  * A unique alias to assign to the directory. AWS Directory Service uses the alias to construct the access URL for the directory, such as http://alias.awsapps.com. By default, AWS CloudFormation does not create an alias.
@@ -147,6 +115,40 @@ DirectoryServiceSimpleAD.prototype.size = function(value) {
  */
 DirectoryServiceSimpleAD.prototype.vpcSettings = function(value) {
 	return this.set('VpcSettings', value);
+};
+
+/**
+ * AWS::DirectoryService::SimpleAD attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function DirectoryServiceSimpleADAttributes(resource) {
+	this.resource = resource;
+}
+DirectoryServiceSimpleADAttributes.prototype = {
+	/**
+	 * The alias for a directory. For example: d-12373a053a or alias4-mydirectory-12345abcgmzsk (if you have the CreateAlias property set to true).
+	 * @type {Attribute}
+	 */
+	get alias() {
+		return new Attribute(this.resource, 'Alias');
+	},
+
+	/**
+	 * The IP addresses of the DNS servers for the directory, such as [ "172.31.3.154", "172.31.63.203" ].
+	 * @type {Attribute}
+	 */
+	get dnsIpAddresses() {
+		return new Attribute(this.resource, 'DnsIpAddresses');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::DirectoryService::SimpleAD
+ * @returns {DirectoryServiceSimpleADAttributes}
+ */
+DirectoryServiceSimpleAD.prototype.attr = function() {
+	return new DirectoryServiceSimpleADAttributes(this);
 };
 
 module.exports = DirectoryServiceSimpleAD;

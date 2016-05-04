@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::Config::ConfigRule - The AWS::Config::ConfigRule resource uses an AWS Lambda (Lambda) function that evaluates configuration items to assess whether your AWS resources comply with your specified configurations. This function can run when AWS Config detects a configuration change or delivers a configuration snapshot. The resources this function evaluates must be in the recording group. For more information, see Evaluating AWS Resource Configurations with AWS Config in the AWS Config Developer Guide.
@@ -11,48 +12,6 @@ function ConfigConfigRule(name) {
 }
 
 ConfigConfigRule.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::Config::ConfigRule attribute map
- * @typedef {Object} ConfigConfigRuleAttributeMap
- * @property {Attribute} arn The Amazon Resource Name (ARN) of the AWS Config rule, such as arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi.
- * @property {Attribute} complianceType The compliance status of an AWS Config rule, such as COMPLIANT or NON_COMPLIANT.
- * @property {Attribute} configRuleId The ID of the AWS Config rule, such as config-rule-a1bzhi.
- */
-Object.defineProperty(ConfigConfigRule.prototype, 'attr', {
-	/**
-	 * @returns {ConfigConfigRuleAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * The Amazon Resource Name (ARN) of the AWS Config rule, such as arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi.
-			 * @returns {Attribute}
-			 */
-			get arn() {
-				return createAttribute('Arn');
-			},
-
-			/**
-			 * The compliance status of an AWS Config rule, such as COMPLIANT or NON_COMPLIANT.
-			 * @returns {Attribute}
-			 */
-			get complianceType() {
-				return createAttribute('Compliance.Type');
-			},
-
-			/**
-			 * The ID of the AWS Config rule, such as config-rule-a1bzhi.
-			 * @returns {Attribute}
-			 */
-			get configRuleId() {
-				return createAttribute('ConfigRuleId');
-			}
-		};
-	}
-});
 
 /**
  * A name for the AWS Config rule. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the rule name. For more information, see Name Type.
@@ -130,6 +89,48 @@ ConfigConfigRule.prototype.scope = function(value) {
  */
 ConfigConfigRule.prototype.source = function(value) {
 	return this.set('Source', value);
+};
+
+/**
+ * AWS::Config::ConfigRule attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function ConfigConfigRuleAttributes(resource) {
+	this.resource = resource;
+}
+ConfigConfigRuleAttributes.prototype = {
+	/**
+	 * The Amazon Resource Name (ARN) of the AWS Config rule, such as arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi.
+	 * @type {Attribute}
+	 */
+	get arn() {
+		return new Attribute(this.resource, 'Arn');
+	},
+
+	/**
+	 * The compliance status of an AWS Config rule, such as COMPLIANT or NON_COMPLIANT.
+	 * @type {Attribute}
+	 */
+	get complianceType() {
+		return new Attribute(this.resource, 'Compliance.Type');
+	},
+
+	/**
+	 * The ID of the AWS Config rule, such as config-rule-a1bzhi.
+	 * @type {Attribute}
+	 */
+	get configRuleId() {
+		return new Attribute(this.resource, 'ConfigRuleId');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::Config::ConfigRule
+ * @returns {ConfigConfigRuleAttributes}
+ */
+ConfigConfigRule.prototype.attr = function() {
+	return new ConfigConfigRuleAttributes(this);
 };
 
 module.exports = ConfigConfigRule;

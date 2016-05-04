@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::IAM::AccessKey - The AWS::IAM::AccessKey resource type generates a secret access key and assigns it to an IAM user or AWS account.
@@ -11,30 +12,6 @@ function IAMAccessKey(name) {
 }
 
 IAMAccessKey.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::IAM::AccessKey attribute map
- * @typedef {Object} IAMAccessKeyAttributeMap
- * @property {Attribute} secretAccessKey Returns the secret access key for the specified AWS::IAM::AccessKey resource. For example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY.
- */
-Object.defineProperty(IAMAccessKey.prototype, 'attr', {
-	/**
-	 * @returns {IAMAccessKeyAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * Returns the secret access key for the specified AWS::IAM::AccessKey resource. For example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY.
-			 * @returns {Attribute}
-			 */
-			get secretAccessKey() {
-				return createAttribute('SecretAccessKey');
-			}
-		};
-	}
-});
 
 /**
  * This value is specific to AWS CloudFormation and can only be incremented. Incrementing this value notifies AWS CloudFormation that you want to rotate your access key. When you update your stack, AWS CloudFormation will replace the existing access key with a new key.
@@ -73,6 +50,32 @@ IAMAccessKey.prototype.status = function(value) {
  */
 IAMAccessKey.prototype.userName = function(value) {
 	return this.set('UserName', value);
+};
+
+/**
+ * AWS::IAM::AccessKey attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function IAMAccessKeyAttributes(resource) {
+	this.resource = resource;
+}
+IAMAccessKeyAttributes.prototype = {
+	/**
+	 * Returns the secret access key for the specified AWS::IAM::AccessKey resource. For example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY.
+	 * @type {Attribute}
+	 */
+	get secretAccessKey() {
+		return new Attribute(this.resource, 'SecretAccessKey');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::IAM::AccessKey
+ * @returns {IAMAccessKeyAttributes}
+ */
+IAMAccessKey.prototype.attr = function() {
+	return new IAMAccessKeyAttributes(this);
 };
 
 module.exports = IAMAccessKey;

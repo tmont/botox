@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::IAM::User - The AWS::IAM::User type creates a user.
@@ -11,30 +12,6 @@ function IAMUser(name) {
 }
 
 IAMUser.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::IAM::User attribute map
- * @typedef {Object} IAMUserAttributeMap
- * @property {Attribute} arn Returns the Amazon Resource Name (ARN) for the specified AWS::IAM::User resource. For example: arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D.
- */
-Object.defineProperty(IAMUser.prototype, 'attr', {
-	/**
-	 * @returns {IAMUserAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * Returns the Amazon Resource Name (ARN) for the specified AWS::IAM::User resource. For example: arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D.
-			 * @returns {Attribute}
-			 */
-			get arn() {
-				return createAttribute('Arn');
-			}
-		};
-	}
-});
 
 /**
  * A name of a group to which you want to add the user.
@@ -99,6 +76,32 @@ IAMUser.prototype.path = function(value) {
  */
 IAMUser.prototype.policies = function(value) {
 	return this.set('Policies', value);
+};
+
+/**
+ * AWS::IAM::User attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function IAMUserAttributes(resource) {
+	this.resource = resource;
+}
+IAMUserAttributes.prototype = {
+	/**
+	 * Returns the Amazon Resource Name (ARN) for the specified AWS::IAM::User resource. For example: arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D.
+	 * @type {Attribute}
+	 */
+	get arn() {
+		return new Attribute(this.resource, 'Arn');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::IAM::User
+ * @returns {IAMUserAttributes}
+ */
+IAMUser.prototype.attr = function() {
+	return new IAMUserAttributes(this);
 };
 
 module.exports = IAMUser;

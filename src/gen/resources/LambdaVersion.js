@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::Lambda::Version - The AWS::Lambda::Version resource publishes a specified version of an AWS Lambda (Lambda) function. When publishing a new version of your function, Lambda copies the latest version of your function. For more information, see Introduction to AWS Lambda Versioning in the AWS Lambda Developer Guide.
@@ -11,30 +12,6 @@ function LambdaVersion(name) {
 }
 
 LambdaVersion.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::Lambda::Version attribute map
- * @typedef {Object} LambdaVersionAttributeMap
- * @property {Attribute} version The published version of a Lambda version, such as 1.
- */
-Object.defineProperty(LambdaVersion.prototype, 'attr', {
-	/**
-	 * @returns {LambdaVersionAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * The published version of a Lambda version, such as 1.
-			 * @returns {Attribute}
-			 */
-			get version() {
-				return createAttribute('Version');
-			}
-		};
-	}
-});
 
 /**
  * The SHA-256 hash of the deployment package that you want to publish. This value must match the SHA-256 hash of the $LATEST version of the function. Specify this property to validate that you are publishing the correct package.
@@ -73,6 +50,32 @@ LambdaVersion.prototype.description = function(value) {
  */
 LambdaVersion.prototype.functionName = function(value) {
 	return this.set('FunctionName', value);
+};
+
+/**
+ * AWS::Lambda::Version attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function LambdaVersionAttributes(resource) {
+	this.resource = resource;
+}
+LambdaVersionAttributes.prototype = {
+	/**
+	 * The published version of a Lambda version, such as 1.
+	 * @type {Attribute}
+	 */
+	get version() {
+		return new Attribute(this.resource, 'Version');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::Lambda::Version
+ * @returns {LambdaVersionAttributes}
+ */
+LambdaVersion.prototype.attr = function() {
+	return new LambdaVersionAttributes(this);
 };
 
 module.exports = LambdaVersion;

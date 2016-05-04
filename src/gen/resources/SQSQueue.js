@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::SQS::Queue - The AWS::SQS::Queue type creates an Amazon SQS queue.
@@ -11,39 +12,6 @@ function SQSQueue(name) {
 }
 
 SQSQueue.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::SQS::Queue attribute map
- * @typedef {Object} SQSQueueAttributeMap
- * @property {Attribute} arn Returns the Amazon Resource Name (ARN) of the queue. For example: arn:aws:sqs:us-east-1:123456789012:mystack-myqueue-15PG5C2FC1CW8
- * @property {Attribute} queueName Returns the queue name. For example:mystack-myqueue-1VF9BKQH5BJVI
- */
-Object.defineProperty(SQSQueue.prototype, 'attr', {
-	/**
-	 * @returns {SQSQueueAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * Returns the Amazon Resource Name (ARN) of the queue. For example: arn:aws:sqs:us-east-1:123456789012:mystack-myqueue-15PG5C2FC1CW8
-			 * @returns {Attribute}
-			 */
-			get arn() {
-				return createAttribute('Arn');
-			},
-
-			/**
-			 * Returns the queue name. For example:mystack-myqueue-1VF9BKQH5BJVI
-			 * @returns {Attribute}
-			 */
-			get queueName() {
-				return createAttribute('QueueName');
-			}
-		};
-	}
-});
 
 /**
  * The time in seconds that the delivery of all messages in the queue will be delayed. You can specify an integer value of 0 to 900 (15 minutes). The default value is 0.
@@ -134,6 +102,40 @@ SQSQueue.prototype.redrivePolicy = function(value) {
  */
 SQSQueue.prototype.visibilityTimeout = function(value) {
 	return this.set('VisibilityTimeout', value);
+};
+
+/**
+ * AWS::SQS::Queue attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function SQSQueueAttributes(resource) {
+	this.resource = resource;
+}
+SQSQueueAttributes.prototype = {
+	/**
+	 * Returns the Amazon Resource Name (ARN) of the queue. For example: arn:aws:sqs:us-east-1:123456789012:mystack-myqueue-15PG5C2FC1CW8
+	 * @type {Attribute}
+	 */
+	get arn() {
+		return new Attribute(this.resource, 'Arn');
+	},
+
+	/**
+	 * Returns the queue name. For example:mystack-myqueue-1VF9BKQH5BJVI
+	 * @type {Attribute}
+	 */
+	get queueName() {
+		return new Attribute(this.resource, 'QueueName');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::SQS::Queue
+ * @returns {SQSQueueAttributes}
+ */
+SQSQueue.prototype.attr = function() {
+	return new SQSQueueAttributes(this);
 };
 
 module.exports = SQSQueue;

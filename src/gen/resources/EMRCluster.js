@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::EMR::Cluster - The AWS::EMR::Cluster resource creates an Amazon Elastic MapReduce (Amazon EMR) cluster, which is a collection of EC2 instances on which you can run big data frameworks to process and analyze vast amounts of data. For more information, see Plan an Amazon EMR Cluster in the Amazon Elastic MapReduce Management Guide.
@@ -11,30 +12,6 @@ function EMRCluster(name) {
 }
 
 EMRCluster.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::EMR::Cluster attribute map
- * @typedef {Object} EMRClusterAttributeMap
- * @property {Attribute} masterPublicDNS The public DNS name of the master node (instance), such as ec2-12-123-123-123.us-west-2.compute.amazonaws.com.
- */
-Object.defineProperty(EMRCluster.prototype, 'attr', {
-	/**
-	 * @returns {EMRClusterAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * The public DNS name of the master node (instance), such as ec2-12-123-123-123.us-west-2.compute.amazonaws.com.
-			 * @returns {Attribute}
-			 */
-			get masterPublicDNS() {
-				return createAttribute('MasterPublicDNS');
-			}
-		};
-	}
-});
 
 /**
  * Additional features that you want to select.
@@ -203,6 +180,32 @@ EMRCluster.prototype.tags = function(value) {
  */
 EMRCluster.prototype.visibleToAllUsers = function(value) {
 	return this.set('VisibleToAllUsers', value);
+};
+
+/**
+ * AWS::EMR::Cluster attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function EMRClusterAttributes(resource) {
+	this.resource = resource;
+}
+EMRClusterAttributes.prototype = {
+	/**
+	 * The public DNS name of the master node (instance), such as ec2-12-123-123-123.us-west-2.compute.amazonaws.com.
+	 * @type {Attribute}
+	 */
+	get masterPublicDNS() {
+		return new Attribute(this.resource, 'MasterPublicDNS');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::EMR::Cluster
+ * @returns {EMRClusterAttributes}
+ */
+EMRCluster.prototype.attr = function() {
+	return new EMRClusterAttributes(this);
 };
 
 module.exports = EMRCluster;

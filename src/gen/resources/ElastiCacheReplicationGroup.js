@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::ElastiCache::ReplicationGroup - The AWS::ElastiCache::ReplicationGroup resource creates an Amazon ElastiCache replication group. A replication group is a collection of cache clusters, where one of the clusters is a primary read-write cluster and the others are read-only replicas.
@@ -11,75 +12,6 @@ function ElastiCacheReplicationGroup(name) {
 }
 
 ElastiCacheReplicationGroup.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::ElastiCache::ReplicationGroup attribute map
- * @typedef {Object} ElastiCacheReplicationGroupAttributeMap
- * @property {Attribute} primaryEndPointAddress The DNS address of the primary read-write cache node.
- * @property {Attribute} primaryEndPointPort The number of the port that the primary read-write cache engine is listening on.
- * @property {Attribute} readEndPointAddresses A string with a list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports attribute.
- * @property {Attribute} readEndPointAddressesList A list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports.List attribute.
- * @property {Attribute} readEndPointPorts A string with a list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses attribute.
- * @property {Attribute} readEndPointPortsList A list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses.List attribute.
- */
-Object.defineProperty(ElastiCacheReplicationGroup.prototype, 'attr', {
-	/**
-	 * @returns {ElastiCacheReplicationGroupAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * The DNS address of the primary read-write cache node.
-			 * @returns {Attribute}
-			 */
-			get primaryEndPointAddress() {
-				return createAttribute('PrimaryEndPoint.Address');
-			},
-
-			/**
-			 * The number of the port that the primary read-write cache engine is listening on.
-			 * @returns {Attribute}
-			 */
-			get primaryEndPointPort() {
-				return createAttribute('PrimaryEndPoint.Port');
-			},
-
-			/**
-			 * A string with a list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports attribute.
-			 * @returns {Attribute}
-			 */
-			get readEndPointAddresses() {
-				return createAttribute('ReadEndPoint.Addresses');
-			},
-
-			/**
-			 * A list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports.List attribute.
-			 * @returns {Attribute}
-			 */
-			get readEndPointAddressesList() {
-				return createAttribute('ReadEndPoint.Addresses.List');
-			},
-
-			/**
-			 * A string with a list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses attribute.
-			 * @returns {Attribute}
-			 */
-			get readEndPointPorts() {
-				return createAttribute('ReadEndPoint.Ports');
-			},
-
-			/**
-			 * A list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses.List attribute.
-			 * @returns {Attribute}
-			 */
-			get readEndPointPortsList() {
-				return createAttribute('ReadEndPoint.Ports.List');
-			}
-		};
-	}
-});
 
 /**
  * Indicates whether Multi-AZ is enabled. When Multi-AZ is enabled, a read-only replica is automatically promoted to a read-write primary cluster if the existing primary cluster fails. If you specify true, you must specify a value greater than 1 for the NumCacheNodes property. By default, AWS CloudFormation sets the value to true.
@@ -313,6 +245,72 @@ ElastiCacheReplicationGroup.prototype.snapshotRetentionLimit = function(value) {
  */
 ElastiCacheReplicationGroup.prototype.snapshotWindow = function(value) {
 	return this.set('SnapshotWindow', value);
+};
+
+/**
+ * AWS::ElastiCache::ReplicationGroup attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function ElastiCacheReplicationGroupAttributes(resource) {
+	this.resource = resource;
+}
+ElastiCacheReplicationGroupAttributes.prototype = {
+	/**
+	 * The DNS address of the primary read-write cache node.
+	 * @type {Attribute}
+	 */
+	get primaryEndPointAddress() {
+		return new Attribute(this.resource, 'PrimaryEndPoint.Address');
+	},
+
+	/**
+	 * The number of the port that the primary read-write cache engine is listening on.
+	 * @type {Attribute}
+	 */
+	get primaryEndPointPort() {
+		return new Attribute(this.resource, 'PrimaryEndPoint.Port');
+	},
+
+	/**
+	 * A string with a list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports attribute.
+	 * @type {Attribute}
+	 */
+	get readEndPointAddresses() {
+		return new Attribute(this.resource, 'ReadEndPoint.Addresses');
+	},
+
+	/**
+	 * A list of endpoints for the read-only replicas. The order of the addresses map to the order of the ports from the ReadEndPoint.Ports.List attribute.
+	 * @type {Attribute}
+	 */
+	get readEndPointAddressesList() {
+		return new Attribute(this.resource, 'ReadEndPoint.Addresses.List');
+	},
+
+	/**
+	 * A string with a list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses attribute.
+	 * @type {Attribute}
+	 */
+	get readEndPointPorts() {
+		return new Attribute(this.resource, 'ReadEndPoint.Ports');
+	},
+
+	/**
+	 * A list of ports for the read-only replicas. The order of the ports map to the order of the addresses from the ReadEndPoint.Addresses.List attribute.
+	 * @type {Attribute}
+	 */
+	get readEndPointPortsList() {
+		return new Attribute(this.resource, 'ReadEndPoint.Ports.List');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::ElastiCache::ReplicationGroup
+ * @returns {ElastiCacheReplicationGroupAttributes}
+ */
+ElastiCacheReplicationGroup.prototype.attr = function() {
+	return new ElastiCacheReplicationGroupAttributes(this);
 };
 
 module.exports = ElastiCacheReplicationGroup;

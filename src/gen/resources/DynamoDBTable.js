@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::DynamoDB::Table - Creates a DynamoDB table.
@@ -11,30 +12,6 @@ function DynamoDBTable(name) {
 }
 
 DynamoDBTable.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::DynamoDB::Table attribute map
- * @typedef {Object} DynamoDBTableAttributeMap
- * @property {Attribute} streamArn The Amazon Resource Name (ARN) of the DynamoDB stream, such as arn:aws:dynamodb:us-east-1:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000.
- */
-Object.defineProperty(DynamoDBTable.prototype, 'attr', {
-	/**
-	 * @returns {DynamoDBTableAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * The Amazon Resource Name (ARN) of the DynamoDB stream, such as arn:aws:dynamodb:us-east-1:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000.
-			 * @returns {Attribute}
-			 */
-			get streamArn() {
-				return createAttribute('StreamArn');
-			}
-		};
-	}
-});
 
 /**
  * A list of AttributeName and AttributeType objects that describe the key schema for the table and indexes.
@@ -125,6 +102,32 @@ DynamoDBTable.prototype.streamSpecification = function(value) {
  */
 DynamoDBTable.prototype.tableName = function(value) {
 	return this.set('TableName', value);
+};
+
+/**
+ * AWS::DynamoDB::Table attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function DynamoDBTableAttributes(resource) {
+	this.resource = resource;
+}
+DynamoDBTableAttributes.prototype = {
+	/**
+	 * The Amazon Resource Name (ARN) of the DynamoDB stream, such as arn:aws:dynamodb:us-east-1:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000.
+	 * @type {Attribute}
+	 */
+	get streamArn() {
+		return new Attribute(this.resource, 'StreamArn');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::DynamoDB::Table
+ * @returns {DynamoDBTableAttributes}
+ */
+DynamoDBTable.prototype.attr = function() {
+	return new DynamoDBTableAttributes(this);
 };
 
 module.exports = DynamoDBTable;

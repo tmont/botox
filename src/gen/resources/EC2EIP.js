@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::EC2::EIP - The AWS::EC2::EIP resource allocates an Elastic IP (EIP) address and can, optionally, associate it with an Amazon EC2 instance.
@@ -11,30 +12,6 @@ function EC2EIP(name) {
 }
 
 EC2EIP.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::EC2::EIP attribute map
- * @typedef {Object} EC2EIPAttributeMap
- * @property {Attribute} allocationId The ID that AWS assigns to represent the allocation of the address for use with Amazon VPC. This is returned only for VPC elastic IP addresses. Example return value: eipalloc-5723d13e
- */
-Object.defineProperty(EC2EIP.prototype, 'attr', {
-	/**
-	 * @returns {EC2EIPAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * The ID that AWS assigns to represent the allocation of the address for use with Amazon VPC. This is returned only for VPC elastic IP addresses. Example return value: eipalloc-5723d13e
-			 * @returns {Attribute}
-			 */
-			get allocationId() {
-				return createAttribute('AllocationId');
-			}
-		};
-	}
-});
 
 /**
  * The Instance ID of the Amazon EC2 instance that you want to associate with this Elastic IP address.
@@ -60,6 +37,32 @@ EC2EIP.prototype.instanceId = function(value) {
  */
 EC2EIP.prototype.domain = function(value) {
 	return this.set('Domain', value);
+};
+
+/**
+ * AWS::EC2::EIP attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function EC2EIPAttributes(resource) {
+	this.resource = resource;
+}
+EC2EIPAttributes.prototype = {
+	/**
+	 * The ID that AWS assigns to represent the allocation of the address for use with Amazon VPC. This is returned only for VPC elastic IP addresses. Example return value: eipalloc-5723d13e
+	 * @type {Attribute}
+	 */
+	get allocationId() {
+		return new Attribute(this.resource, 'AllocationId');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::EC2::EIP
+ * @returns {EC2EIPAttributes}
+ */
+EC2EIP.prototype.attr = function() {
+	return new EC2EIPAttributes(this);
 };
 
 module.exports = EC2EIP;

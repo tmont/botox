@@ -1,4 +1,5 @@
 var Resource = require('../../resource');
+var Attribute = require('../../fun/attribute');
 
 /**
  * AWS::EC2::SecurityGroup - Creates an Amazon EC2 security group. To create a VPC security group, use the VpcId property.
@@ -11,30 +12,6 @@ function EC2SecurityGroup(name) {
 }
 
 EC2SecurityGroup.prototype = Object.create(Resource.prototype);
-
-/**
- * AWS::EC2::SecurityGroup attribute map
- * @typedef {Object} EC2SecurityGroupAttributeMap
- * @property {Attribute} groupId The group ID of the specified security group, such as sg-94b3a1f6.
- */
-Object.defineProperty(EC2SecurityGroup.prototype, 'attr', {
-	/**
-	 * @returns {EC2SecurityGroupAttributeMap}
-	 */
-	get: function() {
-		var createAttribute = this.createAttribute.bind(this);
-		return {
-
-			/**
-			 * The group ID of the specified security group, such as sg-94b3a1f6.
-			 * @returns {Attribute}
-			 */
-			get groupId() {
-				return createAttribute('GroupId');
-			}
-		};
-	}
-});
 
 /**
  * Description of the security group.
@@ -99,6 +76,32 @@ EC2SecurityGroup.prototype.tags = function(value) {
  */
 EC2SecurityGroup.prototype.vpcId = function(value) {
 	return this.set('VpcId', value);
+};
+
+/**
+ * AWS::EC2::SecurityGroup attributes
+ * @constructor
+ * @param {Resource} resource
+ */
+function EC2SecurityGroupAttributes(resource) {
+	this.resource = resource;
+}
+EC2SecurityGroupAttributes.prototype = {
+	/**
+	 * The group ID of the specified security group, such as sg-94b3a1f6.
+	 * @type {Attribute}
+	 */
+	get groupId() {
+		return new Attribute(this.resource, 'GroupId');
+	}
+};
+
+/**
+ * Gets attribute map for AWS::EC2::SecurityGroup
+ * @returns {EC2SecurityGroupAttributes}
+ */
+EC2SecurityGroup.prototype.attr = function() {
+	return new EC2SecurityGroupAttributes(this);
 };
 
 module.exports = EC2SecurityGroup;
