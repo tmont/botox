@@ -5,6 +5,9 @@ const path = require('path');
 const async = require('async');
 const inflection = require('inflection');
 
+const rootDir = path.resolve(__dirname, '..');
+const genDir = path.join(rootDir, 'src', 'gen');
+const indexFile = path.join(rootDir, 'index.js');
 const context = {};
 const sugarCache = {
 	template: 1,
@@ -45,7 +48,6 @@ function camelize(str) {
 function addSugarToIndex(things, type, trailingComma, callback) {
 	console.log(` generating ${type} syntax sugar index`);
 
-	const indexFile = path.join(__dirname, 'index.js');
 	const params = type === 'resource' ? 'name' : '';
 	const paramComment = params ? '\t * @param {String} name\n' : '';
 	const code = things.map((thing) => {
@@ -91,7 +93,7 @@ function createResources(next) {
 
 	function createClasses(files, next) {
 		console.log(` generating classes from ${files.length} files`);
-		const objDir = path.join(__dirname, 'src', 'gen', 'resources');
+		const objDir = path.join(genDir, 'resources');
 		const resourceMap = context.resourceMap = {};
 		context.resources = [];
 
@@ -238,7 +240,7 @@ module.exports = ${className};
 	function createIndex(next) {
 		console.log(' generating index');
 		const resourceMap = context.resourceMap;
-		const indexFile = path.join(__dirname, 'src', 'gen', 'resources', 'index.js');
+		const indexFile = path.join(genDir, 'resources', 'index.js');
 		const categories = Object.keys(resourceMap).sort();
 		const resourceProps = categories.map((category) => {
 			const resources = resourceMap[category].sort((a, b) => {
@@ -309,7 +311,7 @@ function createTypes(next) {
 	function createClasses(files, next) {
 		console.log(` generating classes from ${files.length} files`);
 		const typeMap = context.typeMap = [];
-		const objDir = path.join(__dirname, 'src', 'gen', 'types');
+		const objDir = path.join(genDir, 'types');
 
 		function createType(file, next) {
 			const json = require(file);
@@ -362,7 +364,7 @@ module.exports = ${className};
 			return a.name.localeCompare(b.name);
 		});
 
-		const indexFile = path.join(__dirname, 'src', 'gen', 'types', 'index.js');
+		const indexFile = path.join(genDir, 'types', 'index.js');
 		const typeProps = typeMap.map((type) => {
 			const file = '.' + type.file.substring(path.dirname(indexFile).length);
 			return `${type.name}: require('${file}')`;
@@ -418,7 +420,7 @@ function createAttributes(next) {
 	function createClasses(files, next) {
 		console.log(` generating classes from ${files.length} files`);
 		const attrMap = context.attrMap = [];
-		const objDir = path.join(__dirname, 'src', 'gen', 'attributes');
+		const objDir = path.join(genDir, 'attributes');
 
 		function createAttribute(file, next) {
 			const json = require(file);
@@ -471,7 +473,7 @@ module.exports = ${className};
 			return a.name.localeCompare(b.name);
 		});
 
-		const indexFile = path.join(__dirname, 'src', 'gen', 'attributes', 'index.js');
+		const indexFile = path.join(genDir, 'attributes', 'index.js');
 		const typeProps = attrMap.map((attr) => {
 			const file = '.' + attr.file.substring(path.dirname(indexFile).length);
 			return `${attr.name}: require('${file}')`;
