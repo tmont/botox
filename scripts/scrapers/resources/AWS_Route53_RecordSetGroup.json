@@ -34,7 +34,7 @@
       "description": "List of resource record sets to add.",
       "typeDescription": ": List of AWS::Route53::RecordSet objects, as shown in the following example:",
       "required": true,
-      "type": "[]",
+      "type": "Route53RecordSet[]",
       "update": "No interruption"
     }
   ],

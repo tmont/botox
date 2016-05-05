@@ -38,6 +38,13 @@ const typeMatchers = [
 
 		return null;
 	},
+	(type)=> {
+		if (/^List of AWS::Route53::RecordSet/.test(type)) {
+			return 'Route53RecordSet[]';
+		}
+
+		return null;
+	},
 	(type) => {
 		if (/String (?:Valid|\()/i.test(type)) {
 			return 'String';
@@ -270,8 +277,9 @@ function getRealType(type) {
 
 function normalizeType(type) {
 	return type
+		.replace(/^[\s:]+/, '') //remove leading colons and whitespace
 		.trim()
-		.replace(/\.$/, '') //remove trailing period
+		.replace(/\.+$/, '') //remove trailing periods
 		.replace(/^(AWS|Amazon)/i, ''); //remove common default stuff
 }
 

@@ -57,7 +57,7 @@ Route53RecordSetGroup.prototype.hostedZoneName = function(value) {
  * Required: true
  * Update requires: No interruption
  *
- * @param {[]|Attribute|Reference} value : List of AWS::Route53::RecordSet objects, as shown in the following example:
+ * @param {Route53RecordSet[]|Attribute|Reference} value : List of AWS::Route53::RecordSet objects, as shown in the following example:
  * @returns {Route53RecordSetGroup}
  */
 Route53RecordSetGroup.prototype.recordSets = function(value) {
