@@ -14,8 +14,8 @@
 		"async": "1.5.2",
 		"cheerio": "0.20.0",
 		"inflection": "1.10.0",
-		"mocha": "*",
-		"expect.js": "*",
+		"mocha": "2.4.5",
+		"expect.js": "0.3.1",
 		"eslint": "2.8.0",
 		"jsdoc": "3.4.0"
 	}
