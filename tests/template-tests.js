@@ -5,8 +5,15 @@ const botox = require('../');
 
 describe('Template', () => {
 	it('should generate template using resource', () => {
-		const template = new Template('lol')
-			.resource(new Instance('datInstance').imageId('ami-deadbeef'));
+		const instance = botox.instance('datInstance')
+			.imageId('ami-deadbeef')
+			.bl
+		const template = botox.template('lol')
+			.resource(instance)
+			.output(botox.output('privateDns')
+				.description('Private DNS of the instance')
+				.value(instance.attr().privateDnsName)
+			);
 
 		const json = template.getTemplateJson();
 
@@ -16,9 +23,13 @@ describe('Template', () => {
 			Resources: {
 				datInstance: {
 					Type: 'AWS::EC2::Instance',
-					Properties: {
-						ImageId: 'ami-deadbeef'
-					}
+					Properties: {ImageId: 'ami-deadbeef'}
+				}
+			},
+			Outputs: {
+				privateDns: {
+					Description: 'Private DNS of the instance',
+					Value: {'Fn::GetAtt': ['datInstance', 'PrivateDnsName']}
 				}
 			}
 		});
