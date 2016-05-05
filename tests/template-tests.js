@@ -6,8 +6,8 @@ const botox = require('../');
 describe('Template', () => {
 	it('should generate template using resource', () => {
 		const instance = botox.instance('datInstance')
-			.imageId('ami-deadbeef')
-			.bl
+			.imageId('ami-deadbeef');
+
 		const template = botox.template('lol')
 			.resource(instance)
 			.output(botox.output('privateDns')
