@@ -7,6 +7,10 @@
 		"url": "https://github.com/tmont/botox.git"
 	},
 	"license": "MIT",
+	"files": [
+		"index.js",
+		"src"
+	],
 	"scripts": {
 		"test": "node_modules/.bin/mocha -R dot tests"
 	},
