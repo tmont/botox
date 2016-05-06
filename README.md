@@ -32,6 +32,7 @@ This library is useful if you want to:
 - not type double quotes, or `Fn::Join` with its copious array arguments
 
 [![Build Status](https://travis-ci.org/tmont/botox.svg?branch=master)](https://travis-ci.org/tmont/botox)
+[![NPM version](https://img.shields.io/npm/v/botox.svg)](https://www.npmjs.com/package/botox)
 
 ## Installation
 ```bash
