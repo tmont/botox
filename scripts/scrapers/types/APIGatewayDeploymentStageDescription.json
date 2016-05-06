@@ -1,6 +1,6 @@
 {
   "name": "APIGatewayDeploymentStageDescription",
-  "description": "StageKey is a property of the AWS::ApiGateway::Deployment resource that configures an Amazon API Gateway (API Gateway) deployment stage.",
+  "description": "StageDescription is a property of the AWS::ApiGateway::Deployment resource that configures an Amazon API Gateway (API Gateway) deployment stage.",
   "properties": [
     {
       "name": "CacheClusterEnabled",

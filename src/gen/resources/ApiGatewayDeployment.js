@@ -54,7 +54,7 @@ ApiGatewayDeployment.prototype.stageDescription = function(value) {
 /**
  * A name for the stage that API Gateway creates with this deployment.
  *
- * Required: false
+ * Required: true
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value

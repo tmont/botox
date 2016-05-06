@@ -91,7 +91,7 @@ AutoScalingScalingPolicy.prototype.minAdjustmentMagnitude = function(value) {
 };
 
 /**
- * An Auto Scaling policy type. You can specify SimpleScaling or StepScaling. By default, AWS CloudFormation specifies SimpleScaling. For more information, see Scaling Policy Types in the Auto Scaling Developer Guide.
+ * An Auto Scaling policy type. You can specify SimpleScaling or StepScaling. By default, AWS CloudFormation specifies SimpleScaling. For more information, see Scaling Policy Types in the Auto Scaling User Guide.
  *
  * Required: false
  * Update requires: No interruption

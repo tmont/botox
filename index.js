@@ -948,7 +948,7 @@ Botox.prototype = {
 	},
 
 	/**
-	 * Use AWS::AutoScaling::LifecycleHook to control the state of an instance in an Auto Scaling group after it is launched or terminated. When you use a lifecycle hook, the Auto Scaling group either pauses the instance after it is launched (before it is put into service) or pauses the instance as it is terminated (before it is fully terminated). For more information, see Examples of How to Use Lifecycle Hooks in the Auto Scaling Developer Guide.
+	 * Use AWS::AutoScaling::LifecycleHook to control the state of an instance in an Auto Scaling group after it is launched or terminated. When you use a lifecycle hook, the Auto Scaling group either pauses the instance after it is launched (before it is put into service) or pauses the instance as it is terminated (before it is fully terminated). For more information, see Examples of How to Use Lifecycle Hooks in the Auto Scaling User Guide.
 	 * @param {String} name
 	 * @returns {AutoScalingLifecycleHook}
 	 */
@@ -1688,7 +1688,7 @@ Botox.prototype = {
 	},
 
 	/**
-	 * StageKey is a property of the AWS::ApiGateway::Deployment resource that configures an Amazon API Gateway (API Gateway) deployment stage.
+	 * StageDescription is a property of the AWS::ApiGateway::Deployment resource that configures an Amazon API Gateway (API Gateway) deployment stage.
 	 * @returns {APIGatewayDeploymentStageDescription}
 	 */
 	apiGatewayDeploymentStageDescription: function() {
@@ -1768,7 +1768,7 @@ Botox.prototype = {
 	},
 
 	/**
-	 * The Auto Scaling Tags property is an embedded property of the AWS::AutoScaling::AutoScalingGroup type. For more information about tags, go to Tagging Auto Scaling Groups and Amazon EC2 Instances in the Auto Scaling Developer Guide.
+	 * The Auto Scaling Tags property is an embedded property of the AWS::AutoScaling::AutoScalingGroup type. For more information about tags, go to Tagging Auto Scaling Groups and Amazon EC2 Instances in the Auto Scaling User Guide.
 	 * @returns {AutoScalingTagsPropertyType}
 	 */
 	autoScalingTagsPropertyType: function() {

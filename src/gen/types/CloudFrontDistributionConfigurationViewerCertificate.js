@@ -24,7 +24,7 @@ CloudFrontDistributionConfigurationViewerCertificate.prototype.cloudFrontDefault
 };
 
 /**
- * The IAM certificate ID to use if you're using an alternate domain name.
+ * If you're using an alternate domain name, the ID of a server certificate. This ID is the ServerCertificateId value, which AWS Identity and Access Management (IAM) returns when you add the certificate to the IAM certificate store, such as ASCACKCEVSQ6CEXAMPLE1.
  *
  * Required: false
  *

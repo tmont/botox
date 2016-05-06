@@ -33,7 +33,7 @@
       "name": "StageName",
       "description": "A name for the stage that API Gateway creates with this deployment.",
       "typeDescription": "String",
-      "required": false,
+      "required": true,
       "type": "String",
       "update": "No interruption"
     }
