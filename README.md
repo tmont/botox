@@ -234,6 +234,113 @@ const template = botox.template('lol')
 }
 ```
 
+### EC2 Instance Initialization (`cfn-init`)
+The API for the cfn-init stuff is harder to discover, so here's a brief example:
+
+```javascript
+const authName = 'S3Access';
+const configs = [
+    botox.cfg.config('download')
+        .file(botox.cfg.file('/home/ubuntu/.ssh/authorized_keys')
+            .authentication(authName)
+            .source(botox.join([
+                    'https://s3.amazonaws.com',
+                    botox.findInMap('buckets', 'prod', 'authBucket'),
+                    'authorized_keys'
+                ], '/')
+            )
+            .mode('000600')
+            .owner('ubuntu')
+            .group('ubuntu')
+        ),
+    botox.cfg.config('install')
+        .package(botox.cfg.package('apt').add('nginx-full'))
+];
+
+const instance = botox.instance('datInstance')
+    .imageId('ami-deadbeef')
+    .cfnAuth(botox.authentication(authName)
+        .type('S3')
+        .roleName('myRole')
+    )
+    .cfnInit(botox.cfnInit()
+        .configSet('doStuff', configs.map((config) => { return config.name; }))
+        .config(configs[0])
+        .config(configs[1])
+    );
+
+const template = botox.template('lol').resource(instance);
+
+console.log(JSON.stringify(template, null, '  '));
+```
+
+which would generate
+
+```json
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "lol",
+  "Resources": {
+    "datInstance": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "ImageId": "ami-deadbeef"
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Init": {
+          "configSets": {
+            "doStuff": [
+              "download",
+              "install"
+            ]
+          },
+          "download": {
+            "files": {
+              "/home/ubuntu/.ssh/authorized_keys": {
+                "authentication": "S3Access",
+                "source": {
+                  "Fn::Join": [
+                    "/",
+                    [
+                      "https://s3.amazonaws.com",
+                      {
+                        "Fn::FindInMap": [
+                          "buckets",
+                          "prod",
+                          "authBucket"
+                        ]
+                      },
+                      "authorized_keys"
+                    ]
+                  ]
+                },
+                "mode": "000600",
+                "owner": "ubuntu",
+                "group": "ubuntu"
+              }
+            }
+          },
+          "install": {
+            "packages": {
+              "apt": {
+                "nginx-full": []
+              }
+            }
+          }
+        },
+        "AWS::CloudFormation::Authentication": {
+          "S3Access": {
+            "type": "S3",
+            "roleName": "myRole"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+
 ## Development
 - Run tests using `npm test`.
 - Lint the generated code using `scripts/lint.sh`.

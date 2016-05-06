@@ -17,6 +17,9 @@ function Resource(name, type) {
 		throw new Error('type must be a non-empty string');
 	}
 
+	this.$cfnInit = null;
+	this.$cfnAuth = null;
+
 	Object.defineProperty(this, '$data', {
 		value: {}
 	});
@@ -102,6 +105,16 @@ Resource.prototype = {
 				Properties: this.$data
 			};
 			Object.assign(json, this.$attributes);
+		}
+
+		if (this.$cfnInit) {
+			json.Metadata = {
+				'AWS::CloudFormation::Init': this.$cfnInit
+			}
+		}
+		if (this.$cfnAuth) {
+			json.Metadata = json.Metadata || {};
+			json.Metadata['AWS::CloudFormation::Authentication'] = this.$cfnAuth;
 		}
 
 		return json;

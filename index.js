@@ -94,7 +94,14 @@ ConfigSugar.prototype = {
 	}
 };
 
-module.exports = {
+/**
+ * Convenience shortcuts for creating resources, property types, pseduo-parameters,
+ * outputs, conditions and functions.
+ * @constructor
+ */
+function Botox() {}
+
+Botox.prototype = {
 	/**
 	 * Returns a string representing the AWS Region in which the encompassing resource is being created, such as us-west-2.
 	 * @returns {Reference}
@@ -3332,3 +3339,5 @@ module.exports = {
 	}
 	//@@end attr sugar
 };
+
+module.exports = new Botox();

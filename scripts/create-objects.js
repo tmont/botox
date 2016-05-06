@@ -200,7 +200,41 @@ ${className}.prototype.updatePolicy = function(updatePolicy) {
 	return this.setResourceAttribute('UpdatePolicy', updatePolicy);
 };`;
 
+
+
+			let cfnInit = '';
+			if (json.fullName === 'AWS::EC2::Instance') {
+				cfnInit = `
+/**
+ * Use the AWS::CloudFormation::Init type to include metadata on an Amazon EC2 instance for the cfn-init helper script. If your template calls the cfn-init script, the script looks for resource metadata rooted in the AWS::CloudFormation::Init metadata key.
+ *
+ * The metadata is organized into config keys, which you can group into configsets. You can specify a configset when you call cfn-init in your template. If you don't specify a configset, cfn-init looks for a single config key named config.
+ * @param {CloudFormationInit} cfnInit
+ * @returns {${className}}
+ * @see Botox#cfnInit
+ */
+${className}.prototype.cfnInit = function(cfnInit) {
+	this.$cfnInit = cfnInit;
+	return this;
+};
+
+/**
+ * Use the AWS::CloudFormation::Authentication resource to specify authentication credentials for files or sources that you specify with the AWS::CloudFormation::Init resource.
+ * @param {CloudFormationAuthentication} auth
+ * @returns {${className}}
+ * @see Botox#authentication
+ */
+${className}.prototype.cfnAuth = function(auth) {
+	this.$cfnAuth = auth;
+	return this;
+};
+`;
+			}
+
 			const attributeRequire = attributeStuff ? 'var Attribute = require(\'../../fun/attribute\');' : '';
+
+
+
 			const code = `var Resource = require('../../resource');
 ${attributeRequire}
 
@@ -218,6 +252,7 @@ ${className}.prototype = Object.create(Resource.prototype);
 ${methods}
 ${creationPolicyMethod}
 ${updatePolicyMethod}
+${cfnInit}
 ${attributeStuff}
 
 module.exports = ${className};

@@ -71,12 +71,12 @@ File.prototype = {
 	},
 	/**
 	 * The name of an authentication method to use. This overrides any default authentication. You can use this property to select an authentication method you define with the AWS::CloudFormation::Authentication resource.
-	 * @param {CloudFormationAuthentication} auth
+	 * @param {String} authName
 	 * @returns {File}
+	 * @see {CloudFormationAuthentication}
 	 */
-	authentication: function(auth) {
-		//TODO CloudFormationAuthentication cannot inherit from Resource
-		return this.set('authentication', auth);
+	authentication: function(authName) {
+		return this.set('authentication', authName);
 	},
 	/**
 	 * Specifies a context for files that are to be processed as Mustache templates. To use this key, you must have installed aws-cfn-bootstrap 1.3-11 or later as well as pystache.

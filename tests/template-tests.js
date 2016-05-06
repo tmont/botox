@@ -1,12 +1,38 @@
 const expect = require('expect.js');
-const Template = require('../src/template');
-const Instance = require('../src/gen/resources/EC2Instance');
 const botox = require('../');
 
 describe('Template', () => {
-	it('should generate template using resource', () => {
+	it('should create instance or whatever', () => {
+		const authName = 'S3Access';
+		const configs = [
+			botox.cfg.config('download')
+				.file(botox.cfg.file('/home/ubuntu/.ssh/authorized_keys')
+					.authentication(authName)
+					.source(botox.join([
+							'https://s3.amazonaws.com',
+							botox.findInMap('buckets', 'prod', 'authBucket'),
+							'authorized_keys'
+						], '/')
+					)
+					.mode('000600')
+					.owner('ubuntu')
+					.group('ubuntu')
+				),
+			botox.cfg.config('install')
+				.package(botox.cfg.package('apt').add('nginx-full'))
+		];
+
 		const instance = botox.instance('datInstance')
-			.imageId('ami-deadbeef');
+			.imageId('ami-deadbeef')
+			.cfnAuth(botox.authentication(authName)
+				.type('S3')
+				.roleName('myRole')
+			)
+			.cfnInit(botox.cfnInit()
+				.configSet('doStuff', configs.map((config) => { return config.name; }))
+				.config(configs[0])
+				.config(configs[1])
+			);
 
 		const template = botox.template('lol')
 			.resource(instance)
@@ -23,7 +49,42 @@ describe('Template', () => {
 			Resources: {
 				datInstance: {
 					Type: 'AWS::EC2::Instance',
-					Properties: {ImageId: 'ami-deadbeef'}
+					Properties: {ImageId: 'ami-deadbeef'},
+					Metadata: {
+						'AWS::CloudFormation::Init': {
+							configSets: {
+								doStuff: [ 'download', 'install' ]
+							},
+							download: {
+								files: {
+									'/home/ubuntu/.ssh/authorized_keys': {
+										source: { 'Fn::Join': [ '/', [
+											'https://s3.amazonaws.com',
+											{ 'Fn::FindInMap': [ 'buckets', 'prod', 'authBucket' ] },
+											'authorized_keys'
+										] ] },
+										mode: '000600',
+										owner: 'ubuntu',
+										group: 'ubuntu',
+										authentication: 'S3Access'
+									}
+								}
+							},
+							install: {
+								packages: {
+									apt: {
+										'nginx-full': []
+									}
+								}
+							}
+						},
+						'AWS::CloudFormation::Authentication': {
+							S3Access: {
+								type: 'S3',
+								roleName: 'myRole'
+							}
+						}
+					}
 				}
 			},
 			Outputs: {
