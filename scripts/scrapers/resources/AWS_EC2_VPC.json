@@ -3,7 +3,7 @@
   "namespace": "AWS",
   "category": "EC2",
   "name": "VPC",
-  "description": "Creates a Virtual Private Cloud (VPC) with the CIDR block that you specify.",
+  "description": "Creates a Virtual Private Cloud (VPC) with the CIDR block that you specify. To name a VPC resource, use the Tags property and specify a value for the Name key.",
   "properties": [
     {
       "name": "CidrBlock",
@@ -39,7 +39,7 @@
     },
     {
       "name": "Tags",
-      "description": "An arbitrary set of tags (key–value pairs) for this VPC.",
+      "description": "An arbitrary set of tags (key–value pairs) for this VPC. To name a VPC resource, specify a value for the Name key.",
       "typeDescription": "AWS CloudFormation Resource Tags",
       "required": false,
       "type": "CloudFormationResourceTagsType[]",

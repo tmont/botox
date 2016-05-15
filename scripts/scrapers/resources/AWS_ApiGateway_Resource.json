@@ -7,7 +7,7 @@
   "properties": [
     {
       "name": "ParentId",
-      "description": "If you want to create a child resource, the ID of the parent resource.",
+      "description": "If you want to create a child resource, the ID of the parent resource. For resources without a parent, specify the RestApi root resource ID, such as { \"Fn::GetAtt\": [\"MyRestApi\", \"RootResourceId\"] }.",
       "typeDescription": "String",
       "required": true,
       "type": "String",
@@ -17,7 +17,7 @@
       "name": "PathPart",
       "description": "A path name for the resource.",
       "typeDescription": "String",
-      "required": false,
+      "required": true,
       "type": "String",
       "update": "Replacement"
     },

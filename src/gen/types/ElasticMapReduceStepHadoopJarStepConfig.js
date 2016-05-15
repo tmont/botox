@@ -16,7 +16,7 @@ ElasticMapReduceStepHadoopJarStepConfig.prototype = Object.create(PropertyType.p
  *
  * Required: false
  *
- * @param {String} value
+ * @param {String[]} value
  * @returns {ElasticMapReduceStepHadoopJarStepConfig}
  */
 ElasticMapReduceStepHadoopJarStepConfig.prototype.args = function(value) {

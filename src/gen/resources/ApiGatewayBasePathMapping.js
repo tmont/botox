@@ -28,7 +28,7 @@ ApiGatewayBasePathMapping.prototype.basePath = function(value) {
 /**
  * The name of a DomainName resource.
  *
- * Required: false
+ * Required: true
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
@@ -41,7 +41,7 @@ ApiGatewayBasePathMapping.prototype.domainName = function(value) {
 /**
  * The name of the API.
  *
- * Required: false
+ * Required: true
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value

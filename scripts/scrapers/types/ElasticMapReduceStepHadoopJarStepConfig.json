@@ -5,9 +5,9 @@
     {
       "name": "Args",
       "description": "A list of command line arguments passed to the JAR file's main function when the function is executed.",
-      "typeDescription": "String",
+      "typeDescription": "List of strings",
       "required": false,
-      "type": "String"
+      "type": "String[]"
     },
     {
       "name": "Jar",

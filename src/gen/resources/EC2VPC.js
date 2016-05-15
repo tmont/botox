@@ -2,7 +2,7 @@ var Resource = require('../../resource');
 var Attribute = require('../../fun/attribute');
 
 /**
- * AWS::EC2::VPC - Creates a Virtual Private Cloud (VPC) with the CIDR block that you specify.
+ * AWS::EC2::VPC - Creates a Virtual Private Cloud (VPC) with the CIDR block that you specify. To name a VPC resource, use the Tags property and specify a value for the Name key.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html}
  * @constructor
  * @param {String} name Name of the resource
@@ -66,7 +66,7 @@ EC2VPC.prototype.instanceTenancy = function(value) {
 };
 
 /**
- * An arbitrary set of tags (key–value pairs) for this VPC.
+ * An arbitrary set of tags (key–value pairs) for this VPC. To name a VPC resource, specify a value for the Name key.
  *
  * Required: false
  * Update requires: No interruption.

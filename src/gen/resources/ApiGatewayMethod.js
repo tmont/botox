@@ -117,7 +117,7 @@ ApiGatewayMethod.prototype.requestParameters = function(value) {
 };
 
 /**
- * The ID of an API Gateway resource.
+ * The ID of an API Gateway resource. For root resource methods, specify the RestApi root resource ID, such as { "Fn::GetAtt": ["MyRestApi", "RootResourceId"] }.
  *
  * Required: true
  * Update requires: No interruption

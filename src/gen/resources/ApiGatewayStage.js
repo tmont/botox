@@ -16,7 +16,7 @@ ApiGatewayStage.prototype = Object.create(Resource.prototype);
  * Indicates whether cache clustering is enabled for the stage.
  *
  * Required: false
- * Update requires: undefined
+ * Update requires: No interruption
  *
  * @param {Boolean|Attribute|Reference} value
  * @returns {ApiGatewayStage}
@@ -29,7 +29,7 @@ ApiGatewayStage.prototype.cacheClusterEnabled = function(value) {
  * The stage's cache cluster size.
  *
  * Required: false
- * Update requires: undefined
+ * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
  * @returns {ApiGatewayStage}
@@ -42,7 +42,7 @@ ApiGatewayStage.prototype.cacheClusterSize = function(value) {
  * The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage.
  *
  * Required: false
- * Update requires: undefined
+ * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
  * @returns {ApiGatewayStage}
@@ -55,7 +55,7 @@ ApiGatewayStage.prototype.clientCertificateId = function(value) {
  * The ID of the deployment that the stage points to.
  *
  * Required: true
- * Update requires: undefined
+ * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
  * @returns {ApiGatewayStage}
@@ -68,7 +68,7 @@ ApiGatewayStage.prototype.deploymentId = function(value) {
  * A description of the stage's purpose.
  *
  * Required: false
- * Update requires: undefined
+ * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
  * @returns {ApiGatewayStage}
@@ -81,7 +81,7 @@ ApiGatewayStage.prototype.description = function(value) {
  * Settings for all methods in the stage.
  *
  * Required: false
- * Update requires: undefined
+ * Update requires: No interruption
  *
  * @param {APIGatewayStageMethodSetting|Attribute|Reference} value Amazon API Gateway Stage MethodSetting
  * @returns {ApiGatewayStage}
@@ -93,8 +93,8 @@ ApiGatewayStage.prototype.methodSettings = function(value) {
 /**
  * The ID of the RestApi resource that you're deploying with this stage.
  *
- * Required: false
- * Update requires: undefined
+ * Required: true
+ * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
  * @returns {ApiGatewayStage}
@@ -106,8 +106,8 @@ ApiGatewayStage.prototype.restApiId = function(value) {
 /**
  * The name of the stage, which API Gateway uses as the first path segment in the invoke Uniform Resource Identifier (URI).
  *
- * Required: false
- * Update requires: undefined
+ * Required: true
+ * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
  * @returns {ApiGatewayStage}
@@ -120,7 +120,7 @@ ApiGatewayStage.prototype.stageName = function(value) {
  * A map (string to string map) that defines the stage variables, where the variable name is the key and the variable value is the value. Variable names are limited to alphanumeric characters. Values must match the following regular expression: [A-Za-z0-9-._~:/?#&amp;=,]+.
  *
  * Required: false
- * Update requires: undefined
+ * Update requires: No interruption
  *
  * @param {key[]|Attribute|Reference} value List of key-value pairs
  * @returns {ApiGatewayStage}

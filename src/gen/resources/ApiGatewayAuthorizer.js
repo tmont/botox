@@ -54,7 +54,7 @@ ApiGatewayAuthorizer.prototype.authorizerUri = function(value) {
 /**
  * The source of the identity in an incoming request. If you specify TOKEN for the authorizer's Type property, specify a mapping expression. The custom header mapping expression has the form method.request.header.name, where name is the name of a custom authorization header that clients submit as part of their requests.
  *
- * Required: false
+ * Required: true
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
@@ -78,9 +78,9 @@ ApiGatewayAuthorizer.prototype.identityValidationExpression = function(value) {
 };
 
 /**
- * A name of the authorizer.
+ * The name of the authorizer.
  *
- * Required: false
+ * Required: true
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
@@ -106,7 +106,7 @@ ApiGatewayAuthorizer.prototype.restApiId = function(value) {
 /**
  * The type of the authorizer, such as TOKEN.
  *
- * Required: false
+ * Required: true
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value

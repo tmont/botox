@@ -31,7 +31,7 @@
     },
     {
       "name": "Policies",
-      "description": "The policies to associate with this role. Policies can also be specified externally. For sample templates that demonstrates both embedded and external policies, see Template Examples.",
+      "description": "Important",
       "typeDescription": "List of IAM Policies",
       "required": false,
       "type": "IAMPolicy[]",

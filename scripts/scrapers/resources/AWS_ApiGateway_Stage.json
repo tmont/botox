@@ -10,63 +10,72 @@
       "description": "Indicates whether cache clustering is enabled for the stage.",
       "typeDescription": "Boolean",
       "required": false,
-      "type": "Boolean"
+      "type": "Boolean",
+      "update": "No interruption"
     },
     {
       "name": "CacheClusterSize",
       "description": "The stage's cache cluster size.",
       "typeDescription": "String",
       "required": false,
-      "type": "String"
+      "type": "String",
+      "update": "No interruption"
     },
     {
       "name": "ClientCertificateId",
       "description": "The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage.",
       "typeDescription": "String",
       "required": false,
-      "type": "String"
+      "type": "String",
+      "update": "No interruption"
     },
     {
       "name": "DeploymentId",
       "description": "The ID of the deployment that the stage points to.",
       "typeDescription": "String",
       "required": true,
-      "type": "String"
+      "type": "String",
+      "update": "No interruption"
     },
     {
       "name": "Description",
       "description": "A description of the stage's purpose.",
       "typeDescription": "String",
       "required": false,
-      "type": "String"
+      "type": "String",
+      "update": "No interruption"
     },
     {
       "name": "MethodSettings",
       "description": "Settings for all methods in the stage.",
       "typeDescription": "Amazon API Gateway Stage MethodSetting",
       "required": false,
-      "type": "APIGatewayStageMethodSetting"
+      "type": "APIGatewayStageMethodSetting",
+      "update": "No interruption"
     },
     {
       "name": "RestApiId",
       "description": "The ID of the RestApi resource that you're deploying with this stage.",
       "typeDescription": "String",
-      "required": false,
-      "type": "String"
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
     },
     {
       "name": "StageName",
       "description": "The name of the stage, which API Gateway uses as the first path segment in the invoke Uniform Resource Identifier (URI).",
       "typeDescription": "String",
-      "required": false,
-      "type": "String"
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
     },
     {
       "name": "Variables",
       "description": "A map (string to string map) that defines the stage variables, where the variable name is the key and the variable value is the value. Variable names are limited to alphanumeric characters. Values must match the following regular expression: [A-Za-z0-9-._~:/?#&amp;=,]+.",
       "typeDescription": "List of key-value pairs",
       "required": false,
-      "type": "key[]"
+      "type": "key[]",
+      "update": "No interruption"
     }
   ],
   "attributes": [],

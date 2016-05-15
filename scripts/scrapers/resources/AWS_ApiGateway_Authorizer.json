@@ -33,7 +33,7 @@
       "name": "IdentitySource",
       "description": "The source of the identity in an incoming request. If you specify TOKEN for the authorizer's Type property, specify a mapping expression. The custom header mapping expression has the form method.request.header.name, where name is the name of a custom authorization header that clients submit as part of their requests.",
       "typeDescription": "String",
-      "required": false,
+      "required": true,
       "type": "String",
       "update": "No interruption"
     },
@@ -47,9 +47,9 @@
     },
     {
       "name": "Name",
-      "description": "A name of the authorizer.",
+      "description": "The name of the authorizer.",
       "typeDescription": "String",
-      "required": false,
+      "required": true,
       "type": "String",
       "update": "No interruption"
     },
@@ -65,7 +65,7 @@
       "name": "Type",
       "description": "The type of the authorizer, such as TOKEN.",
       "typeDescription": "String",
-      "required": false,
+      "required": true,
       "type": "String",
       "update": "No interruption"
     }

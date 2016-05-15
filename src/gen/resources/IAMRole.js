@@ -53,7 +53,7 @@ IAMRole.prototype.path = function(value) {
 };
 
 /**
- * The policies to associate with this role. Policies can also be specified externally. For sample templates that demonstrates both embedded and external policies, see Template Examples.
+ * Important
  *
  * Required: false
  * Update requires: No interruption

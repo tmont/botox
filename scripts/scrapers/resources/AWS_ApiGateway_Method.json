@@ -71,7 +71,7 @@
     },
     {
       "name": "ResourceId",
-      "description": "The ID of an API Gateway resource.",
+      "description": "The ID of an API Gateway resource. For root resource methods, specify the RestApi root resource ID, such as { \"Fn::GetAtt\": [\"MyRestApi\", \"RootResourceId\"] }.",
       "typeDescription": "String",
       "required": true,
       "type": "String",

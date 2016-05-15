@@ -60,7 +60,7 @@ UpdatePolicy.prototype.pauseTime = function(value) {
 };
 
 /**
- * The Auto Scaling processes to suspend during a stack update. Suspending processes is useful when you don't want Auto Scaling to potentially interfere with a stack update. For example, you can suspend process so that no alarms are triggered during an update. For valid values, see SuspendProcesses in the Auto Scaling API Reference.
+ * The Auto Scaling processes to suspend during a stack update. Suspending processes is useful when you don't want Auto Scaling to potentially interfere with a stack update. For example, you can suspend alarming so that Auto Scaling doesn't execute scaling policies that are associated with an alarm. For valid values, see the ScalingProcesses.member.N parameter for the SuspendProcesses action in the Auto Scaling API Reference.
  *
  * Required: false
  *

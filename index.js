@@ -1542,7 +1542,7 @@ Botox.prototype = {
 	},
 
 	/**
-	 * Creates a Virtual Private Cloud (VPC) with the CIDR block that you specify.
+	 * Creates a Virtual Private Cloud (VPC) with the CIDR block that you specify. To name a VPC resource, use the Tags property and specify a value for the Name key.
 	 * @param {String} name
 	 * @returns {EC2VPC}
 	 */

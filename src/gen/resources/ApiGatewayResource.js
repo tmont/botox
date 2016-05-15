@@ -13,7 +13,7 @@ function ApiGatewayResource(name) {
 ApiGatewayResource.prototype = Object.create(Resource.prototype);
 
 /**
- * If you want to create a child resource, the ID of the parent resource.
+ * If you want to create a child resource, the ID of the parent resource. For resources without a parent, specify the RestApi root resource ID, such as { "Fn::GetAtt": ["MyRestApi", "RootResourceId"] }.
  *
  * Required: true
  * Update requires: Replacement
@@ -28,7 +28,7 @@ ApiGatewayResource.prototype.parentId = function(value) {
 /**
  * A path name for the resource.
  *
- * Required: false
+ * Required: true
  * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value

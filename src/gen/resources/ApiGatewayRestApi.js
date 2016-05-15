@@ -81,7 +81,7 @@ ApiGatewayRestApi.prototype.failOnWarnings = function(value) {
 /**
  * A name for the API Gateway RestApi resource.
  *
- * Required: false
+ * Required: true
  * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value

@@ -36,7 +36,7 @@ APIGatewayMethodIntegration.prototype.cacheNamespace = function(value) {
 };
 
 /**
- * The credentials required for the integration. To specify an AWS Identity and Access Management (IAM) role that API Gateway assumes, specify the role's Amazon Resource Name (ARN). To use resource-based permissions on the AWS Lambda (Lambda) function, specify null. To require that the caller's identity be passed through from the request, specify arn:aws:iam::\*:user/\*.
+ * The credentials required for the integration. To specify an AWS Identity and Access Management (IAM) role that API Gateway assumes, specify the role's Amazon Resource Name (ARN). To require that the caller's identity be passed through from the request, specify arn:aws:iam::\*:user/\*.
  *
  * Required: false
  *
@@ -84,7 +84,7 @@ APIGatewayMethodIntegration.prototype.requestParameters = function(value) {
 };
 
 /**
- * The templates used to transform the method request body. Specify templates as key-value pairs (string-to-string maps), with a content type as the key and a template as the value.
+ * A map of Apache Velocity templates that are applied on the request payload. The template that API Gateway uses is based on the value of the Content-Type header sent by the client. The content type value is the key, and the template is the value (specified as a string), such as the following snippet:
  *
  * Required: false
  *
@@ -96,9 +96,9 @@ APIGatewayMethodIntegration.prototype.requestTemplates = function(value) {
 };
 
 /**
- * The type of back end your method is running, such as HTTP, AWS, or MOCK.
+ * The type of back end your method is running, such as HTTP, AWS (for Lambda functions), or MOCK.
  *
- * Required: false
+ * Required: true
  *
  * @param {String} value
  * @returns {APIGatewayMethodIntegration}
@@ -108,7 +108,7 @@ APIGatewayMethodIntegration.prototype.type = function(value) {
 };
 
 /**
- * The integration's Uniform Resource Identifier (URI). If you specify HTTP for the Type property, specify the API endpoint URL. If you specify MOCK for the Type property, don't specify this property. If you specify AWS for the Type property, specify an AWS service that follows the form: arn:aws:apigateway:region:subdomain.service|service:path|action/service_api. For example, a Lambda function URI follows the form: arn:aws:apigateway:region:lambda:path/path. The path is usually in the form /2015-03-31/functions/LambdaFunctionARN/invocations. For more information, see the uri property of the Integration resource in the Amazon API Gateway REST API Reference.
+ * The integration's Uniform Resource Identifier (URI).
  *
  * Required: false
  *
