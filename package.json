@@ -1,6 +1,6 @@
 {
 	"name": "botox",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"description": "Library for generating AWS CloudFormation templates",
 	"keywords": [ "aws", "cloudformation", "fluent" ],
 	"repository": {
