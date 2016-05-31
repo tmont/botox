@@ -108,7 +108,7 @@ APIGatewayStageMethodSetting.prototype.resourcePath = function(value) {
 };
 
 /**
- * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+ * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account. For more information, see Manage API Request Throttling in the API Gateway Developer Guide.
  *
  * Required: false
  *
@@ -120,7 +120,7 @@ APIGatewayStageMethodSetting.prototype.throttlingBurstLimit = function(value) {
 };
 
 /**
- * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+ * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account. For more information, see Manage API Request Throttling in the API Gateway Developer Guide.
  *
  * Required: false
  *

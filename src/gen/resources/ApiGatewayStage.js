@@ -122,7 +122,7 @@ ApiGatewayStage.prototype.stageName = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {key[]|Attribute|Reference} value List of key-value pairs
+ * @param {Object|Attribute|Reference} value Mapping of key-value pairs
  * @returns {ApiGatewayStage}
  */
 ApiGatewayStage.prototype.variables = function(value) {

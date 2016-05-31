@@ -40,16 +40,16 @@
     {
       "name": "RequestParameters",
       "description": "The request parameters that API Gateway sends with the back-end request. Specify request parameters as key-value pairs (string-to-string maps), with a destination as the key and a source as the value.",
-      "typeDescription": "List of key-value pairs",
+      "typeDescription": "Mapping of key-value pairs",
       "required": false,
-      "type": "key[]"
+      "type": "Object"
     },
     {
       "name": "RequestTemplates",
       "description": "A map of Apache Velocity templates that are applied on the request payload. The template that API Gateway uses is based on the value of the Content-Type header sent by the client. The content type value is the key, and the template is the value (specified as a string), such as the following snippet:",
-      "typeDescription": "List of key-value pairs",
+      "typeDescription": "Mapping of key-value pairs",
       "required": false,
-      "type": "key[]"
+      "type": "Object"
     },
     {
       "name": "Type",

@@ -2712,7 +2712,7 @@ Botox.prototype = {
 	},
 
 	/**
-	 * EbsConfiguration is a property of the AWS::EMR::Cluster and AWS::EMR::InstanceGroupConfig resources that defines Amazon Elastic Block Store (Amazon EBS) storage volumes to attach to your Amazon Elastic MapReduce (Amazon EMR) instances.
+	 * EbsConfiguration is a property of the Amazon Elastic MapReduce Cluster JobFlowInstancesConfig InstanceGroupConfig property and the AWS::EMR::InstanceGroupConfig resource that defines Amazon Elastic Block Store (Amazon EBS) storage volumes to attach to your Amazon Elastic MapReduce (Amazon EMR) instances.
 	 * @returns {ElasticMapReduceEbsConfiguration}
 	 */
 	elasticMapReduceEbsConfiguration: function() {
@@ -2720,11 +2720,11 @@ Botox.prototype = {
 	},
 
 	/**
-	 * EbsBlockDeviceConfig is a property of the Amazon Elastic MapReduce EbsConfiguration property that defines the settings for the Amazon Elastic Block Store (Amazon EBS) volumes that Amazon Elastic MapReduce (Amazon EMR) associates with your instances.
-	 * @returns {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig}
+	 * EbsBlockDeviceConfigs is a property of the Amazon Elastic MapReduce EbsConfiguration property that defines the settings for the Amazon Elastic Block Store (Amazon EBS) volumes that Amazon Elastic MapReduce (Amazon EMR) associates with your instances.
+	 * @returns {ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigs}
 	 */
-	elasticMapReduceEbsConfigurationEbsBlockDeviceConfig: function() {
-		return new Types.ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig();
+	elasticMapReduceEbsConfigurationEbsBlockDeviceConfigs: function() {
+		return new Types.ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigs();
 	},
 
 	/**

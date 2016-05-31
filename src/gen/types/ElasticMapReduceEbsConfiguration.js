@@ -1,7 +1,7 @@
 var PropertyType = require('../../property-type');
 
 /**
- * EbsConfiguration is a property of the AWS::EMR::Cluster and AWS::EMR::InstanceGroupConfig resources that defines Amazon Elastic Block Store (Amazon EBS) storage volumes to attach to your Amazon Elastic MapReduce (Amazon EMR) instances.
+ * EbsConfiguration is a property of the Amazon Elastic MapReduce Cluster JobFlowInstancesConfig InstanceGroupConfig property and the AWS::EMR::InstanceGroupConfig resource that defines Amazon Elastic Block Store (Amazon EBS) storage volumes to attach to your Amazon Elastic MapReduce (Amazon EMR) instances.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration.html}
  * @constructor
  */
@@ -19,8 +19,8 @@ ElasticMapReduceEbsConfiguration.prototype = Object.create(PropertyType.prototyp
  * @param {ElasticMapReduceEbsConfiguration[]} value
  * @returns {ElasticMapReduceEbsConfiguration}
  */
-ElasticMapReduceEbsConfiguration.prototype.ebsBlockDeviceConfig = function(value) {
-	return this.set('EbsBlockDeviceConfig', value);
+ElasticMapReduceEbsConfiguration.prototype.ebsBlockDeviceConfigs = function(value) {
+	return this.set('EbsBlockDeviceConfigs', value);
 };
 
 /**

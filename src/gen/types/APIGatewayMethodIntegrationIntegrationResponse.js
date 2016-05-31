@@ -12,11 +12,11 @@ function APIGatewayMethodIntegrationIntegrationResponse() {
 APIGatewayMethodIntegrationIntegrationResponse.prototype = Object.create(PropertyType.prototype);
 
 /**
- * The response parameters from the back-end response that API Gateway sends to the method response. Specify response parameters as key-value pairs (string-to-string maps), with a destination as the key and a source as the value.
+ * The response parameters from the back-end response that API Gateway sends to the method response. Specify response parameters as key-value pairs (string-to-string maps), with a destination as the key and a source as the value. For more information, see API Gateway API Request and Response Parameter-Mapping Reference in the API Gateway Developer Guide.
  *
  * Required: false
  *
- * @param {key[]} value
+ * @param {Object} value
  * @returns {APIGatewayMethodIntegrationIntegrationResponse}
  */
 APIGatewayMethodIntegrationIntegrationResponse.prototype.responseParameters = function(value) {
@@ -24,11 +24,11 @@ APIGatewayMethodIntegrationIntegrationResponse.prototype.responseParameters = fu
 };
 
 /**
- * The templates used to transform the integration response body. Specify templates as key-value pairs (string-to-string maps), with a content type as the key and a template as the value.
+ * The templates used to transform the integration response body. Specify templates as key-value pairs (string-to-string maps), with a content type as the key and a template as the value. For more information, see API Gateway API Request and Response Payload-Mapping Template Reference in the API Gateway Developer Guide.
  *
  * Required: false
  *
- * @param {key[]} value
+ * @param {Object} value
  * @returns {APIGatewayMethodIntegrationIntegrationResponse}
  */
 APIGatewayMethodIntegrationIntegrationResponse.prototype.responseTemplates = function(value) {

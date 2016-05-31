@@ -26,7 +26,7 @@ CodeDeployDeploymentGroupEc2TagFilters.prototype.key = function(value) {
 /**
  * The filter type. For example, you can filter instances by the key, tag value, or both. For valid values, see EC2TagFilter in the AWS CodeDeploy API Reference.
  *
- * Required: false
+ * Required: true
  *
  * @param {String} value
  * @returns {CodeDeployDeploymentGroupEc2TagFilters}

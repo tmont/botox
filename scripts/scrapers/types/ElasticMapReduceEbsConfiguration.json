@@ -1,9 +1,9 @@
 {
   "name": "ElasticMapReduceEbsConfiguration",
-  "description": "EbsConfiguration is a property of the AWS::EMR::Cluster and AWS::EMR::InstanceGroupConfig resources that defines Amazon Elastic Block Store (Amazon EBS) storage volumes to attach to your Amazon Elastic MapReduce (Amazon EMR) instances.",
+  "description": "EbsConfiguration is a property of the Amazon Elastic MapReduce Cluster JobFlowInstancesConfig InstanceGroupConfig property and the AWS::EMR::InstanceGroupConfig resource that defines Amazon Elastic Block Store (Amazon EBS) storage volumes to attach to your Amazon Elastic MapReduce (Amazon EMR) instances.",
   "properties": [
     {
-      "name": "EbsBlockDeviceConfig",
+      "name": "EbsBlockDeviceConfigs",
       "description": "Configures the block storage devices that are associated with your EMR instances.",
       "typeDescription": "List of Amazon Elastic MapReduce EbsConfiguration",
       "required": false,

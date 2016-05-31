@@ -13,7 +13,7 @@
       "name": "Type",
       "description": "The filter type. For example, you can filter instances by the key, tag value, or both. For valid values, see EC2TagFilter in the AWS CodeDeploy API Reference.",
       "typeDescription": "String",
-      "required": false,
+      "required": true,
       "type": "String"
     },
     {

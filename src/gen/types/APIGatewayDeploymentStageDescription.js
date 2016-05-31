@@ -112,7 +112,7 @@ APIGatewayDeploymentStageDescription.prototype.stageName = function(value) {
  *
  * Required: false
  *
- * @param {key[]} value
+ * @param {Object} value
  * @returns {APIGatewayDeploymentStageDescription}
  */
 APIGatewayDeploymentStageDescription.prototype.variables = function(value) {

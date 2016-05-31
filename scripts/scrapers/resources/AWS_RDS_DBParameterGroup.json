@@ -11,7 +11,7 @@
       "typeDescription": "String",
       "required": true,
       "type": "String",
-      "update": "No interruption"
+      "update": "Updates are not supported."
     },
     {
       "name": "Family",
@@ -19,7 +19,7 @@
       "typeDescription": "String",
       "required": true,
       "type": "String",
-      "update": "No interruption"
+      "update": "Updates are not supported."
     },
     {
       "name": "Parameters",

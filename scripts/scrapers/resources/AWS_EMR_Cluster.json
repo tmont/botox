@@ -38,14 +38,6 @@
       "update": "Replacement"
     },
     {
-      "name": "EbsConfiguration",
-      "description": "Configures Amazon Elastic Block Store (Amazon EBS) storage volumes to attach to your instances.",
-      "typeDescription": "Amazon Elastic MapReduce EbsConfiguration",
-      "required": false,
-      "type": "ElasticMapReduceEbsConfiguration",
-      "update": "Replacement"
-    },
-    {
       "name": "Instances",
       "description": "Configures the EC2 instances that will run jobs in the Amazon EMR cluster.",
       "typeDescription": "Amazon Elastic MapReduce Cluster JobFlowInstancesConfig",

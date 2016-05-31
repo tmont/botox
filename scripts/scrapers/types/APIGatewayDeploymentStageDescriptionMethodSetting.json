@@ -18,7 +18,7 @@
     },
     {
       "name": "CachingEnabled",
-      "description": "Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.",
+      "description": "Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses. For more information, see Enable API Gateway Caching in a Stage to Enhance API Performance in the API Gateway Developer Guide.",
       "typeDescription": "Boolean",
       "required": false,
       "type": "Boolean"
@@ -60,14 +60,14 @@
     },
     {
       "name": "ThrottlingBurstLimit",
-      "description": "The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.",
+      "description": "The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account. For more information, see Manage API Request Throttling in the API Gateway Developer Guide.",
       "typeDescription": "Integer",
       "required": false,
       "type": "Number"
     },
     {
       "name": "ThrottlingRateLimit",
-      "description": "The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.",
+      "description": "The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account. For more information, see Manage API Request Throttling in the API Gateway Developer Guide.",
       "typeDescription": "Number",
       "required": false,
       "type": "Number"

@@ -56,17 +56,17 @@
     {
       "name": "RequestModels",
       "description": "The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.",
-      "typeDescription": "List of key-value pairs",
+      "typeDescription": "Mapping of key-value pairs",
       "required": false,
-      "type": "key[]",
+      "type": "Object",
       "update": "No interruption"
     },
     {
       "name": "RequestParameters",
-      "description": "Request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean maps), with a source as the key and a Boolean as the value. The Boolean specifies whether a parameter is required. A source must match the following format method.request.location.name, where the location is a query string, path, or header, and name is a valid, unique parameter name.",
-      "typeDescription": "List of key-value pairs",
+      "description": "Request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean maps), with a source as the key and a Boolean as the value. The Boolean specifies whether a parameter is required. A source must match the following format method.request.location.name, where the location is querystring, path, or header, and name is a valid, unique parameter name.",
+      "typeDescription": "Mapping of key-value pairs",
       "required": false,
-      "type": "key[]",
+      "type": "Object",
       "update": "No interruption"
     },
     {

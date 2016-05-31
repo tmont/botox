@@ -4,17 +4,17 @@
   "properties": [
     {
       "name": "ResponseParameters",
-      "description": "The response parameters from the back-end response that API Gateway sends to the method response. Specify response parameters as key-value pairs (string-to-string maps), with a destination as the key and a source as the value.",
-      "typeDescription": "List of key-value pairs",
+      "description": "The response parameters from the back-end response that API Gateway sends to the method response. Specify response parameters as key-value pairs (string-to-string maps), with a destination as the key and a source as the value. For more information, see API Gateway API Request and Response Parameter-Mapping Reference in the API Gateway Developer Guide.",
+      "typeDescription": "Mapping of key-value pairs",
       "required": false,
-      "type": "key[]"
+      "type": "Object"
     },
     {
       "name": "ResponseTemplates",
-      "description": "The templates used to transform the integration response body. Specify templates as key-value pairs (string-to-string maps), with a content type as the key and a template as the value.",
-      "typeDescription": "List of key-value pairs",
+      "description": "The templates used to transform the integration response body. Specify templates as key-value pairs (string-to-string maps), with a content type as the key and a template as the value. For more information, see API Gateway API Request and Response Payload-Mapping Template Reference in the API Gateway Developer Guide.",
+      "typeDescription": "Mapping of key-value pairs",
       "required": false,
-      "type": "key[]"
+      "type": "Object"
     },
     {
       "name": "SelectionPattern",

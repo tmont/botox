@@ -10,7 +10,7 @@
       "description": "One or more user-defined key-value pairs to be added to the stack attributes bag.",
       "typeDescription": "A list of key-value pairs",
       "required": false,
-      "type": "key[]",
+      "type": "Object",
       "update": "No interruption"
     },
     {

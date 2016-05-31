@@ -129,7 +129,7 @@ module.exports = {
 	ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig: require('./ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.js'),
 	ElasticMapReduceClusterJobFlowInstancesConfigPlacementType: require('./ElasticMapReduceClusterJobFlowInstancesConfigPlacementType.js'),
 	ElasticMapReduceEbsConfiguration: require('./ElasticMapReduceEbsConfiguration.js'),
-	ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig: require('./ElasticMapReduceEbsConfigurationEbsBlockDeviceConfig.js'),
+	ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigs: require('./ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigs.js'),
 	ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification: require('./ElasticMapReduceEbsConfigurationEbsBlockDeviceConfigVolumeSpecification.js'),
 	ElasticMapReduceStepHadoopJarStepConfig: require('./ElasticMapReduceStepHadoopJarStepConfig.js'),
 	ElasticMapReduceStepHadoopJarStepConfigKeyValue: require('./ElasticMapReduceStepHadoopJarStepConfigKeyValue.js'),

@@ -36,7 +36,7 @@ APIGatewayDeploymentStageDescriptionMethodSetting.prototype.cacheTtlInSeconds = 
 };
 
 /**
- * Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
+ * Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses. For more information, see Enable API Gateway Caching in a Stage to Enhance API Performance in the API Gateway Developer Guide.
  *
  * Required: false
  *
@@ -108,7 +108,7 @@ APIGatewayDeploymentStageDescriptionMethodSetting.prototype.resourcePath = funct
 };
 
 /**
- * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+ * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account. For more information, see Manage API Request Throttling in the API Gateway Developer Guide.
  *
  * Required: false
  *
@@ -120,7 +120,7 @@ APIGatewayDeploymentStageDescriptionMethodSetting.prototype.throttlingBurstLimit
 };
 
 /**
- * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+ * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account. For more information, see Manage API Request Throttling in the API Gateway Developer Guide.
  *
  * Required: false
  *

@@ -66,19 +66,6 @@ EMRCluster.prototype.configurations = function(value) {
 };
 
 /**
- * Configures Amazon Elastic Block Store (Amazon EBS) storage volumes to attach to your instances.
- *
- * Required: false
- * Update requires: Replacement
- *
- * @param {ElasticMapReduceEbsConfiguration|Attribute|Reference} value Amazon Elastic MapReduce EbsConfiguration
- * @returns {EMRCluster}
- */
-EMRCluster.prototype.ebsConfiguration = function(value) {
-	return this.set('EbsConfiguration', value);
-};
-
-/**
  * Configures the EC2 instances that will run jobs in the Amazon EMR cluster.
  *
  * Required: true

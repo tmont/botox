@@ -36,6 +36,18 @@ ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype.confi
 };
 
 /**
+ * Configures Amazon Elastic Block Store (Amazon EBS) storage volumes to attach to your instances.
+ *
+ * Required: false
+ *
+ * @param {ElasticMapReduceEbsConfiguration} value
+ * @returns {ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig}
+ */
+ElasticMapReduceClusterJobFlowInstancesConfigInstanceGroupConfig.prototype.ebsConfiguration = function(value) {
+	return this.set('EbsConfiguration', value);
+};
+
+/**
  * The number of instances to launch in the instance group.
  *
  * Required: true

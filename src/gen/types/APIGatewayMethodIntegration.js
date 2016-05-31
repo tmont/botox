@@ -76,7 +76,7 @@ APIGatewayMethodIntegration.prototype.integrationResponses = function(value) {
  *
  * Required: false
  *
- * @param {key[]} value
+ * @param {Object} value
  * @returns {APIGatewayMethodIntegration}
  */
 APIGatewayMethodIntegration.prototype.requestParameters = function(value) {
@@ -88,7 +88,7 @@ APIGatewayMethodIntegration.prototype.requestParameters = function(value) {
  *
  * Required: false
  *
- * @param {key[]} value
+ * @param {Object} value
  * @returns {APIGatewayMethodIntegration}
  */
 APIGatewayMethodIntegration.prototype.requestTemplates = function(value) {

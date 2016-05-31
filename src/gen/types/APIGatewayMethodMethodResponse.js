@@ -16,7 +16,7 @@ APIGatewayMethodMethodResponse.prototype = Object.create(PropertyType.prototype)
  *
  * Required: false
  *
- * @param {key[]} value
+ * @param {Object} value
  * @returns {APIGatewayMethodMethodResponse}
  */
 APIGatewayMethodMethodResponse.prototype.responseModels = function(value) {
@@ -28,7 +28,7 @@ APIGatewayMethodMethodResponse.prototype.responseModels = function(value) {
  *
  * Required: false
  *
- * @param {key[]} value
+ * @param {Object} value
  * @returns {APIGatewayMethodMethodResponse}
  */
 APIGatewayMethodMethodResponse.prototype.responseParameters = function(value) {
@@ -38,7 +38,7 @@ APIGatewayMethodMethodResponse.prototype.responseParameters = function(value) {
 /**
  * The method response's status code, which you map to an IntegrationResponse.
  *
- * Required: false
+ * Required: true
  *
  * @param {String} value
  * @returns {APIGatewayMethodMethodResponse}

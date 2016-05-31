@@ -16,7 +16,7 @@ RDSDBParameterGroup.prototype = Object.create(Resource.prototype);
  * A friendly description of the RDS parameter group. For example, "My Parameter Group".
  *
  * Required: true
- * Update requires: No interruption
+ * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
  * @returns {RDSDBParameterGroup}
@@ -29,7 +29,7 @@ RDSDBParameterGroup.prototype.description = function(value) {
  * The database family of this RDS parameter group. For example, "MySQL5.1".
  *
  * Required: true
- * Update requires: No interruption
+ * Update requires: Updates are not supported.
  *
  * @param {String|Attribute|Reference|Join} value
  * @returns {RDSDBParameterGroup}

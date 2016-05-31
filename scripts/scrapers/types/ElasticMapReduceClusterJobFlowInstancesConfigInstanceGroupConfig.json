@@ -17,6 +17,14 @@
       "type": "ElasticMapReduceClusterConfiguration[]"
     },
     {
+      "name": "EbsConfiguration",
+      "description": "Configures Amazon Elastic Block Store (Amazon EBS) storage volumes to attach to your instances.",
+      "typeDescription": "Amazon Elastic MapReduce EbsConfiguration",
+      "required": false,
+      "type": "ElasticMapReduceEbsConfiguration",
+      "update": "Replacement"
+    },
+    {
       "name": "InstanceCount",
       "description": "The number of instances to launch in the instance group.",
       "typeDescription": "Integer",

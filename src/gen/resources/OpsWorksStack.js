@@ -31,7 +31,7 @@ OpsWorksStack.prototype.agentVersion = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {key[]|Attribute|Reference} value A list of key-value pairs
+ * @param {Object|Attribute|Reference} value A list of key-value pairs
  * @returns {OpsWorksStack}
  */
 OpsWorksStack.prototype.attributes = function(value) {

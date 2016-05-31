@@ -96,7 +96,7 @@ ApiGatewayMethod.prototype.methodResponses = function(value) {
  * Required: false
  * Update requires: No interruption
  *
- * @param {key[]|Attribute|Reference} value List of key-value pairs
+ * @param {Object|Attribute|Reference} value Mapping of key-value pairs
  * @returns {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.requestModels = function(value) {
@@ -104,12 +104,12 @@ ApiGatewayMethod.prototype.requestModels = function(value) {
 };
 
 /**
- * Request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean maps), with a source as the key and a Boolean as the value. The Boolean specifies whether a parameter is required. A source must match the following format method.request.location.name, where the location is a query string, path, or header, and name is a valid, unique parameter name.
+ * Request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean maps), with a source as the key and a Boolean as the value. The Boolean specifies whether a parameter is required. A source must match the following format method.request.location.name, where the location is querystring, path, or header, and name is a valid, unique parameter name.
  *
  * Required: false
  * Update requires: No interruption
  *
- * @param {key[]|Attribute|Reference} value List of key-value pairs
+ * @param {Object|Attribute|Reference} value Mapping of key-value pairs
  * @returns {ApiGatewayMethod}
  */
 ApiGatewayMethod.prototype.requestParameters = function(value) {
