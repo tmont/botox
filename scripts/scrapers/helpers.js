@@ -22,6 +22,10 @@ const typeMatchers = [
 				return 'CloudFrontDistributionConfigOriginCustomOrigin';
 		}
 
+		if (/key[\s-]value pair/.test(type.toLowerCase())) {
+			return 'Object';
+		}
+
 		return null;
 	},
 	(type) => {
