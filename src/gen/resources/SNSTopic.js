@@ -2,7 +2,7 @@ var Resource = require('../../resource');
 var Attribute = require('../../fun/attribute');
 
 /**
- * AWS::SNS::Topic - The AWS::SNS::Topic type creates an Amazon SNS topic.
+ * AWS::SNS::Topic - The AWS::SNS::Topic type creates an Amazon Simple Notification Service (Amazon SNS) topic.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html}
  * @constructor
  * @param {String} name Name of the resource
@@ -17,7 +17,7 @@ SNSTopic.prototype = Object.create(Resource.prototype);
  * A developer-defined string that can be used to identify this SNS topic.
  *
  * Required: false
- * Update requires: Updates are not supported.
+ * Update requires: No interruption
  *
  * @param {String|Attribute|Reference|Join} value
  * @returns {SNSTopic}
@@ -30,7 +30,7 @@ SNSTopic.prototype.displayName = function(value) {
  * The SNS subscriptions (endpoints) for this topic.
  *
  * Required: false
- * Update requires: Updates are not supported.
+ * Update requires: No interruption
  *
  * @param {SNSSubscriptionPropertyType[]|Attribute|Reference} value List of SNS Subscriptions
  * @returns {SNSTopic}
@@ -43,7 +43,7 @@ SNSTopic.prototype.subscription = function(value) {
  * A name for the topic. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the topic name. For more information, see Name Type.
  *
  * Required: false
- * Update requires: Updates are not supported.
+ * Update requires: Replacement
  *
  * @param {String|Attribute|Reference|Join} value
  * @returns {SNSTopic}

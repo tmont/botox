@@ -1,7 +1,7 @@
 var PropertyType = require('../../property-type');
 
 /**
- * Code is a property of the AWS::Lambda::Function resource that enables you to specify the source code of an AWS Lambda (Lambda) function. Source code can be located a file in an S3 bucket or, for Node.js and Python 2.7 runtime environments only, you can provide it in inline text.
+ * Code is a property of the AWS::Lambda::Function resource that enables you to specify the source code of an AWS Lambda (Lambda) function. Source code can be located in a file in an S3 bucket. For nodejs, nodejs4.3, and python2.7 runtime environments only, you can provide source code as inline text.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html}
  * @constructor
  */
@@ -48,7 +48,7 @@ LambdaFunctionCode.prototype.s3ObjectVersion = function(value) {
 };
 
 /**
- * For nodejs and python2.7 runtime environments, the source code of your Lambda function. You can't use this property with other runtime environments.
+ * For nodejs, nodejs4.3, and python2.7 runtime environments, the source code of your Lambda function. You can't use this property with other runtime environments.
  *
  * Required: false
  *

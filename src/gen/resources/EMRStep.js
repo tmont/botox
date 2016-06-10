@@ -13,7 +13,7 @@ function EMRStep(name) {
 EMRStep.prototype = Object.create(Resource.prototype);
 
 /**
- * The action to take if the job flow step fails. Currently, AWS CloudFormation supports CONTINUE and CONTINUE_AND_WAIT. For more information, see Managing Cluster Termination in the Amazon Elastic MapReduce Management Guide.
+ * The action to take if the job flow step fails. Currently, AWS CloudFormation supports CONTINUE and CANCEL_AND_WAIT. For more information, see Managing Cluster Termination in the Amazon Elastic MapReduce Management Guide.
  *
  * Required: true
  * Update requires: Replacement

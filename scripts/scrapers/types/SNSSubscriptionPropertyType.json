@@ -1,6 +1,6 @@
 {
   "name": "SNSSubscriptionPropertyType",
-  "description": "Subscription is an embedded property of the AWS::SNS::Topic resource that describes the subscription endpoints for a topic.",
+  "description": "Subscription is an embedded property of the AWS::SNS::Topic resource that describes the subscription endpoints for an Amazon Simple Notification Service (Amazon SNS) topic.",
   "properties": [
     {
       "name": "Endpoint",

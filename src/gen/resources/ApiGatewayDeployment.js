@@ -1,7 +1,7 @@
 var Resource = require('../../resource');
 
 /**
- * AWS::ApiGateway::Deployment - The AWS::ApiGateway::Deployment resource deploys an Amazon API Gateway (API Gateway) RestApi resource to a stage so that clients can call the API over the Internet. The stage acts as an environment
+ * AWS::ApiGateway::Deployment - The AWS::ApiGateway::Deployment resource deploys an Amazon API Gateway (API Gateway) RestApi resource to a stage so that clients can call the API over the Internet. The stage acts as an environment.
  * @see {@link http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html}
  * @constructor
  * @param {String} name Name of the resource
@@ -52,7 +52,7 @@ ApiGatewayDeployment.prototype.stageDescription = function(value) {
 };
 
 /**
- * A name for the stage that API Gateway creates with this deployment.
+ * A name for the stage that API Gateway creates with this deployment. Use only alphanumeric characters.
  *
  * Required: true
  * Update requires: No interruption

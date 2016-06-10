@@ -3,8 +3,16 @@
   "namespace": "AWS",
   "category": "Kinesis",
   "name": "Stream",
-  "description": "Creates an Amazon Kinesis stream that captures and transports data records that are emitted from data sources. For specific information about creating streams, see CreateStream in the Amazon Kinesis API Reference.",
+  "description": "Creates an Amazon Kinesis stream that captures and transports data records that are emitted from data sources. For information about creating streams, see CreateStream in the Amazon Kinesis API Reference.",
   "properties": [
+    {
+      "name": "Name",
+      "description": "The name of the Amazon Kinesis stream. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the stream name. For more information, see Name Type.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String",
+      "update": "Replacement"
+    },
     {
       "name": "ShardCount",
       "description": "The number of shards that the stream uses. For greater provisioned throughput, increase the number of shards.",

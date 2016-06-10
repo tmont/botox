@@ -65,6 +65,7 @@ module.exports = {
 		DHCPOptions: require('./EC2DHCPOptions.js'),
 		EIP: require('./EC2EIP.js'),
 		EIPAssociation: require('./EC2EIPAssociation.js'),
+		FlowLog: require('./EC2FlowLog.js'),
 		Host: require('./EC2Host.js'),
 		Instance: require('./EC2Instance.js'),
 		InternetGateway: require('./EC2InternetGateway.js'),
@@ -155,6 +156,9 @@ module.exports = {
 	},
 	Kinesis: {
 		Stream: require('./KinesisStream.js')
+	},
+	KinesisFirehose: {
+		DeliveryStream: require('./KinesisFirehoseDeliveryStream.js')
 	},
 	Lambda: {
 		Alias: require('./LambdaAlias.js'),

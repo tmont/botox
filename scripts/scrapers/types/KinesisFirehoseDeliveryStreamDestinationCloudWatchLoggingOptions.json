@@ -1,0 +1,28 @@
+{
+  "name": "KinesisFirehoseDeliveryStreamDestinationCloudWatchLoggingOptions",
+  "description": "CloudWatchLoggingOptions is a property of the Amazon Kinesis Firehose DeliveryStream ElasticsearchDestinationConfiguration, Amazon Kinesis Firehose DeliveryStream RedshiftDestinationConfiguration, and Amazon Kinesis Firehose DeliveryStream S3DestinationConfiguration properties that specifies Amazon CloudWatch Logs (CloudWatch Logs) logging options that Amazon Kinesis Firehose (Firehose) uses for the delivery stream.",
+  "properties": [
+    {
+      "name": "Enabled",
+      "description": "Indicates whether CloudWatch Logs logging is enabled.",
+      "typeDescription": "Boolean",
+      "required": false,
+      "type": "Boolean"
+    },
+    {
+      "name": "LogGroupName",
+      "description": "The name of the CloudWatch Logs log group that contains the log stream that Firehose will use.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String"
+    },
+    {
+      "name": "LogStreamName",
+      "description": "The name of the CloudWatch Logs log stream that Firehose uses to send logs about data delivery.",
+      "typeDescription": "String",
+      "required": false,
+      "type": "String"
+    }
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-kinesisdeliverystream-destination-cloudwatchloggingoptions.html"
+}

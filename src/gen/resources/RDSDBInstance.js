@@ -416,7 +416,7 @@ RDSDBInstance.prototype.tags = function(value) {
 };
 
 /**
- * A list of the VPC security groups to assign to the Amazon RDS instance. The list can include both the physical IDs of existing VPC security groups or references to AWS::EC2::SecurityGroup resources created in the template.
+ * A list of the VPC security group IDs to assign to the Amazon RDS instance. The list can include both the physical IDs of existing VPC security groups or references to AWS::EC2::SecurityGroup resources created in the template.
  *
  * Required: false
  * Update requires: No interruption.

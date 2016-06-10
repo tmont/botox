@@ -3,7 +3,7 @@
   "namespace": "AWS",
   "category": "ApiGateway",
   "name": "Deployment",
-  "description": "The AWS::ApiGateway::Deployment resource deploys an Amazon API Gateway (API Gateway) RestApi resource to a stage so that clients can call the API over the Internet. The stage acts as an environment",
+  "description": "The AWS::ApiGateway::Deployment resource deploys an Amazon API Gateway (API Gateway) RestApi resource to a stage so that clients can call the API over the Internet. The stage acts as an environment.",
   "properties": [
     {
       "name": "Description",
@@ -31,7 +31,7 @@
     },
     {
       "name": "StageName",
-      "description": "A name for the stage that API Gateway creates with this deployment.",
+      "description": "A name for the stage that API Gateway creates with this deployment. Use only alphanumeric characters.",
       "typeDescription": "String",
       "required": true,
       "type": "String",

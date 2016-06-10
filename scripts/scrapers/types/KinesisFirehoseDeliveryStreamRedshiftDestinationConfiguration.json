@@ -1,0 +1,56 @@
+{
+  "name": "KinesisFirehoseDeliveryStreamRedshiftDestinationConfiguration",
+  "description": "RedshiftDestinationConfiguration is a property of the AWS::KinesisFirehose::DeliveryStream resource that specifies an Amazon Redshift cluster to which Amazon Kinesis Firehose (Firehose) delivers data.",
+  "properties": [
+    {
+      "name": "CloudWatchLoggingOptions",
+      "description": "The Amazon CloudWatch Logs logging options for the delivery stream.",
+      "typeDescription": "Amazon Kinesis Firehose DeliveryStream Destination CloudWatchLoggingOptions",
+      "required": false,
+      "type": "KinesisFirehoseDeliveryStreamDestinationCloudWatchLoggingOptions"
+    },
+    {
+      "name": "ClusterJDBCURL",
+      "description": "The connection string that Firehose uses to connect to the Amazon Redshift cluster.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "CopyCommand",
+      "description": "Configures the Amazon Redshift COPY command that Firehose uses to load data into the cluster from the S3 bucket.",
+      "typeDescription": "Amazon Kinesis Firehose DeliveryStream RedshiftDestinationConfiguration CopyCommand",
+      "required": true,
+      "type": "KinesisFirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommand"
+    },
+    {
+      "name": "Password",
+      "description": "The password for the Amazon Redshift user that you specified in the Username property.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "RoleARN",
+      "description": "The ARN of the AWS Identity and Access Management (IAM) role that grants Firehose access to your S3 bucket and AWS KMS (if you enable data encryption).",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "name": "S3Configuration",
+      "description": "The S3 bucket where Firehose first delivers data. After the data is in the bucket, Firehose uses the COPY command to load the data into the Amazon Redshift cluster. For the S3 bucket's compression format, don't specify SNAPPY or ZIP because the Amazon Redshift COPY command doesn't support them.",
+      "typeDescription": "Amazon Kinesis Firehose DeliveryStream S3DestinationConfiguration",
+      "required": true,
+      "type": "KinesisFirehoseDeliveryStreamS3DestinationConfiguration"
+    },
+    {
+      "name": "Username",
+      "description": "The Amazon Redshift user that has permission to access the Amazon Redshift cluster. This user must have INSERT privileges for copying data from the S3 bucket to the cluster.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String"
+    }
+  ],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-kinesisdeliverystream-redshiftdestinationconfiguration.html"
+}

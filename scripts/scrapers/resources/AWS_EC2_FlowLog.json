@@ -1,0 +1,51 @@
+{
+  "fullName": "AWS::EC2::FlowLog",
+  "namespace": "AWS",
+  "category": "EC2",
+  "name": "FlowLog",
+  "description": "The AWS::EC2::FlowLog resource creates an Amazon Elastic Compute Cloud (Amazon EC2) flow log that captures IP traffic for a specified network interface, subnet, or VPC. To view the log data, use Amazon CloudWatch Logs (CloudWatch Logs. Use flow logs to troubleshoot. For example, you can use a flow log to investigate why certain traffic isn't reaching an instance, which can help you diagnose overly restrictive security group rules. For more information, see VPC Flow Logs in the Amazon VPC User Guide.",
+  "properties": [
+    {
+      "name": "DeliverLogsPermissionArn",
+      "description": "The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "LogGroupName",
+      "description": "The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "ResourceId",
+      "description": "The ID of the subnet, network interface, or VPC for which you want to create a flow log.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "ResourceType",
+      "description": "The type of resource that you specified in the ResourceId property. For example, if you specified a VPC ID for the ResourceId property, specify VPC for this property. For valid values, see the ResourceType parameter for the CreateFlowLogs action in the Amazon EC2 API Reference.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    },
+    {
+      "name": "TrafficType",
+      "description": "The type of traffic to log. You can log traffic that the resource accepts or rejects, or all traffic. For valid values, see the TrafficType parameter for the CreateFlowLogs action in the Amazon EC2 API Reference.",
+      "typeDescription": "String",
+      "required": true,
+      "type": "String",
+      "update": "Replacement"
+    }
+  ],
+  "attributes": [],
+  "referenceUrl": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html"
+}

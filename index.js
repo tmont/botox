@@ -633,7 +633,16 @@ Botox.prototype = {
 	},
 
 	/**
-	 * The AWS::ApiGateway::Deployment resource deploys an Amazon API Gateway (API Gateway) RestApi resource to a stage so that clients can call the API over the Internet. The stage acts as an environment
+	 * The AWS::KinesisFirehose::DeliveryStream resource creates an Amazon Kinesis Firehose (Firehose) delivery stream that delivers real-time streaming data to an Amazon Simple Storage Service (Amazon S3), Amazon Redshift, or Amazon Elasticsearch Service (Amazon ES) destination. For more information, see Creating an Amazon Kinesis Firehose Delivery Stream in the Amazon Kinesis Firehose Developer Guide.
+	 * @param {String} name
+	 * @returns {KinesisFirehoseDeliveryStream}
+	 */
+	deliveryStream: function(name) {
+		return new Resources.KinesisFirehose.DeliveryStream(name);
+	},
+
+	/**
+	 * The AWS::ApiGateway::Deployment resource deploys an Amazon API Gateway (API Gateway) RestApi resource to a stage so that clients can call the API over the Internet. The stage acts as an environment.
 	 * @param {String} name
 	 * @returns {ApiGatewayDeployment}
 	 */
@@ -810,6 +819,15 @@ Botox.prototype = {
 	 */
 	fleet: function(name) {
 		return new Resources.GameLift.Fleet(name);
+	},
+
+	/**
+	 * The AWS::EC2::FlowLog resource creates an Amazon Elastic Compute Cloud (Amazon EC2) flow log that captures IP traffic for a specified network interface, subnet, or VPC. To view the log data, use Amazon CloudWatch Logs (CloudWatch Logs. Use flow logs to troubleshoot. For example, you can use a flow log to investigate why certain traffic isn't reaching an instance, which can help you diagnose overly restrictive security group rules. For more information, see VPC Flow Logs in the Amazon VPC User Guide.
+	 * @param {String} name
+	 * @returns {EC2FlowLog}
+	 */
+	flowLog: function(name) {
+		return new Resources.EC2.FlowLog(name);
 	},
 
 	/**
@@ -1398,7 +1416,7 @@ Botox.prototype = {
 	},
 
 	/**
-	 * Creates an Amazon Kinesis stream that captures and transports data records that are emitted from data sources. For specific information about creating streams, see CreateStream in the Amazon Kinesis API Reference.
+	 * Creates an Amazon Kinesis stream that captures and transports data records that are emitted from data sources. For information about creating streams, see CreateStream in the Amazon Kinesis API Reference.
 	 * @param {String} name
 	 * @returns {KinesisStream}
 	 */
@@ -1470,7 +1488,7 @@ Botox.prototype = {
 	},
 
 	/**
-	 * The AWS::SNS::Topic type creates an Amazon SNS topic.
+	 * The AWS::SNS::Topic type creates an Amazon Simple Notification Service (Amazon SNS) topic.
 	 * @param {String} name
 	 * @returns {SNSTopic}
 	 */
@@ -2816,7 +2834,87 @@ Botox.prototype = {
 	},
 
 	/**
-	 * Code is a property of the AWS::Lambda::Function resource that enables you to specify the source code of an AWS Lambda (Lambda) function. Source code can be located a file in an S3 bucket or, for Node.js and Python 2.7 runtime environments only, you can provide it in inline text.
+	 * CloudWatchLoggingOptions is a property of the Amazon Kinesis Firehose DeliveryStream ElasticsearchDestinationConfiguration, Amazon Kinesis Firehose DeliveryStream RedshiftDestinationConfiguration, and Amazon Kinesis Firehose DeliveryStream S3DestinationConfiguration properties that specifies Amazon CloudWatch Logs (CloudWatch Logs) logging options that Amazon Kinesis Firehose (Firehose) uses for the delivery stream.
+	 * @returns {KinesisFirehoseDeliveryStreamDestinationCloudWatchLoggingOptions}
+	 */
+	kinesisFirehoseDeliveryStreamDestinationCloudWatchLoggingOptions: function() {
+		return new Types.KinesisFirehoseDeliveryStreamDestinationCloudWatchLoggingOptions();
+	},
+
+	/**
+	 * ElasticsearchDestinationConfiguration is a property of the AWS::KinesisFirehose::DeliveryStream resource that specifies an Amazon Elasticsearch Service (Amazon ES) domain that Amazon Kinesis Firehose (Firehose) delivers data to.
+	 * @returns {KinesisFirehoseDeliveryStreamElasticsearchDestinationConfiguration}
+	 */
+	kinesisFirehoseDeliveryStreamElasticsearchDestinationConfiguration: function() {
+		return new Types.KinesisFirehoseDeliveryStreamElasticsearchDestinationConfiguration();
+	},
+
+	/**
+	 * BufferingHints is a property of the Amazon Kinesis Firehose DeliveryStream ElasticsearchDestinationConfiguration property that specifies how Amazon Kinesis Firehose (Firehose) buffers incoming data while delivering it to the destination. The first buffer condition that is satisfied triggers Firehose to deliver the data.
+	 * @returns {KinesisFirehoseDeliveryStreamElasticsearchDestinationConfigurationBufferingHints}
+	 */
+	kinesisFirehoseDeliveryStreamElasticsearchDestinationConfigurationBufferingHints: function() {
+		return new Types.KinesisFirehoseDeliveryStreamElasticsearchDestinationConfigurationBufferingHints();
+	},
+
+	/**
+	 * RetryOptions is a property of the Amazon Kinesis Firehose DeliveryStream ElasticsearchDestinationConfiguration property that configures the retry behavior when Amazon Kinesis Firehose (Firehose) can't deliver data to Amazon Elasticsearch Service (Amazon ES).
+	 * @returns {KinesisFirehoseDeliveryStreamElasticsearchDestinationConfigurationRetryOptions}
+	 */
+	kinesisFirehoseDeliveryStreamElasticsearchDestinationConfigurationRetryOptions: function() {
+		return new Types.KinesisFirehoseDeliveryStreamElasticsearchDestinationConfigurationRetryOptions();
+	},
+
+	/**
+	 * RedshiftDestinationConfiguration is a property of the AWS::KinesisFirehose::DeliveryStream resource that specifies an Amazon Redshift cluster to which Amazon Kinesis Firehose (Firehose) delivers data.
+	 * @returns {KinesisFirehoseDeliveryStreamRedshiftDestinationConfiguration}
+	 */
+	kinesisFirehoseDeliveryStreamRedshiftDestinationConfiguration: function() {
+		return new Types.KinesisFirehoseDeliveryStreamRedshiftDestinationConfiguration();
+	},
+
+	/**
+	 * CopyCommand is a property of the Amazon Kinesis Firehose DeliveryStream RedshiftDestinationConfiguration property that configures the Amazon RedshiftCOPY command that Amazon Kinesis Firehose (Firehose) uses to load data into an Amazon Redshift cluster from an S3 bucket.
+	 * @returns {KinesisFirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommand}
+	 */
+	kinesisFirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommand: function() {
+		return new Types.KinesisFirehoseDeliveryStreamRedshiftDestinationConfigurationCopyCommand();
+	},
+
+	/**
+	 * S3DestinationConfiguration is a property of the AWS::KinesisFirehose::DeliveryStream resource and the Amazon Kinesis Firehose DeliveryStream ElasticsearchDestinationConfiguration and Amazon Kinesis Firehose DeliveryStream RedshiftDestinationConfiguration properties that specifies an Amazon Simple Storage Service (Amazon S3) destination to which Amazon Kinesis Firehose (Firehose) delivers data.
+	 * @returns {KinesisFirehoseDeliveryStreamS3DestinationConfiguration}
+	 */
+	kinesisFirehoseDeliveryStreamS3DestinationConfiguration: function() {
+		return new Types.KinesisFirehoseDeliveryStreamS3DestinationConfiguration();
+	},
+
+	/**
+	 * BufferingHints is a property of the Amazon Kinesis Firehose DeliveryStream S3DestinationConfiguration property that specifies how Amazon Kinesis Firehose (Firehose) buffers incoming data before delivering it to the destination. The first buffer condition that is satisfied triggers Firehose to deliver the data..
+	 * @returns {KinesisFirehoseDeliveryStreamS3DestinationConfigurationBufferingHints}
+	 */
+	kinesisFirehoseDeliveryStreamS3DestinationConfigurationBufferingHints: function() {
+		return new Types.KinesisFirehoseDeliveryStreamS3DestinationConfigurationBufferingHints();
+	},
+
+	/**
+	 * EncryptionConfiguration is a property of the Amazon Kinesis Firehose DeliveryStream S3DestinationConfiguration property that specifies the encryption settings that Amazon Kinesis Firehose (Firehose) uses when delivering data to Amazon Simple Storage Service (Amazon S3).
+	 * @returns {KinesisFirehoseDeliveryStreamS3DestinationConfigurationEncryptionConfiguration}
+	 */
+	kinesisFirehoseDeliveryStreamS3DestinationConfigurationEncryptionConfiguration: function() {
+		return new Types.KinesisFirehoseDeliveryStreamS3DestinationConfigurationEncryptionConfiguration();
+	},
+
+	/**
+	 * KMSEncryptionConfig is a property of the Amazon Kinesis Firehose DeliveryStream S3DestinationConfiguration EncryptionConfiguration property that specifies the AWS Key Management Service (AWS KMS) encryption key that Amazon Simple Storage Service (Amazon S3) uses to encrypt data delivered by the Amazon Kinesis Firehose (Firehose) stream.
+	 * @returns {KinesisFirehoseDeliveryStreamS3DestinationConfigurationEncryptionConfigurationKMSEncryptionConfig}
+	 */
+	kinesisFirehoseDeliveryStreamS3DestinationConfigurationEncryptionConfigurationKMSEncryptionConfig: function() {
+		return new Types.KinesisFirehoseDeliveryStreamS3DestinationConfigurationEncryptionConfigurationKMSEncryptionConfig();
+	},
+
+	/**
+	 * Code is a property of the AWS::Lambda::Function resource that enables you to specify the source code of an AWS Lambda (Lambda) function. Source code can be located in a file in an S3 bucket. For nodejs, nodejs4.3, and python2.7 runtime environments only, you can provide source code as inline text.
 	 * @returns {LambdaFunctionCode}
 	 */
 	lambdaFunctionCode: function() {
@@ -3208,7 +3306,7 @@ Botox.prototype = {
 	},
 
 	/**
-	 * Subscription is an embedded property of the AWS::SNS::Topic resource that describes the subscription endpoints for a topic.
+	 * Subscription is an embedded property of the AWS::SNS::Topic resource that describes the subscription endpoints for an Amazon Simple Notification Service (Amazon SNS) topic.
 	 * @returns {SNSSubscriptionPropertyType}
 	 */
 	snsSubscriptionPropertyType: function() {
@@ -3331,7 +3429,7 @@ Botox.prototype = {
 	},
 
 	/**
-	 * You can use the UpdatePolicy attribute to specify how AWS CloudFormation handles updates to the AWS::AutoScaling::AutoScalingGroup resource.
+	 * Use the UpdatePolicy attribute to specify how AWS CloudFormation handles updates to the AWS::AutoScaling::AutoScalingGroup resource. AWS CloudFormation invokes one of three update policies depending on the type of change you make or on whether a scheduled action is associated with the Auto Scaling group.
 	 * @returns {UpdatePolicy}
 	 */
 	updatePolicy: function() {
