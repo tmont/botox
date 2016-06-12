@@ -325,7 +325,7 @@ RDSDBInstance.prototype.port = function(value) {
 };
 
 /**
- * The daily time range during which automated backups are created if automated backups are enabled, as determined by the BackupRetentionPeriod.
+ * The daily time range during which automated backups are created if automated backups are enabled, as determined by the BackupRetentionPeriod property. For valid values, see the PreferredBackupWindow parameter for the CreateDBInstance action in the Amazon Relational Database Service API Reference.
  *
  * Required: false
  * Update requires: No interruption.
@@ -338,7 +338,7 @@ RDSDBInstance.prototype.preferredBackupWindow = function(value) {
 };
 
 /**
- * The weekly time range (in UTC) during which system maintenance can occur.
+ * The weekly time range (in UTC) during which system maintenance can occur. For valid values, see the PreferredMaintenanceWindow parameter for the CreateDBInstance action in the Amazon Relational Database Service API Reference.
  *
  * Required: false
  * Update requires: No interruption or some interruptions. For more information, see ModifyDBInstance in the Amazon Relational Database Service API Reference.

@@ -199,7 +199,7 @@
     },
     {
       "name": "PreferredBackupWindow",
-      "description": "The daily time range during which automated backups are created if automated backups are enabled, as determined by the BackupRetentionPeriod.",
+      "description": "The daily time range during which automated backups are created if automated backups are enabled, as determined by the BackupRetentionPeriod property. For valid values, see the PreferredBackupWindow parameter for the CreateDBInstance action in the Amazon Relational Database Service API Reference.",
       "typeDescription": "String",
       "required": false,
       "type": "String",
@@ -207,7 +207,7 @@
     },
     {
       "name": "PreferredMaintenanceWindow",
-      "description": "The weekly time range (in UTC) during which system maintenance can occur.",
+      "description": "The weekly time range (in UTC) during which system maintenance can occur. For valid values, see the PreferredMaintenanceWindow parameter for the CreateDBInstance action in the Amazon Relational Database Service API Reference.",
       "typeDescription": "String",
       "required": false,
       "type": "String",
