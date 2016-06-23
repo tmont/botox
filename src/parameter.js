@@ -21,7 +21,7 @@ function Parameter(name) {
 		value: new Reference(this)
 	});
 
-	Object.defineProperty(this, 'name', {
+	Object.defineProperty(this, '$name', {
 		value: name
 	});
 }

@@ -47,7 +47,7 @@ Template.prototype = {
 	 * @returns {Template}
 	 */
 	parameter: function(parameter) {
-		this.data.Parameters[parameter.name] = parameter;
+		this.data.Parameters[parameter.$name] = parameter;
 		return this;
 	},
 	/**

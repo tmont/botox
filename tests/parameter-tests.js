@@ -55,4 +55,13 @@ describe('Parameter', () => {
 			AllowedPattern: '[0-9]+'
 		});
 	});
+
+	it('should create reference', () => {
+		const ref = botox.parameter('foo').ref;
+		const json = ref.toJSON();
+
+		expect(json).to.eql({
+			Ref: 'foo'
+		});
+	});
 });
