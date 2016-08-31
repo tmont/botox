@@ -185,6 +185,16 @@ Botox.prototype = {
 	},
 
 	/**
+	 * Creates an attribute reference, e.g. Fn::GetAtt
+	 * @param {Object} resource
+	 * @param {String} attribute Name of the attribute
+	 * @returns Attribute
+	 */
+	attribute: function(resource, attribute) {
+		return new Functions.Attribute(resource, attribute);
+	},
+  
+	/**
 	 * Joins some things together
 	 * @param {Array|FindInMap|Reference} things
 	 * @param {String} delimiter
